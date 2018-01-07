@@ -1,0 +1,62 @@
+TARGET		  		abpal.dll
+TARGETTYPE	  		DLL
+UID					0 0x1002AAF2
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+SYSTEMINCLUDE		\Epoc32\include\mda\common
+
+MACRO S60=1
+MACRO DEBUG_LOG_ALL=1
+
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal\symbian
+
+USERINCLUDE			..\..\include
+USERINCLUDE			..\..\include\private
+USERINCLUDE			..\..\include\symbian
+USERINCLUDE			..\..\src\symbian\audio
+USERINCLUDE			..\..\src\symbian\Gps
+USERINCLUDE			..\..\src\symbian\Pal
+USERINCLUDE			..\..\src\util
+
+SOURCEPATH			..\..\src\symbian\audio
+SOURCE				NIMAudioPlayer.cpp
+SOURCE				NimAudioCombiner.cpp
+SOURCE				NIMAudioRecorder.cpp
+SOURCE				palaudio.cpp
+
+SOURCEPATH			..\..\src\symbian\gps
+SOURCE				palgps.cpp
+SOURCE				NIMGpsConfiguration.cpp
+SOURCE				NimGpsModule.cpp
+SOURCE				LbsHandler.cpp
+SOURCE				GpsFileHandler.cpp
+SOURCE				GpsSingleton.cpp
+SOURCE				GpsCallbackAo.cpp
+
+SOURCEPATH			..\..\src\symbian\Pal
+SOURCE				PalUtility.cpp
+SOURCE				Timer.cpp
+
+SOURCEPATH			..\..\src\util
+SOURCE				abpalversion.c
+SOURCE				audbuf.c
+//SOURCE				nimaudiocombiner.c		// Audio Combiner for Windows Mobile
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+LIBRARY				mediaclientaudio.lib
+LIBRARY				lbs.lib
+LIBRARY				charconv.lib
+LIBRARY				efsrv.lib
+
+LIBRARY				nbipal.lib
+
+#if defined(WINS)
+	DEFFILE bwins\abpal.def
+#else
+	DEFFILE eabi\abpal.def
+#endif

@@ -1,0 +1,5 @@
+export VERSION_FILE=version_qt_linux_armhf.txt
+export NBM_LIBRARY_PATH=../../../../../core/releases/nbm/armhf/nbm_1.4.1.11_armhf
+export NCDB_LIBRARY_PATH=../../../../../core/releases/ncdb/ubuntuarm/2.33.5.23
+export target=linux_armhf
+export platform=linux

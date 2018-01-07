@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="abpal"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="NIMPAL_BUILD"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4100;4115;4127;4201;4214;4244"	
+	/>
+</VisualStudioPropertySheet>

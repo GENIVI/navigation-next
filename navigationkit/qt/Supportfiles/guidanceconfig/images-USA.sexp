@@ -1,0 +1,8 @@
+(nav-instruct (command-set-version [uint]103 media-type image/bmp media-sub-type "8bit")
+  (section (name ttf)
+    (instruction (turn EN. stacknext * pos !continue)
+      (image (id P)))
+    (instruction (turn EN.R stacknext * pos !continue)
+      (image (id Q)))
+    (instruction (turn EN.L stacknext * pos !continue)
+      (image (id O)))))

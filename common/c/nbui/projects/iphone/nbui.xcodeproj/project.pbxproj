@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C24A0631684F45300C425A5 /* MapNativeHostView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C24A0611684F45300C425A5 /* MapNativeHostView.h */; };
+		0C24A0641684F45300C425A5 /* MapNativeHostView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A0621684F45300C425A5 /* MapNativeHostView.mm */; };
+		0C7BF01B14D0978600927E06 /* MapNativeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C7BF01A14D0978600927E06 /* MapNativeView.mm */; };
+		0C7FEA3216CAFACF00683B09 /* UIMapControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7FEA3116CAFACF00683B09 /* UIMapControllerProtocol.h */; };
+		0C968EF2148707B300C28E9D /* nbui-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0C968EF1148707B300C28E9D /* nbui-Prefix.pch */; };
+		0CCD20BA1485A7AA0080C5E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD20B91485A7AA0080C5E0 /* Foundation.framework */; };
+		18117EA818F27DB1007F1855 /* MapNativeGestureConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 18117EA718F27DB1007F1855 /* MapNativeGestureConnector.h */; };
+		18117EE818F3A706007F1855 /* UIMapViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 18117EE718F3A706007F1855 /* UIMapViewProtocol.h */; };
+		18B3F770196BA32500B5A128 /* MapNativeViewInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B3F76E196BA32500B5A128 /* MapNativeViewInterfaces.h */; };
+		18B3F771196BA32500B5A128 /* MapWidgetGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B3F76F196BA32500B5A128 /* MapWidgetGetter.h */; };
+		18F1B0F8197CA1F80020760B /* NBUIToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 18F1B0F6197CA1F80020760B /* NBUIToast.h */; };
+		18F1B0F9197CA1F80020760B /* NBUIToast.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F1B0F7197CA1F80020760B /* NBUIToast.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc "; }; };
+		7105A5A514E3C41800D44AFB /* MapNativeGestureConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7105A5A414E3C41800D44AFB /* MapNativeGestureConnector.mm */; };
+		71432D3714D168930018674A /* NBUI_GLESDrawContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 71432D3614D168930018674A /* NBUI_GLESDrawContext.h */; };
+		71432D3A14D168B90018674A /* NBUI_GLESFrameBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 71432D3914D168B90018674A /* NBUI_GLESFrameBuffer.h */; };
+		71432D4014D168C40018674A /* NBUI_GLESFrameBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71432D3B14D168C40018674A /* NBUI_GLESFrameBuffer.m */; };
+		71491EA414D1731D0013B140 /* NBUI_GLESDrawContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491EA314D1731C0013B140 /* NBUI_GLESDrawContext.m */; };
+		7A0C1000152C756000EDEAD1 /* MapNativeDebugView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A0C0FFE152C755F00EDEAD1 /* MapNativeDebugView.h */; };
+		7A0C1001152C756000EDEAD1 /* MapNativeDebugView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0FFF152C755F00EDEAD1 /* MapNativeDebugView.mm */; };
+		7A9B343A15C2EF4E00CCE7AE /* NBUIConfigiPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B343915C2EF4E00CCE7AE /* NBUIConfigiPhone.cpp */; };
+		7A9B343C15C2EF8200CCE7AE /* NBUIConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9B343B15C2EF8200CCE7AE /* NBUIConfig.h */; };
+		82556BAB1640FBF000487DBB /* TrafficBubbleProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 82556BAA1640FBF000487DBB /* TrafficBubbleProvider.mm */; };
+		82556BEC16411F7400487DBB /* MapPoiBubble.h in Headers */ = {isa = PBXBuildFile; fileRef = 82556BE816411F7400487DBB /* MapPoiBubble.h */; };
+		82556BED16411F7400487DBB /* PinBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 82556BE916411F7400487DBB /* PinBubbleView.h */; };
+		82556BF116411F9300487DBB /* MapPoiBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 82556BEF16411F9300487DBB /* MapPoiBubble.m */; };
+		9317E1BB165E249100B5E345 /* nbgmrendercontextimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9317E1BA165E249100B5E345 /* nbgmrendercontextimpl.h */; };
+		9364AAF01648DEA8006E0E10 /* nbgmrendercontextimpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9364AAEE1648DEA8006E0E10 /* nbgmrendercontextimpl.mm */; };
+		9364AAF41648F8AF006E0E10 /* nbgmnativerendercontext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9364AAF31648F8AF006E0E10 /* nbgmnativerendercontext.mm */; };
+		A595A667163F6E7800F7FE69 /* TrafficBubbleProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = A595A665163F6E7800F7FE69 /* TrafficBubbleProvider.h */; };
+		A595A66F163F7C4500F7FE69 /* PinBubbleResolverIphone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A595A66C163F7C4500F7FE69 /* PinBubbleResolverIphone.cpp */; };
+		A595A670163F7C4500F7FE69 /* PinBubbleResolverIphone.h in Headers */ = {isa = PBXBuildFile; fileRef = A595A66D163F7C4500F7FE69 /* PinBubbleResolverIphone.h */; };
+		A595A679163FAE9100F7FE69 /* NBUITemplateInstantiator.h in Headers */ = {isa = PBXBuildFile; fileRef = A595A678163FAE9100F7FE69 /* NBUITemplateInstantiator.h */; };
+		A595A67B163FAE9E00F7FE69 /* NBUITemplateInstantiator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A595A67A163FAE9E00F7FE69 /* NBUITemplateInstantiator.cpp */; };
+		A5E516751592BA4600C49F0A /* TemplateInstantiation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E516741592BA4600C49F0A /* TemplateInstantiation.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C24A0611684F45300C425A5 /* MapNativeHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNativeHostView.h; sourceTree = "<group>"; };
+		0C24A0621684F45300C425A5 /* MapNativeHostView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapNativeHostView.mm; sourceTree = "<group>"; };
+		0C7BF01A14D0978600927E06 /* MapNativeView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapNativeView.mm; sourceTree = "<group>"; };
+		0C7FEA3116CAFACF00683B09 /* UIMapControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMapControllerProtocol.h; sourceTree = "<group>"; };
+		0C968EF1148707B300C28E9D /* nbui-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "nbui-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		0CCD20B61485A7AA0080C5E0 /* libnbui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnbui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCD20B91485A7AA0080C5E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18117EA718F27DB1007F1855 /* MapNativeGestureConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNativeGestureConnector.h; sourceTree = "<group>"; };
+		18117EE718F3A706007F1855 /* UIMapViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMapViewProtocol.h; sourceTree = "<group>"; };
+		18B3F76E196BA32500B5A128 /* MapNativeViewInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapNativeViewInterfaces.h; path = ../../include/MapNativeViewInterfaces.h; sourceTree = "<group>"; };
+		18B3F76F196BA32500B5A128 /* MapWidgetGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapWidgetGetter.h; path = ../../include/MapWidgetGetter.h; sourceTree = "<group>"; };
+		18F1B0F6197CA1F80020760B /* NBUIToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUIToast.h; sourceTree = "<group>"; };
+		18F1B0F7197CA1F80020760B /* NBUIToast.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NBUIToast.mm; sourceTree = "<group>"; };
+		7105A5A414E3C41800D44AFB /* MapNativeGestureConnector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapNativeGestureConnector.mm; sourceTree = "<group>"; };
+		71432D3614D168930018674A /* NBUI_GLESDrawContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBUI_GLESDrawContext.h; path = ../common/NBUI_GLESDrawContext.h; sourceTree = "<group>"; };
+		71432D3914D168B90018674A /* NBUI_GLESFrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBUI_GLESFrameBuffer.h; path = ../common/NBUI_GLESFrameBuffer.h; sourceTree = "<group>"; };
+		71432D3B14D168C40018674A /* NBUI_GLESFrameBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBUI_GLESFrameBuffer.m; path = ../common/NBUI_GLESFrameBuffer.m; sourceTree = "<group>"; };
+		71491EA314D1731C0013B140 /* NBUI_GLESDrawContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBUI_GLESDrawContext.m; path = ../common/NBUI_GLESDrawContext.m; sourceTree = "<group>"; };
+		7A0C0FFE152C755F00EDEAD1 /* MapNativeDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNativeDebugView.h; sourceTree = "<group>"; };
+		7A0C0FFF152C755F00EDEAD1 /* MapNativeDebugView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapNativeDebugView.mm; sourceTree = "<group>"; };
+		7A9B343915C2EF4E00CCE7AE /* NBUIConfigiPhone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NBUIConfigiPhone.cpp; sourceTree = "<group>"; };
+		7A9B343B15C2EF8200CCE7AE /* NBUIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBUIConfig.h; path = ../../include/protected/NBUIConfig.h; sourceTree = "<group>"; };
+		82556BAA1640FBF000487DBB /* TrafficBubbleProvider.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TrafficBubbleProvider.mm; sourceTree = "<group>"; };
+		82556BE816411F7400487DBB /* MapPoiBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoiBubble.h; sourceTree = "<group>"; };
+		82556BE916411F7400487DBB /* PinBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBubbleView.h; sourceTree = "<group>"; };
+		82556BEF16411F9300487DBB /* MapPoiBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoiBubble.m; sourceTree = "<group>"; };
+		9317E1BA165E249100B5E345 /* nbgmrendercontextimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nbgmrendercontextimpl.h; sourceTree = "<group>"; };
+		9364AAEE1648DEA8006E0E10 /* nbgmrendercontextimpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = nbgmrendercontextimpl.mm; sourceTree = "<group>"; };
+		9364AAF21648F82B006E0E10 /* nbgmnativerendercontext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nbgmnativerendercontext.h; sourceTree = "<group>"; };
+		9364AAF31648F8AF006E0E10 /* nbgmnativerendercontext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = nbgmnativerendercontext.mm; sourceTree = "<group>"; };
+		A595A665163F6E7800F7FE69 /* TrafficBubbleProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrafficBubbleProvider.h; path = ../../include/protected/TrafficBubbleProvider.h; sourceTree = "<group>"; };
+		A595A66C163F7C4500F7FE69 /* PinBubbleResolverIphone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PinBubbleResolverIphone.cpp; path = ../template/PinBubbleResolverIphone.cpp; sourceTree = "<group>"; };
+		A595A66D163F7C4500F7FE69 /* PinBubbleResolverIphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinBubbleResolverIphone.h; path = ../template/PinBubbleResolverIphone.h; sourceTree = "<group>"; };
+		A595A678163FAE9100F7FE69 /* NBUITemplateInstantiator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBUITemplateInstantiator.h; path = ../../include/protected/NBUITemplateInstantiator.h; sourceTree = "<group>"; };
+		A595A67A163FAE9E00F7FE69 /* NBUITemplateInstantiator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NBUITemplateInstantiator.cpp; path = ../template/NBUITemplateInstantiator.cpp; sourceTree = "<group>"; };
+		A5E516741592BA4600C49F0A /* TemplateInstantiation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TemplateInstantiation.cpp; path = ../template/TemplateInstantiation.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CCD20B31485A7AA0080C5E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CCD20BA1485A7AA0080C5E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C94401E148EF235009A2248 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				71432D3814D1689A0018674A /* common */,
+				7A0C0FFE152C755F00EDEAD1 /* MapNativeDebugView.h */,
+				7A0C0FFF152C755F00EDEAD1 /* MapNativeDebugView.mm */,
+				7105A5A414E3C41800D44AFB /* MapNativeGestureConnector.mm */,
+				0C24A0611684F45300C425A5 /* MapNativeHostView.h */,
+				0C24A0621684F45300C425A5 /* MapNativeHostView.mm */,
+				0C7BF01A14D0978600927E06 /* MapNativeView.mm */,
+				82556BEF16411F9300487DBB /* MapPoiBubble.m */,
+				9364AAF21648F82B006E0E10 /* nbgmnativerendercontext.h */,
+				9364AAF31648F8AF006E0E10 /* nbgmnativerendercontext.mm */,
+				9364AAEE1648DEA8006E0E10 /* nbgmrendercontextimpl.mm */,
+				7A9B343915C2EF4E00CCE7AE /* NBUIConfigiPhone.cpp */,
+				A595A67A163FAE9E00F7FE69 /* NBUITemplateInstantiator.cpp */,
+				18F1B0F6197CA1F80020760B /* NBUIToast.h */,
+				18F1B0F7197CA1F80020760B /* NBUIToast.mm */,
+				A595A66C163F7C4500F7FE69 /* PinBubbleResolverIphone.cpp */,
+				A595A66D163F7C4500F7FE69 /* PinBubbleResolverIphone.h */,
+				A5E516741592BA4600C49F0A /* TemplateInstantiation.cpp */,
+				82556BAA1640FBF000487DBB /* TrafficBubbleProvider.mm */,
+			);
+			name = map;
+			path = ../../src/iphone/map;
+			sourceTree = "<group>";
+		};
+		0CB2F6381485AA5F004D4920 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0CB2F63A1485AA83004D4920 /* include */,
+				0CB2F63B1485AA88004D4920 /* src */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		0CB2F63A1485AA83004D4920 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				82556BE616411F7400487DBB /* iphone */,
+				71E885771510A390000E99AE /* protected */,
+				18B3F76E196BA32500B5A128 /* MapNativeViewInterfaces.h */,
+				18B3F76F196BA32500B5A128 /* MapWidgetGetter.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		0CB2F63B1485AA88004D4920 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0C94401E148EF235009A2248 /* map */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0CCD20AB1485A7AA0080C5E0 = {
+			isa = PBXGroup;
+			children = (
+				0CB2F6381485AA5F004D4920 /* Classes */,
+				0CCD20BB1485A7AA0080C5E0 /* Other Sources */,
+				0CCD20B81485A7AA0080C5E0 /* Frameworks */,
+				0CCD20B71485A7AA0080C5E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CCD20B71485A7AA0080C5E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CCD20B61485A7AA0080C5E0 /* libnbui.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CCD20B81485A7AA0080C5E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CCD20B91485A7AA0080C5E0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CCD20BB1485A7AA0080C5E0 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0C968EF1148707B300C28E9D /* nbui-Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = nbui;
+			sourceTree = "<group>";
+		};
+		71432D3814D1689A0018674A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9317E1BA165E249100B5E345 /* nbgmrendercontextimpl.h */,
+				71432D3614D168930018674A /* NBUI_GLESDrawContext.h */,
+				71491EA314D1731C0013B140 /* NBUI_GLESDrawContext.m */,
+				71432D3914D168B90018674A /* NBUI_GLESFrameBuffer.h */,
+				71432D3B14D168C40018674A /* NBUI_GLESFrameBuffer.m */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		71E885771510A390000E99AE /* protected */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B343B15C2EF8200CCE7AE /* NBUIConfig.h */,
+				A595A678163FAE9100F7FE69 /* NBUITemplateInstantiator.h */,
+				A595A665163F6E7800F7FE69 /* TrafficBubbleProvider.h */,
+			);
+			name = protected;
+			sourceTree = "<group>";
+		};
+		82556BE616411F7400487DBB /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				18117EA718F27DB1007F1855 /* MapNativeGestureConnector.h */,
+				82556BE816411F7400487DBB /* MapPoiBubble.h */,
+				82556BE916411F7400487DBB /* PinBubbleView.h */,
+				0C7FEA3116CAFACF00683B09 /* UIMapControllerProtocol.h */,
+				18117EE718F3A706007F1855 /* UIMapViewProtocol.h */,
+			);
+			name = iphone;
+			path = ../../include/iphone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0CCD20B41485A7AA0080C5E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C968EF2148707B300C28E9D /* nbui-Prefix.pch in Headers */,
+				71432D3714D168930018674A /* NBUI_GLESDrawContext.h in Headers */,
+				71432D3A14D168B90018674A /* NBUI_GLESFrameBuffer.h in Headers */,
+				18B3F770196BA32500B5A128 /* MapNativeViewInterfaces.h in Headers */,
+				7A0C1000152C756000EDEAD1 /* MapNativeDebugView.h in Headers */,
+				7A9B343C15C2EF8200CCE7AE /* NBUIConfig.h in Headers */,
+				A595A667163F6E7800F7FE69 /* TrafficBubbleProvider.h in Headers */,
+				A595A670163F7C4500F7FE69 /* PinBubbleResolverIphone.h in Headers */,
+				A595A679163FAE9100F7FE69 /* NBUITemplateInstantiator.h in Headers */,
+				82556BEC16411F7400487DBB /* MapPoiBubble.h in Headers */,
+				82556BED16411F7400487DBB /* PinBubbleView.h in Headers */,
+				18F1B0F8197CA1F80020760B /* NBUIToast.h in Headers */,
+				9317E1BB165E249100B5E345 /* nbgmrendercontextimpl.h in Headers */,
+				0C24A0631684F45300C425A5 /* MapNativeHostView.h in Headers */,
+				18B3F771196BA32500B5A128 /* MapWidgetGetter.h in Headers */,
+				18117EA818F27DB1007F1855 /* MapNativeGestureConnector.h in Headers */,
+				18117EE818F3A706007F1855 /* UIMapViewProtocol.h in Headers */,
+				0C7FEA3216CAFACF00683B09 /* UIMapControllerProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CCD20B51485A7AA0080C5E0 /* nbui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CCD20C31485A7AA0080C5E0 /* Build configuration list for PBXNativeTarget "nbui" */;
+			buildPhases = (
+				0CCD20B21485A7AA0080C5E0 /* Sources */,
+				0CCD20B31485A7AA0080C5E0 /* Frameworks */,
+				0CCD20B41485A7AA0080C5E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nbui;
+			productName = nbui;
+			productReference = 0CCD20B61485A7AA0080C5E0 /* libnbui.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CCD20AD1485A7AA0080C5E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 0CCD20B01485A7AA0080C5E0 /* Build configuration list for PBXProject "nbui" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0CCD20AB1485A7AA0080C5E0;
+			productRefGroup = 0CCD20B71485A7AA0080C5E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CCD20B51485A7AA0080C5E0 /* nbui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CCD20B21485A7AA0080C5E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7BF01B14D0978600927E06 /* MapNativeView.mm in Sources */,
+				71432D4014D168C40018674A /* NBUI_GLESFrameBuffer.m in Sources */,
+				71491EA414D1731D0013B140 /* NBUI_GLESDrawContext.m in Sources */,
+				7105A5A514E3C41800D44AFB /* MapNativeGestureConnector.mm in Sources */,
+				7A0C1001152C756000EDEAD1 /* MapNativeDebugView.mm in Sources */,
+				A5E516751592BA4600C49F0A /* TemplateInstantiation.cpp in Sources */,
+				7A9B343A15C2EF4E00CCE7AE /* NBUIConfigiPhone.cpp in Sources */,
+				A595A66F163F7C4500F7FE69 /* PinBubbleResolverIphone.cpp in Sources */,
+				18F1B0F9197CA1F80020760B /* NBUIToast.mm in Sources */,
+				A595A67B163FAE9E00F7FE69 /* NBUITemplateInstantiator.cpp in Sources */,
+				82556BAB1640FBF000487DBB /* TrafficBubbleProvider.mm in Sources */,
+				82556BF116411F9300487DBB /* MapPoiBubble.m in Sources */,
+				9364AAF01648DEA8006E0E10 /* nbgmrendercontextimpl.mm in Sources */,
+				9364AAF41648F8AF006E0E10 /* nbgmnativerendercontext.mm in Sources */,
+				0C24A0641684F45300C425A5 /* MapNativeHostView.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0CCD20C11485A7AA0080C5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../abpal/$(BRANCH)/include",
+					"../../../../abpal/$(BRANCH)/include/iphone",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/protected/map",
+					"../../../../abservices/$(BRANCH)/include",
+					"../../../../abservices/$(BRANCH)/include/iphone",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0CCD20C21485A7AA0080C5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../abpal/$(BRANCH)/include",
+					"../../../../abpal/$(BRANCH)/include/iphone",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/protected/map",
+					"../../../../abservices/$(BRANCH)/include",
+					"../../../../abservices/$(BRANCH)/include/iphone",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CCD20C41485A7AA0080C5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/nbui.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nbui-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../abpal/$(BRANCH)/include",
+					"../../../../abpal/$(BRANCH)/include/iphone",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/protected",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/protected/map",
+					"../../../../abservices/$(BRANCH)/include",
+					"../../../../abservices/$(BRANCH)/include/iphone",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0CCD20C51485A7AA0080C5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/nbui.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nbui-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../abpal/$(BRANCH)/include",
+					"../../../../abpal/$(BRANCH)/include/iphone",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/protected",
+					"../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/protected/map",
+					"../../../../abservices/$(BRANCH)/include",
+					"../../../../abservices/$(BRANCH)/include/iphone",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CCD20B01485A7AA0080C5E0 /* Build configuration list for PBXProject "nbui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CCD20C11485A7AA0080C5E0 /* Debug */,
+				0CCD20C21485A7AA0080C5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CCD20C31485A7AA0080C5E0 /* Build configuration list for PBXNativeTarget "nbui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CCD20C41485A7AA0080C5E0 /* Debug */,
+				0CCD20C51485A7AA0080C5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CCD20AD1485A7AA0080C5E0 /* Project object */;
+}

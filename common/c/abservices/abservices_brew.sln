@@ -1,0 +1,312 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "abservices", "projects\brew\abservices.vcproj", "{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339} = {5488A801-A998-4DE3-87C7-4BEE43AA7339}
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE} = {2D22EF70-8227-43CB-BDDF-0A8F096055BE}
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4} = {0A72842E-6652-498D-B5A1-B8E20BC4F9E4}
+		{A5324BED-E7CA-4337-A28C-F24509558223} = {A5324BED-E7CA-4337-A28C-F24509558223}
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8} = {E28453E9-67DA-4684-97CA-EFA9818A69D8}
+		{60E767E5-74CA-436F-A433-62C91984C2FE} = {60E767E5-74CA-436F-A433-62C91984C2FE}
+		{928558CD-8F10-4276-8266-711E20B16FFA} = {928558CD-8F10-4276-8266-711E20B16FFA}
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7} = {9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89} = {27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0} = {8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D} = {B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7} = {0FFDF13C-0321-44FC-A401-2E667C7955E7}
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84} = {D705BA25-7FD5-4084-93E6-F4C07BCDFE84}
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F} = {0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "data", "projects\brew\data.vcproj", "{60781F6E-22C6-4DBF-85EE-25E1D9057D41}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datastore", "projects\brew\datastore.vcproj", "{A5324BED-E7CA-4337-A28C-F24509558223}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fileset", "projects\brew\fileset.vcproj", "{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "motd", "projects\brew\motd.vcproj", "{60E767E5-74CA-436F-A433-62C91984C2FE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network", "projects\brew\network.vcproj", "{5488A801-A998-4DE3-87C7-4BEE43AA7339}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "profile", "projects\brew\profile.vcproj", "{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "share", "projects\brew\share.vcproj", "{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sms", "projects\brew\sms.vcproj", "{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "speech", "projects\brew\speech.vcproj", "{E28453E9-67DA-4684-97CA-EFA9818A69D8}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sync", "projects\brew\sync.vcproj", "{928558CD-8F10-4276-8266-711E20B16FFA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qalog", "projects\brew\qalog.vcproj", "{0FFDF13C-0321-44FC-A401-2E667C7955E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subscription", "projects\brew\subscription.vcproj", "{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41} = {60781F6E-22C6-4DBF-85EE-25E1D9057D41}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "version", "projects\brew\version.vcproj", "{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ers", "projects\brew\ers.vcproj", "{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "license", "projects\brew\license.vcproj", "{2D22EF70-8227-43CB-BDDF-0A8F096055BE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 17
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = projects\\brew\\abservices.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = projects\\brew\\
+		SccProjectUniqueName2 = projects\\brew\\data.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = projects\\brew\\
+		SccProjectUniqueName3 = projects\\brew\\sms.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = projects\\brew\\
+		SccProjectUniqueName4 = projects\\brew\\profile.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = projects\\brew\\
+		SccProjectUniqueName5 = projects\\brew\\datastore.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = projects\\brew\\
+		SccProjectUniqueName6 = projects\\brew\\network.vcproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = projects\\brew\\
+		SccProjectUniqueName7 = projects\\brew\\motd.vcproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = projects\\brew\\
+		SccProjectUniqueName8 = projects\\brew\\fileset.vcproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = projects\\brew\\
+		SccProjectUniqueName9 = projects\\brew\\subscription.vcproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = projects\\brew\\
+		SccProjectUniqueName10 = projects\\brew\\speech.vcproj
+		SccLocalPath10 = .
+		SccProjectFilePathRelativizedFromConnection10 = projects\\brew\\
+		SccProjectUniqueName11 = projects\\brew\\sync.vcproj
+		SccLocalPath11 = .
+		SccProjectFilePathRelativizedFromConnection11 = projects\\brew\\
+		SccProjectUniqueName12 = projects\\brew\\qalog.vcproj
+		SccLocalPath12 = .
+		SccProjectFilePathRelativizedFromConnection12 = projects\\brew\\
+		SccProjectUniqueName13 = projects\\brew\\share.vcproj
+		SccLocalPath13 = .
+		SccProjectFilePathRelativizedFromConnection13 = projects\\brew\\
+		SccProjectUniqueName14 = projects\\brew\\version.vcproj
+		SccLocalPath14 = .
+		SccProjectFilePathRelativizedFromConnection14 = projects\\brew\\
+		SccProjectUniqueName15 = projects\\brew\\ers.vcproj
+		SccLocalPath15 = .
+		SccProjectFilePathRelativizedFromConnection15 = projects\\brew\\
+		SccProjectUniqueName16 = projects\\brew\\license.vcproj
+		SccLocalPath16 = .
+		SccProjectFilePathRelativizedFromConnection16 = projects\\brew\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Windows Mobile 6 Standard SDK (ARMV4I) = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		Release|Win32 = Release|Win32
+		Release|Windows Mobile 6 Standard SDK (ARMV4I) = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Debug|Win32.Build.0 = Debug|Win32
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Release|Win32.ActiveCfg = Release|Win32
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Release|Win32.Build.0 = Release|Win32
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{F71C489D-2538-4BA6-9FDD-1D4D809FF1B4}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Debug|Win32.Build.0 = Debug|Win32
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Release|Win32.ActiveCfg = Release|Win32
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Release|Win32.Build.0 = Release|Win32
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{60781F6E-22C6-4DBF-85EE-25E1D9057D41}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Debug|Win32.Build.0 = Debug|Win32
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Release|Win32.ActiveCfg = Release|Win32
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Release|Win32.Build.0 = Release|Win32
+		{A5324BED-E7CA-4337-A28C-F24509558223}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Debug|Win32.Build.0 = Debug|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Release|Win32.ActiveCfg = Release|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Release|Win32.Build.0 = Release|Win32
+		{B9AE9980-A306-4DE3-83CD-35E1BF72EA4D}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Debug|Win32.Build.0 = Debug|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Release|Win32.ActiveCfg = Release|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Release|Win32.Build.0 = Release|Win32
+		{60E767E5-74CA-436F-A433-62C91984C2FE}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Debug|Win32.Build.0 = Debug|Win32
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Release|Win32.ActiveCfg = Release|Win32
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Release|Win32.Build.0 = Release|Win32
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{5488A801-A998-4DE3-87C7-4BEE43AA7339}.Release|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Debug|Win32.Build.0 = Debug|Win32
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Release|Win32.ActiveCfg = Release|Win32
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Release|Win32.Build.0 = Release|Win32
+		{27DCE5A9-6E7C-46A9-8A31-54B9AA923B89}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Debug|Win32.Build.0 = Debug|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Release|Win32.ActiveCfg = Release|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Release|Win32.Build.0 = Release|Win32
+		{9490E6C9-6357-4D6B-AC79-BFF7B1180ED7}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Debug|Win32.Build.0 = Debug|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Release|Win32.ActiveCfg = Release|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Release|Win32.Build.0 = Release|Win32
+		{D705BA25-7FD5-4084-93E6-F4C07BCDFE84}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Debug|Win32.Build.0 = Debug|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Release|Win32.ActiveCfg = Release|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Release|Win32.Build.0 = Release|Win32
+		{E28453E9-67DA-4684-97CA-EFA9818A69D8}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Debug|Win32.Build.0 = Debug|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Release|Win32.ActiveCfg = Release|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Release|Win32.Build.0 = Release|Win32
+		{928558CD-8F10-4276-8266-711E20B16FFA}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Debug|Win32.Build.0 = Debug|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Release|Win32.ActiveCfg = Release|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Release|Win32.Build.0 = Release|Win32
+		{0FFDF13C-0321-44FC-A401-2E667C7955E7}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Debug|Win32.Build.0 = Debug|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Release|Win32.ActiveCfg = Release|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Release|Win32.Build.0 = Release|Win32
+		{8202BF93-F5FD-4AA3-B0FD-0E273297EDA0}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Debug|Win32.Build.0 = Debug|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Release|Win32.ActiveCfg = Release|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Release|Win32.Build.0 = Release|Win32
+		{0A72842E-6652-498D-B5A1-B8E20BC4F9E4}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Debug|Win32.Build.0 = Debug|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Release|Win32.ActiveCfg = Release|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Release|Win32.Build.0 = Release|Win32
+		{0EDF47BA-8DE7-461B-B409-EB01A0C8FE3F}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Debug|Win32.Build.0 = Debug|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Release|Win32.ActiveCfg = Release|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Release|Win32.Build.0 = Release|Win32
+		{2D22EF70-8227-43CB-BDDF-0A8F096055BE}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

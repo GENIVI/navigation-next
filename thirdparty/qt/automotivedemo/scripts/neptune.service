@@ -1,0 +1,6 @@
+[Unit]
+Description=Neptune
+After=systemd-user-sessions.service
+
+[Service]
+ExecStart=/opt/automotivedemo/start.sh

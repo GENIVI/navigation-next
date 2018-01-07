@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+    <id>com.tcs.nbgm.bbreplay</id>
+    <name>NBGM Replayer</name>
+    <versionNumber>1.0</versionNumber>
+    <description>NBGM Replayer for bb10</description>
+    <author>nbgm.rc</author>
+    <icon><image>asset/icon.png</image></icon>
+    <splashScreens><image>asset/splashscreen.png</image></splashScreens>
+    <asset path="replay.py" entry="true" type="Qnx/Python">replay.py</asset>
+    <action system="true">run_native</action>
+</qnx>

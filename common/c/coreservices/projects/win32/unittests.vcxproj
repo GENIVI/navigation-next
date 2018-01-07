@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5040C6AF-BF77-47FF-AAB1-B44ECF5C1F40}</ProjectGuid>
+    <RootNamespace>unittests</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="coreservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="coreservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\CUnit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>CUnit.lib;nbpal.lib;coreservices.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy $(NIMNBIPAL_LIB)\nbpal17.lib $(OutDir)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\cunit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>CUnit.lib;nbpal.lib;coreservices.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy $(NIMNBIPAL_LIB)\nbpal17_static.lib $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\unittests\main.c" />
+    <ClCompile Include="..\..\src\unittests\winmobile\PlatformUtil.c" />
+    <ClCompile Include="..\..\src\unittests\testcache.c" />
+    <ClCompile Include="..\..\src\unittests\testhashtable.c" />
+    <ClCompile Include="..\..\src\unittests\testlog.c" />
+    <ClCompile Include="..\..\src\unittests\testnetwork.c" />
+    <ClCompile Include="..\..\src\unittests\testtps.c" />
+    <ClCompile Include="..\..\src\unittests\testutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\unittests\main.h" />
+    <ClInclude Include="..\..\src\unittests\platformutil.h" />
+    <ClInclude Include="..\..\src\unittests\testcache.h" />
+    <ClInclude Include="..\..\src\unittests\testhashtable.h" />
+    <ClInclude Include="..\..\src\unittests\testlog.h" />
+    <ClInclude Include="..\..\src\unittests\testnetwork.h" />
+    <ClInclude Include="..\..\src\unittests\testtps.h" />
+    <ClInclude Include="..\..\src\unittests\testutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="coreservices.vcxproj">
+      <Project>{d1a6b2ab-73bf-4095-a6f6-530b1cca802f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

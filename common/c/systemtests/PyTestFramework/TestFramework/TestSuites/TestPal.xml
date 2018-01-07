@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestSuite name="Test NbPal">
+    <item name="TestNetwork"/>
+    <item name="TestFile"/>
+    <item name="TestDataBase"/>
+</TestSuite>

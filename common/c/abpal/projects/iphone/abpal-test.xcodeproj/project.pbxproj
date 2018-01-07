@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		845E1BC2148E192C00ECECDA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E1BC1148E192C00ECECDA /* CoreTelephony.framework */; };
+		A55488E31964F4160042E560 /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2DF93196393C2004786FE /* libcunit.a */; };
+		A55488E41964F4160042E560 /* libnbpal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2DF8A1963938B004786FE /* libnbpal.a */; };
+		A55488E51964F4160042E560 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2DF96196393C2004786FE /* libpng.a */; };
+		A55488E81964F4160042E560 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A55488E61964F4160042E560 /* libfreetype.a */; };
+		A55488E91964F4160042E560 /* libglues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A55488E71964F4160042E560 /* libglues.a */; };
+		A5CA126B1952D5BE00574085 /* testTTSController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5CA126A1952D5BE00574085 /* testTTSController.mm */; };
+		A5CA126D1952F20800574085 /* testTTSController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CA126C1952F20800574085 /* testTTSController.xib */; };
+		B0D9319F11DAD61500E6FDD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D9319E11DAD61500E6FDD4 /* AudioToolbox.framework */; };
+		B0D931EE11DADC8000E6FDD4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D931ED11DADC8000E6FDD4 /* AVFoundation.framework */; };
+		D67ABCEA11EF0CFA00D57824 /* abpal_testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67ABC9811EF0CFA00D57824 /* abpal_testViewController.xib */; };
+		D67ABD1511EF0CFA00D57824 /* abpal_testAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCD111EF0CFA00D57824 /* abpal_testAppDelegate.m */; };
+		D67ABD1611EF0CFA00D57824 /* abpal_testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCD311EF0CFA00D57824 /* abpal_testViewController.m */; };
+		D67ABD1711EF0CFA00D57824 /* gpscontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCD511EF0CFA00D57824 /* gpscontroller.m */; };
+		D67ABD1811EF0CFA00D57824 /* testAudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCD711EF0CFA00D57824 /* testAudioController.mm */; };
+		D67ABD1911EF0CFA00D57824 /* testAudioController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67ABCD811EF0CFA00D57824 /* testAudioController.xib */; };
+		D67ABD1A11EF0CFA00D57824 /* testGpsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67ABCD911EF0CFA00D57824 /* testGpsController.xib */; };
+		D67ABD1B11EF0CFA00D57824 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCDA11EF0CFA00D57824 /* main.m */; };
+		D67ABD1C11EF0CFA00D57824 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67ABCDB11EF0CFA00D57824 /* MainWindow.xib */; };
+		D67ABD1D11EF0CFA00D57824 /* PlatformUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCDC11EF0CFA00D57824 /* PlatformUtil.m */; };
+		D67ABD1E11EF0CFA00D57824 /* sound.amr in Resources */ = {isa = PBXBuildFile; fileRef = D67ABCDE11EF0CFA00D57824 /* sound.amr */; };
+		D67ABD1F11EF0CFA00D57824 /* TEST.GPS in Resources */ = {isa = PBXBuildFile; fileRef = D67ABCDF11EF0CFA00D57824 /* TEST.GPS */; };
+		D67ABD2011EF0CFA00D57824 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCE011EF0CFA00D57824 /* main.c */; };
+		D67ABD2111EF0CFA00D57824 /* testaudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCE411EF0CFA00D57824 /* testaudio.m */; };
+		D67ABD2211EF0CFA00D57824 /* testgps.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABCE611EF0CFA00D57824 /* testgps.m */; };
+		D67ABE4111EF109E00D57824 /* libabpal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67ABD3F11EF0DCC00D57824 /* libabpal.a */; };
+		D6F59B5411E5BF900010F1C0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F59B5311E5BF900010F1C0 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A55488DD1964F40F0042E560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8B196393BF004786FE /* cunit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = cunit;
+		};
+		A55488DF1964F40F0042E560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8319639381004786FE /* nbpal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = nbpal;
+		};
+		A55488E11964F40F0042E560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8E196393C1004786FE /* png.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B510DFC150F2674007E375B;
+			remoteInfo = png;
+		};
+		A5B2DF891963938B004786FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8319639381004786FE /* nbpal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = nbpal;
+		};
+		A5B2DF92196393C2004786FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8B196393BF004786FE /* cunit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = cunit;
+		};
+		A5B2DF95196393C2004786FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2DF8E196393C1004786FE /* png.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B510DFD150F2674007E375B;
+			remoteInfo = png;
+		};
+		B04989E2123EFA6B0071A22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D67ABD3611EF0DCC00D57824 /* abpal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = abpal;
+		};
+		D67ABD3E11EF0DCC00D57824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D67ABD3611EF0DCC00D57824 /* abpal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = abpal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* abpal-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "abpal-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* abpal_test_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpal_test_Prefix.pch; sourceTree = "<group>"; };
+		845E1BC1148E192C00ECECDA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A55488E61964F4160042E560 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = "../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/build/Debug-iphoneos/libfreetype.a"; sourceTree = "<group>"; };
+		A55488E71964F4160042E560 /* libglues.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglues.a; path = "../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/build/Debug-iphoneos/libglues.a"; sourceTree = "<group>"; };
+		A5B2DF8319639381004786FE /* nbpal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nbpal.xcodeproj; path = ../../../../nbpal/feature_140523_ltk_v1_5/projects/iphone/nbpal.xcodeproj; sourceTree = "<group>"; };
+		A5B2DF8B196393BF004786FE /* cunit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cunit.xcodeproj; path = ../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/cunit.xcodeproj; sourceTree = "<group>"; };
+		A5B2DF8E196393C1004786FE /* png.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = png.xcodeproj; path = ../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/png.xcodeproj; sourceTree = "<group>"; };
+		A5CA12521952BFFF00574085 /* testTTSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testTTSController.h; sourceTree = "<group>"; };
+		A5CA12551952C47600574085 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		A5CA12621952C94000574085 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		A5CA12631952C94000574085 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		A5CA126A1952D5BE00574085 /* testTTSController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = testTTSController.mm; sourceTree = "<group>"; };
+		A5CA126C1952F20800574085 /* testTTSController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = testTTSController.xib; path = ../../src/unittests/iphone/Classes/testTTSController.xib; sourceTree = "<group>"; };
+		B0D9319E11DAD61500E6FDD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B0D931ED11DADC8000E6FDD4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D67ABC9811EF0CFA00D57824 /* abpal_testViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = abpal_testViewController.xib; path = ../../src/unittests/iphone/abpal_testViewController.xib; sourceTree = "<group>"; };
+		D67ABCD011EF0CFA00D57824 /* abpal_testAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpal_testAppDelegate.h; sourceTree = "<group>"; };
+		D67ABCD111EF0CFA00D57824 /* abpal_testAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = abpal_testAppDelegate.m; sourceTree = "<group>"; };
+		D67ABCD211EF0CFA00D57824 /* abpal_testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpal_testViewController.h; sourceTree = "<group>"; };
+		D67ABCD311EF0CFA00D57824 /* abpal_testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = abpal_testViewController.m; sourceTree = "<group>"; };
+		D67ABCD411EF0CFA00D57824 /* gpscontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpscontroller.h; sourceTree = "<group>"; };
+		D67ABCD511EF0CFA00D57824 /* gpscontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gpscontroller.m; sourceTree = "<group>"; };
+		D67ABCD611EF0CFA00D57824 /* testAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testAudioController.h; sourceTree = "<group>"; };
+		D67ABCD711EF0CFA00D57824 /* testAudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = testAudioController.mm; sourceTree = "<group>"; };
+		D67ABCD811EF0CFA00D57824 /* testAudioController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = testAudioController.xib; path = ../../src/unittests/iphone/Classes/testAudioController.xib; sourceTree = "<group>"; };
+		D67ABCD911EF0CFA00D57824 /* testGpsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = testGpsController.xib; path = ../../src/unittests/iphone/Classes/testGpsController.xib; sourceTree = "<group>"; };
+		D67ABCDA11EF0CFA00D57824 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../src/unittests/iphone/main.m; sourceTree = "<group>"; };
+		D67ABCDB11EF0CFA00D57824 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../../src/unittests/iphone/MainWindow.xib; sourceTree = "<group>"; };
+		D67ABCDC11EF0CFA00D57824 /* PlatformUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformUtil.m; sourceTree = "<group>"; };
+		D67ABCDE11EF0CFA00D57824 /* sound.amr */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.amr; path = ../../src/unittests/iphone/resources/sound.amr; sourceTree = "<group>"; };
+		D67ABCDF11EF0CFA00D57824 /* TEST.GPS */ = {isa = PBXFileReference; lastKnownFileType = file; name = TEST.GPS; path = ../../src/unittests/iphone/resources/TEST.GPS; sourceTree = "<group>"; };
+		D67ABCE011EF0CFA00D57824 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D67ABCE111EF0CFA00D57824 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		D67ABCE211EF0CFA00D57824 /* platformutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platformutil.h; sourceTree = "<group>"; };
+		D67ABCE311EF0CFA00D57824 /* testaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testaudio.h; sourceTree = "<group>"; };
+		D67ABCE411EF0CFA00D57824 /* testaudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testaudio.m; sourceTree = "<group>"; };
+		D67ABCE511EF0CFA00D57824 /* testgps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testgps.h; sourceTree = "<group>"; };
+		D67ABCE611EF0CFA00D57824 /* testgps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testgps.m; sourceTree = "<group>"; };
+		D67ABD3611EF0DCC00D57824 /* abpal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = abpal.xcodeproj; sourceTree = "<group>"; };
+		D67ABEC211EF11AF00D57824 /* abpal_test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "abpal_test-Info.plist"; sourceTree = "<group>"; };
+		D6F59B5311E5BF900010F1C0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55488E81964F4160042E560 /* libfreetype.a in Frameworks */,
+				A55488E91964F4160042E560 /* libglues.a in Frameworks */,
+				A55488E31964F4160042E560 /* libcunit.a in Frameworks */,
+				A55488E41964F4160042E560 /* libnbpal.a in Frameworks */,
+				A55488E51964F4160042E560 /* libpng.a in Frameworks */,
+				845E1BC2148E192C00ECECDA /* CoreTelephony.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				B0D9319F11DAD61500E6FDD4 /* AudioToolbox.framework in Frameworks */,
+				B0D931EE11DADC8000E6FDD4 /* AVFoundation.framework in Frameworks */,
+				D6F59B5411E5BF900010F1C0 /* CoreLocation.framework in Frameworks */,
+				D67ABE4111EF109E00D57824 /* libabpal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABC9611EF0CFA00D57824 /* iphone */,
+				D67ABCE011EF0CFA00D57824 /* main.c */,
+				D67ABCE111EF0CFA00D57824 /* main.h */,
+				D67ABCE211EF0CFA00D57824 /* platformutil.h */,
+				D67ABCE311EF0CFA00D57824 /* testaudio.h */,
+				D67ABCE411EF0CFA00D57824 /* testaudio.m */,
+				D67ABCE511EF0CFA00D57824 /* testgps.h */,
+				D67ABCE611EF0CFA00D57824 /* testgps.m */,
+			);
+			name = Classes;
+			path = ../../src/unittests;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* abpal-test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				845E1BC1148E192C00ECECDA /* CoreTelephony.framework */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* abpal_test_Prefix.pch */,
+				D67ABCDA11EF0CFA00D57824 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5CA126C1952F20800574085 /* testTTSController.xib */,
+				D67ABEC211EF11AF00D57824 /* abpal_test-Info.plist */,
+				D67ABC9811EF0CFA00D57824 /* abpal_testViewController.xib */,
+				D67ABCD811EF0CFA00D57824 /* testAudioController.xib */,
+				D67ABCD911EF0CFA00D57824 /* testGpsController.xib */,
+				D67ABCDB11EF0CFA00D57824 /* MainWindow.xib */,
+				D67ABCDE11EF0CFA00D57824 /* sound.amr */,
+				D67ABCDF11EF0CFA00D57824 /* TEST.GPS */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A55488E61964F4160042E560 /* libfreetype.a */,
+				A55488E71964F4160042E560 /* libglues.a */,
+				A5CA12621952C94000574085 /* libstdc++.6.0.9.dylib */,
+				A5CA12631952C94000574085 /* libstdc++.6.dylib */,
+				A5CA12551952C47600574085 /* libstdc++.dylib */,
+				B0D9319E11DAD61500E6FDD4 /* AudioToolbox.framework */,
+				B0D931ED11DADC8000E6FDD4 /* AVFoundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				D6F59B5311E5BF900010F1C0 /* CoreLocation.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				D67ABD3611EF0DCC00D57824 /* abpal.xcodeproj */,
+				A5B2DF8B196393BF004786FE /* cunit.xcodeproj */,
+				A5B2DF8319639381004786FE /* nbpal.xcodeproj */,
+				A5B2DF8E196393C1004786FE /* png.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5B2DF8419639381004786FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2DF8A1963938B004786FE /* libnbpal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5B2DF8C196393BF004786FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2DF93196393C2004786FE /* libcunit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5B2DF8F196393C1004786FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2DF96196393C2004786FE /* libpng.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D67ABC9611EF0CFA00D57824 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABCCF11EF0CFA00D57824 /* Classes */,
+				D67ABCDC11EF0CFA00D57824 /* PlatformUtil.m */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		D67ABCCF11EF0CFA00D57824 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABCD011EF0CFA00D57824 /* abpal_testAppDelegate.h */,
+				D67ABCD111EF0CFA00D57824 /* abpal_testAppDelegate.m */,
+				D67ABCD211EF0CFA00D57824 /* abpal_testViewController.h */,
+				D67ABCD311EF0CFA00D57824 /* abpal_testViewController.m */,
+				D67ABCD411EF0CFA00D57824 /* gpscontroller.h */,
+				D67ABCD511EF0CFA00D57824 /* gpscontroller.m */,
+				D67ABCD611EF0CFA00D57824 /* testAudioController.h */,
+				D67ABCD711EF0CFA00D57824 /* testAudioController.mm */,
+				A5CA12521952BFFF00574085 /* testTTSController.h */,
+				A5CA126A1952D5BE00574085 /* testTTSController.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D67ABD3711EF0DCC00D57824 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABD3F11EF0DCC00D57824 /* libabpal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* abpal-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "abpal-test" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A55488DE1964F40F0042E560 /* PBXTargetDependency */,
+				A55488E01964F40F0042E560 /* PBXTargetDependency */,
+				A55488E21964F40F0042E560 /* PBXTargetDependency */,
+				B04989E3123EFA6B0071A22D /* PBXTargetDependency */,
+			);
+			name = "abpal-test";
+			productName = "abpal-test";
+			productReference = 1D6058910D05DD3D006BFB54 /* abpal-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "abpal-test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D67ABD3711EF0DCC00D57824 /* Products */;
+					ProjectRef = D67ABD3611EF0DCC00D57824 /* abpal.xcodeproj */;
+				},
+				{
+					ProductGroup = A5B2DF8C196393BF004786FE /* Products */;
+					ProjectRef = A5B2DF8B196393BF004786FE /* cunit.xcodeproj */;
+				},
+				{
+					ProductGroup = A5B2DF8419639381004786FE /* Products */;
+					ProjectRef = A5B2DF8319639381004786FE /* nbpal.xcodeproj */;
+				},
+				{
+					ProductGroup = A5B2DF8F196393C1004786FE /* Products */;
+					ProjectRef = A5B2DF8E196393C1004786FE /* png.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* abpal-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A5B2DF8A1963938B004786FE /* libnbpal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnbpal.a;
+			remoteRef = A5B2DF891963938B004786FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5B2DF93196393C2004786FE /* libcunit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcunit.a;
+			remoteRef = A5B2DF92196393C2004786FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5B2DF96196393C2004786FE /* libpng.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpng.a;
+			remoteRef = A5B2DF95196393C2004786FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D67ABD3F11EF0DCC00D57824 /* libabpal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libabpal.a;
+			remoteRef = D67ABD3E11EF0DCC00D57824 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67ABCEA11EF0CFA00D57824 /* abpal_testViewController.xib in Resources */,
+				D67ABD1911EF0CFA00D57824 /* testAudioController.xib in Resources */,
+				A5CA126D1952F20800574085 /* testTTSController.xib in Resources */,
+				D67ABD1A11EF0CFA00D57824 /* testGpsController.xib in Resources */,
+				D67ABD1C11EF0CFA00D57824 /* MainWindow.xib in Resources */,
+				D67ABD1E11EF0CFA00D57824 /* sound.amr in Resources */,
+				D67ABD1F11EF0CFA00D57824 /* TEST.GPS in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67ABD1511EF0CFA00D57824 /* abpal_testAppDelegate.m in Sources */,
+				D67ABD1611EF0CFA00D57824 /* abpal_testViewController.m in Sources */,
+				D67ABD1711EF0CFA00D57824 /* gpscontroller.m in Sources */,
+				D67ABD1811EF0CFA00D57824 /* testAudioController.mm in Sources */,
+				D67ABD1B11EF0CFA00D57824 /* main.m in Sources */,
+				D67ABD1D11EF0CFA00D57824 /* PlatformUtil.m in Sources */,
+				D67ABD2011EF0CFA00D57824 /* main.c in Sources */,
+				A5CA126B1952D5BE00574085 /* testTTSController.mm in Sources */,
+				D67ABD2111EF0CFA00D57824 /* testaudio.m in Sources */,
+				D67ABD2211EF0CFA00D57824 /* testgps.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A55488DE1964F40F0042E560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cunit;
+			targetProxy = A55488DD1964F40F0042E560 /* PBXContainerItemProxy */;
+		};
+		A55488E01964F40F0042E560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nbpal;
+			targetProxy = A55488DF1964F40F0042E560 /* PBXContainerItemProxy */;
+		};
+		A55488E21964F40F0042E560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = png;
+			targetProxy = A55488E11964F40F0042E560 /* PBXContainerItemProxy */;
+		};
+		B04989E3123EFA6B0071A22D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = abpal;
+			targetProxy = B04989E2123EFA6B0071A22D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = abpal_test_Prefix.pch;
+				INFOPLIST_FILE = "abpal_test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/build/Debug-iphoneos";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "abpal-test";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/feature_140523_ltk_v1_5/include/ ../../include/iphone/ ../../include/ ../../../../nbpal/feature_140523_ltk_v1_5/include/iphone/ ../../../../thirdparty/feature_140523_ltk_v1_5/CUnit/include/";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = abpal_test_Prefix.pch;
+				INFOPLIST_FILE = "abpal_test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../../../thirdparty/feature_140523_ltk_v1_5/projects/iphone/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "abpal-test";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/feature_140523_ltk_v1_5/include/ ../../include/iphone/ ../../include/ ../../../../nbpal/feature_140523_ltk_v1_5/include/iphone/ ../../../../thirdparty/feature_140523_ltk_v1_5/CUnit/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hu xin (27TN796R6Q)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/feature_140523_ltk_v1_5/include/ ../../include/iphone/ ../../include/ ../../../../nbpal/feature_140523_ltk_v1_5/include/iphone/ ../../../../thirdparty/feature_140523_ltk_v1_5/CUnit/include/";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hu xin (27TN796R6Q)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/feature_140523_ltk_v1_5/include/ ../../include/iphone/ ../../include/ ../../../../nbpal/feature_140523_ltk_v1_5/include/iphone/ ../../../../thirdparty/feature_140523_ltk_v1_5/CUnit/include/";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "abpal-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "abpal-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<nbgm version="1.0">
+	<arg_types>
+        <!-- 8bit integer -->
+        <type name="char"       id="c"/>
+        <type name="int8"       id="b"/>
+        <type name="uint8"      id="B"/>
+        <type name="nb_boolean" id="B"/>
+        <!-- 16bit integer -->
+		<type name="int16"      id="h"/>
+		<type name="uint16"     id="H"/>
+        <!-- 32bit integer -->
+		<type name="int32"      id="i"/>
+		<type name="uint32"     id="I"/>
+        <!-- 64bit integer -->
+		<type name="int64"      id="q"/>
+        <type name="uint64"     id="Q"/>
+        <!-- 32bit float -->
+		<type name="float"      id="f"/>
+        <!-- 64bit double -->
+		<type name="double"     id="d"/>
+        <!-- complex type -->
+		<type name="string"     id="s">
+            <arg name="length"  type="uint16"/>
+            <arg name="buffer"  type="char"/>
+        </type>
+        <type name="array"      id="a">
+            <arg name="length"  type="uint16"/>
+            <arg name="type"    type="string"/>
+        </type>
+	 </arg_types>
+     
+     <func_ids>
+        <!-- id 1-9 -->
+        <function name="LoadCommonMaterial" id="1"/>
+        <function name="SetCurrentCommonMaterial" id="2"/>
+        <function name="LoadNBMTile" id="3"/>
+        <function name="UnLoadTile" id="4"/>
+        <function name="UnLoadTiles" id="5"/>
+        <!-- id 10-29 -->
+        <function name="SetViewSize" id="10"/>
+        <function name="SetPerspective" id="11"/>
+        <function name="SetViewCenter" id="12"/>
+        <function name="SetHorizonDistance" id="13"/>
+        <function name="SetViewPointDistance" id="14"/>
+        <!-- id 30-39 -->
+        <function name="OnTouchEvent" id="30"/>
+        <function name="OnPaning" id="31"/>
+        <function name="SetRotateCenter" id="32"/>
+        <function name="Rotate" id="33"/>
+        <function name="Zoom" id="34"/>
+	    <function name="SetRotateAngle" id="35"/>
+	    <function name="SetTiltAngle" id="36"/>
+	    <function name="Tilt" id="37"/>
+        <!-- id 50-69 -->
+        <function name="SetAvatarLocation" id="50"/>
+        <function name="SetAvatarScale" id="51"/>
+        <function name="SetAvatarState" id="52"/>
+        <function name="SetAvatarMode" id="53"/>
+        <function name="SelectAndTrackAvatar" id="54"/>
+        <!-- id 60-69 -->
+        <function name="LoadPinMaterial" id="60"/>
+        <function name="SelectAndTrackPoi" id="61"/>
+        <function name="UnselectAndStopTrackingPoi" id="62"/>
+        <!-- id 100-255 -->
+        <function name="SetBackground" id="100"/>
+        <function name="SetSkyDayNight" id="101"/>
+     </func_ids>
+
+     <!-- void LoadCommonMaterial(const char* materialName, const char* filePath); -->
+     <function name="LoadCommonMaterial">
+		<arg_list count="2">
+			<arg name="materialName" type="string"/>
+            <arg name="filePath" type="string"/>
+		</arg_list>
+	 </function>
+
+     <!-- void SetCurrentCommonMaterial(const char* materialName); -->
+     <function name="SetCurrentCommonMaterial">
+		<arg_list count="1">
+			<arg name="materialName" type="string"/>
+		</arg_list>
+	 </function>
+
+     <!-- void LoadNBMTile(const char* nbmName, uint8 baseDrawOrder, uint8 labelDrawOrder, const char* filePath); -->
+     <function name="LoadNBMTile">
+		<arg_list count="4">
+			<arg name="nbmName" type="string"/>
+            <arg name="baseDrawOrder" type="uint8"/>
+            <arg name="labelDrawOrder" type="uint8"/>
+            <arg name="filePath" type="string"/>
+		</arg_list>
+	 </function>
+
+     <!-- void UnLoadTile(const char* nbmName); -->
+     <function name="UnLoadTile">
+		<arg_list count="1">
+			<arg name="nbmName" type="string"/>
+		</arg_list>
+	 </function>
+
+     <!-- void UnLoadTile(const char* nbmName); -->
+     <function name="UnLoadTiles">
+		<arg_list count="1">
+			<arg name="nbmName" type="array"/>
+		</arg_list>
+	 </function>
+
+     <!-- void SetViewSize(int32 x, int32 y, uint32 width, uint32 height); -->
+     <function name="SetViewSize">
+		<arg_list count="4">
+			<arg name="x" type="int32"/>
+            <arg name="y" type="int32"/>
+            <arg name="width" type="uint32"/>
+            <arg name="height" type="uint32"/>
+		</arg_list>
+	 </function>
+
+     <!-- void SetPerspective(float fov, float aspect); -->
+     <function name="SetPerspective">
+		<arg_list count="2">
+			<arg name="fov" type="float"/>
+            <arg name="aspect" type="float"/>
+		</arg_list>
+	 </function> 
+
+     <!-- void SetViewCenter(double mercatorX, double mercatorY); -->
+     <function name="SetViewCenter">
+		<arg_list count="2">
+			<arg name="mercatorX" type="double"/>
+            <arg name="mercatorY" type="double"/>
+		</arg_list>
+	 </function> 
+
+    <!--  void SetHorizonDistance(double horizonDistance); -->
+     <function name="SetHorizonDistance">
+		<arg_list count="1">
+			<arg name="horizonDistance" type="double"/>
+		</arg_list>
+	 </function>
+
+     <!--  void SetViewPointDistance(float distance); -->
+     <function name="SetViewPointDistance">
+		<arg_list count="1">
+			<arg name="distance" type="float"/>
+		</arg_list>
+	 </function>
+
+	 <!-- void OnTouchEvent(float screenX, float screenY); -->
+	 <function name="OnTouchEvent">
+		<arg_list count="2">
+			<arg name="screenX" type="float"/>
+			<arg name="screenY" type="float"/>
+		</arg_list>
+	 </function>
+    
+	 <!-- void OnPaning(float screenX, float screenY); -->
+	 <function name="OnPaning">
+		<arg_list count="2">
+			<arg name="screenX" type="float"/>
+			<arg name="screenY" type="float"/>
+		</arg_list>
+	 </function>
+    
+     <!-- void SetRotateCenter(float screenX, float screenY); -->
+	 <function name="SetRotateCenter">
+		<arg_list count="2">
+			<arg name="screenX" type="float"/>
+			<arg name="screenY" type="float"/>
+		</arg_list>
+	 </function>
+    
+     <!-- void Rotate(float angle); -->
+	 <function name="Rotate">
+		<arg_list count="1">
+			<arg name="angle" type="float"/>
+		</arg_list>
+	 </function>
+    
+     <!-- void Zoom(float deltaH); -->
+     <function name="Zoom">
+		<arg_list count="1">
+			<arg name="deltaH" type="float"/>
+		</arg_list>
+	 </function>
+    
+     <!-- SetRotateAngle(float angle); -->
+	 <function name="SetRotateAngle">
+		<arg_list count="1">
+			<arg name="angle" type="float"/>
+		</arg_list>
+	 </function>
+     
+     <!-- SetTiltAngle(float angle); -->
+	 <function name="SetTiltAngle">
+		<arg_list count="1">
+			<arg name="angle" type="float"/>
+		</arg_list>
+	 </function>
+
+     <!-- void Tilt(float angle); -->
+	 <function name="Tilt">
+		<arg_list count="1">
+			<arg name="angle" type="float"/>
+		</arg_list>
+	 </function>
+     
+     <!-- SetAvatarLocation(double x, double y, double z, uint64 time, double speed, double accury, double heading); -->
+     <function name="SetAvatarLocation">
+		<arg_list count="7">
+			<arg name="x" type="double"/>
+            <arg name="y" type="double"/>
+            <arg name="z" type="double"/>
+            <arg name="time" type="uint64"/>
+            <arg name="speed" type="double"/>
+            <arg name="accury" type="double"/>
+            <arg name="heading" type="double"/>
+		</arg_list>
+     </function> 
+    
+     <!-- void SetAvatarScale(float scaleValue); -->
+     <function name="SetAvatarScale">
+		<arg_list count="1">
+			<arg name="scaleValue" type="float"/>
+		</arg_list>
+	 </function>
+    
+      <!-- SetAvatarState(int32 state); -->
+     <function name="SetAvatarState">
+		<arg_list count="1">
+			<arg name="state" type="int32"/>
+		</arg_list>
+	 </function>
+    
+      <!-- SetAvatarMode(int32 mode); -->
+     <function name="SetAvatarMode">
+		<arg_list count="1">
+			<arg name=" mode" type="int32"/>
+		</arg_list>
+     </function>
+    
+     <!-- SelectAndTrackAvatar(float x, float y); -->
+     <function name="SelectAndTrackAvatar">
+		<arg_list count="2">
+			<arg name=" x" type="float"/>
+            <arg name=" y" type="float"/>
+		</arg_list>
+	 </function>
+    
+     <!-- void LoadPinMaterial(const char* pinMaterialName, const char* filePath); -->
+     <function name="LoadPinMaterial">
+		<arg_list count="2">
+			<arg name="pinMaterialName" type="string"/>
+            <arg name="filePath" type="string"/>
+		</arg_list>
+     </function>
+    
+     <!-- void SelectAndTrackPoi(const char* poiId); -->
+     <function name="SelectAndTrackPoi">
+		<arg_list count="1">
+			<arg name="poiId" type="string"/>
+		</arg_list>
+     </function>
+    
+     <!-- void UnselectAndStopTrackingPoi(const char* poiId); -->
+     <function name="UnselectAndStopTrackingPoi">
+		<arg_list count="1">
+			<arg name="poiId" type="string"/>
+        </arg_list>
+     </function>
+
+     <!-- void SetBackground(nb_boolean background); -->
+     <function name="SetBackground">
+		<arg_list count="1">
+			<arg name="background" type="nb_boolean"/>
+		</arg_list>
+	 </function>
+    
+     <!-- void SetSkyDayNight(nb_boolean isDay); -->
+     <function name="SetSkyDayNight">
+		<arg_list count="1">
+			<arg name="isDay" type="nb_boolean"/>
+		</arg_list>
+	 </function>
+     
+</nbgm>

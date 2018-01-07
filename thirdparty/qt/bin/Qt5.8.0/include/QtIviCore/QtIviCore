@@ -1,0 +1,18 @@
+#ifndef QT_QTIVICORE_MODULE_H
+#define QT_QTIVICORE_MODULE_H
+#include <QtIviCore/QtIviCoreDepends>
+#include "qtiviglobal.h"
+#include "qiviabstractfeature.h"
+#include "qiviabstractfeaturelistmodel.h"
+#include "qiviabstractzonedfeature.h"
+#include "qiviproperty.h"
+#include "qivipropertyattribute.h"
+#include "qivipropertyfactory.h"
+#include "qiviqueryterm.h"
+#include "qiviserviceinterface.h"
+#include "qiviservicemanager.h"
+#include "qiviserviceobject.h"
+#include "qivitypetraits.h"
+#include "qivizonedfeatureinterface.h"
+#include "qtivicoreversion.h"
+#endif

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{506a2716-5066-4f94-b734-3c7fe7ee9794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanager">
+      <UniqueIdentifier>{948da9fb-fdf0-48d4-8820-76bb4ce14a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanager\dao">
+      <UniqueIdentifier>{c94e701e-99db-477c-b17f-730b0135156b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanager\db">
+      <UniqueIdentifier>{6227bc67-2917-408d-9c39-33fd484adb7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanager\dao\dbdao">
+      <UniqueIdentifier>{fb4f8cc6-574f-41e2-88bb-d7a840a1fa3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanager\dao\interface">
+      <UniqueIdentifier>{1ff2e154-1078-4065-a092-e5d1ba05da1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\SingleSearchConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchRequestPrivate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchInformationImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LocalPlaceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PlaceStorageManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\datamanager.cpp">
+      <Filter>Source Files\datamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\dbdaofactory.cpp">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\poidbdao.cpp">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\recentsearchdbdao.cpp">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\interface\daofactory.cpp">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\db\dbcommand.cpp">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\db\dbconnection.cpp">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\db\dbmanager.cpp">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\db\dbreader.cpp">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SearchHistoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ShortcutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SingleSearchTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SuggestListManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\shortcutdbdao.cpp">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\suggestlistdbdao.cpp">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\AnalyticsSearchEventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SyncPlaceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\private\SingleSearchHandler.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SingleSearchInformationImpl.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SingleSearchParameters.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SingleSearchRequestPrivate.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SingleSearchConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SingleSearchInformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SingleSearchListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SingleSearchRequest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\LocalPlaceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PlaceStorageManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\datamanager.h">
+      <Filter>Source Files\datamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\datamanagerdefs.h">
+      <Filter>Source Files\datamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\dbdaofactory.h">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\poidbdao.h">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\recentsearchdbdao.h">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\interface\daofactory.h">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\interface\poidao.h">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\interface\recentsearchdao.h">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\db\dbcommand.h">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\db\dbconnection.h">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\db\dbmanager.h">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\db\dbreader.h">
+      <Filter>Source Files\datamanager\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\ShortcutManagerPrivate.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SingleSearchTask.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SuggestListManagerPrivate.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SearchHistoryManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ShortcutManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\SuggestListManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\interface\shortcutdao.h">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\interface\suggestlistdao.h">
+      <Filter>Source Files\datamanager\dao\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\shortcutdbdao.h">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\suggestlistdbdao.h">
+      <Filter>Source Files\datamanager\dao\dbdao</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\AnalyticsSearchEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\AnalyticsSearchEventManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\AnalyticsTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\AnalyticsSearchEventManagerPrivate.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\AnalyticsSearchEventTask.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\SyncPlaceManager.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

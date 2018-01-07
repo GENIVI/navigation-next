@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\win32\DoubleTapGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\LongPressGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\MapNativeView.cpp" />
+    <ClCompile Include="..\..\src\win32\MapViewGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\NBGMMapNativeView.cpp" />
+    <ClCompile Include="..\..\src\win32\NBGMRenderContextImpl.cpp" />
+    <ClCompile Include="..\..\src\win32\NBUIConfig.cpp" />
+    <ClCompile Include="..\..\src\win32\NBUITemplateInstantiator.cpp" />
+    <ClCompile Include="..\..\src\win32\openglview.cpp" />
+    <ClCompile Include="..\..\src\win32\PanGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\PinBubbleResolverIphone.cpp" />
+    <ClCompile Include="..\..\src\win32\RotateGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\ScaleGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\TemplateInstantiation.cpp" />
+    <ClCompile Include="..\..\src\win32\TiltGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\win32\TrafficBubbleProvider.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\win32\MapNativeViewInterfaces.h" />
+    <ClInclude Include="..\..\include\win32\NBGMMapNativeView.h" />
+    <ClInclude Include="..\..\src\win32\DoubleTapGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\GestureEvent.h" />
+    <ClInclude Include="..\..\src\win32\LongPressGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\MapNativeViewInterface.h" />
+    <ClInclude Include="..\..\src\win32\MapViewGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\NBGMRenderContextImpl.h" />
+    <ClInclude Include="..\..\src\win32\openglview.h" />
+    <ClInclude Include="..\..\src\win32\PanGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\PinBubbleResolverIphone.h" />
+    <ClInclude Include="..\..\src\win32\RotateGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\ScaleGestureHandler.h" />
+    <ClInclude Include="..\..\src\win32\TiltGestureHandler.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{581C3793-5C37-4702-883A-77725B8BD1C4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nbui</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbui.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbui.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;MAKE_STATIC_LIBRARIES;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

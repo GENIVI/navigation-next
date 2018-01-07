@@ -1,0 +1,103 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="io.qt.ApplicationManager">
+    <property name="count" type="i" access="read"/>
+    <property name="singleProcess" type="b" access="read"/>
+    <property name="securityChecksEnabled" type="b" access="read"/>
+    <property name="dummy" type="b" access="read"/>
+    <property name="systemProperties" type="a{sv}" access="read">
+      <annotation name="org.qtproject.QtDBus.QtTypeName" value="QVariantMap"/>
+    </property>
+    <signal name="applicationWasActivated">
+      <arg name="id" type="s" direction="out"/>
+      <arg name="aliasId" type="s" direction="out"/>
+    </signal>
+    <signal name="countChanged">
+    </signal>
+    <signal name="applicationAdded">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="applicationAboutToBeRemoved">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="applicationChanged">
+      <arg name="id" type="s" direction="out"/>
+      <arg name="changedRoles" type="as" direction="out"/>
+    </signal>
+    <signal name="applicationRunStateChanged">
+      <arg name="id" type="s" direction="out"/>
+      <arg name="runState" type="u" direction="out"/>
+    </signal>
+    <method name="applicationIds">
+      <arg type="as" direction="out"/>
+    </method>
+    <method name="get">
+      <arg type="a{sv}" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="startApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+      <arg name="redirections" type="a{sh}" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QtAM::UnixFdMap"/>
+      <arg name="documentUrl" type="s" direction="in"/>
+    </method>
+    <method name="startApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+      <arg name="documentUrl" type="s" direction="in"/>
+    </method>
+    <method name="startApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="debugApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+      <arg name="debugWrapper" type="s" direction="in"/>
+      <arg name="redirections" type="a{sh}" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QtAM::UnixFdMap"/>
+      <arg name="documentUrl" type="s" direction="in"/>
+    </method>
+    <method name="debugApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+      <arg name="debugWrapper" type="s" direction="in"/>
+      <arg name="documentUrl" type="s" direction="in"/>
+    </method>
+    <method name="debugApplication">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+      <arg name="debugWrapper" type="s" direction="in"/>
+    </method>
+    <method name="stopApplication">
+      <arg name="id" type="s" direction="in"/>
+      <arg name="forceKill" type="b" direction="in"/>
+    </method>
+    <method name="stopApplication">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="stopAllApplications">
+    </method>
+    <method name="stopAllApplications">
+        <arg name="forceKill" type="b" direction="in"/>
+    </method>
+    <method name="openUrl">
+      <arg type="b" direction="out"/>
+      <arg name="url" type="s" direction="in"/>
+    </method>
+    <method name="capabilities">
+      <arg type="as" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="identifyApplication">
+      <arg type="s" direction="out"/>
+      <arg name="pid" type="x" direction="in"/>
+    </method>
+    <method name="applicationRunState">
+      <arg type="u" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>

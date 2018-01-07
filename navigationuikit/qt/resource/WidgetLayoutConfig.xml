@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Qt>
+    <!-- screen size reference -->
+    <Screen width="576" height="1024" />
+    <State id="DEFAULT">
+        <WidgetLayout>
+            <Widget id="WGT_STATUS_BAR" name="status bar" zorder="2" alpha="0.9">
+                <Portrait>
+                    <!-- the default origin is top/left, if add prefix 'o' mean the origin is right/buttom. 'x' this char mean same with screen's width or height. 'f' char mean the width or height will be the rest of the screen. eg. set pos_x = 10 and
+                     width = 'f' and parent width is 640, then when caculate width, the width will be width = 640 - 10
+                     'c' center layout
+                     -->
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_OVERFLOW_MENU" name="overflow menu"  zorder="100">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="x" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="x" height="x" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NOGPS" name="no gps icon" zorder="1">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="220" width="122" height="55" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="40" width="122" height="55" offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_RETRY" name="retry" zorder="1">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="c" width="300" height="100" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="c" width="300" height="100"  offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_MINI_MAP_RTS" name="RTS MINIMap" zorder="1">
+                <Portrait>
+                    <Frame pos_x="24" pos_y="o101" width="100" height="120" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o52" width="109" height="130"  offset_x="400" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_MINI_MAP_NAV" name="MINIMap" zorder="1">
+                <Portrait>
+                    <Frame pos_x="24" pos_y="o101" width="100" height="120" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o52" width="109" height="130"  offset_x="400" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_MINI_MAP_LOCATEME" name="MINIMap" zorder="1">
+                <Portrait>
+                    <Frame pos_x="24" pos_y="o101" width="100" height="120" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="10" pos_y="o52" width="100" height="75"  offset_x="400" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_SELECT_BUBBLE" name="Buble" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="x" height="750" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="f"   offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_CURRENTROAD" name="current road" zorder="1">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="o100" width="218" height="50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="o65" width="218" height="50" offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_SPEED_LIMITS" name="speed limit" zorder="1">
+                <Portrait>
+                    <Frame pos_x="o10" pos_y="10" width="97" height="117" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o10" pos_y="8" width="a94" height="180" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NAV_FOOTER" name="Navigation Footer" zorder="1" alpha="0.95">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_TRIP_OVERVIEW_HEADER" name="Navigation Header" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a85" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a50" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NAV_HEADER" name="Navigation Header" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a80" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a70" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_COMPASS" name="compass icon" zorder="1">
+                <Portrait>
+                    <Frame pos_x="50" pos_y="50" width="32" height="32" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="42" pos_y="42" width="64" height="64"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_MAP" name="map" zorder="1">
+                <Portrait>
+                    <Frame pos_x="50" pos_y="50" width="32" height="32" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="f"  offset_x="400" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_PIN_BUBBLE" name="Pin Buble" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="210" width="x" height="750" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="140" width="x" height="420" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ENHANCE_NAV_NOTIFICATION" name="notify" zorder="10">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="o118" width="400" height="100" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="o80" width="350" height="50" offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="0"  alpha="0">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+    </State>
+    <State id="NAVSTATE_REQUEST_NAVIGATION">
+        <WidgetList listname="WGT_REQUEST_FOOTER , WGT_MAP_PREFETCH , WGT_RETRY"/>
+        <WidgetLayout>
+            <Widget id="WGT_REQUEST_FOOTER" name="Route Request Footer" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_RETRY" name="retry" zorder="1">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="c" width="300" height="100" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="c" width="300" height="100"/>
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+    </State>
+    <State id="NAVSTATE_ROUTE_SELECTION">
+        <WidgetList listname="WGT_ROUTE_SELECT_BUBBLE,WGT_ROUTE_SELECT_FOOTER,WGT_ROUTE_DETALLS_LIST,WGT_MAP,WGT_OVERFLOW_MENU,WGT_NOGPS,WGT_ENHANCE_NAV_NOTIFICATION,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_PIN_BUBBLE,WGT_ROUTE_SELECT_STATUS_BAR"/>
+        <WidgetLayout>
+            <Widget id="WGT_ROUTE_SELECT_FOOTER" name="Route Select Footer" zorder="3"  alpha="0.95">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_DETALLS_LIST" name="no gps icon" zorder="2">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="80" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="60" width="400" height="462" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_SELECT_STATUS_BAR" name="Route Select status bar" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="80" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="400" height="60" />
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+    </State>
+    <State id="NAVSTATE_ROUTE_SELECTION_LIST">
+        <WidgetList listname="WGT_MAP,WGT_ROUTE_SELECT_FOOTER,WGT_ROUTE_DETALLS_LIST,WGT_OVERFLOW_MENU,WGT_MAP_PREFETCH,WGT_ENHANCE_NAV_NOTIFICATION"/>
+		<WidgetLayout>
+            <Widget id="WGT_ROUTE_SELECT_FOOTER" name="Route Select Footer" zorder="1"  alpha="0.95">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_DETALLS_LIST" name="no gps icon" zorder="2">
+                    <Portrait>
+                            <Frame pos_x="0" pos_y="0" width="200" height="x" />
+                    </Portrait>
+                    <Landscape>
+                            <Frame pos_x="0" pos_y="0" width="200" height="x" />
+                    </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+	<State id="NAVSTATE_ENHANCED_STARTUP">
+        <WidgetList listname="WGT_MAP,WGT_NAV_FOOTER,WGT_ROUTE_DETALLS_LIST,WGT_OVERFLOW_MENU,WGT_NOGPS,WGT_ENHANCE_NAV_NOTIFICATION,WGT_MAP_PREFETCH,WGT_COMPASS"/>
+        <WidgetLayout>
+            <Widget id="WGT_ROUTE_DETALLS_LIST" name="nav list icon" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="400" height="f" />
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+	</State>
+	<State id="NAVSTATE_DETOUR">
+        <WidgetList listname="WGT_MAP,WGT_DETOUR_HEADER,WGT_DETOUR_FOOTER,WGT_MINI_MAP_LOCATEME,WGT_OVERFLOW_MENU,WGT_ROUTE_SELECT_BUBBLE,WGT_NOGPS,WGT_STATUS_BAR,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_ROUTE_SELECT_STATUS_BAR,WGT_PIN_BUBBLE"/>
+		<WidgetLayout>
+            <Widget id="WGT_NOGPS" name="no gps icon" zorder="1">
+                <Portrait>
+                    <Frame pos_x="c" pos_y="a155" width="122" height="55" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="a130" width="122" height="55" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_COMPASS" name="compass icon" zorder="1">
+                <Portrait>
+                    <Frame pos_x="o30" pos_y="a166" width="32" height="32" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o30" pos_y="a141" width="32" height="32" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_SELECT_STATUS_BAR" name="Route Select status bar" zorder="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a20" width="x" height="a40" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="a20" width="x" height="a40" />
+				</Landscape>
+			</Widget>
+			<Widget id="WGT_DETOUR_FOOTER" name="Detour Footer" zorder="1" alpha="0.95">
+				<Portrait>
+					<Frame pos_x="0" pos_y="o0" width="x" height="54" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="o0" width="x" height="54" />
+				</Landscape>
+			</Widget>
+			<Widget id="WGT_DETOUR_HEADER" name="Detour Header" zorder="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a60" width="x" height="a62" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="a60" width="x" height="a37" />
+				</Landscape>
+			</Widget>
+		</WidgetLayout>
+	</State>
+	<State id="NAVSTATE_DETOUR_LIST">
+        <WidgetList listname="WGT_MAP,WGT_ANNOUNCER,WGT_DETOUR_FOOTER,WGT_DETOUR_HEADER,WGT_ROUTE_DETALLS_LIST,WGT_OVERFLOW_MENU,WGT_STATUS_BAR,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_ROUTE_SELECT_STATUS_BAR"/>
+		<WidgetLayout>
+			<Widget id="WGT_DETOUR_FOOTER" name="detour Footer" zorder="1" alpha="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a20" width="x" height="54" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="a20" width="x" height="54" />
+				</Landscape>
+			</Widget>
+			<Widget id="WGT_ROUTE_DETALLS_LIST" name="no gps icon"  zorder="2">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a60" width="x" height="f" />
+				</Portrait>
+				<Landscape>
+                                        <Frame pos_x="0" pos_y="a60" width="x" height="f" />
+				</Landscape>
+			</Widget>
+            <Widget id="WGT_STATUS_BAR" name="status bar" zorder="2" alpha="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_SELECT_STATUS_BAR" name="Route Select status bar" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a40" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="a20" width="x" height="a40" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_DETOUR_HEADER" name="Detour Header" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a60" width="x" height="a62" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="a60" width="x" height="a37" />
+                </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+    <State id="NAVSTATE_NAVIGATION_ENDTRIP">
+        <WidgetList listname="WGT_NAV_FOOTER,WGT_MAP,WGT_MINI_MAP_NAV,WGT_CURRENTROAD,WGT_LANE_GUIDANCE,WGT_SPEED_LIMITS,WGT_NOGPS,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_NAVIGATION_LIST"/>
+        <WidgetLayout>
+            <Widget id="WGT_STACKED_MANEUVER" name="stacked maneuver" zorder="1">
+                <Portrait>
+                    <Frame pos_x="20" pos_y="a110" width="90" height="114" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="20" pos_y="a100" width="90" height="114" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_LANE_GUIDANCE" name="lane guidance" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a90" width="x" height="a80" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="a80" offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_TRAFFIC_AHEAD" name="traffic ahead" zorder="3" alpha="0.5">
+                <Portrait>
+                    <Frame pos_x="400" pos_y="0" width="f" height="100" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="400" pos_y="0" width="f" height="100" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="101" alpha="0">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NAVIGATION_LIST" name="nav list icon" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="450" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="450" height="f" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_LANE_GUIDANCE_SAR" name="lane guidance" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="a20" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="a20" offset_x="400"/>
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+	</State>
+    <State id="NAVSTATE_TRIP_OVERVIEW">
+        <WidgetList listname="WGT_OVERVIEW_FOOTER,WGT_MAP,WGT_NOGPS,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_NAVIGATION_LIST"/>
+        <WidgetLayout>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="101" alpha="0">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NAVIGATION_LIST" name="nav list icon" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="400" height="f" />
+                </Landscape>
+            </Widget>
+	    <Widget id="WGT_OVERVIEW_FOOTER" name="Navigation Footer" zorder="1" alpha="0.95">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+    </State>
+    <State id="NAVSTATE_NAVIGATION">
+        <WidgetList listname="WGT_NAV_FOOTER,WGT_CURRENTROAD,WGT_LANE_GUIDANCE,WGT_SPEED_LIMITS,WGT_NOGPS,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_NAVIGATION_LIST,WGT_MAP,WGT_TRAFFIC_AHEAD"/>
+        <WidgetLayout>
+            <Widget id="WGT_LANE_GUIDANCE" name="lane guidance" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="a90" width="x" height="a80" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="o54" width="476" height="a80" offset_x="400"/>
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_TRAFFIC_AHEAD" name="traffic ahead" zorder="3" alpha="0.5">
+                <Portrait>
+                    <Frame pos_x="400" pos_y="0" width="f" height="100" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="400" pos_y="0" width="f" height="100" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="101" alpha="0">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_NAVIGATION_LIST" name="nav list icon" zorder="0">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="400" height="f" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_LANE_GUIDANCE_SAR" name="lane guidance" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o54" width="x" height="a20" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="c" pos_y="o54" width="476" height="a20" offset_x="400"/>
+                </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+    <State id="NAVSTATE_PEDESTRIAN">
+        <WidgetList listname="WGT_NAV_HEADER,WGT_NAV_FOOTER,WGT_MAP,WGT_STACKED_MANEUVER,WGT_MINI_MAP_NAV,WGT_CURRENTROAD,WGT_LANE_GUIDANCE,WGT_SPEED_LIMITS,WGT_OVERFLOW_MENU,WGT_NOGPS,WGT_STATUS_BAR,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS"/>
+		<WidgetLayout>
+			<Widget id="WGT_RECALCULATE" name="MINIMap" zorder="1">
+				<Portrait>
+					<Frame pos_x="c" pos_y="ao53" width="300" height="50" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="c" pos_y="ao53" width="300" height="50" />
+				</Landscape>
+			</Widget>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="101" alpha="10">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+    <State id="NAVSTATE_PEDESTRIAN_UNLOCK">
+		<WidgetLayout>
+			<Widget id="WGT_RECALCULATE" name="MINIMap" zorder="1">
+				<Portrait>
+					<Frame pos_x="c" pos_y="ao53" width="300" height="50" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="c" pos_y="ao53" width="300" height="50" />
+				</Landscape>
+			</Widget>
+            <Widget id="WGT_ANNOUNCER" name="notify" zorder="101" alpha="10">
+                <Portrait>
+                    <Frame pos_x="o0" pos_y="a50" width="a50" height="a50" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="o0" pos_y="a40" width="a50" height="a50" />
+                </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+	<State id="NAVSTATE_NAVIGATION_LIST">
+        <WidgetList listname="WGT_NAV_FOOTER,WGT_MAP,WGT_NAVIGATION_LIST,WGT_OVERFLOW_MENU,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_ENHANCE_NAV_NOTIFICATION"/>
+		<WidgetLayout>
+			<Widget id="WGT_NAV_FOOTER" name="nav Footer" zorder="1" alpha="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a20" width="x" height="54" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="a20" width="x" height="54" />
+				</Landscape>
+			</Widget>
+			<Widget id="WGT_NAVIGATION_LIST" name="nav list icon" zorder="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="a60" width="x" height="f" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="o54" width="x" height="f" />
+				</Landscape>
+			</Widget>
+            <Widget id="WGT_STATUS_BAR" name="status bar" zorder="2" alpha="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="x" height="a20" />
+                </Landscape>
+            </Widget>
+		</WidgetLayout>
+	</State>
+	<State id="NAVSTATE_NAVIGATION_SAR">
+            <WidgetList listname="WGT_NAV_FOOTER,WGT_MAP,WGT_CURRENTROAD,WGT_LANE_GUIDANCE,WGT_OVERFLOW_MENU,WGT_NOGPS,WGT_BACKGROUND,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_NAVIGATION_LIST,WGT_SAR"/>
+            <WidgetLayout>
+                <Widget id="WGT_SAR" name="Navigation SAR" zorder="1">
+                    <Portrait>
+                        <Frame pos_x="0" pos_y="a20" width="x" height="a170" />
+                    </Portrait>
+                    <Landscape>
+                        <Frame pos_x="0" pos_y="a20" width="x" height="a190"  offset_x="400"/>
+                    </Landscape>
+                </Widget>
+                <Widget id="WGT_NOGPS" name="no gps icon" zorder="1">
+                    <Portrait>
+                            <Frame pos_x="c" pos_y="a195" width="122" height="55" />
+                    </Portrait>
+                    <Landscape>
+                            <Frame pos_x="c" pos_y="a165" width="122" height="55"  offset_x="400"/>
+                    </Landscape>
+                </Widget>
+                <Widget id="WGT_LANE_GUIDANCE" name="lane guidance" zorder="1">
+                    <Portrait>
+                        <Frame pos_x="0" pos_y="ao44" width="x" height="a20" />
+                    </Portrait>
+                    <Landscape>
+                        <Frame pos_x="c" pos_y="o54" width="476" height="a80" offset_x="400"/>
+                    </Landscape>
+                </Widget>
+                <Widget id="WGT_NAVIGATION_LIST" name="nav list icon" zorder="0">
+                    <Portrait>
+                        <Frame pos_x="0" pos_y="0" width="400" height="x" />
+                    </Portrait>
+                    <Landscape>
+                        <Frame pos_x="0" pos_y="o54" width="400" height="f" />
+                    </Landscape>
+                </Widget>
+            </WidgetLayout>
+        </State>
+        <State id="NAVSTATE_STARING_NAVIGATION">
+            <WidgetList listname="WGT_ROUTE_SELECT_BUBBLE,WGT_ROUTE_SELECT_FOOTER,WGT_ROUTE_DETALLS_LIST,WGT_MAP,WGT_OVERFLOW_MENU,WGT_NOGPS,WGT_ENHANCE_NAV_NOTIFICATION,WGT_MAP_PREFETCH,WGT_COMPASS,WGT_PIN_BUBBLE,WGT_ROUTE_SELECT_STATUS_BAR"/>
+        <WidgetLayout>
+            <Widget id="WGT_ROUTE_SELECT_FOOTER" name="Route Select Footer" zorder="3"  alpha="0.95">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o0" width="x" height="54" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_DETALLS_LIST" name="no gps icon" zorder="2">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="80" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="60" width="400" height="462" />
+                </Landscape>
+            </Widget>
+            <Widget id="WGT_ROUTE_SELECT_STATUS_BAR" name="Route Select status bar" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="80" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="0" width="400" height="60" />
+                </Landscape>
+            </Widget>
+        </WidgetLayout>
+	</State>
+	<State id="NAVSTATE_ARRIVAL">
+        <WidgetList listname="WGT_ARRIVAL_FOOTER,WGT_ARRIVAL_HEADER,WGT_MAP,WGT_OVERFLOW_MENU,WGT_COMPASS"/>
+		<WidgetLayout>
+			<Widget id="WGT_ARRIVAL_FOOTER" name="Navigation Footer" zorder="1">
+				<Portrait>
+					<Frame pos_x="0" pos_y="o0" width="x" height="54" />
+				</Portrait>
+				<Landscape>
+					<Frame pos_x="0" pos_y="o0" width="x" height="54" />
+				</Landscape>
+			</Widget>
+			<Widget id="WGT_ARRIVAL_HEADER" name="Arrival Header" zorder="1">
+                <Portrait>
+                    <Frame pos_x="0" pos_y="0" width="400" height="x" />
+                </Portrait>
+                <Landscape>
+                    <Frame pos_x="0" pos_y="o54" width="400" height="f" />
+                </Landscape>
+			</Widget>
+		</WidgetLayout>
+	</State>
+</Qt>
+<QtX>
+</QtX>

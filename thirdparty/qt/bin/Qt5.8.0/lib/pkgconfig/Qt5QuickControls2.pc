@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 QuickControls2
+Description: Qt QuickControls2 module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5QuickControls2 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Quick -L/opt/Qt5.8.0/lib -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lpthread -L/opt/Qt5.8.0/lib -lQt5QuickTemplates2 -L/opt/Qt5.8.0/lib -L/opt/Qt5.8.0/lib -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lpthread -lGLESv2  
+Cflags: -I${includedir}/QtQuickControls2 -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Quick
+

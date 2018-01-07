@@ -1,0 +1,8 @@
+#ifndef QT_QTAPPMANCRYPTO_MODULE_H
+#define QT_QTAPPMANCRYPTO_MODULE_H
+#include <QtAppManCrypto/QtAppManCryptoDepends>
+#include "cryptography.h"
+#include "libcryptofunction.h"
+#include "signature.h"
+#include "qtappmancryptoversion.h"
+#endif

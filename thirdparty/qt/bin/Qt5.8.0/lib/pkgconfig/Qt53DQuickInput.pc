@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DQuickInput
+Description: Qt 3DQuickInput module
+Version: 5.8.0
+Libs: -L${libdir} -lQt53DQuickInput 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt53DInput -L/opt/Qt5.8.0/lib -L/opt/Qt5.8.0/lib -lQt53DQuick -L/opt/Qt5.8.0/lib -lQt53DCore -lQt5Gamepad -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lpthread -lGLESv2  
+Cflags: -I${includedir}/Qt3DQuickInput -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Qml Qt53DCore Qt53DInput Qt53DQuick
+

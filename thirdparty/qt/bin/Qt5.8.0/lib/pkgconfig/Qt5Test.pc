@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Test
+Description: Qt Unit Testing Library
+Version: 5.8.0
+Libs: -L${libdir} -lQt5Test 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Core -lpthread   
+Cflags: -I${includedir}/QtTest -I${includedir}
+Requires: Qt5Core
+

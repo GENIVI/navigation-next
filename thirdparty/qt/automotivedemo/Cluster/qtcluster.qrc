@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/Lato-Bold.ttf</file>
+        <file>fonts/Lato-Regular.ttf</file>
+        <file>fonts/Lato-Semibold.ttf</file>
+        <file>qml/FpsCounter.qml</file>
+        <file>qml/Dashboard.qml</file>
+        <file>qml/DashboardFrame.qml</file>
+        <file>qml/DashboardView.qml</file>
+        <file>qml/CarModel.qml</file>
+        <file>qml/WelcomeView.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 SerialBus
+Description: Qt SerialBus module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5SerialBus 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Core -lpthread -lQt5Network -L/opt/Qt5.8.0/lib -L/opt/Qt5.8.0/lib -lQt5SerialPort -lQt5Core -lpthread  
+Cflags: -I${includedir}/QtSerialBus -I${includedir}
+Requires: Qt5Core
+

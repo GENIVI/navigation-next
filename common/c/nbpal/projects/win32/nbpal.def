@@ -1,0 +1,245 @@
+;-------------------------------------------------------------------------
+;   nbpal.def -- NAVBuilder PAL Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.                
+;                                                               
+;   The information contained herein is confidential, proprietary 
+;   to Networks In Motion, Inc., and considered a trade secret as 
+;   defined in section 499C of the penal code of the State of     
+;   California. Use of this information by anyone other than      
+;   authorized employees of Networks In Motion is granted only    
+;   under a written non-disclosure agreement, expressly           
+;   prescribing the scope and manner of such use.   
+;
+;-------------------------------------------------------------------------
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+LIBRARY "nbpal"
+    EXPORTS
+        PAL_Create                          @1      ;NONAME
+        PAL_Destroy                         @2      ;NONAME
+        PAL_IsPalThread                     @3      ;NONAME
+        PAL_ConfigGet                       @4      ;NONAME
+        PAL_ConfigSet                       @5      ;NONAME
+        PAL_AssertPalThread                 @6      ;NONAME
+        PAL_IsSimulator                     @7      ;NONAME
+        PAL_IsNetworkBlocked                @8      ;NONAME
+		PAL_LogCreate                       @9      ;NONAME
+        PAL_LogRegisterComponent            @10     ;NONAME
+        PAL_LogComponentOn                  @11     ;NONAME
+        PAL_LogComponentOff                 @12     ;NONAME
+        PAL_LogComponentGetStatus           @13     ;NONAME
+        PAL_LogWrite                        @14     ;NONAME
+        PAL_LogWriteF                       @15     ;NONAME
+        PAL_LogWriteBlockBegin              @16     ;NONAME
+        PAL_LogWriteBlockEnd                @17     ;NONAME
+        PAL_LogOn                           @18     ;NONAME
+        PAL_LogDestroy                      @19     ;NONAME
+        PAL_LogOff                          @20     ;NONAME
+        PAL_ClockGetDateTime                @51     ;NONAME
+        PAL_ClockGetGPSTime                 @52     ;NONAME
+        PAL_ClockGetUnixTime                @53     ;NONAME
+        PAL_ClockGetTimeMs                  @54     ;NONAME
+        PAL_DisplayGetInfo                  @80     ;NONAME
+        PAL_FileClose                       @101    ;NONAME
+        PAL_FileCreateDirectory             @102    ;NONAME
+        PAL_FileEnumerateCreate             @103    ;NONAME
+        PAL_FileEnumerateDestroy            @104    ;NONAME
+        PAL_FileEnumerateNext               @105    ;NONAME
+        PAL_FileExists                      @106    ;NONAME
+        PAL_FileGetAttributes               @107    ;NONAME
+        PAL_FileGetFreeSpace                @108    ;NONAME
+        PAL_FileGetPosition                 @109    ;NONAME
+        PAL_FileGetSize                     @110    ;NONAME
+        PAL_FileGetTotalSpace               @111    ;NONAME
+        PAL_FileIsDirectory                 @112    ;NONAME
+        PAL_FileLoadFile                    @113    ;NONAME
+        PAL_FileOpen                        @114    ;NONAME
+        PAL_FileRead                        @115    ;NONAME
+        PAL_FileRemove                      @116    ;NONAME
+        PAL_FileRemoveDirectory             @117    ;NONAME
+        PAL_FileRename                      @118    ;NONAME
+        PAL_FileSetCacheSize                @119    ;NONAME
+        PAL_FileSetPosition                 @120    ;NONAME
+        PAL_FileTruncate                    @121    ;NONAME
+        PAL_FileWrite                       @122    ;NONAME
+        PAL_FileAppendPath                  @123    ;NONAME
+        PAL_FileCreateDirectoryEx           @124    ;NONAME
+        PAL_FileRemovePath                  @125    ;NONAME
+        PAL_FileGetLastPath                 @126    ;NONAME
+        PAL_FileFlush                       @127    ;NONAME
+        PAL_NetCloseConnection              @151    ;NONAME
+        PAL_NetCreateConnection             @152    ;NONAME
+        PAL_NetDestroyConnection            @153    ;NONAME
+        PAL_NetGetStatus                    @154    ;NONAME
+        PAL_NetHttpSend                     @155    ;NONAME
+        PAL_NetInitialize                   @156    ;NONAME
+        PAL_NetOpenConnection               @157    ;NONAME
+        PAL_NetSend                         @158    ;NONAME
+        PAL_NetShutdown                     @159    ;NONAME
+        PAL_NetGetPppState                  @160    ;NONAME
+        PAL_TimerCancel                     @201    ;NONAME
+        PAL_TimerExpirationTime             @202    ;NONAME
+        PAL_TimerSet                        @203    ;NONAME
+        PAL_VersionGet                      @251    ;NONAME
+        PAL_VersionGetCopyright             @252    ;NONAME
+        debugf                              @301    ;NONAME
+        nbi_strlcat                         @302    ;NONAME
+        nbi_strlcpy                         @303    ;NONAME
+        nsl_doubletostr                     @304    ;NONAME
+        nsl_free_impl                       @305    ;NONAME
+        nsl_htonl                           @306    ;NONAME
+        nsl_htons                           @307    ;NONAME
+        nsl_int64tostr                      @308    ;NONAME
+        nsl_malloc_impl                     @309    ;NONAME
+        nsl_ntohl                           @310    ;NONAME
+        nsl_ntohs                           @311    ;NONAME
+        nsl_realloc_impl                    @312    ;NONAME
+        nsl_snprintf                        @313    ;NONAME
+        nsl_stristr                         @314    ;NONAME
+        nsl_strtouint64                     @315    ;NONAME
+        nsl_uint64tostr                     @316    ;NONAME
+        nsl_vsnprintf                       @317    ;NONAME
+        nsl_getdeviceuniquestring           @318    ;NONAME
+        PAL_DBOpen                          @351    ;NONAME
+        PAL_DBClose                         @352    ;NONAME
+        PAL_DBRead                          @353    ;NONAME
+        PAL_DBWrite                         @354    ;NONAME
+        PAL_DBGetLastError                  @355    ;NONAME
+        PAL_DBExecuteNonQuery               @356    ;NONAME
+        PAL_DBExecuteNonQueryCommand        @357    ;NONAME
+        PAL_DBInitCommand                   @358    ;NONAME
+        PAL_DBCommandStep                   @359    ;NONAME
+        PAL_DBCommandFinalize               @360    ;NONAME
+        PAL_DBBindDoubleParam               @361    ;NONAME
+        PAL_DBBindIntParam                  @362    ;NONAME
+        PAL_DBBindLongParam                 @363    ;NONAME
+        PAL_DBBindStringParam               @364    ;NONAME
+        PAL_DBBindBlobParam                 @365    ;NONAME
+        PAL_DBExecuteDouble                 @366    ;NONAME
+        PAL_DBExecuteInt                    @367    ;NONAME
+        PAL_DBExecuteLong                   @368    ;NONAME
+        PAL_DBExecuteString                 @369    ;NONAME
+        PAL_DBExecuteBlobEx                 @370    ;NONAME
+        PAL_DBExecuteReader                 @371    ;NONAME
+        PAL_DBResetReader                   @372    ;NONAME
+        PAL_DBReaderRead                    @373    ;NONAME
+        PAL_DBReaderGetInt                  @374    ;NONAME
+        PAL_DBReaderGetLong                 @375    ;NONAME
+        PAL_DBReaderGetdouble               @376    ;NONAME
+        PAL_DBReaderGetstring               @377    ;NONAME
+        PAL_DBReaderGetblob                 @378    ;NONAME
+        PAL_DB_Transaction_Begin            @379    ;NONAME
+        PAL_DB_Transaction_Commit           @380    ;NONAME
+        PAL_DB_Transaction_Rollback         @381    ;NONAME
+        PAL_RadioContextCreate              @401    ;NONAME
+        PAL_RadioContextDestroy             @402    ;NONAME
+        PAL_RadioGetSystemMode              @403    ;NONAME
+        PAL_RadioGetGSMNetworkInfo          @404    ;NONAME
+        PAL_RadioGetCDMANetworkInfo         @405    ;NONAME
+        PAL_RadioGetWifiNetworkInfo         @406    ;NONAME
+        PAL_RadioGetAllWifiNetworksInfo     @407    ;NONAME
+        PAL_RadioCancelWifiNetworkInfo      @408    ;NONAME
+        PAL_RadioCancelAllWifiNetworksInfo  @409    ;NONAME
+        PAL_FileUnzip                       @500    ;NONAME
+        PAL_DecompressData                  @501    ;NONAME
+        PAL_CallNotificationAddListener     @550    ;NONAME
+        PAL_CallNotificationCancelListener  @551    ;NONAME
+        PAL_CallNotificationGetCurrentState @552    ;NONAME
+        PAL_LockCreate                      @600    ;NONAME
+        PAL_LockLock                        @601    ;NONAME
+        PAL_LockUnlock                      @602    ;NONAME
+        PAL_LockDestroy                     @603    ;NONAME
+        PAL_AtomicIncrement                 @700    ;NONAME
+        PAL_AtomicDecrement                 @701    ;NONAME
+        PAL_AtomicExchange                  @702    ;NONAME
+        PAL_AtomicExchangeAdd               @703    ;NONAME
+        PAL_AtomicCompareExchange           @704    ;NONAME
+        PAL_AtomicCompareExchangePointer    @705    ;NONAME
+        PAL_UiTaskQueueAdd                  @800    ;NONAME
+        PAL_EventTaskQueueAdd               @801    ;NONAME
+        PAL_EventTaskQueueRemove            @802    ;NONAME
+        PAL_EventTaskQueueRemoveAll         @803    ;NONAME
+        PAL_WorkerTaskQueueCreate           @804    ;NONAME
+        PAL_WorkerTaskQueueDestroy          @805    ;NONAME
+        PAL_WorkerTaskQueueGetHandler       @806    ;NONAME
+        PAL_WorkerTaskQueueAdd              @807    ;NONAME
+        PAL_WorkerTaskQueueRemove           @808    ;NONAME
+        PAL_WorkerTaskQueueRemoveAll        @809    ;NONAME
+        PAL_EventTaskQueueAddWithPriority   @810    ;NONAME
+        PAL_WorkerTaskQueueAddWithPriority  @811    ;NONAME
+        PAL_WorkerTaskQueueIsRunningThread  @812    ;NONAME
+
+        PAL_GetLastError                    @900    ;NONAME
+        PAL_SetLastError                    @901    ;NONAME
+
+        PAL_VectorAlloc                     @950    ;NONAME
+        PAL_VectorAppend                    @951    ;NONAME
+        PAL_VectorDealloc                   @952    ;NONAME
+        PAL_VectorGet                       @953    ;NONAME
+        PAL_VectorGetPtr                    @954    ;NONAME
+        PAL_VectorRemove                    @955    ;NONAME
+        PAL_VectorRemoveAll                 @956    ;NONAME
+        PAL_VectorGetItemSize               @957    ;NONAME
+        PAL_VectorGetIndex                  @958    ;NONAME
+        PAL_VectorLen                       @959    ;NONAME
+        PAL_VectorPop                       @960    ;NONAME
+        PAL_VectorSet                       @961    ;NONAME
+        PAL_VectorSetSize                   @962    ;NONAME
+        PAL_VectorSetAlloc                  @963    ;NONAME
+        PAL_VectorCopy                      @964    ;NONAME
+        PAL_VectorSort                      @965    ;NONAME
+        PAL_VectorSort2                     @966    ;NONAME
+        PAL_VectorDeallocPlace              @967    ;NONAME
+
+        PAL_ContactsCreate                  @1000   ;NONAME
+        PAL_ContactsDestroy                 @1001   ;NONAME
+        PAL_ContactsGet                     @1002   ;NONAME
+        PAL_ContactsAdd                     @1003   ;NONAME
+        PAL_ContactsClear                   @1004   ;NONAME
+
+        PAL_FavoritesCreate                 @1010   ;NONAME
+        PAL_FavoritesDestroy                @1011   ;NONAME
+        PAL_FavoritesGet                    @1012   ;NONAME
+        PAL_FavoritesAdd                    @1013   ;NONAME
+        PAL_FavoritesClear                  @1014   ;NONAME
+        PAL_FavoritesGetFavoriteByID        @1015   ;NONAME
+        PAL_FavoritesIsFavorite             @1016   ;NONAME
+        PAL_RecentsGetPlaceById	            @1017   ;NONAME
+
+        PAL_RecentsCreate                   @1020   ;NONAME
+        PAL_RecentsDestroy                  @1021   ;NONAME
+        PAL_RecentsGet                      @1022   ;NONAME
+        PAL_RecentsAdd                      @1023   ;NONAME
+
+        PAL_EventCreate                     @1100   ;NONAME
+        PAL_EventDestroy                    @1101   ;NONAME
+        PAL_EventWaitForEvent               @1102   ;NONAME
+        PAL_EventSet                        @1103   ;NONAME
+        PAL_RecentsClear                    @1024   ;NONAME
+
+        PAL_FontGetComplexTextLayout        @1200   ;NONAME
+        PAL_FontGetGlyphBitmap              @1201   ;NONAME
+        PAL_FontDestroyGlyphLayout          @1202   ;NONAME
+        PAL_FontDestroyGlyphBitmap          @1203   ;NONAME
+        PAL_FontCreate                      @1204   ;NONAME
+        PAL_FontDestroy                     @1205   ;NONAME
+
+        PAL_ImageBlend                      @2000   ;NONAME
+
+        ?RemoveAllTasks@EventTaskQueue@@UAEXXZ                                  @10001 ;NONAME
+        ?RemoveTask@EventTaskQueue@@UAE?AW4PAL_Error@@PAVTask@@_N@Z             @10002 ;NONAME
+        ?AddTask@EventTaskQueue@@UAE?AW4PAL_Error@@PAVTask@@@Z                  @10003 ;NONAME
+        ?AddTask@EventTaskQueue@@UAE?AW4PAL_Error@@PAVTask@@I@Z                 @10004 ;NONAME

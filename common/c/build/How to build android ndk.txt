@@ -1,0 +1,104 @@
+===============================
+
+  NBGM
+
+  Build Instructions 1.0
+
+     Oct 2010
+
+================================
+
+  
+
+OVERVIEW
+
+---------------
+The NBGM development is based on:
+
+ - Google's Android NDK (Android NDK r4b or above)
+
+ 
+REQUIREMENTS
+
+------------
+
+ - Android NDK r4b must be installed on the build system
+ - Cygwin with Devel package MUST be installed(download url is http://www.cygwin.com/setup.exe)
+ 
+
+INSTRUCTIONS FOR Setting up the build system
+
+------------
+
+   
+ - Make sure that Cygwin with Devel package is installed, assuming Cygwin
+   is installed at C:\cygwin
+ 
+ - Create a new environment variable call CYGWIN_HOME, and the value is the the root
+   directory name where the cygwin is installed
+   Example:
+    
+   Variable name:  CYGWIN_HOME
+   Variable value: C:\cygwin
+  
+ - Follow the link below to download Google's Android NDK for windows
+   
+   Download Android NDK from http://developer.android.com/sdk/ndk/index.html,
+   and select to download the windows version.
+   Unzip android-ndk-r4b-windows.zip to C:\
+   
+ - Create a new environment variable call ANDROID_NDK_HOME, and the value is name the
+   directory where the Android NDK is installed
+   Example:
+    
+   Variable name:  ANDROID_NDK_HOME
+   Variable value: c:\android-ndk-r4b
+ 
+
+ - Install Python 2.4 on the build system and update the environment path to
+   include the directory c:\Python24 (where Python 2.4 is installed) in the path.
+
+ - Check out the following CCC project files
+   //depot/client/c/core/nbpal/release_150406_ltk_v1_5_1
+   //depot/client/c/core/nbgm/release_150406_ltk_v1_5_1
+   //depot/client/c/core/build/release_150406_ltk_v1_5_1
+
+ - For SCM release build, please increment release version in version_android_ndk.txt
+   under <P4-SCM-ROOT>/client/c/core/build/release_150406_ltk_v1_5_1
+
+ - build with build_android_ndk.bat
+	   cd <P4-SCM-ROOT>/client/c/core/build/release_150406_ltk_v1_5_1
+	   build_android_ndk.bat
+
+ - create release package with release_package_android_ndk.bat
+	   cd <P4-SCM-ROOT>/client/c/core/build/release_150406_ltk_v1_5_1
+	   release_package_android_ndk.bat
+	
+   release package directory will be created as <P4-SCM-ROOT>/client/c/core/build/release_150406_ltk_v1_5_1/CoreSDK_<version>_android_ndk_arm_internal
+   
+SOURCE CODE LoCATION
+
+------------
+
+
+The current location of root Android source code is:
+
+//depot/client/c/core/nbgm/
+//depot/client/c/core/nbpal/
+
+
+LIMITATIONS
+
+------------
+
+
+KNOWN ISSUES
+
+------------
+ 
+
+CONTACT
+
+-------------
+
+   Ben Tian @ btian@networksinmotion.com

@@ -1,0 +1,309 @@
+;-------------------------------------------------------------------------
+;   abservices.def -- AtlasBook Services Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.                
+;                                                               
+;   The information contained herein is confidential, proprietary 
+;   to Networks In Motion, Inc., and considered a trade secret as 
+;   defined in section 499C of the penal code of the State of     
+;   California. Use of this information by anyone other than      
+;   authorized employees of Networks In Motion is granted only    
+;   under a written non-disclosure agreement, expressly           
+;   prescribing the scope and manner of such use.   
+;
+;-------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+
+LIBRARY	"abservices17"
+    EXPORTS
+        AB_AuthenticationHandlerCreate                                      @1      ;NONAME
+        AB_AuthenticationHandlerCancelRequest                               @2      ;NONAME
+        AB_AuthenticationHandlerDestroy                                     @3      ;NONAME
+        AB_AuthenticationHandlerGetAuthenticationInformation                @4      ;NONAME
+        AB_AuthenticationHandlerIsRequestInProgress                         @5      ;NONAME
+        AB_AuthenticationHandlerStartRequest                                @6      ;NONAME
+        AB_AuthenticationInformationDestroy                                 @7      ;NONAME
+        AB_AuthenticationInformationDestroyClientStoredMessageDetail        @8      ;NONAME
+        AB_AuthenticationInformationDestroyMessageDetail                    @9      ;NONAME
+        AB_AuthenticationInformationFeatureCount                            @10     ;NONAME
+        AB_AuthenticationInformationGetClientStoredMessageDetail            @11     ;NONAME
+        AB_AuthenticationInformationGetFeatureResult                        @12     ;NONAME
+        AB_AuthenticationInformationGetFeatureResultDestroy                 @14     ;NONAME
+        AB_AuthenticationInformationGetMessageCount                         @16     ;NONAME
+        AB_AuthenticationInformationGetMessageDetail                        @17     ;NONAME
+        AB_AuthenticationInformationGetMessageText                          @18     ;NONAME
+        AB_AuthenticationInformationGetStatusCode                           @15     ;NONAME
+        AB_AuthenticationParametersCreate                                   @19     ;NONAME
+        AB_AuthenticationParametersDestroy                                  @20     ;NONAME
+        AB_AuthenticationParametersSetAddFeatureName                        @21     ;NONAME
+        AB_AuthenticationParametersSetConfirmAction                         @22     ;NONAME
+        AB_AuthenticationParametersSetConfirmID                             @23     ;NONAME
+        AB_AuthenticationParametersSetLanguage                              @24     ;NONAME
+        AB_AuthenticationParametersSetLicenseKey                            @25     ;NONAME
+        AB_AuthenticationParametersSetOptin                                 @26     ;NONAME
+        AB_AuthenticationParametersSetRemoveFeatureName                     @27     ;NONAME
+        AB_AuthenticationParametersSetRequest                               @28     ;NONAME
+        AB_AuthenticationParametersSetWantLicenseMessage                    @29     ;NONAME
+        AB_AuthenticationInformationGetClientStoredMessageText              @30     ;NONAME
+        AB_AuthenticationInformationGetPurchaseBundle                       @31     ;NONAME
+        AB_AuthenticationInformationGetPurchaseBundlePricing                @32     ;NONAME
+        AB_AuthenticationInformationGetSubscribedMessage                    @33     ;NONAME
+        AB_AuthenticationInformationGetSubscribedBundle                     @34     ;NONAME
+        AB_AuthenticationInformationGetSubscribedBundlePricing              @35     ;NONAME
+        AB_AuthenticationInformationGetSubscribedMessageText                @36     ;NONAME
+        AB_AuthenticationParametersSetWantPurchaseMessage                   @37     ;NONAME
+        AB_AuthenticationParametersSetWantRegion                            @38     ;NONAME
+        AB_AuthenticationParametersSetWantExtendedMarketingMessage          @39     ;NONAME
+        AB_AuthenticationInformationGetPurchaseBundleOptionText             @40     ;NONAME
+        AB_AuthenticationInformationGetPurchaseBundlePriceOptionText        @41     ;NONAME
+        AB_AuthenticationParametersSetWantPromoOptions                      @42     ;NONAME
+
+        AB_DataStoreHandlerCancelRequest                                    @51     ;NONAME
+        AB_DataStoreHandlerCreate                                           @52     ;NONAME
+        AB_DataStoreHandlerDestroy                                          @53     ;NONAME
+        AB_DataStoreHandlerGetInformation                                   @54     ;NONAME
+        AB_DataStoreHandlerIsRequestInProgress                              @55     ;NONAME
+        AB_DataStoreHandlerStartRequest                                     @56     ;NONAME
+        AB_DataStoreInformationDestroy                                      @57     ;NONAME
+        AB_DataStoreInformationGetResult                                    @58     ;NONAME
+        AB_DataStoreInformationGetResultCount                               @59     ;NONAME
+        AB_DataStoreParametersAddDelete                                     @60     ;NONAME
+        AB_DataStoreParametersAddRetrieve                                   @61     ;NONAME
+        AB_DataStoreParametersAddStore                                      @62     ;NONAME
+        AB_DataStoreParametersCreate                                        @63     ;NONAME
+        AB_DataStoreParametersDestroy                                       @64     ;NONAME
+
+        AB_FileSetHandlerCancelRequest                                      @101    ;NONAME
+        AB_FileSetHandlerCreate                                             @102    ;NONAME
+        AB_FileSetHandlerDestroy                                            @103    ;NONAME
+        AB_FileSetHandlerGetInformation                                     @104    ;NONAME
+        AB_FileSetHandlerIsRequestInProgress                                @105    ;NONAME
+        AB_FileSetHandlerStartRequest                                       @106    ;NONAME
+        AB_FileSetInformationDestroy                                        @107    ;NONAME
+        AB_FileSetInformationGetCount                                       @108    ;NONAME
+        AB_FileSetInformationGetFileData                                    @109    ;NONAME
+        AB_FileSetInformationGetStatus                                      @110    ;NONAME
+        AB_FileSetParametersAddFileSet                                      @111    ;NONAME
+        AB_FileSetParametersCreate                                          @112    ;NONAME
+        AB_FileSetParametersDestroy                                         @113    ;NONAME
+        AB_FileSetStatusHandlerCancelRequest                                @114    ;NONAME
+        AB_FileSetStatusHandlerCreate                                       @115    ;NONAME
+        AB_FileSetStatusHandlerDestroy                                      @116    ;NONAME
+        AB_FileSetStatusHandlerGetInformation                               @117    ;NONAME
+        AB_FileSetStatusHandlerIsRequestInProgress                          @118    ;NONAME
+        AB_FileSetStatusHandlerStartRequest                                 @119    ;NONAME
+        AB_FileSetStatusInformationDestroy                                  @120    ;NONAME
+        AB_FileSetStatusInformationGetCount                                 @121    ;NONAME
+        AB_FileSetStatusInformationGetStatus                                @122    ;NONAME
+        AB_FileSetStatusParametersAddFileSet                                @123    ;NONAME
+        AB_FileSetStatusParametersCreate                                    @124    ;NONAME
+        AB_FileSetStatusParametersDestroy                                   @125    ;NONAME
+
+        AB_NetworkConfigurationCreate                                       @151    ;NONAME
+        AB_NetworkConfigurationDestroy                                      @152    ;NONAME
+
+        AB_ProfileHandlerCancelRequest                                      @201    ;NONAME
+        AB_ProfileHandlerCreate                                             @202    ;NONAME
+        AB_ProfileHandlerDestroy                                            @203    ;NONAME
+        AB_ProfileHandlerGetInformation                                     @204    ;NONAME
+        AB_ProfileHandlerIsRequestInProgress                                @205    ;NONAME
+        AB_ProfileHandlerStartRequest                                       @206    ;NONAME
+        AB_ProfileInformationDestroy                                        @207    ;NONAME
+        AB_ProfileInformationGetError                                       @208    ;NONAME
+        AB_ProfileInformationGetStringValue                                 @209    ;NONAME
+        AB_ProfileParametersAddGetValue                                     @210    ;NONAME
+        AB_ProfileParametersAddSetStringValue                               @211    ;NONAME
+        AB_ProfileParametersAddSetToDefaults                                @212    ;NONAME
+        AB_ProfileParametersCreate                                          @213    ;NONAME
+        AB_ProfileParametersDestroy                                         @214    ;NONAME
+
+        AB_QaLogCreate                                                      @251    ;NONAME
+        AB_QaLogHandlerCancelRequest                                        @252    ;NONAME
+        AB_QaLogHandlerCreate                                               @253    ;NONAME
+        AB_QaLogHandlerDestroy                                              @254    ;NONAME
+        AB_QaLogHandlerGetInformation                                       @255    ;NONAME
+        AB_QaLogHandlerIsRequestInProgress                                  @256    ;NONAME
+        AB_QaLogHandlerStartRequest                                         @257    ;NONAME
+        AB_QaLogInformationDestroy                                          @258    ;NONAME
+        AB_QaLogInformationGetIdentifier                                    @259    ;NONAME
+        AB_QaLogParametersCreate                                            @260    ;NONAME
+        AB_QaLogParametersDestroy                                           @261    ;NONAME
+
+        AB_ServerMessageHandlerCancelRequest                                @301    ;NONAME
+        AB_ServerMessageHandlerCreate                                       @302    ;NONAME
+        AB_ServerMessageHandlerDestroy                                      @303    ;NONAME
+        AB_ServerMessageHandlerGetInformation                               @304    ;NONAME
+        AB_ServerMessageHandlerIsRequestInProgress                          @305    ;NONAME
+        AB_ServerMessageHandlerStartRequest                                 @306    ;NONAME
+        AB_ServerMessageInformationDestroy                                  @307    ;NONAME
+        AB_ServerMessageInformationEnumerateInitialize                      @308    ;NONAME
+        AB_ServerMessageInformationEnumerateMessageText                     @309    ;NONAME
+        AB_ServerMessageInformationEnumerateNext                            @310    ;NONAME
+        AB_ServerMessageInformationGetMessagePending                        @311    ;NONAME
+        AB_ServerMessageInformationGetMessagesTimeStamp                     @312    ;NONAME
+        AB_ServerMessageParametersCreateConfirm                             @313    ;NONAME
+        AB_ServerMessageParametersCreateQuery                               @314    ;NONAME
+        AB_ServerMessageParametersCreateReview                              @315    ;NONAME
+        AB_ServerMessageParametersCreateStatus                              @316    ;NONAME
+        AB_ServerMessageParametersDestroy                                   @317    ;NONAME
+
+        AB_ServerVersionHandlerCancelRequest                                @351    ;NONAME
+        AB_ServerVersionHandlerCreate                                       @352    ;NONAME
+        AB_ServerVersionHandlerDestroy                                      @353    ;NONAME
+        AB_ServerVersionHandlerGetInformation                               @354    ;NONAME
+        AB_ServerVersionHandlerIsRequestInProgress                          @355    ;NONAME
+        AB_ServerVersionHandlerStartRequest                                 @356    ;NONAME
+        AB_ServerVersionInformationDestroy                                  @357    ;NONAME
+        AB_ServerVersionInformationGetVersion                               @358    ;NONAME
+        AB_ServerVersionParametersCreate                                    @359    ;NONAME
+        AB_ServerVersionParametersDestroy                                   @360    ;NONAME
+
+        AB_ShareHandlerCancelRequest                                        @401    ;NONAME
+        AB_ShareHandlerCreate                                               @402    ;NONAME
+        AB_ShareHandlerDestroy                                              @403    ;NONAME
+        AB_ShareHandlerGetShareInformation                                  @404    ;NONAME
+        AB_ShareHandlerIsRequestInProgress                                  @405    ;NONAME
+        AB_ShareHandlerStartRequest                                         @406    ;NONAME
+        AB_ShareInformationDestroy                                          @407    ;NONAME
+        AB_ShareInformationGetResult                                        @408    ;NONAME
+        AB_ShareInformationGetResultCount                                   @409    ;NONAME
+        AB_ShareInformationGetResultEx                                      @410    ;NONAME
+        AB_ShareParametersAddAdditionalRecipient                            @411    ;NONAME
+        AB_ShareParametersCreateMessage                                     @412    ;NONAME
+        AB_ShareParametersCreatePlaceMessage                                @413    ;NONAME
+        AB_ShareParametersCreateShareMessage                                @414    ;NONAME
+        AB_ShareParametersCreateTextMessage                                 @415    ;NONAME
+        AB_ShareParametersDestroy                                           @416    ;NONAME
+        AB_ShareParametersCreatePlaceMessageWithBannerId                    @417    ;NONAME
+
+        AB_SmsCreate                                                        @451    ;NONAME
+        AB_SmsDecodeMessage                                                 @452    ;NONAME
+        AB_SmsDestroy                                                       @453    ;NONAME
+        AB_SmsGetCommandType                                                @454    ;NONAME
+        AB_SmsGetInboundMessageCommandData                                  @455    ;NONAME
+        AB_SmsGetMessageReceiptCommandData                                  @456    ;NONAME
+        AB_SmsGetSynchronizeDatabaseCommandData                             @457    ;NONAME
+        AB_SmsGetTrafficSessionCommandData                                  @458    ;NONAME
+        AB_SmsValidateHmac                                                  @459    ;NONAME
+
+        AB_SpeechRecognitionHandlerCancelRequest                            @501    ;NONAME
+        AB_SpeechRecognitionHandlerCreate                                   @502    ;NONAME
+        AB_SpeechRecognitionHandlerDestroy                                  @503    ;NONAME
+        AB_SpeechRecognitionHandlerGetInformation                           @504    ;NONAME
+        AB_SpeechRecognitionHandlerIsRequestInProgress                      @505    ;NONAME
+        AB_SpeechRecognitionHandlerStartRequest                             @506    ;NONAME
+        AB_SpeechRecognitionInformationDestroy                              @507    ;NONAME
+        AB_SpeechRecognitionInformationGetRecognizedLocation                @508    ;NONAME
+        AB_SpeechRecognitionInformationGetRecognizedPlace                   @509    ;NONAME
+        AB_SpeechRecognitionInformationGetRecognizeResults                  @510    ;NONAME
+        AB_SpeechRecognitionInformationGetSavedDataId                       @511    ;NONAME
+        AB_SpeechRecognitionParametersAddText                               @512    ;NONAME
+        AB_SpeechRecognitionParametersAddUtterance                          @513    ;NONAME
+        AB_SpeechRecognitionParametersAddUtteranceFromDataStore             @514    ;NONAME
+        AB_SpeechRecognitionParametersClearFields                           @515    ;NONAME
+        AB_SpeechRecognitionParametersCreate                                @516    ;NONAME
+        AB_SpeechRecognitionParametersDestroy                               @517    ;NONAME
+        AB_SpeechRecognitionParametersSetInteractionID                      @518    ;NONAME
+        AB_SpeechRecognitionParametersSetConfigurationOptions               @519    ;NONAME         ADDED FOR 1.5
+        AB_SpeechRecognitionParametersAddTextFromSource                     @520    ;NONAME         ADDED FOR 1.5
+
+        AB_SpeechStatisticsHandlerCancelRequest                             @551    ;NONAME
+        AB_SpeechStatisticsHandlerCreate                                    @552    ;NONAME
+        AB_SpeechStatisticsHandlerDestroy                                   @553    ;NONAME
+        AB_SpeechStatisticsHandlerIsRequestInProgress                       @554    ;NONAME
+        AB_SpeechStatisticsHandlerStartRequest                              @555    ;NONAME
+        AB_SpeechStatisticsParametersAddText                                @556    ;NONAME
+        AB_SpeechStatisticsParametersAddUtterance                           @557    ;NONAME
+        AB_SpeechStatisticsParametersAddUtteranceFromDataStore              @558    ;NONAME
+        AB_SpeechStatisticsParametersClearFields                            @559    ;NONAME
+        AB_SpeechStatisticsParametersCreate                                 @560    ;NONAME
+        AB_SpeechStatisticsParametersDestroy                                @561    ;NONAME
+        AB_SpeechStatisticsParametersSetInteractionID                       @562    ;NONAME
+        AB_SpeechStatisticsParametersAddTextFromSource                      @563    ;NONAME         ADDED FOR 1.5
+        AB_SpeechStatisticsParametersSetTiming                              @564    ;NONAME         ADDED FOR 1.5
+
+        AB_SynchronizationHandlerCancelRequest                              @601    ;NONAME
+        AB_SynchronizationHandlerCreate                                     @602    ;NONAME
+        AB_SynchronizationHandlerDestroy                                    @603    ;NONAME
+        AB_SynchronizationHandlerGetInformation                             @604    ;NONAME
+        AB_SynchronizationHandlerIsRequestInProgress                        @605    ;NONAME
+        AB_SynchronizationHandlerStartRequest                               @606    ;NONAME
+        AB_SynchronizationInformationDestroy                                @607    ;NONAME
+        AB_SynchronizationInformationGetDatabaseData                        @608    ;NONAME
+        AB_SynchronizationInformationGetServerCount                         @609    ;NONAME
+        AB_SynchronizationInformationGetServerError                         @610    ;NONAME
+        AB_SynchronizationInformationGetServerOperation                     @611    ;NONAME
+        AB_SynchronizationInformationGetServerOperationCount                @612    ;NONAME
+        ;AB_SynchronizationInformationGetTotalOperationCount                @613    NONAME          REMOVED 12/22/2009
+        AB_SynchronizationParamatersSetDatabaseData                         @614    ;NONAME
+        AB_SynchronizationParametersAddLocalOperation                       @615    ;NONAME
+        AB_SynchronizationParametersCreate                                  @616    ;NONAME
+        AB_SynchronizationParametersDestroy                                 @617    ;NONAME
+        AB_SynchronizationStatusHandlerCancelRequest                        @618    ;NONAME
+        AB_SynchronizationStatusHandlerCreate                               @619    ;NONAME
+        AB_SynchronizationStatusHandlerDestroy                              @620    ;NONAME
+        AB_SynchronizationStatusHandlerGetInformation                       @621    ;NONAME
+        AB_SynchronizationStatusHandlerIsRequestInProgress                  @622    ;NONAME
+        AB_SynchronizationStatusHandlerStartRequest                         @623    ;NONAME
+        AB_SynchronizationStatusInformationDestroy                          @624    ;NONAME
+        AB_SynchronizationStatusInformationGetDatabaseServerGenerationId    @625    ;NONAME
+        AB_SynchronizationStatusParametersAddDatabase                       @626    ;NONAME
+        AB_SynchronizationStatusParametersCreate                            @627    ;NONAME
+        AB_SynchronizationStatusParametersDestroy                           @628    ;NONAME
+        AB_SynchronizationParametersGetLocalOperationCount                  @629    ;NONAME
+
+        AB_VersionGet                                                       @651    ;NONAME
+        AB_VersionGetCopyright                                              @652    ;NONAME
+
+        AB_ErsContactDestroy                                                @700    ;NONAME
+        AB_ErsHandlerCancelRequest                                          @701    ;NONAME
+        AB_ErsHandlerCreate                                                 @702    ;NONAME
+        AB_ErsHandlerDestroy                                                @703    ;NONAME
+        AB_ErsHandlerGetErsInformation                                      @704    ;NONAME
+        AB_ErsHandlerIsRequestInProgress                                    @705    ;NONAME
+        AB_ErsHandlerStartRequest                                           @706    ;NONAME
+        AB_ErsInformationDestroy                                            @707    ;NONAME
+        AB_ErsInformationGetContact                                         @708    ;NONAME
+        AB_ErsInformationGetContactCount                                    @709    ;NONAME
+        AB_ErsParametersCreate                                              @710    ;NONAME
+        AB_ErsParametersDestroy                                             @711    ;NONAME
+
+        AB_LicenseHandlerCreate                                             @750    ;NONAME
+        AB_LicenseHandlerDestroy                                            @751    ;NONAME
+        AB_LicenseHandlerStartRequest                                       @752    ;NONAME
+        AB_LicenseHandlerCancelRequest                                      @753    ;NONAME
+        AB_LicenseHandlerIsRequestInProgress                                @754    ;NONAME
+        AB_LicenseHandlerGetLicenseInformation                              @755    ;NONAME
+        AB_LicenseInformationGetStatus                                      @756    ;NONAME
+        AB_LicenseInformationGetRequestId                                   @757    ;NONAME
+        AB_LicenseInformationGetTransactionId                               @758    ;NONAME
+        AB_LicenseInformationGetLicenseCount                                @759    ;NONAME
+        AB_LicenseInformationGetLicenseDetail                               @760    ;NONAME
+        AB_LicenseInformationDestroy                                        @761    ;NONAME
+        AB_LicenseParametersCreate                                          @762    ;NONAME
+        AB_LicenseParametersDestroy                                         @763    ;NONAME
+        AB_LicenseParametersSetRequest                                      @764    ;NONAME
+        AB_LicenseParametersCreateLicense                                   @765    ;NONAME
+        AB_LicenseParametersAddBundle                                       @766    ;NONAME
+        AB_LicenseInformationGetError                                       @767    ;NONAME
+        AB_LicenseParametersSetLanguage                                     @768    ;NONAME
+        AB_LicenseInformationGetMessageDetail                               @769    ;NONAME
+        AB_LicenseInformationFreeMessageDetail                              @770    ;NONAME
+        AB_LicenseInformationGetMessageText                                 @771    ;NONAME
+
+        AB_QaLogSpeechRecognitionRecordStart                                @800    ;NONAME
+        AB_QaLogSpeechRecognitionRecordStop                                 @801    ;NONAME

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>spinner-64x64.gif</file>
+    </qresource>
+</RCC>

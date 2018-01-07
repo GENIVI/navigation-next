@@ -1,0 +1,29 @@
+TARGET		  		CUnit.dll
+TARGETTYPE	  		DLL
+UID					0 0xE7B80488
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+
+USERINCLUDE			..\..\CUnit\include
+
+SOURCEPATH			..\..\CUnit\Sources\Basic
+SOURCE				Basic.c
+
+SOURCEPATH			..\..\CUnit\Sources\Framework
+SOURCE				CUError.c
+SOURCE				TestDB.c
+SOURCE				TestRun.c
+SOURCE				Util.c
+
+LIBRARY				libc.lib
+
+#if defined(WINS)
+	DEFFILE bwins\cunit.def
+#else
+	DEFFILE eabi\cunit.def
+#endif

@@ -1,0 +1,504 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * streambuf - Declarations for the Standard Library stream buffers
+ *
+ * $Id: streambuf 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_STREAMBUF_INCLUDED
+#define _RWSTD_STREAMBUF_INCLUDED
+
+
+#include <rw/_iosbase.h>
+#include <rw/_mutex.h>
+#include <rw/_defs.h>
+
+#include _RWSTD_CSTDLIB
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+template<class _CharT, class _Traits>
+class basic_streambuf: public _RW::__rw_synchronized
+{
+public:
+    typedef _CharT                          char_type;
+    typedef _Traits                         traits_type;
+    typedef _TYPENAME traits_type::int_type int_type;
+    typedef _TYPENAME traits_type::pos_type pos_type;
+    typedef _TYPENAME traits_type::off_type off_type;
+
+    virtual ~basic_streambuf () { }
+
+    // 27.5.2.2.1, p1
+    locale pubimbue (const locale &__loc);
+
+    // 27.5.2.2.1, p4
+    locale getloc () const {
+        return _C_locale;
+    }
+
+    // extension: avoids reference counting in MT builds (may result in
+    // a speedup of up to 50%); this is an alternative to caching a reference
+    // (pointer) to a facet in each stream and stream buffer object
+    locale& getloc () {
+        return _C_locale;
+    }
+
+    // 27.5.2.2.2, p1
+    basic_streambuf* pubsetbuf (char_type *__buf, streamsize __n) {
+        return setbuf (__buf, __n);
+    }
+
+    // 27.5.2.2.2, p2
+    pos_type
+    pubseekoff (off_type __off, ios_base::seekdir __way,
+                ios_base::openmode __which = ios_base::in | ios_base::out) {
+        return seekoff (__off, __way, __which);
+    }
+    
+    // 27.5.2.2.2, p3
+    pos_type
+    pubseekpos (pos_type __sp,
+                ios_base::openmode __which = ios_base::in | ios_base::out) {
+        return seekpos (__sp, __which);
+    }
+    
+    // 27.5.2.2.2, p4
+    int pubsync () {
+        return sync ();
+    }
+
+    // 27.5.2.2.3, p1
+    streamsize in_avail () {
+        return gptr () < egptr () ? streamsize (egptr () - gptr ())
+            : showmanyc ();
+    }
+
+    // 27.5.2.2.3, p2
+    int_type snextc () {
+        return _C_is_eof (sbumpc ()) ? traits_type::eof () : sgetc ();
+    }
+    
+    // 27.5.2.2.3, p4
+    int_type sbumpc ();
+    
+    // 27.5.2.2.3, p5
+    int_type sgetc () {
+        return gptr () >= egptr () ? underflow ()
+            : traits_type::to_int_type (*gptr ());
+    }
+
+    // 27.5.2.2.3, p6
+    streamsize sgetn (char_type *__s, streamsize __n) {
+        _RWSTD_ASSERT_RANGE (__s, __s + __n);
+        return xsgetn (__s, __n);
+    }
+    
+    // 27.5.2.2.4, p1
+    int_type sputbackc (char_type);
+
+    // 27.5.2.2.4, p2
+    int_type sungetc ();
+
+    // 27.5.2.2.5, p1
+    int_type sputc (char_type __c);
+    
+    // 27.5.2.2.5, p2
+    streamsize sputn (const char_type *__s, streamsize __n) {
+        _RWSTD_ASSERT_RANGE (__s, __s + __n);
+        return xsputn (__s, __n);
+    }
+
+    ios_base::openmode _C_mode () const {
+        return _C_iomode;
+    }
+
+protected:
+
+    // 27.5.2.1, p1: default mode argument is extension for convenience
+    basic_streambuf (ios_base::openmode __mode = ios_base::in | ios_base::out) 
+        : _C_iomode (__mode),
+          _C_buffer (0),
+          _C_bufsize (0),
+          _C_bufstate (0),
+          _C_eback (0),
+          _C_gptr (0),
+          _C_egptr (0),
+          _C_pbase (0),
+          _C_pptr (0),
+          _C_epptr (0)
+        { }
+
+    // 27.5.2.3.1, p1
+    char_type* eback () const {
+        return _C_eback;
+    }
+
+    // 27.5.2.3.1, p2
+    char_type* gptr () const {
+        return _C_gptr;
+    }
+
+    // 27.5.2.3.1, p3
+    char_type* egptr () const {
+        return _C_egptr;
+    }
+
+    // 27.5.2.3.1, p4
+    void gbump (int __n) {
+        _RWSTD_ASSERT (_C_gptr != 0);
+        _C_gptr += __n;
+    }
+
+    // 27.5.2.3.1, p5
+    void setg (char_type *__eback, char_type *__gptr, char_type *__egptr) {
+        _C_eback = __eback;
+        _C_gptr  = __gptr;
+        _C_egptr = __egptr;
+    }
+
+    // 27.5.2.3.2, p1
+    char_type* pbase () const {
+        return _C_pbase;
+    }
+
+    // 27.5.2.3.2, p2
+    char_type* pptr () const {
+        return _C_pptr;
+    }
+
+    // 27.5.2.3.2, p3
+    char_type* epptr () const {
+        return _C_epptr;
+    }
+
+    // 27.5.2.3.2, p4
+    void pbump (int __n) {
+        _C_pptr += __n;
+    }
+
+    // 27.5.2.3.2, p5
+    void setp (char_type *__pbase, char_type *__epptr) {
+        _C_pbase = _C_pptr = __pbase;
+        _C_epptr = __epptr;
+    }
+
+    // 27.5.2.4.1, p1
+    virtual void imbue (const locale &__loc) {
+        _C_locale = __loc;
+    }
+
+    // 27.5.2.4.2, p1
+    virtual basic_streambuf* setbuf (char_type*, streamsize) {
+        return this;
+    }
+
+    // 27.5.2.4.2, p3
+    virtual pos_type
+    seekoff (off_type, ios_base::seekdir,
+             ios_base::openmode = ios_base::in | ios_base::out) {
+        return pos_type (off_type (-1));
+    }
+
+    // 27.5.2.4.2, p5
+    virtual pos_type
+    seekpos (pos_type, ios_base::openmode = ios_base::in | ios_base::out) {
+        return pos_type (off_type (-1));
+    }
+
+    // 27.5.2.4.3, p1
+    virtual streamsize showmanyc () {
+        return 0;
+    }
+
+    // 27.5.2.4.3, p4
+    virtual streamsize xsgetn (char_type *, streamsize);
+
+    // 27.5.2.4.3, p7
+    virtual int_type underflow () {
+        return traits_type::eof ();
+    }
+
+    // 27.5.2.4.3, p15
+    virtual int_type uflow ();
+
+    // 27.5.2.4.5, p3
+    virtual int_type overflow (int_type = traits_type::eof ()) {
+        return traits_type::eof ();
+    }
+
+    // 27.5.2.4.4, p1
+    virtual int_type pbackfail (int_type = traits_type::eof ()) {
+        return traits_type::eof ();  
+    }
+
+    // 27.5.2.4.5, p1
+    virtual streamsize xsputn (const char_type*, streamsize);
+
+    // 27.5.2.4.2, p7
+    virtual int sync () {
+        return 0;
+    }
+
+
+    //
+    // non-standard convenience functions    
+    //
+
+    // is a read position available?
+    streamsize _C_read_avail () const {
+        return _C_is_in () ? egptr () - gptr () : 0;
+    }
+
+    // is a write position available?
+    streamsize _C_write_avail () const {
+        return _C_is_out () ? epptr () - pptr () : 0;
+    }
+
+    // how much space in putback area is available?
+    streamsize _C_putback_avail () const {
+        return (_C_is_in () && gptr () != 0) ? gptr () - eback () : 0;
+    }
+
+    // is buffer in input mode?
+    bool _C_is_in () const {
+        return 0 != (_C_iomode & ios_base::in);
+    }
+
+    // is buffer in output mode?
+    bool _C_is_out () const {
+        return  0 != (_C_iomode & ios_base::out);
+    }
+
+    // is buffer in both input and output mode?
+    bool _C_is_inout () const {
+        return (_C_iomode & (ios_base::in | ios_base::out))
+               == (ios_base::in | ios_base::out);
+    }
+
+    // is character eof?
+    bool _C_is_eof (int_type __c) const {
+        return traits_type::eq_int_type (__c, traits_type::eof ());
+    }
+
+    // pointer to end of internal buffer
+    char_type* _C_buf_end () const {
+        return _C_buffer + _C_bufsize;
+    }
+    
+    // enumerations used in derived classes
+    enum {
+        _C_allocated   = 0x1,    // buffer allocated internally
+        _C_out_mode    = 0x2,    // last virtual operation was an output
+        _C_unbuf_mode  = 0x4     // stream is in unbuffered mode
+    }; 
+
+    bool _C_own_buf () const {
+        return 0 != (_C_bufstate & _C_allocated);
+    }
+
+    void _C_own_buf (bool __own) {
+        if (__own)
+            _C_bufstate |= _C_allocated;
+        else
+            _C_bufstate &= ~_C_allocated;
+    }
+
+    bool _C_out_last () const {
+        return 0 != (_C_bufstate & _C_out_mode);
+    }
+
+    void _C_out_last (bool __last) {
+        if (__last)
+            _C_bufstate |= _C_out_mode;
+        else
+            _C_bufstate &= ~_C_out_mode;
+    }
+
+    bool _C_is_unbuffered () const {
+        return 0 != (_C_bufstate & _C_unbuf_mode);
+    }
+
+    void _C_set_unbuffered (bool __unbuf) {
+        if (__unbuf)
+            _C_bufstate |= _C_unbuf_mode;
+        else
+            _C_bufstate &= ~_C_unbuf_mode;
+    }
+
+    // debug only - asserts that get and put areas are consistent
+    bool _C_is_valid () const;
+    
+    ios_base::openmode _C_iomode;     // stream buffer's I/O mode
+    char_type*         _C_buffer;     // character buffer
+    streamsize         _C_bufsize;    // size of buffer in characters
+    int                _C_bufstate;   // state of buffer (used in subclasses)
+
+private:
+
+    char_type *_C_eback;   // beginning of input dequence
+    char_type *_C_gptr;    // next position of input sequence
+    char_type *_C_egptr;   // end of input sequence
+
+    char_type *_C_pbase;   // beginning of output dequence
+    char_type *_C_pptr;    // next position of output sequence
+    char_type *_C_epptr;   // end of output sequence
+
+    locale     _C_locale;  // locale imbued in this object
+};
+
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_streambuf<_CharT, _Traits>::int_type
+basic_streambuf<_CharT, _Traits>::uflow ()
+{
+    if (_C_is_eof (underflow ()))
+        return traits_type::eof ();
+
+    return traits_type::to_int_type (*_C_gptr++);
+}
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_streambuf<_CharT, _Traits>::int_type
+basic_streambuf<_CharT, _Traits>::sbumpc ()
+{ 
+    if (!_C_read_avail ())
+        return uflow ();
+    
+    char_type __c = *gptr ();  
+    gbump (1);
+    
+    return traits_type::to_int_type (__c);
+}
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_streambuf<_CharT, _Traits>::int_type
+basic_streambuf<_CharT, _Traits>::sputbackc (char_type __c)
+{
+    if (_C_putback_avail () && traits_type::eq (gptr ()[-1], __c) ) { 
+        gbump (-1);
+        return traits_type::to_int_type (*gptr ());
+    }
+    
+    return pbackfail (traits_type::to_int_type (__c)); 
+}
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_streambuf<_CharT, _Traits>::int_type
+basic_streambuf<_CharT, _Traits>::sputc (char_type __c)
+{
+    if (_C_write_avail ()) {
+        traits_type::assign (*_C_pptr++, __c);
+        return traits_type::to_int_type (__c);
+    }
+
+    return overflow (traits_type::to_int_type (__c));
+}
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_streambuf<_CharT, _Traits>::int_type
+basic_streambuf<_CharT, _Traits>::sungetc ()
+{
+    if (gptr () > eback ()) {
+        gbump (-1);
+        return traits_type::to_int_type (*gptr ());
+    }
+
+    return pbackfail ();
+}
+
+
+template<class _CharT, class _Traits>
+inline streamsize
+basic_streambuf<_CharT, _Traits>::xsgetn (char_type* __buf, streamsize __n)
+{
+    // number of characters read
+    streamsize __nget = 0;
+
+    while (__n && (gptr () != egptr () || underflow () != int_type (-1))) {
+
+        // number of characters available in get area
+        streamsize __inbuf = egptr () - gptr ();
+        
+        if (__inbuf > __n)
+            __inbuf = __n;
+
+        // copy contents of get area to the destination buffer
+        traits_type::copy (__buf + __nget, gptr (), __inbuf);
+
+        // increment pointers and counts by the number of characters copied
+        gbump (__inbuf);
+        __n    -= __inbuf;
+        __nget += __inbuf;
+    }
+
+    return __nget;
+}
+
+
+template<class _CharT, class _Traits>
+inline streamsize
+basic_streambuf<_CharT, _Traits>::xsputn (const char_type* __buf,
+                                          streamsize __n)
+{
+    streamsize __nput = 0;
+
+    for (; __nput < __n; ++__nput) 
+        if (_C_is_eof (sputc (*__buf++)))
+            break;
+    
+    return __nput;
+}
+
+
+template<class _CharT, class _Traits>
+inline locale
+basic_streambuf<_CharT, _Traits>::pubimbue (const locale &__loc)
+{
+    locale __retloc = getloc ();
+    imbue (__loc);
+    return __retloc; 
+}
+
+
+template<class _CharT, class _Traits>
+inline bool basic_streambuf<_CharT, _Traits>::_C_is_valid () const
+{
+    // verify that get and put areas are consistent
+    return    (   eback () && eback () <= gptr () && gptr () <= egptr ()
+               || !eback () && !gptr () && !egptr ())
+           && (   pbase () && pbase () <= pptr () && pptr () <= epptr ()
+               || !pbase () && !pptr () && !epptr ());
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_STREAMBUF_INCLUDED

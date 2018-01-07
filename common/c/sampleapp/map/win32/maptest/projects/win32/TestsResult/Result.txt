@@ -1,0 +1,18 @@
+
+
+--Run Summary: Type      Total     Ran  Passed  Failed
+               suites        1       1     n/a       0
+               tests         2       2       2       0
+               asserts      38      38      38       0
+
+
+--Run Summary: Type      Total     Ran  Passed  Failed
+               suites        1       1     n/a       0
+               tests         2       2       2       0
+               asserts      39      39      39       0
+
+
+--Run Summary: Type      Total     Ran  Passed  Failed
+               suites        1       1     n/a       0
+               tests         2       2       2       0
+               asserts      39      39      39       0

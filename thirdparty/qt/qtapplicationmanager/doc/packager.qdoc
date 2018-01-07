@@ -1,0 +1,88 @@
+/****************************************************************************
+**
+** Copyright (C) 2017 Pelagicore AG
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Pelagicore Application Manager.
+**
+** $QT_BEGIN_LICENSE:FDL-QTAS$
+** Commercial License Usage
+** Licensees holding valid commercial Qt Automotive Suite licenses may use
+** this file in accordance with the commercial license agreement provided
+** with the Software or, alternatively, in accordance with the terms
+** contained in a written agreement between you and The Qt Company.  For
+** licensing terms and conditions see https://www.qt.io/terms-conditions.
+** For further information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+
+\page appman-packager.html
+\title Packager
+\brief A command-line utility for managing the installation of packages.
+\ingroup qtappman-tools
+
+The \c{appman-packager} is a command-line utility that is used by the developer to manage installation
+packages. It could also be used as a signing and verification tool on a app-store backend server.
+This tool is meant for usage on the developer's desktop machine or packaging server, but not on the
+target device.
+
+At the moment the application-manager supports unsigned packages, packages that are signed by the
+developer only (development mode), and packages that are signed by a trusted app-store. The
+\c{appman-packager} can create all these variations with the following commands:
+
+\table
+\header
+    \li Action
+    \li Options
+    \li Description
+\row
+    \li \span {style="white-space: nowrap"} {\c create-package}
+    \li \c{<package> <source directory>}
+    \li Create a new package named \a package from the application in \a{source directory}. The
+        directory needs to at least contain an \l{Manifest definition}{\c info.yaml} as well as an
+        \c{icon.png} file.
+        The tool will do a sanity-check on the \c info.yaml file before actually creating the
+        package.
+        All normal files and directories in the source directory will be copied into package. The
+        only meta-data that is copied from the filesystem is the filename, and the user's
+        eXecutable-bit.
+\row
+    \li \span {style="white-space: nowrap"} {\c dev-sign-package}
+    \li \c{<package> <signed-package> <certificate> <password>}
+    \li Takes the input \c package, adds a developer signature and writes the output to \c signed-package.
+        You need to supply a \c certificate in P12 format together with a \c password matching the
+        certificate.
+\row
+    \li \span {style="white-space: nowrap"} {\c dev-verify-package}
+    \li \c{<package> <ca-certificates...>}
+    \li Reads the input \c package and tries to verify the developer signature using the given \c
+        ca-certificates.
+\row
+    \li \span {style="white-space: nowrap"} {\c store-sign-package}
+    \li \c{<package> <signed-package> <certificate> <password> [device-id]}
+    \li Takes the input \c package, adds a store signature and writes the output to \c signed-package.
+        You need to supply a \c certificate in P12 format together with a \c password matching the
+        certificate. If you specify the optional \c device-id, the resulting package can only be
+        installed on this specific device.
+\row
+    \li \span {style="white-space: nowrap"} {\c store-verify-package}
+    \li \c{<package> <ca-certificates...> <device-id>}
+    \li Reads the input \c package and tries to verify the store signature using the given \c
+        ca-certificates.
+
+\endtable
+
+The \c{appman-packager} naturally supports the standard Unix \c{--help} command-line option.
+
+*/

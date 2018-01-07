@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 WaylandCompositor
+Description: Qt WaylandCompositor module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5WaylandCompositor 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Quick -L/opt/Qt5.8.0/lib -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lpthread -lwayland-server -lxkbcommon -lGLESv2  
+Cflags: -I${includedir}/QtWaylandCompositor -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Quick Qt5Qml
+

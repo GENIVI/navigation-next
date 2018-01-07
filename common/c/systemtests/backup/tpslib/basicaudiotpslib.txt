@@ -1,0 +1,6 @@
+capabilities:
+  obsecurity: +
+  description: data
+templates:
+ - basicaudios: []
+ - audioitem: [name, text, duration]

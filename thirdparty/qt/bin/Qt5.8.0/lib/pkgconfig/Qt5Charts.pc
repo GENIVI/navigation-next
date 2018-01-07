@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Charts
+Description: Qt Charts module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5Charts 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Widgets -lQt5Gui -lQt5Core -lpthread -lGLESv2  
+Cflags: -I${includedir}/QtCharts -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

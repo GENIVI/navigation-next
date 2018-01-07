@@ -1,0 +1,192 @@
+Setter(setter_name, type, name) ::= <<
+  public void <setter_name>(<type> <name>) {
+    this.<name> = <name>;
+  }
+
+>>
+
+Getter(getter_name, type, name) ::= <<
+  public <type> <getter_name>() {
+    return this.<name>;
+  } 
+
+>>
+
+Field(type, name) ::= <<
+  private <type> <name>;
+
+>>
+
+Type(package, abstract_or_final, class_name, base, discriminator_type, discriminator_name, factory, field, setter, getter, from_tps, to_tps) ::= <<
+package <package>;
+
+import com.navbuilder.tps.TPSElement;
+import com.navbuilder.tps.MutableTPSElement;
+
+public <abstract_or_final> class <class_name> extends <base> {
+
+  public static final <class_name> newInstance(<discriminator_type> <discriminator_name>) {
+    <factory>
+  }
+
+<field>
+<setter>
+<getter>
+<from_tps>
+<to_tps>
+}
+
+>>
+
+TypeAbstractFactoryPerItem(discriminator_name, discriminator_value, subtype_type) ::= <<
+  if ("<discriminator_value>".equals(<discriminator_name>))
+    return new <subtype_type>();
+    
+>>
+
+TypeAbstractFactory(discriminator_value, factory_content) ::= <<
+<factory_content>
+
+throw new RuntimeException("Unknown discriminator value [<discriminator_value>]");
+
+>>
+
+TypeFinalFactory(type) ::= <<
+  return new <type>();
+>>
+
+FromTps(abstract_or_final, set_value) ::= <<
+  public <abstract_or_final> void fromTpsElement(TPSElement tpsElement) {
+  	<set_value>
+  }
+  
+>>
+
+FromTpsAttribute(name, u_name, type, u_type, factory_param) ::= <<
+	set<u_name>(tpsElement.get<u_type>Attribute("<name>"));
+
+>>
+
+FromTpsSingle(name, u_name, type, u_type, factory_param) ::= <<
+  TPSElement <name>Element = tpsElement.getChild("<name>");
+  <type> <name> = <type>.newInstance(<factory_param>);
+  <name>.fromTpsElement(<name>Element);
+  set<u_name>(<name>);
+  
+>>
+
+FromTpsFactoryParam(discriminator_name, discriminator_type) ::= <<
+  tpsElement.get<discriminator_type>Attribute("<discriminator_name>")
+
+>>
+
+FromTpsArray(name, u_name, type, u_type, factory_param) ::= <<
+  TPSElement[] <name>TpsElements = tpsElement.getChildren("<name>");
+  <type>[] <name>TypeElements = new <type>[<name>TpsElements.length];
+
+  for (int i = 0; i \< <name>TypeElements.length; ++i) {
+    <name>TypeElements[i] = <type>.newInstance();
+    <name>TypeElements[i].fromTpsElement(<name>TpsElements[i]);
+  }
+  
+  set<u_name>(<name>TypeElements);
+
+>>
+
+FromTpsDiscriminator(discriminator_type, discriminator_name) ::= <<
+  <name>Element.get<discriminator_type>("<discriminator_name>")
+>>
+
+ToTps(abstract_or_final, get_value) ::= <<
+  public <abstract_or_final> MutableTPSElement toTpsElement(String elementName) {
+    MutableTPSElement tpsElement = new MutableTPSElement(elementName);
+    <get_value>
+    return tpsElement;
+  }
+
+>>
+
+ToTpsSingle(name, u_name, type, u_type) ::= <<
+	tpsElement.attach(<name>.toTpsElement("<name>"));
+>>
+
+ToTpsArray(name, u_name, type, u_type) ::= <<
+    for (int i = 0; i \< <name>.length; ++i)
+    	tpsElement.attach(<name>[i].toTpsElement("<name>"));
+
+>>
+
+ToTpsAttribute(name, u_name, type, u_type) ::= <<
+  tpsElement.set<u_type>Attribute("<name>", get<u_name>());
+
+>>
+
+
+Handler(package, name, request) ::= <<
+package <package>;
+
+import com.navbuilder.protocol.*;
+import com.navbuilder.tps.*;
+import com.navbuilder.nb.internal.network.NBRequest;
+import com.navbuilder.nb.internal.network.Request;
+
+public final class <name>Handler implements Handler {
+<request>
+
+}
+>>
+
+Request(request_type, fqn_request_type, request_wire_name, response, request_complete) ::= <<
+public final void request(<fqn_request_type> request, <request_type>Listener listener) {
+	new <request_type>Impl(request, listener).start();
+}
+
+public interface <request_type>Listener extends Handler.Listener {
+	<response>
+}
+
+
+private final class <request_type>Impl extends NBRequest {
+	private final static String WIRE_NAME = "<request_wire_name>";
+	private final <fqn_request_type> request;
+	private final <request_type>Listener listener;
+
+	private <request_type>Impl(<fqn_request_type> request,
+			<request_type>Listener listener) {
+		this.request = request;
+		this.listener = listener;
+	}
+
+	protected String getType() {
+		return WIRE_NAME;
+	}
+
+	protected MutableTPSElement getTPSQuery() {
+		return request.toTpsElement(WIRE_NAME);
+	}
+
+	protected void loadTPSQuery(MutableTPSElement qe) {
+		throw new RuntimeException("Unsupported");
+	}
+
+	public void requestComplete(Request request, TPSElement reply) {
+		<request_complete>
+		listener.error("Unknown response");
+	}
+}
+
+>>
+
+RequestComplete(type, wire_name ) ::= <<
+if ("<wire_name>".equals(reply.getName())) {
+	<type> response = <type>
+			.newInstance();
+	response.fromTpsElement(reply);
+	listener.response(response);
+}
+
+>>
+
+Response(name) ::= <<
+  void response(<name> response);
+>>

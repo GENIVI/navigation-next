@@ -1,0 +1,215 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * queue - declarations for the Standard Library queue classes
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_QUEUE_INCLUDED
+#define _RWSTD_QUEUE_INCLUDED
+
+#include <algorithm>
+#include <deque>
+#include <functional>
+#include <vector>
+
+#include <rw/_defs.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+template <class _TypeT, class _Container _RWSTD_COMPLEX_DEFAULT(deque<_TypeT>) > 
+  class queue;
+
+  template <class _TypeT, class _Container>
+  inline bool operator== (const queue<_TypeT,_Container>& __x, 
+                          const queue<_TypeT,_Container>& __y);
+
+  template <class _TypeT, class _Container>
+  inline bool operator< (const queue<_TypeT,_Container>& __x, 
+                         const queue<_TypeT,_Container>& __y);
+
+  template <class _TypeT, class _Container>
+  class queue
+  {
+      friend bool _RWSTD_SPECIALIZED_FRIEND (operator==)
+          (const queue& __x, const queue& __y);
+
+      friend bool _RWSTD_SPECIALIZED_FRIEND (operator<)
+          (const queue& __x, const queue& __y);
+
+
+  public:
+
+    typedef _TYPENAME _Container::value_type         value_type;
+    typedef _TYPENAME _Container::size_type          size_type;
+    typedef _TYPENAME _Container::reference          reference;
+    typedef _TYPENAME _Container::const_reference    const_reference;
+    typedef _Container                               container_type;
+
+  protected:
+
+    _Container c;
+
+  public:
+
+    _EXPLICIT
+    queue (const container_type &__c = container_type ())
+        : c (__c) { }
+
+    bool                  empty () const              { return c.empty(); }
+    size_type             size  () const              { return c.size();  }
+    reference             front ()                    { return c.front(); }
+    const_reference       front () const              { return c.front(); }
+    reference             back  ()                    { return c.back();  }
+    const_reference       back  () const              { return c.back();  }
+    void                  push  (const value_type& __x) { c.push_back(__x);   }
+    void                  pop   ()                    { c.pop_front();    }
+
+  };
+
+  template <class _TypeT, class _Container>
+  inline bool operator== (const queue<_TypeT,_Container>& __x, 
+                          const queue<_TypeT,_Container>& __y)
+  {
+    return __x.c == __y.c;
+  }
+
+  template <class _TypeT, class _Container>
+  inline bool operator< (const queue<_TypeT,_Container>& __x, 
+                         const queue<_TypeT,_Container>& __y)
+  {
+    return __x.c < __y.c;
+  }
+
+  template <class _TypeT, class _Container>
+  inline bool operator!= (const queue<_TypeT,_Container>& __x, 
+                          const queue<_TypeT,_Container>& __y)
+  {
+    return !(__x == __y);
+  }
+
+  template <class _TypeT, class _Container>
+  inline bool operator> (const queue<_TypeT,_Container>& __x, 
+                         const queue<_TypeT,_Container>& __y)
+  {
+    return __y < __x;
+  }
+
+  template <class _TypeT, class _Container>
+  inline bool operator>= (const queue<_TypeT,_Container>& __x, 
+                          const queue<_TypeT,_Container>& __y)
+  {
+    return !(__x < __y);
+  }
+
+  template <class _TypeT, class _Container>
+  inline bool operator<= (const queue<_TypeT,_Container>& __x, 
+                          const queue<_TypeT,_Container>& __y)
+  {
+    return !(__y <  __x);
+  }
+
+#ifndef _RWSTD_NO_COMPLEX_DEFAULT_TEMPLATES
+  template<class _TypeT, class _Container = vector<_TypeT>,
+  class _Compare = less<_TYPENAME _Container::value_type> >
+#else
+  template <class _TypeT,class _Container, class _Compare> 
+#endif
+  class priority_queue
+  {
+  public:
+
+    typedef _TYPENAME _Container::value_type         value_type;
+    typedef _TYPENAME _Container::size_type          size_type;
+    typedef _TYPENAME _Container::const_reference    const_reference;
+    typedef _Container                               container_type;
+
+  protected:
+
+    _Container c;
+    _Compare   comp;
+
+  public:
+
+    _EXPLICIT
+    priority_queue (const _Compare       & __cmp = _Compare (),
+                    const container_type &__c = container_type ())
+        : c (__c), comp (__cmp) 
+    { ; }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template <class _InputIter>
+    priority_queue (_InputIter __first, _InputIter __last, 
+                    const _Compare& __x = _Compare(),
+                    const _Container& __y = _Container())
+      : c(__y), comp(__x) 
+    {
+      c.insert(c.end(),__first,__last);
+      make_heap(c.begin(), c.end(), comp);
+    }
+#else
+    priority_queue (_TYPENAME _Container::const_iterator __first,
+                    _TYPENAME _Container::const_iterator __last,
+                    const _Compare& __cmp = _Compare ())
+
+      : c(__first, __last, _Container::allocator_type()), comp(__x)
+    {
+      make_heap(c.begin(), c.end(), comp);
+    }
+#endif
+    
+    bool                  empty () const { return c.empty(); }
+    size_type             size  () const { return c.size();  }
+    const_reference       top   () const { return c.front(); }
+
+    void push (const_reference __x)
+    { 
+      c.push_back(__x); push_heap(c.begin(), c.end(), comp);
+    }
+    void pop ()
+    {
+      pop_heap(c.begin(), c.end(), comp); c.pop_back(); 
+    }
+  };
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_QUEUE_INCLUDED

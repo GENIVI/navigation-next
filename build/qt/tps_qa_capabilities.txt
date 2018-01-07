@@ -1,0 +1,12 @@
+capabilities:
+ product: qaupload
+ version: 3
+ server-error-codes: +
+ no-db-iden: +
+ no-fileset: +
+ obsecurity: +
+ deflate-wbits: 10
+ iden-tps: +
+ query-headers: 1
+ transaction-info: 1
+

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F055E2AD-773F-4EE9-87C5-81D62DA72190}</ProjectGuid>
+    <RootNamespace>nbgmmanager</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NBGM_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;NBGM_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcircleimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcommon.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcompass.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcustomobjectscontext.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdefaultoverlaymanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdraworder.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmglowoverlay.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapcamerahelperimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapcameraimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapdataimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmresourcemanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmfakemapview.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmavatar.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmavatarsetting.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcamerasetting.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcamerastate.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmconst.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewdatacache.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewimpltask.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewprofiler.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmmapviewprotected.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavecmview.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavvectorview.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmnavviewprotected.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmtaskqueue.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbrebinaryspatialdividemanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbrelinearspatialdividemanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmarray.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbinloader.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdom.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterial.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialfactory.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialmanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialutility.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnbmobject.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortiledata.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmanimation.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbuildmodelcontext.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbuildutility.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmflag.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmgridentity.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmicon.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlabellayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlabellayertile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutbuffer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutelement.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutmanager.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutpolyline.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmaplayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmaproadlabel.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavecmroutelayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnaviconlayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavvectorroutelayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmoptionallayerimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpatharrowlayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpatharrowlayertile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpoilayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpoilayertile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpointlabel.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpolyline2entity.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmrasterize.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmroadlabel.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmshield.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmsky.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmskywall.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmtilemaplayertile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortilebuilder.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectorvertexscale.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmfakemapview.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapcamerahelperimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapcameraimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapview.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewdatacache.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewimpltask.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewprofiler.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavecmview.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavvectorview.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavview.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmresourcemanager.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmtaskqueue.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbrebinaryspatialdividemanager.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbrelinearspatialdividemanager.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmarray.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmbinloader.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmdom.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapdataimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmaphorizontallightsourcematerial.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterial.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialfactory.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialmanager.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialutility.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapoutlinedcolormaterial.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmnbmdata.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmpatterndashlinematerial.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortiledata.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortiledatacreator.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortilemeshcreator.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmanimation.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmavatar.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmbuildutility.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcircleimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcompass.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcustomobjectscontext.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcustompin.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmdebugpointlabel.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmflag.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmglowoverlay.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmgridentity.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmicon.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabeldebugutil.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabellayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabellayertile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutbuffer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutelement.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutmanager.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutpolyline.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmmaproadlabel.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnavecmroutelayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnaviconlayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnavvectorroutelayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmoptionallayerimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpatharrowlayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpatharrowlayertile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpoilayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpoilayertile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpointlabel.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpolyline2entity.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmrasterize.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmrect2dimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmroadlabel.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmshield.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmsky.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmskywall.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmstaticlabeltile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmstaticpoi.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtileanimationlayerimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtilemaplayer.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtilemaplayertile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtransparentoverlay.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorareabuilder.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorroadbuilder.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectortile.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorvertexscale.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\util\nbgmmapscaleutility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\nbgmmain\include\private\nbgmcommon.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

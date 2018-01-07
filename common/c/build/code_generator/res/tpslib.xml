@@ -1,0 +1,2269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="Atlasbook" package="protocol">
+    <package name="protocol.data">
+        <type name="ElementToXML" wireName="elementToXML" description="Used to transform element struct to XML string." isAbstract="yes" >
+        </type>
+        <type name="Address" wireName="address" description="This element specifies an address." base="ElementToXML">
+            <element name="extendedAddress" type="ExtendedAddress" min="0" max="1"
+                     description="If present, an extended formatted address (max of 5 lines) for POI detail screen shall be provided." />
+            <element name="compactAddress" type="CompactAddress" min="0" max="1"
+                     description="If present, a compact formatted address (max of 2 lines) for list view shall be provided." />
+            <attribute name="type" wireName="type" type="String"
+                       description="Type of address specified (used to decide which fields have priority when geocoding).  Can be: ‘street’,’intersect’, ‘airport’, 'freeform'." />
+            <attribute name="streetAddress" wireName="sa" type="String"
+                       description="Street Address" />
+            <attribute name="crossStreet" wireName="xstr" type="String"
+                       description="Cross Street (used when a address in specified in terms of an intersection)" />
+            <attribute name="street" wireName="str" type="String"
+                       description="Street Name" />
+            <attribute name="city" wireName="city" type="String"
+                       description="City Name" />
+            <attribute name="county" wireName="county" type="String" description="County Name" />
+            <attribute name="state" wireName="state" type="String"
+                       description="State (Standard two letter abbreviation)" />
+            <attribute name="postal" type="String" wireName="postal"
+                       description="Postal Code (Zip Code in US)" />
+            <attribute name="country" type="String" wireName="country" description="3-digit ISO code" />
+            <attribute name="countryName" type="String" wireName="country-name" description="Country Name" />
+            <attribute name="airport" type="String" wireName="airport" description="Airport Code" />
+            <attribute name="freeform" type="String" wireName="freeform"
+                       description="Freeform street address. Only required when type is 'freeform'." />
+        </type>
+        <type name="AnalyticsEvent" wireName="analytics-event" base="ElementToXML">
+            <element name="searchQueryEvent" type="SearchQueryEvent" min="0" max="1" description="Local search event." />
+            <element name="searchDetailEvent" type="SearchDetailEvent" min="0" max="1" description="Display search detail event." />
+            <element name="impressionEvent" type="ImpressionEvent" min="0" max="1" description="Display impression event." />
+            <element name="mapEvent" type="MapEvent" min="0" max="1" description="Display map event." />
+            <element name="placeMessageEvent" type="PlaceMessageEvent" min="0" max="1" description="Place message event." />
+            <element name="facebookUpdateEvent" type="FacebookUpdateEvent" min="0" max="1" description="Update facebook event." />
+            <element name="callEvent" type="CallEvent" min="0" max="1" description="Phone call event." />
+            <element name="addFavoritesEvent" type="AddFavoritesEvent" min="0" max="1" description="Add to favorites event." />
+            <element name="routeRequestEvent" type="RouteRequestEvent" min="0" max="1" description="Route request event." />
+            <element name="routeReplyEvent" type="RouteReplyEvent" min="0" max="1" description="Route reply event." />
+            <element name="routeStateEvent" type="RouteStateEvent" min="0" max="1" description="Route state change event." />
+            <element name="gpsProbesEvent" type="GpsProbesEvent" min="0" max="1" description="GPS probe event." />
+            <element name="feedbackEvent" type="FeedbackEvent" min="0" max="1" description="Feedback from user. Report a concern feature." />
+            <element name="appErrorEvent" type="AppErrorEvent" min="0" max="1" description="Application error event. Only errors reported to the user." />
+            <element name="wifiProbesEvent" type="WifiProbesEvent" min="0" max="1" description="Wi-Fi probe event." />
+            <element name="weburlEvent" type="WeburlEvent" min="0" max="1" description="Viewed the URL associated with an ad." />
+            <element name="arrivalEvent" type="ArrivalEvent" min="0" max="1" description="Successfully arrived at the destination specified by an advertisement." />
+            <element name="transactionEvent" type="TransactionEvent" min="0" max="1" description="Generic server reply event." />
+            <element name="eventMetadata" type="AnalyticsEventMetadata" min="0" max="1" description="Event metadata." />
+            <element name="announcementEvent" type="AnnouncementEvent" min="0" max="1" description="Event for announcement made during a nav session." />
+            <element name="userActionEvent" type="UserActionEvent" min="0" max="1" description="Generic event to capture a command from the user to the application." />
+            <element name="sessionStartEvent" type="SessionStartEvent" min="0" max="1" description="Session start event with location info." />
+            <element name="invocationContext" type="InvocationContext" min="0" max="1" description="Provides the user context in which this event was generated." />
+            <element name="settingsChangeEvent" type="SettingsChangeEvent" min="0" max="1" description="setting change event." />
+            <element name="shareEvent" type="ShareEvent" min="0" max="1" description="setting change event." />
+            <attribute name="id" type="uint" wireName="id" description="Unique identifier associated with this place." />
+            <attribute name="ts" type="uint32" wireName="ts" description="The timestamp for the event represented as GPS time." />
+            <attribute name="sessionId" type="uint32" wireName="session-id" description="Unique session identifier for this client.  A timestamp is a good choice here." />
+            <attribute name="actionSession" type="BinaryData" wireName="active-session" description="A unique session identifier for this client representing an active session with the server. This value should be set in the client when the application is started and should be reset if the client is inactive for a period of time." />
+        </type>
+        <type name="AnnouncementEvent" wireName="announcement-event" base="ElementToXML">
+            <element name="position" type="Position" description="Position (type=”gps”) at which the session started." />
+            <element name="trafficAnanouncementInfo" type="TrafficAnanouncementInfo" description="Provides traffic information used for the announcement." />
+            <attribute name="navSessionId" type="uint32" wireName="nav-session-id" description="Unique identifier for this navigation session." />
+            <attribute name="routeRequestEventId" type="uint" wireName="route-request-event-id" description="Event ID associated with the original route request." />
+            <attribute name="routeReplyEventId" type="uint" wireName="route-reply-event-id" description="Event ID associated with the original route reply." />
+            <attribute name="announcement" type="String" wireName="announcement" description="Announcement made to the user." />
+            <attribute name="duration" type="uint" wireName="duration" description="Travel time along route remaining (in seconds)." />
+            <attribute name="distance" type="float" wireName="distance" description="Routing distance in meters away from destination." />
+        </type>
+        <type name="TrafficAnanouncementInfo" wireName="traffic-announcement-info" base="ElementToXML">
+            <element name="pair" type="Pair" min="0" description="Key values for all the pronuns used in the announcement." />
+            <attribute name="type" type="uint" wireName="type" description="" />
+            <attribute name="trafficColor" type="uint" wireName="traffic-color" description="" />
+        </type>
+        <type name="AnalyticsEventMetadata" wireName="metadata" base="ElementToXML">
+            <attribute name="category" type="String" wireName="category" description="" />
+            <attribute name="name" type="String" wireName="name" description="" />
+            <attribute name="timestamp" type="uint64" wireName="timestamp" description="" />
+            <attribute name="routeState" type="String" wireName="route-state" description="only for route state event" />
+        </type>
+        <type name="UserActionEvent" wireName="user-action-event" base="ElementToXML">
+            <attribute name="actionName" type="String" wireName="action-name" description="" />
+        </type>
+        <type name="SessionStartEvent" wireName="session-start-event" base="ElementToXML">
+            <element name="position" type="Position" description="Position (type=”gps”) at which the session started." />
+        </type>
+        <type name="SearchQueryEvent" wireName="search-query-event" base="ElementToXML">
+            <element name="searchFilter" type="SearchFilter" min="0" max="1" description="The filter criteria for the proximity search." />
+            <element name="point" type="Point" min="0" max="1" description="Center of the proximity search." />
+            <element name="searchEventCookie" type="SearchEventCookie" min="0" max="1" description="Contains information to be sent back to the server when reporting a search event." />
+
+            <attribute name="scheme" type="String" wireName="scheme" description="POI data scheme to use." />
+            <attribute name="inputMethod" type="String" wireName="input-method" description="The user input method of the search.(optional)" />
+            <attribute name="asrProviderSessionId" type="String" wireName="asr-provider-session-id" description="Attribute is present, when the search string was obtained from ASR service.(optional)" />
+        </type>
+        <type name="SearchDetailEvent" wireName="search-detail-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="The place whose detail is displayed." />
+        </type>
+        <type name="ImpressionEvent" wireName="impression-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="The place associated with the impression." />
+        </type>
+        <type name="MapEvent" wireName="map-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="The place being mapped." />
+        </type>
+        <type name="PlaceMessageEvent" wireName="place-message-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="Place sent/received." />
+        </type>
+        <type name="FacebookUpdateEvent" wireName="facebook-update-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="Place sent/received." />
+        </type>
+        <type name="CallEvent" wireName="call-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="The place called. If not a place and just a number the number should not be recorded." />
+        </type>
+        <type name="AddFavoritesEvent" wireName="add-favorites-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="Describes the place being added to favorites." />
+        </type>
+        <type name="RouteStateEvent" wireName="route-state-event" base="ElementToXML">
+            <element name="contentDisplayed" type="ContentDisplayed" min="0" description="" />
+            <element name="position" type="Position" description="Position (type=”gps”) at which the state change occured." />
+
+            <attribute name="navSessionId" type="uint32" wireName="nav-session-id" description="Unique identifier for this navigation session." />
+            <attribute name="routeRequestEventId" type="int" wireName="route-request-event-id" description="Event ID associated with the original route request." />
+            <attribute name="routeReplyEventId" type="int" wireName="route-reply-event-id" description="Event ID associated with the original route reply." />
+            <attribute name="state" type="String" wireName="state" description="One of: “recalc”, “app-suspend”, “app-resume”, “new-route”, “pause-route”, “resume-route”, “app-exit”, “stop”." />
+            <attribute name="duration" type="int" wireName="duration" description="Travel time along route remaining (in seconds)." />
+            <attribute name="distance" type="float" wireName="distance" description="Routing distance in meters away from destination." />
+        </type>
+        <type name="ContentDisplayed" wireName="content-displayed" base="ElementToXML">
+            <attribute name="type" type="String" wireName="type" description="Specifies a type of enhanced data displayed during a navigation session.Valid key values include: “junction”, “realistic signs”, and “city models”." />
+            <attribute name="country" type="String" wireName="country" description="Country code – ISO 3166-1 alpha 3." />
+        </type>
+        <type name="GpsProbesEvent" wireName="gps-probes-event" base="ElementToXML">
+            <element name="gps" type="Gps" description="First probe in this bundle." />
+            <element name="gpsOffset" type="GpsOffset" min="0" description="If present, these are additional probes with the data provided as offsets." />
+            <attribute name="packingVersion" type="String" wireName="packing-version" description="Version of the protocol used for packing the GPS probes." />
+            <attribute name="sessionId" type="uint32" wireName="nav-session-id" description="Identifies this navigation or follow-me session.  A timestamp may be a good choice here." />
+        </type>
+        <type name="GpsOffset" wireName="gps-offset" base="ElementToXML">
+            <attribute name="packed" type="BinaryData" wireName="packed" description="" />
+        </type>
+        <type name="FeedbackEvent" wireName="feedback-event" base="ElementToXML">
+            <element name="place" type="Place" min="0" max="1" description="" />
+            <element name="origin" type="Origin" min="0" max="1" description="" />
+            <element name="destination" type="Destination" min="0" max="1" description="" />
+            <element name="text" type="Text" min="0" max="1" description="" />
+            <element name="issueType" type="IssueType" min="1" description="" />
+
+            <attribute name="screenId" type="String" wireName="screen-id" description="This is unique identifier agreed upon by the server and client for each screen, and is used to identify from which screen a concern was reported." />
+            <attribute name="navSessionId" type="uint32" wireName="nav-session-id" description="Unique identifier for any navigational session." />
+            <attribute name="routeRequestEventId" type="uint" wireName="route-request-event-id" description="Unique identifier for any route from a client in the session." />
+            <attribute name="searchQueryEventId" type="uint" wireName="search-query-event-id" description="Unique identifier for any POI search from a client in the session." />
+            <attribute name="providerId" type="String" wireName="provider-id" description="Unique identifier of the feed provider." />
+            <attribute name="poiId" type="String" wireName="poi-id" description="Unique identifier of the feed source." />
+        </type>
+        <type name="IssueType" wireName="issue-type" base="ElementToXML">
+            <attribute name="type" type="String" wireName="type" description="Concern which the user report." />
+        </type>
+        <type name="AppErrorEvent" wireName="app-error-event" base="ElementToXML">
+            <element name="pair" type="Pair" min="0" description="" />
+            <element name="errorCategory" type="ErrorCategory" description="" />
+
+            <attribute name="errorCode" type="uint" wireName="error-code" description="Client-side error code." />
+            <attribute name="detailedCode" type="String" wireName="detailed-code" description="Technical summary of the problem." />
+            <attribute name="detailedDescription" type="String" wireName="detailed-description" description="Details that will help debugging the error.  This may include a stack trace, if appropriate." />
+        </type>
+        <type name="ErrorCategory" wireName="error-category" base="ElementToXML">
+            <attribute name="type" type="String" wireName="type" description="" />
+        </type>
+        <type name="WifiProbesEvent" wireName="wifi-probes-event" base="ElementToXML">
+            <element name="gps" type="Gps" description="Fix associated with the visible Wi-Fi networks." />
+            <element name="wifiProbe" type="WifiProbe" min="1" description="The visible Wi-Fi networks that were discovered at the time the GPS fix was received." />
+        </type>
+        <type name="WifiProbe" wireName="wifi-probe" base="ElementToXML">
+            <element name="wifiCapabilities" type="WifiCapabilities" min="0" max="1" description="This element describes the capabilities of the network." />
+            <attribute name="macAddress" type="BinaryData" wireName="mac-address" description="A MAC-48 identifier, which consists of a string listing the individual bytes as hexadecimal numbers as in “00:1d:7e:e5:d6:7f”." />
+            <attribute name="ssid" type="String" wireName="ssid" description="" />
+            <attribute name="frequency" type="uint" wireName="frequency" description="" />
+            <attribute name="signalStrength" type="uint" wireName="signal-strength" description="" />
+            <attribute name="timeDelta" type="uint" wireName="time-delta" description="" />
+        </type>
+        <type name="WifiCapabilities" wireName="wifi-capabilities" base="ElementToXML">
+            <element name="pair" type="Pair" min="0" description="" />
+        </type>
+        <type name="WeburlEvent" wireName="weburl-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="" />
+        </type>
+        <type name="ArrivalEvent" wireName="arrival-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="" />
+        </type>
+        <type name="TransactionEvent" wireName="transaction-event" base="ElementToXML">
+            <attribute name="targetName" type="String" wireName="target-name" description="" />
+            <attribute name="queryName" type="String" wireName="query-name" description="" />
+            <attribute name="transactionId" type="BinaryData" wireName="transaction-id" description="" />
+            <attribute name="transactionTime" type="uint32" wireName="transaction-time" description="" />
+            <attribute name="totalProcessingTime" type="uint32" wireName="total-processing-time" description="" />
+            <attribute name="queryPackingTime" type="uint32" wireName="query-packing-time" description="" />
+            <attribute name="replyUnpackingTime" type="uint32" wireName="reply-unpacking-time" description="" />
+        </type>
+        <type name="GeneralSettings" wireName="general-settings" base="ElementToXML">
+            <attribute name="nightMode" type="uint" wireName="night-mode" description="" />
+            <attribute name="distanceDisplay" type="uint" wireName="distance-display" description="" />
+        </type>
+        <type name="NavigationSettings" wireName="navigation-settings" base="ElementToXML">
+            <attribute name="highwaySigns" type="uint" wireName="highway-signs" description="" />
+            <attribute name="speedLimitSigns" type="uint" wireName="speed-limit-signs" description="" />
+            <attribute name="speedAlerts" type="uint" wireName="speed-alerts" description="" />
+            <attribute name="speedWarningTone" type="uint" wireName="speed-limits-warning-tone" description="" />
+            <attribute name="warningSpeed" type="uint" wireName="warning-speed" description="" />
+        </type>
+        <type name="RouteSettings" wireName="route-settings" base="ElementToXML">
+            <attribute name="vehicleMode" type="uint" wireName="vehicle-mode" description="" />
+            <attribute name="avoidTolls" type="uint" wireName="avoid-tolls" description="" />
+            <attribute name="avoidCarPool" type="uint" wireName="avoid-car-pool" description="" />
+            <attribute name="avoidFerries" type="uint" wireName="avoid-ferries" description="" />
+            <attribute name="avoidHighways" type="uint" wireName="avoid-highways" description="" />
+        </type>
+        <type name="MapSettings" wireName="map-settings" base="ElementToXML">
+            <attribute name="trafficLayer" type="uint" wireName="traffic-layer" description="" />
+            <attribute name="satelliteLayer" type="uint" wireName="satellite-layer" description="" />
+            <attribute name="dopplerLayer" type="uint" wireName="doppler-layer" description="" />
+        </type>
+        <type name="SettingsChangeEvent" wireName="settings-change-event" base="ElementToXML">
+            <element name="generalSetting" type="GeneralSettings" description="general settings." />
+            <element name="navigationSetting" type="NavigationSettings" description="navigation settings." />
+            <element name="routeSetting" type="RouteSettings" description="route settings." />
+            <element name="mapsettings" type="MapSettings" description="map settings." />
+        </type>
+        <type name="ExtendedAddress" wireName="extended-address" description="" base="ElementToXML">
+            <element name="addressLine" type="AddressLine" min="1" max="5" description="A formatted address line." />
+        </type>
+        <type name="CompactAddress" wireName="compact-address" description="" base="ElementToXML">
+            <element name="addressLine" type="AddressLine" min="1" max="2" description="If present, must insert between to line 1 and line2 when address is shown in one line. If not present for one line address, client shall put a space between line1 and line2." />
+            <element name="lineSeparator" type="LineSeparator" min="0" max="1" description="A formatted address line." />
+        </type>
+        <type name="LineSeparator" wireName="line-separator" description="" base="ElementToXML">
+            <attribute name="separator" type="String" wireName="separator" description="A character (ex ‘,’) used to separate line 1 and 2." />
+        </type>
+        <type name="AddressLine" wireName="address-line" description="" base="ElementToXML">
+            <attribute name="text" type="String" wireName="text" description="Address line." />
+        </type>
+        <type name="Point" wireName="point" description="This element specifies a location" base="ElementToXML">
+            <attribute name="lat" type="double" description="latitude of the point" />
+            <attribute name="lon" type="double" description="longitude of the point" />
+        </type>
+        <!--type name="Image" wireName="image" description="">
+            <attribute name="format" type="String" wireName="format" description="" />
+            <attribute name="widht" type="uint" wireName="widht" description="" />
+            <attribute name="height" type="uint" wireName="height" description="" />
+            <attribute name="dpi" type="uint" wireName="dpi" description="" />
+        </type-->
+        <type name="Gps" wireName="gps" base="ElementToXML"
+              description="This element specifies a GPS fix in unpacked form.">
+            <element name="point" type="Point"
+                     description="Location for the gps fix" />
+            <attribute name="time" type="uint64" wireName="time"
+                       description="the UTC time for this fix" />
+            <attribute name="heading" type="float" wireName="heading"
+                       description="heading for the fix in degrees." />
+            <attribute name="speed" type="float" wireName="speed"
+                       description="speed for the fix in meters/sec." />
+            <attribute name="altitude" type="float" wireName="altitude"
+                       description="altitude for the fix in meters" />
+            <attribute name="umag" type="float" wireName="umag"
+                       description="magnitude of the standard deviation of the position uncertainty " />
+            <attribute name="uang" type="float" wireName="uang"
+                       description="angle of the position uncertainty" />
+            <attribute name="ua" type="float" wireName="ua"
+                       description="standard deviation of the uncertainty in the direction of uang." />
+            <attribute name="up" type="float" wireName="up"
+                       description="standard deviation of the uncertainty in direction perpendicular to uang." />
+        </type>
+        <type name="PackedGps" wireName="gps" base="ElementToXML">
+            <attribute name="packed" type="BinaryData" wireName="packed"
+                       description="packed" />
+        </type>
+        <type name="Position" wireName="position" base="ElementToXML"
+              description="This element specifies a where something is on the Earth.  There are three variant types.">
+            <attribute name="variant" type="String" description="Must be ‘point’" />
+            <element name="point" type="Point" min="0" max="1"
+                     description="Specifies a latitude and longitude" />
+            <element name="gps" type="PackedGps" wireName="gps" min="0" max="1" description="" />
+            <element name="geographicPosition" type="GeographicPosition" min="0" max="1" description="" />
+            <element name="boxValid" type="boolean" wireName="box-valid" min="0" max="1" description="" />
+            <element name="boundingBox" type="Box" wireName="box" min="0" max="1" description="" />
+        </type>
+        <type name="GeographicPosition" wireName="geographic-position" base="ElementToXML" description="" >
+            <attribute name="latitude" type="double" wireName="lat" description="Latitude" />
+            <attribute name="longitude" type="double" wireName="lon" description="Longitude" />
+            <attribute name="accuracy" type="uint32" wireName="accuracy" description="Geographic location accuracy" />
+            <attribute name="time" type="double" wireName="time" description="Geographic location time" />
+        </type>
+        <type name="PointPosition" wireName="position" base="Position"
+              discriminator-value="point" description="">
+            <element name="point" type="Point" description="" />
+        </type>
+        <type name="Box" wireName="box" description="This element specifies a bounding box" base="ElementToXML">
+            <element name="rightCornerPoint" type="Point" min="0" max="1"
+                     description="Define the min/max latitude and longitude which bounds the entity described" />
+            <element name="leftCornerPoint" type="Point" min="0" max="1"
+                     description="Define the min/max latitude and longitude which bounds the entity described" />
+        </type>
+        <type name="Location" wireName="location" base="ElementToXML"
+              description="This element specifies a location">
+            <element name="address" type="Address" min="0" max="1" description="Address for the location" />
+            <element name="point" type="Point" min="0" max="1"
+                     description="Point (Latitude/Longitude) for this location" />
+            <element name="box" type="Box" min="0" max="1" description="Bounding box for the location" />
+            <attribute name="name" type="String" wireName="name"
+                       description="Name of the location" />
+        </type>
+        <!--type name="LocationMatch" wireName="locmatch" description="This element specifies a location match for location validation">
+            <element name="location" type="Location" description="Location for this match" />
+            <element name="incomplete" type="boolean" wireName="incomplete" min="0" max="1" description="Present if another geocode request must be performed in order to get a list of results." />
+            <attribute name="accuracy" type="uint32" wireName="accuracy" description="If present, specifies the accuracy of the returned match.  Range 0-100." />
+        </type-->
+        <type name="Font" wireName="font" description="This element specifies the font." base="ElementToXML">
+            <attribute name="name" type="String" description="The name of the font." />
+        </type>
+        <type name="Text" wireName="text" description="This element specifies the text." base="ElementToXML">
+            <attribute name="data" type="String" description="The actual text." />
+        </type>
+        <type name="Color" wireName="color" base="ElementToXML"
+              description="This element specifies the color. RGB value">
+            <attribute name="red" type="uint32" description="The color code of RED." />
+            <attribute name="green" type="uint32" description="The color code of GREEN." />
+            <attribute name="blue" type="uint32" description="The color code of BLUE." />
+        </type>
+        <type name="Newline" wireName="Newline" base="ElementToXML"
+              description="Newlines needed (if any) in the formatted text." />
+        <type name="Link" wireName="Link" description="Link for display text." base="ElementToXML" />
+        <type name="FormattedText" wireName="formatted-text" base="ElementToXML"
+              description="This element specifies a formatted block of text.">
+            <element name="text" type="Text" min="1" max="1"
+                     description="The contents of the formatted text." />
+            <element name="color" type="Color" min="0"
+                     description="The colors (if any) of the formatted text." />
+            <element name="font" type="Font" min="0"
+                     description="The fonts (if any) of the formatted text." />
+            <element name="newline" type="Newline" min="0"
+                     description="Newlines needed (if any) in the formatted text." />
+            <element name="link" type="Link" min="0" description="Link for display text." />
+        </type>
+        <!--type name="ExitOnDecline" wireName="exitOnDecline" description="" />
+        <type name="Confirm" wireName="confirm" description="" />
+        <type name="MessageNag" wireName="message-nag"
+              description="This element contains information for a message nag, including how often to show a         message and when to expire a message.">
+            <attribute name="activeDate" wireName="active-date" type="uint32"
+                       description="The activation datetime as the number of seconds since midnight Jan6, 1980 GMT.&#xA;                    Specifies when a downloaded message can start to be displayed." />
+            <attribute name="freqUnits" wireName="freq-units" type="String"
+                       description="Type of units for the freq-count.&#xA;          One of either 'uses', 'days', or 'seconds'." />
+            <attribute name="freqCount" wireName="freq-count" type="uint32"
+                       description="This indicates the frequency with which to display the message.&#xA;         All messages are displayed immediately and again according to freq-units/-count.&#xA;         Set to 0 to never show again.  In this case the message will be deleted after display.&#xA;         Set to n 'uses' to show the message every nth time the application starts.&#xA;         Set to n 'days' to show the message once every n days.&#xA;         Set to n 'seconds' to show the message if n seconds have expired since it was last shown.     " />
+            <attribute name="expireUnits" wireName="expire-units" type="String"
+                       description="Type of units for the expire-count.  One of either 'uses' or 'seconds'." />
+            <attribute name="expireCount" wireName="expire-count" type="uint32"
+                       description="This indicates when to expire a message.  Either:&#xA;         1. after expire-count times this message is shown, or &#xA;         2. after expire-count number of seconds after this message is first shown.&#xA;         Set to 0xFFFFFFFF to never expire.&#xA;         Set to 86400 'seconds' to expire after 1 day.&#xA;     " />
+            <attribute name="expireDate" wireName="expire-date" type="uint32"
+                       description="The expire datetime as the number of seconds since midnight Jan6, 1980 GMT." />
+        </type-->
+        <type name="Url" wireName="url" base="ElementToXML"
+              description="This element specifies a web address (URL)">
+            <attribute name="value" type="String" description="The URL" />
+        </type>
+        <!--type name="Message" wireName="message"
+              description="This element contains a message to be displayed to &#xA;       the user and an indication if confirmation is required.">
+            <element name="confirm" type="boolean" min="0" max="1"
+                     description="If present, the client must send a confirmation to the server &#xA;         verifying acceptance of the message." />
+            <element name="exitOnDecline" type="boolean" min="0" max="1"
+                     description="If present, the client must exit if the message is declined." />
+            <element name="messageNag" type="MessageNag" min="0" max="1"
+                     description="If present, this setting indicates how often to re-display a message and &#xA;         when to expire it." />
+            <element name="formattedText" type="FormattedText"
+                     description="The text contents of the message." />
+            <element name="url" type="Url" min="0" max="1"
+                     description="The url to browse to when a message is &#xA;         accepted. This is used in the server initiated OTA upgrade message." />
+            <attribute name="id" type="String" description="A unique id for this message." />
+            <attribute name="title" type="String" description="The title for this message." />
+            <attribute name="type" type="String"
+                       description="A type for this message. One of ‘eula’, &#xA;        ‘upgrade’ or ‘motd’, or ‘subscription’." />
+            <attribute name="language" max="1" min="0" minLength="2"
+                       maxLength="5" type="String"
+                       description="Optional. 2 to 5 character string specifying the language for the request.&#xA;     If not specified, US English is default. If specified, the first 2 characters contain the &#xA;     ISO 639-1 language code (non case-sensitive). If specified and 4 chars, the last 2 characters &#xA;     contain the ISO 3166 country code for the language (non case-sensitive).  If specified and 5 &#xA;     chars, the last 2 characters contain the ISO 3166 country code for the language &#xA;     (non case-sensitive). This assumes the 3rd char is a separator (e.g.'en-US'  BREW: The BREW &#xA;     language string representing the current device setting , or J2ME: The J2ME locale as returned &#xA;     by System.getProperty ( microedition.locale)  such as  en-US " />
+            <attribute name="acceptText" wireName="accept-text" type="String"
+                       description="The caption for the accept button." />
+            <attribute name="centerText" wireName="center-text" type="String"
+                       description="The caption for the center button." />
+            <attribute name="declineText" wireName="decline-text" type="String"
+                       description="The caption for the decline button." />
+        </type>
+        <type name="MessageConfirm" wireName="message-confirm"
+              description="This element contains a message confirmation.">
+            <attribute name="id" type="String" description="A unique id for this message." />
+            <attribute name="confirmAction" wireName="confirm-action"
+                       type="String" description="One of ‘accept’ or ‘decline’." />
+        </type>
+        <type name="MessageId" wireName="message-id"
+              description="This element contains the message id.">
+            <attribute name="id" type="String" description="A unique id for the message." />
+        </type-->
+        <type name="BinaryData" wireName="binary" description="" base="ElementToXML">
+            <attribute name="length" type="int" description="" />
+            <attribute name="data" type="bytepointer" description="" />
+        </type>
+        <!--type name="RetrieveConfirmed" wireName="retrieve-confirmed"
+              description="This element specifies the type of confirmed message(s) to be retrieved.">
+            <attribute name="type" type="String"
+                       description="Type of message to return (i.e. “EULA, “MOTD” as defined in NIM_MESSAGE_TYPE in &#xA;         NIM_OWNER)" />
+        </type-->
+        <type name="Origin" wireName="origin" base="ElementToXML"
+              description="This element specifies the origin for a trip">
+            <element name="gps" type="PackedGps" min="0"
+                     description="GPS point history, recent first representing &#xA;           the current location of the device.  If no gps elements are present, then a point &#xA;           must be present." />
+            <element name="point" type="Point" min="0" max="1"
+                     description="Origin for the route.  Ignored if gps is present." />
+            <attribute name="streetAddress" wireName="sa" type="String"
+                       description="Street address for the origin (optional), str must be present if this is present" />
+            <attribute name="streetName" wireName="str" type="String"
+                       description="Street name for the origin (optional)" />
+        </type>
+        <type name="Destination" wireName="destination" base="ElementToXML"
+              description="This element specifies the destination for a trip">
+            <element name="gps" type="Point" min="0"
+                     description="GPS point history, recent first representing &#xA;           the current location of the device.  If no gps elements are present, then a point &#xA;           must be present." />
+            <element name="point" type="Point" min="0" max="1"
+                     description="Destination for the route.  Ignored if gps is present." />
+            <!--element name="address" type="Address" min="0" max="1"
+                     description="" /-->
+            <attribute name="streetAddress" wireName="sa" type="String"
+                       description="Street address for the origin (optional), str must be present if this is present" />
+            <attribute name="streetName" wireName="str" type="String"
+                       description="Street name for the destination (optional)" />
+        </type>
+        <!--type name="CacheItem" wireName="cache-item"
+              description="This element specifies which files are present in a cache.">
+            <attribute name="name" type="BinaryData" wireName="name"
+                       description="" />
+        </type>
+        <type name="CacheContents" wireName="cache-contents"
+              description="This element specifies which items are present in a cache.">
+            <element name="cacheItem" type="CacheItem" min="0"
+                     description="This element specifies which files are present in a cache." />
+        </type>
+        <type name="Avoid" wireName="avoid"
+              description="This element specifies a route feature to avoid.">
+            <attribute name="value" type="String" wireName="value"
+                       description="The feature to avoid.  One of “hov”, “toll”, “highway”, “uturn”, “unpaved”&#xA;         “hov” = High Occupancy Vehicle / Car Pool &#xA;         “toll” = Toll Road &#xA;         “highway” = Limited access highway &#xA;         “uturn” = U-Turns &#xA;         “unpaved” = Unpaved/dirt roads &#xA;         “ferry” = Ferries (Nordisk Branch) &#xA;" />
+        </type>
+        <type name="RouteStyle" wireName="route-style"
+              description="This element specifies the style of the route to be returned.">
+            <element name="avoid" type="Avoid" min="0"
+                     description="Describe various route features to avoid" />
+            <attribute name="optimize" type="String" wireName="optimize"
+                       description="The optimization method for the route.  One of “fastest”, “shortest”, “easiest”.&#xA;        “fastest” = Shortest travel time &#xA;        “shortest” = Shortest travel distance &#xA;        “easiest” = Fewest number of turns &#xA; " />
+            <attribute name="vehicleType" type="String" wireName="vehicle-type"
+                       description="The type of vehicle that will be travelling the route.&#xA;         One of “car”, “truck”, “bicycle”, “pedestrian”." />
+        </type>
+        <type name="Recalc" wireName="recalc"
+              description="This element specifies the parameters &#xA;        of a route recalc.">
+            <attribute name="routeID" type="BinaryData" wireName="route-id"
+                       description="The route id of the previous route" />
+            <attribute name="why" type="String" wireName="why"
+                       description="The reason for the recalc (one of “off-route”, “wrong-way”, “reload”, “user”" />
+        </type>
+        <type name="VectorTileDescriptor" wireName="vector-tile-descriptor"
+              description="This element uniquely identifies a tile of vector map data.">
+            <attribute name="tileXIndex" type="uint32" wireName="tx"
+                       description="Tile X-Index (Optional – all tile attributes must be present if any are)" />
+            <attribute name="tileYIndex" type="uint32" wireName="ty"
+                       description="Tile Y-Index (Optional – all tile attributes must be present if any are)" />
+            <attribute name="tileZIndex" type="uint32" wireName="tz"
+                       description="Tile Z-Index (Optional – all tile attributes must be present if any are)" />
+            <attribute name="minPriority" type="uint" wireName="min-priority"
+                       description="The minimum priority features which are included" />
+            <attribute name="maxPriority" type="uint" wireName="max-priority"
+                       description="The maximum priority features which are included" />
+            <attribute name="minScale" type="float" wireName="min-scale"
+                       description="The minimum scale in meters/pixel for which this data is optimized. &#xA;         If this data is used below the specified scale, sufficient detail may not be present." />
+        </type>
+        <type name="MapCacheContents" wireName="map-cache-contents"
+              description="One of these elements in present for each tile of vector data which is present &#xA;                 in the cache.">
+            <element name="vectorTileDescriptor" type="VectorTileDescriptor"
+                     wireName="vector-tile-descriptor" min="0"
+                     description="This element uniquely identifies a tile of vector map data." />
+        </type>
+        <type name="PolyLine" wireName="PolyLine" description="">
+            <attribute name="point" type="BinaryData" wireName="point" description="" />
+        </type>
+        <type name="RoutePolyline" wireName="route-polyline" description="">
+            <attribute name="polyline" type="BinaryData" wireName="polyline"
+                       isSimple="yes" description="" />
+        </type>
+        <type name="DetourAvoid" wireName="detour-avoid" description="">
+            <element name="routePolyline" type="RoutePolyline" min="0" max="1"
+                     description="" />
+            <element name="wantRealtimeTraffic" type="boolean"
+                     description="" />
+            <element name="wantHistoricalTraffic" type="boolean"
+                     description="" />
+            <attribute name="routeID" type="BinaryData" wireName="route-id"
+                       description="" />
+            <attribute name="start" type="double" wireName="start"
+                       description="" />
+            <attribute name="length" type="double" wireName="length"
+                       description="" />
+        </type>
+        <type name="RouteNumInfo" wireName="route-num-info" description="">
+            <attribute name="type" type="String" wireName="type"
+                       description="" />
+            <attribute name="name" type="String" wireName="name"
+                       description="" />
+            <attribute name="dir" type="String" wireName="dir"
+                       description="" />
+        </type>
+        <type name="Unnamed" wireName="unnamed" description="">
+            <attribute name="translation" type="int" wireName="trans"
+                       description="" />
+        </type>
+        <type name="CountryInfo" wireName="country-info" description="">
+            <attribute name="countryCode" type="String" wireName="code"
+                       description="" />
+            <attribute name="drivingSide" type="String" wireName="driving-side"
+                       description="" />
+        </type>
+        <type name="RoadInfo" wireName="roadinfo" description="">
+            <element name="routeNumInfo" type="RouteNumInfo" wireName="route-num-info"
+                     min="0" max="1" description="" />
+            <element name="unnamed" type="Unnamed" wireName="unnamed"
+                     min="0" max="1" description="" />
+            <element name="toward" type="boolean" wireName="toward" min="0"
+                     max="1" description="" />
+            <element name="countryInfo" type="CountryInfo" wireName="country-info"
+                     min="0" max="1" description="" />
+            <attribute name="primary" type="String" wireName="primary"
+                       description="" />
+            <attribute name="secondary" type="String" wireName="secondary"
+                       description="" />
+            <attribute name="pronun" type="BinaryData" wireName="pronun"
+                       description="" />
+        </type>
+        <type name="Road" wireName="road" description="">
+            <element name="routeNumInfo" type="RouteNumInfo" wireName="route-num-info"
+                     min="0" description="" />
+            <element name="polylinePack" type="PolylinePack" wireName="polyline-pack"
+                     description="" />
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+            <attribute name="lanes" type="uint" wireName="lanes"
+                       description="" />
+        </type>
+        <type
+            name="Road{LimitedAccess,Arterial,Local,Terminal,Rotary,Ramp,Bridge,Tunnel,Skyway,Ferry}"
+            wireName="road-{limited-access,arterial,local,terminal,rotary,ramp,bridge,tunnel,skyway,ferry}"
+            description="">
+            <element name="routeNumInfo" type="RouteNumInfo" wireName="route-num-info"
+                     min="0" description="" />
+            <element name="polylinePack" type="PolylinePack" wireName="polyline-pack"
+                     description="" />
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+            <attribute name="lanes" type="uint" wireName="lanes"
+                       description="" />
+        </type>
+        <type name="Line" wireName="line" description="">
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="polylinePack" type="PolylinePack"
+                       wireName="polyline-pack" description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+        </type>
+        <type name="Line{Boundary,Rail,Water}" wireName="line{boundary,rail,water}"
+              description="">
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="polylinePack" type="PolylinePack"
+                       wireName="polyline-pack" description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+        </type>
+        <type name="PointType" wireName="pointtype" description="">
+            <element name="point" type="Point" wireName="point"
+                     description="" />
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+        </type>
+        <type name="Point{Label,Poi}" wireName="point-{label,poi}"
+              description="">
+            <element name="point" type="Point" wireName="point"
+                     description="" />
+            <attribute name="label" type="String" wireName="label"
+                       description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+        </type>
+        <type name="VectorTile" wireName="vector-tile" description="">
+            <element
+                name="area{Building, Interior, Water, Campus, Parks, Geopolitical}"
+                type="Area{Building, Interior, Water, Campus, Parks, Geopolitical}"
+                min="0" description="" />
+            <element name="line{Boundary,Rail,Water}" type="Line{Boundary,Rail,Water}"
+                     min="0" description="" />
+            <element name="point{Label,Poi}" type="Point{Label,Poi}"
+                     wireName="point-label,point-poi}" min="0" description="" />
+            <element
+                name="road{LimitedAccess,Arterial,Local,Terminal,Rotary,Ramp,Bridge,Tunnel,Skyway,Ferry}"
+                type="Road{LimitedAccess,Arterial,Local,Terminal,Rotary,Ramp,Bridge,Tunnel,Skyway,Ferry}"
+                min="0" description="" />
+            <element name="vector_tile_descriptor" type="VectorTileDescriptor"
+                     wireName="vector-tile-descriptor" min="0" max="1" description="" />
+            <attribute name="tileXIndex" type="uint32" wireName="tx"
+                       description="" />
+            <attribute name="tileYIndex" type="uint32" wireName="ty"
+                       description="" />
+            <attribute name="tileZIndex" type="uint32" wireName="tz"
+                       description="" />
+        </type>
+        <type name="PolylinePack" wireName="polyline-pack">
+            <attribute name="packedPolylineValue" type="BinaryData"
+                       wireName="value" description="" />
+        </type>
+        <type name="Area{Building, Interior, Water, Campus, Parks, Geopolitical}"
+              wireName="area-{building, interior, water, campus, parks, geopolitical}">
+            <attribute name="Label" type="String" wireName="label"
+                       description="" />
+            <attribute name="polylinePack" type="PolylinePack"
+                       wireName="polyline-pack" description="" />
+            <attribute name="priority" type="uint" wireName="priority"
+                       description="" />
+        </type>
+        <type name="VectorMap" wireName="vector-map">
+            <element
+                name="area{Building, Interior, Water, Campus, Parks, Geopolitical}"
+                type="Area{Building, Interior, Water, Campus, Parks, Geopolitical}"
+                min="0" description="" />
+            <element name="line{boundary,rail,water}" type="Line{Boundary,Rail,Water}"
+                     min="0" description="" />
+            <element name="point{Label,Poi}" type="Point{Label,Poi}" min="0"
+                     description="" />
+            <element
+                name="road{LimitedAccess,Arterial,Local,Terminal,Rotary,Ramp,Bridge,Tunnel,Skyway,Ferry}"
+                type="Road{LimitedAccess,Arterial,Local,Terminal,Rotary,Ramp,Bridge,Tunnel,Skyway,Ferry}"
+                min="0" description="" />
+        </type>
+        <type name="MapDescriptor" wireName="map-descriptor">
+            <attribute name="minPriority" type="uint" wireName="min-priority"
+                       description="" />
+            <attribute name="maxPriority" type="uint" wireName="max-priority"
+                       description="" />
+            <attribute name="minScale" type="float" wireName="min-scale"
+                       description="" />
+            <attribute name="bounds" type="BinaryData" wireName="bounds"
+                       description="" />
+        </type>
+        <type name="TurnMap" wireName="turn-map">
+            <element name="Center" type="Point" wireName="center(point)"
+                     description="" />
+            <element name="vectorMap" type="VectorMap" wireName="vector-map"
+                     min="0" max="1" description="" />
+            <element name="mapDescriptor" type="MapDescriptor" wireName="map-descriptor"
+                     description="" />
+            <attribute name="scale" type="float" wireName="scale"
+                       description="" />
+            <attribute name="rotation" type="float" wireName="rotation"
+                       description="" />
+        </type>
+        <type name="TrafficRegion" wireName="traffic-region">
+            <attribute name="TMCTrafficLocation" type="String"
+                       wireName="location" description="" />
+            <attribute name="start" type="double" wireName="start"
+                       description="" />
+            <attribute name="length" type="double" wireName="length"
+                       description="" />
+        </type>
+        <type name="CrossStreet" wireName="cross-street">
+            <attribute name="nameCrossStreet" type="String" wireName="name"
+                       description="" />
+            <attribute name="progress" type="double" wireName="progress"
+                       description="" />
+        </type>
+        <type name="RealisticSign" wireName="realistic-sign">
+            <attribute name="id" type="String" wireName="id"
+                       description="" />
+            <attribute name="portraitID" type="String" wireName="portrait-id"
+                       description="" />
+            <attribute name="type" type="String" wireName="type"
+                       description="" />
+            <attribute name="datasetID" type="String" wireName="dataset-id"
+                       description="" />
+            <attribute name="version" type="String" wireName="version"
+                       description="" />
+            <attribute name="position" type="double" wireName="position"
+                       description="" />
+        </type>
+        <type name="NavManeuver" wireName="nav-maneuver">
+            <element name="point" type="Point" wireName="point"
+                     description="" />
+            <element name="currentRoadinfo" type="RoadInfo" wireName="current-roadinfo"
+                     description="" />
+            <element name="turnRoadinfo" type="RoadInfo" wireName="turn-roadinfo"
+                     min="0" max="1" description="" />
+            <element name="stackAdvise" type="boolean" wireName="stack-advise"
+                     min="0" max="1" description="" />
+            <element name="turnMap" type="TurnMap" wireName="turn-map"
+                     min="0" max="1" description="" />
+            <element name="trafficRegion" type="TrafficRegion" wireName="traffic-region"
+                     min="0" description="" />
+            <element name="crossStreet" type="CrossStreet" wireName="cross-street"
+                     min="0" description="" />
+            <element name="realisticSign" type="RealisticSign" wireName="realistic-sign"
+                     min="0" description="" />
+            <attribute name="polyline" type="BinaryData" wireName="polyline"
+                       description="" />
+            <attribute name="distance" type="float" wireName="distance"
+                       description="" />
+            <attribute name="currentHeading" type="float" wireName="current-heading"
+                       description="" />
+            <attribute name="speed" type="float" wireName="speed"
+                       description="" />
+            <attribute name="maxInstructionDistance" type="float"
+                       wireName="maxInstructionDistance" description="" />
+            <attribute name="command" type="String" wireName="command"
+                       description="" />
+        </type-->
+        <type name="File" wireName="file" base="ElementToXML">
+            <attribute name="fileName" type="BinaryData" wireName="name"
+                       description="" />
+            <attribute name="data" type="BinaryData" wireName="data"
+                       description="" />
+        </type>
+        <!--type name="WantManeuvers" wireName="want-maneuvers" description="This element specifies that maneuvers should be returned.">
+            <element name="sliceres" type="Sliceres" wireName="sliceres"
+                     description="" />
+        </type>
+        <type name="RouteMap" wireName="route-map">
+            <element name="vectorTile" type="VectorTile" min="0"
+                     description="" />
+        </type>
+        <type name="RouteExtents" wireName="route-extents">
+            <element name="box" type="Box" description="" />
+        </type-->
+        <type name="Phone" wireName="phone" base="ElementToXML">
+            <attribute name="kind" type="String" wireName="kind"
+                       description="" />
+            <attribute name="countryCode" type="String" wireName="country"
+                       description="" />
+            <attribute name="areaCode" type="String" wireName="area"
+                       description="" />
+            <attribute name="number" type="String" wireName="number"
+                       description="" />
+            <attribute name="extension" type="String" wireName="ext"
+                       description="" />
+        </type>
+        <type name="Category" wireName="category" base="ElementToXML">
+            <attribute name="categoryCode" type="String" wireName="code"
+                       description="" />
+            <attribute name="categoryName " type="String" wireName="name"
+                       description="" />
+            <element name="parentCategory" type="Category" min="0" max="1" description="" />
+        </type>
+        <type name="HtmlContent" wireName="html-content" base="ElementToXML">
+            <element name="file" type="File" min="0" description="" />
+            <attribute name="htmlData " type="String" wireName="data"
+                       description="" />
+        </type>
+        <type name="Pair" wireName="pair" base="ElementToXML">
+            <element name="transient" type="boolean" min="0" max="1"
+                     description="" />
+            <element name="poiAttributeCookie" type="PoiAttributeCookie" min="0" max="1"
+                     description="" />
+            <attribute name="key" type="String" wireName="key"
+                       description="" />
+            <attribute name="value" type="String" wireName="value"
+                       description="" />
+            <attribute name="section " type="String" wireName="section"
+                       description="" />
+            <attribute name="pairType " type="String" wireName="type"
+                       description="" />
+        </type>
+        <type name="Rating" wireName="rating" base="ElementToXML">
+            <attribute name="mpaa" type="String" wireName="mpaa"
+                       description="" />
+            <attribute name="starRating" type="uint32" wireName="star"
+                       description="" />
+        </type>
+        <type name="EventContent" wireName="event-content" base="ElementToXML">
+            <element name="url" type="Url" min="0" max="1" description="" />
+            <element name="rating" type="Rating" min="0" max="1"
+                     description="" />
+            <element name="dataToUser" type="FormattedText" min="0" max="1"
+                     description="" />
+            <element name="eventData" type="Pair" min="0" description="" />
+            <element name="fixedDate" type="FixedDate" min="0" max="1" description="Date of the event." />
+            <element name="category" type="Category" min="0" description="Category associated with the event." />
+            <element name="placeEventCookie" type="PlaceEventCookie" min="0" max="1" description="" />
+            <attribute name="eventName" type="String" wireName="name"
+                       description="" />
+            <attribute name="type" type="String" wireName="type"
+                       description="Type of the event, can be: movie, event" />
+        </type>
+        <type name="FixedDate" wireName="fixed-date" base="ElementToXML">
+            <attribute name="type" type="String" wireName="type"
+                       description=" 'opening-day': Represents opening day of a movie" />
+            <attribute name="day" type="uint" wireName="day"
+                       description="Day of the month (1 to 31)." />
+            <attribute name="month" type="uint" wireName="month"
+                       description="Month (1 to 12)." />
+            <attribute name="year" type="uint" wireName="year"
+                       description="Year represented in 4 digit (eg 2014)." />
+        </type>
+        <type name="EventPerformance" wireName="event-performance" base="ElementToXML">
+            <element name="allDay" type="boolean" min="0" max="1"
+                     description="" />
+            <element name="indeterminateTime" type="boolean" min="0" max="1"
+                     description="" />
+            <element name="bargainPrice" type="boolean" min="0" max="1"
+                     description="" />
+            <element name="pair" type="Pair" min="0" description="" />
+            <attribute name="startTime" type="uint32" wireName="start-time"
+                       description="" />
+            <attribute name="endTime" type="uint32" wireName="end-time"
+                       description="" />
+            <attribute name="utcOffset" type="String" wireName="utc-offset"
+                       description="" />
+        </type>
+        <type name="Event" wireName="event" base="ElementToXML">
+            <element name="eventContent" type="EventContent" description="" />
+            <element name="eventPerformance" type="EventPerformance" min="1"
+                     description="" />
+        </type>
+        <type name="Price" wireName="price" base="ElementToXML">
+            <attribute name="value" type="double" wireName="value"
+                       description="" />
+            <attribute name="currency" type="String" wireName="currency"
+                       description="" />
+            <attribute name="lastUpdated" type="uint32" wireName="modtime"
+                       description="" />
+        </type>
+        <type name="FuelType" wireName="fuel-type" base="ElementToXML">
+            <attribute name="productName" type="String" wireName="product-name"
+                       description="" />
+            <attribute name="codeTypeofFuel" type="String" wireName="code"
+                       description="" />
+            <attribute name="typeName" type="String" wireName="type-name"
+                       description="" />
+        </type>
+        <type name="FuelProduct" wireName="fuel-product" base="ElementToXML">
+            <element name="price" type="Price" description="" />
+            <element name="fuelType" type="FuelType" description="" />
+            <element name="average" wireName="average" type="boolean" min="0" max="1"
+                     description="" />
+            <element name="low" wireName="low" type="boolean" min="0" max="1"
+                     description="" />
+            <attribute name="measurementUnit" type="String" wireName="units"
+                       description="" />
+        </type>
+        <type name="WeatherConditions" wireName="weather-conditions" base="ElementToXML">
+            <attribute name="temperature" type="float" wireName="temperature"
+                       description="" />
+            <attribute name="dewPoint" type="float" wireName="dew-point"
+                       description="" />
+            <attribute name="relHumidity" type="uint" wireName="rel-humidity"
+                       description="" />
+            <attribute name="windSpeed" type="float" wireName="wind-speed"
+                       description="" />
+            <attribute name="windDirection" type="uint" wireName="wind-direction"
+                       description="" />
+            <attribute name="windGust" type="float" wireName="wind-gust"
+                       description="" />
+            <attribute name="pressure" type="float" wireName="pressure"
+                       description="" />
+            <attribute name="weatherCondition" type="String" wireName="condition"
+                       description="" />
+            <attribute name="conditionCode" type="uint" wireName="condition-code"
+                       description="" />
+            <attribute name="skyCover" type="String" wireName="sky"
+                       description="" />
+            <attribute name="cloudBaseHeight" type="float" wireName="ceiling"
+                       description="" />
+            <attribute name="visibility" type="uint" wireName="visibility"
+                       description="" />
+            <attribute name="heatIndex" type="float" wireName="heat-index"
+                       description="" />
+            <attribute name="windChill" type="float" wireName="wind-chill"
+                       description="" />
+            <attribute name="snowDepth" type="float" wireName="snow-depth"
+                       description="" />
+            <attribute name="maxTempInLast6hr" type="float" wireName="max-temp-6hr"
+                       description="" />
+            <attribute name="maxTempInLast24hr" type="float" wireName="max-temp-24hr"
+                       description="" />
+            <attribute name="minTempInLast6hr" type="float" wireName="min-temp-6hr"
+                       description="" />
+            <attribute name="minTempInLast24hr" type="float" wireName="min-temp-24hr"
+                       description="" />
+            <attribute name="precipitationInLast3hr" type="float"
+                       wireName="precipitation-3hr" description="" />
+            <attribute name="precipitationInLast6hr" type="float"
+                       wireName="precipitation-6hr" description="" />
+            <attribute name="precipitationInLast24hr" type="float"
+                       wireName="precipitation-24hr" description="" />
+            <attribute name="updateTime" type="uint32" wireName="update-time"
+                       description="" />
+            <attribute name="utcOffset" type="int" wireName="utc-offset"
+                       description="" />
+        </type>
+        <type name="WeatherForecast" wireName="weather-forecast" base="ElementToXML">
+            <attribute name="date" type="uint32" wireName="date"
+                       description="" />
+            <attribute name="highTemperature" type="float" wireName="high_temperature"
+                       description="" />
+            <attribute name="lowTemperature" type="float" wireName="low-temperature"
+                       description="" />
+            <attribute name="windSpeed" type="float" wireName="wind-speed"
+                       description="" />
+            <attribute name="windDirection" type="uint" wireName="wind-direction"
+                       description="" />
+            <attribute name="precipitationProbability" type="uint"
+                       wireName="precipitation-probability" description="" />
+            <attribute name="relativeHumidity" type="uint" wireName="relative-humidity"
+                       description="" />
+            <attribute name="weatherCondition" type="String" wireName="condition"
+                       description="" />
+            <attribute name="uvIndex" type="uint" wireName="uv-index"
+                       description="" />
+            <attribute name="uvDescription" type="String" wireName="uv-description"
+                       description="" />
+            <attribute name="sunrise" type="String" wireName="sunrise"
+                       description="" />
+            <attribute name="sunset" type="String" wireName="sunset"
+                       description="" />
+            <attribute name="moonrise" type="String" wireName="moonrise"
+                       description="" />
+            <attribute name="moonset" type="String" wireName="moonset"
+                       description="" />
+            <attribute name="moonPhase" type="uint" wireName="moon-phase"
+                       description="" />
+            <attribute name="updateTime" type="uint32" wireName="update-time"
+                       description="" />
+            <attribute name="utcOffset" type="int" wireName="utc-offset"
+                       description="" />
+            <attribute name="conditionCode" type="uint32" wireName="condition-code"
+                       description="" />
+        </type>
+        <type name="WeatherConditionsSummary" wireName="weather-conditions-summary" base="ElementToXML">
+            <attribute name="temperature" type="float" wireName="temperature"
+                       description="Current temperature at this station in degrees C." />
+            <attribute name="weatherCondition" type="String" wireName="condition"
+                       description="The reported weather conditions expanded to a string." />
+            <attribute name="conditionCode" type="uint" wireName="condition-code"
+                       description="The reported weather conditions as a numeric code." />
+            <attribute name="maxTempInLast24hr" type="float" wireName="max-temp-24hr"
+                       description="Reported 24 hour maximum temperature in degrees C." />
+            <attribute name="minTempInLast24hr" type="float" wireName="min-temp-24hr"
+                       description="Reported 24 hour minimum temperature in degrees C." />
+            <attribute name="utcOffset" type="int" wireName="utc-offset"
+                       description="UTC offset in seconds." />
+        </type>
+        <type name="Place" wireName="place" base="ElementToXML">
+            <element name="location" type="Location" description="" />
+            <element name="phone" type="Phone" min="0" description="" />
+            <element name="category" type="Category" min="0" description="" />
+            <element name="htmlContent" type="HtmlContent" min="0" max="1"
+                     description="" />
+            <element name="pair" type="Pair" min="0" description="" />
+            <element name="event" type="Event" min="0" description="" />
+            <element name="fuelProduct" type="FuelProduct" min="0"
+                     description="" />
+            <element name="speedCamera" type="SpeedCamera" min="0" max="1"
+                     description="" />
+            <element name="trafficIncident" type="TrafficIncident" min="0"
+                     max="1" description="" />
+            <element name="weatherConditions" type="WeatherConditions"
+                     min="0" max="1" description="" />
+            <element name="weatherForecast" type="WeatherForecast" min="0"
+                     description="" />
+            <element name="weatherConditionsSummary" type="WeatherConditionsSummary" min="0" description="Specifies summary of weather conditions at a place." />
+            <element name="placeEventCookie" type="PlaceEventCookie" min="0"
+                     max="1" description="" base="ElementToXML"/>
+            <attribute name="name" type="String" wireName="name"
+                       description="" />
+            <attribute name="modificationTime" type="uint64" wireName="modtime"
+                       description="" />
+            <attribute name="uniqueID" type="String" wireName="id"
+                       description="" />
+        </type>
+        <type name="CameraSegment" wireName="camera-segment" base="ElementToXML">
+            <attribute name="onRoute" type="uint32" wireName="on-route"
+                       description="" />
+            <attribute name="manuveuNumber" type="uint32" wireName="man-num"
+                       description="" />
+            <attribute name="segmentNumber" type="uint32" wireName="seg-num"
+                       description="" />
+        </type>
+        <type name="SpeedCamera" wireName="speed-camera" base="ElementToXML">
+            <element name="cameraSegment" type="CameraSegment" min="0"
+                     max="1" description="" />
+            <attribute name="speedLimit" type="float" wireName="limit"
+                       description="" />
+            <attribute name="isBidirectional" type="uint32" wireName="bi-directional"
+                       description="" />
+            <attribute name="status" type="String" wireName="status"
+                       description="" />
+            <attribute name="description" type="String" wireName="description"
+                       description="" />
+            <attribute name="speed" type="double" wireName="speed"
+                       description="" />
+        </type>
+        <!--type name="SpeedCameras" wireName="speed-cameras">
+            <element name="place" type="Place" min="0" description="" />
+        </type-->
+        <type name="TrafficIncident" wireName="traffic-incident" base="ElementToXML">
+            <attribute name="type" type="int" wireName="type"
+                       description="" />
+            <attribute name="criticality" type="uint" wireName="criticality"
+                       description="" />
+            <attribute name="entryTime" type="uint32" wireName="entry-time"
+                       description="" />
+            <attribute name="startTime" type="uint32" wireName="start-time"
+                       description="" />
+            <attribute name="endTime" type="uint32" wireName="end-time"
+                       description="" />
+            <attribute name="road" type="String" wireName="road"
+                       description="" />
+            <attribute name="description" type="String" wireName="description"
+                       description="" />
+            <attribute name="utcOffset" type="int" wireName="utc-offset"
+                       description="" />
+        </type>
+        <!--type name="TrafficIncidents" wireName="traffic-incidents">
+            <element name="place" type="Place" min="0" description="" />
+            <attribute name="age" type="uint" wireName="age"
+                       description="" />
+        </type>
+        <type name="TrafficFlowItem" wireName="traffic-flow-item">
+            <attribute name="location" type="String" wireName="location"
+                       description="" />
+            <attribute name="speed" type="double" wireName="speed"
+                       description="" />
+            <attribute name="color" type="String" wireName="color"
+                       description="" />
+            <attribute name="freeFlowSpeed" type="double" wireName="free-flow-speed"
+                       description="" />
+        </type>
+        <type name="TrafficFlow" wireName="traffic-flow">
+            <element name="trafficFlowItem" type="TrafficFlowItem" min="0"
+                     description="" />
+            <attribute name="age" type="uint" wireName="age"
+                       description="" />
+            <attribute name="ageType" type="uint" wireName="type"
+                       description="" />
+        </type>
+        <type name="NavProgress" wireName="nav-progress">
+            <attribute name="routeID" type="BinaryData" wireName="route-id"
+                       description="" />
+            <attribute name="sessionId" type="String" wireName="session-id"
+                       description="" />
+            <attribute name="navigationState" type="String" wireName="state"
+                       description="" />
+            <attribute name="position" type="uint" wireName="position"
+                       description="" />
+        </type>
+        <type name="TrafficRecordIdentifier" wireName="traffic-record-identifier">
+            <element name="trafficFlow" type="TrafficFlow" min="0" max="2"
+                     description="" />
+            <element name="trafficIncidents" type="TrafficIncidents" min="0"
+                     max="2" description="" />
+            <element name="navProgress" type="NavProgress" min="0" max="1"
+                     description="" />
+            <element name="replyNotReady" type="boolean" min="0" max="1"
+                     description="" />
+            <attribute name="incidentAndTrafficValue" type="String"
+                       wireName="value" description="" />
+        </type>
+        <type name="ContentPath" wireName="content-path">
+            <element name="startPoint" type="Point" wireName="start-point" min="0" max="1"
+                     description="" />
+            <element name="endPoint" type="Point" wireName="end-point" min="0" max="1"
+                     description="" />
+            <attribute name="pathFileID" type="String" wireName="id"
+                       description="" />
+            <attribute name="routeSplinePacked" wireName="route-spline-packed" type="BinaryData"
+                       description="" />
+        </type-->
+        <type name="ProjectionParameters" wireName="projection-parameters">
+            <attribute name="originLatitude" type="double" wireName="origin-latitude"
+                       description="" />
+            <attribute name="originLongitude" type="double" wireName="origin-longitude"
+                       description="" />
+            <attribute name="scaleFactor" type="double" wireName="scale-factor"
+                       description="" />
+            <attribute name="falseEasting" type="double" wireName="false-easting"
+                       description="" />
+            <attribute name="falseNorthing" type="double" wireName="false-northing"
+                       description="" />
+            <attribute name="zOffset" type="double" wireName="z-offset"
+                       description="" />
+            <attribute name="datum" type="String" wireName="datum"
+                       description="" />
+        </type>
+        <!--type name="ExtendedContentRegion" wireName="extended-content-region">
+            <element name="contentPath" type="ContentPath" wireName="content-path" min="0"
+                     description="" />
+            <element name="projectionParameters" type="ProjectionParameters" wireName="projection-parameters"
+                     min="0" max="1" description="" />
+            <attribute name="extendedContentID" type="String" wireName="id"
+                       description="" />
+            <attribute name="contentVersion" type="String" wireName="version"
+                       description="" />
+            <attribute name="datasetID" type="String" wireName="dataset-id"
+                       description="" />
+            <attribute name="contentType" type="String" wireName="type"
+                       description="" />
+            <attribute name="startManeuverIndex" type="uint"
+                       wireName="start-maneuver-index" description="" />
+            <attribute name="startManeuverOffset" type="double"
+                       wireName="start-maneuver-offset" description="" />
+            <attribute name="endManeuverIndex" type="uint"
+                       wireName="end-maneuver-index" description="" />
+            <attribute name="endManeuverOffset" type="double"
+                       wireName="endManeuverOffset" description="" />
+            <attribute name="mapProjectionType" type="String" wireName="projection"
+                       description="" />
+        </type>
+        <type name="ExtendedContent" wireName="extended-content">
+            <element name="extendedContentRegion" type="ExtendedContentRegion"
+                     min="0" description="" />
+        </type>
+        <type name="RouteError" wireName="route-error">
+            <attribute name="routeErrorType" type="String" wireName="type"
+                       description="" />
+        </type-->
+        <!--type name="Sliceres" wireName="sliceres">
+            <attribute name="start" type="uint32" wireName="start"
+                       description="" />
+            <attribute name="end" type="uint32" wireName="end"
+                       description="" />
+            <attribute name="total" type="uint32" wireName="total"
+                       description="" />
+        </type-->
+        <type name="IterCommand" wireName="iter-command">
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+            <attribute name="command" type="String" wireName="command"
+                       description="" />
+            <attribute name="objectCount" type="uint32" wireName="number"
+                       description="" />
+        </type>
+        <type name="IterResult" wireName="iter-result">
+            <element name="exhausted" type="boolean" wireName="exhausted" min="0" max="1"
+                     description="" />
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+        </type>
+        <type name="ResultStyle" wireName="result-style" base="ElementToXML">
+            <attribute name="key" type="String" wireName="key"
+                       description="Describes which of the available details to return to the client for each match. Can be: 'suggest',
+                       'single-search', 'geocode', 'carousel-poi-search', 'airport', 'movie-list', 'movie-theater', 'related-search', 'list-interest-suggest', 'interest', 'add-interest-suggest'." />
+        </type>
+        <type name="SearchFilter" wireName="search-filter" base="ElementToXML">
+            <element name="searchKey" type="Pair" min="0" description="" />
+            <element name="resultStyle" type="ResultStyle" min="0" max="1"
+                     description="" />
+        </type>
+        <!--type name="Directed" wireName="directed"></type>
+        <type name="PremiumPlacement" wireName="premium-placement"></type-->
+        <type name="RouteCorridor" wireName="route-corridor">
+            <attribute name="routeID" type="BinaryData" wireName="route-id"
+                       description="" />
+            <attribute name="distance" type="uint32" wireName="distance"
+                       description="" />
+            <attribute name="width" type="uint32" wireName="width"
+                       description="" />
+        </type>
+        <!--type name="SearchCookie" wireName="search-cookie">
+            <attribute name="provider" type="String" wireName="provider-id"
+                       description="" />
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+        </type-->
+        <type name="TagLine" wireName="tagline">
+            <attribute name="text" type="String" wireName="text"
+                       description="" />
+        </type>
+        <type name="OverAllRating" wireName="overall-rating">
+            <attribute name="averageRating" type="double" wireName="average-rating"
+                       description="" />
+            <attribute name="totalUsersRated" type="uint" wireName="rating-count"
+                       description="" />
+        </type>
+        <type name="GoldenCookie" wireName="golden-cookie" base="ElementToXML">
+            <attribute name="provider" type="String" wireName="provider-id"
+                       description="" />
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+        </type>
+        <type name="PlaceEventCookie" wireName="place-event-cookie" base="ElementToXML">
+            <attribute name="provider" type="String" wireName="provider-id"
+                       description="" />
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+        </type>
+        <type name="Icon" wireName="icon">
+            <attribute name="image" type="BinaryData" wireName="image"
+                       description="" />
+        </type>
+        <type name="PoiContent" wireName="poi-content">
+            <element name="poiDetails" type="FormattedText" min="0" max="1"
+                     description="" />
+            <element name="dataMap" type="Pair" min="0" description="" />
+            <element name="tagline" type="TagLine" min="0" max="1"
+                     description="" />
+            <element name="overAllRating" type="OverAllRating" min="0"
+                     max="1" description="" />
+            <element name="goldenCookie" type="GoldenCookie" min="0" max="1"
+                     description="" />
+            <element name="placeEventCookie" type="PlaceEventCookie" min="0"
+                     max="1" description="" />
+            <element name="icon" type="Icon" min="0" max="1" description="" />
+            <element name="hasExtendedDetails" type="boolean" min="0"
+                     max="1" description="" />
+            <element name="hoursOfOperation" type="HoursOfOperation" min="0"
+                     max="1" description="Specifies the business’ hours of operation, returned as structured fields." />
+            <element name="vendorContent" type="VendorContent" min="0"
+                     description="Contents that needs to be attributes for vendor." />
+            <attribute name="id" type="String" wireName="id"
+                       description="" />
+        </type>
+        <type name="VendorContent" wireName="vendor-content" >
+            <element name="pair" type="Pair" min="0" description="Pairs that require attribution for the vendor Attributed pairs for TripAdvisor: vendor-url." />
+            <element name="overAllRating" type="OverAllRating" min="0"
+                     max="1" description="Represents an overall user rating of the quality of the POI." />
+            <attribute name="name" type="String" wireName="name"
+                       description="Vendor name (Ex: TripAdvisor)." />
+        </type>
+        <!--type name="OperatingHours" wireName="operating-hours">
+            <attribute name="startTime" type="String" wireName="starttime"
+                       description="" />
+            <attribute name="endTime" type="String" wireName="endtime"
+                       description="" />
+            <attribute name="headwaySec" type="String" wireName="headway-sec"
+                       description="" />
+        </type-->
+        <type name="TimeRange" wireName="time-range" >
+            <attribute name="dayOfWeek" type="uint" wireName="day-of-week"
+                       description="Day of the week, where Sunday = 0." />
+            <attribute name="startTime" type="uint" wireName="start-time"
+                       description="Time of day in which a business opens, specified as number of seconds since midnight (local time of business)." />
+            <attribute name="endTime" type="uint" wireName="end-time"
+                       description="Time of day in which a business closes, specified as number of seconds since midnight (local time of business)." />
+        </type>
+        <type name="HoursOfOperation" wireName="hours-of-operation">
+            <!--element name="operatingHours" type="OperatingHours" wireName="operating-hours" min="0"
+                     description="" />
+            <attribute name="operatingDays" type="String" wireName="operating-days"
+                       description="" /-->
+            <element name="timeRange" type="TimeRange" min="0"
+                     description="Hours of operation for each day of the week in which a business is open." />
+            <attribute name="utcOffset" type="String" wireName="utc-offset"
+                       description="String representation of int32 for UTC offset in seconds for the POI local time." />
+        </type>
+        <!--type name="TransitPoi" wireName="transit-poi">
+            <element name="hoursOfOperation" type="HoursOfOperation" wireName="hours-of-operation" min="0"
+                     description="" />
+            <element name="detail" type="Pair" min="0" wireName="detail" description="" />
+            <attribute name="id" type="String" wireName="id"
+                       description="" />
+        </type!-->
+        <type name="RelatedSearch" wireName="related-search">
+            <attribute name="line1" type="String" wireName="line1"
+                       description="String to be displayed for the related search." />
+            <!--element name="point" type="Point" description="" /-->
+            <!--element name="suggestMatch" type="SuggestMatch" description="" /-->
+            <element name="searchFilter" type="SearchFilter" description="" />
+        </type>
+        <type name="DataAvailability" wireName="data-availability">
+            <element name="noMapData" type="boolean" wireName="no-map-data" min="0" max="1"
+                     description="Empty element present if the country does not have map data available" />
+            <element name="partialVisualMapData" type="boolean" wireName="partial-visual-map-data" min="0" max="1"
+                     description="Empty element present if the country has partial coverage for visual map data" />
+            <element name="fullVisualMapData" type="boolean" wireName="full-visual-map-data" min="0" max="1"
+                     description="Empty element present if the country has full coverage for visual map data" />
+            <element name="partialRoutingData" type="boolean" wireName="partial-routing-data" min="0" max="1"
+                     description="Empty element present if the country has partial coverage for routing data" />
+            <element name="fullRoutingData" type="boolean" wireName="full-routing-data" min="0" max="1"
+                     description="Empty element present if the country has full coverage for routing data" />
+            <element name="partialGeocodingData" type="boolean" wireName="partial-geocoding-data" min="0" max="1"
+                     description="Empty element present if the country has partial coverage for geocoding data" />
+            <element name="fullGeocodingData" type="boolean" wireName="full-geocoding-data" min="0" max="1"
+                     description="Empty element present if the country has full coverage for geocoding data" />
+            <element name="partialPoiData" type="boolean" wireName="partial-poi-data" min="0" max="1"
+                     description="Empty element present if the country has partial coverage for POI data" />
+            <element name="fullPoiData" type="boolean" wireName="full-poi-data" min="0" max="1"
+                     description="Empty element present if the country has full coverage for POI data" />
+        </type>
+        <type name="ProxMatch" wireName="proxmatch">
+            <element name="place" type="Place" description="" />
+            <element name="searchFilter" type="SearchFilter" min="0" max="1"
+                     description="" />
+            <element name="premiumPlacement" type="boolean" wireName="premium-placement" min="0" max="1"
+                     description="" />
+            <element name="enhancedPOI" type="boolean" wireName="enhanced-poi" min="0" max="1"
+                     description="" />
+            <element name="poiContent" type="PoiContent" min="0" max="1"
+                     description="" />
+            <element name="unmappable" type="boolean" wireName="unmappable" min="0" max="1"
+                     description="" />
+            <element name="dataAvailability" type="DataAvailability" min="0" max="1"
+                     description="" />
+            <element name="event" type="Event" min="0"
+                     description="Event under proxmatch." />
+            <element name="relatedSearch" type="RelatedSearch" min="0" max="1"
+                     description="" />
+            <element name="resultDescription" type="ResultDescription" min="0"
+                     description="" />
+            <attribute name="distance" type="float" wireName="distance"
+                       description="" />
+            <!--attribute name="accuracy" type="uint32" wireName="accuracy"
+                       description="" /-->
+        </type>
+        <type name="ResultDescription" wireName="result-description" description="" >
+            <attribute name="line1" type="String" wireName="line1"
+                       description="" />
+            <attribute name="line2" type="String" wireName="line2"
+                       description="" />
+        </type>
+        <type name="SuggestMatch" wireName="suggest-match">
+            <element name="searchFilter" type="SearchFilter" description="The filter criteria for the search."/>
+            <element name="pair" type="Pair" min="0"
+                       description="Additional pairs for POI details." />
+            <element name="category" type="Category" min="0"
+                       description="Category associated with the POI." />
+            <element name="location" type="Location" min="0" max="1"
+                       description="" />
+            <attribute name="distance" type="float" wireName="distance"
+                       description="" />
+            <attribute name="line1" type="String" wireName="line1"
+                       description="" />
+            <attribute name="line2" type="String" wireName="line2"
+                       description="" />
+            <attribute name="line3" type="String" wireName="line3"
+                       description="" />
+            <attribute name="matchType" type="String" wireName="match-type"
+                       description="" />
+        </type>
+        <type name="ProxMatchContent" wireName="proxmatch-content">
+            <element name="searchFilter" type="SearchFilter" min="0" max="1" description="" />
+            <element name="eventContent" type="EventContent" description="" />
+            <element name="relatedSearch" type="RelatedSearch" min="0" max="1" description="" />
+        </type>
+        <type name="ProxMatchSummary" wireName="proxmatch-summary">
+            <element name="category" type="Category" description="Note: Not used for search. Mandatory for proxpoi." />
+            <element name="searchFilter" type="SearchFilter" description="Note: Not used for search. Mandatory for proxpoi." />
+            <attribute name="count" type="uint" wireName="count"
+                       description="" />
+            <attribute name="time" type="uint32" wireName="time"
+                       description="" />
+            <attribute name="utcOffset" type="String" wireName="utc-offset"
+                       description="" />
+            <attribute name="type" type="String" wireName="type"
+                       description="Type of the summary. Used only when all results belong to same type. This helps the client to use specific UI based on type. Can be : movie, event, movie-theater." />
+        </type>
+        <!--type name="ProxMatchAmbiguous" wireName="proxmatch-ambiguous">
+            <element name="searchFilter" type="SearchFilter" description="" />
+            <attribute name="caption" type="String" wireName="caption"
+                       description="" />
+        </type-->
+        <type name="FuelPriceSummary" wireName="fuel-price-summary">
+            <element name="fuelProduct" type="FuelProduct" min="0"
+                     description="" />
+        </type>
+        <!--type name="SpellingSuggestion" wireName="spelling-suggestion">
+            <element name="searchFilter" type="SearchFilter" min="1" max="1"
+                     description="" />
+        </type-->
+        <type name="SearchEventCookie" wireName="search-event-cookie" base="ElementToXML">
+            <attribute name="provider" type="String" wireName="provider-id"
+                       description="" />
+            <attribute name="state" type="BinaryData" wireName="state"
+                       description="" />
+        </type>
+        <!--type name="ProxpoiError" wireName="proxpoi-error">
+            <attribute name="errorCode" type="uint32" wireName="code"
+                       description="" />
+        </type-->
+        <type name="AnalyticsEventPlace" wireName="analytics-event-place" base="ElementToXML">
+            <element name="gpsBased" type="boolean" wireName="gps-based" min="0" max="1"
+                     description="Boolean used to indicate GPS based place.  Used for search centers, map, and routes.The element is empty" />
+            <element name="goldenCookie" type="GoldenCookie" min="0" max="1"
+                     description="Present if the event performed on the place is billable. Contains information required to bill the event." />
+            <element name="placeEventCookie" type="PlaceEventCookie" min="0" max="1"
+                     description="Contains information to be sent back to the server when reporting an event on a place. Populated with the place-event-cookie returned in the associated place’s poi-content element (if one was returned)." />
+            <element name="premiumPlacement" type="boolean" wireName="premium-placement" min="0" max="1"
+                     description="If present, indicates that this is a Premium Placement Ad. The element is empty." />
+            <element name="EnhancedPoi" type="boolean" wireName="enhanced-poi" min="0" max="1"
+                     description="If present, indicates that this is an Enhanced POI.The element is empty" />
+            <element name="poiAttributeCookie" type="PoiAttributeCookie" min="0" max="1"
+                     description="Contains information to be sent back to server when reporting an event on a particular attribute. Populated with the poi-attribute-cookie returned in the associated attribute." />
+            <attribute name="id" type="String" wireName="id"
+                       description="Unique identifier associated with this place. Is used to identify a place returned from a Local Search.  If available (i.e. not an empty string), the id should be set with the POI id in the poi-content element, otherwise the index into the local search result list is sufficient. (Optional, but must be present if there is a search-query-event-id)." />
+            <attribute name="searchQueryEventId" type="uint"
+                       wireName="search-query-event-id"
+                       description="If the event action is performed on a place returned from a Local Search, this is the event id associated with that search. (Optional)" />
+            <attribute name="index" type="uint32" wireName="index"
+                       description="Zero-based index of the place (i.e. POI or Ad) in the search results list. Optional, but starting with V6, must be present if there is a search-query-event-id." />
+            <attribute name="origin" type="String" wireName="origin"
+                       description="Origin of the action performed on this place.Possible values are        ‘list’ (triggered from the list view)        ‘map’ (triggered from the map view)        ‘detail’ (triggered from the detail view)        Optional, but starting with V6, must be present if there is a search-query-event-id." />
+        </type>
+        <type name="AnalyticsEventOrigin" wireName="analytics-event-origin" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace"
+                     min="1" max="1" description="" />
+        </type>
+        <type name="AnalyticsEventDestination" wireName="analytics-event-destination" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace"
+                     min="1" max="1" description="" />
+        </type>
+        <type name="PoiAttributeCookie" wireName="poi-attribute-cookie" base="ElementToXML">
+            <attribute name="providerId" type="String" wireName="provider-id" description="Data provider of the attribute." />
+            <attribute name="State" type="BinaryData" wireName="state" description="List of params needed for reporting." />
+        </type>
+        <type name="RouteReplyEvent" wireName="route-reply-event" base="ElementToXML">
+            <attribute name="navSessionId" type="uint32" wireName="nav-session-id"
+                       description="Unique identifier for this navigation session." />
+            <attribute name="routeRequestEventId" type="uint"
+                       wireName="route-request-event-id" description="Route request event ID." />
+            <attribute name="routeDuration" type="uint" wireName="duration"
+                       description="Travel time for route in seconds." />
+            <attribute name="routeDistance" type="float" wireName="distance"
+                       description="Distance for route in meters." />
+        </type>
+        <type name="ShareEvent" wireName="share-event" base="ElementToXML">
+            <element name="analyticsEventPlace" type="AnalyticsEventPlace" description="The place associated with the event" />
+            <attribute name="channel" type="uint" wireName="channel" description="Chanel used for sharing." />
+            <attribute name="subject" type="String" wireName="subject" description="subject" />
+            <attribute name="body" type="String" wireName="body" description="share body." />
+            <attribute name="url" type="String" wireName="url" description="share url." />
+            <attribute name="urlText" type="String" wireName="url-text" description="url text." />
+            <attribute name="signature" type="String" wireName="signature" description="signature." />
+        </type>
+        <type name="RouteRequestEvent" wireName="route-request-event" base="ElementToXML">
+           <element name="analyticsEventOrigin" type="AnalyticsEventOrigin" description="Origin for the route." />
+            <element name="analyticsEventDestination" type="AnalyticsEventDestination" description="Destination for the route." />
+            <attribute name="navSessionId" type="uint32" wireName="nav-session-id" description="Unique identifier for this navigation session.   A timestamp is a good choice here." />
+            <attribute name="reason" type="String" wireName="reason" description="One of init, restart, reload, off-route, wrong-way, user, detour, preview." />
+
+        </type>
+        <type name="InvocationContext" wireName="invocation-context" base="ElementToXML">
+            <attribute name="sourceModule" type="String" wireName="source-module" description="Module in which the event was triggered (Map, Search and Navigation etc.)" />
+            <attribute name="screenId" type="String" wireName="screen-id" description="Screen in which the query was triggered." />
+            <attribute name="inputSource" type="String" wireName="input-source" description="Data source used for query parameters." />
+            <attribute name="invocationMethod" type="String" wireName="invocation-method" description="Specifies how the request was initiated." />
+        </type>
+        <type name="TransactionInfo" wireName="transaction-info" >
+            <attribute name="transactionId" type="BinaryData" wireName="transaction-id" description="ID generated by the server for identifying the specific query/reply event." />
+            <attribute name="requestTime" type="uint64" wireName="request-time" description="Milliseconds.Time at which server received the request." />
+            <attribute name="waitTime" type="uint64" wireName="wait-time" description="Milliseconds.Time taken by the server to process the request and generate reply." />
+        </type>
+        <type name="UserInfo" wireName="user-info">
+            <attribute name="mdn" type="String" wireName="mdn" isOptional="yes" description="Optional. The MDN associated with the device." />
+            <attribute name="clientGuid" type="BinaryData" wireName="client-guid" description="If the want-guid-assigned element is present, this value is ignored and a new GUID will be assigned." />
+        </type>
+        <type name="DeviceInfo" wireName="device-info">
+            <attribute name="deviceUniqueId" type="String" wireName="device-unique-id" isOptional="yes"
+                       description="Optional This is the hardware unique identifier of the device." />
+            <attribute name="deviceSerialNumber " type="String" wireName="device-serial-number" isOptional="yes"
+                       description="Optional except for Android platform." />
+        </type>
+        <type name="PlatformInfo" wireName="platform-info">
+            <attribute name="version" type="String" wireName="version"
+                       description="Platform version as provided by the platform API." />
+            <attribute name="manufacturer" type="String" wireName="manufacturer"
+                       description="Device manufacturer information." />
+            <attribute name="model" type="String" wireName="model"
+                       description="Device model name." />
+        </type>
+        <type name="ProductInfo" wireName="product-info">
+            <attribute name="credential" type="String" wireName="credential"
+                       description="The authentication token." />
+        </type>
+        <type name="LocaleInfo" wireName="locale-info">
+            <attribute name="language" type="String" wireName="language"
+                       description="This attribute represents the default language setting of the device, not the current language setting of the application.  The application language setting must be specified within the individual TPS queries that require it." />
+            <attribute name="countryCode" type="String" wireName="country-code" isOptional="yes"
+                       description="Optional.  3 character string specifying the country code for the request." />
+        </type>
+        <type name="CarrierInfo" wireName="carrier-info">
+            <attribute name="carrier" type="String" wireName="carrier"
+                       description="Name of the carrier." />
+            <attribute name="mcc" type="uint32" wireName="mcc"
+                       description="Mobile Country Code." />
+            <attribute name="mnc" type="uint32" wireName="mnc"
+                       description="Mobile Network Code." />
+        </type>
+        <type name="SessionInfo" wireName="session-info">
+            <attribute name="clientSession" type="uint" wireName="client-session"
+                       description="A unique session identifier for this client representing an application session with the server." />
+            <attribute name="activeSession" type="BinaryData" wireName="active-session"
+                       description="" />
+        </type>
+        <type name="PushMessageInfo" wireName="push-message-info">
+            <attribute name="pushMessageGuid" type="String" wireName="push-message-guid"
+                       description="Client GUID used for push notification." />
+        </type>
+
+        <type name="FormattedIdenParameters" wireName="formatted-iden-parameters" >
+            <element name="userInfo" type="UserInfo" description="Provides user information." />
+            <element name="deviceInfo" type="DeviceInfo" min="0" max="1"
+                     description="Provides device information of the client." />
+            <element name="platformInfo" type="PlatformInfo" description="Provides platform information of the client." />
+            <element name="productInfo" type="ProductInfo" description="Provides product information of the client." />
+            <element name="localeInfo" type="LocaleInfo" description="Provides locale information of the client." />
+            <element name="carrierInfo" type="CarrierInfo" description="Provides information about the carrier of the client." />
+            <element name="sessionInfo" type="SessionInfo" description="Provides the session information of the client." />
+            <element name="pushMessageInfo" type="PushMessageInfo" min="0" max="1"
+                     description="Provides the push message information of the client." />
+        </type>
+        <type name="QueryHeaders" wireName="query-headers">
+            <element name="formattedIdenParameters" type="FormattedIdenParameters" description="Information identifying the client." />
+            <element name="invocationContext" type="InvocationContext" description="Context in which the specific query was triggered." />
+        </type>
+        <type name="ReplyHeaders" wireName="reply-headers">
+            <element name="transactionInfo" type="TransactionInfo" min="0" max="1" description="Provides the transaction related information." />
+        </type>
+    </package>
+    <!-- Reverse Geocode -->
+    <package name="protocol.handler.reversegeocode">
+        <type name="ReverseGeocodeParameters" wireName="reverse-geocode-query" targetName="reverse-geocode">
+            <element name="position" type="Position" description="" />
+            <element name="routeable" type="boolean" wireName="routeable" description="" />
+            <!--element name="avoidLocalRoad" type="boolean" min="0" max="1"
+                     description="" wireName="avoid-local-road" /-->
+            <element name="wantExtendedAddress" type="boolean" wireName="want-extended-address" min="0" max="1" description="If present, full formatted address (max 5 lines) shall be returned." />
+            <element name="wantCompactAddress" type="boolean" wireName="want-compact-address" min="0" max="1" description="If present, compact formatted address (max2 lines) shall be returned." />
+
+            <attribute name="scale" type="float" default="1" wireName="scale" description="Map scale to consider when determining the level of detail to use while geocoding.  Prevents excessive detail." />
+            <!--attribute name="scope" type="uint" wireName="scope" description="Valid values are: 0-address,1-country,2-state,3-city,4-postal code" />
+            <attribute name="requiredGeoField" type="String" wireName="required-geo-field" description="Valid field names include ‘name’, ‘sa’, ‘street’, ‘city’, ‘state’, ‘postal’, ‘country’, and ‘zip_or_city’. If set to a ‘zip_or_city’, the results must contain either a postal field, or both a city and state field.  If set to an empty string, no fields are mandatory." /-->
+            <attribute name="language" type="String" wireName="language" description="" />
+        </type>
+        <type name="ReverseGeocodeInformation" wireName="reverse-geocode-reply" targetName="reverse-geocode">
+            <element name="location" type="Location" description="Location of the closest point on the feature, may not be exactly the same as the position in the Reverse Geocode Request." />
+        </type>
+        <handler name="ReverseGeocode">
+            <request type="ReverseGeocodeParameters" description="" />
+            <response type="ReverseGeocodeInformation" description="" />
+        </handler>
+    </package>
+    <!-- MetadataSoruce Query and Reply -->
+    <package name="protocol.handler.metadata">
+        <type name="MetadataSourceParameters" wireName="metadata-source-query" targetName="metadata">
+            <element name="wantedContent" type="WantedContent" min="0"
+                     description="Request specific type of data (junction models, realistic road signs, &#xA;     city models, map tiles, etc.)There should be one of these elements per country where &#xA;     data is needed.This element should not be included for a map tiles only query." />
+            <element name="wantExtendedMaps" type="boolean" min="0" max="1"
+                     wireName="want-extended-maps"
+                     description="If present, the client can handle extended map tile configurations in the reply" />
+            <element name="wantSharedMaps" type="boolean" min="0" max="1"
+                     wireName="want-shared-maps" description="" />
+            <element name="wantNoTransparency" type="WantNoTransparency" min="0" max="1"
+                     description="If present, server shall provide URL templates that only
+                                  serve up non transparent tiles for traffic overlay and SARs." />
+            <element name="wantUnifiedMaps" type="WantUnifiedMaps" min="0" max="1"
+                     description="If Present, the client can handle the unified map tile configuration in the reply" />
+            <element name="wantLoc" type="WantLoc" min="0" max="1"
+                     description="If present, the server shall provide URL templates that contain a $loc localization parameter (for those layers where the localization parameter is applicable).   If not present, the $loc parameter will not be included in the URL template." />
+            <attribute name="language" type="String" wireName="language"
+                       description="The current language setting of the device. If the specified language is &#xA;     not supported by the tile server, then en-US (American English) will be returned in the configuration." />
+            <attribute name="screenWidth" type="uint" wireName="screen-width"
+                       description="The screen width of the device, specified in pixels. &#xA;     Note:This element is required if want-extended-maps is present, otherwise optional." />
+            <attribute name="screenHeight" type="uint" wireName="screen-height"
+                       description="The screen height of the device, specified in pixels. &#xA;     Note:This element is required if want-extended-maps is present, otherwise optional." />
+            <attribute name="screenResolution" type="uint" wireName="screen-resolution"
+                       description="The resolution of the screen, specified in DPI (dots per inch).&#xA;     Note: This element is required if want-extended-maps is present, otherwise optional." />
+            <attribute name="productClass" type="String" wireName="product-class"
+                       description="" />
+            <attribute name="timeStamp" type="uint64" wireName="ts"
+                       description="" />
+        </type>
+        <type name="WantedContent" wireName="wanted-content">
+            <attribute name="country" type="String" wireName="country"
+                       description="Country code – ISO 3166-1 alpha 3" />
+            <attribute name="DatasetId" type="String" wireName="dataset-id"
+                       description="If empty, all datasets of the given type are returned" />
+            <attribute name="type" type="String" wireName="type"
+                       description="One of: “textures”, “city models”, “realistic signs”, or “junctions”.&#xA;              If empty, all types with the given dataset are returned." />
+        </type>
+        <type name="MetadataSourceInformation" wireName="metadata-source-reply" targetName="metadata">
+            <element name="contentSource" type="ContentSource"
+                     description="" min="0" />
+            <element name="maptileSource" type="MaptileSource"
+                     description="" min="0" />
+            <element name="citySummaryDisplay" type="String" description=""
+                     min="0" max="1"                 wireName="city-summary-display"/>
+            <attribute name="timeStamp" type="uint64" wireName="ts"
+                       description="" />
+        </type>
+        <type name="ContentSource" wireName="content-source">
+            <element name="internalSource" type="boolean" wireName="internal-source"
+                     description="If present the map source is owned by TCS" min="0" max="1" />
+            <element name="url" type="Url"
+                     description="Base URL for all url-args-template elements" min="0"
+                     max="1" />
+            <element name="urlArgsTemplate" type="UrlArgsTemplate" min="0"
+                     description="Parameter Description&#xA;       $v         The version (generation) of tiles&#xA;                      $id     The id of a specific tile, junction, or sign&#xA;                      $fmt     Format can be any one of the following&#xA;                                 ‘PNG’, ‘GIF’, ‘JPG’, or ‘BIN’&#xA;                      $x         x coordinate of the requested map tile&#xA;                      $y         y coordinate of the requested map tile&#xA;                      $z         zoom level&#xA;                      $q         quadkey. If this parameter is present, then it replaces x/y/z&#xA;                      $rid1     This parameter is only valid for ‘route’ overlay tiles. This is the base64 enocoded representation of the ‘route id’.&#xA;                       $rc1       This parameter is only valid for ‘route’ overlay tiles.  Color is specified either as RGB(r,g,b) or RGB(r,b,g,a)&#xA;                      $rid2     This parameter is only valid for ‘route’ overlay tiles. This is the base64 enocoded representation of the ‘route id’.&#xA;                       $rc2     This parameter is only valid for ‘route’ overlay tiles.  Color is specified either as RGB(r,g,b) or RGB(r,b,g,a)&#xA;                      $ds     The dataset id&#xA;                      $mv     The manifest version&#xA;                      $fmtv     The format version. This is usually the version of the internal binary format that is currently supported by the client." />
+            <attribute name="gen" type="String" wireName="gen"
+                       description="Generation of the map tiles. This attribute is deprecated. It should not be returned if want-extended-maps is present in the query." />
+            <attribute name="projection" type="String" wireName="projection"
+                       description="Map projection type" />
+            <attribute name="country" type="String" wireName="country"
+                       description="Country code – ISO 3166-1 alpha 3" />
+        </type>
+        <type name="MaptileSource" wireName="maptile-source">
+            <element name="internalSource" type="boolean"
+                     description="If present the map source is owned by TCS" min="0" max="1" />
+            <element name="url" type="Url"
+                     description="Base URL for all url-args-template elements" min="0"
+                     max="1" />
+            <element name="urlArgsTemplate" type="UrlArgsTemplate"
+                     description="Parameter Description&#xA;       $v         The version (generation) of tiles&#xA;                      $id     The id of a specific tile, junction, or sign&#xA;                      $fmt     Format can be any one of the following&#xA;                                 ‘PNG’, ‘GIF’, ‘JPG’, or ‘BIN’&#xA;                      $x         x coordinate of the requested map tile&#xA;                      $y         y coordinate of the requested map tile&#xA;                      $z         zoom level&#xA;                      $q         quadkey. If this parameter is present, then it replaces x/y/z&#xA;                      $rid1     This parameter is only valid for ‘route’ overlay tiles. This is the base64 enocoded representation of the ‘route id’.&#xA;                       $rc1       This parameter is only valid for ‘route’ overlay tiles.  Color is specified either as RGB(r,g,b) or RGB(r,b,g,a)&#xA;                      $rid2     This parameter is only valid for ‘route’ overlay tiles. This is the base64 enocoded representation of the ‘route id’.&#xA;                       $rc2     This parameter is only valid for ‘route’ overlay tiles.  Color is specified either as RGB(r,g,b) or RGB(r,b,g,a)&#xA;                      $ds     The dataset id&#xA;                      $mv     The manifest version&#xA;                      $fmtv     The format version. This is usually the version of the internal binary format that is currently supported by the client." />
+            <attribute name="gen" type="String" wireName="gen"
+                       description="Generation of the map tiles. This attribute is deprecated. It should not be returned if want-extended-maps is present in the query." />
+            <attribute name="projection" type="String" wireName="projection"
+                       description="Map projection type" />
+            <attribute name="country" type="String" wireName="country"
+                       description="Country code – ISO 3166-1 alpha 3" />
+        </type>
+        <type name="AnimationInfo" wireName="animation-info" description="">
+            <attribute name="frameList" type="String" wireName="frame-list" description=""/>
+        </type>
+        <type name="ColorBar" wireName="color-bar" description="">
+            <element name="color" type="Color" min="0"/>
+            <attribute name="id" type="String" wireName="id" description=""/>
+            <attribute name="label" type="String" wireName="label" description=""/>
+        </type>
+        <type name="MapLegend" wireName="map-legend" description ="">
+            <element name="colorBar" type="ColorBar" min="0"/>
+        </type>
+        <type name="UrlArgsTemplate" wireName="url-args-template"
+              description="">
+            <element name="metadata" type="Metadata" min="0" description="" />
+            <element name="format" type="Format" min="0" description="" />
+            <element name="characteristics" type="Characteristics" wireName="characteristics"
+                     description="" />
+            <element name="mapLegned" type="MapLegend" wireName="map-legend" description="" />
+            <element name="animationInfo" type="AnimationInfo" wireName="animation-info" description=""/>
+            <attribute name="type" type="String" wireName="type"
+                       description="Type of the data to be downloaded “junctions”, “realistic signs”, “city models”, “textures”, and “map tiles”" />
+            <attribute name="stringTemplate" type="String" wireName="template"
+                       description="" />
+            <attribute name="tileStoreTemplate" type="String"
+                       wireName="tile-store-template" description="" />
+            <attribute name="refTileGridLevel" type="uint"
+                       wireName="ref-tile-grid-level" description="" />
+            <attribute name="lamIndex" type="uint" wireName="lam-index"
+                       description="" />
+            <attribute name="baseDrawOrder" type="uint" wireName="base-draw-order"
+                       description="" />
+            <attribute name="labelDrawOrder" type="uint" wireName="label-draw-order"
+                       description="" />
+            <attribute name="downloadPriority" type="uint" wireName="download-priority"
+                       description="" />
+            <attribute name="tileSize" type="uint" wireName="tile-size"
+                       description="" />
+            <attribute name="minZoom" type="uint" wireName="min-zoom"
+                       description="" />
+            <attribute name="maxZoom" type="uint" wireName="max-zoom"
+                       description="" />
+            <attribute name="cacheId" type="uint" wireName="cache-id"
+                       description="" />
+            <attribute name="dsGenId" type="String" wireName="ds-gen-id"
+                       description="" />
+        </type>
+        <type name="Metadata" wireName="metadata" description="">
+            <element name="box" type="Box" description="" />
+            <element name="projectionParameters" type="ProjectionParameters"
+                     description="" />
+            <element name="forceDelete" type="boolean" min="0" max="1"
+                     wireName="force-delete" />
+            <attribute name="id" type="String" wireName="id"
+                       description="" />
+            <attribute name="size" type="int" wireName="size"
+                       description="" />
+            <attribute name="displayName" type="String" wireName="display-name"
+                       description="" />
+            <attribute name="manifestVersion" type="String" wireName="manifest-version"
+                       description="" />
+        </type>
+        <type name="Format" description="" wireName="format">
+            <attribute name="name" type="String" wireName="name"
+                       description="" />
+            <attribute name="minVersion" type="uint" wireName="min-version"
+                       description="" />
+            <attribute name="maxVersion" type="uint" wireName="max-version"
+                       description="" />
+        </type>
+        <type name="Characteristics" wireName="characteristics"
+              description="">
+            <element name="pair" type="Pair" min="0" description="" />
+        </type>
+        <type name="WantUnifiedMaps" wireName="want-unified-maps">
+            <element name="wantLod" type="WantLod" min="0" max="1" description="" />
+            <element name="wantOptionalLayers" type="WantOptionalLayers" min="0" max="1"
+                     description="" />
+            <element name="wantLabelLayers" type="WantLabelLayers" min="0" max="1"
+                     description="" />
+            <element name="want2DBuildings" type="Want2DBuildings" min="0" max="1"
+                     description="" />
+            <element name="wantPoiLayers" type="WantPoiLayers" min="0" max="1"
+                     description="" />
+            <element name="wantNewCategories" type="WantNewCategories" min="0" max="1"
+                     description="" />
+            <element name="wantSatelliteLayers" type="WantSatelliteLayers" min="0" max="1"
+                     description="" />
+            <element name="wantTod" type="WantTod" min="0" max="1"
+                     description="" />
+            <element name="wantThemes" type="WantThemes" min="0" max="1"
+                     description="" />
+            <attribute name="featureSetVersion" type="uint32" wireName="feature-set-version"
+                       description="The version of the set of unified map features understood and handled by this client" />
+        </type>
+        <type name="WantLod" wireName="want-lod" description=""/>
+        <type name="WantOptionalLayers" wireName="want-optional-layers" description=""/>
+        <type name="Want2DBuildings" wireName="want-2d-buildings" description=""/>
+        <type name="WantPoiLayers" wireName="want-poi-layers" description=""/>
+        <type name="WantNewCategories" wireName="want-new-categories" description=""/>
+        <type name="WantTod" wireName="want-tod" description=""/>
+        <type name="WantThemes" wireName="want-themes" description=""/>
+        <type name="WantSatelliteLayers" wireName="want-satellite-layers" description=""/>
+        <type name="WantLabelLayers" wireName="want-label-layers" description=""/>
+        <type name="WantLoc" wireName="want-loc" description=""/>
+        <type name="WantNoTransparency" wireName="want-no-transparency" description=""/>
+        <handler name="MetadataSource">
+            <request type="MetadataSourceParameters" description="" />
+            <response type="MetadataSourceInformation" description="" />
+        </handler>
+    </package>
+    <!-- MaptileSoruce Query and Reply -->
+    <!-- <package name="protocol.handler.maptile"> -->
+    <!--     <type name="MapTileSourceParameters" wireName="maptile-source-query" targetName="maptile-source"> -->
+    <!--         <element name="wantExtendedMaps" type="boolean" min="0" max="1" -->
+    <!--                  wireName="want-extended-maps" -->
+    <!--                  description="If present, the client can handle extended map tile configurations in the reply" /> -->
+    <!--         <element name="wantSharedMaps" type="boolean" min="0" max="1" -->
+    <!--                  wireName="want-shared-maps" description="" /> -->
+    <!--         <attribute name="language" type="String" wireName="language" -->
+    <!--                    description="The current language setting of the device. If the specified language is &#xA;     not supported by the tile server, then en-US (American English) will be returned in the configuration." /> -->
+    <!--         <attribute name="screenWidth" type="uint" wireName="screen-width" -->
+    <!--                    description="The screen width of the device, specified in pixels. &#xA;     Note:This element is required if want-extended-maps is present, otherwise optional." /> -->
+    <!--         <attribute name="screenHeight" type="uint" wireName="screen-height" -->
+    <!--                    description="The screen height of the device, specified in pixels. &#xA;     Note:This element is required if want-extended-maps is present, otherwise optional." /> -->
+    <!--         <attribute name="screenResolution" type="uint" wireName="screen-resolution" -->
+    <!--                    description="The resolution of the screen, specified in DPI (dots per inch).&#xA;     Note: This element is required if want-extended-maps is present, otherwise optional." /> -->
+    <!--     </type> -->
+    <!--     <type name="MapTileSourceForMapTile" wireName="maptile-source"> -->
+    <!--         <element name="internalSource" type="boolean" -->
+    <!--                  description="If present the map source is owned by TCS" min="0" max="1" /> -->
+    <!--         <element name="url" type="Url" -->
+    <!--                  description="Base URL for all url-args-template elements" min="0" -->
+    <!--                  max="1" /> -->
+    <!--         <element name="urlArgsTemplate" type="UrlArgsTemplateForMapTile" min="0" -->
+    <!--                  description="" /> -->
+    <!--         <attribute name="gen" type="String" wireName="gen" -->
+    <!--                    description="Generation of the map tiles. This attribute is deprecated. It should not be returned if want-extended-maps is present in the query." /> -->
+    <!--         <attribute name="projection" type="String" wireName="projection" -->
+    <!--                    description="Map projection type" /> -->
+    <!--     </type> -->
+    <!--     <type name="MapTileSourceInformation" wireName="maptile-source-reply"> -->
+    <!--         <element name="maptileSource" type="MapTileSourceForMapTile" -->
+    <!--                  description="" min="0"/> -->
+    <!--     </type> -->
+    <!--     <type name="UrlArgsTemplateForMapTile" wireName="url-args-template" -->
+    <!--           description=""> -->
+    <!--         <attribute name="type" type="String" wireName="type" -->
+    <!--                    description="Type of the data to be downloaded “junctions”, “realistic signs”, “city models”, “textures”, and “map tiles”" /> -->
+    <!--         <attribute name="stringTemplate" type="String" wireName="template" -->
+    <!--                    description="" /> -->
+    <!--         <attribute name="tileSize" type="uint" wireName="tile-size" -->
+    <!--                    description="" /> -->
+    <!--         <attribute name="minZoom" type="uint" wireName="min-zoom" -->
+    <!--                    description="" /> -->
+    <!--         <attribute name="maxZoom" type="uint" wireName="max-zoom" -->
+    <!--                    description="" /> -->
+    <!--         <attribute name="cacheId" type="uint" wireName="cache-id" -->
+    <!--                    description="" /> -->
+    <!--     </type> -->
+        <!-- <handler name="MapTileSource" description=""> -->
+        <!--     <request type="MapTileSourceParameters" description="" /> -->
+        <!--     <response type="MapTileSourceInformation" description="" /> -->
+        <!-- </handler> -->
+    <!-- </package> -->
+    <!-- GeoCode -->
+    <!--package name="protocol.handler.geocode">
+        <type name="GeocodeParameters" wireName="geocode-query" targetName="geocode">
+            <element name="address" type="Address" description="Address to be geocoded." />
+            <element name="sliceres" type="Sliceres" description="Selects the results to be returned." />
+            <element name="position" type="Position" min="0" max="1" description="If present, position will be taken into account when identifying potential matches." />
+            <element name="routeable" type="boolean" wireName="routeable" min="0" max="1" description="Present if the result will be used to generate a route." />
+            <element name="wantAccuracy" type="boolean" wireName="want-accuracy" min="0" max="1" description="If present, locmatch elements in the reply will include an accuracy attribute." />
+            <element name="wantExtendedAddress" type="boolean" wireName="want-extended-address" min="0" max="1" description="If present, full formatted address (max 5 lines) shall be returned." />
+            <element name="wantCompactAddress" type="boolean" wireName="want-compact-address" min="0" max="1" description="If present, compact formatted address (max2 lines) shall be returned." />
+
+            <attribute name="language" type="String" wireName="language" description="" />
+        </type>
+        <type name="GeocodeInformation" wireName="geocode-reply" targetName="geocode">
+            <element name="sliceres" type="Sliceres" description="Identifies the results returned." />
+            <element name="locmatchList" type="LocationMatch" min="0" description="Potential matches for the specified location." />
+        </type>
+        <handler name="Geocode">
+            <request type="GeocodeParameters" description="" />
+            <response type="GeocodeInformation" description="" />
+        </handler>
+    </package -->
+    <!-- Nav Query and Reply -->
+    <!--package name="protocol.handler.navigation">
+        <type name="NavRequestParameters" wireName="nav-query" targetName="nav">
+            <element name="origin" type="Origin" min="0" max="1"
+                     description="" wireName="origin" />
+            <element name="destination" type="Destination" min="0" max="1"
+                     description="" wireName="destination" />
+            <element name="cacheContents" type="CacheContents" min="0"
+                     max="1" description="" wireName="cache-contents" />
+            <element name="routeStyle" type="RouteStyle" min="0" max="1"
+                     description="" wireName="route-style" />
+            <element name="WantOriginLocation" type="boolean" min="0"
+                     max="1" description="" wireName="want-origin-location" />
+            <element name="wantDestinationLocation" type="boolean" min="0"
+                     max="1" description="" wireName="want-destination-location" />
+            <element name="recalc" type="Recalc" min="0" max="1"
+                     description="" wireName="recalc" />
+            <element name="disableNavigation" type="boolean" min="0" max="1"
+                     description="" wireName="disable-navigation" />
+            <element name="wantTurnMap" type="boolean" min="0" max="1"
+                     description="" wireName="want-turn-map" />
+            <element name="wantRouteMap" type="boolean" min="0" max="1"
+                     description="" wireName="want-route-map" />
+            <element name="mapCacheContents" type="MapCacheContents" min="0"
+                     max="1" description="" wireName="map-cache-contents" />
+            <element name="detourAvoid" type="DetourAvoid" min="0"
+                     description="" wireName="detour-avoid" />
+            <element name="recreateRoute" type="BinaryData" min="0" max="1"
+                     description="" wireName="recreate-route" />
+            <element name="wantRoutePolyline" type="boolean" min="0" max="1"
+                     description="" wireName="want-route-polyline" />
+            <element name="wantRouteExtents" type="boolean" min="0" max="1"
+                     description="" wireName="want-route-extents" />
+            <element name="wantManeuvers" type="boolean" min="0" max="1"
+                     description="" wireName="want-maneuvers" />
+            <element name="wantSpeedCameras" type="boolean" min="0" max="1"
+                     description="" wireName="want-speed-cameras" />
+            <element name="wantTrafficNotification" type="boolean" min="0"
+                     max="1" description="" wireName="want-traffic-notification" />
+            <element name="wantRealtimeTraffic" type="boolean" min="0"
+                     max="1" description="" wireName="want-realtime-traffic" />
+            <element name="wantHistoricalTraffic" type="boolean" min="0"
+                     max="1" description="" wireName="want-historical-traffic" />
+            <element name="wantRealtimeSpeed" type="boolean" min="0" max="1"
+                     description="" wireName="want-realtime-speed" />
+            <element name="wantHistoricalSpeed" type="boolean" min="0"
+                     max="1" description="" wireName="want-historical-speed" />
+            <element name="routeTimeOverride" type="boolean" min="0" max="1"
+                     description="" wireName="route-time-override" />
+            <element name="routePolylineWindow" type="int" min="0" max="1"
+                     description="" wireName="route-polyline-window" />
+            <element name="wantTowardRoadinfo" type="boolean" min="0"
+                     max="1" description="" wireName="want-toward-roadinfo" />
+            <element name="wantUnpavedInfo" type="boolean" min="0" max="1"
+                     description="" wireName="want-unpaved-info" />
+            <element name="wantSimpleManeuvers" type="boolean" min="0"
+                     max="1" description="" wireName="want-simple-maneuvers" />
+            <element name="wantBridgeManeuvers" type="boolean" min="0"
+                     max="1" description="" wireName="want-bridge-maneuvers" />
+            <element name="wantTunnelManeuvers" type="boolean" min="0"
+                     max="1" description="" wireName="want-tunnel-maneuvers" />
+            <element name="wantFerryManeuvers" type="boolean" min="0"
+                     max="1" description="" wireName="want-ferry-maneuvers" />
+            <element name="wantCountryInfo" type="boolean" min="0" max="1"
+                     description="" wireName="want-country-info" />
+            <element name="wantCrossStreets" type="boolean" min="0" max="1"
+                     description="" wireName="want-cross-streets" />
+            <element name="wantEnterRoundAboutManeuvers" type="boolean"
+                     min="0" max="1" description="" wireName="want-enter-roundabout-maneuvers" />
+            <element name="wantEnterCountryManeuvers" type="boolean" min="0"
+                     max="1" description="" wireName="want-enter-country-maneuvers" />
+            <element name="wantRealisticRoadSigns" type="boolean" min="0"
+                     max="1" description="" wireName="want-realistic-road-signs" />
+            <element name="wantJunctionModels" type="boolean" min="0"
+                     max="1" description="" wireName="want-junction-models" />
+            <element name="wantCityModels" type="boolean" min="0" max="1"
+                     description="" wireName="want-city-models" />
+            <element name="wantSpeedRegions" type="boolean" min="0" max="1"
+                     description="" wireName="want-speed-regions" />
+            <element name="wantFirsMajorRoad" type="boolean" min="0" max="1"
+                     description="" wireName="want-first-major-road" />
+            <attribute name="pronunStyle" type="String" description=""
+                       wireName="pronun-style" />
+            <attribute name="commandSetVersion" type="uint32"
+                       description="" wireName="command-set-version" />
+            <attribute name="maxPronun" type="uint32" description=""
+                       wireName="max-pronun-files" />
+            <attribute name="language" type="String" description=""
+                       wireName="language" />
+        </type>
+        <type name="NavRequestInformation" wireName="nav-reply" targetName="nav">
+            <element name="navManeuver" type="NavManeuver" min="0"
+                     description="" wireName="nav-maneuver" />
+            <element name="ferryOnRoute" type="uint32" min="0" max="1"
+                     description="" wireName="ferry-on-route" />
+            <element name="pronunciationFile" type="File" min="0"
+                     description="" wireName="file" />
+            <element name="routeError" type="RouteError" min="0" max="1"
+                     description="" wireName="route-error" />
+            <element name="originLocation" type="Location" min="0" max="1"
+                     description="" wireName="origin-location" />
+            <element name="destinationLocation" type="Location" min="0"
+                     max="1" description="" wireName="destination-location" />
+            <element name="detourAvoid" type="DetourAvoid" min="0" max="1"
+                     description="" wireName="detour-avoid" />
+            <element name="routeMap" type="RouteMap" min="0" max="1"
+                     description="" wireName="route-map" />
+            <element name="routePolyline" type="RoutePolyline" min="0"
+                     max="1" description="" wireName="route-polyline" />
+            <element name="routeExtents" type="RouteExtents" min="0" max="1"
+                     description="" wireName="route-extents" />
+            <element name="speedCameras" type="SpeedCameras" min="0" max="1"
+                     description="" wireName="speed-cameras" />
+            <element name="trafficIncidents" type="TrafficIncidents" min="0"
+                     max="1" description="" wireName="traffic-incidents" />
+            <element name="standardTrafficFlow" type="TrafficFlow" min="0"
+                     max="1" description="" wireName="traffic-flow" />
+            <element name="historicalTrafficFlow" type="TrafficFlow" min="0"
+                     max="1" description="" />
+            <element name="realtimeTrafficFlow" type="TrafficFlow" min="0"
+                     max="1" description="" />
+            <element name="trafficRecordIdentifier" type="TrafficRecordIdentifier"
+                     min="0" max="1" description="" wireName="traffic-record-identifier" />
+            <element name="extendedContent" type="ExtendedContent" min="0"
+                     max="1" description="" wireName="extended-content" />
+            <element name="sliceres" type="Sliceres" min="0" max="1"
+                     description="" wireName="sliceres" />
+            <attribute name="routeID" type="BinaryData" wireName="route-id"
+                       description="" />
+        </type>
+        <handler name="NavRequest">
+            <request type="NavRequestParameters" description="" />
+            <response type="NavRequestInformation" description="" />
+        </handler>
+    </package-->
+    <!-- QA -->
+    <!--package name="protocol.handler.qa">
+        <type name="QALogUploadParameters" wireName="qalog-upload-query" targetName="qalog-upload">
+            <attribute name="logId" wireName="log-id" type="String"
+                       description="" />
+            <attribute name="data" type="byte" min="0" description="" />
+            <attribute name="current" type="int" description="" />
+            <attribute name="total" type="int" description="" />
+        </type>
+        <type name="QALogUploadInformation" wireName="qalog-upload-reply" targetName="qalog-upload">
+            <attribute name="logId" wireName="log-id" type="String"
+                       description="" />
+        </type>
+        <handler name="QALogUpload">
+            <request type="QALogUploadParameters" description="" />
+            <response type="QALogUploadInformation" description="" />
+        </handler>
+    </package-->
+    <!-- Message of the Day -->
+    <!--package name="protocol.handler.motd">
+        <type name="MessageOfTheDayParameters" wireName="message-query" targetName="message">
+            <element name="messageId" type="MessageId" min="0"
+                     description="" />
+            <attribute name="language" type="String" isOptional="yes"
+                       minLength="2" maxLength="5" description="" />
+            <attribute name="ts" type="uint64" description="" />
+        </type>
+        <type name="MessageOfTheDayInformation" wireName="message-reply" targetName="message">
+            <element name="message" type="Message" min="0" description="" />
+            <element name="messageId" type="MessageId" min="0"
+                     description="" />
+            <attribute name="ts" type="uint64" description="" />
+        </type>
+        <type name="MessageOfTheDayConfirmationParameters" wireName="message-confirm-query" targetName="message-confirm">
+            <element name="messageConfirm" type="MessageConfirm" min="0"
+                     description="" />
+            <element name="retrieveConfirmed" type="RetrieveConfirmed"
+                     min="0" description="" />
+        </type>
+        <type name="MessageOfTheDayConfirmationInformation" wireName="message-confirm-reply" targetName="message-confirm">
+            <element name="message" type="Message" min="0" />
+        </type>
+        <handler name="MessageOfTheDay" description="">
+            <request type="MessageOfTheDayParameters" description="" />
+            <response type="MessageOfTheDayInformation" description="" />
+        </handler>
+        <handler name="MessageOfTheDayConfirmation" description="">
+            <request type="MessageOfTheDayConfirmationParameters"
+                     description="" />
+            <response type="MessageOfTheDayConfirmationInformation"
+                      description="" />
+        </handler>
+    </package-->
+    <!-- Proximity Search -->
+    <!--package name="protocol.handler.POISearch">
+        <type name="POISearchParameters" wireName="proxpoi-query" targetName="proxpoi"
+              description="">
+            <element name="position" type="Position" wireName="position" min="0" max="1"
+                     description="" />
+            <element name="box" type="Box" wireName="box" min="0" max="1" description="" />
+            <element name="iterCommand" type="IterCommand" wireName="iter-command" description="" />
+            <element name="searchFilter" type="SearchFilter" wireName="search-filter" min="0" max="1"
+                     description="" />
+            <element name="directed" type="boolean" wireName="directed" min="0" max="1"
+                     description="" />
+            <element name="routeCorridor" type="RouteCorridor" wireName="route-corridor" min="0"
+                     max="1" description="" />
+            <element name="wantPremiumPlacement" type="boolean" wireName="want-premium-placement" min="0"
+                     max="1" description="" />
+            <element name="wantEnhancedPois" type="boolean" wireName="want-enhanced-pois" min="0" max="1"
+                     description="" />
+            <element name="wantFormatted" type="boolean" wireName="want-formatted" min="0" max="1"
+                     description="" />
+            <element name="wantSpellingSuggestions" type="boolean" wireName="want-spelling-suggestions" min="0"
+                     max="1" description="" />
+            <element name="wantNonProximityPois" type="boolean" wireName="want-non-proximity-pois" min="0"
+                     max="1" description="" />
+            <element name="searchCookie" type="SearchCookie" wireName="search-cookie" min="0" max="1"
+                     description="" />
+            <element name="enforceSliceSize" type="boolean" wireName="enforce-slice-size" min="0" max="1"
+                     description="" />
+            <element name="wantAccuracy" type="boolean" wireName="want-accuracy" min="0" max="1"
+                     description="" />
+            <element name="wantExtendedDetails" type="boolean" wireName="want-extended-details" min="0"
+                     max="1" description="" />
+            <attribute name="dataScheme" type="String" wireName="scheme"
+                       description="" />
+            <attribute name="routeID" type="BinaryData" wireName="route-id" verificationItem="maneuverValid"
+                       description="" />
+            <attribute name="maneuver" type="uint32" wireName="maneuver" verificationItem="maneuverValid"
+                       description="" />
+            <attribute name="maneuverValid" type="boolean" wireName="maneuver-valid" forVerification="yes" />
+            <attribute name="language" type="String" wireName="language"
+                       description="" />
+            <attribute name="premiumPairs" type="Pair" min="0" wireName="premium-pairs" description="" />
+            <attribute name="enhancedPairs" type="Pair" min="0" wireName="enhanced-pairs" description="" />
+            <attribute name="formattedPairs" type="Pair" min="0" wireName="formatted-pairs" description="" />
+            <attribute name="premiumImage" type="Image" min="0" wireName="premium-image" description="" />
+            <attribute name="enhancedImage" type="Image" min="0" wireName="enhanced-image" description="" />
+            <attribute name="formattedImage" type="Image" min="0" wireName="formatted-image" description="" />
+        </type>
+        <type name="POISearchInformation" wireName="proxpoi-reply" targetName="proxpoi"
+              description="">
+            <element name="proxMatch" type="ProxMatch" min="0"
+                     description="" />
+            <element name="proxMatchContent" type="ProxMatchContent" min="0"
+                     description="" />
+            <element name="proxMatchSummary" type="ProxMatchSummary" min="0"
+                     description="" />
+            <element name="proxMatchAmbiguous" type="ProxMatchAmbiguous"
+                     min="0" description="" />
+            <element name="iterResult" type="IterResult" description="" />
+            <element name="file" type="File" min="0" description="" />
+            <element name="fuelPriceSummary" type="FuelPriceSummary" min="0"
+                     max="1" description="" />
+            <element name="eventContent" type="EventContent" min="0" max="1"
+                     description="" />
+            <element name="unsupported" type="boolean" wireName="unsupported" min="0" max="1"
+                     description="" />
+            <element name="spellingSuggestion" type="SpellingSuggestion"
+                     min="0" max="1" description="" />
+            <element name="searchCookie" type="SearchCookie" min="0" max="1"
+                     description="" />
+            <element name="searchEventCookie" type="SearchEventCookie"
+                     min="0" max="1" description="" />
+            <element name="proxPoiError" type="ProxpoiError" min="0" max="1"
+                     description="" />
+        </type>
+        <type name="DetailedPOISearchParameters" wireName="proxpoi-query"
+              description="">
+            <element name="position" type="Position" min="0" max="1"
+                     description="" />
+            <element name="iterCommand" type="IterCommand" min="1" max="1"
+                     description="" />
+            <element name="searchFilter" type="SearchFilter" min="0" max="1"
+                     description="" />
+        </type>
+        <type name="DetailedPOISearchInformation" wireName="proxpoi-reply"
+              description="">
+            <element name="proxmatch" type="ProxMatch" min="0"
+                     description="" />
+            <element name="iterResult" type="IterResult" min="1" max="1"
+                     description="" />
+        </type>
+        <handler name="POISearch" description="">
+            <request type="POISearchParameters" description="" />
+            <response type="POISearchInformation" description="" />
+        </handler>
+        <handler name="DetailedPOISearch" description="">
+            <request type="DetailedPOISearchParameters" description="" />
+            <response type="DetailedPOISearchInformation" description="" />
+        </handler>
+    </package-->
+    <!-- Single Search Query and Reply -->
+    <package name="protocol.handler.SingleSearch">
+        <type name="SingleSearchSourceParameters" wireName="search-query" targetName="search" description="">
+            <element name="position" type="Position" min="0" max="2" description="" />
+            <element name="box" type="Box" min="0" max="1" description="Boundaries for which all contained results should be returned." />
+            <element name="iterCommand" type="IterCommand" description="" />
+            <element name="searchFilter" type="SearchFilter" min="0" max="1" description="" />
+            <element name="directed" type="Directed" min="0" max="1" description="" />
+            <element name="routeCorridor" type="RouteCorridor" min="0" max="1" description="" />
+            <element name="wantPremiumPlacement" type="boolean" min="0" max="1" wireName="want-premium-placement" description="" />
+            <element name="wantSuggestDistance" type="boolean" min="0" max="1" wireName="want-suggest-distance" description="" />
+            <element name="wantSuggestThreeLines" type="boolean" min="0" max="1" wireName="want-suggest-three-lines" description="" />
+            <element name="wantSuggestCategory" type="boolean" min="0" max="1" wireName="want-suggest-category" description="" />
+            <element name="wantSuggestLocation" type="boolean" min="0" max="1" wireName="want-suggest-location" description="" />
+            <element name="wantDistanceToUser" type="boolean" min="0" max="1" wireName="want-distance-to-user" description="" />
+            <element name="wantDataAvailability" type="boolean" min="0" max="1" wireName="want-data-availability" description="" />
+            <element name="wantMixedResults" type="boolean" min="0" max="1" wireName="want-mixed-results" description="" />
+            <element name="wantCountryName" type="boolean" min="0" max="1" wireName="want-country-name" description="" />
+            <element name="wantSearchResultId" type="boolean" min="0" max="1" wireName="want-search-result-id" description="" />
+            <element name="wantExtendedAddress" type="boolean" min="0" max="1" wireName="want-extended-address" description="" />
+            <element name="wantCompactAddress" type="boolean" min="0" max="1" wireName="want-compact-address" description="" />
+            <element name="wantFormattedPhone" type="boolean" min="0" max="1" wireName="want-formatted-phone" description="" />
+            <element name="wantStructuredHoursOfOperation" type="boolean" min="0" max="1" wireName="want-structured-hours-of-operation" description="" />
+            <element name="address" type="Address" min="0" max="1" description="only for address search." />
+            <element name="wantParentCategory" type="boolean" min="0" max="1" wireName="want-parent-category" description="" />
+            <element name="wantContentTypes" type="WantContentTypes" min="0" max="1" description="" />
+            <element name="wantResultDescription" type="boolean" min="0" max="1" wireName="want-result-description" description="" />
+            <element name="wantIconId" type="boolean" min="0" max="1" wireName="want-icon-id" description="" />
+            <element name="wantRelatedSearch" type="boolean" min="0" max="1" wireName="want-related-search" description="" />
+            <element name="wantPoiCookies" type="boolean" min="0" max="1" wireName="want-poi-cookies" description="" />
+            <!--element name="wantEnhancedPois" type="boolean" min="0" max="1" wireName="want-enhanced-pois" description="" /-->
+            <!--element name="wantFormatted" type="WantFormatted" min="0" max="1" wireName="want-formatted" description="" /-->
+            <!--element name="wantSpellingSuggestions" type="boolean" min="0" max="1" wireName="want-spelling-suggestions" description="" /-->
+            <!--element name="wantSearchDescription" type="boolean" min="0" max="1" wireName="want-search-description" description="" /-->
+            <attribute name="dataScheme" type="String" wireName="scheme" description="" />
+            <attribute name="routeID" type="BinaryData" wireName="route-id" description="" />
+            <attribute name="language" type="String" wireName="language" description="" />
+        </type>
+        <type name="Directed" wireName="directed" description=""/>
+        <type name="WantContentTypes" wireName="want-content-types" description="" >
+            <element name="contentType" type="ContentType" min="0" description="" />
+        </type>
+        <type name="ContentType" wireName="content" min="0" description="" >
+            <attribute name="type" wireName="type" type="String"
+                       description="Identifies the type of results to be enabled.  Can be: ‘poi’,’address’, ‘movie’, 'event'., 'fuel-price'" />
+
+        </type>
+        <type name="SingleSearchSourceInformation" wireName="search-reply" targetName="search" description="">
+            <element name="iterResult" type="IterResult" description="" />
+            <element name="proxMatch" type="ProxMatch" min="0" description="" />
+            <element name="suggestMatch" type="SuggestMatch" min="0" description="" />
+            <element name="file" type="File" min="0" description="" />
+            <element name="fuelPriceSummary" type="FuelPriceSummary" min="0" max="1" description="" />
+            <element name="proxMatchContent" type="ProxMatchContent" min="0" description="Results which represent event content available in the local area." />
+            <element name="resultDescription" type="ResultDescription" min="0" description="Result description provided for client to display." />
+            <element name="proxMatchSummary" type="ProxMatchSummary" min="0" description="Summary element to indicate that all matches belong to the same category (movie or event). This helps the client to display esults list UI based on the category." />
+            <element name="suggestList" type="SuggestList" min="0" description="List of suggest matches grouped together." />
+        </type>
+        <type name="SuggestList" wireName="suggest-list" description="" >
+            <attribute name="name" type="String" wireName="name"
+                       description="" />
+            <element name="suggestMatch" type="SuggestMatch" min="0" description="Results which represent suggestions." />
+        </type>
+        <handler name="SingleSearchSource" description="">
+            <request type="SingleSearchSourceParameters" description="" />
+            <response type="SingleSearchSourceInformation" description="" />
+        </handler>
+    </package>
+
+    <!-- Synchronization Query and Reply -->
+    <package name="protocol.handler.SyncPlaces">
+        <type name="SyncPlacesParameters" wireName="sync-places-query" targetName="sync-places" description="">
+            <element name="syncPlacesDBQuery" type="SyncPlacesDBQuery" min="1" description="" />
+            <element name="wantPlaceDetails" type="boolean" wireName="want-place-details" min="0" max="1" description="" />
+            <element name="wantCompactAddress" type="boolean" wireName="want-compact-address" min="0" max="1" description="If present, compact formatted address (max2 lines) shall be returned." />
+        </type>
+       <type name="SyncPlacesInformation" wireName="sync-places-reply" targetName="sync-places" description="">
+           <element name="syncPlacesDBReply" type="SyncPlacesDBReply" min="1" description="" />
+       </type>
+      <type name="SyncPlacesDBReply" wireName="sync-places-db-reply" description="">
+          <element name="syncAddItem" type="SyncAddItem" min="0" description="Specifies an item that was added to the database on the server since the last synchronization." />
+          <element name="syncAssignItemId" type="SyncAssignItemId" min="0" description="Specifies the id assigned to a client added item by the server." />
+          <element name="syncModifyItem" type="SyncModifyItem" min="0" description="Specifies an item that was changed in the database on the server since the last synchronization." />
+          <element name="syncDeleteItem" type="SyncDeleteItem" min="0" description="Specifies an item that was deleted in the database on the server since the last synchronization." />
+          <element name="syncError" type="SyncError" min="0" max="1" description="If present, an error occurred while synchronizing the database." />
+
+          <attribute name="name" type="String" wireName="name" description="The name of the database.  Currently one of “recents”, or “favorites”." />
+          <attribute name="newSyncGeneration" type="uint32" wireName="new-sync-generation" description="Identifies the generation of the database that was synchronized to the mobile." />
+          <attribute name="dbID" type="uint32" wireName="db-id" description="Specifies the id of the user-place-db associated with the specified name." />
+          <attribute name="count" type="uint32" wireName="count" description="Indicates the total number of places within the specified database after the sync operation." />
+      </type>
+       <type name="SyncPlacesDBQuery" wireName="sync-places-db-query" description="">
+           <element name="syncAddItem" type="SyncAddItem" min="0" description="Specifies an item that was added to the database on the mobile device since the last synchronization." />
+           <element name="syncDeleteItem" type="SyncDeleteItem" min="0" description="Specifies an item that was deleted from the database on the mobile device since the last synchronization." />
+           <element name="syncModifyItem" type="SyncModifyItem" min="0" description="Specifies an item that was changed in the database on the mobile device since the last synchronization." />
+
+           <attribute name="name" type="String" wireName="name" description="The name of the database.  Currently one of “recents”, or “favorites”." />
+           <attribute name="lastSyncGeneration" type="uint32" wireName="last-sync-generation" description="Identifies the generation of the database that was last synchronized to the mobile." />
+           <attribute name="dbID" type="uint32" wireName="db-id" description="The id of the user-place-db corresponding to the name as last returned in a sync-places-db-reply, or 0 (zero) if no sync has occurred." />
+       </type>
+        <type name="SyncAddItem" wireName="sync-add-item" description="" >
+            <element name="place" type="Place" description="Specifies the details of the place." />
+            <!--element name="placeMsg" type="PlaceMsg" min="0" max="1" description="Specifies the details of the place message." /-->
+            <attribute name="id" type="String" wireName="id" description="The local id previously assigned to this place.  Signed integer encoded as a string." />
+            <attribute name="modtime" type="int" wireName="modtime" description="The modification time for this place (in seconds since the UNIX epoch)." />
+        </type>
+        <type name="SyncDeleteItem" wireName="sync-delete-item" description="" >
+            <attribute name="id" wireName="id" type="uint64" description="The id of the place being deleted." />
+        </type>
+        <type name="SyncModifyItem" wireName="sync-modify-item" description="" >
+            <element name="place" type="Place" min="0" max="1" description="Specifies the details of the place." />
+            <!--element name="placeMsg" type="PlaceMsg" min="0" max="1" description="Specifies the details of the place message." /-->
+            <attribute name="id" type="uint64" wireName="id" description="The id of the place being deleted." />
+            <attribute name="modtime" type="int" wireName="modtime" description="The new modification time for this place." />
+        </type>
+        <type name="SyncAssignItemId" wireName="sync-assign-item-id" description="" >
+            <attribute name="localId" wireName="local-id" type="String" description="The local id previously assigned to this place. Signed integer encoded as a string." />
+            <attribute name="serverId" wireName="server-id" type="String" description="The server id assigned to this place. Signed integer encoded as a string.  If this id is less than 0, then the place was deleted during the reconciliation of the sync (i.e. it was pushed off the bottom of the LRU list)." />
+        </type>
+        <type name="SyncError" wireName="sync-error" description="" >
+            <attribute name="code" wireName="code" type="String" description="Specifies the error that occurred: “F”=The specified database is full, “I”=The specified data is inconsistent with the database." />
+            <attribute name="number" wireName="num" type="uint32" description="When the database is full, specifies the number of excess places. (Must be zero if code is other than “F”)." />
+        </type>
+        <handler name="SyncPlaces" description="">
+            <request type="SyncPlacesParameters" description="" />
+            <response type="SyncPlacesInformation" description="" />
+        </handler>
+    </package>
+
+    <!-- Synchronization Status Query and Reply -->
+    <package name="protocol.handler.SyncStatus">
+        <type name="SyncStatusParameters" wireName="sync-places-status-query" targetName="sync-places-status" description="">
+            <element name="syncPlacesDBStatusQuery" type="SyncPlacesDBStatusQuery" min="1" description="Deternines if synchronization is necessary for a specific places database." />
+        </type>
+        <type name="SyncPlacesDBStatusQuery" wireName="sync-places-db-status-query" description="" >
+            <attribute name="name" type="String" wireName="name" description="The name of the database.  Currently one of “recents”, or “favorites”." />
+        </type>
+        <type name="SyncStatusInformation" wireName="sync-places-status-reply" targetName="sync-places-status" description="">
+            <element name="syncStatusDBStatusReply" type="SyncStatusDBStatusReply" min="1" description="" />
+        </type>
+        <type name="SyncStatusDBStatusReply" wireName="sync-places-db-status-reply" description="" >
+                <attribute name="name" type="String" wireName="name" description="The name of the database.  Currently one of “recents”, or “favorites”." />
+                <attribute name="generation" type="uint32" wireName="generation" description="Identifies the current generation of the database on the server." />
+        </type>
+        <handler name="SyncStatus" description="">
+            <request type="SyncStatusParameters" description="" />
+            <response type="SyncStatusInformation" description="" />
+        </handler>
+    </package>
+    <package name="protocol.handler.iden">
+        <type name="IdenParameters" wireName="iden" targetName="iden">
+            <element name="emulator" type="boolean" wireName="emulator" min="0" max="1"
+                     description="If present, the device is an emulator." />
+            <element name="wantIdenReceipt" type="boolean" wireName="want-iden-receipt" min="0" max="1"
+                     description="If present, the server will return an Iden Receipt document." />
+            <element name="wantClientGuidAssigned" type="boolean" wireName="want-client-guid-assigned" min="0" max="1"
+                     description="If present, the server will assign a GUID and return it in the Iden Receipt.  Clients should send the new GUID in the guid attribute.  If want-iden-receipt is not present, want-guid-assigned will be ignored." />
+            <element name="formattedIdenParameters " type="FormattedIdenParameters" min="0" max="1"
+                     description="If present, all the attributes SHALL be sent in individual child elements." />
+        </type>
+    </package>
+</protocol>

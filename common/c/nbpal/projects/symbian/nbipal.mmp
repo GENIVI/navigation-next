@@ -1,0 +1,98 @@
+TARGET		  		nbipal.dll
+TARGETTYPE	  		DLL
+UID					0 0x1002AAF1
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+SYSTEMINCLUDE		\Epoc32\include\libc\sys
+SYSTEMINCLUDE		\Epoc32\include\libc\netinet
+SYSTEMINCLUDE		\Epoc32\include\http
+
+MACRO S60=1
+MACRO DEBUG_LOG_ALL=1
+
+USERINCLUDE			..\..\include
+USERINCLUDE			..\..\include\private
+USERINCLUDE			..\..\include\symbian
+USERINCLUDE			..\..\src\symbian\file
+USERINCLUDE			..\..\src\symbian\net
+USERINCLUDE			..\..\src\symbian\pal
+USERINCLUDE			..\..\src\symbian\timer
+USERINCLUDE			..\..\src\symbian\util
+USERINCLUDE			..\..\src\util
+
+SOURCEPATH			..\..\src\symbian\clock
+SOURCE				palclock.cpp
+
+SOURCEPATH			..\..\src\symbian\file
+SOURCE				palfile.cpp
+SOURCE				NIMFSSession.cpp
+SOURCE				NIMFile.cpp
+SOURCE				NIMFileEnum.cpp
+
+SOURCEPATH			..\..\src\symbian\net
+SOURCE				palnet.cpp
+SOURCE				CommDbUtility.cpp
+SOURCE				CsCommsEngine.cpp
+SOURCE				CsConnAdapters.cpp
+SOURCE				CsEngine.cpp
+SOURCE				CsSocketEng.cpp
+SOURCE				HttpManager.cpp
+SOURCE				HttpHandler.cpp
+SOURCE				NetEngine.cpp
+SOURCE				PALNetSession.cpp
+SOURCE				SocketReader.cpp
+SOURCE				SocketWriter.cpp
+SOURCE 				BaseWorker.cpp 
+SOURCE 				ThreadClient.cpp 
+SOURCE 				ThreadServer.cpp 
+SOURCE 				ThreadSession.cpp 
+SOURCE 				IdleEx.cpp
+SOURCE 				NimSyncWaiter.cpp
+SOURCE 				LogFile.cpp
+
+SOURCEPATH			..\..\src\symbian\pal
+SOURCE				palimpl.cpp
+SOURCE				PALUtility.cpp
+SOURCE				NIMUnicodeConverter.cpp
+
+SOURCEPATH			..\..\src\symbian\timer
+SOURCE				paltimer.cpp
+SOURCE				NIMTimerManager.cpp
+SOURCE				NIMTimerImpl.cpp
+SOURCE				NIMTimer.cpp
+
+SOURCEPATH			..\..\src\symbian\util
+SOURCE				paldebuglog.cpp
+SOURCE				palstdlib.cpp
+SOURCE				pallogger.cpp
+
+SOURCEPATH			..\..\src\util
+SOURCE				bq.c
+SOURCE				palstdlibcommon.c
+SOURCE				palversion.c
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+LIBRARY				efsrv.lib
+LIBRARY				esock.lib
+LIBRARY				bafl.lib
+LIBRARY				commdb.lib
+LIBRARY				etel3rdparty.lib
+LIBRARY				insock.lib
+LIBRARY				securesocket.lib
+LIBRARY				http.lib
+LIBRARY				inetprotutil.lib
+LIBRARY				charconv.lib
+LIBRARY				estlib.lib
+LIBRARY				PlatformEnv.lib
+LIBRARY				apgrfx.lib
+LIBRARY				ws32.lib
+
+#if defined(WINS)
+DEFFILE bwins\nbipal.def
+#else
+DEFFILE eabi\nbipal.def
+#endif

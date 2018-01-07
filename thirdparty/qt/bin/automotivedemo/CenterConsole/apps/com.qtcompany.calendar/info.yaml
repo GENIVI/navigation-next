@@ -1,0 +1,14 @@
+formatVersion: 1
+formatType: am-application
+---
+id:      'com.qtcompany.calendar'
+icon:    'icon.png'
+code:    'Calendar.qml'
+runtime: 'qml'
+name:
+  en: 'Calendar'
+  de: 'Kalender'
+
+categories: [ 'app', 'calendar' ]
+
+built-in: yes

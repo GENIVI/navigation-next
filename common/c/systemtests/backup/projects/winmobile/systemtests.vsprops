@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="systemtests"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="NIMCORE_BUILD"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4054;4100;4115;4127;4201;4214"
+	/>
+</VisualStudioPropertySheet>

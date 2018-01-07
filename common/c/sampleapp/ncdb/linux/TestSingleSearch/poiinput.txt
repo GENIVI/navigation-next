@@ -1,0 +1,34 @@
+# Search Type | Search String | Search Location Lat | Search Location Long | Radius | NumberOfResults | PageId | Phone | Main Type | Sub Type |
+# Search by Name only
+3|target|37.809916|-122.262726|2|5|||||
+3|Starbucks|37.809916|-122.262726||5|1||||
+3|Starbucks|37.809916|-122.262726||5|||||
+3|Starbucks|37.809916|-122.262726|2|5|||||
+1|Starbucks|37.809916|-122.262726||5|1||||
+3||33.567815|-117.724194||5|1||0|-1|
+1|walmart|37.809916|-122.262726||5|1||||
+1|Starbucks|37.809916|-122.262726||5|1||||
+1|Shell|37.809916|-122.262726|10.0|25|1|||||
+# Search by name and category(subcat)
+3|Shell|37.809916|-122.262726|10.0|5|1||10|3||
+# Search by main category and sub category only
+3||37.809916|-122.262726|10.0|25|1||0|9|
+3||37.809916|-122.262726|10.0|25|1||1|0||
+3||37.809916|-122.262726|10.0|25|1||10|3||
+# Poi to be executed.
+1|thai bite|33.567815|-117.724194|10.0|25|1|
+3|thai bite|33.567815|-117.724194|10.0|25|1|
+# Main cat 0="restaurants and Bars", sub cat -1=All sub categories
+3||33.567815|-117.724194||5|1||0|-1|
+# Main cat 0=restaurants, sub cat 4=Bars
+3||33.567815|-117.724194||5|1||0|4|
+# Main cat 0=restaurants, sub cat 9=coffee
+3||33.567815|-117.724194||5|1||0|9|
+# Main cat 0=restaurants, sub cat 19=Indian
+3||33.567815|-117.724194||5|1||0|19|
+# Main cat 0=restaurants, sub cat 38=Thai
+3||33.567815|-117.724194||5|1||0|38|
+# 2.) Main cat 6="Banks and ATMs", sub cat -1=All sub categories
+3||33.567815|-117.724194||5|1||6|-1|
+# 2.) Main cat 6="Banks and ATMs", sub cat 2="Standalone ATMs"
+3||33.567815|-117.724194||5|1||6|2|

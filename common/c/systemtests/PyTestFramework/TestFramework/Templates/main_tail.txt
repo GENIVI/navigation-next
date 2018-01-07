@@ -1,0 +1,7 @@
+
+    result = CU_basic_run_tests();
+    int testsFailed = CU_get_number_of_tests_failed();
+    printf ("Total %d cases failed\n", testsFailed);
+
+    CU_cleanup_registry();
+}

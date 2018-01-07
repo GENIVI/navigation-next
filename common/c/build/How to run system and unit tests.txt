@@ -1,0 +1,45 @@
+Any checkin to the CCC should be verified with unit and system tests. Win32 is the reference platform and the 
+unit and system tests for this platform should always run successfully (although some system tests are expected 
+to fail due to server incompatibilities).
+
+After building the CCC for the Win32 platform (see "How to build Win32 and WM.txt") the unit and system tests can be run from command line.
+They can also be run directly from Visual Studio (after the environment variables are set).
+
+Run NB-PAL and coreservices unit tests:
+
+	\client\c\core\coreservices\release_150406_ltk_v1_5_1\output\win32\Debug>unittests
+	\client\c\core\coreservices\release_150406_ltk_v1_5_1\output\win32\Release>unittests
+
+
+	\client\c\core\nbpal\release_150406_ltk_v1_5_1\output\win32\Debug>unittests
+	\client\c\core\nbpal\release_150406_ltk_v1_5_1\output\win32\Release>unittests
+
+Run systemtests:
+
+   To show all options for the system tests:
+
+	\client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Debug>SystemTests --help
+
+   To run with default settings:
+
+	\client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Debug>SystemTests
+	\client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Release>SystemTests
+
+   To run systemtests in several processes:
+
+    \client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Debug>systemtests.py N
+    \client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Release>systemtests.py N
+    Here N is a number of processes.
+
+   Results of systemtests will be collected in folders:
+
+    \client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Debug\TestsResults
+    \client\c\core\systemtests\release_150406_ltk_v1_5_1\output\win32\Release\TestsResults
+
+For QT_QNX System Tests:
+* build CCC
+build_qt_qnx.bat debug arm DEBUG
+* set %PYTHON24_PATH% for Python 2.4
+set PYTHON24_PATH="YOUR_PATH"
+open bb10 IDE and import ArgTable, cunit and system tests qt_qnx project
+

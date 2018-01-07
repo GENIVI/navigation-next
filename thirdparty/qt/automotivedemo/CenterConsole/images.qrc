@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/icons/seat_left@48.png</file>
+        <file>assets/icons/seat_right@48.png</file>
+        <file>assets/icons/active/seat_left@48.png</file>
+        <file>assets/icons/active/seat_right@48.png</file>
+        <file>assets/icons/arrow@32.png</file>
+        <file>assets/icons/battery@32.png</file>
+        <file>assets/icons/bluetooth@32.png</file>
+        <file>assets/icons/break@32.png</file>
+        <file>assets/icons/clock@48.png</file>
+        <file>assets/icons/information@48.png</file>
+        <file>assets/icons/next@48.png</file>
+        <file>assets/icons/pause@48.png</file>
+        <file>assets/icons/prev@48.png</file>
+        <file>assets/icons/play@48.png</file>
+        <file>assets/icons/search@72.png</file>
+        <file>assets/icons/seat_left@32.png</file>
+        <file>assets/icons/seat_person@72.png</file>
+        <file>assets/icons/seat_right@72.png</file>
+        <file>assets/icons/wifi@32.png</file>
+        <file>assets/drawable-ldpi/appstore_grid_cell_panel.png</file>
+        <file>assets/drawable-ldpi/map_mockup.png</file>
+    </qresource>
+</RCC>

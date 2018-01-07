@@ -1,0 +1,214 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * numeric - Declarations for the Standard Library algorithms
+ *
+ * $Id: numeric 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_NUMERIC_INCLUDED
+#define _RWSTD_NUMERIC_INCLUDED
+
+
+#include <rw/_iterbase.h>
+#include <rw/_defs.h>
+
+
+#include _RWSTD_CSTDLIB
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+// 26.4.1 - Accumulate
+template <class _InputIter, class _TypeT>
+inline _TypeT accumulate (_InputIter __first, _InputIter __last, _TypeT __n)
+{
+    for (; __first != __last; ++__first)
+        __n = __n + *__first;
+    return __n;
+}
+
+
+template <class _InputIter, class _TypeT, class _BinaryOperation>
+inline _TypeT accumulate (_InputIter __first, _InputIter __last,
+                          _TypeT __n, _BinaryOperation __oper)
+{
+    for (; __first != __last; ++__first)
+        __n = __oper (__n, *__first);
+    return __n;
+}
+
+
+// 26.4.2 - Inner product
+template <class _InputIter1, class _InputIter2, class _TypeT>
+inline _TypeT inner_product (_InputIter1 __first1, _InputIter1 __last1,
+                             _InputIter2 __first2, _TypeT __n) {
+
+    for (; __first1 != __last1; ++__first1, ++__first2)
+        __n += *__first1 * *__first2;
+    return __n;
+}
+
+
+template <class _InputIter1, class _InputIter2, 
+          class _TypeT, class _BinaryOperation1, class _BinaryOperation2>
+inline _TypeT
+inner_product (_InputIter1 __first1, _InputIter1 __last1,
+               _InputIter2 __first2, _TypeT __n,
+               _BinaryOperation1 __oper1, _BinaryOperation2 __oper2)
+{
+    for (; __first1 != __last1; ++__first1, ++__first2) 
+        __n = __oper1 (__n, __oper2 (*__first1, *__first2));
+    return __n;
+}
+
+
+template <class _InputIter, class _OutputIter, class _TypeT>
+inline _OutputIter
+__partial_sum (_InputIter __first, _InputIter __last, _OutputIter __res,
+               _TypeT*)
+{
+    _TypeT __value = *__first;
+    while (++__first != __last) {
+        __value = __value + *__first;
+        *++__res = __value;
+    }
+    return ++__res;
+}
+
+
+// 26.4.3 - Partial sum
+template <class _InputIter, class _OutputIter>
+inline _OutputIter
+partial_sum (_InputIter __first, _InputIter __last, _OutputIter __res)
+{
+    return __first == __last
+        ? __res : (*__res = *__first,
+                   __partial_sum (__first, __last, __res,
+                                  _RWSTD_VALUE_TYPE (_InputIter)));
+}
+
+
+template <class _InputIter, class _OutputIter,
+class _TypeT, class _BinaryOperation>
+inline _OutputIter __partial_sum (_InputIter __first, _InputIter __last,
+                                  _OutputIter __res, _TypeT*,
+                                  _BinaryOperation __oper)
+{
+    _TypeT __value = *__first;
+    while (++__first != __last) {
+        __value = __oper(__value, *__first);
+        *++__res = __value;
+    }
+    return ++__res;
+}
+
+
+template <class _InputIter, class _OutputIter, class _BinaryOperation>
+inline _OutputIter partial_sum (_InputIter __first, _InputIter __last,
+                                _OutputIter __res, _BinaryOperation __oper)
+{
+    return __first == __last ?
+        __res : (*__res = *__first,
+                 __partial_sum (__first, __last, __res,
+                                _RWSTD_VALUE_TYPE (_InputIter),__oper));
+}
+
+
+template <class _InputIter, class _OutputIter, class _TypeT>
+inline _OutputIter
+__adjacent_difference (_InputIter __first, _InputIter __last, _OutputIter __res,
+                       _TypeT*)
+{
+    _TypeT __value = *__first;
+    while (++__first != __last) {
+        _TypeT __tmp = *__first;
+        *++__res = __tmp - __value;
+        __value = __tmp;
+    }
+    return ++__res;
+}
+
+
+// 26.4.4 - Adjacent difference
+template <class _InputIter, class _OutputIter>
+inline _OutputIter
+adjacent_difference (_InputIter __first, _InputIter  __last, _OutputIter __res)
+{
+    return __first == __last
+        ? __res
+        : (*__res = *__first,
+           __adjacent_difference(__first, __last, __res,
+                                 _RWSTD_VALUE_TYPE (_InputIter)));
+}
+
+template <class _InputIter, class _OutputIter,
+          class _TypeT, class _BinaryOperation>
+inline _OutputIter
+__adjacent_difference (_InputIter __first, _InputIter __last, 
+                       _OutputIter __res, _TypeT*, _BinaryOperation __oper)
+{
+    _TypeT __value = *__first;
+    while (++__first != __last) {
+        _TypeT __tmp = *__first;
+        *++__res = __oper(__tmp, __value);
+        __value = __tmp;
+    }
+    return ++__res;
+}
+
+
+template <class _InputIter, class _OutputIter, class _BinaryOperation>
+inline _OutputIter
+adjacent_difference (_InputIter __first, _InputIter __last,
+                     _OutputIter __res, _BinaryOperation __oper)
+{
+    return __first == __last
+        ? __res
+        : (*__res = *__first,
+           __adjacent_difference(__first, __last, __res,
+                                 _RWSTD_VALUE_TYPE (_InputIter), __oper));
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_NUMERIC_INCLUDED

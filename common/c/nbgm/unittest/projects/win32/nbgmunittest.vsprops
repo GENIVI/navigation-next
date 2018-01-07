@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="nbgm"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="
+		;&quot;$(SolutionDir)..\unittest\include&quot;
+		;&quot;$(SolutionDir)..\nbgmmain\include\protected&quot;
+		;&quot;$(SolutionDir)..\nbgmmain\include\private&quot;
+		;&quot;$(SolutionDir)..\nbgmmain\include\win32&quot;
+		;&quot;$(SolutionDir)..\nbgmmain\include&quot;
+		;&quot;$(SolutionDir)..\nbre\include\protected&quot;
+		;&quot;$(SolutionDir)..\nbre\include\private&quot;
+		;&quot;$(SolutionDir)..\nbre\include\win32&quot;
+		;&quot;$(SolutionDir)..\nbre\include\debug&quot;
+		;&quot;$(SolutionDir)..\nbre\include&quot;
+		;&quot;$(SolutionDir)..\rendersystem\d3d9\include&quot;
+		;&quot;$(SolutionDir)..\rendersystem\gl\include&quot;
+		;&quot;$(SolutionDir)..\rendersystem\gles\include&quot;
+		;&quot;$(SolutionDir)..\dependence\CUnit\include&quot;
+		;&quot;$(SolutionDir)..\dependence\freetype-2.4.4\include&quot;
+		;&quot;$(SolutionDir)..\dependence\glew-1.7.0\include&quot;
+		;&quot;$(SolutionDir)..\dependence\jsoncpp-src-0.5.0\include\json&quot;
+		;&quot;$(SolutionDir)..\dependence\lpng141&quot;
+		;&quot;$(SolutionDir)..\dependence\zlib&quot;
+		;&quot;$(NIMNBIPAL_INC)&quot;
+		;&quot;$(NIMNBIPAL_INC)\win32&quot;
+		"
+		PreprocessorDefinitions="NBRE_BUILD;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4100;4115;4127;4201;4214;4267"
+	/>
+</VisualStudioPropertySheet>

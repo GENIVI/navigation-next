@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182A43FD18E4387F00558C4E /* maprect2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182A43FC18E4387F00558C4E /* maprect2d.cpp */; };
+		18B3F708196B9CBF00B5A128 /* maplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B3F706196B9CBF00B5A128 /* maplayer.cpp */; };
+		18B3F709196B9CBF00B5A128 /* maptile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B3F707196B9CBF00B5A128 /* maptile.cpp */; };
+		9338092318BC98F3008E060C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9338092218BC98F3008E060C /* Foundation.framework */; };
+		93BC43C518BC9A5D00E66325 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93BC43BF18BC9A5D00E66325 /* camera.cpp */; };
+		93BC43C618BC9A5D00E66325 /* camerahelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93BC43C018BC9A5D00E66325 /* camerahelper.cpp */; };
+		93BC43C718BC9A5D00E66325 /* mapcontroller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93BC43C118BC9A5D00E66325 /* mapcontroller.cpp */; };
+		93BC43C818BC9A5D00E66325 /* mappin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93BC43C218BC9A5D00E66325 /* mappin.cpp */; };
+		93BC43C918BC9A5D00E66325 /* projection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93BC43C418BC9A5D00E66325 /* projection.cpp */; };
+		93DAC34C18D81BC10096C41B /* mapcircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC34B18D81BC10096C41B /* mapcircle.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9338091D18BC98F3008E060C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		182A43FC18E4387F00558C4E /* maprect2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maprect2d.cpp; path = src/maprect2d.cpp; sourceTree = "<group>"; };
+		182A43FE18E4388800558C4E /* maprect2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maprect2d.h; path = include/maprect2d.h; sourceTree = "<group>"; };
+		18B3F704196B9CB500B5A128 /* maplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maplayer.h; path = include/maplayer.h; sourceTree = "<group>"; };
+		18B3F705196B9CB500B5A128 /* maptile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maptile.h; path = include/maptile.h; sourceTree = "<group>"; };
+		18B3F706196B9CBF00B5A128 /* maplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maplayer.cpp; path = src/maplayer.cpp; sourceTree = "<group>"; };
+		18B3F707196B9CBF00B5A128 /* maptile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maptile.cpp; path = src/maptile.cpp; sourceTree = "<group>"; };
+		5226B34418BCA09100C8938C /* mappin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mappin.h; path = include/mappin.h; sourceTree = "<group>"; };
+		9338091F18BC98F3008E060C /* libmap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmap.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9338092218BC98F3008E060C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9338093018BC98F4008E060C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9338093318BC98F4008E060C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		93BC43BF18BC9A5D00E66325 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = camera.cpp; path = src/camera.cpp; sourceTree = "<group>"; };
+		93BC43C018BC9A5D00E66325 /* camerahelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = camerahelper.cpp; path = src/camerahelper.cpp; sourceTree = "<group>"; };
+		93BC43C118BC9A5D00E66325 /* mapcontroller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mapcontroller.cpp; path = src/mapcontroller.cpp; sourceTree = "<group>"; };
+		93BC43C218BC9A5D00E66325 /* mappin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mappin.cpp; path = src/mappin.cpp; sourceTree = "<group>"; };
+		93BC43C418BC9A5D00E66325 /* projection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = projection.cpp; path = src/projection.cpp; sourceTree = "<group>"; };
+		93BC43CA18BC9A6900E66325 /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = camera.h; path = include/camera.h; sourceTree = "<group>"; };
+		93BC43CB18BC9A6900E66325 /* camerahelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = camerahelper.h; path = include/camerahelper.h; sourceTree = "<group>"; };
+		93BC43CC18BC9A6900E66325 /* mapcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapcontroller.h; path = include/mapcontroller.h; sourceTree = "<group>"; };
+		93BC43CD18BC9A6900E66325 /* projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = projection.h; path = include/projection.h; sourceTree = "<group>"; };
+		93DAC34A18D81BB50096C41B /* mapcircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapcircle.h; path = include/mapcircle.h; sourceTree = "<group>"; };
+		93DAC34B18D81BC10096C41B /* mapcircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mapcircle.cpp; path = src/mapcircle.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9338091C18BC98F3008E060C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9338092318BC98F3008E060C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9338091618BC98F3008E060C = {
+			isa = PBXGroup;
+			children = (
+				93BC43BC18BC9A2D00E66325 /* Classes */,
+				9338092118BC98F3008E060C /* Frameworks */,
+				9338092018BC98F3008E060C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9338092018BC98F3008E060C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9338091F18BC98F3008E060C /* libmap.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9338092118BC98F3008E060C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9338092218BC98F3008E060C /* Foundation.framework */,
+				9338093018BC98F4008E060C /* XCTest.framework */,
+				9338093318BC98F4008E060C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93BC43BC18BC9A2D00E66325 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93BC43BE18BC9A4B00E66325 /* include */,
+				93BC43BD18BC9A4200E66325 /* src */,
+			);
+			name = Classes;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		93BC43BD18BC9A4200E66325 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				18B3F706196B9CBF00B5A128 /* maplayer.cpp */,
+				18B3F707196B9CBF00B5A128 /* maptile.cpp */,
+				182A43FC18E4387F00558C4E /* maprect2d.cpp */,
+				93DAC34B18D81BC10096C41B /* mapcircle.cpp */,
+				93BC43BF18BC9A5D00E66325 /* camera.cpp */,
+				93BC43C018BC9A5D00E66325 /* camerahelper.cpp */,
+				93BC43C118BC9A5D00E66325 /* mapcontroller.cpp */,
+				93BC43C218BC9A5D00E66325 /* mappin.cpp */,
+				93BC43C418BC9A5D00E66325 /* projection.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		93BC43BE18BC9A4B00E66325 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				18B3F704196B9CB500B5A128 /* maplayer.h */,
+				18B3F705196B9CB500B5A128 /* maptile.h */,
+				182A43FE18E4388800558C4E /* maprect2d.h */,
+				93DAC34A18D81BB50096C41B /* mapcircle.h */,
+				5226B34418BCA09100C8938C /* mappin.h */,
+				93BC43CA18BC9A6900E66325 /* camera.h */,
+				93BC43CB18BC9A6900E66325 /* camerahelper.h */,
+				93BC43CC18BC9A6900E66325 /* mapcontroller.h */,
+				93BC43CD18BC9A6900E66325 /* projection.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9338091E18BC98F3008E060C /* map */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9338094218BC98F4008E060C /* Build configuration list for PBXNativeTarget "map" */;
+			buildPhases = (
+				9338091B18BC98F3008E060C /* Sources */,
+				9338091C18BC98F3008E060C /* Frameworks */,
+				9338091D18BC98F3008E060C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = map;
+			productName = map;
+			productReference = 9338091F18BC98F3008E060C /* libmap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9338091718BC98F3008E060C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = telecomsys;
+			};
+			buildConfigurationList = 9338091A18BC98F3008E060C /* Build configuration list for PBXProject "map" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9338091618BC98F3008E060C;
+			productRefGroup = 9338092018BC98F3008E060C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9338091E18BC98F3008E060C /* map */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9338091B18BC98F3008E060C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B3F708196B9CBF00B5A128 /* maplayer.cpp in Sources */,
+				93BC43C818BC9A5D00E66325 /* mappin.cpp in Sources */,
+				93BC43C718BC9A5D00E66325 /* mapcontroller.cpp in Sources */,
+				93DAC34C18D81BC10096C41B /* mapcircle.cpp in Sources */,
+				93BC43C918BC9A5D00E66325 /* projection.cpp in Sources */,
+				93BC43C618BC9A5D00E66325 /* camerahelper.cpp in Sources */,
+				18B3F709196B9CBF00B5A128 /* maptile.cpp in Sources */,
+				93BC43C518BC9A5D00E66325 /* camera.cpp in Sources */,
+				182A43FD18E4387F00558C4E /* maprect2d.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9338094018BC98F4008E060C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbgm/$(BRANCH)/nbgmmain/include $(PROJECT_DIR)/../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbui/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/src/map/layermanager $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/tinyxml";
+			};
+			name = Debug;
+		};
+		9338094118BC98F4008E060C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbgm/$(BRANCH)/nbgmmain/include $(PROJECT_DIR)/../../../../nbgm/$(BRANCH)/nbgmmain/include/iphone $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbui/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/src/map/layermanager $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/tinyxml";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9338094318BC98F4008E060C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/map.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "map-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9338094418BC98F4008E060C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/map.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "map-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9338091A18BC98F3008E060C /* Build configuration list for PBXProject "map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9338094018BC98F4008E060C /* Debug */,
+				9338094118BC98F4008E060C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9338094218BC98F4008E060C /* Build configuration list for PBXNativeTarget "map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9338094318BC98F4008E060C /* Debug */,
+				9338094418BC98F4008E060C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9338091718BC98F3008E060C /* Project object */;
+}

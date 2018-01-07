@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{690801C4-5CC5-48EA-8668-4189DBC35A1C}</ProjectGuid>
+    <RootNamespace>unittests</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(NIMCUNIT_INC);$(SolutionDir)\src\enhancedcontent;$(SolutionDir)\include\generated;$(SolutionDir)\include\generated\private;$(SolutionDir)\src\map;$(SolutionDir)\src\map\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4098 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>CUnit.lib;coreservices.lib;nbpal.lib;wsock32.lib;libpng.lib;zlib.lib;NBM.lib;nbgm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMCORE_LIB)\..\$(Configuration);$(NIMNBM_LIB)\debug;$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMTHIRDPARTY_LIB)\..\$(Configuration);$(NIMCUNIT_LIB)\..\$(Configuration);$(OutDir);$(SolutionDir)\resources\win32;$(NIMNBGMMAIN_LIB)\..\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.dll $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.dll $(OutDir)
+copy $(SolutionDir)\src\unittests\tpslib\*.tpl $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(NIMCUNIT_INC);$(SolutionDir)\src\enhancedcontent;$(SolutionDir)\include\generated;$(SolutionDir)\include\generated\private;$(SolutionDir)\src\map;$(SolutionDir)\src\map\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4098 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>CUnit.lib;coreservices.lib;nbpal.lib;wsock32.lib;libpng.lib;zlib.lib;NBM.lib;nbgm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMCORE_LIB)\..\$(Configuration);$(NIMNBM_LIB)\debug;$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMTHIRDPARTY_LIB)\..\$(Configuration);$(NIMCUNIT_LIB)\..\$(Configuration);$(OutDir);$(SolutionDir)\resources\win32;$(NIMNBGMMAIN_LIB)\..\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.dll $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.dll $(OutDir)
+copy $(SolutionDir)\src\unittests\tpslib\*.tpl $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\CUnit\include;$(SolutionDir)\src\enhancedcontent;$(SolutionDir)\include\generated;$(SolutionDir)\include\generated\private;$(SolutionDir)\src\map;$(SolutionDir)\src\map\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4098 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>CUnit.lib;coreservices.lib;nbpal.lib;wsock32.lib;libpng.lib;zlib.lib;nbgm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)\resources\win32;$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.lib $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.lib $(OutDir)
+copy $(SolutionDir)\src\unittests\tpslib\*.tpl $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\unittests;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\cunit\include;$(SolutionDir)\src\enhancedcontent;$(SolutionDir)\include\generated;$(SolutionDir)\include\generated\private;$(SolutionDir)\src\map;$(SolutionDir)\src\map\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4098 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>CUnit.lib;coreservices.lib;nbpal.lib;wsock32.lib;libpng.lib;zlib.lib;nbgm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)unittests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)\resources\win32;$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(NIM_NBM_PATH)\libs\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)unittests.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.lib $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.lib $(OutDir)
+copy $(SolutionDir)\src\unittests\tpslib\*.tpl $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\unittests\main.c" />
+    <ClCompile Include="..\..\src\unittests\networkutil.cpp" />
+    <ClCompile Include="..\..\src\unittests\TestSingleSearchProtocol.cpp" />
+    <ClCompile Include="..\..\src\unittests\winmobile\platformutil.c" />
+    <ClCompile Include="..\..\src\unittests\testcache.cpp" />
+    <ClCompile Include="..\..\src\unittests\testcontentmanager.c" />
+    <ClCompile Include="..\..\src\unittests\testdownload.c" />
+    <ClCompile Include="..\..\src\unittests\testhttpdownloadmanager.cpp" />
+    <ClCompile Include="..\..\src\unittests\testmetadata.c" />
+    <ClCompile Include="..\..\src\unittests\testmobilecoupons.c" />
+    <ClCompile Include="..\..\src\unittests\testpersistentdata.c" />
+    <ClCompile Include="..\..\src\unittests\TestPinCushion.cpp" />
+    <ClCompile Include="..\..\src\unittests\testpinlayer.cpp" />
+    <ClCompile Include="..\..\src\unittests\testpinmanager.cpp" />
+    <ClCompile Include="..\..\src\unittests\testspatial.c" />
+    <ClCompile Include="..\..\src\unittests\testtuple.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\unittests\main.h" />
+    <ClInclude Include="..\..\src\unittests\networkutil.h" />
+    <ClInclude Include="..\..\src\unittests\platformutil.h" />
+    <ClInclude Include="..\..\src\unittests\testcache.h" />
+    <ClInclude Include="..\..\src\unittests\testcachingtilemanager.h" />
+    <ClInclude Include="..\..\src\unittests\testcontentmanager.h" />
+    <ClInclude Include="..\..\src\unittests\testdownload.h" />
+    <ClInclude Include="..\..\src\unittests\testhttpdownloadmanager.h" />
+    <ClInclude Include="..\..\src\unittests\TestMap.h" />
+    <ClInclude Include="..\..\src\unittests\testmetadata.h" />
+    <ClInclude Include="..\..\src\unittests\testmobilecoupons.h" />
+    <ClInclude Include="..\..\src\unittests\testoffboardtilemanager.h" />
+    <ClInclude Include="..\..\src\unittests\testpersistentdata.h" />
+    <ClInclude Include="..\..\src\unittests\TestPinCushion.h" />
+    <ClInclude Include="..\..\src\unittests\testpinlayer.h" />
+    <ClInclude Include="..\..\src\unittests\testpinmanager.h" />
+    <ClInclude Include="..\..\src\unittests\testpoiimagemanager.h" />
+    <ClInclude Include="..\..\src\unittests\TestSingleSearchProtocol.h" />
+    <ClInclude Include="..\..\src\unittests\testspatial.h" />
+    <ClInclude Include="..\..\src\unittests\testtuple.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\unittests\tpslib\tesla.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="analytics.vcxproj">
+      <Project>{d8179dc4-1b90-4508-a404-a3deaa12cd3f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj">
+      <Project>{a4b5bbaa-c27f-4750-bfd9-fc872850b205}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="data.vcxproj">
+      <Project>{19911015-e01e-41a7-b780-d6b979d93f3c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="enhancedcontent.vcxproj">
+      <Project>{407d4fc9-7002-4d4c-a8c6-0d5a8620b9fa}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="geocode.vcxproj">
+      <Project>{f51c6117-abda-4731-9754-e65542864e29}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="gps.vcxproj">
+      <Project>{b5a0a7d4-318b-4636-8ac5-8af99406be1c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="location.vcxproj">
+      <Project>{ee8d99d5-f83d-490e-9c95-8b4129a43fe4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="locationservices.vcxproj">
+      <Project>{fdafc0ff-24cc-4b35-9103-dd8741d9c9d3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="map.vcxproj">
+      <Project>{a902febd-8d16-4409-8a51-e2578471e0c8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="mobilecoupons.vcxproj">
+      <Project>{a5574f10-331e-471d-ba9b-14a81b631f14}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="navigate.vcxproj">
+      <Project>{30a6c8c7-7b89-4c95-8944-989d450bfa61}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="nbservices.vcxproj">
+      <Project>{ba768468-814a-444a-a4d2-3994650dfe80}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="network.vcxproj">
+      <Project>{8b5345db-72d1-4907-8ee6-b90d8a4e2347}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="protocol.vcxproj">
+      <Project>{b8a8fd1f-82fd-4328-a02e-1d215d473483}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="publictransit.vcxproj">
+      <Project>{c8009f09-baa6-48ed-b972-e3523ed9bc1a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="qalogging.vcxproj">
+      <Project>{f695f003-7cf0-4c07-9fb0-6b6ace67c131}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="rastermap.vcxproj">
+      <Project>{b02724e0-4639-4a58-ae3b-cf0bb1c5463d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="rastertile.vcxproj">
+      <Project>{811221ce-d2ba-4e0a-a76a-bc728cf2d3b7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="search.vcxproj">
+      <Project>{499a33e7-782f-40d8-bea3-0a291efaecf4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="singlesearch.vcxproj">
+      <Project>{57675e89-e430-408c-854d-3872a8b89688}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="tileservice.vcxproj">
+      <Project>{1e59f6f8-3d2a-4254-a1dc-194e642e2b3a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="vectortile.vcxproj">
+      <Project>{f98b8e84-ed77-442b-8250-2000067bc041}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="wifiprobes.vcxproj">
+      <Project>{598a91c1-6fc0-40ce-896f-588c0c4659ad}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

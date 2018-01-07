@@ -1,0 +1,74 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * iostream - iostream declarations
+ *
+ * $Id: iostream 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_IOSTREAM_INCLUDED
+#define _RWSTD_IOSTREAM_INCLUDED
+
+#include <iosfwd>
+#include <istream>
+#include <ostream>
+
+#include <rw/_defs.h>
+
+
+#ifndef _RWSTD_NO_STATIC_IOSTREAM_INIT
+
+_RWSTD_NAMESPACE_BEGIN (__rw)
+
+// static stream initializer object defined in every translation unit
+// that (directly or otherwise) #includes this header (except the one
+// that defines iostream objects to prevent undesirable dependencies)
+static _STD::ios_base::Init __rw_stream_initializer;
+
+_RWSTD_NAMESPACE_END   // __rw
+
+#endif   // _RWSTD_NO_STATIC_IOSTREAM_INIT
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+extern istream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (cin);
+extern ostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (cout);
+extern ostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (cerr);
+extern ostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (clog);
+
+#ifndef _RWSTD_NO_WCHAR_T
+
+extern wistream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (wcin);
+extern wostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (wcout);
+extern wostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (wcerr);
+extern wostream _RWSTD_EXPORT _RWSTD_IOSTREAM_OBJECT (wclog);
+
+#endif   // _RWSTD_NO_WCHAR_T
+
+_RWSTD_NAMESPACE_END   // std
+
+#endif   // _RWSTD_IOSTREAM_INCLUDED

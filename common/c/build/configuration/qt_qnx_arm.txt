@@ -1,0 +1,5 @@
+export VERSION_FILE=version_qt_qnx_arm.txt
+export NBM_LIBRARY_PATH=./corelib/nbm/1.4.4.0/qnx_arm
+export NCDB_LIBRARY_PATH=../../../../../core/releases/ncdb/qnx/2.45.1.3
+export PLATFORM=qnx
+export TARGET=qnx_arm

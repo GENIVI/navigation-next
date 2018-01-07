@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MATERIAL>
+    <document>
+        <contributor>
+            <author>TCS</author>
+            <copyright>Copyright 2012, TCS</copyright>
+            <source_data>PIN Material</source_data>
+        </contributor>
+        <created>2012-08-13T15:00:00.0Z</created>
+        <modified></modified>
+        <revision>1.0.0</revision>
+    </document>
+    <library_colors>
+        <color id="background-clr">e8eaebff</color>
+        <color id="gray-clr">808080ff</color>
+        <color id="black-clr">000000ff</color>
+        <color id="cole-clr">141414ff</color>
+        <color id="white-clr">ffffffff</color>
+        <color id="blue-clr">0000ffff</color>
+        <color id="light_gray-clr">c8c8c8ff</color>
+        <color id="medium_gray-clr">969696ff</color>
+        <color id="dark_gray-clr">3f3f3fff</color>
+        <color id="yellow-clr">ffff00ff</color>
+        <color id="water_color-clr">84b4d3ff</color>
+        <color id="park_color-clr">9ccca3ff</color>
+        <color id="local_park_color-clr">bfdbacff</color>
+        <color id="state_park_color-clr">bfdbacff</color>
+        <color id="national_park_color-clr">bfdbacff</color>
+        <color id="forest_color-clr">bfdbacff</color>
+        <color id="other_park_color-clr">bfdbacff</color>
+        <color id="golf_color-clr">bfdbacff</color>
+        <color id="cemetery_color-clr">bfdbacff</color>
+        <color id="campus_color-clr">B3B598ff</color>
+        <color id="interior_color-clr">a9aa9aff</color>
+        <color id="gov_campus_color-clr">dcdcaeff</color>
+        <color id="airport_color-clr">d0d0d0ff</color>
+        <color id="runway_color-clr">b7b7b7ff</color>
+        <color id="built_up_color-clr">e4dfd3ff</color>
+        <color id="sports_color-clr">bbbbafff</color>
+        <color id="hospital_campus_color-clr">cacac2ff</color>
+        <color id="shopping_campus_color-clr">d4d4cbff</color>
+        <color id="government_campus_color-clr">e5e5dcff</color>
+        <color id="university_campus_color-clr">cccdcdff</color>
+        <color id="reservation_color-clr">d5d3bfff</color>
+        <color id="island_color-clr">e8eaebff</color>
+        <color id="military_color-clr">d0d1d2ff</color>
+        <color id="white_glow_color-clr">ffffffff</color>
+        <color id="building_color-clr">adadadff</color>
+        <color id="building_outline_color-clr">aaaaaaff</color>
+        <color id="building_text_color-clr">53636fff</color>
+        <color id="building_text_outline_color-clr">ffffffff</color>
+        <color id="water_text_color-clr">2a508dff</color>
+        <color id="campus_text_color-clr">3c3c3cff</color>
+        <color id="park_text_color-clr">385425ff</color>
+        <color id="state_dotted_border_color-clr">fce278ff</color>
+        <color id="state_border_color-clr">aeaea4ff</color>
+        <color id="state_border_dash_color-clr">aca8a2ff</color>
+        <color id="state_border_dash2_color-clr">c0bc98ff</color>
+        <color id="country_border_color-clr">aeaea4ff</color>
+        <color id="road_regional_color-clr">f2e18fff</color>
+        <color id="road_regional_outline_color-clr">787878ff</color>
+        <color id="limited_toll_color-clr">8dd189ff</color>
+        <color id="toll_outline_color-clr">787878ff</color>
+        <color id="ferry_text_color-clr">2a508dff</color>
+        <!--remember to change this-->
+        <color id="arrow_color-clr">8787d4ff</color>
+        <color id="color_rail_outline-clr">787878ff</color>
+        <color id="color_rail_bg-clr">f6f0e7ff</color>
+        <color id="color_railroad_bg-clr">aeaeaeff</color>
+        <!--add 20110728 begin-->
+        <color id="road_limited_access-clr">ff9554ff</color>
+        <color id="road_arterial-clr">f2e18fff</color>
+        <color id="road_local-clr">ffffffff</color>
+        <color id="road_terminal-clr">ffffffff</color>
+        <color id="road_rotary-clr">ffffffff</color>
+        <color id="road_ramp-clr">fff388ff</color>
+        <color id="road_bridge-clr">ffffffff</color>
+        <color id="road_tunnel-interior-clr">ffffff66</color>
+        <!--Gareth adjusted alpha channel. Was 4c-->
+        <color id="road_skyway-clr">ffffffff</color>
+        <color id="road_ferryboat-clr">ffffffff</color>
+        <color id="road_limited_access_outline-clr">787878ff</color>
+        <color id="road_arterial_outline-clr">787878ff</color>
+        <color id="road_local_outline-clr">787878ff</color>
+        <color id="road_rotary_outline-clr">787878ff</color>
+        <color id="road_ramp_outline-clr">787878ff</color>
+        <color id="road_tunnel_outline-clr">919191ff</color>
+        <!--Gareth changed to offset harsh aliasing-->
+        <color id="road_ferry_outline-clr">787878ff</color>
+        <!--add 20110728 end-->
+        <color id="road_walkway-clr">dadadaff</color>
+        <!--Gareth added walkway color 20110203-->
+        <color id="arrow-clr">8787d4ff</color>
+        <color id="FerryTextOutlineColor">C0C0C0C0</color>
+        <!--remember to change this-->
+        <color id="four-side-gradient-degree0-clr">7a7a7aff</color>
+        <color id="four-side-gradient-degree180-clr">7a7a7aff</color>
+        <color id="four-side-gradient-degree270-clr">4d4d4dff</color>
+        <color id="four-side-gradient-degree90-clr">4d4d4dff</color>
+        <color id="four-side-gradient-top-clr">aaaaaaff</color>
+        <color id="four-side-gradient-bottom-clr">aaaaaaff</color>
+        <color id="road_off-clr">ffffff00</color>
+    </library_colors>
+    <library_images>
+    </library_images>
+    <library_fonts>
+    </library_fonts>
+    <library_materials count="7">
+		<material id="end-flag" name="End flag" index="0">
+            <pin iconIndex="0" callout_xoffset="34" callout_yoffset="100" bubble_xoffset="50" bubble_yoffset="0">
+                <image url="end_flag.png" />
+            </pin>
+        </material>
+		<material id="incident-orange" name="Incident orange" index="1">
+		    <pin iconIndex="0" callout_xoffset="50" callout_yoffset="50" bubble_xoffset="50" bubble_yoffset="0">
+                <image url="incident_orange.png" />
+            </pin>
+        </material>
+		<material id="incident-red" name="Incident red" index="2">
+		    <pin iconIndex="0" callout_xoffset="50" callout_yoffset="50" bubble_xoffset="50" bubble_yoffset="0">
+                <image url="incident_red.png" />
+            </pin>
+        </material>
+		<material id="incident-yellow" name="Incident yellow" index="3">
+		    <pin iconIndex="0" callout_xoffset="50" callout_yoffset="50" bubble_xoffset="50" bubble_yoffset="0">
+                <image url="incident_yellow.png" />
+            </pin>
+        </material>
+		<material id="selected-pin" name="Selected pin" index="4">
+		    <pin iconIndex="0" callout_xoffset="34" callout_yoffset="100" bubble_xoffset="50" bubble_yoffset="10">
+                <image url="selected_pin.png" />
+            </pin>
+        </material>
+		<material id="start-flag" name="Start flag" index="5">
+		    <pin iconIndex="0" callout_xoffset="34" callout_yoffset="100" bubble_xoffset="50" bubble_yoffset="0">
+                <image url="start_flag.png" />
+            </pin>
+        </material>
+		<material id="unselected-pin" name="Unselected pin" index="6">
+		    <pin iconIndex="0" callout_xoffset="34" callout_yoffset="100" bubble_xoffset="50" bubble_yoffset="10">
+                <image url="unselected_pin.png" />
+            </pin>
+        </material>
+    </library_materials>
+    <library_binds>
+    </library_binds>
+    <library_configs>
+        <building id="0" name="building-adjuestment-dat" reduction="0.3" constant="3" />
+        <building id="1" name="landmark-adjuestment-dat" reduction="0.7" constant="0" />
+    </library_configs>
+</MATERIAL>

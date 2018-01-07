@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="nimcoreservices"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="DEBUG_LOG_NONE;NIMCORE_BUILD"
+	/>
+</VisualStudioPropertySheet>

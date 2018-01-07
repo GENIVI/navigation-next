@@ -1,0 +1,291 @@
+TARGET		  		nbservices.dll
+TARGETTYPE	  		DLL
+UID					0 0x1002AAF4
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+MACRO DEBUG_LOG_ALL=1
+MACRO UNUSED_NDEFINED=1
+
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\protected
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\symbian
+
+USERINCLUDE			..\..\include
+USERINCLUDE			..\..\include\private
+USERINCLUDE			..\..\include\protected
+USERINCLUDE			..\..\include\symbian
+
+USERINCLUDE			..\..\src\data
+USERINCLUDE			..\..\src\geocode
+USERINCLUDE			..\..\src\nav
+USERINCLUDE			..\..\src\nbcommon
+USERINCLUDE			..\..\src\network
+USERINCLUDE			..\..\src\proxpoi
+USERINCLUDE			..\..\src\spatial
+USERINCLUDE			..\..\src\util
+
+SOURCEPATH			..\..\src\nbcommon
+SOURCE				nbcontext.c
+SOURCE				nbformat.c
+SOURCE				nbutility.c
+SOURCE				nbtristrip.c
+SOURCE				nbpointiteration.c
+SOURCE				nbpersistentdata.c
+
+SOURCEPATH			..\..\src\analytics
+SOURCE				nbanalytics.c
+SOURCE				nbanalyticseventsconfig.c
+SOURCE				nbanalyticshandler.c
+SOURCE				nbanalyticsinformation.c
+SOURCE				nbanalyticsparameters.c
+SOURCE				nbanalyticseventstailq.c
+SOURCE				nbanalyticseventsdb.c
+
+SOURCEPATH			..\..\src\data
+SOURCE				data_address.c
+SOURCE				data_analytics_events_query.c
+SOURCE				data_analytics_events_reply.c
+SOURCE				data_area.c
+SOURCE				data_blob.c
+SOURCE				data_cache_contents.c
+SOURCE				data_cache_item.c
+SOURCE				data_category.c
+SOURCE				data_country_info.c
+SOURCE				data_cross_street.c
+SOURCE				data_detour_avoid.c
+SOURCE				data_email.c
+SOURCE				data_event.c
+SOURCE				data_event_content.c
+SOURCE				data_event_detail.c
+SOURCE				data_event_performance.c
+SOURCE				data_file.c
+SOURCE				data_format_element.c
+SOURCE				data_formatted_text.c
+SOURCE				data_fuel_pricesummary.c
+SOURCE				data_fuelproduct.c
+SOURCE				data_fueltype.c
+SOURCE				data_geocode_query.c
+SOURCE				data_geocode_reply.c
+SOURCE				data_gps.c
+SOURCE				data_icon.c
+SOURCE				data_image.c
+SOURCE				data_iter_command.c
+SOURCE				data_iter_result.c
+SOURCE				data_line.c
+SOURCE				data_location.c
+SOURCE				data_locmatch.c
+SOURCE				data_map_cache_contents.c
+SOURCE				data_map_descriptor.c
+SOURCE				data_map_query.c
+SOURCE				data_map_reply.c
+SOURCE				data_map_source.c
+SOURCE				data_map_style.c
+SOURCE				data_nav_maneuver.c
+SOURCE				data_nav_progress.c
+SOURCE				data_nav_query.c
+SOURCE				data_nav_reply.c
+SOURCE				data_orgdest.c
+SOURCE				data_pair.c
+SOURCE				data_phone.c
+SOURCE				data_place.c
+SOURCE				data_point.c
+SOURCE				data_polyline.c
+SOURCE				data_polyline_pack.c
+SOURCE				data_position.c
+SOURCE				data_price.c
+SOURCE				data_proxmatch.c
+SOURCE				data_proxmatch_ambiguous.c
+SOURCE				data_proxmatch_content.c
+SOURCE				data_proxmatch_summary.c
+SOURCE				data_proxpoi_query.c
+SOURCE				data_proxpoi_reply.c
+SOURCE				data_rating.c
+SOURCE				data_recalc.c
+SOURCE				data_result_style.c
+SOURCE				data_retrieve_confirmed.c
+SOURCE				data_reverse_geocode_query.c
+SOURCE				data_reverse_geocode_reply.c
+SOURCE				data_road.c
+SOURCE				data_roadinfo.c
+SOURCE				data_route_map.c
+SOURCE				data_route_number_info.c
+SOURCE				data_route_polyline.c
+SOURCE				data_route_style.c
+SOURCE				data_search_filter.c
+SOURCE				data_sliceres.c
+SOURCE				data_speed_camera.c
+SOURCE				data_string.c
+SOURCE				data_traffic_flow.c
+SOURCE				data_traffic_flow_item.c
+SOURCE				data_traffic_incident.c
+SOURCE				data_traffic_incidents.c
+SOURCE				data_traffic_map_reply.c
+SOURCE				data_traffic_map_road.c
+SOURCE				data_traffic_notify_query.c
+SOURCE				data_traffic_notify_reply.c
+SOURCE				data_traffic_record_identifier.c
+SOURCE				data_traffic_region.c
+SOURCE				data_turn_map.c
+SOURCE				data_url.c
+SOURCE				data_vector_map.c
+SOURCE				data_vector_tile.c
+SOURCE				data_vector_tile_corridor.c
+SOURCE				data_vector_tile_descriptor.c
+SOURCE				data_vector_tile_query.c
+SOURCE				data_vector_tile_reply.c
+SOURCE				data_weather_conditions.c
+SOURCE				data_weather_forecast.c
+SOURCE				datautil.c
+SOURCE				data_raster_tile_data_source_query.c
+SOURCE				data_raster_tile_data_source_reply.c
+SOURCE				data_add_favorites_event.c
+SOURCE				data_analytics_config.c
+SOURCE				data_analytics_event.c
+SOURCE				data_analytics_event_destination.c
+SOURCE				data_analytics_event_origin.c
+SOURCE				data_analytics_event_place.c
+SOURCE				data_call_event.c
+SOURCE				data_event_categories.c
+SOURCE				data_gold_events_config.c
+SOURCE				data_golden_cookie.c
+SOURCE				data_gps_offset.c
+SOURCE				data_gps_probes_config.c
+SOURCE				data_gps_probes_event.c
+SOURCE				data_link.c data_map_event.c
+SOURCE				data_overall_rating.c
+SOURCE				data_place_message_event.c
+SOURCE				data_poi_content.c
+SOURCE				data_route_reply_event.c
+SOURCE				data_route_request_event.c
+SOURCE				data_route_state_event.c
+SOURCE				data_route_tracking_config.c
+SOURCE				data_search_detail_event.c
+SOURCE				data_search_query_event.c
+SOURCE				data_tagline.c
+SOURCE				data_want_analytics_config.c
+SOURCE				data_poi_events_config.c
+SOURCE				data_route_corridor.c
+SOURCE				data_pronun_reply.c
+SOURCE				data_pronun_query.c
+SOURCE				data_box.c
+SOURCE				data_impression_event.c
+SOURCE				data_cdma.c
+SOURCE				data_gsm.c
+SOURCE				data_location_error.c
+SOURCE				data_location_position.c
+SOURCE				data_location_query.c
+SOURCE				data_location_reply.c
+SOURCE				data_wifi.c
+SOURCE				data_event_type.c
+SOURCE				data_facebook_update_event.c
+SOURCE				data_place_event_cookie.c
+SOURCE				data_proxpoi_error.c
+SOURCE				data_search_cookie.c
+SOURCE				data_search_event_cookie.c
+SOURCE				data_spelling_suggestion.c
+
+SOURCEPATH			..\..\src\geocode
+SOURCE				nbgeocodehandler.c
+SOURCE				nbgeocodeinformation.c
+SOURCE				nbgeocodeparameters.c
+SOURCE				nbreversegeocodehandler.c
+SOURCE				nbreversegeocodeinformation.c
+SOURCE				nbreversegeocodeparameters.c
+
+SOURCEPATH			..\..\src\gps
+SOURCE				gpscriteriaset.c
+SOURCE				gpshist.c
+SOURCE				gpsutil.c
+SOURCE				nbgpsfilter.c
+
+SOURCEPATH			..\..\src\location
+SOURCE				nblocationhandler.c
+SOURCE				nblocationinformation.c
+SOURCE				nblocationparameters.c
+
+SOURCEPATH			..\..\src\nav
+SOURCE				instructset.c
+SOURCE				nav_avg_speed.c
+SOURCE				navutil.c
+SOURCE				nbcamerainformation.c
+SOURCE				nbcameraprocessor.c
+SOURCE				nbdetourparameters.c
+SOURCE				nbgpshistory.c
+SOURCE				nbguidanceinformation.c
+SOURCE				nbnavigation.c
+SOURCE				nbnavigationstate.c
+SOURCE				nbpositionprocessor.c
+SOURCE				nbrouteinformation.c
+SOURCE				nbroutehandler.c
+SOURCE				nbrouteparameters.c
+SOURCE				nbtraffichandler.c
+SOURCE				nbtrafficinformation.c
+SOURCE				nbtrafficparameters.c
+SOURCE				nbguidanceprocessor.c
+SOURCE				nbtrafficprocessor.c
+SOURCE				nbguidancemessage.c
+SOURCE				nbvectormapprefetchprocessor.c
+SOURCE				nbrecalclimit.c
+SOURCE				nbpointsofinterestinformation.c
+SOURCE				nbpronunhandler.c
+SOURCE				nbpronuninformation.c
+SOURCE				nbpronunparameters.c
+
+SOURCEPATH			..\..\src\network
+SOURCE				nbnetwork.c
+
+SOURCEPATH			..\..\src\proxpoi
+SOURCE				nbsearchhandler.c
+SOURCE				nbsearchinformation.c
+SOURCE				nbsearchparameters.c
+
+SOURCEPATH			..\..\src\qalog
+SOURCE				nbqalog.c
+
+SOURCEPATH			..\..\src\rastermap
+SOURCE				nbrastermaphandler.c
+SOURCE				nbrastermapinformation.c
+SOURCE				nbrastermapparameters.c
+
+SOURCEPATH			..\..\src\rastertile
+SOURCE				nbrastertilemanager.c
+SOURCE				nbrastertiledatasourcehandler.c
+SOURCE				nbrastertiledatasourceinformation.c
+SOURCE				nbrastertiledatasourceparameters.c
+
+SOURCEPATH			..\..\src\spatial
+SOURCE				nbspatial.c
+SOURCE				spatialvector.c
+SOURCE				transformUtility.c
+SOURCE				nbvectortransform.c
+
+SOURCEPATH			..\..\src\util
+SOURCE				format.c
+SOURCE				nbversion.c
+
+SOURCEPATH			..\..\src\vectortile
+SOURCE				nbvectortilehandler.c
+SOURCE				nbvectortileinformation.c
+SOURCE				nbvectortileinformationprivate.c
+SOURCE				nbvectortilemanager.c
+SOURCE				nbvectortileparameters.c
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+LIBRARY				estlib.lib
+
+LIBRARY				nbipal.lib
+LIBRARY				coreservices.lib
+
+#if defined(WINS)
+	DEFFILE bwins\nbservices.def
+#else
+	DEFFILE eabi\nbservices.def
+#endif

@@ -1,0 +1,21 @@
+Instructions on how to build QT_LTK:
+
+win32:
+build_qt.bat                   build all componets with debug&release
+build_qt.bat debug             build all componets with debug
+build_qt.bat release           build all componets with release
+build_qt.bat all               build all componets with debug&release
+build_qt.bat all abservices    only build abservices with debug&release
+build_qt.bat release nbgm      only build nbgm with release
+build_qt.bat clean             make clean all components
+build_qt.bat clean nbgm        make clean nbgm	
+
+linux:
+./build_qt.sh                  build all componets with debug&release
+./build_qt.sh debug            build all componets with debug
+./build_qt.sh release          build all componets with release
+./build_qt.sh all              build all componets with debug&release
+./build_qt.sh all abservices   only build abservices with debug&release
+./build_qt.sh release nbgm     only build nbgm with release
+./build_qt.bat clean           make clean all components
+./build_qt.bat clean nbgm      make clean nbgm	

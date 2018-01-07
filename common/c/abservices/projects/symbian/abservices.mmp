@@ -1,0 +1,202 @@
+TARGET		  		abservices.dll
+TARGETTYPE	  		DLL
+UID					0 0x1002AAF5
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+MACRO DEBUG_LOG_ALL=1
+MACRO UNUSED_NDEFINED=1
+MACRO INCLUDE_DEPRECATED_SENDPLACEMESSAGE=1
+
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\protected
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices\protected
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices\symbian
+
+USERINCLUDE			..\..\include
+USERINCLUDE			..\..\include\private
+USERINCLUDE			..\..\include\symbian
+
+SOURCEPATH			..\..\src\data
+SOURCE				data_asr_field_data.c
+SOURCE				data_asr_recentloc.c
+SOURCE				data_asr_reco_query.c
+SOURCE				data_asr_reco_reply.c
+SOURCE				data_asr_stats_query.c
+SOURCE				data_asr_stats_reply.c
+SOURCE				data_asr_timing.c
+SOURCE				data_asr_utterance.c
+SOURCE				data_datastore.c
+SOURCE				data_datastore_query.c
+SOURCE				data_datastore_reply.c
+SOURCE				data_fileset.c
+SOURCE				data_fileset_query.c
+SOURCE				data_fileset_reply.c
+SOURCE				data_message.c
+SOURCE				data_message_confirm.c
+SOURCE				data_message_confirm_query.c
+SOURCE				data_message_nag.c
+SOURCE				data_message_reply.c
+SOURCE				data_place_message.c
+SOURCE				data_place_msg_banner.c
+SOURCE				data_place_msg_error.c
+SOURCE				data_place_msg_id.c
+SOURCE				data_place_msg_recipient.c
+SOURCE				data_place_msg_recipient_result.c
+SOURCE				data_profile_query.c
+SOURCE				data_profile_reply.c
+SOURCE				data_send_place_message_query.c
+SOURCE				data_send_place_message_reply.c
+SOURCE				data_sync_add_item.c
+SOURCE				data_sync_assign_item_id.c
+SOURCE				data_sync_delete_item.c
+SOURCE				data_sync_error.c
+SOURCE				data_sync_modify_item.c
+SOURCE				data_sync_places_db_query.c
+SOURCE				data_sync_places_db_reply.c
+SOURCE				data_sync_places_db_status_query.c
+SOURCE				data_sync_places_db_status_reply.c
+SOURCE				data_sync_places_query.c
+SOURCE				data_sync_places_reply.c
+SOURCE				data_sync_places_status_query.c
+SOURCE				data_sync_places_status_reply.c
+SOURCE				data_auth_reply.c
+SOURCE				data_auth_query.c
+SOURCE				data_add_feature.c
+SOURCE				data_bind_license.c
+SOURCE				data_feature.c
+SOURCE				data_remove_feature.c
+SOURCE				data_save_optin_response.c
+SOURCE				data_fileset_status_query.c
+SOURCE				data_fileset_status_reply.c
+SOURCE				data_client_stored_message.c
+SOURCE				data_error_msg.c
+SOURCE				data_message_id.c
+SOURCE				data_message_text.c
+SOURCE				data_msg_recipient.c
+SOURCE				data_msg_content.c
+SOURCE				data_place_msg_content.c
+SOURCE				data_send_message_query.c
+SOURCE				data_send_message_reply.c
+SOURCE				data_send_msg_result.c
+SOURCE				data_share_content.c
+SOURCE				data_text_msg_content.c
+SOURCE				data_want_license_message.c
+SOURCE				data_ers_contact.c
+SOURCE				data_ers_query.c
+SOURCE				data_ers_reply.c
+SOURCE				data_bundle.c
+SOURCE				data_error_code.c
+SOURCE				data_license.c
+SOURCE				data_license_query.c
+SOURCE				data_license_reply.c
+SOURCE				data_license_request.c
+SOURCE				data_license_response.c
+SOURCE				data_request.c
+SOURCE				data_response.c
+SOURCE				data_feature_list.c
+SOURCE				data_price_list.c
+SOURCE				data_price_option.c
+SOURCE				data_purchase_option.c
+SOURCE				data_bundle_option.c
+SOURCE				data_subscribed_message.c
+
+SOURCEPATH			..\..\src\datastore
+SOURCE				abdatastorehandler.c
+SOURCE				abdatastoreinformation.c
+SOURCE				abdatastoreparameters.c
+
+SOURCEPATH			..\..\src\fileset
+SOURCE				abfilesethandler.c
+SOURCE				abfilesetinformation.c
+SOURCE				abfilesetparameters.c
+SOURCE				abfilesetstatushandler.c
+SOURCE				abfilesetstatusinformation.c
+SOURCE				abfilesetstatusparameters.c
+
+SOURCEPATH			..\..\src\license
+SOURCE				ablicensehandler.c
+SOURCE				ablicenseinformation.c
+SOURCE				ablicenseparameters.c
+
+SOURCEPATH			..\..\src\motd
+SOURCE				abservermessagehandler.c
+SOURCE				abservermessageinformation.c
+SOURCE				abservermessageparameters.c
+
+SOURCEPATH			..\..\src\msg
+SOURCE				absharehandler.c
+SOURCE				abshareinformation.c
+SOURCE				abshareparameters.c
+
+SOURCEPATH			..\..\src\network
+SOURCE				abnetworkconfiguration.c
+
+SOURCEPATH			..\..\src\profile
+SOURCE				abprofilehandler.c
+SOURCE				abprofileinformation.c
+SOURCE				abprofileparameters.c
+
+SOURCEPATH			..\..\src\qalog
+SOURCE				abqalog.c
+SOURCE				abqaloghandler.c
+SOURCE				abqaloginformation.c
+SOURCE				abqalogparameters.c
+
+SOURCEPATH			..\..\src\sms
+SOURCE				absms.c
+
+SOURCEPATH			..\..\src\speech
+SOURCE				abspeechrecognitionhandler.c
+SOURCE				abspeechrecognitioninformation.c
+SOURCE				abspeechrecognitionparameters.c
+SOURCE				abspeechstatisticshandler.c
+SOURCE				abspeechstatisticsparameters.c
+
+SOURCEPATH			..\..\src\subscription
+SOURCE				abauthenticationhandler.c
+SOURCE				abauthenticationinformation.c
+SOURCE				abauthenticationparameters.c
+
+SOURCEPATH			..\..\src\sync
+SOURCE				absynchronizationhandler.c
+SOURCE				absynchronizationinformation.c
+SOURCE				absynchronizationparameters.c
+SOURCE				absynchronizationstatushandler.c
+SOURCE				absynchronizationstatusinformation.c
+SOURCE				absynchronizationstatusparameters.c
+
+SOURCEPATH			..\..\src\util
+SOURCE				abutil.c
+SOURCE				abversion.c
+
+SOURCEPATH			..\..\src\version
+SOURCE				abserverversionhandler.c
+SOURCE				abserverversioninformation.c
+SOURCE				abserverversionparameters.c
+
+SOURCEPATH			..\..\src\ers
+SOURCE				abershandler.c
+SOURCE				abersinformation.c
+SOURCE				abersparameters.c
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+
+LIBRARY				nbipal.lib
+LIBRARY				coreservices.lib
+LIBRARY				nbservices.lib
+
+#if defined(WINS)
+	DEFFILE bwins\abservices.def
+#else
+	DEFFILE eabi\abservices.def
+#endif

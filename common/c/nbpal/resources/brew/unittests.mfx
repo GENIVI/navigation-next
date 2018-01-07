@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BREWRes Name="unittests" VERSION="1">
+<Strings Encoding="Unicode">
+	<String Id="6" Name="IDS_STRING_6">
+		<Text>Networks In Motion</Text>
+	</String>
+	<String Id="7" Name="IDS_STRING_7">
+		<Text>NIM (C) 2009</Text>
+	</String>
+	<String Id="8" Name="IDS_STRING_8">
+		<Text>1.0.0.0</Text>
+	</String>
+	<String Id="20" Name="IDS_STRING_20">
+		<Text>unittests</Text>
+	</String>
+</Strings>
+<BREWMif>
+	<Module Encoding="Unicode">
+		<!--Author = IDS_STRING_6-->
+		<!--Copyright = IDS_STRING_7-->
+		<!--Version = IDS_STRING_8-->
+		<Privileges>
+			<Privilege Level="File"/>
+			<Privilege Level="Network"/>
+			<Privilege Level="Tapi"/>
+			<Privilege Level="Web"/>
+			<Privilege Level="WriteShared"/>
+			<Privilege Level="PositionLocation"/>
+			<Privilege Level="WriteRinger"/>
+			<Privilege Level="AddressBook"/>
+			<Privilege Level="SectorInfo"/>
+		</Privileges>
+		<Exported/>
+		<MimeTypes/>
+		<Imported/>
+		<ACLs>
+			<ACL Type="fs"/>
+		</ACLs>
+	</Module>
+	<Applets>
+		<Applet BaseId="20" CLSID="0x11111111">
+			<!--Name = IDS_STRING_20-->
+			<Type>0x00000000</Type>
+			<Applethost>0x00000000</Applethost>
+			<Flags/>
+			<Environment/>
+			<Notifications/>
+		</Applet>
+	</Applets>
+</BREWMif>
+</BREWRes>

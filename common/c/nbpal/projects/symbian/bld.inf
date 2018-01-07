@@ -1,0 +1,29 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+nbipal.mmp
+
+PRJ_EXPORTS
+..\..\include\pal.h			\Epoc32\include\NIM\CoreTech\nimnbipal\pal.h
+..\..\include\palclock.h			\Epoc32\include\NIM\CoreTech\nimnbipal\palclock.h
+..\..\include\paldebuglog.h			\Epoc32\include\NIM\CoreTech\nimnbipal\paldebuglog.h
+..\..\include\paldisplay.h			\Epoc32\include\NIM\CoreTech\nimnbipal\paldisplay.h
+..\..\include\paldoxygengroups.h			\Epoc32\include\NIM\CoreTech\nimnbipal\paldoxygengroups.h
+..\..\include\palerror.h			\Epoc32\include\NIM\CoreTech\nimnbipal\palerror.h
+..\..\include\palfile.h			\Epoc32\include\NIM\CoreTech\nimnbipal\palfile.h
+..\..\include\pallog.h			\Epoc32\include\NIM\CoreTech\nimnbipal\pallog.h
+..\..\include\palnet.h			\Epoc32\include\NIM\CoreTech\nimnbipal\palnet.h
+..\..\include\paltimer.h			\Epoc32\include\NIM\CoreTech\nimnbipal\paltimer.h
+..\..\include\palversion.h			\Epoc32\include\NIM\CoreTech\nimnbipal\palversion.h
+
+..\..\include\symbian\palconfig.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\palconfig.h
+..\..\include\symbian\palexp.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\palexp.h
+..\..\include\symbian\palfunc.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\palfunc.h
+..\..\include\symbian\palmath.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\palmath.h
+..\..\include\symbian\palstdlib.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\palstdlib.h
+..\..\include\symbian\paltypes.h			\Epoc32\include\NIM\CoreTech\nimnbipal\symbian\paltypes.h
+

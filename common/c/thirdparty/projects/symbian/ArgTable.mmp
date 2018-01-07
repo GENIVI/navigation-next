@@ -1,0 +1,24 @@
+TARGET		  		ArgTable.lib
+TARGETTYPE	  		LIB
+UID					0 0xE2F78774
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+
+USERINCLUDE			..\..\ArgTable\Include
+
+SOURCEPATH			..\..\ArgTable\Sources
+SOURCE				arg_dbl.c
+SOURCE				arg_end.c
+SOURCE				arg_file.c
+SOURCE				arg_int.c
+SOURCE				arg_lit.c
+SOURCE				arg_rem.c
+SOURCE				arg_str.c
+SOURCE				argtable2.c
+SOURCE				getopt.c
+SOURCE				getopt1.c

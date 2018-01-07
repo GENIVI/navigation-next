@@ -1,0 +1,297 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * ios - Declarations for the Standard Library basic stream I/O
+ *
+ * $Id: ios 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_IOS_INCLUDED
+#define _RWSTD_IOS_INCLUDED
+
+#include <iosfwd>
+
+#ifndef _RWSTD_NO_REDUNDANT_DEFINITIONS
+#  include <streambuf>
+#endif   // _RWSTD_NO_REDUNDANT_DEFINITIONS
+
+#include <rw/_ctype.h>
+#include <rw/_iosbase.h>
+#include <rw/_defs.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+template<class _CharT, class _Traits>
+class basic_ios: public ios_base
+{ 
+public:
+
+    typedef _CharT                          char_type;
+    typedef _Traits                         traits_type;
+    typedef _TYPENAME traits_type::int_type int_type;
+    typedef _TYPENAME traits_type::pos_type pos_type;
+    typedef _TYPENAME traits_type::off_type off_type;
+
+protected:
+
+    typedef basic_streambuf<char_type, traits_type> streambuf_type; 
+    typedef basic_ostream<char_type, traits_type>   ostream_type;
+
+public:
+
+    // 27.4.4.1, p1 - NOTE: `sb' may point to a yet uninitialized
+    //  object; it is unsafe to reference any of its members
+    _EXPLICIT basic_ios (streambuf_type *__sb) {
+        init (__sb);
+    }
+
+    // 27.4.4.3, p1
+    operator void*() const {
+        return fail () ? (void*)0 : (void*)1;
+    }
+
+    // 27.4.4.3, p2
+    bool operator! () const {
+        return fail ();
+    }
+
+    // 27.4.4.3, p3
+    iostate rdstate () const {
+        return _C_state;
+    }
+
+    // extension - throws only exceptions in `mask'
+    iostate clear (iostate __st, iostate __mask);
+
+    // 27.4.4.3, p4
+    void clear (iostate __st = goodbit) {
+        clear (__st, ~0);
+    }
+
+    // extension - throws only exceptions in `mask'
+    iostate setstate (iostate __st, iostate __mask) {
+        return clear (rdstate () | __st, __mask);
+    }
+
+    // 27.4.4.3, p6
+    void setstate (iostate __st) {
+        clear (rdstate () | __st);
+    }
+
+    // 27.4.4.3, p7
+    bool good () const {
+        return goodbit == rdstate ();
+    }
+
+    // 27.4.4.3, p8
+    bool eof () const {
+        return 0 != (rdstate () & eofbit);
+    }
+
+    // 27.4.4.3, p9
+    bool fail () const {
+        return 0 != (rdstate () & (failbit | badbit));
+    }
+
+    // 27.4.4.3, p10
+    bool bad () const {
+        return 0 != (rdstate () & badbit);
+    }
+
+    // 27.4.4.3, p11
+    iostate exceptions () const {
+        return _C_except;
+    }
+
+    // 27.4.4.3, p12
+    void exceptions (iostate);
+
+    // 27.4.4.2, p1
+    ostream_type* tie () const {
+        return _C_tiestrm;
+    }
+
+    // 27.4.4.2, p2
+    ostream_type* tie (ostream_type *__strm) {
+        return _RWSTD_ATOMIC_IO_SWAP (_C_tiestrm, __strm, this->_C_mutex);
+    }
+
+    // 27.4.4.2, p4 - NOTE: the pointer returned from rdbuf() in derived
+    // classes may be different from the one passed to rdbuf (streambuf_type*)
+    streambuf_type* rdbuf () const {
+        return _C_strmbuf;
+    }
+
+    // 27.4.4.2, p5
+    streambuf_type* rdbuf (streambuf_type*);
+
+    // 27.4.4.2, p15
+    basic_ios& copyfmt (const basic_ios&);
+
+    // 27.4.4.2, p12
+    char_type fill () const {
+        return _C_fillch;
+    }
+
+    // 27.4.4.2, p13
+    char_type fill (char_type __c) {
+        return _RWSTD_ATOMIC_IO_SWAP (_C_fillch, __c, this->_C_mutex);
+    }
+
+    // 27.4.4.2, p8
+    locale imbue (const locale&);
+
+    // 27.4.4.2, p10
+    char narrow (char_type __c, char __dflt) const {
+        return _USE_FACET (ctype<char_type>, getloc ()).narrow (__c, __dflt);
+    }
+
+    // 27.4.4.2, p11
+    char_type widen (char __c) const {
+        return _USE_FACET (ctype<char_type>, getloc ()).widen (__c);
+    }
+
+protected:
+
+    // initialization of standard iostream objects may depend on
+    // the default ctor not to re-initialize the object
+    basic_ios () { /* no-op as per 27.4.4.1, p2 */ }
+
+    // 27.4.4.1, p3
+    void init (streambuf_type*);
+
+    // (conditionally) returns a pointer to a mutex in the associated
+    // basic_streambuf object
+    _RW::__rw_mutex* _C_bufmutex () const;
+
+private:
+
+    basic_ios (const basic_ios&);              //  not defined
+    basic_ios& operator= (const basic_ios&);   //  not defined
+
+    streambuf_type *_C_strmbuf;   // pointer to associated streambuf object
+    ostream_type   *_C_tiestrm;   // pointer to tied stream
+    char_type       _C_fillch;    // fill character (space by default)
+};
+
+
+// ios_base::iostate rather ios::iostate used here to make MSVC 6.3 happy
+template<class _CharT, class _Traits>
+inline ios_base::iostate
+basic_ios<_CharT, _Traits>::clear (ios_base::iostate __st   /* = goodbit */,
+                                   ios_base::iostate __mask /* = ~0      */)
+{
+    _RWSTD_MT_GUARD (flags () & _RWSTD_IOS_NOLOCK ? 0 : &_C_mutex);
+
+    return _C_unsafe_clear (rdbuf () ? __st : __st | badbit, __mask);
+}
+
+
+template<class _CharT, class _Traits>
+inline void basic_ios<_CharT, _Traits>::exceptions (iostate __ex)
+{
+    _RWSTD_MT_GUARD (flags () & _RWSTD_IOS_NOLOCK ? 0 : &_C_mutex);
+
+    _C_except = __ex;
+
+    _C_unsafe_clear (rdbuf () ? rdstate () : rdstate () | badbit);
+}
+
+
+template<class _CharT, class _Traits>
+inline _TYPENAME basic_ios<_CharT, _Traits>::streambuf_type* 
+basic_ios<_CharT, _Traits>::rdbuf (streambuf_type *__sb)
+{
+    _RWSTD_MT_GUARD (flags () & _RWSTD_IOS_NOLOCK ? 0 : &_C_mutex);
+
+    streambuf_type *__tmp = _C_strmbuf;
+
+    // 27.4.4.3, p4 - set badbit if buffer pointer is 0
+    _C_unsafe_clear (0 != (_C_strmbuf = __sb) ? goodbit : badbit);
+
+    return __tmp;
+}
+
+
+template<class _CharT, class _Traits>
+inline locale basic_ios<_CharT, _Traits>::imbue (const locale& __loc)
+{
+    _RWSTD_MT_GUARD (flags () & _RWSTD_IOS_NOLOCK ? 0 : &_C_mutex);
+
+    locale __tmp = _C_unsafe_imbue (__loc);
+
+    if (rdbuf ())
+        rdbuf()->pubimbue (__loc);
+
+    return __tmp;
+}
+
+
+template<class _CharT, class _Traits>
+inline _RW::__rw_mutex* basic_ios<_CharT, _Traits>::_C_bufmutex () const
+{
+    _RWSTD_ASSERT (0 != rdbuf ());
+
+#if !defined (_RWSTD_MULTI_THREAD) || defined (_RWSTD_NO_EXT_REENTRANT_IO)
+
+    // unconditionally return pointer to buffer's mutex
+    // (real or fake if not in an MT environment)
+    return &rdbuf ()->_C_mutex;
+
+#else
+
+    // return pointer to buffer's mutex unless the object is in
+    // a state where buffer locking is disabled)
+    return flags () & _RWSTD_IOS_NOLOCKBUF ? 0 : &rdbuf ()->_C_mutex;
+
+#endif   // !_RWSTD_MULTI_THREAD || !_RWSTD_NO_EXT_REENTRANT_IO
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#if _RWSTD_DEFINE_TEMPLATE (BASIC_IOS)
+#  include <ios.cc>
+#endif
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+_RWSTD_INSTANTIATE_2 (class _RWSTD_EXPORT
+                      basic_ios<char, char_traits<char> >);
+
+#ifndef _RWSTD_NO_WCHAR_T
+_RWSTD_INSTANTIATE_2 (class _RWSTD_EXPORT
+                      basic_ios<wchar_t, char_traits<wchar_t> >);
+#endif   // _RWSTD_NO_WCHAR_T
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_IOS_INCLUDED

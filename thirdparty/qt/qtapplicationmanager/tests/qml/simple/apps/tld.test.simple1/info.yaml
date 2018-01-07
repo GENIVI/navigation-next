@@ -1,0 +1,23 @@
+formatVersion: 1
+formatType: am-application
+---
+id:      'tld.test.simple1'
+icon:    'icon.png'
+code:    'app1.qml'
+runtime: 'qml'
+version: '1.0'
+name:
+  en: 'Simple1'
+applicationProperties:
+  ignored: 42
+  protected:
+    pro1: 'pro1'
+    proandpri: 'pro2'
+  private:
+    pri1: 'pri1'
+    proandpri: 'pri2'
+
+mimeTypes: [
+             "x-scheme-handler/x-test",
+             "text/plain"
+           ]

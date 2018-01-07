@@ -1,0 +1,80 @@
+/****************************************************************************
+**
+** Copyright (C) 2017 Pelagicore AG
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Pelagicore Application Manager.
+**
+** $QT_BEGIN_LICENSE:FDL-QTAS$
+** Commercial License Usage
+** Licensees holding valid commercial Qt Automotive Suite licenses may use
+** this file in accordance with the commercial license agreement provided
+** with the Software or, alternatively, in accordance with the terms
+** contained in a written agreement between you and The Qt Company.  For
+** licensing terms and conditions see https://www.qt.io/terms-conditions.
+** For further information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+
+\page howto-apps.html
+\title Writing Applications
+
+Writing an application that can be run as a client within the application-manager is not that
+much different from writing a stand-alone QML application. It basically boils down to three
+additional tasks:
+
+\list 1
+
+    \li If you write a QML application, make the root element of your QML scene an
+    ApplicationManagerWindow (or derive your own custom root item from it).
+
+    \li Provide a valid \l{Manifest definition}{info.yaml} file.
+
+    \li Make the application-manager aware of your application by running \c{appman
+    --recreate-database}.
+
+\endlist
+
+\section2 The Root Element
+
+It is recommended to use either an ApplicationManagerWindow or a QtObject as the root of your QML
+application. This is especially important, if you expect similar behavior in single- and
+multi-process mode. If a QtObject is used, visible base elements should still be
+\l{ApplicationManagerWindow}{ApplicationManagerWindows}. Nevertheless other root elements are
+supported for convenience, as well. Here are a few things to consider:
+\list
+    \li Only \l{ApplicationManagerWindow}{ApplicationManagerWindows} support window properties
+        that are shared between the System-UI and the client applications.
+    \li In multi-porcess mode \l Window root elements will get a decoration (unless
+        QT_WAYLAND_DISABLE_WINDOWDECORATION is set) and will be invisible by default. QQuick
+        \l{Item}{Items} will be wrapped inside a \l Window representing a Wayland client window.
+    \li In single-process mode \l Window root elements will appear parallel to instead of inside
+        the system UI.
+\endlist
+
+\section2 The Manifest and Updating the Database
+
+The \l{Manifest Definition} documentation has all the information to produce a minimal \c info.yaml
+file that should get you going.
+
+Recursively finding and parsing \c info.yaml files for potentially hundreds of applications can
+be a very time consuming task and would severely slow down application-manager's
+startup. Therefore, all manifest files are cached in a binary database. In order to make changes
+to an \c info.yaml file known to the application-manager, you have to force a rebuild of this
+database by calling \c{appman --recreate-database}.
+
+\note Dynamically adding/updating/removing single applications is supported via the
+ApplicationInstaller interface.
+
+*/

@@ -1,0 +1,19 @@
+Trigger Sync:
+
+Secret: "AykaNSVCEcrnhiqacLY+F5aeisd7pmiATyTGMuRS"
+Message: "|S|recents,favorites"
+Encoded: "PSoXEyswMy0xEF4ICR8eEwo4PFg="
+SMS: "//BREW:0103589c:1fe477b15d596d83b61bPSoXEyswMy0xEF4ICR8eEwo4PFg="
+
+Updated New Message:
+Secret: "AykaNSVCEcrnhiqacLY+F5aeisd7pmiATyTGMuRS"
+Message: "9495551212|M|placeinbox|19|1|Joe Smith"
+Encoded: "eE1SVHtmZ3F0UQ4jFBkdAAApMEUkWhkZWEoYBgwnBiR0KjkuOR0="
+SMS: "//BREW:0103589c:92340a3f4d53d1fe84afeE1SVHtmZ3F0UQ4jFBkdAAApMEUkWhkZWEoYBgwnBiR0KjkuOR0="
+
+Place Message Error Notification:
+
+Secret: "AykaNSVCEcrnhiqacLY+F5aeisd7pmiATyTGMuRS"
+Message: "|R|I|d859785d86df1ddb0f165eeac38f09c09e17384e"
+Encoded: "PSsXKDI3bnZ8VEpbDFFHBQV9PU8kBQdUX0YBUhEOWnkySW0kfUw3YnZKU1Ur"
+SMS: "//BREW:0103589c:ca434774022ff13159b7PSsXKDI3bnZ8VEpbDFFHBQV9PU8kBQdUX0YBUhEOWnkySW0kfUw3YnZKU1Ur"

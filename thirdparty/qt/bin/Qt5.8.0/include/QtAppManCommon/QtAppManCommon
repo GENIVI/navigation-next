@@ -1,0 +1,14 @@
+#ifndef QT_QTAPPMANCOMMON_MODULE_H
+#define QT_QTAPPMANCOMMON_MODULE_H
+#include <QtAppManCommon/QtAppManCommonDepends>
+#include "dbus-policy.h"
+#include "dbus-utilities.h"
+#include "error.h"
+#include "exception.h"
+#include "global.h"
+#include "qml-utilities.h"
+#include "qtyaml.h"
+#include "startuptimer.h"
+#include "utilities.h"
+#include "qtappmancommonversion.h"
+#endif

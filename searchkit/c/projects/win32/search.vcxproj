@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\AnalyticsSearchEventManager.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\dbdaofactory.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\poidbdao.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\recentsearchdbdao.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\shortcutdbdao.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\dbdao\suggestlistdbdao.cpp" />
+    <ClCompile Include="..\..\src\datamanager\dao\interface\daofactory.cpp" />
+    <ClCompile Include="..\..\src\datamanager\datamanager.cpp" />
+    <ClCompile Include="..\..\src\datamanager\db\dbcommand.cpp" />
+    <ClCompile Include="..\..\src\datamanager\db\dbconnection.cpp" />
+    <ClCompile Include="..\..\src\datamanager\db\dbmanager.cpp" />
+    <ClCompile Include="..\..\src\datamanager\db\dbreader.cpp" />
+    <ClCompile Include="..\..\src\LocalPlaceManager.cpp" />
+    <ClCompile Include="..\..\src\PlaceStorageManager.cpp" />
+    <ClCompile Include="..\..\src\SearchHistoryManager.cpp" />
+    <ClCompile Include="..\..\src\ShortcutManager.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchConfiguration.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchHandler.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchInformationImpl.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchParameters.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchRequest.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchRequestPrivate.cpp" />
+    <ClCompile Include="..\..\src\SingleSearchTask.cpp" />
+    <ClCompile Include="..\..\src\SuggestListManager.cpp" />
+    <ClCompile Include="..\..\src\SyncPlaceManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\AnalyticsSearchEvent.h" />
+    <ClInclude Include="..\..\include\AnalyticsSearchEventManager.h" />
+    <ClInclude Include="..\..\include\AnalyticsTypes.h" />
+    <ClInclude Include="..\..\include\LocalPlaceManager.h" />
+    <ClInclude Include="..\..\include\private\AnalyticsSearchEventManagerPrivate.h" />
+    <ClInclude Include="..\..\include\private\AnalyticsSearchEventTask.h" />
+    <ClInclude Include="..\..\include\private\ShortcutManagerPrivate.h" />
+    <ClInclude Include="..\..\include\private\SingleSearchHandler.h" />
+    <ClInclude Include="..\..\include\private\SingleSearchInformationImpl.h" />
+    <ClInclude Include="..\..\include\private\SingleSearchParameters.h" />
+    <ClInclude Include="..\..\include\private\SingleSearchRequestPrivate.h" />
+    <ClInclude Include="..\..\include\private\SingleSearchTask.h" />
+    <ClInclude Include="..\..\include\private\SuggestListManagerPrivate.h" />
+    <ClInclude Include="..\..\include\private\SyncPlaceManager.h" />
+    <ClInclude Include="..\..\include\SearchHistoryManager.h" />
+    <ClInclude Include="..\..\include\ShortcutManager.h" />
+    <ClInclude Include="..\..\include\SingleSearchConfiguration.h" />
+    <ClInclude Include="..\..\include\SingleSearchInformation.h" />
+    <ClInclude Include="..\..\include\SingleSearchListener.h" />
+    <ClInclude Include="..\..\include\SingleSearchRequest.h" />
+    <ClInclude Include="..\..\include\SuggestListManager.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\dbdaofactory.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\poidbdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\recentsearchdbdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\shortcutdbdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\dbdao\suggestlistdbdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\interface\daofactory.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\interface\poidao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\interface\recentsearchdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\interface\shortcutdao.h" />
+    <ClInclude Include="..\..\src\datamanager\dao\interface\suggestlistdao.h" />
+    <ClInclude Include="..\..\src\datamanager\datamanager.h" />
+    <ClInclude Include="..\..\src\datamanager\datamanagerdefs.h" />
+    <ClInclude Include="..\..\src\datamanager\db\dbcommand.h" />
+    <ClInclude Include="..\..\src\datamanager\db\dbconnection.h" />
+    <ClInclude Include="..\..\src\datamanager\db\dbmanager.h" />
+    <ClInclude Include="..\..\src\datamanager\db\dbreader.h" />
+    <ClInclude Include="..\..\src\PlaceStorageManager.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>search_w32</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="search.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="search.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="search.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="search.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies />
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\private;..\..\src\datamanager;..\..\src\datamanager\dao\interface;..\..\src\datamanager\dao\dbdao;..\..\src\datamanager\db;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include\private;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include\protected;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies />
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies />
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\private;..\..\src\datamanager;..\..\src\datamanager\dao\interface;..\..\src\datamanager\dao\dbdao;..\..\src\datamanager\db;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include\protected;$(ProjectDir)..\..\..\..\common\$(NIM_BRANCH)\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies />
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

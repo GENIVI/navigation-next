@@ -1,0 +1,6 @@
+export VERSION_FILE=version_qt_linux_x86.txt
+export NBM_LIBRARY_PATH=../../../../../core/releases/nbm/linux/nbm_2.45.0.2_linux
+export NCDB_LIBRARY_PATH=../../../../../core/releases/ncdb/ubuntux86/2.45.0.76
+export TARGET=linux_x86
+export PLATFORM=linux
+

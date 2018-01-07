@@ -1,0 +1,13 @@
+QT_ARCH = x86_64
+QT_GCC_MAJOR_VERSION = 5
+QT_GCC_MINOR_VERSION = 4
+QT_GCC_PATCH_VERSION = 0
+QT.global.enabled_features = shared rpath accessibility c++11 c++14 c++1z concurrent pkg-config
+QT.global.disabled_features = framework debug_and_release simulator_and_device build_all force_asserts separate_debug_info static
+QT_CONFIG += shared rpath accessibility release c++11 c++14 c++1z concurrent dbus mremap reduce_exports reduce_relocations stl
+CONFIG += shared release c++11
+QT_VERSION = 5.8.0
+QT_MAJOR_VERSION = 5
+QT_MINOR_VERSION = 8
+QT_PATCH_VERSION = 0
+QT_EDITION = Preview

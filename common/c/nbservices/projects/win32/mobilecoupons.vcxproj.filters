@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="storerequest">
+      <UniqueIdentifier>{7a2cc024-61e0-47b1-bf41-dc55cf13595d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="couponrequest">
+      <UniqueIdentifier>{bca29c1d-555d-4e4e-8ece-9eece96f4e39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loadimage">
+      <UniqueIdentifier>{ba7294c8-4a5f-4747-8c7b-71e6e3cbe64b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="categorylist">
+      <UniqueIdentifier>{ac51a17b-def3-495d-878e-434e5bbfc51b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\nbmobilecoupons.h">
+      <Filter>Common Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbmobilecouponsprivate.h">
+      <Filter>Common Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbsearchfilter.h">
+      <Filter>Common Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbsearchfilterprivate.h">
+      <Filter>Common Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbstorerequesthandler.h">
+      <Filter>storerequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbstorerequestinformation.h">
+      <Filter>storerequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbstorerequestinformationprivate.h">
+      <Filter>storerequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbstorerequestparameters.h">
+      <Filter>storerequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbstorerequestparametersprivate.h">
+      <Filter>storerequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponrequesthandler.h">
+      <Filter>couponrequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponrequestinformation.h">
+      <Filter>couponrequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcouponrequestinformationprivate.h">
+      <Filter>couponrequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponrequestparameters.h">
+      <Filter>couponrequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcouponrequestparametersprivate.h">
+      <Filter>couponrequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponloadimagehandler.h">
+      <Filter>loadimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponloadimageinformation.h">
+      <Filter>loadimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcouponloadimageinformationprivate.h">
+      <Filter>loadimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcouponloadimageparameters.h">
+      <Filter>loadimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcouponloadimageparametersprivate.h">
+      <Filter>loadimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcategorylisthandler.h">
+      <Filter>categorylist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcategorylistinformation.h">
+      <Filter>categorylist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcategorylistinformationprivate.h">
+      <Filter>categorylist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\protected\nbcategorylistparameters.h">
+      <Filter>categorylist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mobilecoupons\nbcategorylistparametersprivate.h">
+      <Filter>categorylist</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\mobilecoupons\nbmobilecouponsutils.c">
+      <Filter>Common Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbsearchfilter.c">
+      <Filter>Common Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbstorerequesthandler.c">
+      <Filter>storerequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbstorerequestinformation.c">
+      <Filter>storerequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbstorerequestparameters.c">
+      <Filter>storerequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponrequesthandler.c">
+      <Filter>couponrequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponrequestinformation.c">
+      <Filter>couponrequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponrequestparameters.c">
+      <Filter>couponrequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponloadimagehandler.c">
+      <Filter>loadimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponloadimageinformation.c">
+      <Filter>loadimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcouponloadimageparameters.c">
+      <Filter>loadimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcategorylisthandler.c">
+      <Filter>categorylist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcategorylistinformation.c">
+      <Filter>categorylist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mobilecoupons\nbcategorylistparameters.c">
+      <Filter>categorylist</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

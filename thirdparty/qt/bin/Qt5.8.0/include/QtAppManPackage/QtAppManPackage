@@ -1,0 +1,7 @@
+#ifndef QT_QTAPPMANPACKAGE_MODULE_H
+#define QT_QTAPPMANPACKAGE_MODULE_H
+#include <QtAppManPackage/QtAppManPackageDepends>
+#include "packagecreator.h"
+#include "packageextractor.h"
+#include "qtappmanpackageversion.h"
+#endif

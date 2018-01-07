@@ -1,0 +1,3 @@
+singleton MusicProvider 1.0 MusicProvider.qml
+singleton MovieProvider 1.0 MovieProvider.qml
+

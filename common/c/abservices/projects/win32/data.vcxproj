@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6B7B2453-D149-49D9-AFF1-6569D76F3913}</ProjectGuid>
+    <RootNamespace>data</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="abservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="abservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <TargetName>ab$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <TargetName>ab$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\data\data_add_feature.c" />
+    <ClCompile Include="..\..\src\data\data_asr_field_data.c" />
+    <ClCompile Include="..\..\src\data\data_asr_recentloc.c" />
+    <ClCompile Include="..\..\src\data\data_asr_reco_query.c" />
+    <ClCompile Include="..\..\src\data\data_asr_reco_reply.c" />
+    <ClCompile Include="..\..\src\data\data_asr_stats_query.c" />
+    <ClCompile Include="..\..\src\data\data_asr_stats_reply.c" />
+    <ClCompile Include="..\..\src\data\data_asr_timing.c" />
+    <ClCompile Include="..\..\src\data\data_asr_utterance.c" />
+    <ClCompile Include="..\..\src\data\data_auth_query.c" />
+    <ClCompile Include="..\..\src\data\data_auth_reply.c" />
+    <ClCompile Include="..\..\src\data\data_bind_license.c" />
+    <ClCompile Include="..\..\src\data\data_bundle.c" />
+    <ClCompile Include="..\..\src\data\data_bundle_option.c" />
+    <ClCompile Include="..\..\src\data\data_client_stored_message.c" />
+    <ClCompile Include="..\..\src\data\data_datastore.c" />
+    <ClCompile Include="..\..\src\data\data_datastore_query.c" />
+    <ClCompile Include="..\..\src\data\data_datastore_reply.c" />
+    <ClCompile Include="..\..\src\data\data_error_code.c" />
+    <ClCompile Include="..\..\src\data\data_error_msg.c" />
+    <ClCompile Include="..\..\src\data\data_ers_contact.c" />
+    <ClCompile Include="..\..\src\data\data_ers_query.c" />
+    <ClCompile Include="..\..\src\data\data_ers_reply.c" />
+    <ClCompile Include="..\..\src\data\data_feature.c" />
+    <ClCompile Include="..\..\src\data\data_feature_list.c" />
+    <ClCompile Include="..\..\src\data\data_fileset.c" />
+    <ClCompile Include="..\..\src\data\data_fileset_query.c" />
+    <ClCompile Include="..\..\src\data\data_fileset_reply.c" />
+    <ClCompile Include="..\..\src\data\data_fileset_status_query.c" />
+    <ClCompile Include="..\..\src\data\data_fileset_status_reply.c" />
+    <ClCompile Include="..\..\src\data\data_license.c" />
+    <ClCompile Include="..\..\src\data\data_license_query.c" />
+    <ClCompile Include="..\..\src\data\data_license_reply.c" />
+    <ClCompile Include="..\..\src\data\data_license_request.c" />
+    <ClCompile Include="..\..\src\data\data_license_response.c" />
+    <ClCompile Include="..\..\src\data\data_maptile_access_token.c" />
+    <ClCompile Include="..\..\src\data\data_message.c" />
+    <ClCompile Include="..\..\src\data\data_message_confirm.c" />
+    <ClCompile Include="..\..\src\data\data_message_confirm_query.c" />
+    <ClCompile Include="..\..\src\data\data_message_id.c" />
+    <ClCompile Include="..\..\src\data\data_message_nag.c" />
+    <ClCompile Include="..\..\src\data\data_message_reply.c" />
+    <ClCompile Include="..\..\src\data\data_message_text.c" />
+    <ClCompile Include="..\..\src\data\data_msg_content.c" />
+    <ClCompile Include="..\..\src\data\data_msg_recipient.c" />
+    <ClCompile Include="..\..\src\data\data_pin_message.c" />
+    <ClCompile Include="..\..\src\data\data_place_message.c" />
+    <ClCompile Include="..\..\src\data\data_place_message_flags.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_banner.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_content.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_error.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_id.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_recipient.c" />
+    <ClCompile Include="..\..\src\data\data_place_msg_recipient_result.c" />
+    <ClCompile Include="..\..\src\data\data_price_list.c" />
+    <ClCompile Include="..\..\src\data\data_price_option.c" />
+    <ClCompile Include="..\..\src\data\data_product_description.c" />
+    <ClCompile Include="..\..\src\data\data_profile_query.c" />
+    <ClCompile Include="..\..\src\data\data_profile_reply.c" />
+    <ClCompile Include="..\..\src\data\data_promo_code.c" />
+    <ClCompile Include="..\..\src\data\data_purchase_option.c" />
+    <ClCompile Include="..\..\src\data\data_recommended_option.c" />
+    <ClCompile Include="..\..\src\data\data_remove_feature.c" />
+    <ClCompile Include="..\..\src\data\data_request.c" />
+    <ClCompile Include="..\..\src\data\data_response.c" />
+    <ClCompile Include="..\..\src\data\data_save_optin_response.c" />
+    <ClCompile Include="..\..\src\data\data_send_message_query.c" />
+    <ClCompile Include="..\..\src\data\data_send_message_reply.c" />
+    <ClCompile Include="..\..\src\data\data_send_msg_result.c" />
+    <ClCompile Include="..\..\src\data\data_send_place_message_query.c" />
+    <ClCompile Include="..\..\src\data\data_send_place_message_reply.c" />
+    <ClCompile Include="..\..\src\data\data_share_content.c" />
+    <ClCompile Include="..\..\src\data\data_subscribed_message.c" />
+    <ClCompile Include="..\..\src\data\data_sync_add_item.c" />
+    <ClCompile Include="..\..\src\data\data_sync_assign_item_id.c" />
+    <ClCompile Include="..\..\src\data\data_sync_delete_item.c" />
+    <ClCompile Include="..\..\src\data\data_sync_error.c" />
+    <ClCompile Include="..\..\src\data\data_sync_modify_item.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_db_query.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_db_reply.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_db_status_query.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_db_status_reply.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_query.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_reply.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_status_query.c" />
+    <ClCompile Include="..\..\src\data\data_sync_places_status_reply.c" />
+    <ClCompile Include="..\..\src\data\data_text_msg_content.c" />
+    <ClCompile Include="..\..\src\data\data_want_license_message.c" />
+    <ClCompile Include="..\..\src\data\DataOneShotAsrQuery.cpp" />
+    <ClCompile Include="..\..\src\data\DataOneShotAsrReply.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\private\data_add_feature.h" />
+    <ClInclude Include="..\..\include\private\data_asr_field_data.h" />
+    <ClInclude Include="..\..\include\private\data_asr_recentloc.h" />
+    <ClInclude Include="..\..\include\private\data_asr_reco_query.h" />
+    <ClInclude Include="..\..\include\private\data_asr_reco_reply.h" />
+    <ClInclude Include="..\..\include\private\data_asr_stats_query.h" />
+    <ClInclude Include="..\..\include\private\data_asr_stats_reply.h" />
+    <ClInclude Include="..\..\include\private\data_asr_timing.h" />
+    <ClInclude Include="..\..\include\private\data_asr_utterance.h" />
+    <ClInclude Include="..\..\include\private\data_auth_query.h" />
+    <ClInclude Include="..\..\include\private\data_auth_reply.h" />
+    <ClInclude Include="..\..\include\private\data_bind_license.h" />
+    <ClInclude Include="..\..\include\private\data_bundle.h" />
+    <ClInclude Include="..\..\include\private\data_bundle_option.h" />
+    <ClInclude Include="..\..\include\private\data_client_stored_message.h" />
+    <ClInclude Include="..\..\include\private\data_datastore.h" />
+    <ClInclude Include="..\..\include\private\data_datastore_query.h" />
+    <ClInclude Include="..\..\include\private\data_datastore_reply.h" />
+    <ClInclude Include="..\..\include\private\data_error_code.h" />
+    <ClInclude Include="..\..\include\private\data_error_msg.h" />
+    <ClInclude Include="..\..\include\private\data_ers_contact.h" />
+    <ClInclude Include="..\..\include\private\data_ers_query.h" />
+    <ClInclude Include="..\..\include\private\data_ers_reply.h" />
+    <ClInclude Include="..\..\include\private\data_feature.h" />
+    <ClInclude Include="..\..\include\private\data_feature_list.h" />
+    <ClInclude Include="..\..\include\private\data_fileset.h" />
+    <ClInclude Include="..\..\include\private\data_fileset_query.h" />
+    <ClInclude Include="..\..\include\private\data_fileset_reply.h" />
+    <ClInclude Include="..\..\include\private\data_fileset_status_query.h" />
+    <ClInclude Include="..\..\include\private\data_fileset_status_reply.h" />
+    <ClInclude Include="..\..\include\private\data_license.h" />
+    <ClInclude Include="..\..\include\private\data_license_query.h" />
+    <ClInclude Include="..\..\include\private\data_license_reply.h" />
+    <ClInclude Include="..\..\include\private\data_license_request.h" />
+    <ClInclude Include="..\..\include\private\data_license_response.h" />
+    <ClInclude Include="..\..\include\private\data_maptile_access_token.h" />
+    <ClInclude Include="..\..\include\private\data_message.h" />
+    <ClInclude Include="..\..\include\private\data_message_confirm.h" />
+    <ClInclude Include="..\..\include\private\data_message_confirm_query.h" />
+    <ClInclude Include="..\..\include\private\data_message_id.h" />
+    <ClInclude Include="..\..\include\private\data_message_nag.h" />
+    <ClInclude Include="..\..\include\private\data_message_reply.h" />
+    <ClInclude Include="..\..\include\private\data_message_text.h" />
+    <ClInclude Include="..\..\include\private\data_msg_content.h" />
+    <ClInclude Include="..\..\include\private\data_msg_recipient.h" />
+    <ClInclude Include="..\..\include\private\data_pin_message.h" />
+    <ClInclude Include="..\..\include\private\data_place_message.h" />
+    <ClInclude Include="..\..\include\private\data_place_message_flags.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_banner.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_content.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_error.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_id.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_recipient.h" />
+    <ClInclude Include="..\..\include\private\data_place_msg_recipient_result.h" />
+    <ClInclude Include="..\..\include\private\data_price_list.h" />
+    <ClInclude Include="..\..\include\private\data_price_option.h" />
+    <ClInclude Include="..\..\include\private\data_product_description.h" />
+    <ClInclude Include="..\..\include\private\data_profile_query.h" />
+    <ClInclude Include="..\..\include\private\data_profile_reply.h" />
+    <ClInclude Include="..\..\include\private\data_promo_code.h" />
+    <ClInclude Include="..\..\include\private\data_purchase_option.h" />
+    <ClInclude Include="..\..\include\private\data_recommended_option.h" />
+    <ClInclude Include="..\..\include\private\data_remove_feature.h" />
+    <ClInclude Include="..\..\include\private\data_request.h" />
+    <ClInclude Include="..\..\include\private\data_response.h" />
+    <ClInclude Include="..\..\include\private\data_save_optin_response.h" />
+    <ClInclude Include="..\..\include\private\data_send_message_query.h" />
+    <ClInclude Include="..\..\include\private\data_send_message_reply.h" />
+    <ClInclude Include="..\..\include\private\data_send_msg_result.h" />
+    <ClInclude Include="..\..\include\private\data_send_place_message_query.h" />
+    <ClInclude Include="..\..\include\private\data_send_place_message_reply.h" />
+    <ClInclude Include="..\..\include\private\data_share_content.h" />
+    <ClInclude Include="..\..\include\private\data_subscribed_message.h" />
+    <ClInclude Include="..\..\include\private\data_sync_add_item.h" />
+    <ClInclude Include="..\..\include\private\data_sync_assign_item_id.h" />
+    <ClInclude Include="..\..\include\private\data_sync_delete_item.h" />
+    <ClInclude Include="..\..\include\private\data_sync_error.h" />
+    <ClInclude Include="..\..\include\private\data_sync_modify_item.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_db_query.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_db_reply.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_db_status_query.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_db_status_reply.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_query.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_reply.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_status_query.h" />
+    <ClInclude Include="..\..\include\private\data_sync_places_status_reply.h" />
+    <ClInclude Include="..\..\include\private\data_text_msg_content.h" />
+    <ClInclude Include="..\..\include\private\data_want_license_message.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

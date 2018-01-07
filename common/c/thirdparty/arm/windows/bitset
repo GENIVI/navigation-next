@@ -1,0 +1,527 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * <bitset> - definition of the bitset template
+ *
+ * $Id: bitset 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_BITSET_INCLUDED
+#define _RWSTD_BITSET_INCLUDED
+
+
+#include <iosfwd>
+#include <string>
+
+#include <rw/_defs.h>
+#include <rw/_error.h>
+
+#include _RWSTD_CLIMITS
+#include _RWSTD_CSTDDEF
+
+
+_RWSTD_NAMESPACE_BEGIN (__rw)
+
+// helper, implements bitset<>::count()
+_RWSTD_C::size_t
+__rw_bit_count (const unsigned long*, _RWSTD_C::size_t) _THROWS (());
+
+// helpers, implement bitset<>::operator<<=() and operator>>=()
+void __rw_shl (unsigned long*, _RWSTD_C::size_t, _RWSTD_C::size_t) _THROWS (());
+void __rw_shr (unsigned long*, _RWSTD_C::size_t, _RWSTD_C::size_t) _THROWS (());
+
+_RWSTD_NAMESPACE_END   // __rw
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+template <size_t _Size>
+class bitset
+{
+    enum { _C_elembits = CHAR_BIT * sizeof (unsigned long) };
+    enum { _C_nelems   = _Size ? 1 + (_Size - 1) / _C_elembits : 0 };
+
+    // must have at least one element even if size is 0
+    unsigned long _C_bits [_C_nelems ? _C_nelems : 1];
+
+    bool _C_valid_pos (size_t __pos) const _THROWS (()) {
+        // prevent warnings if _Size == 0
+        return _Size + 1 > __pos + 1;
+    }
+
+public:
+
+    class reference {
+        friend class bitset<_Size>;
+
+        bitset<_Size>& _C_ref;
+        size_t         _C_pos;
+
+        reference (bitset<_Size> &__r, size_t __p) _THROWS (())
+            : _C_ref (__r), _C_pos (__p) { }
+    public:
+
+        reference& operator= (bool __val) _THROWS (()) {
+            return _C_ref.set (_C_pos, __val), *this;
+        }
+
+        reference& operator= (const reference &__rhs) _THROWS (()) {
+            return *this = bool (__rhs);
+        }
+
+        bool operator~ () const _THROWS (()) {
+            return !bool (*this);
+        }
+
+        operator bool () const _THROWS (()) {
+            return _RWSTD_CONST_CAST (const bitset<_Size>&, _C_ref)[_C_pos];
+        }
+
+        reference& flip () _THROWS (()) { 
+            return _C_ref.flip (_C_pos), *this;
+        }
+    };
+
+    // 23.3.5.1, p1
+    bitset () _THROWS (()) {
+        reset ();
+    }
+
+    // 23.3.5.1, p2
+    bitset (unsigned long __n) _THROWS (()) {
+        reset ();
+        _C_bits [0] =
+            __n & (~0UL >> ((_Size > _C_elembits ? 0 :
+                             _C_elembits - _Size % _C_elembits) % _C_elembits));
+    }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+
+    // using string::npos below rather than basic_string<...>::npos
+    // to work around a bug in g++ 2.95.2
+
+    // 23.3.5.1, p3
+    template <class _CharT, class _Traits, class _Allocator>
+    _EXPLICIT
+    bitset (const basic_string<_CharT, _Traits, _Allocator>&,
+            _TYPENAME basic_string<_CharT, _Traits,
+                                   _Allocator>::size_type = 0,
+            _TYPENAME basic_string<_CharT, _Traits,
+                                   _Allocator>::size_type = string::npos);
+#else
+
+    // 23.3.5.1, p3
+    _EXPLICIT bitset (const string&, size_t = 0, size_t = (size_t (-1)));
+
+#endif // _RWSTD_NO_MEMBER_TEMPLATES
+
+
+    // 23.3.5.2, p1
+    bitset& operator&= (const bitset &__rhs) _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; ++__i)
+            _C_bits [__i] &= __rhs._C_bits [__i];
+        return *this;
+    }
+
+    // 23.3.5.2, p3
+    bitset& operator|= (const bitset &__rhs) _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; ++__i)
+            _C_bits[__i] |= __rhs._C_bits [__i];
+        return *this;
+    }
+
+    // 23.3.5.2, p5
+    bitset& operator^= (const bitset& __rhs) _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; ++__i)
+            _C_bits [__i] ^= __rhs._C_bits [__i];
+        return *this;
+    }
+
+    // 23.3.5.2, p7
+    bitset& operator<<= (size_t) _THROWS (());
+
+    // 23.3.5.2, p9
+    bitset& operator>>= (size_t) _THROWS (());
+
+    // 23.3.5.2, p11
+    bitset& set () _THROWS (());
+
+    // 23.3.5.2, p13: follows proposed resolution of lwg issue 186
+    bitset& set (size_t, bool = true);
+
+    // 23.3.5.2, p17
+    bitset& reset () _THROWS (()) {
+        return 1 == _C_nelems ? (void)(_C_bits [0] = 0)
+            : (void)memset (_C_bits, 0, sizeof (_C_bits)), *this;
+    }
+
+    // 23.3.5.2, p19
+    bitset& reset (size_t __pos) {
+        return set (__pos, false);
+    }
+
+    // 23.3.5.2, p23
+    bitset operator~ () const _THROWS (()) {
+        return bitset (*this).flip ();
+    }
+
+    // 23.3.5.2, p25
+    bitset& flip () _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; __i++) 
+            _C_bits [__i] = ~_C_bits [__i];
+        _C_bits [_C_nelems - !!_C_nelems] &=
+            ~0UL >> (_C_elembits - _Size % _C_elembits) % _C_elembits;
+        return *this;
+    }
+
+    // 23.3.5.2, p27
+    bitset& flip (size_t __pos) {
+        _RWSTD_REQUIRES (_C_valid_pos (__pos),
+                         (_RWSTD_ERROR_OUT_OF_RANGE,
+                          _RWSTD_FUNC ("bitset::flip(size_t)"),
+                          __pos, _C_nelems));
+
+        _C_bits [__pos / _C_elembits] ^= 1UL << __pos % _C_elembits;
+        return *this;
+    }
+
+    // 23.3.5.2, p??
+    bool operator[] (size_t __pos) const _THROWS (()) {
+        _RWSTD_ASSERT (_C_valid_pos (__pos));
+        return !!(_C_bits [__pos / _C_elembits] & (1UL << __pos % _C_elembits));
+    }
+
+    // 23.3.5.2, p??
+    reference operator[] (size_t __pos) _THROWS (()) {
+        _RWSTD_ASSERT (_C_valid_pos (__pos));
+        return reference (*this, __pos); 
+    }
+
+    // 23.3.5.2, p31
+    unsigned long to_ulong () const;
+
+#if    !defined (_RWSTD_NO_MEMBER_TEMPLATES) \
+    && !defined (_RWSTD_NO_TEMPLATE_ON_RETURN_TYPE)
+
+    // 23.3.5.2, p33
+    template <class _CharT, class _Traits, class _Allocator>
+    basic_string<_CharT, _Traits, _Allocator> to_string () const;
+
+# define _RWSTD_BITSET_TO_STRING(char_type) \
+    template to_string<char_type, _Traits, allocator <char_type> > ()
+
+#else
+
+    // 23.3.5.2, p33
+    string to_string () const;
+
+# define _RWSTD_BITSET_TO_STRING(ignore)  to_string ()
+
+#endif   // !_RWSTD_NO_MEMBER_TEMPLATES && !_RWSTD_NO_TEMPLATE_ON_RETURN_TYPE
+
+    // 23.3.5.2, p35
+    size_t count () const _THROWS (()) {
+        return _Size ? _RW::__rw_bit_count (_C_bits, _C_nelems) : 0;
+    }
+
+    // 23.3.5.2, p36
+    size_t size () const _THROWS (()) {
+        return _Size;
+    }
+
+    // 23.3.5.2, p37
+    bool operator== (const bitset& __rhs) const _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; ++__i)
+            if (_C_bits [__i] != __rhs._C_bits [__i])
+                return false;
+        return true;
+    }
+
+    // 23.3.5.2, p38
+    bool operator!= (const bitset& __rhs) const _THROWS (()) {
+        return !(*this == __rhs);
+    }
+
+    // 23.3.5.2, p39
+    bool test (size_t __pos) const {
+        _RWSTD_REQUIRES (_C_valid_pos (__pos),
+                         (_RWSTD_ERROR_OUT_OF_RANGE,
+                          _RWSTD_FUNC ("bitset::test(size_t) const"),
+                          __pos, _C_nelems));
+
+        return !!(_C_bits [__pos / _C_elembits] & (1UL << __pos % _C_elembits));
+    }
+
+    // 23.3.5.2, p42
+    bool any () const _THROWS (()) {
+        for (size_t __i = 0; __i != _C_nelems; ++__i)
+            if (_C_bits [__i])
+                return true;
+        return false;
+    }
+
+    // 23.3.5.2, p43
+    bool none () const _THROWS (()) {
+        return !any ();
+    }
+
+    // 23.3.5.2, p44
+    bitset operator<< (size_t __pos) const _THROWS (()) {
+        return bitset (*this) <<= __pos;
+    }
+
+    // 23.3.5.2, p45
+    bitset operator>> (size_t __pos) const _THROWS (()) {
+        return bitset (*this) >>= __pos;
+    }
+};
+
+
+// 23.3.5.2, p11
+template <size_t _Size>
+inline bitset<_Size>&
+bitset<_Size>::set () _THROWS (())
+{
+    if (_C_nelems == 1)
+        _C_bits [0] = ~0;
+    else
+        memset (_C_bits, ~0, sizeof _C_bits);
+
+    _C_bits [_C_nelems - !!_C_nelems] >>=
+        (_C_elembits - _Size % _C_elembits) % _C_elembits;
+
+    return *this;
+}
+
+
+// 23.3.5.2, p13
+template <size_t _Size>
+inline bitset<_Size>&
+bitset<_Size>::set (size_t __pos, bool __val)
+{
+    _RWSTD_REQUIRES (_C_valid_pos (__pos),
+                     (_RWSTD_ERROR_OUT_OF_RANGE,
+                      _RWSTD_FUNC ("bitset::set(size_t, bool)"),
+                      __pos, _C_nelems));
+
+    if (__val)
+        _C_bits [__pos / _C_elembits] |=  (1UL << __pos % _C_elembits);
+    else
+        _C_bits [__pos / _C_elembits] &= ~(1UL << __pos % _C_elembits);
+    return *this;
+}
+
+
+// 23.3.5.2, p7
+template <size_t _Size>
+inline bitset<_Size>&
+bitset<_Size>::operator<<= (size_t __n) _THROWS (())
+{
+    if (_Size > _C_elembits)
+        _RW::__rw_shl (_C_bits, _C_nelems, __n);
+    else
+        _C_bits [0] <<= __n;
+
+    // clear bits shifted past the MSB
+    if (_Size % _C_elembits) {
+        // prevent warnings about shifting too far
+        _C_bits [_C_nelems - 1] &=
+            ~0UL >> (_C_elembits - _Size % _C_elembits) % _C_elembits;
+    }
+    return *this;
+}
+
+
+// 23.3.5.2, p9
+template <size_t _Size>
+inline bitset<_Size>&
+bitset<_Size>::operator>>= (size_t __n) _THROWS (())
+{
+    if (_Size > _C_elembits)
+        _RW::__rw_shr (_C_bits, _C_nelems, __n);
+    else
+        _C_bits [0] >>= __n;
+    return *this;
+}
+
+
+// 23.3.5.2, p31
+template <size_t _Size>
+inline unsigned long
+bitset<_Size>::to_ulong () const
+{
+    // add 1 to prevent warnings about pointless comparison with 0
+    for (size_t __i = 1; __i + 1 < _C_nelems + 1; ++__i)
+        _RWSTD_REQUIRES (!_C_bits[__i],
+                         (_RWSTD_ERROR_OVERFLOW_ERROR,
+                          _RWSTD_FUNC ("bitset::to_ulong() const")));
+
+    return _C_bits [0];
+} 
+
+
+#if    !defined (_RWSTD_NO_MEMBER_TEMPLATES) \
+    && !defined (_RWSTD_NO_TEMPLATE_ON_RETURN_TYPE)
+
+// 23.3.5.2, p33
+template <size_t _Size>
+template <class _CharT, class _Traits, class _Allocator>
+inline basic_string<_CharT, _Traits, _Allocator>
+bitset<_Size>::to_string () const 
+{
+    // extension: allocate but do not initialize
+    basic_string<_CharT, _Traits, _Allocator> __s ((_CharT*)0, _Size);
+
+    for (size_t __i = 0; __i != _Size; ++__i)
+        _Traits::assign (__s [_Size - 1 - __i], (*this)[__i] ? '1' : '0');
+
+    return __s;
+}
+
+#else   // _RWSTD_NO_MEMBER_TEMPLATES || _RWSTD_NO_TEMPLATE_ON_RETURN_TYPE
+
+// 23.3.5.2, p33
+template <size_t _Size>
+inline string bitset<_Size>::to_string () const 
+{
+    // extension: allocate but do not initialize
+    string __s ((char*)0, _Size);
+
+    for (size_t __i = 0; __i != _Size; ++__i)
+        __s [_Size - 1 - __i] = (*this)[__i] ? '1' : '0';
+
+    return __s;
+}
+
+#endif   // !_RWSTD_NO_MEMBER_TEMPLATES && !_RWSTD_NO_TEMPLATE_ON_RETURN_TYPE
+
+
+// 23.3.5.3, p1
+template <size_t _Size>
+inline bitset<_Size>
+operator& (const bitset<_Size>& __lhs, const bitset<_Size>& __rhs) _THROWS (())
+{
+    return bitset<_Size>(__lhs) &= __rhs;
+}
+
+
+// 23.3.5.3, p2
+template <size_t _Size>
+inline bitset<_Size>
+operator| (const bitset<_Size>& __lhs, const bitset<_Size>& __rhs) _THROWS (())
+{
+    return bitset<_Size>(__lhs) |= __rhs;
+}
+
+
+// 23.3.5.3, p3
+template <size_t _Size>
+inline bitset<_Size> 
+operator^ (const bitset<_Size>& __lhs, const bitset<_Size>& __rhs) _THROWS (())
+{
+    return bitset<_Size>(__lhs) ^= __rhs;
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+_RWSTD_NAMESPACE_BEGIN (__rw)
+
+template <class _CharT, class _Traits, size_t _Size> 
+_STD::basic_istream<_CharT, _Traits>&  
+__rw_extract_bitset (_STD::basic_istream<_CharT, _Traits>&,
+                     _STD::bitset<_Size>&);
+
+_RWSTD_NAMESPACE_END   // __rw
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+#if !defined (_MSC_VER) || _MSC_VER > 1300
+
+// 23.3.5.3, p8
+template <class _CharT, class _Traits, size_t _Size> 
+inline basic_ostream<_CharT,_Traits>&  
+operator<< (basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+{
+    return __os << __x._RWSTD_BITSET_TO_STRING (_CharT);
+}
+
+
+// 23.3.5.3, p4
+template <class _CharT, class _Traits, size_t _Size> 
+inline basic_istream<_CharT,_Traits>&  
+operator>> (basic_istream<_CharT, _Traits>& __strm, bitset<_Size>& __x)
+{
+    return _RW::__rw_extract_bitset (__strm, __x);
+}
+
+#else   // if defined (_MSC_VER) && _MSC_VER <= 1300
+
+template <size_t _Size> 
+inline ostream& operator<< (ostream &__strm, const bitset<_Size>& __x)
+{
+    return __strm << __x._RWSTD_BITSET_TO_STRING (char);
+}
+
+template <size_t _Size> 
+inline istream& operator>> (istream &__strm, bitset<_Size>& __x)
+{
+    // working around three (yes, 3) MSVC 6.0 bugs
+    istream *__tmp = 0;
+    __tmp = &_RW::__rw_extract_bitset (__strm, __x);
+    return *__tmp;
+}
+
+template <size_t _Size> 
+inline wostream& operator<< (wostream &__strm, const bitset<_Size>& __x)
+{
+    string __s = __x.to_string ();
+    wstring __tmp (0, __s.length ());   // extension: allocate uninitialzed
+    for (string::size_type __i = 0; __i != __tmp.size (); ++__i)
+        __tmp [__i] = __s [__i];
+    return __strm << __tmp;
+}
+
+template <size_t _Size> 
+inline wistream& operator>> (wistream &__strm, bitset<_Size>& __x)
+{
+    return _RW::__rw_extract (__strm, __x);
+}
+
+#endif   // !defined (_MSC_VER) || _MSC_VER > 1300
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#ifdef _RWSTD_COMPILE_INSTANTIATE
+#  include <bitset.cc>
+#endif
+
+
+#endif   // _RWSTD_BITSET_INCLUDED

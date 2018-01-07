@@ -1,0 +1,169 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * stack - Declaration for the Standard Library stack class
+ *
+ * $Id: stack 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_STACK_INCLUDED
+#define _RWSTD_STACK_INCLUDED
+
+#include <deque>
+#include <rw/_defs.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+template <class _TypeT,
+          class _Container _RWSTD_COMPLEX_DEFAULT (deque<_TypeT>) > 
+class stack;
+
+
+template <class _TypeT, class _Container>
+inline bool operator==(const stack<_TypeT, _Container>&, 
+                       const stack<_TypeT, _Container>&);
+
+template <class _TypeT, class _Container>
+inline bool operator<(const stack<_TypeT, _Container>&, 
+                      const stack<_TypeT, _Container>&);
+
+template <class _TypeT, class _Container>
+class stack
+{
+    friend bool _RWSTD_SPECIALIZED_FRIEND (operator==)
+        (const stack&, const stack&);
+
+    friend bool _RWSTD_SPECIALIZED_FRIEND (operator<)
+        (const stack&, const stack&);
+
+public:
+    
+    typedef _Container                                container_type;
+    typedef _TYPENAME container_type::value_type      value_type;
+    typedef _TYPENAME container_type::size_type       size_type;
+    typedef _TYPENAME container_type::reference       reference;
+    typedef _TYPENAME container_type::const_reference const_reference;
+
+protected:
+    
+    container_type c;
+
+public:
+    _EXPLICIT
+    stack (const container_type &__c _RWSTD_DEFAULT_ARG (container_type())) 
+        : c (__c) { }
+
+#ifdef _RWSTD_NO_DEFAULT_TEMPLATE_ARGS    
+    stack () : c (container_type ()) { }
+#endif
+
+    bool empty () const {
+        return c.empty();
+    }
+
+    size_type size () const {
+        return c.size ();
+    }
+
+    reference top () {
+        return c.back ();
+    }
+
+    const_reference top () const {
+        return c.back();
+    }
+
+    void push (const value_type& __x) {
+        c.push_back (__x);
+    }
+
+    void pop () {
+        c.pop_back ();
+    }
+};
+
+
+template <class _TypeT, class _Container>
+inline bool operator== (const stack<_TypeT, _Container>& __x, 
+                        const stack<_TypeT, _Container>& __y)
+{
+    return __x.c == __y.c;
+}
+
+template <class _TypeT, class _Container>
+inline bool operator< (const stack<_TypeT, _Container>& __x, 
+                       const stack<_TypeT, _Container>& __y)
+{
+    return __x.c < __y.c;
+}
+
+template <class _TypeT, class _Container>
+inline bool operator!= (const stack<_TypeT, _Container>& __x, 
+                        const stack<_TypeT, _Container>& __y)
+{
+    return !(__x == __y);
+}
+
+template <class _TypeT, class _Container>
+inline bool operator> (const stack<_TypeT, _Container>& __x, 
+                       const stack<_TypeT, _Container>& __y)
+{
+    return __y < __x;
+}
+
+template <class _TypeT, class _Container>
+inline bool operator>= (const stack<_TypeT, _Container>& __x, 
+                        const stack<_TypeT, _Container>& __y)
+{
+    return !(__x < __y);
+}
+
+template <class _TypeT, class _Container>
+inline bool operator<= (const stack<_TypeT, _Container>& __x, 
+                        const stack<_TypeT, _Container>& __y)
+{
+    return !(__y <  __x);
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+#endif   // _RWSTD_STACK_INCLUDED

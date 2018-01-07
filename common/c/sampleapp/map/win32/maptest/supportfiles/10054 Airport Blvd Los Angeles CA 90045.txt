@@ -1,0 +1,32 @@
+#navigation options for US_SNA GPS file
+
+# Start (origin) point for navigation
+origin_lat, 33.9168065786
+origin_lon, -118.395876288
+
+# Destination point for navigation
+dest_lat, 33.9445513487
+dest_lon, -118.386086226
+
+# Start GPS time.
+start_time,
+
+# Stop GPS time
+stop_time,
+
+# GPS fixes interval
+fix_interval, 1000
+
+### Route options
+# Avoid options. Possible values AVOID_NOTHING, AVOID_HIGHWAY, AVOID_TOLL, AVOID_HOV, AVOID_UNPAVED, AVOID_FERRY.
+# You can specify few avoid options: AVOID_HIGHWAY|AVOID_TOLL
+
+route_options_avoid, AVOID_HOV
+
+# Route type option. Possible values FASTEST_ROUTE, SHORTEST_ROUTE, EASIEST_ROUTE 
+
+route_options_type,
+
+# Vihicle type. Possible values CAR, TRUCK, BICYCLE, PEDESTRIAN
+
+route_options_vehicle,

@@ -1,0 +1,1362 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * complex - Declaration for the Standard Library complex class
+ *
+ * $Id: complex 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_COMPLEX_INCLUDED
+#define _RWSTD_COMPLEX_INCLUDED
+
+#include <sstream>
+#include <iosfwd>
+#include <utility>
+
+#include <rw/_defs.h>
+#include <rw/_math.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+  template <class _TypeT>
+  class complex;
+
+  _RWSTD_SPECIALIZED_CLASS class complex<float>;
+  _RWSTD_SPECIALIZED_CLASS class complex<double>;
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  _RWSTD_SPECIALIZED_CLASS class complex<long double>;
+#endif
+
+
+  _RWSTD_SPECIALIZED_CLASS
+  class complex<float>
+  {
+  public:
+    typedef float value_type;
+
+    complex (const float& __re=0.0f, const float& __im=0.0f) 
+      : _C_re(__re), _C_im(__im)
+    { ; }
+
+    _EXPLICIT complex (const complex<double>&); 
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+    _EXPLICIT complex (const complex<long double>&);
+#endif
+
+    float imag () const { return _C_im; }
+    float real () const { return _C_re; }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template <class _TypeX> complex<float>& operator=  (const complex<_TypeX>& __rhs) {_C_re=__rhs.real(); _C_im=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<float>& operator+= (const complex<_TypeX>& __rhs) {_C_re+=__rhs.real(); _C_im+=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<float>& operator-= (const complex<_TypeX>& __rhs) {_C_re-=__rhs.real(); _C_im-=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<float>& operator*= (const complex<_TypeX>& __rhs) {float __tmp=_C_re*__rhs.real()-_C_im*__rhs.imag(); _C_im=_C_im*__rhs.real()+_C_re*__rhs.imag(); _C_re=__tmp; return *this;}
+    template <class _TypeX> complex<float>& operator/= (const complex<_TypeX>&); 
+#else /* Have to specialize each one :-( */
+
+      complex& operator=  (const complex &__rhs) {
+	  _C_re = __rhs.real();
+	  _C_im = __rhs.imag();
+	  return *this;
+      }
+
+      complex& operator+= (const complex &__rhs) {
+	  _C_re += __rhs.real();
+	  _C_im += __rhs.imag();
+	  return *this;
+      }
+
+      complex& operator-= (const complex &__rhs) {
+	  _C_re -= __rhs.real();
+	  _C_im -= __rhs.imag();
+	  return *this;
+      }
+
+      complex& operator*= (const complex &__rhs) {
+	  value_type __tmp = real () * __rhs.real () - imag () * __rhs.imag();
+	  _C_im = imag () * __rhs.real () + real () * __rhs.imag();
+	  _C_re = __tmp;
+	  return *this;
+      }
+
+      complex& operator/= (const complex&);
+
+    complex& operator=  (const complex<double>&); 
+    complex& operator+= (const complex<double>&); 
+    complex& operator-= (const complex<double>&); 
+    complex& operator*= (const complex<double>&); 
+    complex& operator/= (const complex<double>&); 
+
+# ifndef _RWSTD_NO_LONG_DOUBLE
+    complex& operator=  (const complex<long double>&); 
+    complex& operator+= (const complex<long double>&); 
+    complex& operator-= (const complex<long double>&); 
+    complex& operator*= (const complex<long double>&); 
+    complex& operator/= (const complex<long double>&);
+# endif
+#endif
+
+    complex<float>& operator=  (float); 
+    complex<float>& operator+= (float); 
+    complex<float>& operator-= (float); 
+    complex<float>& operator*= (float); 
+    complex<float>& operator/= (float); 
+
+  private:
+    float _C_re, _C_im;
+  };
+
+  _RWSTD_SPECIALIZED_CLASS
+  class complex<double>
+  {
+  public:
+    typedef double value_type;
+
+    complex (const double& __re=0.0, const double& __im=0.0) 
+      : _C_re(__re), _C_im(__im)
+    { ; } 
+
+    complex (const complex<float>&); 
+
+#ifndef _RWSTD_NO_LONG_DOUBLE  
+    _EXPLICIT complex (const complex<long double>&); 
+#endif
+
+    double imag () const { return _C_im; }
+    double real () const { return _C_re; }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template <class _TypeX> complex<double>& operator=  (const complex<_TypeX>& __rhs) {_C_re=__rhs.real(); _C_im=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<double>& operator+= (const complex<_TypeX>& __rhs) {_C_re+=__rhs.real(); _C_im+=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<double>& operator-= (const complex<_TypeX>& __rhs) {_C_re-=__rhs.real(); _C_im-=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<double>& operator*= (const complex<_TypeX>& __rhs) {double __tmp=_C_re*__rhs.real()-_C_im*__rhs.imag(); _C_im=_C_im*__rhs.real()+_C_re*__rhs.imag(); _C_re=__tmp; return *this;}
+    template <class _TypeX> complex<double>& operator/= (const complex<_TypeX>&);
+
+#else /* Have to specialize each one :-( */
+
+    complex<double>& operator=  (const complex<float>&); 
+    complex<double>& operator+= (const complex<float>&); 
+    complex<double>& operator-= (const complex<float>&);
+    complex<double>& operator*= (const complex<float>& __rhs); 
+    complex<double>& operator/= (const complex<float>&); 
+
+    complex<double>& operator=  (const complex<double>& __rhs); 
+    complex<double>& operator+= (const complex<double>& __rhs); 
+    complex<double>& operator-= (const complex<double>& __rhs); 
+    complex<double>& operator*= (const complex<double>& __rhs); 
+    complex<double>& operator/= (const complex<double>&); 
+
+# ifndef _RWSTD_NO_LONG_DOUBLE  
+    complex<double>& operator=  (const complex<long double>&); 
+    complex<double>& operator+= (const complex<long double>&); 
+    complex<double>& operator-= (const complex<long double>&); 
+    complex<double>& operator*= (const complex<long double>&); 
+    complex<double>& operator/= (const complex<long double>&);
+# endif
+#endif
+
+    complex<double>& operator=  (double); 
+    complex<double>& operator+= (double); 
+    complex<double>& operator-= (double); 
+    complex<double>& operator*= (double); 
+    complex<double>& operator/= (double); 
+
+
+  private:
+    double _C_re, _C_im;
+  };
+
+#ifndef _RWSTD_NO_LONG_DOUBLE  
+
+  _RWSTD_SPECIALIZED_CLASS
+  class complex<long double>
+  {
+  public:
+    typedef long double value_type;
+
+    complex (const long double& __re=0.0L, const long double& __im=0.0L)
+      : _C_re(__re), _C_im(__im)
+    { ; } 
+    complex (const complex<float>&);
+    complex (const complex<double>&);
+
+    long double imag () const { return _C_im; }
+    long double real () const { return _C_re; }
+
+# ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template <class _TypeX> complex<long double>& operator=  (const complex<_TypeX>& __rhs) {_C_re=__rhs.real(); _C_im=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<long double>& operator+= (const complex<_TypeX>& __rhs) {_C_re+=__rhs.real(); _C_im+=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<long double>& operator-= (const complex<_TypeX>& __rhs) {_C_re-=__rhs.real(); _C_im-=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<long double>& operator*= (const complex<_TypeX>& __rhs) {long double __tmp=_C_re*__rhs.real()-_C_im*__rhs.imag(); _C_im=_C_im*__rhs.real()+_C_re*__rhs.imag(); _C_re=__tmp; return *this;}
+    template <class _TypeX> complex<long double>& operator/= (const complex<_TypeX>&); 
+
+# else /* Have to specialize each one :-( */
+
+    complex<long double>& operator=  (const complex<float>&); 
+    complex<long double>& operator+= (const complex<float>&); 
+    complex<long double>& operator-= (const complex<float>&); 
+    complex<long double>& operator*= (const complex<float>&); 
+    complex<long double>& operator/= (const complex<float>&); 
+
+    complex<long double>& operator=  (const complex<double>&); 
+    complex<long double>& operator+= (const complex<double>&); 
+    complex<long double>& operator-= (const complex<double>&); 
+    complex<long double>& operator*= (const complex<double>&); 
+    complex<long double>& operator/= (const complex<double>&); 
+
+    complex<long double>& operator=  (const complex<long double>&); 
+    complex<long double>& operator+= (const complex<long double>&); 
+    complex<long double>& operator-= (const complex<long double>&); 
+    complex<long double>& operator*= (const complex<long double>&); 
+    complex<long double>& operator/= (const complex<long double>&); 
+# endif
+
+    complex<long double>& operator=  (long double); 
+    complex<long double>& operator+= (long double); 
+    complex<long double>& operator-= (long double); 
+    complex<long double>& operator*= (long double); 
+    complex<long double>& operator/= (long double); 
+
+
+  private:
+    long double _C_re, _C_im;
+  };
+#endif
+
+
+  template <class _TypeT>
+  class complex
+  {
+  public:
+    typedef _TypeT value_type;
+
+    complex (const _TypeT& __re=0, const _TypeT& __im=0) 
+      : _C_re(__re), _C_im(__im)
+    { ; } 
+
+    _TypeT imag () const { return _C_im; }
+    _TypeT real () const { return _C_re; }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template <class _TypeX> complex (const complex<_TypeX>& __rhs) {_C_re=__rhs.real(); _C_im=__rhs.imag();}
+
+    template <class _TypeX> complex<_TypeT>& operator=  (const complex<_TypeX>& __rhs) {_C_re=__rhs.real(); _C_im=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<_TypeT>& operator+= (const complex<_TypeX>& __rhs) {_C_re+=__rhs.real(); _C_im+=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<_TypeT>& operator-= (const complex<_TypeX>& __rhs) {_C_re-=__rhs.real(); _C_im-=__rhs.imag(); return *this;}
+    template <class _TypeX> complex<_TypeT>& operator*= (const complex<_TypeX>& __rhs) {_TypeT __tmp=_C_re*__rhs.real()-_C_im*__rhs.imag(); _C_im=_C_im*__rhs.real()+_C_re*__rhs.imag(); _C_re=__tmp; return *this;}
+    template <class _TypeX> complex<_TypeT>& operator/= (const complex<_TypeX>&); 
+#endif
+    
+    complex<_TypeT>& operator=  (const _TypeT&); 
+    complex<_TypeT>& operator+= (const _TypeT&); 
+    complex<_TypeT>& operator-= (const _TypeT&); 
+    complex<_TypeT>& operator*= (const _TypeT&); 
+    complex<_TypeT>& operator/= (const _TypeT&); 
+
+  private:
+    _TypeT _C_re, _C_im;
+  };
+
+//
+// complex<float> specializations.
+//
+
+  inline
+  complex<float>::complex (const complex<double>& cd)
+  {
+    _C_re = _RWSTD_STATIC_CAST(float,cd.real()); 
+    _C_im = _RWSTD_STATIC_CAST(float,cd.imag());
+  }
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline
+  complex<float>::complex (const complex<long double>& cld)
+  {
+    _C_re = _RWSTD_STATIC_CAST(float,cld.real()); 
+    _C_im = _RWSTD_STATIC_CAST(float,cld.imag());
+  }
+#endif
+
+  inline complex<float>&
+  complex<float>::operator= (float __rhs) 
+  {
+    _C_re = __rhs; _C_im = 0.0; return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator+= (float __rhs) 
+  {
+    _C_re += __rhs; return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator-= (float __rhs) 
+  {
+    _C_re -= __rhs;  return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator*= (float __rhs) 
+  {     
+    float __tmp = _C_re*__rhs; 
+    _C_im       = _C_im*__rhs; 
+    _C_re       = __tmp;
+    return *this;
+  }
+
+
+#ifdef _RWSTD_NO_MEMBER_TEMPLATES 
+
+  inline complex<float>&
+  complex<float>::operator= (const complex<double>& __rhs) 
+  {
+    _C_re = _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im = _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator+= (const complex<double>& __rhs) 
+  {
+    _C_re += _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im += _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator-= (const complex<double>& __rhs) 
+  {     
+    _C_re -= _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im -= _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator*= (const complex<double>& __rhs) 
+  {     
+    float __tmp = _C_re*_RWSTD_STATIC_CAST(float,__rhs.real())-
+    _C_im*_RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    _C_im       = _C_im*_RWSTD_STATIC_CAST(float,__rhs.real())+
+    _C_re*_RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    _C_re       = __tmp;
+    return *this;
+  }
+
+# ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<float>&
+  complex<float>::operator= (const complex<long double>& __rhs) 
+  {     
+    _C_re = _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im = _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator+= (const complex<long double>& __rhs) 
+  {     
+    _C_re += _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im += _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator-= (const complex<long double>& __rhs) 
+  {
+    _C_re -= _RWSTD_STATIC_CAST(float,__rhs.real()); 
+    _C_im -= _RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<float>&
+  complex<float>::operator*= (const complex<long double>& __rhs) 
+  {     
+    float __tmp = _C_re*_RWSTD_STATIC_CAST(float,__rhs.real())-
+    _C_im*_RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    _C_im      = _C_im*_RWSTD_STATIC_CAST(float,__rhs.real())+
+    _C_re*_RWSTD_STATIC_CAST(float,__rhs.imag()); 
+    _C_re      = __tmp; 
+    return *this;
+  }
+# endif
+#endif /* _RWSTD_NO_MEMBER_TEMPLATES */
+//
+// complex<double> specializations.
+//
+  inline
+  complex<double>::complex (const complex<float>& cf)
+  : _C_re(cf.real()), _C_im(cf.imag()) {}
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline 
+  complex<double>::complex (const complex<long double>& cld)
+  : _C_re(_RWSTD_STATIC_CAST(double,cld.real())), 
+  _C_im(_RWSTD_STATIC_CAST(double,cld.imag())) {}
+#endif
+
+  inline complex<double>&
+  complex<double>::operator= (double __rhs) 
+  {
+    _C_re = __rhs; _C_im = 0.0; return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator+= (double __rhs) 
+  {
+    _C_re += __rhs; return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator-= (double __rhs) 
+  {
+    _C_re -= __rhs;  return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator*= (double __rhs) 
+  {     
+    double __tmp = _C_re*__rhs; 
+    _C_im       = _C_im*__rhs; 
+    _C_re       = __tmp;
+    return *this;
+  }
+
+
+#ifdef _RWSTD_NO_MEMBER_TEMPLATES 
+  inline complex<double>&
+  complex<double>::operator= (const complex<float>& __rhs) 
+  {
+    _C_re = __rhs.real(); _C_im = __rhs.imag(); return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator+= (const complex<float>& __rhs) 
+  {
+    _C_re += __rhs.real(); _C_im += __rhs.imag(); return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator-= (const complex<float>& __rhs) 
+  {
+    _C_re -= __rhs.real(); _C_im -= __rhs.imag(); return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator*= (const complex<float>& __rhs) 
+  {     
+    double __tmp = _C_re*__rhs.real()-_C_im*__rhs.imag(); 
+    _C_im        = _C_im*__rhs.real()+_C_re*__rhs.imag(); 
+    _C_re        = __tmp;
+    return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator= (const complex<double>& __rhs) 
+  {
+    _C_re = __rhs.real(); _C_im = __rhs.imag(); return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator+= (const complex<double>& __rhs) 
+  {
+    _C_re += __rhs.real(); _C_im += __rhs.imag(); return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator-= (const complex<double>& __rhs) 
+  {     
+    _C_re -= __rhs.real(); _C_im -= __rhs.imag(); return *this;
+  }
+
+  inline complex<double>& 
+  complex<double>::operator*= (const complex<double>& __rhs) 
+  {     
+    double __tmp = _C_re*__rhs.real()-_C_im*__rhs.imag(); 
+    _C_im       = _C_im*__rhs.real()+_C_re*__rhs.imag(); 
+    _C_re       = __tmp;
+    return *this;
+  }
+
+
+# ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<double>&
+  complex<double>::operator= (const complex<long double>& __rhs) 
+  {     
+    _C_re = _RWSTD_STATIC_CAST(double,__rhs.real()); 
+    _C_im = _RWSTD_STATIC_CAST(double,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator+= (const complex<long double>& __rhs) 
+  {     
+    _C_re += _RWSTD_STATIC_CAST(double,__rhs.real()); 
+    _C_im += _RWSTD_STATIC_CAST(double,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<double>& 
+  complex<double>::operator-= (const complex<long double>& __rhs) 
+  {
+    _C_re -= _RWSTD_STATIC_CAST(double,__rhs.real()); 
+    _C_im -= _RWSTD_STATIC_CAST(double,__rhs.imag()); 
+    return *this;
+  }
+
+  inline complex<double>& 
+  complex<double>::operator*= (const complex<long double>& __rhs) 
+  {     
+    double __tmp = _C_re*_RWSTD_STATIC_CAST(double,__rhs.real())-
+    _C_im*_RWSTD_STATIC_CAST(double,__rhs.imag()); 
+    _C_im       = _C_im*_RWSTD_STATIC_CAST(double,__rhs.real())+
+    _C_re*_RWSTD_STATIC_CAST(double,__rhs.imag()); 
+    _C_re       = __tmp; 
+    return *this;
+  }
+# endif
+#endif /* _RWSTD_NO_MEMBER_TEMPLATES */
+
+//
+// complex<long double> specializations.
+//
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline 
+  complex<long double>::complex (const complex<float>& cf)
+  : _C_re(cf.real()), _C_im(cf.imag()) {}
+
+  inline 
+  complex<long double>::complex (const complex<double>& cd)
+  : _C_re(cd.real()), _C_im(cd.imag()) {}
+
+  inline complex<long double>&
+  complex<long double>::operator+= (long double __rhs) 
+  {
+    _C_re += __rhs; return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator= (long double __rhs) 
+  {
+    _C_re = __rhs; _C_im = 0.0; return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator-= (long double __rhs) 
+  {
+    _C_re -= __rhs;  return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator*= (long double __rhs) 
+  {     
+    long double __tmp = _C_re*__rhs; 
+    _C_im       = _C_im*__rhs; 
+    _C_re       = __tmp;
+    return *this;
+  }
+
+
+# ifdef _RWSTD_NO_MEMBER_TEMPLATES
+  inline complex<long double>& 
+  complex<long double>::operator= (const complex<float>& __rhs) 
+  {
+    _C_re = __rhs.real(); _C_im = __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator+= (const complex<float>& __rhs) 
+  {
+    _C_re += __rhs.real(); _C_im += __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator-= (const complex<float>& __rhs) 
+  {
+    _C_re -= __rhs.real(); _C_im -= __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator*= (const complex<float>& __rhs) 
+  {     
+    long double __tmp = _C_re*__rhs.real()-_C_im*__rhs.imag(); 
+    _C_im             = _C_im*__rhs.real()+_C_re*__rhs.imag(); 
+    _C_re             = __tmp;
+    return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator= (const complex<double>& __rhs) 
+  {
+    _C_re = __rhs.real(); _C_im = __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator+= (const complex<double>& __rhs) 
+  {
+    _C_re += __rhs.real(); _C_im += __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator-= (const complex<double>& __rhs) 
+  {     
+    _C_re -= __rhs.real(); _C_im -= __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator*= (const complex<double>& __rhs) 
+  {     
+    long double __tmp = _C_re*__rhs.real()-_C_im*__rhs.imag(); 
+    _C_im             = _C_im*__rhs.real()+_C_re*__rhs.imag(); 
+    _C_re             = __tmp;
+    return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator= (const complex<long double>& __rhs) 
+  {     
+    _C_re = __rhs.real(); _C_im = __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>&
+  complex<long double>::operator+= (const complex<long double>& __rhs) 
+  {     
+    _C_re += __rhs.real(); _C_im += __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator-= (const complex<long double>& __rhs) 
+  {
+    _C_re -= __rhs.real(); _C_im -= __rhs.imag(); return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator*= (const complex<long double>& __rhs) 
+  {     
+    long double __tmp = _C_re*__rhs.real()-_C_im*__rhs.imag(); 
+    _C_im            = _C_im*__rhs.real()+_C_re*__rhs.imag(); 
+    _C_re            = __tmp; 
+    return *this;
+  }
+# endif
+#endif /* _RWSTD_NO_MEMBER_TEMPLATES */
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+  template <class _TypeT>
+  template <class _TypeX>
+  complex<_TypeT>&
+  complex<_TypeT>::operator/= (const complex<_TypeX>& __rhs)
+  {
+    _TypeT denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    _TypeT re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    _TypeT im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re    = re;
+    _C_im    = im;
+    return *this;
+  }
+
+  template <class _TypeX>
+  inline complex<float>& 
+  complex<float>::operator/= (const complex<_TypeX>& __rhs)  
+  {
+    float denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    float re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    float im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+
+  template <class _TypeX>
+  inline complex<double>& 
+  complex<double>::operator/= (const complex<_TypeX>& __rhs)  
+  {
+    double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+
+# ifndef _RWSTD_NO_LONG_DOUBLE
+  template <class _TypeX>
+  inline complex<long double>& 
+  complex<long double>::operator/= (const complex<_TypeX>& __rhs)  
+  {
+    long double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    long double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    long double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+# endif
+
+#else /* No member function templates, have to specialize :-( */
+
+  inline complex<float>& 
+  complex<float>::operator/= (const complex<float>& __rhs)  
+  {
+    float denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    float re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    float im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re         = re;
+    _C_im         = im;
+    return *this;
+  }
+
+  inline complex<float>& 
+  complex<float>::operator/= (const complex<double>& __rhs)  
+  {
+    float denom = _RWSTD_STATIC_CAST(float,__rhs.real())*
+    _RWSTD_STATIC_CAST(float,__rhs.real()) + 
+    _RWSTD_STATIC_CAST(float,__rhs.imag())*
+    _RWSTD_STATIC_CAST(float,__rhs.imag());
+    float re    = (_C_re*_RWSTD_STATIC_CAST(float,__rhs.real())+
+                   _C_im*_RWSTD_STATIC_CAST(float,__rhs.imag()))/denom;
+    float im    = (_RWSTD_STATIC_CAST(float,__rhs.real())*_C_im-_C_re*
+                   _RWSTD_STATIC_CAST(float,__rhs.imag()))/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+
+# ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<float>& 
+  complex<float>::operator/= (const complex<long double>& __rhs)  
+  {
+    float denom = _RWSTD_STATIC_CAST(float,__rhs.real())*
+    _RWSTD_STATIC_CAST(float,__rhs.real()) + 
+    _RWSTD_STATIC_CAST(float,__rhs.imag())*
+    _RWSTD_STATIC_CAST(float,__rhs.imag());
+    float re    = (_C_re*_RWSTD_STATIC_CAST(float,__rhs.real())+
+                   _C_im*_RWSTD_STATIC_CAST(float,__rhs.imag()))/denom;
+    float im    = (_RWSTD_STATIC_CAST(float,__rhs.real())*_C_im-
+                   _C_re*_RWSTD_STATIC_CAST(float,__rhs.imag()))/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+# endif 
+
+  inline complex<double>& 
+  complex<double>::operator/= (const complex<float>& __rhs)  
+  {
+    double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re         = re;
+    _C_im         = im;
+    return *this;
+  }
+
+  inline complex<double>&
+  complex<double>::operator/= (const complex<double>& __rhs)
+  {
+    double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re         = re;
+    _C_im         = im;
+    return *this;
+  }
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<double>& 
+  complex<double>::operator/= (const complex<long double>& __rhs)  
+  {
+    double denom = _RWSTD_STATIC_CAST(double,__rhs.real())*
+    _RWSTD_STATIC_CAST(double,__rhs.real()) + 
+    _RWSTD_STATIC_CAST(double,__rhs.imag())*
+    _RWSTD_STATIC_CAST(double,__rhs.imag());
+    double re    = (_C_re*_RWSTD_STATIC_CAST(double,__rhs.real())+
+                    _C_im*_RWSTD_STATIC_CAST(double,__rhs.imag()))/denom;
+    double im    = (_RWSTD_STATIC_CAST(double,__rhs.real())*_C_im-
+                    _C_re*_RWSTD_STATIC_CAST(double,__rhs.imag()))/denom;
+    _C_re         = re;
+    _C_im         = im;
+    return *this;
+  }
+#endif 
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<long double>& 
+  complex<long double>::operator/= (const complex<float>& __rhs)  
+  {
+    long double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    long double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    long double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re              = re;
+    _C_im              = im;
+    return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator/= (const complex<double>& __rhs)  
+  {
+    long double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    long double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    long double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re              = re;
+    _C_im              = im;
+    return *this;
+  }
+
+  inline complex<long double>& 
+  complex<long double>::operator/= (const complex<long double>& __rhs)  
+  {
+    long double denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    long double re    = (_C_re*__rhs.real()+_C_im*__rhs.imag())/denom;
+    long double im    = (__rhs.real()*_C_im-_C_re*__rhs.imag())/denom;
+    _C_re              = re;
+    _C_im              = im;
+    return *this;
+  }
+#endif
+#endif
+
+  inline complex<float>& 
+  complex<float>::operator/= (float __rhs)  
+  {
+    float denom = __rhs*__rhs;
+    float re    = (_C_re*__rhs)/denom;
+    float im    = (__rhs*_C_im)/denom;
+    _C_re        = re;
+    _C_im        = im;
+    return *this;
+  }
+
+  inline complex<double>& 
+  complex<double>::operator/= (double __rhs)  
+  {
+    double denom = __rhs*__rhs;
+    double re    = (_C_re*__rhs)/denom;
+    double im    = (__rhs*_C_im)/denom;
+    _C_re         = re;
+    _C_im         = im;
+    return *this;
+  }
+
+
+#ifndef _RWSTD_NO_LONG_DOUBLE
+  inline complex<long double>& 
+  complex<long double>::operator/= (long double __rhs)  
+  {
+    long double denom = __rhs*__rhs;
+    long double re    = (_C_re*__rhs)/denom;
+    long double im    = (__rhs*_C_im)/denom;
+    _C_re              = re;
+    _C_im              = im;
+    return *this;
+  }
+#endif
+
+
+//
+// complex non-member operations
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator+ (const complex<_TypeT>& __lhs, const complex<_TypeT>& __rhs)
+  {
+    complex<_TypeT> __tmp = __lhs; return __tmp += __rhs;
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator+ (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return complex<_TypeT>(__rhs+__lhs.real(), __lhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator+ (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return complex<_TypeT>(__lhs+__rhs.real(), __rhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator- (const complex<_TypeT>& __lhs, const complex<_TypeT>& __rhs)
+  {
+    complex<_TypeT> __tmp = __lhs; return __tmp -= __rhs;
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator- (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return complex<_TypeT>(__lhs.real()-__rhs, __lhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator- (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return complex<_TypeT>(__lhs-__rhs.real(), -__rhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator* (const complex<_TypeT>& __lhs, const complex<_TypeT>& __rhs)
+  {
+    complex<_TypeT> __tmp = __lhs; return __tmp *= __rhs;
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator* (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return complex<_TypeT>(__rhs*__lhs.real(), __rhs*__lhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator* (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return complex<_TypeT>(__lhs*__rhs.real(), __lhs*__rhs.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator/ (const complex<_TypeT>& __lhs, const complex<_TypeT>& __rhs)
+  {
+    complex<_TypeT> __tmp = __lhs; return __tmp /= __rhs;
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator/ (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return complex<_TypeT>(__lhs.real()/__rhs, __lhs.imag()/__rhs);
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator/ (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    register _TypeT denom = __rhs.real()*__rhs.real() + __rhs.imag()*__rhs.imag();
+    return complex<_TypeT>(__lhs*__rhs.real()/denom,(-__lhs*__rhs.imag())/denom);
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator+ (const complex<_TypeT>& __lhs) { return __lhs; }
+
+  template <class _TypeT>
+  inline complex<_TypeT> operator- (const complex<_TypeT>& __lhs)
+  {
+    return complex<_TypeT>(-__lhs.real(), -__lhs.imag());
+  } 
+
+  template <class _TypeT>
+  inline bool operator== (const complex<_TypeT>& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return __lhs.real() == __rhs.real() && __lhs.imag() == __rhs.imag();
+  } 
+
+  template <class _TypeT>
+  inline bool operator== (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return __lhs == __rhs.real() && __rhs.imag() == 0;
+  } 
+
+  template <class _TypeT>
+  inline bool operator== (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return __lhs.real() == __rhs && __lhs.imag() == 0;
+  } 
+
+template <class _TypeT>
+inline bool operator!= (const complex<_TypeT>& __lhs,
+                        const complex<_TypeT>& __rhs)
+{
+    return __lhs.real() != __rhs.real() || __lhs.imag() != __rhs.imag();
+} 
+
+  template <class _TypeT>
+  inline bool operator!= (const _TypeT& __lhs, const complex<_TypeT>& __rhs)
+  {
+    return __lhs != __rhs.real() || __rhs.imag() != 0;
+  } 
+
+  template <class _TypeT>
+  inline bool operator!= (const complex<_TypeT>& __lhs, const _TypeT& __rhs)
+  {
+    return __lhs.real() != __rhs || __lhs.imag() != 0;
+  } 
+
+//
+// complex value operations
+//
+
+  template<class _TypeT>
+  inline _TypeT real (const complex<_TypeT>& __a) { return __a.real(); }
+
+  template<class _TypeT>
+  inline _TypeT imag (const complex<_TypeT>& __a) { return __a.imag(); }
+
+  template <class _TypeT>
+  inline _TypeT norm (const complex<_TypeT>& __a)
+  {
+    return __a.real()*__a.real() + __a.imag()*__a.imag();
+  }
+
+  template <class _TypeT>
+  inline _TypeT abs (const complex<_TypeT>& __a) { return (_RWSTD_C::sqrt(norm(__a))); }
+
+//
+// We guarantee that arg(complex<_TypeT>(0,0)) == 0.
+//
+
+  template <class _TypeT>
+  inline _TypeT arg (const complex<_TypeT>& __a)
+  {
+    return __a == complex<_TypeT>(0,0) ? _TypeT(0) : _RWSTD_C::atan2(__a.imag(), __a.real());
+  }
+
+  template <class _TypeT>
+  complex<_TypeT> conj (const complex<_TypeT>& __a)
+  {
+    return complex<_TypeT>(__a.real(), -__a.imag());
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> polar (const _TypeT& __r, const _TypeT& theta = 0)
+  {
+    return complex<_TypeT>(__r*_RWSTD_C::cos(theta), __r*_RWSTD_C::sin(theta));
+  }
+
+//
+// transcendentals
+//
+
+//
+// complex<_TypeT> cosine of complex<_TypeT> number __a
+//      cos (__a) = cos u * cosh v - i * sin u * sinh v
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> cos (const complex<_TypeT>& __a)
+  {
+    return complex<_TypeT>(_RWSTD_C::cos(__a.real())*_RWSTD_C::cosh(__a.imag()),
+                      -_RWSTD_C::sin(__a.real())*_RWSTD_C::sinh(__a.imag()));
+  }
+
+//
+// complex<_TypeT> hyperbolic cosine of complex<_TypeT> number __a
+//      cosh (__a) = cosh u * cosv + i * sinh u * sin v
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> cosh (const complex<_TypeT>& __a)
+  {
+    return complex<_TypeT>(_RWSTD_C::cosh(__a.real())*_RWSTD_C::cos(__a.imag()),
+                      _RWSTD_C::sinh(__a.real())*_RWSTD_C::sin(__a.imag()));
+  }
+
+//
+// complex<_TypeT> exponential of  complex<_TypeT> number __a
+//      exp (__a) = exp(u) * (cos v + i * sin v)
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> exp (const complex<_TypeT>& __a)
+  {
+    _TypeT __e = _RWSTD_C::exp(__a.real());
+    return complex<_TypeT>(__e*_RWSTD_C::cos(__a.imag()), __e*_RWSTD_C::sin(__a.imag()));
+  }
+
+//
+// complex<_TypeT> natural log of complex<_TypeT> number __a
+//      log(__a) = log(__r) + i * theta
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> log (const complex<_TypeT>& __a)
+  {
+    return complex<_TypeT>(_RWSTD_C::log(abs(__a)), arg(__a));
+  }
+
+  template <class _TypeT>
+  complex<_TypeT> log10 (const complex<_TypeT>& __a);
+
+//
+// For all the power functions:
+//
+//   0**0 == 1
+//   0**x == 0 for x != 0
+//
+
+//
+// complex<_TypeT> number __a raised to an integer power __n
+//
+// __a**__n = __r**__n * (cos(__n theta) + i sin (__n theta))
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> pow (const complex<_TypeT>& __a, int __n)
+  {
+    if (__a == complex<_TypeT>(0,0))
+    {
+      if (__n == 0) 
+        return complex<_TypeT>(1,0);
+      else
+        return complex<_TypeT>(0,0);
+    }
+
+    if (__a.imag() == 0)
+    {
+      if (__a.real() < 0)
+        return pow(__a, complex<_TypeT>(__n,0));
+      else
+#ifndef _RWSTD_NO_OVERLOAD_C_POW
+        return complex<_TypeT>(_RWSTD_C::pow(__a.real(),_TypeT(__n)), 0);
+#else
+      return complex<_TypeT>(_RWSTD_C::pow(double(__a.real()),double(__n)), 0);
+#endif /* _RWSTD_NO_OVERLOAD_C_POW */
+    }
+
+#ifndef _RWSTD_NO_OVERLOAD_C_POW
+    register _TypeT __r  = _RWSTD_C::pow(_TypeT(abs(__a)), _TypeT(__n));
+#else
+    register _TypeT __r  = _RWSTD_C::pow(double(abs(__a)), double(__n));
+#endif
+
+    register _TypeT th = _TypeT(__n) * arg(__a);
+
+    return complex<_TypeT>(__r*_RWSTD_C::cos(th), __r*_RWSTD_C::sin(th));
+  }
+
+
+//
+// complex<_TypeT> number __a raised to __a real power __s
+//
+// __a**__s = exp(__s * log(__a))
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> pow (const complex<_TypeT>& __a, const _TypeT& __s)
+  {
+    if (__a == complex<_TypeT>(0,0))
+    {
+      if (__s == _TypeT(0))
+        return complex<_TypeT>(1,0);
+      else
+        return complex<_TypeT>(0,0);
+    }
+    if (__a.imag() == 0)
+    {
+      if (__a.real() < 0)
+        return pow(__a, complex<_TypeT>(__s,0));
+      else
+#ifndef _RWSTD_NO_OVERLOAD_C_POW
+        return complex<_TypeT>(_RWSTD_C::pow(__a.real(),__s), 0);
+#else
+      return complex<_TypeT>(_RWSTD_C::pow(double(__a.real()),double(__s)), 0);
+#endif /* _RWSTD_NO_OVERLOAD_C_POW */
+    }
+    return exp(__s*log(__a));
+  }   
+
+
+//
+// real number __s raised to __a complex<_TypeT> power __a
+//
+//  __s**__a = exp(__a * log (__s))
+//
+
+  template <class _TypeT>
+  inline complex<_TypeT> pow (const _TypeT& __s, const complex<_TypeT>& __a)
+  {
+    if (__s == _TypeT(0))
+    {
+      if (__a == complex<_TypeT>(0,0)) 
+        return complex<_TypeT>(1,0);
+      else
+        return complex<_TypeT>(0,0);
+    }
+    if (__s < 0)
+      return pow(complex<_TypeT>(__s,0), __a);
+
+    if (__a.imag() == 0)
+#ifndef _RWSTD_NO_OVERLOAD_C_POW
+      return complex<_TypeT>(_RWSTD_C::pow(__s, __a.real()), 0);
+#else
+    return complex<_TypeT>(_RWSTD_C::pow(double(__s), double(__a.real())), 0);
+#endif /* _RWSTD_NO_OVERLOAD_C_POW */
+
+    return complex<_TypeT>(exp(__a * (_TypeT) _RWSTD_C::log(__s)));
+  }
+
+//
+// complex<_TypeT> number a1 raised to __a complex<_TypeT> power a2
+//
+// a1**a2 = rho * (cos(phi) + i sin(phi))
+//      rho = __r1 **__u2   *  exp (-__v2* theta1)
+//      phi = __v2 * log(__r1) + __u2 * theta1
+//
+
+template <class _TypeT>
+inline complex<_TypeT>
+pow (const complex<_TypeT>& __x, const complex<_TypeT>& __y)
+{
+    if (__x == complex<_TypeT>(0,0))
+    {
+      if (__y == complex<_TypeT>(0,0))
+        return complex<_TypeT>(1,0);
+      else
+        return complex<_TypeT>(0,0);
+    }
+
+    _TypeT __r1   = abs(__x);
+    _TypeT __u2   = real(__y);
+    _TypeT __v2   = imag(__y);
+    _TypeT __th1  = arg(__x);
+#ifndef _RWSTD_NO_OVERLOAD_C_POW
+    _TypeT rho  = _RWSTD_C::pow(__r1, __u2) * _RWSTD_C::exp(-__v2 *__th1);
+#else
+    _TypeT rho  = _RWSTD_C::pow(double(__r1), double(__u2)) * _RWSTD_C::exp(-__v2 *__th1);
+#endif /* _RWSTD_NO_OVERLOAD_C_POW */
+    _TypeT phi  = __v2 * _RWSTD_C::log(__r1) + __u2 * __th1;
+
+    return complex<_TypeT>(rho*_RWSTD_C::cos(phi), rho*_RWSTD_C::sin(phi));
+}      
+
+
+//
+// complex<_TypeT> sine of complex<_TypeT> number __a
+//      sin (__a) = sin u * cosh v + i * cos u * sinh v
+//
+  template <class _TypeT>
+  inline complex<_TypeT> sin (const complex<_TypeT>& __a)
+  {
+
+      return complex<_TypeT>(_RWSTD_C::sin(__a.real())*_RWSTD_C::cosh(__a.imag()),
+                      _RWSTD_C::cos(__a.real())*_RWSTD_C::sinh(__a.imag()));
+  }
+
+//
+// complex<_TypeT> hyperbolic sine of complex<_TypeT> number __a
+//      sinh (__a) = sinh u cos v + i cosh u sin v
+//
+  template <class _TypeT>
+  inline complex<_TypeT> sinh (const complex<_TypeT>& __a)
+  {
+    return complex<_TypeT>(_RWSTD_C::sinh(__a.real())*_RWSTD_C::cos(__a.imag()),
+                      _RWSTD_C::cosh(__a.real())*_RWSTD_C::sin(__a.imag()));
+  }
+
+//
+// complex<_TypeT> square root of complex<_TypeT> number __a
+//      sqrt(__a) = sqrt(__r) * ( cos (theta/2) + i sin (theta/2) )
+//
+  template <class _TypeT>
+  inline complex<_TypeT> sqrt (const complex<_TypeT>& __a)
+  {
+    register _TypeT __r  = _RWSTD_C::sqrt(abs(__a));
+    register _TypeT th = arg(__a)/2.;
+    return complex<_TypeT>(__r*_RWSTD_C::cos(th), __r*_RWSTD_C::sin(th));
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> tan (const complex<_TypeT>& __a)
+  {
+#ifndef _RWSTD_NO_LONG_DOUBLE
+    complex<long double> longa((long double)__a.real(),(long double)__a.imag());
+#else
+    complex<double> longa((double)__a.real(),(double)__a.imag());
+#endif
+    return complex<_TypeT>(sin(longa)/cos(longa));
+  }
+
+  template <class _TypeT>
+  inline complex<_TypeT> tanh (const complex<_TypeT>& __a)
+  {
+#ifndef _RWSTD_NO_LONG_DOUBLE
+    complex<long double> longa((long double)__a.real(),(long double)__a.imag());
+#else
+    complex<double> longa((double)__a.real(),(double)__a.imag());
+#endif
+    return complex<_TypeT>(sinh(longa)/cosh(longa));
+  }
+
+
+template <class _TypeT>
+inline complex<_TypeT> log10 (const complex<_TypeT>& __a)
+{
+    static const _TypeT log10e = _RWSTD_C::log10(_RWSTD_C::exp(_TypeT(1)));
+    return log10e * log(__a);
+}
+
+
+// 26.2.6, p12: MT-safe extractor (not atomic)
+template <class _TypeT, class _CharT, class _Traits>
+inline basic_istream<_CharT, _Traits >&
+operator>> (basic_istream<_CharT, _Traits>& __strm, complex<_TypeT> &__val)
+{
+    // read __a complex number in one of the following forms:
+    // "__r", "(__r)", "(__r, i)"
+
+    _TypeT __re = _TypeT (),
+           __im = _TypeT ();
+
+    char __ch;
+
+    if (!(__strm >> __ch))
+        return __strm;
+
+    if ('(' == __ch) {
+      __strm >> __re >> __ch;
+
+      if (',' == __ch)
+          __strm >> __im  >> __ch;
+
+      if (')' != __ch)
+          __strm.setstate (__strm.failbit);
+    }
+    else if (__strm) {
+      __strm.putback (__ch);
+      __strm >> __re;
+    }
+
+    if (__strm)
+      __val = complex<_TypeT>(__re, __im);
+
+    return __strm;
+}
+
+
+// 26.2.6, p15: MT-safe atomic inserter
+template <class _TypeT, class _CharT, class _Traits>
+inline basic_ostream<_CharT, _Traits>&
+operator<< (basic_ostream<_CharT, _Traits >& __strm,
+            const complex<_TypeT>&           __val)
+{
+    basic_ostringstream<_CharT, _Traits, allocator<_CharT> > __ss;
+    __ss.flags (__strm.flags ());
+    __ss.imbue (__strm.getloc ());
+    __ss.precision (__strm.precision ());
+    __ss << '(' << __val.real () << ',' << __val.imag () << ')';
+    return __strm << __ss.str ();
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_COMPLEX_INCLUDED

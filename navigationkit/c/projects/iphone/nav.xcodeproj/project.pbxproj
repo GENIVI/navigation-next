@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A59CEA6D18B5D2AF005AD733 /* NavApiLaneInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6118B5D2AF005AD733 /* NavApiLaneInformation.h */; };
+		A59CEA6E18B5D2AF005AD733 /* NavApiListeners.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6218B5D2AF005AD733 /* NavApiListeners.h */; };
+		A59CEA6F18B5D2AF005AD733 /* NavApiNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6318B5D2AF005AD733 /* NavApiNavigation.h */; };
+		A59CEA7018B5D2AF005AD733 /* NavApiNavUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6418B5D2AF005AD733 /* NavApiNavUtils.h */; };
+		A59CEA7118B5D2AF005AD733 /* NavApiPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6518B5D2AF005AD733 /* NavApiPreferences.h */; };
+		A59CEA7218B5D2AF005AD733 /* NavApiRouteInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6618B5D2AF005AD733 /* NavApiRouteInformation.h */; };
+		A59CEA7318B5D2AF005AD733 /* NavApiRouteOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6718B5D2AF005AD733 /* NavApiRouteOptions.h */; };
+		A59CEA7418B5D2AF005AD733 /* NavApiRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6818B5D2AF005AD733 /* NavApiRouteRequest.h */; };
+		A59CEA7518B5D2AF005AD733 /* NavApiRouteSummaryRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6918B5D2AF005AD733 /* NavApiRouteSummaryRequest.h */; };
+		A59CEA7618B5D2AF005AD733 /* NavApiSpecialRegionInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6A18B5D2AF005AD733 /* NavApiSpecialRegionInformation.h */; };
+		A59CEA7718B5D2AF005AD733 /* NavApiSpeedLimitInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6B18B5D2AF005AD733 /* NavApiSpeedLimitInformation.h */; };
+		A59CEA7818B5D2AF005AD733 /* NavApiTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA6C18B5D2AF005AD733 /* NavApiTypes.h */; };
+		A59CEA8C18B5D2C1005AD733 /* Detour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA7918B5D2C1005AD733 /* Detour.cpp */; };
+		A59CEA8D18B5D2C1005AD733 /* Detour.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA7A18B5D2C1005AD733 /* Detour.h */; };
+		A59CEA8E18B5D2C1005AD733 /* NavAnalytics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA7B18B5D2C1005AD733 /* NavAnalytics.cpp */; };
+		A59CEA8F18B5D2C1005AD733 /* NavAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA7C18B5D2C1005AD733 /* NavAnalytics.h */; };
+		A59CEA9018B5D2C1005AD733 /* NavApiLaneInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA7D18B5D2C1005AD733 /* NavApiLaneInformation.cpp */; };
+		A59CEA9118B5D2C1005AD733 /* NavApiNavigation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA7E18B5D2C1005AD733 /* NavApiNavigation.cpp */; };
+		A59CEA9218B5D2C1005AD733 /* NavApiNavUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA7F18B5D2C1005AD733 /* NavApiNavUtils.cpp */; };
+		A59CEA9318B5D2C1005AD733 /* NavApiPreferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8018B5D2C1005AD733 /* NavApiPreferences.cpp */; };
+		A59CEA9418B5D2C1005AD733 /* NavApiRouteInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8118B5D2C1005AD733 /* NavApiRouteInformation.cpp */; };
+		A59CEA9518B5D2C1005AD733 /* NavApiRouteOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8218B5D2C1005AD733 /* NavApiRouteOptions.cpp */; };
+		A59CEA9618B5D2C1005AD733 /* NavApiRouteRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8318B5D2C1005AD733 /* NavApiRouteRequest.cpp */; };
+		A59CEA9718B5D2C1005AD733 /* NavApiRouteSummaryRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8418B5D2C1005AD733 /* NavApiRouteSummaryRequest.cpp */; };
+		A59CEA9818B5D2C1005AD733 /* NavApiSpecialRegionInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8518B5D2C1005AD733 /* NavApiSpecialRegionInformation.cpp */; };
+		A59CEA9918B5D2C1005AD733 /* NavApiSpeedLimitInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8618B5D2C1005AD733 /* NavApiSpeedLimitInformation.cpp */; };
+		A59CEA9A18B5D2C1005AD733 /* NavApiTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8718B5D2C1005AD733 /* NavApiTypes.cpp */; };
+		A59CEA9B18B5D2C1005AD733 /* NavigationImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8818B5D2C1005AD733 /* NavigationImpl.cpp */; };
+		A59CEA9C18B5D2C1005AD733 /* NavigationImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA8918B5D2C1005AD733 /* NavigationImpl.h */; };
+		A59CEA9D18B5D2C1005AD733 /* NavTask.h in Headers */ = {isa = PBXBuildFile; fileRef = A59CEA8A18B5D2C1005AD733 /* NavTask.h */; };
+		A59CEA9E18B5D2C1005AD733 /* Place.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59CEA8B18B5D2C1005AD733 /* Place.cpp */; };
+		A805901919B552B6006D82AA /* NavigationHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A805901719B552B6006D82AA /* NavigationHelper.cpp */; };
+		A805901A19B552B6006D82AA /* NavigationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A805901819B552B6006D82AA /* NavigationHelper.h */; };
+		A8585E541A52418000A30EE8 /* NavMockGPSProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8585E521A52418000A30EE8 /* NavMockGPSProvider.cpp */; };
+		A8585E551A52418000A30EE8 /* NavMockGPSProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = A8585E531A52418000A30EE8 /* NavMockGPSProvider.h */; };
+		A87F817B19B014C9004AB464 /* NavigationImplNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A87F817919B014C9004AB464 /* NavigationImplNotifier.cpp */; };
+		A87F817C19B014C9004AB464 /* NavigationImplNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = A87F817A19B014C9004AB464 /* NavigationImplNotifier.h */; };
+		A8F2BB56196BF34B00032D25 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BB55196BF34B00032D25 /* Logger.cpp */; };
+		A8F2BB58196BF35200032D25 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2BB57196BF35200032D25 /* Logger.h */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A59CEA6118B5D2AF005AD733 /* NavApiLaneInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiLaneInformation.h; sourceTree = "<group>"; };
+		A59CEA6218B5D2AF005AD733 /* NavApiListeners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiListeners.h; sourceTree = "<group>"; };
+		A59CEA6318B5D2AF005AD733 /* NavApiNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiNavigation.h; sourceTree = "<group>"; };
+		A59CEA6418B5D2AF005AD733 /* NavApiNavUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiNavUtils.h; sourceTree = "<group>"; };
+		A59CEA6518B5D2AF005AD733 /* NavApiPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiPreferences.h; sourceTree = "<group>"; };
+		A59CEA6618B5D2AF005AD733 /* NavApiRouteInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiRouteInformation.h; sourceTree = "<group>"; };
+		A59CEA6718B5D2AF005AD733 /* NavApiRouteOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiRouteOptions.h; sourceTree = "<group>"; };
+		A59CEA6818B5D2AF005AD733 /* NavApiRouteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiRouteRequest.h; sourceTree = "<group>"; };
+		A59CEA6918B5D2AF005AD733 /* NavApiRouteSummaryRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiRouteSummaryRequest.h; sourceTree = "<group>"; };
+		A59CEA6A18B5D2AF005AD733 /* NavApiSpecialRegionInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiSpecialRegionInformation.h; sourceTree = "<group>"; };
+		A59CEA6B18B5D2AF005AD733 /* NavApiSpeedLimitInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiSpeedLimitInformation.h; sourceTree = "<group>"; };
+		A59CEA6C18B5D2AF005AD733 /* NavApiTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavApiTypes.h; sourceTree = "<group>"; };
+		A59CEA7918B5D2C1005AD733 /* Detour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Detour.cpp; sourceTree = "<group>"; };
+		A59CEA7A18B5D2C1005AD733 /* Detour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detour.h; sourceTree = "<group>"; };
+		A59CEA7B18B5D2C1005AD733 /* NavAnalytics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavAnalytics.cpp; sourceTree = "<group>"; };
+		A59CEA7C18B5D2C1005AD733 /* NavAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavAnalytics.h; sourceTree = "<group>"; };
+		A59CEA7D18B5D2C1005AD733 /* NavApiLaneInformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiLaneInformation.cpp; sourceTree = "<group>"; };
+		A59CEA7E18B5D2C1005AD733 /* NavApiNavigation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiNavigation.cpp; sourceTree = "<group>"; };
+		A59CEA7F18B5D2C1005AD733 /* NavApiNavUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiNavUtils.cpp; sourceTree = "<group>"; };
+		A59CEA8018B5D2C1005AD733 /* NavApiPreferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiPreferences.cpp; sourceTree = "<group>"; };
+		A59CEA8118B5D2C1005AD733 /* NavApiRouteInformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiRouteInformation.cpp; sourceTree = "<group>"; };
+		A59CEA8218B5D2C1005AD733 /* NavApiRouteOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiRouteOptions.cpp; sourceTree = "<group>"; };
+		A59CEA8318B5D2C1005AD733 /* NavApiRouteRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiRouteRequest.cpp; sourceTree = "<group>"; };
+		A59CEA8418B5D2C1005AD733 /* NavApiRouteSummaryRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiRouteSummaryRequest.cpp; sourceTree = "<group>"; };
+		A59CEA8518B5D2C1005AD733 /* NavApiSpecialRegionInformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiSpecialRegionInformation.cpp; sourceTree = "<group>"; };
+		A59CEA8618B5D2C1005AD733 /* NavApiSpeedLimitInformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiSpeedLimitInformation.cpp; sourceTree = "<group>"; };
+		A59CEA8718B5D2C1005AD733 /* NavApiTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavApiTypes.cpp; sourceTree = "<group>"; };
+		A59CEA8818B5D2C1005AD733 /* NavigationImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationImpl.cpp; sourceTree = "<group>"; };
+		A59CEA8918B5D2C1005AD733 /* NavigationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationImpl.h; sourceTree = "<group>"; };
+		A59CEA8A18B5D2C1005AD733 /* NavTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavTask.h; sourceTree = "<group>"; };
+		A59CEA8B18B5D2C1005AD733 /* Place.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Place.cpp; sourceTree = "<group>"; };
+		A805901719B552B6006D82AA /* NavigationHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationHelper.cpp; sourceTree = "<group>"; };
+		A805901819B552B6006D82AA /* NavigationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationHelper.h; sourceTree = "<group>"; };
+		A8585E521A52418000A30EE8 /* NavMockGPSProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavMockGPSProvider.cpp; sourceTree = "<group>"; };
+		A8585E531A52418000A30EE8 /* NavMockGPSProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavMockGPSProvider.h; sourceTree = "<group>"; };
+		A87F817919B014C9004AB464 /* NavigationImplNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationImplNotifier.cpp; sourceTree = "<group>"; };
+		A87F817A19B014C9004AB464 /* NavigationImplNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationImplNotifier.h; sourceTree = "<group>"; };
+		A8F2BB55196BF34B00032D25 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		A8F2BB57196BF35200032D25 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* nav_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nav_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libnav.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnav.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libnav.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* nav */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = nav;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3D11A11D8AB3500E9FEA3 /* include */,
+				B2D3D34C11D8AD1100E9FEA3 /* src */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* nav_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B2D3D11A11D8AB3500E9FEA3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A8F2BB57196BF35200032D25 /* Logger.h */,
+				A59CEA6118B5D2AF005AD733 /* NavApiLaneInformation.h */,
+				A59CEA6218B5D2AF005AD733 /* NavApiListeners.h */,
+				A59CEA6318B5D2AF005AD733 /* NavApiNavigation.h */,
+				A59CEA6418B5D2AF005AD733 /* NavApiNavUtils.h */,
+				A59CEA6518B5D2AF005AD733 /* NavApiPreferences.h */,
+				A59CEA6618B5D2AF005AD733 /* NavApiRouteInformation.h */,
+				A59CEA6718B5D2AF005AD733 /* NavApiRouteOptions.h */,
+				A59CEA6818B5D2AF005AD733 /* NavApiRouteRequest.h */,
+				A59CEA6918B5D2AF005AD733 /* NavApiRouteSummaryRequest.h */,
+				A59CEA6A18B5D2AF005AD733 /* NavApiSpecialRegionInformation.h */,
+				A59CEA6B18B5D2AF005AD733 /* NavApiSpeedLimitInformation.h */,
+				A59CEA6C18B5D2AF005AD733 /* NavApiTypes.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = SOURCE_ROOT;
+		};
+		B2D3D34C11D8AD1100E9FEA3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A59CEA7918B5D2C1005AD733 /* Detour.cpp */,
+				A59CEA7A18B5D2C1005AD733 /* Detour.h */,
+				A8F2BB55196BF34B00032D25 /* Logger.cpp */,
+				A59CEA7B18B5D2C1005AD733 /* NavAnalytics.cpp */,
+				A59CEA7C18B5D2C1005AD733 /* NavAnalytics.h */,
+				A59CEA7D18B5D2C1005AD733 /* NavApiLaneInformation.cpp */,
+				A59CEA7E18B5D2C1005AD733 /* NavApiNavigation.cpp */,
+				A59CEA7F18B5D2C1005AD733 /* NavApiNavUtils.cpp */,
+				A59CEA8018B5D2C1005AD733 /* NavApiPreferences.cpp */,
+				A59CEA8118B5D2C1005AD733 /* NavApiRouteInformation.cpp */,
+				A59CEA8218B5D2C1005AD733 /* NavApiRouteOptions.cpp */,
+				A59CEA8318B5D2C1005AD733 /* NavApiRouteRequest.cpp */,
+				A59CEA8418B5D2C1005AD733 /* NavApiRouteSummaryRequest.cpp */,
+				A59CEA8518B5D2C1005AD733 /* NavApiSpecialRegionInformation.cpp */,
+				A59CEA8618B5D2C1005AD733 /* NavApiSpeedLimitInformation.cpp */,
+				A59CEA8718B5D2C1005AD733 /* NavApiTypes.cpp */,
+				A805901719B552B6006D82AA /* NavigationHelper.cpp */,
+				A805901819B552B6006D82AA /* NavigationHelper.h */,
+				A59CEA8818B5D2C1005AD733 /* NavigationImpl.cpp */,
+				A59CEA8918B5D2C1005AD733 /* NavigationImpl.h */,
+				A87F817919B014C9004AB464 /* NavigationImplNotifier.cpp */,
+				A87F817A19B014C9004AB464 /* NavigationImplNotifier.h */,
+				A8585E521A52418000A30EE8 /* NavMockGPSProvider.cpp */,
+				A8585E531A52418000A30EE8 /* NavMockGPSProvider.h */,
+				A59CEA8A18B5D2C1005AD733 /* NavTask.h */,
+				A59CEA8B18B5D2C1005AD733 /* Place.cpp */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59CEA7718B5D2AF005AD733 /* NavApiSpeedLimitInformation.h in Headers */,
+				A59CEA8D18B5D2C1005AD733 /* Detour.h in Headers */,
+				A59CEA7218B5D2AF005AD733 /* NavApiRouteInformation.h in Headers */,
+				A59CEA7418B5D2AF005AD733 /* NavApiRouteRequest.h in Headers */,
+				A87F817C19B014C9004AB464 /* NavigationImplNotifier.h in Headers */,
+				A8F2BB58196BF35200032D25 /* Logger.h in Headers */,
+				A59CEA8F18B5D2C1005AD733 /* NavAnalytics.h in Headers */,
+				A59CEA7118B5D2AF005AD733 /* NavApiPreferences.h in Headers */,
+				A59CEA7018B5D2AF005AD733 /* NavApiNavUtils.h in Headers */,
+				A59CEA7518B5D2AF005AD733 /* NavApiRouteSummaryRequest.h in Headers */,
+				A59CEA9C18B5D2C1005AD733 /* NavigationImpl.h in Headers */,
+				A59CEA7818B5D2AF005AD733 /* NavApiTypes.h in Headers */,
+				A59CEA7618B5D2AF005AD733 /* NavApiSpecialRegionInformation.h in Headers */,
+				A59CEA6D18B5D2AF005AD733 /* NavApiLaneInformation.h in Headers */,
+				A8585E551A52418000A30EE8 /* NavMockGPSProvider.h in Headers */,
+				A59CEA7318B5D2AF005AD733 /* NavApiRouteOptions.h in Headers */,
+				A59CEA6E18B5D2AF005AD733 /* NavApiListeners.h in Headers */,
+				A59CEA9D18B5D2C1005AD733 /* NavTask.h in Headers */,
+				A59CEA6F18B5D2AF005AD733 /* NavApiNavigation.h in Headers */,
+				A805901A19B552B6006D82AA /* NavigationHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* nav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "nav" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nav;
+			productName = nav;
+			productReference = D2AAC07E0554694100DB518D /* libnav.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "nav" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* nav */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* nav */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59CEA9118B5D2C1005AD733 /* NavApiNavigation.cpp in Sources */,
+				A805901919B552B6006D82AA /* NavigationHelper.cpp in Sources */,
+				A59CEA9918B5D2C1005AD733 /* NavApiSpeedLimitInformation.cpp in Sources */,
+				A59CEA9618B5D2C1005AD733 /* NavApiRouteRequest.cpp in Sources */,
+				A59CEA9518B5D2C1005AD733 /* NavApiRouteOptions.cpp in Sources */,
+				A59CEA8E18B5D2C1005AD733 /* NavAnalytics.cpp in Sources */,
+				A59CEA9B18B5D2C1005AD733 /* NavigationImpl.cpp in Sources */,
+				A59CEA9818B5D2C1005AD733 /* NavApiSpecialRegionInformation.cpp in Sources */,
+				A59CEA9018B5D2C1005AD733 /* NavApiLaneInformation.cpp in Sources */,
+				A8585E541A52418000A30EE8 /* NavMockGPSProvider.cpp in Sources */,
+				A59CEA9318B5D2C1005AD733 /* NavApiPreferences.cpp in Sources */,
+				A59CEA9A18B5D2C1005AD733 /* NavApiTypes.cpp in Sources */,
+				A87F817B19B014C9004AB464 /* NavigationImplNotifier.cpp in Sources */,
+				A59CEA9418B5D2C1005AD733 /* NavApiRouteInformation.cpp in Sources */,
+				A8F2BB56196BF34B00032D25 /* Logger.cpp in Sources */,
+				A59CEA9718B5D2C1005AD733 /* NavApiRouteSummaryRequest.cpp in Sources */,
+				A59CEA9E18B5D2C1005AD733 /* Place.cpp in Sources */,
+				A59CEA8C18B5D2C1005AD733 /* Detour.cpp in Sources */,
+				A59CEA9218B5D2C1005AD733 /* NavApiNavUtils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				BUILD_VARIANTS = normal;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/nav.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE_BUILD,
+					USE_NB_TILE_OBJECT,
+					_DEBUG,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(NBM_RELEASE)/**",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/coreservices/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/thirdparty/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/nbpal/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/thirdparty/main/projects/iphone/tinyxml/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = nav;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/src/posix/pal $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/private $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/protected";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				BUILD_VARIANTS = normal;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				DSTROOT = /tmp/nav.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE_BUILD,
+					USE_NB_TILE_OBJECT,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(NBM_RELEASE)/**",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/coreservices/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/thirdparty/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/nbpal/main/projects/iphone/build/Debug-iphoneos",
+					"/Volumes/Home/Work/nim/ccc_ltk_v1.5/client/c/core/thirdparty/main/projects/iphone/tinyxml/build/Debug-iphoneos",
+				);
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = nav;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/src/posix/pal $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/private";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "nav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

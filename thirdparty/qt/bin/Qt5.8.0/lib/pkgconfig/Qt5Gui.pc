@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Gui
+Description: Qt Gui module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5Gui 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Core -lpthread -lGLESv2 -lpng12 -lqtharfbuzz -lz  
+Cflags: -I${includedir}/QtGui -I${includedir}
+Requires: Qt5Core
+

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="0.1442974192">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1442974192" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.qnx.tools.ide.qde.core.QDELinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="coreservices" buildProperties="" description="" id="0.1442974192" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg" prebuildStep="${ProjDirPath}/../../build/version.bat &quot;${ProjDirPath}/../../&quot; qt_qnx">
+					<folderInfo id="0.1442974192." name="/" resourcePath="">
+						<toolChain id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.toolchain.base.1118178430" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 Toolchain for Neutrino (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.toolchain.base">
+							<targetPlatform id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.target.platform.base.1835491203" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 Target Platform (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.target.platform.base"/>
+							<builder buildPath="${workspace_loc:/coreservices/Default}" id="qnx.custom.target.builder.608876034" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="qnx.custom.target.builder"/>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.archiver.base.1105538746" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 Archiver (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.archiver.base"/>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.cpp.compiler.base.1805454542" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 C++ Compiler (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.cpp.compiler.base">
+								<option id="qnx.custom.cpp.compiler.option.include.paths.703010245" name="Include paths (-I)" superClass="qnx.custom.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/private&quot;"/>
+								</option>
+								<inputType id="qnx.custom.cpp.compiler.input.425126515" superClass="qnx.custom.cpp.compiler.input"/>
+							</tool>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.c.compiler.base.40547771" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 C Compiler (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.c.compiler.base">
+								<option id="qnx.custom.c.compiler.option.include.paths.961610203" name="Include paths (-I)" superClass="qnx.custom.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/private&quot;"/>
+								</option>
+								<inputType id="qnx.custom.c.compiler.input.769579373" superClass="qnx.custom.c.compiler.input"/>
+							</tool>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.c.linker.base.881807868" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 Linker (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.c.linker.base"/>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.cpp.linker.base.782225670" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 C++ Linker (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.cpp.linker.base">
+								<inputType id="qnx.custom.cpp.linker.input.1814285684" superClass="qnx.custom.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.assembler.base.1537397189" name="SDP 2.0.0 GCC arm-unknown-nto-qnx6.5.0eabi 4.4.2 Assembler (ARM)" superClass="qnx.custom.SDP_2_0_0_GCC_arm_unknown_nto_qnx6_5_0eabi_4_4_2.gcc.nto.arm.assembler.base">
+								<option id="qnx.custom.both.asm.option.include.paths.1993004989" name="Include paths (-I)" superClass="qnx.custom.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/private&quot;"/>
+								</option>
+								<inputType id="qnx.custom.assembler.input.1213175842" superClass="qnx.custom.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+		<pathentry kind="src" path=""/>
+		<pathentry kind="out" path=""/>
+		<pathentry kind="con" path="com.qnx.tools.ide.qde.QDE_PROJECT_CONTAINER"/>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="coreservices.null.1505927615" name="coreservices"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		<scannerConfigBuildInfo instanceId="0.1442974192">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/coreservices"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>all</buildTarget>
+				<stopOnError>false</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="clean" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>clean</buildTarget>
+				<stopOnError>false</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="rebuild" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>clean all</buildTarget>
+				<stopOnError>false</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="com.qnx.tools.ide.qde.core.QNXProjectProperties">
+		<makefile value="Makefile"/>
+		<command value="make"/>
+		<code_coverage value="false"/>
+		<profiling value="false"/>
+		<mudflapth value="false"/>
+		<instrumentedFunctionProfiling value="false"/>
+		<type value="2"/>
+		<parallel_build value="false"/>
+		<parallel_build_number value="1"/>
+		<active_configurations>
+			<configuration value="_armle-v7_r"/>
+			<configuration indexing="true" value="_armle-v7_g"/>
+			<configuration value="_x86_r"/>
+			<configuration value="_x86_g"/>
+		</active_configurations>
+	</storageModule>
+</cproject>

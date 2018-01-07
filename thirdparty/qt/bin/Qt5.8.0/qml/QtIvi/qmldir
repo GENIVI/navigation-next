@@ -1,0 +1,3 @@
+module QtIvi
+plugin qtivicoreplugin
+classname QtIviCorePlugin

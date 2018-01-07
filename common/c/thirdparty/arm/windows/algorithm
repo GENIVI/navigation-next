@@ -1,0 +1,1484 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * algorithm - declarations and inline definitions of the Standard
+ *              Library algorithms
+ *
+ * $Id: algorithm 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_ALGORITHM_INCLUDED
+#define _RWSTD_ALGORITHM_INCLUDED
+
+#include <memory>
+#include <utility>
+
+#include <rw/_iterbase.h>
+#include <rw/_algobase.h>
+#include <rw/_defs.h>
+
+#include _RWSTD_CSTDLIB
+
+
+#ifdef _INLINE_RECURSIVE
+#  define _INLINE inline
+#else
+#  define _INLINE
+#endif
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+// 25.1 - Non-modifying sequence operations [lib.alg.nonmodifying]
+
+// 25.1.1 - For Each [lib.alg.foreach]
+template <class _InputIter, class _Function>
+inline _Function
+for_each (_InputIter __first, _InputIter __last, _Function __f)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (;__first != __last; ++__first)
+        __f (*__first);
+    return __f;
+}
+
+
+// 25.1.2 - Find [lib.alg.find]
+
+template <class _InputIter, class _TypeT>
+inline _InputIter
+find (_InputIter __first, _InputIter __last, const _TypeT& __value)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    while (!(__first == __last) && !(*__first == __value)) 
+        ++__first;
+    return __first;
+}
+
+
+template <class _InputIter, class _Predicate>
+inline _InputIter
+find_if (_InputIter __first, _InputIter __last, _Predicate __pred)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    while (__first != __last && !__pred (*__first))
+        ++__first;
+    return __first;
+}
+
+
+// helpers to work around the lack of iterator_traits
+template <class _FwdIter1, class _FwdIter2, class _Distance>
+_FwdIter1 __find_end (_FwdIter1, _FwdIter1, _FwdIter2, _FwdIter2, _Distance*);
+
+template <class _FwdIter1, class _FwdIter2, 
+          class _BinaryPredicate, class _Distance>
+_FwdIter1 __find_end (_FwdIter1, _FwdIter1, _FwdIter2, _FwdIter2,
+                      _BinaryPredicate, _Distance*);
+
+
+// 25.1.3 - Find End [lib.alg.find.end]
+
+template <class _FwdIter1, class _FwdIter2>
+inline _FwdIter1 find_end (_FwdIter1 __first1, _FwdIter1 __last1,
+                           _FwdIter2 __first2, _FwdIter2 __last2)
+{
+    _RWSTD_ASSERT_RANGE (__first1, __last1);
+    _RWSTD_ASSERT_RANGE (__first2, __last2);
+
+    return __find_end (__first1, __last1, __first2, __last2,
+                       _RWSTD_DIFFERENCE_TYPE (_FwdIter1));
+}
+
+
+template <class _FwdIter1, class _FwdIter2, class _BinaryPredicate>
+_FwdIter1 find_end (_FwdIter1 __first1, _FwdIter1 __last1,
+                    _FwdIter2 __first2, _FwdIter2 __last2,
+                    _BinaryPredicate __pred)
+{
+    _RWSTD_ASSERT_RANGE (__first1, __last1);
+    _RWSTD_ASSERT_RANGE (__first2, __last2);
+
+    return __find_end (__first1,__last1,__first2,__last2,
+                       __pred, _RWSTD_DIFFERENCE_TYPE (_FwdIter1));
+}
+
+// 25.1.4 - Find First [lib.alg.find.first.of]
+
+template <class _FwdIter1, class _FwdIter2>
+_FwdIter1 find_first_of (_FwdIter1, _FwdIter1, _FwdIter2, _FwdIter2);
+
+template <class _FwdIter1, class _FwdIter2, class _BinaryPred>
+_FwdIter1 find_first_of (_FwdIter1,_FwdIter1, _FwdIter2, _FwdIter2,
+                         _BinaryPred);
+
+
+// 25.1.5 - Adjacent Find [lib.alg.adjacent.find]
+
+template <class _FwdIter>
+_FwdIter adjacent_find (_FwdIter, _FwdIter);
+
+template <class _FwdIter, class _BinaryPredicate>
+_FwdIter adjacent_find (_FwdIter, _FwdIter, _BinaryPredicate);
+
+
+#ifndef _RWSTD_NO_CLASS_PARTIAL_SPEC
+
+// 25.1.6 - Count [lib.alg.count]
+
+template <class _InputIter, class _TypeT>
+inline _TYPENAME iterator_traits<_InputIter>::difference_type
+count (_InputIter __first, _InputIter __last, const _TypeT& __value)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    _TYPENAME iterator_traits<_InputIter>::difference_type __n = 0;
+    for (; __first != __last; ++__first)
+        if (*__first == __value)
+            ++__n;
+    return __n;
+}
+
+
+template <class _InputIter, class _Predicate>
+inline _TYPENAME iterator_traits<_InputIter>::difference_type
+count_if (_InputIter __first, _InputIter __last, _Predicate __pred)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    _TYPENAME iterator_traits<_InputIter>::difference_type __n = 0;
+    for (;__first != __last; ++__first)
+        if (__pred (*__first))
+            ++__n;
+    return __n;
+}
+
+#endif   // _RWSTD_NO_CLASS_PARTIAL_SPEC
+
+
+// provided as a backward-compatibility extension (or as a workaround)
+#if    !defined (_RWSTD_NO_EXT_VOID_COUNT)    \
+    || defined (_RWSTD_NO_CLASS_PARTIAL_SPEC)
+
+template <class _InputIter, class _TypeT, class _Size>
+inline void count (_InputIter __first, _InputIter __last,
+                   const _TypeT& __value, _Size& __n)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (;__first != __last;++__first) 
+        if (*__first == __value)
+            ++__n;
+}
+
+
+template <class _InputIter, class _Predicate, class _Size>
+inline void count_if (_InputIter __first, _InputIter __last,
+                      _Predicate __pred, _Size& __n)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (;__first != __last;++__first)
+        if (__pred (*__first))
+            ++__n;
+}
+
+#endif   // !_RWSTD_NO_EXT_VOID_COUNT || _RWSTD_NO_CLASS_PARTIAL_SPEC
+
+
+// 25.1.7 - Mismatch [lib.mismatch]
+// 25.1.8 - Equal [lib.alg.equal]
+// defined in <rw/_algobase.h>
+
+
+// helpers to work around the lack of iterator_traits
+template <class _FwdIter1, class _FwdIter2, class _Distance1, class _Distance2>
+_FwdIter1 __search (_FwdIter1, _FwdIter1, _FwdIter2, _FwdIter2,
+                    _Distance1*, _Distance2*);
+
+template <class _FwdIter1, class _FwdIter2,
+          class _BinaryPredicate, class Distance1, class Distance2>
+_FwdIter1 __search (_FwdIter1, _FwdIter1, _FwdIter2, _FwdIter2,
+                    _BinaryPredicate, Distance1*, Distance2*);
+
+// 25.1.9 - Search [lib.alg.search]
+
+// 25.1.9, p1
+template <class _FwdIter1, class _FwdIter2>
+inline _FwdIter1 search (_FwdIter1 __first1, _FwdIter1 __last1,
+                         _FwdIter2 __first2, _FwdIter2 __last2)
+{
+    return __search (__first1, __last1, __first2, __last2,
+                     _RWSTD_DIFFERENCE_TYPE (_FwdIter1),
+                     _RWSTD_DIFFERENCE_TYPE (_FwdIter2));
+}
+
+
+template <class _FwdIter1, class _FwdIter2, class _BinaryPredicate>
+inline _FwdIter1 search (_FwdIter1 __first1,_FwdIter1 __last1,
+                         _FwdIter2 __first2,_FwdIter2 __last2,
+                         _BinaryPredicate __pred)
+{
+    return __search (__first1, __last1, __first2, __last2, __pred,
+                     _RWSTD_DIFFERENCE_TYPE (_FwdIter1),
+                     _RWSTD_DIFFERENCE_TYPE (_FwdIter2));
+}
+
+
+// helper to work around the lack of iterator_traits
+template <class _FwdIter, class _Distance, class _Size, class _TypeT>
+_FwdIter __search_n (_FwdIter, _FwdIter, _Distance*, _Size, const _TypeT&);
+ 
+template <class _FwdIter, class _Distance, class _Size, class _TypeT,
+          class _BinaryPredicate>
+_FwdIter __search_n (_FwdIter, _FwdIter, _Distance*, _Size,
+                     const _TypeT&, _BinaryPredicate);
+
+// 25.1.9, p4
+template <class _FwdIter, class _Size, class _TypeT>
+inline _FwdIter search_n (_FwdIter __first, _FwdIter __last,
+                          _Size __count, const _TypeT& __value)
+{
+    if (__count) 
+        return __search_n (__first, __last, _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                           __count, __value);
+    return __first;
+}
+
+
+template <class _FwdIter, class _Size, class _TypeT, class _BinaryPredicate>
+inline _FwdIter search_n (_FwdIter __first, _FwdIter __last,
+                          _Size __count, const _TypeT& __value,
+                          _BinaryPredicate __pred)
+{
+    if (__count) 
+        return __search_n (__first, __last,
+                           _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                           __count,__value, __pred);
+    return __first;
+}
+
+
+// 25.2 - Mutating sequence operations [lib.alg.modifying,operations]
+
+// 25.2.1 - Copy [lib.alg.copy]
+// 25.2.2, p1 swap
+// defined in <rw/_algobase.h>
+
+// 25.2.2, p3
+template <class _FwdIter1, class _FwdIter2>
+_FwdIter2 swap_ranges (_FwdIter1, _FwdIter1, _FwdIter2);
+
+// 25.2.3 - Transform [lib.alg.transform]
+template <class _InputIter, class _OutputIter, class _UnaryOperation>
+_OutputIter transform (_InputIter, _InputIter, _OutputIter, _UnaryOperation);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter,
+          class _BinaryOperation>
+_OutputIter transform (_InputIter1, _InputIter1, _InputIter2, _OutputIter,
+                       _BinaryOperation);
+
+// 25.2.4 - Replace [lib.alg.replace]
+template <class _FwdIter, class _TypeT>
+void replace (_FwdIter, _FwdIter, const _TypeT&, const _TypeT&);
+
+template <class _FwdIter, class _Predicate, class _TypeT>
+void replace_if (_FwdIter, _FwdIter, _Predicate, const _TypeT&);
+
+template <class _InputIter, class _OutputIter, class _TypeT>
+_OutputIter replace_copy (_InputIter, _InputIter, _OutputIter,
+                          const _TypeT&, const _TypeT&);
+
+template <class _Iter, class _OutputIter, class _Predicate, class _TypeT>
+_OutputIter replace_copy_if (_Iter, _Iter, _OutputIter, _Predicate,
+                             const _TypeT&);
+
+// 25.2.5 - Fill [lib.alg.fill]
+// defined in <rw/_algobase.h>
+
+// 25.2.6 - Generate [lib.alg.generate]
+
+template <class _FwdIter, class _Generator>
+void generate (_FwdIter, _FwdIter, _Generator);
+
+template <class _OutputIter, class _Size, class _Generator>
+void generate_n (_OutputIter, _Size, _Generator);
+
+// 25.2.7 - Remove [lib.alg.remove]
+template <class _InputIter, class _OutputIter, class _TypeT>
+_OutputIter remove_copy (_InputIter, _InputIter, _OutputIter,
+                         const _TypeT&);
+
+template <class _InputIter, class _OutputIter, class _Predicate>
+_OutputIter remove_copy_if (_InputIter, _InputIter, _OutputIter, _Predicate);
+
+
+template <class _FwdIter, class _TypeT>
+inline _FwdIter
+remove (_FwdIter __first, _FwdIter __last, const _TypeT& __value)
+{
+    __first = _STD::find (__first, __last, __value);
+    _FwdIter __next = __first;
+    return __first == __last ?
+        __first : _STD::remove_copy (++__next, __last, __first, __value);
+}
+
+
+template <class _FwdIter, class _Predicate>
+inline _FwdIter remove_if (_FwdIter __first, _FwdIter __last, _Predicate __pred)
+{
+    __first = _STD::find_if (__first, __last, __pred);
+    _FwdIter __next = __first;
+    return __first == __last ?
+        __first : _STD::remove_copy_if (++__next, __last, __first, __pred);
+}
+
+
+template <class _InputIter, class _FwdIter>
+_FwdIter __unique_copy (_InputIter, _InputIter, _FwdIter, forward_iterator_tag);
+
+
+template <class _InputIter, class _BidirIter>
+inline _BidirIter
+__unique_copy (_InputIter __first, _InputIter __last, _BidirIter __res, 
+               bidirectional_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res, forward_iterator_tag ());
+}
+
+
+template <class _InputIter, class _RandomAccessIter>
+inline _RandomAccessIter
+__unique_copy (_InputIter __first, _InputIter __last,
+               _RandomAccessIter __res, random_access_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res, forward_iterator_tag ());
+}
+
+template <class _InputIter, class _OutputIter, class _TypeT>
+_OutputIter __unique_copy (_InputIter, _InputIter, _OutputIter, _TypeT*);
+
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __unique_copy (_InputIter __first, _InputIter __last,
+                                  _OutputIter __res, output_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res,
+                          _RWSTD_VALUE_TYPE (_InputIter));
+}
+
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter
+unique_copy (_InputIter __first, _InputIter __last, _OutputIter __res)
+{
+    return __first == __last ? __res :
+        __unique_copy (__first, __last, __res,
+                       _RWSTD_ITERATOR_CATEGORY (_OutputIter, __res));
+}
+
+
+template <class _InputIter, class _FwdIter, class _BinaryPredicate>
+_FwdIter __unique_copy (_InputIter, _InputIter, _FwdIter, _BinaryPredicate,
+                        forward_iterator_tag);
+
+
+template <class _InputIter, class _BidirIter, class _BinaryPredicate>
+inline _BidirIter
+__unique_copy (_InputIter __first, _InputIter __last, _BidirIter __res, 
+               _BinaryPredicate __pred, bidirectional_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res, __pred,
+                          forward_iterator_tag ());
+}
+
+
+template <class _InputIter, class _RandomAccessIter, class _BinaryPredicate>
+inline _RandomAccessIter
+__unique_copy (_InputIter __first, _InputIter __last, _RandomAccessIter __res, 
+               _BinaryPredicate __pred, random_access_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res, __pred, 
+                          forward_iterator_tag ());
+}
+
+
+template <class _InputIter, class _OutputIter, class _BinaryPredicate,
+          class _TypeT>
+_OutputIter __unique_copy (_InputIter, _InputIter, _OutputIter,
+                           _BinaryPredicate, _TypeT*);
+
+template <class _InputIter, class _OutputIter, class _BinaryPredicate>
+inline _OutputIter
+__unique_copy (_InputIter __first, _InputIter __last, _OutputIter __res,
+               _BinaryPredicate __pred, output_iterator_tag)
+{
+    return __unique_copy (__first, __last, __res, __pred,
+                          _RWSTD_VALUE_TYPE (_InputIter));
+}
+
+
+template <class _InputIter, class _OutputIter, class _BinaryPredicate>
+inline _OutputIter
+unique_copy (_InputIter __first, _InputIter __last, _OutputIter __res,
+             _BinaryPredicate __pred)
+{
+      return __first == __last ? __res :
+          __unique_copy (__first, __last, __res, __pred,
+                         _RWSTD_ITERATOR_CATEGORY (_OutputIter, __res));
+}
+
+
+template <class _FwdIter>
+inline _FwdIter unique (_FwdIter __first, _FwdIter __last)
+{
+    __first = _STD::adjacent_find (__first, __last);
+    return _STD::unique_copy (__first, __last, __first);
+}
+
+
+template <class _FwdIter, class _BinaryPredicate>
+inline _FwdIter unique (_FwdIter __first, _FwdIter __last,
+                        _BinaryPredicate __pred)
+{
+    __first = _STD::adjacent_find (__first, __last, __pred);
+    return _STD::unique_copy (__first, __last, __first, __pred);
+}
+
+
+template <class _BidirIter>
+void __reverse (_BidirIter, _BidirIter, bidirectional_iterator_tag);
+
+
+template <class _RandomAccessIter>
+void __reverse (_RandomAccessIter __first, _RandomAccessIter __last,
+                random_access_iterator_tag);
+
+
+template <class _BidirIter>
+inline void reverse (_BidirIter __first, _BidirIter __last)
+{
+    __reverse (__first, __last, _RWSTD_ITERATOR_CATEGORY (_BidirIter, __first));
+}
+
+
+template <class _BidirIter, class _OutputIter>
+_OutputIter reverse_copy (_BidirIter, _BidirIter, _OutputIter);
+
+
+template <class _FwdIter, class _Distance>
+void __rotate (_FwdIter, _FwdIter, _FwdIter, _Distance*, forward_iterator_tag);
+
+
+template <class _BidirIter, class _Distance>
+inline void
+__rotate (_BidirIter __first, _BidirIter __middle, _BidirIter __last,
+          _Distance*, bidirectional_iterator_tag)
+{
+    _STD::reverse (__first, __middle);
+    _STD::reverse (__middle, __last);
+    _STD::reverse (__first, __last);
+}
+
+
+template <class _EuclideanRingElement>
+_EuclideanRingElement __gcd (_EuclideanRingElement, _EuclideanRingElement);
+
+
+template <class _RandomAccessIter, class _Distance, class _TypeT>
+void __rotate_cycle (_RandomAccessIter, _RandomAccessIter, _RandomAccessIter,
+                     _Distance, _TypeT*);
+
+
+template <class _RandomAccessIter, class _Distance>
+void __rotate (_RandomAccessIter, _RandomAccessIter, _RandomAccessIter,
+               _Distance*, random_access_iterator_tag);
+
+
+template <class _FwdIter>
+inline void rotate (_FwdIter __first, _FwdIter __middle, _FwdIter __last)
+{
+    if (!(__first == __middle || __middle == __last))
+        __rotate (__first, __middle, __last,
+                  _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                  _RWSTD_ITERATOR_CATEGORY (_FwdIter, __first));
+}
+
+
+template <class _FwdIter, class _OutputIter>
+inline _OutputIter
+rotate_copy (_FwdIter __first, _FwdIter __middle, _FwdIter __last,
+             _OutputIter __res)
+{
+    return _STD::copy (__first, __middle, _STD::copy (__middle, __last, __res));
+}
+
+
+template <class _RandomAccessIter, class _Distance>
+void __random_shuffle (_RandomAccessIter, _RandomAccessIter, _Distance*);
+
+
+template <class _RandomAccessIter>
+inline void random_shuffle (_RandomAccessIter __first,
+                            _RandomAccessIter __last)
+{
+    __random_shuffle (__first, __last,
+                      _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter));
+}
+
+
+template <class _RandomAccessIter, class _RandomNumberGenerator>
+void random_shuffle (_RandomAccessIter, _RandomAccessIter,
+                     _RandomNumberGenerator&);
+
+
+template <class _BidirIter, class _Predicate>
+_BidirIter partition (_BidirIter, _BidirIter, _Predicate);
+
+
+template <class _BidirIter, class _Predicate, class _Distance>
+_BidirIter
+__inplace_stable_partition (_BidirIter, _BidirIter, _Predicate, _Distance);
+
+
+template <class _BidirIter, class _Pointer, class _Predicate,
+          class _Distance, class _TypeT>
+_BidirIter
+__stable_partition_adaptive (_BidirIter, _BidirIter, _Predicate, _Distance,
+                             _Pointer, _Distance, _Distance&, _TypeT*);
+
+template <class _BidirIter, class _Predicate, class _TypeT, class _Distance>
+_BidirIter __stable_partition (_BidirIter, _BidirIter, _Predicate,
+                               _TypeT*, _Distance*);
+
+template <class _BidirIter, class _Predicate>
+inline _BidirIter
+stable_partition (_BidirIter __first, _BidirIter __last, _Predicate __pred)
+{
+    return __stable_partition (__first, __last, __pred,
+                               _RWSTD_VALUE_TYPE (_BidirIter),
+                               _RWSTD_DIFFERENCE_TYPE (_BidirIter));
+}
+
+
+// 25.3.1 - Sorting [lib.alg.sort]
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+_RandomAccessIter
+__unguarded_partition (_RandomAccessIter, _RandomAccessIter,
+                       _TypeT, _Compare);
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+void __quick_sort_loop_aux (_RandomAccessIter, _RandomAccessIter,
+                            _TypeT*, _Compare);
+
+
+template <class _RandomAccessIter, class _Compare>
+inline void
+__quick_sort_loop (_RandomAccessIter __first, _RandomAccessIter __last,
+                   _Compare __comp)
+{
+    __quick_sort_loop_aux (__first, __last,
+                           _RWSTD_VALUE_TYPE (_RandomAccessIter), __comp);
+}
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+void __unguarded_linear_insert (_RandomAccessIter, _TypeT, _Compare);
+
+
+template <class _RandomAccessIter, class _TypeT>
+inline void __linear_insert (_RandomAccessIter __first, 
+                             _RandomAccessIter __last, _TypeT*)
+{
+    _TypeT __value = *__last;
+    if (__value < *__first) {
+        _STD::copy_backward (__first, __last, __last + 1);
+        *__first = __value;
+    }
+    else
+        __unguarded_linear_insert (__last, __value);
+}
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+inline void
+__linear_insert (_RandomAccessIter __first, _RandomAccessIter __last, _TypeT*,
+                 _Compare __comp)
+{
+    _TypeT __value = *__last;
+    if (__comp (__value, *__first)) {
+        _STD::copy_backward (__first, __last, __last + 1);
+        *__first = __value;
+    }
+    else
+        __unguarded_linear_insert(__last, __value, __comp);
+}
+
+template <class _RandomAccessIter, class _Compare>
+void __insertion_sort (_RandomAccessIter, _RandomAccessIter, _Compare);
+
+template <class _RandomAccessIter, class _Compare>
+inline void
+__unguarded_insertion_sort (_RandomAccessIter __first, _RandomAccessIter __last,
+                            _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (_RandomAccessIter __i = __first; __i != __last; ++__i)
+        __unguarded_linear_insert (__i, *__i, __comp);
+}
+
+
+template <class _RandomAccessIter, class _Distance, class _Compare>
+void __introsort_loop (_RandomAccessIter, _RandomAccessIter,
+                       _Distance, _Compare);
+
+template <class _RandomAccessIter, class _Compare>
+void __final_insertion_sort (_RandomAccessIter, _RandomAccessIter, _Compare);
+
+
+// 25.3.1.1
+template <class _RandomAccessIter, class _Compare>
+inline void
+sort (_RandomAccessIter __first, _RandomAccessIter __last, _Compare __comp)
+{
+    if (!(__first == __last))  {
+        // introsort guarantees O(N * log(N)) in the worst case
+        __introsort_loop (__first, __last, __last - __first, __comp);
+        __final_insertion_sort (__first, __last, __comp);
+    }
+}
+
+
+template <class _RandomAccessIter>
+inline void sort (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::sort (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+template <class _BidirIter, class _Distance, class _Compare>
+void __merge_without_buffer (_BidirIter, _BidirIter, _BidirIter,
+                             _Distance, _Distance, _Compare);
+
+template <class _RandomAccessIter, class _Compare>
+_INLINE void
+__inplace_stable_sort (_RandomAccessIter __first, _RandomAccessIter __last,
+                       _Compare __comp)
+{
+    if (__last - __first < 15)
+        __insertion_sort (__first, __last, __comp);
+    else {
+        _RandomAccessIter __middle = __first + (__last - __first) / 2;
+        __inplace_stable_sort (__first, __middle, __comp);
+        __inplace_stable_sort (__middle, __last, __comp);
+        __merge_without_buffer (__first, __middle, __last,
+                                __middle - __first, __last - __middle, __comp);
+    }
+}
+
+
+template <class _RandomAccessIter1, class _RandomAccessIter2,
+          class _Distance, class _Compare>
+void __merge_sort_loop (_RandomAccessIter1, _RandomAccessIter1, 
+                        _RandomAccessIter2, _Distance, _Compare);
+
+template <class _RandomAccessIter, class _Distance, class _Compare>
+void __chunk_insertion_sort (_RandomAccessIter, _RandomAccessIter, _Distance,
+                             _Compare);
+
+template <class _RandomAccessIter, class _Pointer, class _Distance,
+          class _TypeT, class _Compare>
+void __merge_sort_with_buffer (_RandomAccessIter, _RandomAccessIter,
+                               _Pointer, _Distance*, _TypeT*, _Compare);
+
+template <class _RandomAccessIter, class _Pointer, class _Distance,
+          class _TypeT, class _Compare>
+void __stable_sort_adaptive (_RandomAccessIter, _RandomAccessIter,
+                             _Pointer, _Distance, _TypeT*, _Compare);
+
+template <class _RandomAccessIter, class _TypeT, class _Distance,
+          class _Compare>
+inline void
+__stable_sort (_RandomAccessIter __first, _RandomAccessIter __last,
+               _TypeT*, _Distance*, _Compare __comp)
+{
+    // call an extension of get_temporary_buffer<>() in case partial class
+    // specialization (and iterator_traits<>) isn't supported by compiler
+    pair<_TypeT*, _Distance> __p =
+        _STD::get_temporary_buffer (_Distance (__last - __first), (_TypeT*)0);
+
+    if (__p.first == 0)
+        __inplace_stable_sort (__first, __last, __comp);
+    else {
+        _Distance __len = min (_Distance (__p.second),
+                               _Distance (__last - __first));
+        _STD::copy (__first, __first + __len,
+                       raw_storage_iterator<_TypeT*, _TypeT>(__p.first));
+
+        __stable_sort_adaptive (__first, __last, __p.first, __p.second,
+                                (_TypeT*)0, __comp);
+
+        _RW::__rw_destroy (__p.first, __p.first + __len);
+
+        _STD::return_temporary_buffer (__p.first);
+    }
+}
+
+
+// 25.3.1.2
+template <class _RandomAccessIter, class _Compare>
+inline void stable_sort (_RandomAccessIter __first, _RandomAccessIter __last,
+                         _Compare __comp)
+{
+    if (!(__first == __last))
+        __stable_sort (__first, __last,
+                       _RWSTD_VALUE_TYPE (_RandomAccessIter),
+                       _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter), __comp);
+}
+
+
+template <class _RandomAccessIter>
+inline void stable_sort (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::stable_sort (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+// helper to work around the lack of iterator_traits
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+void __partial_sort (_RandomAccessIter, _RandomAccessIter,
+                     _RandomAccessIter, _TypeT*, _Compare);
+
+// 25.3.1.3
+template <class _RandomAccessIter, class _Compare>
+inline void partial_sort (_RandomAccessIter __first,
+                          _RandomAccessIter __middle,
+                          _RandomAccessIter __last, _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+    _RWSTD_ASSERT_RANGE (__first, __middle);
+
+    if (!(__first == __middle))
+        __partial_sort (__first, __middle, __last,
+                        _RWSTD_VALUE_TYPE(_RandomAccessIter),
+                        __comp);
+}
+
+template <class _RandomAccessIter>
+inline void
+partial_sort (_RandomAccessIter __first, _RandomAccessIter __middle,
+              _RandomAccessIter __last)
+{
+    _STD::partial_sort (__first, __middle, __last,
+                        _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+// helper to work around the lack of iterator_traits
+template <class _InputIter, class _RandomAccessIter, class _Compare,
+          class _Distance, class _TypeT>
+_RandomAccessIter
+__partial_sort_copy (_InputIter, _InputIter,
+                     _RandomAccessIter, _RandomAccessIter,
+                     _Compare, _Distance*, _TypeT*);
+
+
+// 25.3.1.4
+template <class _InputIter, class _RandomAccessIter, class _Compare>
+inline _RandomAccessIter
+partial_sort_copy (_InputIter __first, _InputIter __last,
+                   _RandomAccessIter __res_first,
+                   _RandomAccessIter __res_last, _Compare __comp)
+{
+    return __first == __last ? __res_first :
+        __partial_sort_copy (__first, __last, __res_first, __res_last, __comp,
+                             _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter),
+                             _RWSTD_VALUE_TYPE (_RandomAccessIter));
+}
+
+
+template <class _InputIter, class _RandomAccessIter>
+inline _RandomAccessIter
+partial_sort_copy (_InputIter __first1, _InputIter __last1,
+                   _RandomAccessIter __first2, _RandomAccessIter __last2)
+{
+    return _STD::partial_sort_copy (__first1, __last1, __first2, __last2,
+                                    _RWSTD_LESS (_InputIter));
+}
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare>
+void __nth_element (_RandomAccessIter, _RandomAccessIter,
+                    _RandomAccessIter, _TypeT*, _Compare);
+
+// 25.3.2 - Nth element [lib.alg.nth.element]
+
+template <class _RandomAccessIter, class _Compare>
+inline void nth_element (_RandomAccessIter __first, _RandomAccessIter __nth,
+                         _RandomAccessIter __last, _Compare __comp)
+{
+    if (!(__first == __last))
+        __nth_element (__first, __nth, __last,
+                       _RWSTD_VALUE_TYPE (_RandomAccessIter), __comp);
+}
+
+template <class _RandomAccessIter>
+inline void nth_element (_RandomAccessIter __first, _RandomAccessIter __nth,
+                         _RandomAccessIter __last)
+{
+    _STD::nth_element (__first, __nth, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+// 25.3.3 - Binary search [lib.alg.binary.search]
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+_FwdIter __lower_bound (_FwdIter, _FwdIter, const _TypeT&, _Compare,
+                        _Distance*, forward_iterator_tag);
+
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+inline _FwdIter
+__lower_bound (_FwdIter __first, _FwdIter __last,
+               const _TypeT& __value, _Compare __comp, _Distance*,
+               bidirectional_iterator_tag)
+{
+    return __lower_bound (__first, __last, __value, __comp,
+                          (_Distance*)0, forward_iterator_tag ());
+}
+
+template <class _RandomAccessIter, class _TypeT, class _Compare,
+          class _Distance>
+_RandomAccessIter __lower_bound (_RandomAccessIter, _RandomAccessIter,
+                                 const _TypeT&, _Compare, _Distance*,
+                                 random_access_iterator_tag);
+
+// 25.3.3.1
+template <class _FwdIter, class _TypeT, class _Compare>
+inline _FwdIter lower_bound (_FwdIter __first,_FwdIter __last,
+                             const _TypeT& __value, _Compare __comp)
+{
+    return __lower_bound (__first, __last, __value, __comp,
+                          _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                          _RWSTD_ITERATOR_CATEGORY (_FwdIter, __first));
+}
+
+
+template <class _FwdIter, class _TypeT>
+inline _FwdIter
+lower_bound (_FwdIter __first, _FwdIter __last, const _TypeT& __value)
+{
+    return _STD::lower_bound (__first, __last, __value,
+                              _RWSTD_LESS (_FwdIter));
+}
+
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+_FwdIter __upper_bound (_FwdIter, _FwdIter, const _TypeT&, _Compare,
+                        _Distance*, forward_iterator_tag);
+
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+inline _FwdIter
+__upper_bound (_FwdIter __first, _FwdIter __last, const _TypeT& __value,
+               _Compare __comp, _Distance*, bidirectional_iterator_tag)
+{
+    return __upper_bound (__first, __last, __value, __comp,
+                          (_Distance*)0, forward_iterator_tag ());
+}
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare,
+          class _Distance>
+_RandomAccessIter __upper_bound (_RandomAccessIter, _RandomAccessIter,
+                                 const _TypeT&, _Compare, _Distance*,
+                                 random_access_iterator_tag);
+
+// 25.3.3.2
+template <class _FwdIter, class _TypeT, class _Compare>
+inline _FwdIter
+upper_bound (_FwdIter __first,_FwdIter __last,
+             const _TypeT& __value, _Compare __comp)
+{
+    return __upper_bound (__first, __last, __value, __comp,
+                          _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                          _RWSTD_ITERATOR_CATEGORY (_FwdIter, __first));
+}
+
+
+template <class _FwdIter, class _TypeT>
+inline _FwdIter
+upper_bound (_FwdIter __first, _FwdIter __last, const _TypeT& __value)
+{
+    return _STD::upper_bound (__first, __last, __value,
+                              _RWSTD_LESS (_FwdIter));
+}
+
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+pair<_FwdIter, _FwdIter>
+__equal_range (_FwdIter, _FwdIter, const _TypeT&,
+               _Compare, _Distance*, forward_iterator_tag);
+
+
+template <class _FwdIter, class _TypeT, class _Compare, class _Distance>
+inline pair<_FwdIter, _FwdIter>
+__equal_range (_FwdIter __first, _FwdIter __last, const _TypeT& __value,
+               _Compare __comp, _Distance*, bidirectional_iterator_tag)
+{
+    return __equal_range (__first, __last, __value, __comp,
+                          (_Distance*)0, forward_iterator_tag());
+}
+
+
+template <class _RandomAccessIter, class _TypeT, class _Compare,
+          class _Distance>
+pair<_RandomAccessIter, _RandomAccessIter>
+__equal_range (_RandomAccessIter, _RandomAccessIter,
+               const _TypeT&, _Compare, _Distance*, random_access_iterator_tag);
+
+
+// 25.3.3.3
+template <class _FwdIter, class _TypeT, class _Compare>
+inline pair<_FwdIter, _FwdIter>
+equal_range (_FwdIter __first, _FwdIter __last,
+             const _TypeT& __value, _Compare __comp)
+{
+    return __equal_range (__first, __last, __value, __comp,
+                          _RWSTD_DIFFERENCE_TYPE (_FwdIter),
+                          _RWSTD_ITERATOR_CATEGORY (_FwdIter, __first));
+}
+
+template <class _FwdIter, class _TypeT>
+inline pair<_FwdIter, _FwdIter>
+equal_range (_FwdIter __first, _FwdIter __last, const _TypeT& __value)
+{
+    return _STD::equal_range (__first, __last, __value,
+                              _RWSTD_LESS (_FwdIter));
+}
+
+
+// 25.3.3.4
+template <class _FwdIter, class _TypeT, class _Compare>
+inline bool binary_search (_FwdIter __first, _FwdIter __last,
+                           const _TypeT& __value, _Compare __comp)
+{
+    _FwdIter __i = _STD::lower_bound (__first, __last, __value, __comp);
+    return __i != __last && !__comp(__value, *__i);
+}
+
+
+template <class _FwdIter, class _TypeT>
+inline bool
+binary_search (_FwdIter __first, _FwdIter __last, const _TypeT& __value)
+{
+    return _STD::binary_search (__first, __last, __value,
+                                _RWSTD_LESS (_FwdIter));
+}
+
+
+// 25.3.4 - Merge [lib.alg.merge]
+
+template <class _InputIter1, class _InputIter2, class _OutputIter,
+          class _Compare>
+_OutputIter merge (_InputIter1 __first1, _InputIter1 __last1,
+                   _InputIter2 __first2, _InputIter2 __last2,
+                   _OutputIter __res, _Compare __comp);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter>
+_OutputIter merge (_InputIter1 __first1, _InputIter1 __last1,
+                   _InputIter2 __first2, _InputIter2 __last2,
+                   _OutputIter __res)
+{
+    return _STD::merge (__first1, __last1, __first2, __last2, __res,
+                        _RWSTD_LESS (_InputIter1));
+}
+
+
+template <class _BidirIter1, class _BidirIter2, class _BidirIter3,
+          class _Compare>
+_BidirIter3
+__merge_backward (_BidirIter1, _BidirIter1, _BidirIter2, _BidirIter2,
+                  _BidirIter3, _Compare);
+
+template <class _BidirIter, class _Distance, class _Pointer, class _TypeT,
+          class _Compare>
+void __merge_adaptive (_BidirIter, _BidirIter, _BidirIter,
+                       _Distance, _Distance, _Pointer, _Distance, _TypeT*,
+                       _Compare);
+
+template <class _BidirIter, class _Distance, class _TypeT, class _Compare>
+void __inplace_merge (_BidirIter, _BidirIter, _BidirIter,
+                      _Distance*, _TypeT*, _Compare);
+
+// 25.3.4, p6
+template <class _BidirIter, class _Compare>
+inline void
+inplace_merge (_BidirIter __first, _BidirIter __middle, _BidirIter __last,
+               _Compare __comp)
+{
+    if (!(__first == __middle || __middle == __last))
+        __inplace_merge (__first, __middle, __last,
+                         _RWSTD_DIFFERENCE_TYPE (_BidirIter),
+                         _RWSTD_VALUE_TYPE (_BidirIter), __comp);
+}
+
+
+
+// 25.3.4, p6
+template <class _BidirIter>
+inline void
+inplace_merge (_BidirIter __first, _BidirIter __middle, _BidirIter __last)
+{
+    _STD::inplace_merge (__first, __middle, __last, _RWSTD_LESS (_BidirIter));
+}
+
+// 25.3.5 - Set operations on sorted structures
+
+// 25.3.5.1
+template <class _InputIter1, class _InputIter2, class _Compare>
+bool includes (_InputIter1, _InputIter1, _InputIter2, _InputIter2, _Compare);
+
+template <class _InputIter1, class _InputIter2>
+inline bool includes (_InputIter1 __first1, _InputIter1 __last1,
+                      _InputIter2 __first2, _InputIter2 __last2)
+{
+    return _STD::includes (__first1, __last1, __first2, __last2,
+                           _RWSTD_LESS (_InputIter1));
+}
+
+
+// 25.3.5.2
+template <class _InputIter1, class _InputIter2, class _OutputIter,
+          class _Compare>
+_OutputIter
+set_union (_InputIter1, _InputIter1, _InputIter2, _InputIter2,
+           _OutputIter, _Compare);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter>
+inline _OutputIter
+set_union (_InputIter1 __first1, _InputIter1 __last1,
+           _InputIter2 __first2, _InputIter2 __last2, _OutputIter __res)
+{
+    return _STD::set_union (__first1, __last1, __first2, __last2, __res,
+                            _RWSTD_LESS (_InputIter1));
+}
+
+
+// 25.3.5.3
+template <class _InputIter1, class _InputIter2, class _OutputIter,
+          class _Compare>
+_OutputIter
+set_intersection (_InputIter1, _InputIter1, _InputIter2, _InputIter2,
+                  _OutputIter, _Compare);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter>
+inline _OutputIter
+set_intersection (_InputIter1 __first1, _InputIter1 __last1,
+                  _InputIter2 __first2, _InputIter2 __last2, _OutputIter __res)
+{
+    return _STD::set_intersection (__first1, __last1, __first2, __last2,
+                                   __res, _RWSTD_LESS (_InputIter1));
+}
+
+
+// 25.3.5.4
+template <class _InputIter1, class _InputIter2, class _OutputIter, 
+          class _Compare>
+_OutputIter
+set_difference (_InputIter1, _InputIter1, _InputIter2, _InputIter2, 
+                _OutputIter, _Compare);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter>
+inline _OutputIter
+set_difference (_InputIter1 __first1, _InputIter1 __last1,
+                _InputIter2 __first2, _InputIter2 __last2, _OutputIter __res)
+{
+    return _STD::set_difference (__first1, __last1, __first2, __last2,
+                                 __res, _RWSTD_LESS (_InputIter1));
+}
+
+
+// 25.3.5.5
+template <class _InputIter1, class _InputIter2, class _OutputIter,
+          class _Compare>
+_OutputIter
+set_symmetric_difference (_InputIter1, _InputIter1, _InputIter2, _InputIter2,
+                          _OutputIter, _Compare);
+
+template <class _InputIter1, class _InputIter2, class _OutputIter>
+inline _OutputIter
+set_symmetric_difference (_InputIter1 __first1, _InputIter1 __last1,
+                          _InputIter2 __first2, _InputIter2 __last2,
+                          _OutputIter __res)
+{
+    return _STD::set_symmetric_difference (__first1, __last1,
+                                           __first2, __last2,
+                                           __res, _RWSTD_LESS (_InputIter1));
+}
+
+
+// 25.3.6 - Heap operations
+
+// helper to work around the lack of iterator_traits
+template <class _RandomAccessIter, class _Distance, class _TypeT,
+          class _Compare>
+void __push_heap (_RandomAccessIter, _Distance, _Distance, _TypeT, _Compare);
+
+
+template <class _RandomAccessIter, class _Distance, class _Compare>
+inline void
+__push_heap (_RandomAccessIter __first, _RandomAccessIter __last,
+             _Distance*, _Compare __comp)
+{
+    __push_heap (__first, _Distance (__last - __first),
+                 _Distance (), *__last, __comp);
+}
+
+// 25.3.6.1
+template <class _RandomAccessIter, class _Compare>
+inline void push_heap (_RandomAccessIter __first, _RandomAccessIter __last,
+                       _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    if (!(__first == __last))
+        __push_heap (__first, --__last,
+                     _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter), __comp);
+}
+
+
+// 25.3.6.1
+template <class _RandomAccessIter>
+inline void push_heap (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::push_heap (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+template <class _RandomAccessIter, class _Distance, class _TypeT,
+          class _Compare>
+void __adjust_heap (_RandomAccessIter, _Distance, _Distance, _TypeT, _Compare);
+
+
+// helper to work around the lack of iterator_traits
+template <class _RandomAccessIter, class _TypeT, class _Compare,
+          class _Distance>
+inline void
+__pop_heap (_RandomAccessIter __first, _RandomAccessIter __last,
+            _RandomAccessIter __res, _TypeT __val, _Compare __cmp, _Distance*)
+{
+    *__res = *__first;
+    __adjust_heap (__first, _Distance (),
+                   _Distance (__last - __first), __val, __cmp);
+}
+
+
+// 25.3.6.2
+template <class _RandomAccessIter, class _Compare>
+inline void
+pop_heap (_RandomAccessIter __first, _RandomAccessIter __last, _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    if (!(__first == __last)) {
+        --__last;
+        __pop_heap (__first, __last, __last, *__last, __comp,
+                    _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter));
+    }
+}
+
+
+// 25.3.6.2
+template <class _RandomAccessIter>
+inline void pop_heap (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::pop_heap (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+template <class _RandomAccessIter, class _Compare, class _TypeT,
+          class _Distance>
+void __make_heap (_RandomAccessIter, _RandomAccessIter,
+                  _Compare, _TypeT*, _Distance*);
+
+
+// 25.3.6.3
+template <class _RandomAccessIter, class _Compare>
+inline void make_heap (_RandomAccessIter __first, _RandomAccessIter __last,
+                       _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    if (!(__last - __first < 2))
+        __make_heap (__first, __last, __comp,
+                     _RWSTD_VALUE_TYPE (_RandomAccessIter),
+                     _RWSTD_DIFFERENCE_TYPE (_RandomAccessIter));
+}
+
+
+// 25.3.6.3
+template <class _RandomAccessIter>
+inline void make_heap (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::make_heap (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+// 25.3.6.4
+template <class _RandomAccessIter, class _Compare>
+inline void sort_heap (_RandomAccessIter __first, _RandomAccessIter __last,
+                       _Compare __comp)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __last - __first > 1; --__last)
+        _STD::pop_heap (__first, __last, __comp);
+}
+
+
+// 25.3.6.4
+template <class _RandomAccessIter>
+inline void sort_heap (_RandomAccessIter __first, _RandomAccessIter __last)
+{
+    _STD::sort_heap (__first, __last, _RWSTD_LESS (_RandomAccessIter));
+}
+
+
+// 25.3.7 - Minimum and maximum
+
+// 25.3.7, p7
+template <class _FwdIter, class _Compare>
+_FwdIter min_element (_FwdIter, _FwdIter, _Compare);
+
+template <class _FwdIter>
+inline _FwdIter min_element (_FwdIter __first, _FwdIter __last)
+{
+    return _STD::min_element (__first, __last, _RWSTD_LESS (_FwdIter));
+}
+
+
+// 25.3.7, p9
+template <class _FwdIter, class _Compare>
+_FwdIter max_element (_FwdIter, _FwdIter, _Compare);
+
+
+template <class _FwdIter>
+inline _FwdIter max_element (_FwdIter __first, _FwdIter __last)
+{
+    return _STD::max_element (__first, __last, _RWSTD_LESS (_FwdIter));
+}
+
+
+// 25.3.9 - Permutation generators [lib.alg.permutation.generators]
+
+// 25.3.9, p1
+template <class _BidirIter, class _Compare>
+bool next_permutation (_BidirIter, _BidirIter, _Compare);
+
+template <class _BidirIter>
+inline bool next_permutation (_BidirIter __first, _BidirIter __last)
+{
+    return _STD::next_permutation (__first, __last, _RWSTD_LESS (_BidirIter));
+}
+
+
+// 25.3.9, p3
+template <class _BidirIter, class _Compare>
+bool prev_permutation (_BidirIter, _BidirIter, _Compare);
+
+template <class _BidirIter>
+inline bool prev_permutation (_BidirIter __first, _BidirIter __last)
+{
+    return _STD::prev_permutation (__first, __last, _RWSTD_LESS (_BidirIter));
+}
+
+
+//
+// Modifying sequence operations.
+//
+  
+template <class _FwdIter1, class _FwdIter2>
+inline _FwdIter2
+swap_ranges (_FwdIter1 __first1, _FwdIter1 __last1, _FwdIter2 __first2)
+{
+    _RWSTD_ASSERT_RANGE (__first1, __last1);
+
+    for (; __first1 != __last1; ++__first1, ++__first2)
+        _STD::iter_swap (__first1, __first2);
+    return __first2;
+}
+
+
+template <class _InputIter, class _OutputIter, class _UnaryOperation>
+inline _OutputIter
+transform (_InputIter __first, _InputIter __last, _OutputIter __res,
+           _UnaryOperation __unary_op)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __first != __last; ++__res, ++__first)
+        *__res = __unary_op (*__first);
+    return __res;
+}
+
+
+template <class _InputIter1, class _InputIter2,
+          class _OutputIter, class _BinaryOperation>
+inline _OutputIter
+transform (_InputIter1 __first1, _InputIter1 __last1,
+           _InputIter2 __first2, _OutputIter __res,
+           _BinaryOperation __binary_op)
+{
+    _RWSTD_ASSERT_RANGE (__first1, __last1);
+
+    for (; __first1 != __last1; ++__res, ++__first1, ++__first2)
+        *__res = __binary_op (*__first1, *__first2);
+    return __res;
+}
+
+
+template <class _FwdIter, class _TypeT>
+inline void replace (_FwdIter __first, _FwdIter __last,
+                     const _TypeT& __old_value, const _TypeT& __new_value)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __first != __last; ++__first) 
+        if (*__first == __old_value)
+            *__first = __new_value;
+}
+
+
+template <class _FwdIter, class _Predicate, class _TypeT>
+inline void replace_if (_FwdIter __first, _FwdIter __last,
+                        _Predicate __pred, const _TypeT& __new_value)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __first != __last; ++__first)
+        if (__pred(*__first))
+            *__first = __new_value;
+}
+
+
+template <class _InputIter, class _OutputIter, class _TypeT>
+inline _OutputIter
+replace_copy (_InputIter __first, _InputIter __last, _OutputIter __res,
+              const _TypeT& __old_value, const _TypeT& __new_value)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (;__first != __last; ++__first, ++__res)
+        *__res = *__first == __old_value ? __new_value : *__first;
+    return __res;
+}
+
+
+template <class _FwdIter, class _Generator>
+inline void generate (_FwdIter __first, _FwdIter __last, _Generator __gen)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __first != __last; ++__first)
+        *__first = __gen ();
+}
+
+
+template <class _OutputIter, class _Size, class _Generator>
+inline void generate_n (_OutputIter __first, _Size __n, _Generator __gen)
+{
+    for (; __n > 0;--__n, ++__first)
+        *__first = __gen ();
+}
+
+
+template <class _BidirIter>
+inline void __reverse (_BidirIter __first, _BidirIter __last, 
+                       bidirectional_iterator_tag)
+{
+    // Complexity: exactly (last - first) / 2 calls to std::iter_swap<>()
+    for (; __first != __last && __first != --__last; ++__first)
+        _STD::iter_swap (__first, __last);
+}
+
+
+template <class _RandomAccessIter>
+inline void __reverse (_RandomAccessIter __first, _RandomAccessIter __last,
+                       random_access_iterator_tag)
+{
+    // Complexity: exactly (last - first) / 2 calls to std::iter_swap<>()
+    if (__first != __last)
+        for (; __first < --__last; ++__first)
+            _STD::iter_swap (__first, __last);
+}
+
+
+template <class _BidirIter, class _OutputIter>
+inline _OutputIter
+reverse_copy (_BidirIter __first, _BidirIter __last, _OutputIter __res)
+{
+    _RWSTD_ASSERT_RANGE (__first, __last);
+
+    for (; __first != __last; ++__res)
+        *__res = *--__last;
+    return __res;
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#undef _INLINE
+
+
+#ifdef _RWSTD_COMPILE_INSTANTIATE
+#  include <algorithm.cc>
+#endif
+
+
+#endif   // _RWSTD_ALGORITHM_INCLUDED

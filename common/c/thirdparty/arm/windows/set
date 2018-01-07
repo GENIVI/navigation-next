@@ -1,0 +1,611 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * set - declarations for the Standard Library set class
+ *
+ * $Id: set 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_SET_INCLUDED
+#define _RWSTD_SET_INCLUDED
+
+
+#include <memory>
+#include <functional>
+#include <rw/_tree.h>
+#include <rw/_defs.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (__rw)
+
+
+//
+// This is used in the implementation of set and multiset.
+//
+
+  template <class _TypeT, class _TypeU>
+  struct __ident : public _STD::unary_function<_TypeT, _TypeU>
+  {
+    const _TypeU& operator() (const _TypeT& __x) const { return __x; }
+  };
+
+
+_RWSTD_NAMESPACE_END   // __rw
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+  template <class _Key, 
+  class _Compare _RWSTD_COMPLEX_DEFAULT(less<_Key>), 
+  class _Allocator _RWSTD_COMPLEX_DEFAULT(allocator<_Key>) >  
+  class set
+  {
+  public:
+    //
+    // Types
+    //
+    typedef _Key                key_type;
+    typedef _Key                value_type;
+    typedef _Compare            key_compare;
+    typedef _Compare            value_compare;
+    typedef _Allocator          allocator_type;
+
+  private:
+    
+    typedef _RW::__rb_tree<key_type, value_type, 
+    _RW::__ident<value_type, key_type>, 
+    key_compare, allocator_type> __rep_type;
+    __rep_type _C_t;
+
+  public:
+    //
+    // Types
+    //
+        // Note that iterator and reverse_iterator are typedefed to 
+        // const iterators. This is intentional, the purpose is to
+        // prevent the modification of a set element after it has
+        // been inserted.
+    typedef _TYPENAME __rep_type::reference               reference;
+    typedef _TYPENAME __rep_type::const_reference         const_reference;
+    typedef _TYPENAME __rep_type::const_iterator          iterator;
+    typedef _TYPENAME __rep_type::const_iterator          const_iterator;
+    typedef _TYPENAME __rep_type::size_type               size_type;
+    typedef _TYPENAME __rep_type::difference_type         difference_type;
+    typedef _TYPENAME __rep_type::pointer                 pointer;
+    typedef _TYPENAME __rep_type::const_pointer           const_pointer;
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    typedef _TYPENAME __rep_type::const_reverse_iterator  reverse_iterator;
+#else
+    typedef _TYPENAME __rep_type::reverse_iterator        reverse_iterator;
+#endif
+    typedef _TYPENAME __rep_type::const_reverse_iterator
+        const_reverse_iterator;
+
+    //
+    // construct/copy/destroy
+    //
+    _EXPLICIT set (const key_compare    &__cmp   = key_compare (),
+                   const allocator_type &__alloc = allocator_type ())
+        : _C_t (__cmp, false, __alloc) { }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template<class _InputIter>
+    set (_InputIter __first, _InputIter __last,
+         const key_compare& __cmp = key_compare(),
+         const allocator_type& __al = allocator_type())
+        : _C_t (__cmp, false, __al)
+    {
+      for ( ; __first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#else
+    set (const value_type* __first, const value_type* __last,
+         const key_compare &__cmp = key_compare (),
+         const allocator_type& __alloc = allocator_type())
+        : _C_t (__cmp, false, __alloc)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+    
+    set (const_iterator __first, const_iterator __last,
+         const key_compare &__cmp = key_compare (),
+         const allocator_type &__alloc = allocator_type())
+        : _C_t (__cmp, false, __alloc)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+
+#endif
+
+    set (const set &__x)
+        : _C_t (__x._C_t, false) { }
+
+    set& operator= (const set &__x) {
+        _C_t = __x._C_t; return *this;
+    }
+
+    allocator_type get_allocator() const
+    {
+      return _C_t.get_allocator();
+    }
+
+    //
+    // iterators
+    //
+    iterator                 begin  ()       { return _C_t.begin();  }
+    const_iterator           begin  () const { return _C_t.begin();  }
+    iterator                 end    ()       { return _C_t.end();    }
+    const_iterator           end    () const { return _C_t.end();    }
+    reverse_iterator         rbegin ()       { return _C_t.rbegin(); } 
+    const_reverse_iterator   rbegin () const { return _C_t.rbegin(); } 
+    reverse_iterator         rend   ()       { return _C_t.rend();   }
+    const_reverse_iterator   rend   () const { return _C_t.rend();   }
+
+    //
+    // capacity
+    //
+    bool        empty    () const { return _C_t.empty();    }
+    size_type   size     () const { return _C_t.size();     }
+    size_type   max_size () const { return _C_t.max_size(); }
+
+    //
+    // modifiers
+    //
+    pair<iterator, bool> insert (const value_type& __x) {
+        pair<_TYPENAME __rep_type::iterator, bool> __p = _C_t.insert(__x); 
+        return pair<iterator, bool>(__p.first, __p.second);
+    }
+
+    iterator insert (iterator __it, const value_type& __x)
+    {
+      return _C_t.insert (_RWSTD_REINTERPRET_CAST(
+          _TYPENAME __rep_type::iterator&, __it), __x);
+    }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template<class _InputIter>
+    void insert (_InputIter __first, _InputIter __last)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#else
+    void insert (const value_type* __first, const value_type* __last)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+    void insert (const_iterator __first, const_iterator __last)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#endif
+
+    void erase (iterator __it) {
+        _C_t.erase(_RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                          __it));
+    }
+
+    size_type erase (const key_type& __x)  {
+        return _C_t.erase(__x); 
+    }
+
+    void erase (iterator __first, iterator __last) {
+        _C_t.erase(_RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                          __first),
+                  _RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                          __last));
+    }
+
+      void swap (set& __x) {
+          _C_t.swap(__x._C_t);
+      }
+
+      void clear () {
+          erase(begin(),end());
+      }
+
+      key_compare key_comp () const {
+          return _C_t.key_comp();
+      }
+
+      value_compare value_comp () const {
+          return _C_t.key_comp();
+      }
+
+      // follows proposed resolution of lwg issue 214
+      iterator find (const key_type& __x) {
+          return _C_t.find (__x);
+      }
+
+      const_iterator find (const key_type& __x) const {
+          return _C_t.find(__x);
+      }
+
+      size_type count (const key_type& __x) const {
+          return _C_t.count(__x);
+      }
+
+      // follows proposed resolution of lwg issue 214
+      iterator lower_bound (const key_type& __x) {
+          return _C_t.lower_bound(__x);
+      }
+
+      const_iterator lower_bound (const key_type& __x) const {
+          return _C_t.lower_bound(__x);
+      }
+
+      // follows proposed resolution of lwg issue 214
+      iterator upper_bound (const key_type& __x) {
+          return _C_t.upper_bound(__x);
+      }
+
+      const_iterator upper_bound (const key_type& __x) const {
+          return _C_t.upper_bound(__x);
+      }
+
+      // follows proposed resolution of lwg issue 214
+      pair<iterator, iterator> equal_range (const key_type& __x) {
+          return
+              _RWSTD_REINTERPRET_CAST(const set*,this)->_C_t.equal_range(__x);
+      }
+
+      pair<const_iterator, const_iterator>
+      equal_range (const key_type& __x) const {
+          return _C_t.equal_range (__x);
+      }
+
+  };
+
+
+  template <class _Key, 
+  class _Compare _RWSTD_COMPLEX_DEFAULT(less<_Key>), 
+  class _Allocator _RWSTD_COMPLEX_DEFAULT(allocator<_Key>) > 
+  class multiset
+  {
+  public:
+    //  
+    // types
+    //
+    typedef _Key       key_type;
+    typedef _Key       value_type;
+    typedef _Compare   key_compare;
+    typedef _Compare   value_compare;
+    typedef _Allocator allocator_type;
+  private:
+    
+    typedef _RW::__rb_tree<key_type, value_type, 
+      _RW::__ident<value_type, key_type>, 
+      key_compare, allocator_type> __rep_type;
+    __rep_type _C_t;
+
+  public:
+    //
+    // types
+    //
+    typedef _TYPENAME __rep_type::reference               reference;
+    typedef _TYPENAME __rep_type::const_reference         const_reference;
+    typedef _TYPENAME __rep_type::iterator                iterator;
+    typedef _TYPENAME __rep_type::const_iterator          const_iterator;
+    typedef _TYPENAME __rep_type::size_type               size_type;
+    typedef _TYPENAME __rep_type::difference_type         difference_type;
+    typedef _TYPENAME __rep_type::pointer                 pointer;
+    typedef _TYPENAME __rep_type::const_pointer           const_pointer;
+    typedef _TYPENAME __rep_type::reverse_iterator        reverse_iterator;
+    typedef _TYPENAME __rep_type::const_reverse_iterator
+            const_reverse_iterator;
+
+    //
+    // construct/copy/destroy
+    //
+    _EXPLICIT multiset (const key_compare    &__cmp   = key_compare (),
+                        const allocator_type &__alloc = allocator_type ())
+        : _C_t (__cmp, true, __alloc) {}
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template<class _InputIter>
+    multiset (_InputIter __first, _InputIter __last, 
+              const key_compare &__cmp = key_compare (),
+              const allocator_type &__alloc = allocator_type ())
+        : _C_t (__cmp, true, __alloc)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#else
+    multiset (const value_type* __first, const value_type* __last, 
+              const key_compare &__cmp = key_compare (),
+              const allocator_type &__alloc = allocator_type ())
+        : _C_t (__cmp, true, __alloc)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+    multiset (const_iterator __first, const_iterator __last, 
+              const key_compare &__cmp = key_compare (),
+              const allocator_type &__alloc = allocator_type ())
+        : _C_t (__cmp, true, __alloc)
+    {
+      for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+
+#endif
+
+    multiset (const multiset &__x)
+        : _C_t(__x._C_t, true) { }
+
+    multiset& operator= (const multiset &__x) {
+      _C_t = __x._C_t; return *this;
+    }
+
+    allocator_type get_allocator() const {
+      return _C_t.get_allocator();
+    }
+
+    //
+    // iterators
+    //
+    iterator                 begin  ()       { return _C_t.begin();  }
+    const_iterator           begin  () const { return _C_t.begin();  }
+    iterator                 end    ()       { return _C_t.end();    }
+    const_iterator           end    () const { return _C_t.end();    }
+    reverse_iterator         rbegin ()       { return _C_t.rbegin(); } 
+    const_reverse_iterator   rbegin () const { return _C_t.rbegin(); } 
+    reverse_iterator         rend   ()       { return _C_t.rend();   }
+    const_reverse_iterator   rend   () const { return _C_t.rend();   }
+
+    //
+    // capacity
+    //
+    bool       empty    () const { return _C_t.empty();    }
+    size_type  size     () const { return _C_t.size();     }
+    size_type  max_size () const { return _C_t.max_size(); }
+
+    //
+    // modifiers
+    //
+    iterator insert (const value_type& __x) { return _C_t.insert(__x).first; }
+    iterator insert (iterator __it, const value_type& __x)
+    {
+      return _C_t.insert(_RWSTD_REINTERPRET_CAST(
+          _TYPENAME __rep_type::iterator&,__it), __x);
+    }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+    template<class _InputIter>
+    void insert (_InputIter __first, _InputIter __last)
+    {
+            for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#else
+    void insert (const value_type* __first, const value_type* __last)
+    {
+            for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+    void insert (const_iterator __first, const_iterator __last)
+    {
+            for ( ;__first != __last; ++__first)
+          _C_t.insert(*__first);
+    }
+#endif
+
+    void erase (iterator __it) {
+        _C_t.erase(_RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                           __it));
+    }
+    size_type erase (const key_type& __x) { return _C_t.erase(__x); }
+    void erase (iterator __first, iterator __last)
+    {
+      _C_t.erase(_RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                        __first),
+                       _RWSTD_REINTERPRET_CAST(_TYPENAME __rep_type::iterator&,
+                                               __last)); 
+    }
+    void swap (multiset &__x) {
+        _C_t.swap(__x._C_t);
+    }
+
+    void clear ()   { erase(begin(),end()); }
+
+    //
+    // observers
+    //
+    key_compare   key_comp   () const { return _C_t.key_comp(); }
+    value_compare value_comp () const { return _C_t.key_comp(); }
+
+      // follows proposed resolution of lwg issue 214
+    iterator find (const key_type& __x) {
+        return _C_t.find(__x);
+    }
+
+    const_iterator find (const key_type& __x) const {
+        return _C_t.find(__x);
+    }
+
+    size_type count (const key_type& __x) const {
+        return _C_t.count(__x);
+    }
+
+      // follows proposed resolution of lwg issue 214
+    iterator lower_bound (const key_type& __x) {
+        return _C_t.lower_bound(__x);
+    }
+
+    const_iterator lower_bound (const key_type& __x) const {
+        return _C_t.lower_bound(__x);
+    }
+
+      // follows proposed resolution of lwg issue 214
+    iterator upper_bound (const key_type& __x) {
+        return _C_t.upper_bound(__x); 
+    }
+
+    const_iterator upper_bound (const key_type& __x) const {
+        return _C_t.upper_bound(__x); 
+    }
+
+      // follows proposed resolution of lwg issue 214
+    pair<iterator, iterator> equal_range (const key_type& __x) {
+        return _C_t.equal_range(__x);
+    }
+
+    pair<const_iterator,const_iterator> equal_range (const key_type& __x) const {
+        return _C_t.equal_range(__x);
+    }
+
+  };
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator== (const set<_Key, _Compare, _Allocator>& __x, 
+                          const set<_Key, _Compare, _Allocator>& __y)
+  {
+    return __x.size() == __y.size() && equal(__x.begin(), __x.end(),
+                                             __y.begin());
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator< (const set<_Key, _Compare, _Allocator>& __x, 
+                         const set<_Key, _Compare, _Allocator>& __y)
+  {
+    return lexicographical_compare(__x.begin(), __x.end(), __y.begin(),
+                                   __y.end());
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator!= (const set<_Key,_Compare,_Allocator>& __x, 
+                          const set<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__x == __y);
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator> (const set<_Key,_Compare,_Allocator>& __x, 
+                         const set<_Key,_Compare,_Allocator>& __y)
+  {
+    return __y < __x;
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator>= (const set<_Key,_Compare,_Allocator>& __x, 
+                          const set<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__x < __y);
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator<= (const set<_Key,_Compare,_Allocator>& __x, 
+                          const set<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__y <  __x);
+  }
+
+#ifndef _RWSTD_NO_PART_SPEC_OVERLOAD
+  template <class _Key, class _Compare, class _Allocator>
+  void swap(set<_Key,_Compare,_Allocator>& __a, 
+            set<_Key,_Compare,_Allocator>& __b)
+  {
+    __a.swap(__b);
+  }
+#endif
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator== (const multiset<_Key, _Compare, _Allocator>& __x, 
+                          const multiset<_Key, _Compare, _Allocator>& __y)
+  {
+    return __x.size() == __y.size() && equal(__x.begin(), __x.end(),
+                                             __y.begin());
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator< (const multiset<_Key, _Compare, _Allocator>& __x, 
+                         const multiset<_Key, _Compare, _Allocator>& __y)
+  {
+    return lexicographical_compare(__x.begin(), __x.end(), __y.begin(),
+                                   __y.end());
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator!= (const multiset<_Key,_Compare,_Allocator>& __x, 
+                          const multiset<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__x == __y);
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator> (const multiset<_Key,_Compare,_Allocator>& __x, 
+                         const multiset<_Key,_Compare,_Allocator>& __y)
+  {
+    return __y < __x;
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator>= (const multiset<_Key,_Compare,_Allocator>& __x, 
+                          const multiset<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__x < __y);
+  }
+
+  template <class _Key, class _Compare, class _Allocator>
+  inline bool operator<= (const multiset<_Key,_Compare,_Allocator>& __x, 
+                          const multiset<_Key,_Compare,_Allocator>& __y)
+  {
+    return !(__y <  __x);
+  }
+
+#if !defined(_RWSTD_NO_PART_SPEC_OVERLOAD)
+  template <class _Key, class _Compare,  class _Allocator>
+  void swap(multiset<_Key,_Compare,_Allocator>& __a, 
+            multiset<_Key,_Compare,_Allocator>& __b)
+  {
+    __a.swap(__b); 
+  }
+#endif
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_SET_INCLUDED

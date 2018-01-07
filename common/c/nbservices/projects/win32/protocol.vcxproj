@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\generated\atlasbookprotocol.h" />
+    <ClInclude Include="..\..\include\generated\Handler.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddFavoritesEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddFavoritesEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddress.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddressLine.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddressLineSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAddressSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventDestination.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventDestinationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventMetadata.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventMetadataSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventOrigin.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventOriginSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventPlace.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventPlaceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnalyticsEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnimationInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnimationInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnnouncementEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAnnouncementEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAppErrorEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAppErrorEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolArrivalEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolArrivalEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolAtlasbookProtocol.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolBinaryData.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolBinaryDataSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolBox.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolBoxSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCallEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCallEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCameraSegment.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCameraSegmentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCarrierInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCarrierInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCategory.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCategorySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCharacteristics.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCharacteristicsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolColor.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolColorBar.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolColorBarSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolColorSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCompactAddress.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolCompactAddressSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentDisplayed.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentDisplayedSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentSource.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentSourceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentType.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolContentTypeSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDataAvailability.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDataAvailabilitySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDestination.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDestinationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDeviceInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDeviceInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDirected.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolDirectedSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolElementToXML.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolElementToXMLSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolErrorCategory.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolErrorCategorySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEventContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEventContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEventPerformance.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEventPerformanceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolExtendedAddress.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolExtendedAddressSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFacebookUpdateEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFacebookUpdateEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFeedbackEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFeedbackEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFile.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFileSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFixedDate.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFixedDateSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFont.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFontSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormat.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormatSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormattedIdenParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormattedIdenParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormattedText.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFormattedTextSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelPriceSummary.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelPriceSummarySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelProduct.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelProductSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelType.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolFuelTypeSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeneralSettings.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeneralSettingsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeocodeInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeocodeInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeocodeParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeocodeParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeographicPosition.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGeographicPositionSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGoldenCookie.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGoldenCookieSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGps.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGpsOffset.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGpsOffsetSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGpsProbesEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGpsProbesEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolGpsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolHoursOfOperation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolHoursOfOperationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolHtmlContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolHtmlContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIcon.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIconSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIdenParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIdenParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolImpressionEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolImpressionEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolInvocationContext.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolInvocationContextSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIssueType.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIssueTypeSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIterCommand.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIterCommandSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIterResult.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolIterResultSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLineSeparator.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLineSeparatorSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLink.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLinkSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocaleInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocaleInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocationMatch.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocationMatchSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolLocationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapLegend.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapLegendSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapSettings.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMapSettingsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMaptileSource.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMaptileSourceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadata.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadataSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadataSourceInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadataSourceInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadataSourceParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolMetadataSourceParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolNavigationSettings.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolNavigationSettingsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolNewline.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolNewlineSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolOrigin.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolOriginSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolOverAllRating.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolOverAllRatingSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPackedGPS.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPackedGPSSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPair.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPairSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPhone.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPhoneSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlace.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlaceEventCookie.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlaceEventCookieSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlaceMessageEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlaceMessageEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlaceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlatformInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPlatformInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPoiAttributeCookie.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPoiAttributeCookieSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPoiContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPoiContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPoint.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPointPosition.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPointPositionSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPointSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPosition.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPositionSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPrice.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPriceSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProductInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProductInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProjectionParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProjectionParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatch.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatchContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatchContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatchSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatchSummary.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolProxMatchSummarySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPushMessageInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolPushMessageInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolQueryHeaders.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolQueryHeadersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRating.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRatingSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRelatedSearch.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRelatedSearchSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReplyHeaders.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReplyHeadersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolResultDescription.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolResultDescriptionSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolResultStyle.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolResultStyleSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReverseGeocodeInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReverseGeocodeInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReverseGeocodeParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolReverseGeocodeParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteCorridor.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteCorridorSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteReplyEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteReplyEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteRequestEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteRequestEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteSettings.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteSettingsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteStateEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolRouteStateEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchDetailEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchDetailEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchEventCookie.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchEventCookieSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchFilter.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchFilterSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchQueryEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSearchQueryEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSessionInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSessionInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSessionStartEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSessionStartEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSettingsChangeEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSettingsChangeEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolShareEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolShareEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSingleSearchSourceInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSingleSearchSourceInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSingleSearchSourceParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSingleSearchSourceParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSliceres.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSliceresSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSpeedCamera.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSpeedCameraSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSuggestList.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSuggestListSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSuggestMatch.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSuggestMatchSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncAddItem.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncAddItemSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncAssignItemId.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncAssignItemIdSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncDeleteItem.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncDeleteItemSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncError.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncErrorSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncModifyItem.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncModifyItemSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBQuery.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBQuerySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBReply.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBReplySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBStatusQuery.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesDBStatusQuerySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncPlacesParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusDBStatusReply.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusDBStatusReplySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusInformation.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusInformationSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusParameters.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolSyncStatusParametersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTagLine.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTagLineSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolText.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTextSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTimeRange.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTimeRangeSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTrafficAnanouncementInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTrafficAnanouncementInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTrafficIncident.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTrafficIncidentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTransactionEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTransactionEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTransactionInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolTransactionInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUrl.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUrlArgsTemplate.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUrlArgsTemplateSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUrlSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUserActionEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUserActionEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUserInfo.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolUserInfoSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolVendorContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolVendorContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWant2DBuildings.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWant2DBuildingsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantContentTypes.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantContentTypesSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantedContent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantedContentSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLabelLayers.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLabelLayersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLoc.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLocSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLod.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantLodSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantNewCategories.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantNewCategoriesSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantNoTransparency.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantNoTransparencySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantOptionalLayers.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantOptionalLayersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantPoiLayers.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantPoiLayersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantSatelliteLayers.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantSatelliteLayersSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantThemes.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantThemesSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantTod.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantTodSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantUnifiedMaps.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWantUnifiedMapsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherConditions.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherConditionsSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherConditionsSummary.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherConditionsSummarySerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherForecast.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeatherForecastSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeburlEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWeburlEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiCapabilities.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiCapabilitiesSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiProbe.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiProbeSerializer.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiProbesEvent.h" />
+    <ClInclude Include="..\..\include\generated\NBProtocolWifiProbesEventSerializer.h" />
+    <ClInclude Include="..\..\include\generated\TpsAtlasbookProtocol.h" />
+    <ClInclude Include="..\..\include\generated\TpsElement.h" />
+    <ClInclude Include="..\..\include\generated\TpsGeocodeHandler.h" />
+    <ClInclude Include="..\..\include\generated\TpsMetadataSourceHandler.h" />
+    <ClInclude Include="..\..\include\generated\TpsReverseGeocodeHandler.h" />
+    <ClInclude Include="..\..\include\generated\TpsSingleSearchSourceHandler.h" />
+    <ClInclude Include="..\..\include\generated\TpsSyncPlacesHandler.h" />
+    <ClInclude Include="..\..\include\generated\TpsSyncStatusHandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddFavoritesEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddFavoritesEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddress.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddressLine.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddressLineSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAddressSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventDestination.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventDestinationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventMetadata.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventMetadataSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventOrigin.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventOriginSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventPlace.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventPlaceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnalyticsEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnimationInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnimationInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnnouncementEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAnnouncementEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAppErrorEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolAppErrorEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolArrivalEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolArrivalEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolBinaryData.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolBinaryDataSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolBox.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolBoxSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCallEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCallEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCameraSegment.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCameraSegmentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCarrierInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCarrierInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCategory.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCategorySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCharacteristics.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCharacteristicsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolColor.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolColorBar.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolColorBarSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolColorSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCompactAddress.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolCompactAddressSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentDisplayed.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentDisplayedSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentSource.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentSourceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentType.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolContentTypeSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDataAvailability.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDataAvailabilitySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDestination.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDestinationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDeviceInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDeviceInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDirected.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolDirectedSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolElementToXML.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolElementToXMLSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolErrorCategory.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolErrorCategorySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEventContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEventContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEventPerformance.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEventPerformanceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolExtendedAddress.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolExtendedAddressSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFacebookUpdateEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFacebookUpdateEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFeedbackEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFeedbackEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFile.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFileSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFixedDate.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFixedDateSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFont.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFontSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormat.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormatSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormattedIdenParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormattedIdenParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormattedText.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFormattedTextSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelPriceSummary.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelPriceSummarySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelProduct.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelProductSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelType.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolFuelTypeSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeneralSettings.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeneralSettingsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeocodeInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeocodeInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeocodeParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeocodeParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeographicPosition.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGeographicPositionSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGoldenCookie.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGoldenCookieSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGps.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGpsOffset.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGpsOffsetSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGpsProbesEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGpsProbesEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolGpsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolHoursOfOperation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolHoursOfOperationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolHtmlContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolHtmlContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIcon.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIconSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIdenParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIdenParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolImpressionEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolImpressionEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolInvocationContext.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolInvocationContextSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIssueType.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIssueTypeSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIterCommand.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIterCommandSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIterResult.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolIterResultSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLineSeparator.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLineSeparatorSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLink.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLinkSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocaleInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocaleInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocationMatch.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocationMatchSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolLocationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapLegend.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapLegendSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapSettings.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMapSettingsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMaptileSource.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMaptileSourceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadata.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadataSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadataSourceInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadataSourceInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadataSourceParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolMetadataSourceParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolNavigationSettings.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolNavigationSettingsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolNewline.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolNewlineSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolOrigin.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolOriginSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolOverAllRating.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolOverAllRatingSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPackedGPS.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPackedGPSSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPair.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPairSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPhone.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPhoneSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlace.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlaceEventCookie.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlaceEventCookieSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlaceMessageEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlaceMessageEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlaceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlatformInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPlatformInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPoiAttributeCookie.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPoiAttributeCookieSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPoiContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPoiContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPoint.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPointPosition.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPointPositionSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPointSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPosition.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPositionSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPrice.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPriceSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProductInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProductInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProjectionParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProjectionParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatch.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatchContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatchContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatchSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatchSummary.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolProxMatchSummarySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPushMessageInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolPushMessageInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolQueryHeaders.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolQueryHeadersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRating.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRatingSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRelatedSearch.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRelatedSearchSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReplyHeaders.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReplyHeadersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolResultDescription.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolResultDescriptionSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolResultStyle.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolResultStyleSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReverseGeocodeInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReverseGeocodeInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReverseGeocodeParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolReverseGeocodeParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteCorridor.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteCorridorSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteReplyEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteReplyEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteRequestEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteRequestEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteSettings.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteSettingsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteStateEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolRouteStateEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchDetailEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchDetailEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchEventCookie.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchEventCookieSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchFilter.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchFilterSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchQueryEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSearchQueryEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSessionInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSessionInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSessionStartEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSessionStartEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSettingsChangeEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSettingsChangeEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolShareEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolShareEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSingleSearchSourceInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSingleSearchSourceInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSingleSearchSourceParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSingleSearchSourceParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSliceres.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSliceresSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSpeedCamera.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSpeedCameraSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSuggestList.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSuggestListSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSuggestMatch.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSuggestMatchSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncAddItem.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncAddItemSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncAssignItemId.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncAssignItemIdSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncDeleteItem.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncDeleteItemSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncError.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncErrorSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncModifyItem.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncModifyItemSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBQuery.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBQuerySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBReply.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBReplySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBStatusQuery.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesDBStatusQuerySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncPlacesParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusDBStatusReply.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusDBStatusReplySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusInformation.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusInformationSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusParameters.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolSyncStatusParametersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTagLine.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTagLineSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolText.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTextSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTimeRange.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTimeRangeSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTrafficAnanouncementInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTrafficAnanouncementInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTrafficIncident.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTrafficIncidentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTransactionEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTransactionEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTransactionInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolTransactionInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUrl.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUrlArgsTemplate.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUrlArgsTemplateSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUrlSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUserActionEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUserActionEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUserInfo.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolUserInfoSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolVendorContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolVendorContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWant2DBuildings.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWant2DBuildingsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantContentTypes.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantContentTypesSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantedContent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantedContentSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLabelLayers.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLabelLayersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLoc.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLocSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLod.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantLodSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantNewCategories.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantNewCategoriesSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantNoTransparency.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantNoTransparencySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantOptionalLayers.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantOptionalLayersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantPoiLayers.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantPoiLayersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantSatelliteLayers.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantSatelliteLayersSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantThemes.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantThemesSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantTod.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantTodSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantUnifiedMaps.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWantUnifiedMapsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherConditions.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherConditionsSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherConditionsSummary.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherConditionsSummarySerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherForecast.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeatherForecastSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeburlEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWeburlEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiCapabilities.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiCapabilitiesSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiProbe.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiProbeSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiProbesEvent.cpp" />
+    <ClCompile Include="..\..\src\protocol\NBProtocolWifiProbesEventSerializer.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsAtlasbookProtocol.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsElement.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsGeocodeHandler.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsMetadataSourceHandler.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsReverseGeocodeHandler.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsSingleSearchSourceHandler.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsSyncPlacesHandler.cpp" />
+    <ClCompile Include="..\..\src\protocol\TpsSyncStatusHandler.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8A8FD1F-82FD-4328-A02E-1D215D473483}</ProjectGuid>
+    <RootNamespace>protocol</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\generated;$(SolutionDir)\src\protocol\;$(SolutionDir)\include\generated\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\generated;$(SolutionDir)\src\protocol\;$(SolutionDir)\include\generated\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\generated;$(SolutionDir)\src\protocol\;$(SolutionDir)\include\generated\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)protocol.lib</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\generated;$(SolutionDir)\src\protocol\;$(SolutionDir)\include\generated\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

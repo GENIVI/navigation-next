@@ -1,0 +1,55 @@
+/****************************************************************************
+**
+** Copyright (C) 2017 Pelagicore AG
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Pelagicore Application Manager.
+**
+** $QT_BEGIN_LICENSE:FDL-QTAS$
+** Commercial License Usage
+** Licensees holding valid commercial Qt Automotive Suite licenses may use
+** this file in accordance with the commercial license agreement provided
+** with the Software or, alternatively, in accordance with the terms
+** contained in a written agreement between you and The Qt Company.  For
+** licensing terms and conditions see https://www.qt.io/terms-conditions.
+** For further information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+
+\page qml-apps.html
+\title Applications QML Types
+\brief A listing of standard QML types used in applications.
+
+These are the functionally grouped lists of QML types as part of \c
+QtApplicationManager.
+
+Singleton QML types need not be declared, they are referenced by just their type name.
+
+Instantiable QML types are declared with the their name followed by curly braces. These
+declarations may be nested, creating parent-child relationships between the items.
+
+\section1 QML Singletons
+\list
+  \li ApplicationInterface - The application interface represents the private IPC between the app
+      and the application-manager.
+  \li StartupTimer - A tool for startup performance analysis.
+\endlist
+
+\section1 Instantiable QML Types
+\list
+  \li ApplicationManagerWindow - The window element that is required in a multi-process environment.
+  \li \l Notification - Abstraction for freedesktop.org Notifications on the client side.
+  \li ApplicationInterfaceExtension - Client side access to System-UI-to-app communication interfaces.
+\endlist
+*/

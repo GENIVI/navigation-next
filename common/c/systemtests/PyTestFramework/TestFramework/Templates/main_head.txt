@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include "Generated.h"
+#include "TestDB.h"
+#include "Basic.h"
+
+typedef void (*SuiteTestAdder)(CU_pSuite);
+
+CU_pSuite CreateTestSuite(const char* name, CU_InitializeFunc setup, CU_CleanupFunc cleanup, SuiteTestAdder adder)
+{
+    CU_pSuite pTestSuite = CU_add_suite(name, setup, cleanup);
+    if (pTestSuite)
+        adder(pTestSuite);
+
+    return pTestSuite;
+}
+
+int main(){
+    CU_basic_set_mode(CU_BRM_VERBOSE);
+    // Initialize Main Registry
+    CU_ErrorCode result = CU_initialize_registry();
+    if ( result != CUE_SUCCESS )
+    {
+        return 0;
+    }
+

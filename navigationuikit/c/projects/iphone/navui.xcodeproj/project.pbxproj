@@ -1,0 +1,1157 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AF80B881A3065F900D03E70 /* TrafficAheadPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AF80B861A3065F900D03E70 /* TrafficAheadPresenter.cpp */; };
+		9AF80B891A3065F900D03E70 /* TrafficAheadPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF80B871A3065F900D03E70 /* TrafficAheadPresenter.h */; };
+		A53D4BBE19A4A96800F98D41 /* AACPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BB319A4A96800F98D41 /* AACPlayer.cpp */; };
+		A53D4BBF19A4A96800F98D41 /* AACPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A53D4BB419A4A96800F98D41 /* AACPlayer.h */; };
+		A53D4BC019A4A96800F98D41 /* AudioPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BB519A4A96800F98D41 /* AudioPlayer.cpp */; };
+		A53D4BC119A4A96800F98D41 /* AudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A53D4BB619A4A96800F98D41 /* AudioPlayer.h */; };
+		A53D4BC219A4A96800F98D41 /* FormatController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BB719A4A96800F98D41 /* FormatController.cpp */; };
+		A53D4BC319A4A96800F98D41 /* FormatController.h in Headers */ = {isa = PBXBuildFile; fileRef = A53D4BB819A4A96800F98D41 /* FormatController.h */; };
+		A53D4BC419A4A96800F98D41 /* GPSInterpolator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BB919A4A96800F98D41 /* GPSInterpolator.cpp */; };
+		A53D4BC519A4A96800F98D41 /* GPSInterpolator.h in Headers */ = {isa = PBXBuildFile; fileRef = A53D4BBA19A4A96800F98D41 /* GPSInterpolator.h */; };
+		A53D4BC619A4A96800F98D41 /* NKUIDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BBB19A4A96800F98D41 /* NKUIDebug.cpp */; };
+		A53D4BC719A4A96800F98D41 /* TTSPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53D4BBC19A4A96800F98D41 /* TTSPlayer.cpp */; };
+		A53D4BC819A4A96800F98D41 /* TTSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A53D4BBD19A4A96800F98D41 /* TTSPlayer.h */; };
+		A53FAC1A19A3271B009E5DEE /* NKUIDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = A53FAC1919A3271B009E5DEE /* NKUIDebug.h */; };
+		A56CCBEA19F0E46200735179 /* RecalcOnCallTextWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A56CCBE919F0E46200735179 /* RecalcOnCallTextWidget.h */; };
+		A5E0F10A1988C4200017F442 /* NKUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F03E1988C4200017F442 /* NKUIController.h */; };
+		A5E0F10B1988C4200017F442 /* NKUIData.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F03F1988C4200017F442 /* NKUIData.h */; };
+		A5E0F10C1988C4200017F442 /* NKUIEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0401988C4200017F442 /* NKUIEvent.h */; };
+		A5E0F10D1988C4200017F442 /* NKUIEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0411988C4200017F442 /* NKUIEventListener.h */; };
+		A5E0F10E1988C4200017F442 /* NKUIListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0421988C4200017F442 /* NKUIListener.h */; };
+		A5E0F10F1988C4200017F442 /* NKUILocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0431988C4200017F442 /* NKUILocation.h */; };
+		A5E0F1101988C4200017F442 /* NKUIMapDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0441988C4200017F442 /* NKUIMapDataType.h */; };
+		A5E0F1111988C4200017F442 /* NKUIMapInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0451988C4200017F442 /* NKUIMapInterface.h */; };
+		A5E0F1121988C4200017F442 /* NKUIMenuCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0461988C4200017F442 /* NKUIMenuCommand.h */; };
+		A5E0F1131988C4200017F442 /* NKUIPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0471988C4200017F442 /* NKUIPresenter.h */; };
+		A5E0F1141988C4200017F442 /* NKUIPublicState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0481988C4200017F442 /* NKUIPublicState.h */; };
+		A5E0F1151988C4200017F442 /* NKUISharedInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0491988C4200017F442 /* NKUISharedInformation.h */; };
+		A5E0F1161988C4200017F442 /* NKUIStateID.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F04A1988C4200017F442 /* NKUIStateID.h */; };
+		A5E0F1171988C4200017F442 /* NKUIStringHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F04B1988C4200017F442 /* NKUIStringHelper.h */; };
+		A5E0F1181988C4200017F442 /* NKUIWidgetLayoutConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F04C1988C4200017F442 /* NKUIWidgetLayoutConfig.h */; };
+		A5E0F1191988C4200017F442 /* NKUIWidgetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F04D1988C4200017F442 /* NKUIWidgetManager.h */; };
+		A5E0F11A1988C4200017F442 /* NKUIContext.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F04F1988C4200017F442 /* NKUIContext.h */; };
+		A5E0F11B1988C4200017F442 /* NKUITimerCallbackGuard.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0501988C4200017F442 /* NKUITimerCallbackGuard.h */; };
+		A5E0F11C1988C4200017F442 /* nkui_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0511988C4200017F442 /* nkui_macros.h */; };
+		A5E0F11D1988C4200017F442 /* AnnouncementWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0531988C4200017F442 /* AnnouncementWidget.h */; };
+		A5E0F11E1988C4200017F442 /* ArrivalFooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0541988C4200017F442 /* ArrivalFooterWidget.h */; };
+		A5E0F11F1988C4200017F442 /* ArrivalHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0551988C4200017F442 /* ArrivalHeaderWidget.h */; };
+		A5E0F1201988C4200017F442 /* CurrentRoadWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0561988C4200017F442 /* CurrentRoadWidget.h */; };
+		A5E0F1211988C4200017F442 /* EnhancedStartHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0571988C4200017F442 /* EnhancedStartHeaderWidget.h */; };
+		A5E0F1221988C4200017F442 /* FooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0581988C4200017F442 /* FooterWidget.h */; };
+		A5E0F1231988C4200017F442 /* LaneGuidanceWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0591988C4200017F442 /* LaneGuidanceWidget.h */; };
+		A5E0F1241988C4200017F442 /* MiniMapWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05A1988C4200017F442 /* MiniMapWidget.h */; };
+		A5E0F1251988C4200017F442 /* NavigationFooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05B1988C4200017F442 /* NavigationFooterWidget.h */; };
+		A5E0F1261988C4200017F442 /* NavigationHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05C1988C4200017F442 /* NavigationHeaderWidget.h */; };
+		A5E0F1271988C4200017F442 /* NavigationListWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05D1988C4200017F442 /* NavigationListWidget.h */; };
+		A5E0F1281988C4200017F442 /* NoGPSWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05E1988C4200017F442 /* NoGPSWidget.h */; };
+		A5E0F1291988C4200017F442 /* NotificationWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F05F1988C4200017F442 /* NotificationWidget.h */; };
+		A5E0F12A1988C4200017F442 /* OverflowMenuWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0601988C4200017F442 /* OverflowMenuWidget.h */; };
+		A5E0F12B1988C4200017F442 /* PedestrianFooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0611988C4200017F442 /* PedestrianFooterWidget.h */; };
+		A5E0F12C1988C4200017F442 /* PedestrianHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0621988C4200017F442 /* PedestrianHeaderWidget.h */; };
+		A5E0F12D1988C4200017F442 /* PedestrianListWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0631988C4200017F442 /* PedestrianListWidget.h */; };
+		A5E0F12E1988C4200017F442 /* PinBubbleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0641988C4200017F442 /* PinBubbleLayer.h */; };
+		A5E0F1301988C4200017F442 /* RetryWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0661988C4200017F442 /* RetryWidget.h */; };
+		A5E0F1311988C4200017F442 /* RouteRequestFooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0671988C4200017F442 /* RouteRequestFooterWidget.h */; };
+		A5E0F1321988C4200017F442 /* RouteSelectBubbleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0681988C4200017F442 /* RouteSelectBubbleLayer.h */; };
+		A5E0F1331988C4200017F442 /* RouteSelectHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0691988C4200017F442 /* RouteSelectHeaderWidget.h */; };
+		A5E0F1341988C4200017F442 /* RouteSelectListWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06A1988C4200017F442 /* RouteSelectListWidget.h */; };
+		A5E0F1351988C4200017F442 /* RouteSelectStatusBarWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06B1988C4200017F442 /* RouteSelectStatusBarWidget.h */; };
+		A5E0F1361988C4200017F442 /* RouteselectFooterWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06C1988C4200017F442 /* RouteselectFooterWidget.h */; };
+		A5E0F1371988C4200017F442 /* SARWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06D1988C4200017F442 /* SARWidget.h */; };
+		A5E0F1381988C4200017F442 /* SpeedLimitWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06E1988C4200017F442 /* SpeedLimitWidget.h */; };
+		A5E0F1391988C4200017F442 /* StackManeuverWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F06F1988C4200017F442 /* StackManeuverWidget.h */; };
+		A5E0F13A1988C4200017F442 /* StopNavigationWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0701988C4200017F442 /* StopNavigationWidget.h */; };
+		A5E0F13B1988C4200017F442 /* TripOverviewHeaderWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0711988C4200017F442 /* TripOverviewHeaderWidget.h */; };
+		A5E0F13C1988C4200017F442 /* Widget.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0721988C4200017F442 /* Widget.h */; };
+		A5E0F13D1988C4200017F442 /* WidgetID.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0731988C4200017F442 /* WidgetID.h */; };
+		A5E0F1461988C4200017F442 /* NKUIContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F07D1988C4200017F442 /* NKUIContext.cpp */; };
+		A5E0F1471988C4200017F442 /* NKUIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F07E1988C4200017F442 /* NKUIController.cpp */; };
+		A5E0F1481988C4200017F442 /* NKUIWidgetLayoutConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F07F1988C4200017F442 /* NKUIWidgetLayoutConfig.cpp */; };
+		A5E0F14B1988C4200017F442 /* AnnouncementPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0831988C4200017F442 /* AnnouncementPresenter.cpp */; };
+		A5E0F14C1988C4200017F442 /* AnnouncementPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0841988C4200017F442 /* AnnouncementPresenter.h */; };
+		A5E0F14D1988C4200017F442 /* ArrivalFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0851988C4200017F442 /* ArrivalFooterPresenter.cpp */; };
+		A5E0F14E1988C4200017F442 /* ArrivalFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0861988C4200017F442 /* ArrivalFooterPresenter.h */; };
+		A5E0F14F1988C4200017F442 /* ArrivalHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0871988C4200017F442 /* ArrivalHeaderPresenter.cpp */; };
+		A5E0F1501988C4200017F442 /* ArrivalHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0881988C4200017F442 /* ArrivalHeaderPresenter.h */; };
+		A5E0F1511988C4200017F442 /* BackgroundPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0891988C4200017F442 /* BackgroundPresenter.cpp */; };
+		A5E0F1521988C4200017F442 /* BackgroundPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F08A1988C4200017F442 /* BackgroundPresenter.h */; };
+		A5E0F1531988C4200017F442 /* CurrentRoadPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F08B1988C4200017F442 /* CurrentRoadPresenter.cpp */; };
+		A5E0F1541988C4200017F442 /* CurrentRoadPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F08C1988C4200017F442 /* CurrentRoadPresenter.h */; };
+		A5E0F1551988C4200017F442 /* DetourFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F08D1988C4200017F442 /* DetourFooterPresenter.cpp */; };
+		A5E0F1561988C4200017F442 /* DetourFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F08E1988C4200017F442 /* DetourFooterPresenter.h */; };
+		A5E0F1571988C4200017F442 /* DetourHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F08F1988C4200017F442 /* DetourHeaderPresenter.cpp */; };
+		A5E0F1581988C4200017F442 /* DetourHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0901988C4200017F442 /* DetourHeaderPresenter.h */; };
+		A5E0F1591988C4200017F442 /* EndTripStatusBarPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0911988C4200017F442 /* EndTripStatusBarPresenter.cpp */; };
+		A5E0F15A1988C4200017F442 /* EndTripStatusBarPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0921988C4200017F442 /* EndTripStatusBarPresenter.h */; };
+		A5E0F15B1988C4200017F442 /* EnhancedNavStartupNotifyPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0931988C4200017F442 /* EnhancedNavStartupNotifyPresenter.cpp */; };
+		A5E0F15C1988C4200017F442 /* EnhancedNavStartupNotifyPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0941988C4200017F442 /* EnhancedNavStartupNotifyPresenter.h */; };
+		A5E0F15D1988C4200017F442 /* EnhancedStartHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0951988C4200017F442 /* EnhancedStartHeaderPresenter.cpp */; };
+		A5E0F15E1988C4200017F442 /* EnhancedStartHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0961988C4200017F442 /* EnhancedStartHeaderPresenter.h */; };
+		A5E0F15F1988C4200017F442 /* FooterPresenterBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0971988C4200017F442 /* FooterPresenterBase.cpp */; };
+		A5E0F1601988C4200017F442 /* FooterPresenterBase.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0981988C4200017F442 /* FooterPresenterBase.h */; };
+		A5E0F1611988C4200017F442 /* LaneGuidancePresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0991988C4200017F442 /* LaneGuidancePresenter.cpp */; };
+		A5E0F1621988C4200017F442 /* LaneGuidancePresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F09A1988C4200017F442 /* LaneGuidancePresenter.h */; };
+		A5E0F1631988C4200017F442 /* MapPrefetchPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F09B1988C4200017F442 /* MapPrefetchPresenter.cpp */; };
+		A5E0F1641988C4200017F442 /* MapPrefetchPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F09C1988C4200017F442 /* MapPrefetchPresenter.h */; };
+		A5E0F1651988C4200017F442 /* MapPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F09D1988C4200017F442 /* MapPresenter.cpp */; };
+		A5E0F1661988C4200017F442 /* MapPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F09E1988C4200017F442 /* MapPresenter.h */; };
+		A5E0F1671988C4200017F442 /* MapSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F09F1988C4200017F442 /* MapSetting.h */; };
+		A5E0F1681988C4200017F442 /* MiniMapPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0A01988C4200017F442 /* MiniMapPresenter.cpp */; };
+		A5E0F1691988C4200017F442 /* MiniMapPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0A11988C4200017F442 /* MiniMapPresenter.h */; };
+		A5E0F16A1988C4200017F442 /* NavigationFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0A21988C4200017F442 /* NavigationFooterPresenter.cpp */; };
+		A5E0F16B1988C4200017F442 /* NavigationFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0A31988C4200017F442 /* NavigationFooterPresenter.h */; };
+		A5E0F16C1988C4200017F442 /* NavigationHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0A41988C4200017F442 /* NavigationHeaderPresenter.cpp */; };
+		A5E0F16D1988C4200017F442 /* NavigationHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0A51988C4200017F442 /* NavigationHeaderPresenter.h */; };
+		A5E0F16E1988C4200017F442 /* NavigationListPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0A61988C4200017F442 /* NavigationListPresenter.cpp */; };
+		A5E0F16F1988C4200017F442 /* NavigationListPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0A71988C4200017F442 /* NavigationListPresenter.h */; };
+		A5E0F1701988C4200017F442 /* NoGPSPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0A81988C4200017F442 /* NoGPSPresenter.cpp */; };
+		A5E0F1711988C4200017F442 /* NoGPSPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0A91988C4200017F442 /* NoGPSPresenter.h */; };
+		A5E0F1721988C4200017F442 /* OverflowMenuPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0AA1988C4200017F442 /* OverflowMenuPresenter.cpp */; };
+		A5E0F1731988C4200017F442 /* OverflowMenuPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0AB1988C4200017F442 /* OverflowMenuPresenter.h */; };
+		A5E0F1741988C4200017F442 /* PedestrianListPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0AC1988C4200017F442 /* PedestrianListPresenter.cpp */; };
+		A5E0F1751988C4200017F442 /* PedestrianListPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0AD1988C4200017F442 /* PedestrianListPresenter.h */; };
+		A5E0F1761988C4200017F442 /* PinBubblePresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0AE1988C4200017F442 /* PinBubblePresenter.cpp */; };
+		A5E0F1771988C4200017F442 /* PinBubblePresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0AF1988C4200017F442 /* PinBubblePresenter.h */; };
+		A5E0F1781988C4200017F442 /* PresenterBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0B01988C4200017F442 /* PresenterBase.cpp */; };
+		A5E0F1791988C4200017F442 /* PresenterBase.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0B11988C4200017F442 /* PresenterBase.h */; };
+		A5E0F17A1988C4200017F442 /* PresenterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0B21988C4200017F442 /* PresenterManager.cpp */; };
+		A5E0F17B1988C4200017F442 /* PresenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0B31988C4200017F442 /* PresenterManager.h */; };
+		A5E0F17C1988C4200017F442 /* RecalcOnCallTextPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0B41988C4200017F442 /* RecalcOnCallTextPresenter.cpp */; };
+		A5E0F17D1988C4200017F442 /* RecalcOnCallTextPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0B51988C4200017F442 /* RecalcOnCallTextPresenter.h */; };
+		A5E0F17E1988C4200017F442 /* RetryPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0B61988C4200017F442 /* RetryPresenter.cpp */; };
+		A5E0F17F1988C4200017F442 /* RetryPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0B71988C4200017F442 /* RetryPresenter.h */; };
+		A5E0F1801988C4200017F442 /* RouteRequestFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0B81988C4200017F442 /* RouteRequestFooterPresenter.cpp */; };
+		A5E0F1811988C4200017F442 /* RouteRequestFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0B91988C4200017F442 /* RouteRequestFooterPresenter.h */; };
+		A5E0F1821988C4200017F442 /* RouteSelectBubblePresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0BA1988C4200017F442 /* RouteSelectBubblePresenter.cpp */; };
+		A5E0F1831988C4200017F442 /* RouteSelectBubblePresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0BB1988C4200017F442 /* RouteSelectBubblePresenter.h */; };
+		A5E0F1841988C4200017F442 /* RouteSelectHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0BC1988C4200017F442 /* RouteSelectHeaderPresenter.cpp */; };
+		A5E0F1851988C4200017F442 /* RouteSelectHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0BD1988C4200017F442 /* RouteSelectHeaderPresenter.h */; };
+		A5E0F1861988C4200017F442 /* RouteSelectInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0BE1988C4200017F442 /* RouteSelectInformation.cpp */; };
+		A5E0F1871988C4200017F442 /* RouteSelectInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0BF1988C4200017F442 /* RouteSelectInformation.h */; };
+		A5E0F1881988C4200017F442 /* RouteSelectListPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0C01988C4200017F442 /* RouteSelectListPresenter.cpp */; };
+		A5E0F1891988C4200017F442 /* RouteSelectListPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0C11988C4200017F442 /* RouteSelectListPresenter.h */; };
+		A5E0F18A1988C4200017F442 /* RouteSelectStatusBarPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0C21988C4200017F442 /* RouteSelectStatusBarPresenter.cpp */; };
+		A5E0F18B1988C4200017F442 /* RouteSelectStatusBarPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0C31988C4200017F442 /* RouteSelectStatusBarPresenter.h */; };
+		A5E0F18C1988C4200017F442 /* RouteselectFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0C41988C4200017F442 /* RouteselectFooterPresenter.cpp */; };
+		A5E0F18D1988C4200017F442 /* RouteselectFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0C51988C4200017F442 /* RouteselectFooterPresenter.h */; };
+		A5E0F18E1988C4200017F442 /* SARPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0C61988C4200017F442 /* SARPresenter.cpp */; };
+		A5E0F18F1988C4200017F442 /* SARPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0C71988C4200017F442 /* SARPresenter.h */; };
+		A5E0F1901988C4200017F442 /* SpeedLimitPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0C81988C4200017F442 /* SpeedLimitPresenter.cpp */; };
+		A5E0F1911988C4200017F442 /* SpeedLimitPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0C91988C4200017F442 /* SpeedLimitPresenter.h */; };
+		A5E0F1921988C4200017F442 /* StackManeuverPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0CA1988C4200017F442 /* StackManeuverPresenter.cpp */; };
+		A5E0F1931988C4200017F442 /* StackManeuverPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0CB1988C4200017F442 /* StackManeuverPresenter.h */; };
+		A5E0F1941988C4200017F442 /* StartingNavFooterPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0CC1988C4200017F442 /* StartingNavFooterPresenter.cpp */; };
+		A5E0F1951988C4200017F442 /* StartingNavFooterPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0CD1988C4200017F442 /* StartingNavFooterPresenter.h */; };
+		A5E0F1961988C4200017F442 /* StatusBarPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0CE1988C4200017F442 /* StatusBarPresenter.cpp */; };
+		A5E0F1971988C4200017F442 /* StatusBarPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0CF1988C4200017F442 /* StatusBarPresenter.h */; };
+		A5E0F1981988C4200017F442 /* StopNavigationPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0D01988C4200017F442 /* StopNavigationPresenter.cpp */; };
+		A5E0F1991988C4200017F442 /* StopNavigationPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0D11988C4200017F442 /* StopNavigationPresenter.h */; };
+		A5E0F19A1988C4200017F442 /* TripOverviewHeaderPresenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0D21988C4200017F442 /* TripOverviewHeaderPresenter.cpp */; };
+		A5E0F19B1988C4200017F442 /* TripOverviewHeaderPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0D31988C4200017F442 /* TripOverviewHeaderPresenter.h */; };
+		A5E0F19C1988C4200017F442 /* BreadCrumb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0D51988C4200017F442 /* BreadCrumb.cpp */; };
+		A5E0F19D1988C4200017F442 /* BreadCrumb.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0D61988C4200017F442 /* BreadCrumb.h */; };
+		A5E0F19E1988C4200017F442 /* ArrivalState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0D81988C4200017F442 /* ArrivalState.cpp */; };
+		A5E0F19F1988C4200017F442 /* ArrivalState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0D91988C4200017F442 /* ArrivalState.h */; };
+		A5E0F1A01988C4200017F442 /* DetourListState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0DA1988C4200017F442 /* DetourListState.cpp */; };
+		A5E0F1A11988C4200017F442 /* DetourListState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0DB1988C4200017F442 /* DetourListState.h */; };
+		A5E0F1A21988C4200017F442 /* DetourState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0DC1988C4200017F442 /* DetourState.cpp */; };
+		A5E0F1A31988C4200017F442 /* DetourState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0DD1988C4200017F442 /* DetourState.h */; };
+		A5E0F1A41988C4200017F442 /* DetourUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0DE1988C4200017F442 /* DetourUnlockedState.cpp */; };
+		A5E0F1A51988C4200017F442 /* DetourUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0DF1988C4200017F442 /* DetourUnlockedState.h */; };
+		A5E0F1A61988C4200017F442 /* EnhancedStartupState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0E01988C4200017F442 /* EnhancedStartupState.cpp */; };
+		A5E0F1A71988C4200017F442 /* EnhancedStartupState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0E11988C4200017F442 /* EnhancedStartupState.h */; };
+		A5E0F1A81988C4200017F442 /* EnhancedStartupUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0E21988C4200017F442 /* EnhancedStartupUnlockedState.cpp */; };
+		A5E0F1A91988C4200017F442 /* EnhancedStartupUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0E31988C4200017F442 /* EnhancedStartupUnlockedState.h */; };
+		A5E0F1AA1988C4200017F442 /* NKUIState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0E41988C4200017F442 /* NKUIState.cpp */; };
+		A5E0F1AB1988C4200017F442 /* NKUIState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0E51988C4200017F442 /* NKUIState.h */; };
+		A5E0F1AC1988C4200017F442 /* NavigationEndTripState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0E61988C4200017F442 /* NavigationEndTripState.cpp */; };
+		A5E0F1AD1988C4200017F442 /* NavigationEndTripState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0E71988C4200017F442 /* NavigationEndTripState.h */; };
+		A5E0F1AE1988C4200017F442 /* NavigationListState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0E81988C4200017F442 /* NavigationListState.cpp */; };
+		A5E0F1AF1988C4200017F442 /* NavigationListState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0E91988C4200017F442 /* NavigationListState.h */; };
+		A5E0F1B01988C4200017F442 /* NavigationSARState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0EA1988C4200017F442 /* NavigationSARState.cpp */; };
+		A5E0F1B11988C4200017F442 /* NavigationSARState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0EB1988C4200017F442 /* NavigationSARState.h */; };
+		A5E0F1B21988C4200017F442 /* NavigationSARUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0EC1988C4200017F442 /* NavigationSARUnlockedState.cpp */; };
+		A5E0F1B31988C4200017F442 /* NavigationSARUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0ED1988C4200017F442 /* NavigationSARUnlockedState.h */; };
+		A5E0F1B41988C4200017F442 /* NavigationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0EE1988C4200017F442 /* NavigationState.cpp */; };
+		A5E0F1B51988C4200017F442 /* NavigationState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0EF1988C4200017F442 /* NavigationState.h */; };
+		A5E0F1B61988C4200017F442 /* NavigationUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0F01988C4200017F442 /* NavigationUnlockedState.cpp */; };
+		A5E0F1B71988C4200017F442 /* NavigationUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0F11988C4200017F442 /* NavigationUnlockedState.h */; };
+		A5E0F1B81988C4200017F442 /* PedestrianNavigationListState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0F21988C4200017F442 /* PedestrianNavigationListState.cpp */; };
+		A5E0F1B91988C4200017F442 /* PedestrianNavigationListState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0F31988C4200017F442 /* PedestrianNavigationListState.h */; };
+		A5E0F1BA1988C4200017F442 /* PedestrianNavigationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0F41988C4200017F442 /* PedestrianNavigationState.cpp */; };
+		A5E0F1BB1988C4200017F442 /* PedestrianNavigationState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0F51988C4200017F442 /* PedestrianNavigationState.h */; };
+		A5E0F1BC1988C4200017F442 /* PedestrianNavigationUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0F61988C4200017F442 /* PedestrianNavigationUnlockedState.cpp */; };
+		A5E0F1BD1988C4200017F442 /* PedestrianNavigationUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0F71988C4200017F442 /* PedestrianNavigationUnlockedState.h */; };
+		A5E0F1BE1988C4200017F442 /* PedestrianTripOverviewState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0F81988C4200017F442 /* PedestrianTripOverviewState.cpp */; };
+		A5E0F1BF1988C4200017F442 /* PedestrianTripOverviewState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0F91988C4200017F442 /* PedestrianTripOverviewState.h */; };
+		A5E0F1C01988C4200017F442 /* PedestrianTripOverviewUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0FA1988C4200017F442 /* PedestrianTripOverviewUnlockedState.cpp */; };
+		A5E0F1C11988C4200017F442 /* PedestrianTripOverviewUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0FB1988C4200017F442 /* PedestrianTripOverviewUnlockedState.h */; };
+		A5E0F1C21988C4200017F442 /* RTSListState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0FC1988C4200017F442 /* RTSListState.cpp */; };
+		A5E0F1C31988C4200017F442 /* RTSListState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0FD1988C4200017F442 /* RTSListState.h */; };
+		A5E0F1C41988C4200017F442 /* RTSState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F0FE1988C4200017F442 /* RTSState.cpp */; };
+		A5E0F1C51988C4200017F442 /* RTSState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F0FF1988C4200017F442 /* RTSState.h */; };
+		A5E0F1C61988C4200017F442 /* RTSUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F1001988C4200017F442 /* RTSUnlockedState.cpp */; };
+		A5E0F1C71988C4200017F442 /* RTSUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F1011988C4200017F442 /* RTSUnlockedState.h */; };
+		A5E0F1C81988C4200017F442 /* RequestNavigationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F1021988C4200017F442 /* RequestNavigationState.cpp */; };
+		A5E0F1C91988C4200017F442 /* RequestNavigationState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F1031988C4200017F442 /* RequestNavigationState.h */; };
+		A5E0F1CA1988C4200017F442 /* StartingNavigationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F1041988C4200017F442 /* StartingNavigationState.cpp */; };
+		A5E0F1CB1988C4200017F442 /* StartingNavigationState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F1051988C4200017F442 /* StartingNavigationState.h */; };
+		A5E0F1CC1988C4200017F442 /* TripOverviewState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F1061988C4200017F442 /* TripOverviewState.cpp */; };
+		A5E0F1CD1988C4200017F442 /* TripOverviewState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F1071988C4200017F442 /* TripOverviewState.h */; };
+		A5E0F1CE1988C4200017F442 /* TripOverviewUnlockedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E0F1081988C4200017F442 /* TripOverviewUnlockedState.cpp */; };
+		A5E0F1CF1988C4200017F442 /* TripOverviewUnlockedState.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E0F1091988C4200017F442 /* TripOverviewUnlockedState.h */; };
+		CE6B1D0119C1796300755236 /* PreservedAudioAnnouncement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6B1CFF19C1796300755236 /* PreservedAudioAnnouncement.cpp */; };
+		CE6B1D0219C1796300755236 /* PreservedAudioAnnouncement.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B1D0019C1796300755236 /* PreservedAudioAnnouncement.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9AF80B861A3065F900D03E70 /* TrafficAheadPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrafficAheadPresenter.cpp; sourceTree = "<group>"; };
+		9AF80B871A3065F900D03E70 /* TrafficAheadPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficAheadPresenter.h; sourceTree = "<group>"; };
+		A53D4BB319A4A96800F98D41 /* AACPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AACPlayer.cpp; sourceTree = "<group>"; };
+		A53D4BB419A4A96800F98D41 /* AACPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACPlayer.h; sourceTree = "<group>"; };
+		A53D4BB519A4A96800F98D41 /* AudioPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioPlayer.cpp; sourceTree = "<group>"; };
+		A53D4BB619A4A96800F98D41 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		A53D4BB719A4A96800F98D41 /* FormatController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FormatController.cpp; sourceTree = "<group>"; };
+		A53D4BB819A4A96800F98D41 /* FormatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatController.h; sourceTree = "<group>"; };
+		A53D4BB919A4A96800F98D41 /* GPSInterpolator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GPSInterpolator.cpp; sourceTree = "<group>"; };
+		A53D4BBA19A4A96800F98D41 /* GPSInterpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSInterpolator.h; sourceTree = "<group>"; };
+		A53D4BBB19A4A96800F98D41 /* NKUIDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NKUIDebug.cpp; sourceTree = "<group>"; };
+		A53D4BBC19A4A96800F98D41 /* TTSPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TTSPlayer.cpp; sourceTree = "<group>"; };
+		A53D4BBD19A4A96800F98D41 /* TTSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSPlayer.h; sourceTree = "<group>"; };
+		A53FAC1919A3271B009E5DEE /* NKUIDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIDebug.h; sourceTree = "<group>"; };
+		A56CCBE919F0E46200735179 /* RecalcOnCallTextWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecalcOnCallTextWidget.h; sourceTree = "<group>"; };
+		A5E0F03E1988C4200017F442 /* NKUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIController.h; sourceTree = "<group>"; };
+		A5E0F03F1988C4200017F442 /* NKUIData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIData.h; sourceTree = "<group>"; };
+		A5E0F0401988C4200017F442 /* NKUIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIEvent.h; sourceTree = "<group>"; };
+		A5E0F0411988C4200017F442 /* NKUIEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIEventListener.h; sourceTree = "<group>"; };
+		A5E0F0421988C4200017F442 /* NKUIListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIListener.h; sourceTree = "<group>"; };
+		A5E0F0431988C4200017F442 /* NKUILocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUILocation.h; sourceTree = "<group>"; };
+		A5E0F0441988C4200017F442 /* NKUIMapDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIMapDataType.h; sourceTree = "<group>"; };
+		A5E0F0451988C4200017F442 /* NKUIMapInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIMapInterface.h; sourceTree = "<group>"; };
+		A5E0F0461988C4200017F442 /* NKUIMenuCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIMenuCommand.h; sourceTree = "<group>"; };
+		A5E0F0471988C4200017F442 /* NKUIPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIPresenter.h; sourceTree = "<group>"; };
+		A5E0F0481988C4200017F442 /* NKUIPublicState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIPublicState.h; sourceTree = "<group>"; };
+		A5E0F0491988C4200017F442 /* NKUISharedInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUISharedInformation.h; sourceTree = "<group>"; };
+		A5E0F04A1988C4200017F442 /* NKUIStateID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIStateID.h; sourceTree = "<group>"; };
+		A5E0F04B1988C4200017F442 /* NKUIStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIStringHelper.h; sourceTree = "<group>"; };
+		A5E0F04C1988C4200017F442 /* NKUIWidgetLayoutConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIWidgetLayoutConfig.h; sourceTree = "<group>"; };
+		A5E0F04D1988C4200017F442 /* NKUIWidgetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIWidgetManager.h; sourceTree = "<group>"; };
+		A5E0F04F1988C4200017F442 /* NKUIContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIContext.h; sourceTree = "<group>"; };
+		A5E0F0501988C4200017F442 /* NKUITimerCallbackGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUITimerCallbackGuard.h; sourceTree = "<group>"; };
+		A5E0F0511988C4200017F442 /* nkui_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nkui_macros.h; sourceTree = "<group>"; };
+		A5E0F0531988C4200017F442 /* AnnouncementWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementWidget.h; sourceTree = "<group>"; };
+		A5E0F0541988C4200017F442 /* ArrivalFooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalFooterWidget.h; sourceTree = "<group>"; };
+		A5E0F0551988C4200017F442 /* ArrivalHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F0561988C4200017F442 /* CurrentRoadWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentRoadWidget.h; sourceTree = "<group>"; };
+		A5E0F0571988C4200017F442 /* EnhancedStartHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedStartHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F0581988C4200017F442 /* FooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterWidget.h; sourceTree = "<group>"; };
+		A5E0F0591988C4200017F442 /* LaneGuidanceWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaneGuidanceWidget.h; sourceTree = "<group>"; };
+		A5E0F05A1988C4200017F442 /* MiniMapWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniMapWidget.h; sourceTree = "<group>"; };
+		A5E0F05B1988C4200017F442 /* NavigationFooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationFooterWidget.h; sourceTree = "<group>"; };
+		A5E0F05C1988C4200017F442 /* NavigationHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F05D1988C4200017F442 /* NavigationListWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationListWidget.h; sourceTree = "<group>"; };
+		A5E0F05E1988C4200017F442 /* NoGPSWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoGPSWidget.h; sourceTree = "<group>"; };
+		A5E0F05F1988C4200017F442 /* NotificationWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationWidget.h; sourceTree = "<group>"; };
+		A5E0F0601988C4200017F442 /* OverflowMenuWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverflowMenuWidget.h; sourceTree = "<group>"; };
+		A5E0F0611988C4200017F442 /* PedestrianFooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianFooterWidget.h; sourceTree = "<group>"; };
+		A5E0F0621988C4200017F442 /* PedestrianHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F0631988C4200017F442 /* PedestrianListWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianListWidget.h; sourceTree = "<group>"; };
+		A5E0F0641988C4200017F442 /* PinBubbleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBubbleLayer.h; sourceTree = "<group>"; };
+		A5E0F0661988C4200017F442 /* RetryWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetryWidget.h; sourceTree = "<group>"; };
+		A5E0F0671988C4200017F442 /* RouteRequestFooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteRequestFooterWidget.h; sourceTree = "<group>"; };
+		A5E0F0681988C4200017F442 /* RouteSelectBubbleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectBubbleLayer.h; sourceTree = "<group>"; };
+		A5E0F0691988C4200017F442 /* RouteSelectHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F06A1988C4200017F442 /* RouteSelectListWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectListWidget.h; sourceTree = "<group>"; };
+		A5E0F06B1988C4200017F442 /* RouteSelectStatusBarWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectStatusBarWidget.h; sourceTree = "<group>"; };
+		A5E0F06C1988C4200017F442 /* RouteselectFooterWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteselectFooterWidget.h; sourceTree = "<group>"; };
+		A5E0F06D1988C4200017F442 /* SARWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARWidget.h; sourceTree = "<group>"; };
+		A5E0F06E1988C4200017F442 /* SpeedLimitWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedLimitWidget.h; sourceTree = "<group>"; };
+		A5E0F06F1988C4200017F442 /* StackManeuverWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackManeuverWidget.h; sourceTree = "<group>"; };
+		A5E0F0701988C4200017F442 /* StopNavigationWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopNavigationWidget.h; sourceTree = "<group>"; };
+		A5E0F0711988C4200017F442 /* TripOverviewHeaderWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripOverviewHeaderWidget.h; sourceTree = "<group>"; };
+		A5E0F0721988C4200017F442 /* Widget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Widget.h; sourceTree = "<group>"; };
+		A5E0F0731988C4200017F442 /* WidgetID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetID.h; sourceTree = "<group>"; };
+		A5E0F07D1988C4200017F442 /* NKUIContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NKUIContext.cpp; sourceTree = "<group>"; };
+		A5E0F07E1988C4200017F442 /* NKUIController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NKUIController.cpp; sourceTree = "<group>"; };
+		A5E0F07F1988C4200017F442 /* NKUIWidgetLayoutConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NKUIWidgetLayoutConfig.cpp; sourceTree = "<group>"; };
+		A5E0F0831988C4200017F442 /* AnnouncementPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnnouncementPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0841988C4200017F442 /* AnnouncementPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementPresenter.h; sourceTree = "<group>"; };
+		A5E0F0851988C4200017F442 /* ArrivalFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrivalFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0861988C4200017F442 /* ArrivalFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F0871988C4200017F442 /* ArrivalHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrivalHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0881988C4200017F442 /* ArrivalHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0891988C4200017F442 /* BackgroundPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F08A1988C4200017F442 /* BackgroundPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundPresenter.h; sourceTree = "<group>"; };
+		A5E0F08B1988C4200017F442 /* CurrentRoadPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurrentRoadPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F08C1988C4200017F442 /* CurrentRoadPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentRoadPresenter.h; sourceTree = "<group>"; };
+		A5E0F08D1988C4200017F442 /* DetourFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetourFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F08E1988C4200017F442 /* DetourFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetourFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F08F1988C4200017F442 /* DetourHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetourHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0901988C4200017F442 /* DetourHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetourHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0911988C4200017F442 /* EndTripStatusBarPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EndTripStatusBarPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0921988C4200017F442 /* EndTripStatusBarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndTripStatusBarPresenter.h; sourceTree = "<group>"; };
+		A5E0F0931988C4200017F442 /* EnhancedNavStartupNotifyPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnhancedNavStartupNotifyPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0941988C4200017F442 /* EnhancedNavStartupNotifyPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedNavStartupNotifyPresenter.h; sourceTree = "<group>"; };
+		A5E0F0951988C4200017F442 /* EnhancedStartHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnhancedStartHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0961988C4200017F442 /* EnhancedStartHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedStartHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0971988C4200017F442 /* FooterPresenterBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FooterPresenterBase.cpp; sourceTree = "<group>"; };
+		A5E0F0981988C4200017F442 /* FooterPresenterBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterPresenterBase.h; sourceTree = "<group>"; };
+		A5E0F0991988C4200017F442 /* LaneGuidancePresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaneGuidancePresenter.cpp; sourceTree = "<group>"; };
+		A5E0F09A1988C4200017F442 /* LaneGuidancePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaneGuidancePresenter.h; sourceTree = "<group>"; };
+		A5E0F09B1988C4200017F442 /* MapPrefetchPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapPrefetchPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F09C1988C4200017F442 /* MapPrefetchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPrefetchPresenter.h; sourceTree = "<group>"; };
+		A5E0F09D1988C4200017F442 /* MapPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F09E1988C4200017F442 /* MapPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPresenter.h; sourceTree = "<group>"; };
+		A5E0F09F1988C4200017F442 /* MapSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSetting.h; sourceTree = "<group>"; };
+		A5E0F0A01988C4200017F442 /* MiniMapPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiniMapPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0A11988C4200017F442 /* MiniMapPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniMapPresenter.h; sourceTree = "<group>"; };
+		A5E0F0A21988C4200017F442 /* NavigationFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0A31988C4200017F442 /* NavigationFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F0A41988C4200017F442 /* NavigationHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0A51988C4200017F442 /* NavigationHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0A61988C4200017F442 /* NavigationListPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationListPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0A71988C4200017F442 /* NavigationListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationListPresenter.h; sourceTree = "<group>"; };
+		A5E0F0A81988C4200017F442 /* NoGPSPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NoGPSPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0A91988C4200017F442 /* NoGPSPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoGPSPresenter.h; sourceTree = "<group>"; };
+		A5E0F0AA1988C4200017F442 /* OverflowMenuPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OverflowMenuPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0AB1988C4200017F442 /* OverflowMenuPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverflowMenuPresenter.h; sourceTree = "<group>"; };
+		A5E0F0AC1988C4200017F442 /* PedestrianListPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianListPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0AD1988C4200017F442 /* PedestrianListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianListPresenter.h; sourceTree = "<group>"; };
+		A5E0F0AE1988C4200017F442 /* PinBubblePresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PinBubblePresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0AF1988C4200017F442 /* PinBubblePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBubblePresenter.h; sourceTree = "<group>"; };
+		A5E0F0B01988C4200017F442 /* PresenterBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PresenterBase.cpp; sourceTree = "<group>"; };
+		A5E0F0B11988C4200017F442 /* PresenterBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresenterBase.h; sourceTree = "<group>"; };
+		A5E0F0B21988C4200017F442 /* PresenterManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PresenterManager.cpp; sourceTree = "<group>"; };
+		A5E0F0B31988C4200017F442 /* PresenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresenterManager.h; sourceTree = "<group>"; };
+		A5E0F0B41988C4200017F442 /* RecalcOnCallTextPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecalcOnCallTextPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0B51988C4200017F442 /* RecalcOnCallTextPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecalcOnCallTextPresenter.h; sourceTree = "<group>"; };
+		A5E0F0B61988C4200017F442 /* RetryPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RetryPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0B71988C4200017F442 /* RetryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetryPresenter.h; sourceTree = "<group>"; };
+		A5E0F0B81988C4200017F442 /* RouteRequestFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteRequestFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0B91988C4200017F442 /* RouteRequestFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteRequestFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F0BA1988C4200017F442 /* RouteSelectBubblePresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteSelectBubblePresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0BB1988C4200017F442 /* RouteSelectBubblePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectBubblePresenter.h; sourceTree = "<group>"; };
+		A5E0F0BC1988C4200017F442 /* RouteSelectHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteSelectHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0BD1988C4200017F442 /* RouteSelectHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0BE1988C4200017F442 /* RouteSelectInformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteSelectInformation.cpp; sourceTree = "<group>"; };
+		A5E0F0BF1988C4200017F442 /* RouteSelectInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectInformation.h; sourceTree = "<group>"; };
+		A5E0F0C01988C4200017F442 /* RouteSelectListPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteSelectListPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0C11988C4200017F442 /* RouteSelectListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectListPresenter.h; sourceTree = "<group>"; };
+		A5E0F0C21988C4200017F442 /* RouteSelectStatusBarPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteSelectStatusBarPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0C31988C4200017F442 /* RouteSelectStatusBarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteSelectStatusBarPresenter.h; sourceTree = "<group>"; };
+		A5E0F0C41988C4200017F442 /* RouteselectFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RouteselectFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0C51988C4200017F442 /* RouteselectFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteselectFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F0C61988C4200017F442 /* SARPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SARPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0C71988C4200017F442 /* SARPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARPresenter.h; sourceTree = "<group>"; };
+		A5E0F0C81988C4200017F442 /* SpeedLimitPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpeedLimitPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0C91988C4200017F442 /* SpeedLimitPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedLimitPresenter.h; sourceTree = "<group>"; };
+		A5E0F0CA1988C4200017F442 /* StackManeuverPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StackManeuverPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0CB1988C4200017F442 /* StackManeuverPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackManeuverPresenter.h; sourceTree = "<group>"; };
+		A5E0F0CC1988C4200017F442 /* StartingNavFooterPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartingNavFooterPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0CD1988C4200017F442 /* StartingNavFooterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartingNavFooterPresenter.h; sourceTree = "<group>"; };
+		A5E0F0CE1988C4200017F442 /* StatusBarPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusBarPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0CF1988C4200017F442 /* StatusBarPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarPresenter.h; sourceTree = "<group>"; };
+		A5E0F0D01988C4200017F442 /* StopNavigationPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StopNavigationPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0D11988C4200017F442 /* StopNavigationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopNavigationPresenter.h; sourceTree = "<group>"; };
+		A5E0F0D21988C4200017F442 /* TripOverviewHeaderPresenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TripOverviewHeaderPresenter.cpp; sourceTree = "<group>"; };
+		A5E0F0D31988C4200017F442 /* TripOverviewHeaderPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripOverviewHeaderPresenter.h; sourceTree = "<group>"; };
+		A5E0F0D51988C4200017F442 /* BreadCrumb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BreadCrumb.cpp; sourceTree = "<group>"; };
+		A5E0F0D61988C4200017F442 /* BreadCrumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreadCrumb.h; sourceTree = "<group>"; };
+		A5E0F0D81988C4200017F442 /* ArrivalState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrivalState.cpp; sourceTree = "<group>"; };
+		A5E0F0D91988C4200017F442 /* ArrivalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalState.h; sourceTree = "<group>"; };
+		A5E0F0DA1988C4200017F442 /* DetourListState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetourListState.cpp; sourceTree = "<group>"; };
+		A5E0F0DB1988C4200017F442 /* DetourListState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetourListState.h; sourceTree = "<group>"; };
+		A5E0F0DC1988C4200017F442 /* DetourState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetourState.cpp; sourceTree = "<group>"; };
+		A5E0F0DD1988C4200017F442 /* DetourState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetourState.h; sourceTree = "<group>"; };
+		A5E0F0DE1988C4200017F442 /* DetourUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetourUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0DF1988C4200017F442 /* DetourUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetourUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0E01988C4200017F442 /* EnhancedStartupState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnhancedStartupState.cpp; sourceTree = "<group>"; };
+		A5E0F0E11988C4200017F442 /* EnhancedStartupState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedStartupState.h; sourceTree = "<group>"; };
+		A5E0F0E21988C4200017F442 /* EnhancedStartupUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnhancedStartupUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0E31988C4200017F442 /* EnhancedStartupUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancedStartupUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0E41988C4200017F442 /* NKUIState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NKUIState.cpp; sourceTree = "<group>"; };
+		A5E0F0E51988C4200017F442 /* NKUIState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKUIState.h; sourceTree = "<group>"; };
+		A5E0F0E61988C4200017F442 /* NavigationEndTripState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationEndTripState.cpp; sourceTree = "<group>"; };
+		A5E0F0E71988C4200017F442 /* NavigationEndTripState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationEndTripState.h; sourceTree = "<group>"; };
+		A5E0F0E81988C4200017F442 /* NavigationListState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationListState.cpp; sourceTree = "<group>"; };
+		A5E0F0E91988C4200017F442 /* NavigationListState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationListState.h; sourceTree = "<group>"; };
+		A5E0F0EA1988C4200017F442 /* NavigationSARState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationSARState.cpp; sourceTree = "<group>"; };
+		A5E0F0EB1988C4200017F442 /* NavigationSARState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationSARState.h; sourceTree = "<group>"; };
+		A5E0F0EC1988C4200017F442 /* NavigationSARUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationSARUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0ED1988C4200017F442 /* NavigationSARUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationSARUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0EE1988C4200017F442 /* NavigationState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationState.cpp; sourceTree = "<group>"; };
+		A5E0F0EF1988C4200017F442 /* NavigationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationState.h; sourceTree = "<group>"; };
+		A5E0F0F01988C4200017F442 /* NavigationUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0F11988C4200017F442 /* NavigationUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0F21988C4200017F442 /* PedestrianNavigationListState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianNavigationListState.cpp; sourceTree = "<group>"; };
+		A5E0F0F31988C4200017F442 /* PedestrianNavigationListState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianNavigationListState.h; sourceTree = "<group>"; };
+		A5E0F0F41988C4200017F442 /* PedestrianNavigationState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianNavigationState.cpp; sourceTree = "<group>"; };
+		A5E0F0F51988C4200017F442 /* PedestrianNavigationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianNavigationState.h; sourceTree = "<group>"; };
+		A5E0F0F61988C4200017F442 /* PedestrianNavigationUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianNavigationUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0F71988C4200017F442 /* PedestrianNavigationUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianNavigationUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0F81988C4200017F442 /* PedestrianTripOverviewState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianTripOverviewState.cpp; sourceTree = "<group>"; };
+		A5E0F0F91988C4200017F442 /* PedestrianTripOverviewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianTripOverviewState.h; sourceTree = "<group>"; };
+		A5E0F0FA1988C4200017F442 /* PedestrianTripOverviewUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianTripOverviewUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F0FB1988C4200017F442 /* PedestrianTripOverviewUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedestrianTripOverviewUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F0FC1988C4200017F442 /* RTSListState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTSListState.cpp; sourceTree = "<group>"; };
+		A5E0F0FD1988C4200017F442 /* RTSListState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSListState.h; sourceTree = "<group>"; };
+		A5E0F0FE1988C4200017F442 /* RTSState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTSState.cpp; sourceTree = "<group>"; };
+		A5E0F0FF1988C4200017F442 /* RTSState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSState.h; sourceTree = "<group>"; };
+		A5E0F1001988C4200017F442 /* RTSUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTSUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F1011988C4200017F442 /* RTSUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSUnlockedState.h; sourceTree = "<group>"; };
+		A5E0F1021988C4200017F442 /* RequestNavigationState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RequestNavigationState.cpp; sourceTree = "<group>"; };
+		A5E0F1031988C4200017F442 /* RequestNavigationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNavigationState.h; sourceTree = "<group>"; };
+		A5E0F1041988C4200017F442 /* StartingNavigationState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartingNavigationState.cpp; sourceTree = "<group>"; };
+		A5E0F1051988C4200017F442 /* StartingNavigationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartingNavigationState.h; sourceTree = "<group>"; };
+		A5E0F1061988C4200017F442 /* TripOverviewState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TripOverviewState.cpp; sourceTree = "<group>"; };
+		A5E0F1071988C4200017F442 /* TripOverviewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripOverviewState.h; sourceTree = "<group>"; };
+		A5E0F1081988C4200017F442 /* TripOverviewUnlockedState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TripOverviewUnlockedState.cpp; sourceTree = "<group>"; };
+		A5E0F1091988C4200017F442 /* TripOverviewUnlockedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripOverviewUnlockedState.h; sourceTree = "<group>"; };
+		CE6B1CFF19C1796300755236 /* PreservedAudioAnnouncement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PreservedAudioAnnouncement.cpp; sourceTree = "<group>"; };
+		CE6B1D0019C1796300755236 /* PreservedAudioAnnouncement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreservedAudioAnnouncement.h; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libnavui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnavui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libnavui.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* navui */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = navui;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0F03D1988C4200017F442 /* include */,
+				A5E0F0741988C4200017F442 /* src */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A53D4BB219A4A96800F98D41 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A53D4BB319A4A96800F98D41 /* AACPlayer.cpp */,
+				A53D4BB419A4A96800F98D41 /* AACPlayer.h */,
+				A53D4BB519A4A96800F98D41 /* AudioPlayer.cpp */,
+				A53D4BB619A4A96800F98D41 /* AudioPlayer.h */,
+				A53D4BB719A4A96800F98D41 /* FormatController.cpp */,
+				A53D4BB819A4A96800F98D41 /* FormatController.h */,
+				A53D4BB919A4A96800F98D41 /* GPSInterpolator.cpp */,
+				A53D4BBA19A4A96800F98D41 /* GPSInterpolator.h */,
+				A53D4BBB19A4A96800F98D41 /* NKUIDebug.cpp */,
+				A53D4BBC19A4A96800F98D41 /* TTSPlayer.cpp */,
+				A53D4BBD19A4A96800F98D41 /* TTSPlayer.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A5E0F03D1988C4200017F442 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0F03E1988C4200017F442 /* NKUIController.h */,
+				A5E0F03F1988C4200017F442 /* NKUIData.h */,
+				A5E0F0401988C4200017F442 /* NKUIEvent.h */,
+				A5E0F0411988C4200017F442 /* NKUIEventListener.h */,
+				A5E0F0421988C4200017F442 /* NKUIListener.h */,
+				A5E0F0431988C4200017F442 /* NKUILocation.h */,
+				A5E0F0441988C4200017F442 /* NKUIMapDataType.h */,
+				A5E0F0451988C4200017F442 /* NKUIMapInterface.h */,
+				A5E0F0461988C4200017F442 /* NKUIMenuCommand.h */,
+				A5E0F0471988C4200017F442 /* NKUIPresenter.h */,
+				A5E0F0481988C4200017F442 /* NKUIPublicState.h */,
+				A5E0F0491988C4200017F442 /* NKUISharedInformation.h */,
+				A5E0F04A1988C4200017F442 /* NKUIStateID.h */,
+				A5E0F04B1988C4200017F442 /* NKUIStringHelper.h */,
+				A5E0F04C1988C4200017F442 /* NKUIWidgetLayoutConfig.h */,
+				A5E0F04D1988C4200017F442 /* NKUIWidgetManager.h */,
+				A5E0F04E1988C4200017F442 /* private */,
+				A5E0F0521988C4200017F442 /* widgets */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		A5E0F04E1988C4200017F442 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				A53FAC1919A3271B009E5DEE /* NKUIDebug.h */,
+				A5E0F04F1988C4200017F442 /* NKUIContext.h */,
+				A5E0F0501988C4200017F442 /* NKUITimerCallbackGuard.h */,
+				A5E0F0511988C4200017F442 /* nkui_macros.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		A5E0F0521988C4200017F442 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A56CCBE919F0E46200735179 /* RecalcOnCallTextWidget.h */,
+				A5E0F0531988C4200017F442 /* AnnouncementWidget.h */,
+				A5E0F0541988C4200017F442 /* ArrivalFooterWidget.h */,
+				A5E0F0551988C4200017F442 /* ArrivalHeaderWidget.h */,
+				A5E0F0561988C4200017F442 /* CurrentRoadWidget.h */,
+				A5E0F0571988C4200017F442 /* EnhancedStartHeaderWidget.h */,
+				A5E0F0581988C4200017F442 /* FooterWidget.h */,
+				A5E0F0591988C4200017F442 /* LaneGuidanceWidget.h */,
+				A5E0F05A1988C4200017F442 /* MiniMapWidget.h */,
+				A5E0F05B1988C4200017F442 /* NavigationFooterWidget.h */,
+				A5E0F05C1988C4200017F442 /* NavigationHeaderWidget.h */,
+				A5E0F05D1988C4200017F442 /* NavigationListWidget.h */,
+				A5E0F05E1988C4200017F442 /* NoGPSWidget.h */,
+				A5E0F05F1988C4200017F442 /* NotificationWidget.h */,
+				A5E0F0601988C4200017F442 /* OverflowMenuWidget.h */,
+				A5E0F0611988C4200017F442 /* PedestrianFooterWidget.h */,
+				A5E0F0621988C4200017F442 /* PedestrianHeaderWidget.h */,
+				A5E0F0631988C4200017F442 /* PedestrianListWidget.h */,
+				A5E0F0641988C4200017F442 /* PinBubbleLayer.h */,
+				A5E0F0661988C4200017F442 /* RetryWidget.h */,
+				A5E0F0671988C4200017F442 /* RouteRequestFooterWidget.h */,
+				A5E0F0681988C4200017F442 /* RouteSelectBubbleLayer.h */,
+				A5E0F0691988C4200017F442 /* RouteSelectHeaderWidget.h */,
+				A5E0F06A1988C4200017F442 /* RouteSelectListWidget.h */,
+				A5E0F06B1988C4200017F442 /* RouteSelectStatusBarWidget.h */,
+				A5E0F06C1988C4200017F442 /* RouteselectFooterWidget.h */,
+				A5E0F06D1988C4200017F442 /* SARWidget.h */,
+				A5E0F06E1988C4200017F442 /* SpeedLimitWidget.h */,
+				A5E0F06F1988C4200017F442 /* StackManeuverWidget.h */,
+				A5E0F0701988C4200017F442 /* StopNavigationWidget.h */,
+				A5E0F0711988C4200017F442 /* TripOverviewHeaderWidget.h */,
+				A5E0F0721988C4200017F442 /* Widget.h */,
+				A5E0F0731988C4200017F442 /* WidgetID.h */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		A5E0F0741988C4200017F442 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0F07D1988C4200017F442 /* NKUIContext.cpp */,
+				A5E0F07E1988C4200017F442 /* NKUIController.cpp */,
+				A5E0F07F1988C4200017F442 /* NKUIWidgetLayoutConfig.cpp */,
+				A5E0F0821988C4200017F442 /* presenters */,
+				A5E0F0D71988C4200017F442 /* states */,
+				A53D4BB219A4A96800F98D41 /* utils */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		A5E0F0821988C4200017F442 /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				9AF80B861A3065F900D03E70 /* TrafficAheadPresenter.cpp */,
+				9AF80B871A3065F900D03E70 /* TrafficAheadPresenter.h */,
+				A5E0F0831988C4200017F442 /* AnnouncementPresenter.cpp */,
+				A5E0F0841988C4200017F442 /* AnnouncementPresenter.h */,
+				A5E0F0851988C4200017F442 /* ArrivalFooterPresenter.cpp */,
+				A5E0F0861988C4200017F442 /* ArrivalFooterPresenter.h */,
+				A5E0F0871988C4200017F442 /* ArrivalHeaderPresenter.cpp */,
+				A5E0F0881988C4200017F442 /* ArrivalHeaderPresenter.h */,
+				A5E0F0891988C4200017F442 /* BackgroundPresenter.cpp */,
+				A5E0F08A1988C4200017F442 /* BackgroundPresenter.h */,
+				A5E0F08B1988C4200017F442 /* CurrentRoadPresenter.cpp */,
+				A5E0F08C1988C4200017F442 /* CurrentRoadPresenter.h */,
+				A5E0F08D1988C4200017F442 /* DetourFooterPresenter.cpp */,
+				A5E0F08E1988C4200017F442 /* DetourFooterPresenter.h */,
+				A5E0F08F1988C4200017F442 /* DetourHeaderPresenter.cpp */,
+				A5E0F0901988C4200017F442 /* DetourHeaderPresenter.h */,
+				A5E0F0911988C4200017F442 /* EndTripStatusBarPresenter.cpp */,
+				A5E0F0921988C4200017F442 /* EndTripStatusBarPresenter.h */,
+				A5E0F0931988C4200017F442 /* EnhancedNavStartupNotifyPresenter.cpp */,
+				A5E0F0941988C4200017F442 /* EnhancedNavStartupNotifyPresenter.h */,
+				A5E0F0951988C4200017F442 /* EnhancedStartHeaderPresenter.cpp */,
+				A5E0F0961988C4200017F442 /* EnhancedStartHeaderPresenter.h */,
+				A5E0F0971988C4200017F442 /* FooterPresenterBase.cpp */,
+				A5E0F0981988C4200017F442 /* FooterPresenterBase.h */,
+				A5E0F0991988C4200017F442 /* LaneGuidancePresenter.cpp */,
+				A5E0F09A1988C4200017F442 /* LaneGuidancePresenter.h */,
+				A5E0F09B1988C4200017F442 /* MapPrefetchPresenter.cpp */,
+				A5E0F09C1988C4200017F442 /* MapPrefetchPresenter.h */,
+				A5E0F09D1988C4200017F442 /* MapPresenter.cpp */,
+				A5E0F09E1988C4200017F442 /* MapPresenter.h */,
+				A5E0F09F1988C4200017F442 /* MapSetting.h */,
+				A5E0F0A01988C4200017F442 /* MiniMapPresenter.cpp */,
+				A5E0F0A11988C4200017F442 /* MiniMapPresenter.h */,
+				A5E0F0A21988C4200017F442 /* NavigationFooterPresenter.cpp */,
+				A5E0F0A31988C4200017F442 /* NavigationFooterPresenter.h */,
+				A5E0F0A41988C4200017F442 /* NavigationHeaderPresenter.cpp */,
+				A5E0F0A51988C4200017F442 /* NavigationHeaderPresenter.h */,
+				A5E0F0A61988C4200017F442 /* NavigationListPresenter.cpp */,
+				A5E0F0A71988C4200017F442 /* NavigationListPresenter.h */,
+				A5E0F0A81988C4200017F442 /* NoGPSPresenter.cpp */,
+				A5E0F0A91988C4200017F442 /* NoGPSPresenter.h */,
+				A5E0F0AA1988C4200017F442 /* OverflowMenuPresenter.cpp */,
+				A5E0F0AB1988C4200017F442 /* OverflowMenuPresenter.h */,
+				A5E0F0AC1988C4200017F442 /* PedestrianListPresenter.cpp */,
+				A5E0F0AD1988C4200017F442 /* PedestrianListPresenter.h */,
+				A5E0F0AE1988C4200017F442 /* PinBubblePresenter.cpp */,
+				A5E0F0AF1988C4200017F442 /* PinBubblePresenter.h */,
+				A5E0F0B01988C4200017F442 /* PresenterBase.cpp */,
+				A5E0F0B11988C4200017F442 /* PresenterBase.h */,
+				A5E0F0B21988C4200017F442 /* PresenterManager.cpp */,
+				A5E0F0B31988C4200017F442 /* PresenterManager.h */,
+				A5E0F0B41988C4200017F442 /* RecalcOnCallTextPresenter.cpp */,
+				A5E0F0B51988C4200017F442 /* RecalcOnCallTextPresenter.h */,
+				A5E0F0B61988C4200017F442 /* RetryPresenter.cpp */,
+				A5E0F0B71988C4200017F442 /* RetryPresenter.h */,
+				A5E0F0B81988C4200017F442 /* RouteRequestFooterPresenter.cpp */,
+				A5E0F0B91988C4200017F442 /* RouteRequestFooterPresenter.h */,
+				A5E0F0BA1988C4200017F442 /* RouteSelectBubblePresenter.cpp */,
+				A5E0F0BB1988C4200017F442 /* RouteSelectBubblePresenter.h */,
+				A5E0F0BC1988C4200017F442 /* RouteSelectHeaderPresenter.cpp */,
+				A5E0F0BD1988C4200017F442 /* RouteSelectHeaderPresenter.h */,
+				A5E0F0BE1988C4200017F442 /* RouteSelectInformation.cpp */,
+				A5E0F0BF1988C4200017F442 /* RouteSelectInformation.h */,
+				A5E0F0C01988C4200017F442 /* RouteSelectListPresenter.cpp */,
+				A5E0F0C11988C4200017F442 /* RouteSelectListPresenter.h */,
+				A5E0F0C21988C4200017F442 /* RouteSelectStatusBarPresenter.cpp */,
+				A5E0F0C31988C4200017F442 /* RouteSelectStatusBarPresenter.h */,
+				A5E0F0C41988C4200017F442 /* RouteselectFooterPresenter.cpp */,
+				A5E0F0C51988C4200017F442 /* RouteselectFooterPresenter.h */,
+				A5E0F0C61988C4200017F442 /* SARPresenter.cpp */,
+				A5E0F0C71988C4200017F442 /* SARPresenter.h */,
+				A5E0F0C81988C4200017F442 /* SpeedLimitPresenter.cpp */,
+				A5E0F0C91988C4200017F442 /* SpeedLimitPresenter.h */,
+				A5E0F0CA1988C4200017F442 /* StackManeuverPresenter.cpp */,
+				A5E0F0CB1988C4200017F442 /* StackManeuverPresenter.h */,
+				A5E0F0CC1988C4200017F442 /* StartingNavFooterPresenter.cpp */,
+				A5E0F0CD1988C4200017F442 /* StartingNavFooterPresenter.h */,
+				A5E0F0CE1988C4200017F442 /* StatusBarPresenter.cpp */,
+				A5E0F0CF1988C4200017F442 /* StatusBarPresenter.h */,
+				A5E0F0D01988C4200017F442 /* StopNavigationPresenter.cpp */,
+				A5E0F0D11988C4200017F442 /* StopNavigationPresenter.h */,
+				A5E0F0D21988C4200017F442 /* TripOverviewHeaderPresenter.cpp */,
+				A5E0F0D31988C4200017F442 /* TripOverviewHeaderPresenter.h */,
+				A5E0F0D41988C4200017F442 /* map */,
+				CE6B1CFF19C1796300755236 /* PreservedAudioAnnouncement.cpp */,
+				CE6B1D0019C1796300755236 /* PreservedAudioAnnouncement.h */,
+			);
+			path = presenters;
+			sourceTree = "<group>";
+		};
+		A5E0F0D41988C4200017F442 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0F0D51988C4200017F442 /* BreadCrumb.cpp */,
+				A5E0F0D61988C4200017F442 /* BreadCrumb.h */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		A5E0F0D71988C4200017F442 /* states */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0F0D81988C4200017F442 /* ArrivalState.cpp */,
+				A5E0F0D91988C4200017F442 /* ArrivalState.h */,
+				A5E0F0DA1988C4200017F442 /* DetourListState.cpp */,
+				A5E0F0DB1988C4200017F442 /* DetourListState.h */,
+				A5E0F0DC1988C4200017F442 /* DetourState.cpp */,
+				A5E0F0DD1988C4200017F442 /* DetourState.h */,
+				A5E0F0DE1988C4200017F442 /* DetourUnlockedState.cpp */,
+				A5E0F0DF1988C4200017F442 /* DetourUnlockedState.h */,
+				A5E0F0E01988C4200017F442 /* EnhancedStartupState.cpp */,
+				A5E0F0E11988C4200017F442 /* EnhancedStartupState.h */,
+				A5E0F0E21988C4200017F442 /* EnhancedStartupUnlockedState.cpp */,
+				A5E0F0E31988C4200017F442 /* EnhancedStartupUnlockedState.h */,
+				A5E0F0E41988C4200017F442 /* NKUIState.cpp */,
+				A5E0F0E51988C4200017F442 /* NKUIState.h */,
+				A5E0F0E61988C4200017F442 /* NavigationEndTripState.cpp */,
+				A5E0F0E71988C4200017F442 /* NavigationEndTripState.h */,
+				A5E0F0E81988C4200017F442 /* NavigationListState.cpp */,
+				A5E0F0E91988C4200017F442 /* NavigationListState.h */,
+				A5E0F0EA1988C4200017F442 /* NavigationSARState.cpp */,
+				A5E0F0EB1988C4200017F442 /* NavigationSARState.h */,
+				A5E0F0EC1988C4200017F442 /* NavigationSARUnlockedState.cpp */,
+				A5E0F0ED1988C4200017F442 /* NavigationSARUnlockedState.h */,
+				A5E0F0EE1988C4200017F442 /* NavigationState.cpp */,
+				A5E0F0EF1988C4200017F442 /* NavigationState.h */,
+				A5E0F0F01988C4200017F442 /* NavigationUnlockedState.cpp */,
+				A5E0F0F11988C4200017F442 /* NavigationUnlockedState.h */,
+				A5E0F0F21988C4200017F442 /* PedestrianNavigationListState.cpp */,
+				A5E0F0F31988C4200017F442 /* PedestrianNavigationListState.h */,
+				A5E0F0F41988C4200017F442 /* PedestrianNavigationState.cpp */,
+				A5E0F0F51988C4200017F442 /* PedestrianNavigationState.h */,
+				A5E0F0F61988C4200017F442 /* PedestrianNavigationUnlockedState.cpp */,
+				A5E0F0F71988C4200017F442 /* PedestrianNavigationUnlockedState.h */,
+				A5E0F0F81988C4200017F442 /* PedestrianTripOverviewState.cpp */,
+				A5E0F0F91988C4200017F442 /* PedestrianTripOverviewState.h */,
+				A5E0F0FA1988C4200017F442 /* PedestrianTripOverviewUnlockedState.cpp */,
+				A5E0F0FB1988C4200017F442 /* PedestrianTripOverviewUnlockedState.h */,
+				A5E0F0FC1988C4200017F442 /* RTSListState.cpp */,
+				A5E0F0FD1988C4200017F442 /* RTSListState.h */,
+				A5E0F0FE1988C4200017F442 /* RTSState.cpp */,
+				A5E0F0FF1988C4200017F442 /* RTSState.h */,
+				A5E0F1001988C4200017F442 /* RTSUnlockedState.cpp */,
+				A5E0F1011988C4200017F442 /* RTSUnlockedState.h */,
+				A5E0F1021988C4200017F442 /* RequestNavigationState.cpp */,
+				A5E0F1031988C4200017F442 /* RequestNavigationState.h */,
+				A5E0F1041988C4200017F442 /* StartingNavigationState.cpp */,
+				A5E0F1051988C4200017F442 /* StartingNavigationState.h */,
+				A5E0F1061988C4200017F442 /* TripOverviewState.cpp */,
+				A5E0F1071988C4200017F442 /* TripOverviewState.h */,
+				A5E0F1081988C4200017F442 /* TripOverviewUnlockedState.cpp */,
+				A5E0F1091988C4200017F442 /* TripOverviewUnlockedState.h */,
+			);
+			path = states;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E0F1CB1988C4200017F442 /* StartingNavigationState.h in Headers */,
+				A5E0F1CF1988C4200017F442 /* TripOverviewUnlockedState.h in Headers */,
+				A5E0F1141988C4200017F442 /* NKUIPublicState.h in Headers */,
+				A5E0F18B1988C4200017F442 /* RouteSelectStatusBarPresenter.h in Headers */,
+				A5E0F1621988C4200017F442 /* LaneGuidancePresenter.h in Headers */,
+				A5E0F1BD1988C4200017F442 /* PedestrianNavigationUnlockedState.h in Headers */,
+				A5E0F1241988C4200017F442 /* MiniMapWidget.h in Headers */,
+				A5E0F1381988C4200017F442 /* SpeedLimitWidget.h in Headers */,
+				A5E0F1C31988C4200017F442 /* RTSListState.h in Headers */,
+				A5E0F1261988C4200017F442 /* NavigationHeaderWidget.h in Headers */,
+				A5E0F17B1988C4200017F442 /* PresenterManager.h in Headers */,
+				9AF80B891A3065F900D03E70 /* TrafficAheadPresenter.h in Headers */,
+				A5E0F1771988C4200017F442 /* PinBubblePresenter.h in Headers */,
+				A5E0F19B1988C4200017F442 /* TripOverviewHeaderPresenter.h in Headers */,
+				A5E0F11F1988C4200017F442 /* ArrivalHeaderWidget.h in Headers */,
+				A5E0F1221988C4200017F442 /* FooterWidget.h in Headers */,
+				A5E0F18F1988C4200017F442 /* SARPresenter.h in Headers */,
+				A5E0F1BF1988C4200017F442 /* PedestrianTripOverviewState.h in Headers */,
+				A5E0F17D1988C4200017F442 /* RecalcOnCallTextPresenter.h in Headers */,
+				A5E0F18D1988C4200017F442 /* RouteselectFooterPresenter.h in Headers */,
+				A5E0F1161988C4200017F442 /* NKUIStateID.h in Headers */,
+				A5E0F1C11988C4200017F442 /* PedestrianTripOverviewUnlockedState.h in Headers */,
+				A5E0F1171988C4200017F442 /* NKUIStringHelper.h in Headers */,
+				A5E0F1391988C4200017F442 /* StackManeuverWidget.h in Headers */,
+				A5E0F12C1988C4200017F442 /* PedestrianHeaderWidget.h in Headers */,
+				A5E0F1151988C4200017F442 /* NKUISharedInformation.h in Headers */,
+				A5E0F10E1988C4200017F442 /* NKUIListener.h in Headers */,
+				A5E0F11D1988C4200017F442 /* AnnouncementWidget.h in Headers */,
+				A5E0F12D1988C4200017F442 /* PedestrianListWidget.h in Headers */,
+				A5E0F1121988C4200017F442 /* NKUIMenuCommand.h in Headers */,
+				A53D4BC819A4A96800F98D41 /* TTSPlayer.h in Headers */,
+				A5E0F1A91988C4200017F442 /* EnhancedStartupUnlockedState.h in Headers */,
+				A5E0F1371988C4200017F442 /* SARWidget.h in Headers */,
+				A5E0F15A1988C4200017F442 /* EndTripStatusBarPresenter.h in Headers */,
+				A5E0F1B51988C4200017F442 /* NavigationState.h in Headers */,
+				A5E0F1911988C4200017F442 /* SpeedLimitPresenter.h in Headers */,
+				A53D4BC319A4A96800F98D41 /* FormatController.h in Headers */,
+				A5E0F15C1988C4200017F442 /* EnhancedNavStartupNotifyPresenter.h in Headers */,
+				A5E0F1A11988C4200017F442 /* DetourListState.h in Headers */,
+				A5E0F10D1988C4200017F442 /* NKUIEventListener.h in Headers */,
+				A5E0F1A71988C4200017F442 /* EnhancedStartupState.h in Headers */,
+				A5E0F1281988C4200017F442 /* NoGPSWidget.h in Headers */,
+				CE6B1D0219C1796300755236 /* PreservedAudioAnnouncement.h in Headers */,
+				A5E0F1601988C4200017F442 /* FooterPresenterBase.h in Headers */,
+				A5E0F10F1988C4200017F442 /* NKUILocation.h in Headers */,
+				A5E0F16B1988C4200017F442 /* NavigationFooterPresenter.h in Headers */,
+				A5E0F1891988C4200017F442 /* RouteSelectListPresenter.h in Headers */,
+				A5E0F17F1988C4200017F442 /* RetryPresenter.h in Headers */,
+				A5E0F1361988C4200017F442 /* RouteselectFooterWidget.h in Headers */,
+				A56CCBEA19F0E46200735179 /* RecalcOnCallTextWidget.h in Headers */,
+				A5E0F1A51988C4200017F442 /* DetourUnlockedState.h in Headers */,
+				A5E0F1211988C4200017F442 /* EnhancedStartHeaderWidget.h in Headers */,
+				A5E0F1561988C4200017F442 /* DetourFooterPresenter.h in Headers */,
+				A5E0F1331988C4200017F442 /* RouteSelectHeaderWidget.h in Headers */,
+				A5E0F1661988C4200017F442 /* MapPresenter.h in Headers */,
+				A5E0F1831988C4200017F442 /* RouteSelectBubblePresenter.h in Headers */,
+				A5E0F11C1988C4200017F442 /* nkui_macros.h in Headers */,
+				A5E0F14E1988C4200017F442 /* ArrivalFooterPresenter.h in Headers */,
+				A5E0F1851988C4200017F442 /* RouteSelectHeaderPresenter.h in Headers */,
+				A5E0F1181988C4200017F442 /* NKUIWidgetLayoutConfig.h in Headers */,
+				A5E0F1C71988C4200017F442 /* RTSUnlockedState.h in Headers */,
+				A5E0F14C1988C4200017F442 /* AnnouncementPresenter.h in Headers */,
+				A5E0F1AB1988C4200017F442 /* NKUIState.h in Headers */,
+				A5E0F1B71988C4200017F442 /* NavigationUnlockedState.h in Headers */,
+				A5E0F1B91988C4200017F442 /* PedestrianNavigationListState.h in Headers */,
+				A5E0F1501988C4200017F442 /* ArrivalHeaderPresenter.h in Headers */,
+				A5E0F13A1988C4200017F442 /* StopNavigationWidget.h in Headers */,
+				A5E0F13D1988C4200017F442 /* WidgetID.h in Headers */,
+				A5E0F16D1988C4200017F442 /* NavigationHeaderPresenter.h in Headers */,
+				A5E0F11A1988C4200017F442 /* NKUIContext.h in Headers */,
+				A5E0F1581988C4200017F442 /* DetourHeaderPresenter.h in Headers */,
+				A5E0F1B31988C4200017F442 /* NavigationSARUnlockedState.h in Headers */,
+				A5E0F15E1988C4200017F442 /* EnhancedStartHeaderPresenter.h in Headers */,
+				A5E0F1B11988C4200017F442 /* NavigationSARState.h in Headers */,
+				A5E0F16F1988C4200017F442 /* NavigationListPresenter.h in Headers */,
+				A5E0F1541988C4200017F442 /* CurrentRoadPresenter.h in Headers */,
+				A5E0F1C51988C4200017F442 /* RTSState.h in Headers */,
+				A53D4BBF19A4A96800F98D41 /* AACPlayer.h in Headers */,
+				A53FAC1A19A3271B009E5DEE /* NKUIDebug.h in Headers */,
+				A5E0F1871988C4200017F442 /* RouteSelectInformation.h in Headers */,
+				A5E0F1C91988C4200017F442 /* RequestNavigationState.h in Headers */,
+				A5E0F19F1988C4200017F442 /* ArrivalState.h in Headers */,
+				A5E0F1341988C4200017F442 /* RouteSelectListWidget.h in Headers */,
+				A5E0F1A31988C4200017F442 /* DetourState.h in Headers */,
+				A5E0F1731988C4200017F442 /* OverflowMenuPresenter.h in Headers */,
+				A5E0F1971988C4200017F442 /* StatusBarPresenter.h in Headers */,
+				A5E0F1691988C4200017F442 /* MiniMapPresenter.h in Headers */,
+				A5E0F12B1988C4200017F442 /* PedestrianFooterWidget.h in Headers */,
+				A5E0F1641988C4200017F442 /* MapPrefetchPresenter.h in Headers */,
+				A5E0F10A1988C4200017F442 /* NKUIController.h in Headers */,
+				A5E0F1301988C4200017F442 /* RetryWidget.h in Headers */,
+				A53D4BC119A4A96800F98D41 /* AudioPlayer.h in Headers */,
+				A5E0F1251988C4200017F442 /* NavigationFooterWidget.h in Headers */,
+				A5E0F1101988C4200017F442 /* NKUIMapDataType.h in Headers */,
+				A5E0F1291988C4200017F442 /* NotificationWidget.h in Headers */,
+				A5E0F1271988C4200017F442 /* NavigationListWidget.h in Headers */,
+				A5E0F19D1988C4200017F442 /* BreadCrumb.h in Headers */,
+				A5E0F1311988C4200017F442 /* RouteRequestFooterWidget.h in Headers */,
+				A5E0F11B1988C4200017F442 /* NKUITimerCallbackGuard.h in Headers */,
+				A5E0F1AF1988C4200017F442 /* NavigationListState.h in Headers */,
+				A5E0F1321988C4200017F442 /* RouteSelectBubbleLayer.h in Headers */,
+				A5E0F10B1988C4200017F442 /* NKUIData.h in Headers */,
+				A5E0F1201988C4200017F442 /* CurrentRoadWidget.h in Headers */,
+				A5E0F1711988C4200017F442 /* NoGPSPresenter.h in Headers */,
+				A5E0F1791988C4200017F442 /* PresenterBase.h in Headers */,
+				A5E0F1BB1988C4200017F442 /* PedestrianNavigationState.h in Headers */,
+				A5E0F1951988C4200017F442 /* StartingNavFooterPresenter.h in Headers */,
+				A5E0F1351988C4200017F442 /* RouteSelectStatusBarWidget.h in Headers */,
+				A5E0F1111988C4200017F442 /* NKUIMapInterface.h in Headers */,
+				A5E0F1131988C4200017F442 /* NKUIPresenter.h in Headers */,
+				A5E0F11E1988C4200017F442 /* ArrivalFooterWidget.h in Headers */,
+				A5E0F1751988C4200017F442 /* PedestrianListPresenter.h in Headers */,
+				A5E0F1CD1988C4200017F442 /* TripOverviewState.h in Headers */,
+				A5E0F1AD1988C4200017F442 /* NavigationEndTripState.h in Headers */,
+				A5E0F1521988C4200017F442 /* BackgroundPresenter.h in Headers */,
+				A5E0F13C1988C4200017F442 /* Widget.h in Headers */,
+				A53D4BC519A4A96800F98D41 /* GPSInterpolator.h in Headers */,
+				A5E0F13B1988C4200017F442 /* TripOverviewHeaderWidget.h in Headers */,
+				A5E0F10C1988C4200017F442 /* NKUIEvent.h in Headers */,
+				A5E0F1231988C4200017F442 /* LaneGuidanceWidget.h in Headers */,
+				A5E0F12E1988C4200017F442 /* PinBubbleLayer.h in Headers */,
+				A5E0F12A1988C4200017F442 /* OverflowMenuWidget.h in Headers */,
+				A5E0F1811988C4200017F442 /* RouteRequestFooterPresenter.h in Headers */,
+				A5E0F1931988C4200017F442 /* StackManeuverPresenter.h in Headers */,
+				A5E0F1991988C4200017F442 /* StopNavigationPresenter.h in Headers */,
+				A5E0F1671988C4200017F442 /* MapSetting.h in Headers */,
+				A5E0F1191988C4200017F442 /* NKUIWidgetManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* navui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "navui" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = navui;
+			productName = navui;
+			productReference = D2AAC07E0554694100DB518D /* libnavui.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "navui" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* navui */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* navui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E0F1761988C4200017F442 /* PinBubblePresenter.cpp in Sources */,
+				A5E0F19E1988C4200017F442 /* ArrivalState.cpp in Sources */,
+				A5E0F1BC1988C4200017F442 /* PedestrianNavigationUnlockedState.cpp in Sources */,
+				A5E0F15D1988C4200017F442 /* EnhancedStartHeaderPresenter.cpp in Sources */,
+				A5E0F1961988C4200017F442 /* StatusBarPresenter.cpp in Sources */,
+				A5E0F14F1988C4200017F442 /* ArrivalHeaderPresenter.cpp in Sources */,
+				A5E0F19C1988C4200017F442 /* BreadCrumb.cpp in Sources */,
+				A5E0F1AC1988C4200017F442 /* NavigationEndTripState.cpp in Sources */,
+				A5E0F1701988C4200017F442 /* NoGPSPresenter.cpp in Sources */,
+				A5E0F19A1988C4200017F442 /* TripOverviewHeaderPresenter.cpp in Sources */,
+				A53D4BBE19A4A96800F98D41 /* AACPlayer.cpp in Sources */,
+				A5E0F1841988C4200017F442 /* RouteSelectHeaderPresenter.cpp in Sources */,
+				A5E0F1B81988C4200017F442 /* PedestrianNavigationListState.cpp in Sources */,
+				A5E0F1471988C4200017F442 /* NKUIController.cpp in Sources */,
+				A5E0F1C21988C4200017F442 /* RTSListState.cpp in Sources */,
+				9AF80B881A3065F900D03E70 /* TrafficAheadPresenter.cpp in Sources */,
+				A5E0F1CE1988C4200017F442 /* TripOverviewUnlockedState.cpp in Sources */,
+				A5E0F1881988C4200017F442 /* RouteSelectListPresenter.cpp in Sources */,
+				A5E0F1CA1988C4200017F442 /* StartingNavigationState.cpp in Sources */,
+				A5E0F1781988C4200017F442 /* PresenterBase.cpp in Sources */,
+				A5E0F1A61988C4200017F442 /* EnhancedStartupState.cpp in Sources */,
+				A5E0F1A41988C4200017F442 /* DetourUnlockedState.cpp in Sources */,
+				A5E0F16E1988C4200017F442 /* NavigationListPresenter.cpp in Sources */,
+				A5E0F1821988C4200017F442 /* RouteSelectBubblePresenter.cpp in Sources */,
+				A5E0F1591988C4200017F442 /* EndTripStatusBarPresenter.cpp in Sources */,
+				A5E0F1A81988C4200017F442 /* EnhancedStartupUnlockedState.cpp in Sources */,
+				A5E0F18C1988C4200017F442 /* RouteselectFooterPresenter.cpp in Sources */,
+				A5E0F1651988C4200017F442 /* MapPresenter.cpp in Sources */,
+				A5E0F16C1988C4200017F442 /* NavigationHeaderPresenter.cpp in Sources */,
+				A5E0F1551988C4200017F442 /* DetourFooterPresenter.cpp in Sources */,
+				A5E0F14B1988C4200017F442 /* AnnouncementPresenter.cpp in Sources */,
+				A5E0F15F1988C4200017F442 /* FooterPresenterBase.cpp in Sources */,
+				A5E0F1531988C4200017F442 /* CurrentRoadPresenter.cpp in Sources */,
+				A5E0F1901988C4200017F442 /* SpeedLimitPresenter.cpp in Sources */,
+				A5E0F1B41988C4200017F442 /* NavigationState.cpp in Sources */,
+				A5E0F1CC1988C4200017F442 /* TripOverviewState.cpp in Sources */,
+				A53D4BC419A4A96800F98D41 /* GPSInterpolator.cpp in Sources */,
+				A5E0F1AA1988C4200017F442 /* NKUIState.cpp in Sources */,
+				A5E0F16A1988C4200017F442 /* NavigationFooterPresenter.cpp in Sources */,
+				A5E0F1A21988C4200017F442 /* DetourState.cpp in Sources */,
+				A5E0F1921988C4200017F442 /* StackManeuverPresenter.cpp in Sources */,
+				A5E0F1461988C4200017F442 /* NKUIContext.cpp in Sources */,
+				A5E0F17C1988C4200017F442 /* RecalcOnCallTextPresenter.cpp in Sources */,
+				A5E0F1BE1988C4200017F442 /* PedestrianTripOverviewState.cpp in Sources */,
+				A5E0F17E1988C4200017F442 /* RetryPresenter.cpp in Sources */,
+				CE6B1D0119C1796300755236 /* PreservedAudioAnnouncement.cpp in Sources */,
+				A5E0F1981988C4200017F442 /* StopNavigationPresenter.cpp in Sources */,
+				A5E0F1B61988C4200017F442 /* NavigationUnlockedState.cpp in Sources */,
+				A5E0F1941988C4200017F442 /* StartingNavFooterPresenter.cpp in Sources */,
+				A5E0F1C01988C4200017F442 /* PedestrianTripOverviewUnlockedState.cpp in Sources */,
+				A5E0F1511988C4200017F442 /* BackgroundPresenter.cpp in Sources */,
+				A5E0F18E1988C4200017F442 /* SARPresenter.cpp in Sources */,
+				A5E0F1801988C4200017F442 /* RouteRequestFooterPresenter.cpp in Sources */,
+				A5E0F1BA1988C4200017F442 /* PedestrianNavigationState.cpp in Sources */,
+				A53D4BC719A4A96800F98D41 /* TTSPlayer.cpp in Sources */,
+				A5E0F1C81988C4200017F442 /* RequestNavigationState.cpp in Sources */,
+				A5E0F1C41988C4200017F442 /* RTSState.cpp in Sources */,
+				A5E0F1B01988C4200017F442 /* NavigationSARState.cpp in Sources */,
+				A5E0F1611988C4200017F442 /* LaneGuidancePresenter.cpp in Sources */,
+				A5E0F1481988C4200017F442 /* NKUIWidgetLayoutConfig.cpp in Sources */,
+				A5E0F17A1988C4200017F442 /* PresenterManager.cpp in Sources */,
+				A5E0F14D1988C4200017F442 /* ArrivalFooterPresenter.cpp in Sources */,
+				A5E0F1571988C4200017F442 /* DetourHeaderPresenter.cpp in Sources */,
+				A5E0F1861988C4200017F442 /* RouteSelectInformation.cpp in Sources */,
+				A5E0F1C61988C4200017F442 /* RTSUnlockedState.cpp in Sources */,
+				A53D4BC019A4A96800F98D41 /* AudioPlayer.cpp in Sources */,
+				A5E0F1741988C4200017F442 /* PedestrianListPresenter.cpp in Sources */,
+				A5E0F15B1988C4200017F442 /* EnhancedNavStartupNotifyPresenter.cpp in Sources */,
+				A5E0F1631988C4200017F442 /* MapPrefetchPresenter.cpp in Sources */,
+				A53D4BC619A4A96800F98D41 /* NKUIDebug.cpp in Sources */,
+				A5E0F1AE1988C4200017F442 /* NavigationListState.cpp in Sources */,
+				A53D4BC219A4A96800F98D41 /* FormatController.cpp in Sources */,
+				A5E0F1B21988C4200017F442 /* NavigationSARUnlockedState.cpp in Sources */,
+				A5E0F1681988C4200017F442 /* MiniMapPresenter.cpp in Sources */,
+				A5E0F18A1988C4200017F442 /* RouteSelectStatusBarPresenter.cpp in Sources */,
+				A5E0F1721988C4200017F442 /* OverflowMenuPresenter.cpp in Sources */,
+				A5E0F1A01988C4200017F442 /* DetourListState.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				BUILD_VARIANTS = normal;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/nav.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE_BUILD,
+					USE_NB_TILE_OBJECT,
+					_DEBUG,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = navui;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/src/posix/pal $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/tinyxml";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				BUILD_VARIANTS = normal;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				DSTROOT = /tmp/nav.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE_BUILD,
+					USE_NB_TILE_OBJECT,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = navui;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/src/posix/pal $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../abpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include $(PROJECT_DIR)/../../../../nav/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/tinyxml";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected",
+					"$(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "navui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "navui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

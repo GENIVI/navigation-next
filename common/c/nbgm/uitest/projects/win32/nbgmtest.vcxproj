@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1693DE09-5BEF-4382-8778-83F928187E50}</ProjectGuid>
+    <RootNamespace>nbgmtest</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbgmtest.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbgmtest.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbgmtest.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbgmtest.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>res;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d9.lib;glew32.lib;libpng.lib;libjpeg.lib;libjpeg_turbo.lib;zlib.lib;freetype.lib;nbpal.lib;nbre.lib;nbgm.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\..\nbpal\$(NIM_BRANCH)\output\win32\DebugStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\output\win32\DebugStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\DirectX-2010-June\lib\x86;$(SolutionDir)..\nbre\output\win32\$(Configuration);$(SolutionDir)..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+mkdir $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\sky_texture  $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+xcopy /Y /E $(SolutionDir)..\nbgmmain\resources\runtime  $(TargetDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>res;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d9.lib;glew32.lib;libpng.lib;libjpeg.lib;libjpeg_turbo.lib;zlib.lib;freetype.lib;nbpal.lib;nbre.lib;nbgm.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\..\nbpal\$(NIM_BRANCH)\output\win32\DebugStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\output\win32\DebugStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\DirectX-2010-June\lib\x86;$(SolutionDir)..\nbre\output\win32\$(Configuration);$(SolutionDir)..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+mkdir $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\sky_texture  $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+xcopy /Y /E $(SolutionDir)..\nbgmmain\resources\runtime  $(TargetDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>res;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glu32.lib;libpng.lib;zlib.lib;freetype.lib;nbpal.lib;d3d9.lib;nbre.lib;nbgmmanager.lib;nbgm.lib;nbred3d9renderpal.lib;nbreglrenderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\..\thirdparty\feature_130313_map3d_rel2_1\DirectX-2010-June\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+xcopy /Y /E $(SolutionDir)\res\mapdata  $(TargetDir)
+copy /Y $(NIMNBIPAL_BIN)\..\Release\nbpal17.dll $(TargetDir)nbpal17.dll
+mkdir $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\avatar_texture  $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\sky_texture  $(TargetDir)\TEXTURE
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>res;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>res;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d9.lib;glew32.lib;libpng.lib;libjpeg.lib;libjpeg_turbo.lib;zlib.lib;freetype.lib;nbpal.lib;nbre.lib;nbgm.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\..\nbpal\$(NIM_BRANCH)\output\win32\ReleaseStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\output\win32\ReleaseStatic;$(SolutionDir)..\..\..\thirdparty\$(NIM_BRANCH)\DirectX-2010-June\lib\x86;$(SolutionDir)..\nbre\output\win32\$(Configuration);$(SolutionDir)..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /E $(SolutionDir)\res\texture  $(TargetDir)
+xcopy /Y /E $(SolutionDir)\res\mapdata  $(TargetDir)
+copy /Y $(NIMNBIPAL_BIN)\..\Release\nbpal17.dll $(TargetDir)nbpal17.dll
+mkdir $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\avatar_texture  $(TargetDir)\TEXTURE
+xcopy /Y /E $(SolutionDir)\res\sky_texture  $(TargetDir)\TEXTURE
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\CameraController.cpp" />
+    <ClCompile Include="..\..\src\D3D9View.cpp" />
+    <ClCompile Include="..\..\src\DlgCameraSetting.cpp" />
+    <ClCompile Include="..\..\src\gpsprovider.cpp" />
+    <ClCompile Include="..\..\src\HitTestView.cpp" />
+    <ClCompile Include="..\..\src\nbgmrendercontext32.cpp" />
+    <ClCompile Include="..\..\src\nbgmtest.cpp" />
+    <ClCompile Include="..\..\src\NBGMTestMainFrame.cpp" />
+    <ClCompile Include="..\..\src\NBGMTestMainView.cpp" />
+    <ClCompile Include="..\..\src\NBGMTestUtilities.cpp" />
+    <ClCompile Include="..\..\src\NBGMTestView.cpp" />
+    <ClCompile Include="..\..\src\OpenGLView.cpp" />
+    <ClCompile Include="..\..\src\RenderSystemDlg.cpp" />
+    <ClCompile Include="..\..\src\stdafx.cpp" />
+    <ClCompile Include="..\..\src\TestBillboardView.cpp" />
+    <ClCompile Include="..\..\src\TestCameraControllerView.cpp" />
+    <ClCompile Include="..\..\src\TestCameraView.cpp" />
+    <ClCompile Include="..\..\src\TestCubeTextureView.cpp" />
+    <ClCompile Include="..\..\src\TestD3D9Pal.cpp" />
+    <ClCompile Include="..\..\src\TestGLPal.cpp" />
+    <ClCompile Include="..\..\src\TestLightView.cpp" />
+    <ClCompile Include="..\..\src\TestMapView.cpp" />
+    <ClCompile Include="..\..\src\TestMeshView.cpp" />
+    <ClCompile Include="..\..\src\TestNavRouteLayerView.cpp" />
+    <ClCompile Include="..\..\src\TestNavSplineLayerView.cpp" />
+    <ClCompile Include="..\..\src\TestNavVectorView.cpp" />
+    <ClCompile Include="..\..\src\TestPinLayerView.cpp" />
+    <ClCompile Include="..\..\src\TestRenderEnginelView.cpp" />
+    <ClCompile Include="..\..\src\TestRenderTargetView.cpp" />
+    <ClCompile Include="..\..\src\TestSkyView.cpp" />
+    <ClCompile Include="..\..\src\TestTexture.cpp" />
+    <ClCompile Include="..\..\src\TestVectorMapView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\CameraController.h" />
+    <ClInclude Include="..\..\include\D3D9View.h" />
+    <ClInclude Include="..\..\include\gpsprovider.h" />
+    <ClInclude Include="..\..\include\HitTestView.h" />
+    <ClInclude Include="..\..\include\nbgmrendercontext32.h" />
+    <ClInclude Include="..\..\include\nbgmtest.h" />
+    <ClInclude Include="..\..\include\NBGMTestMainFrame.h" />
+    <ClInclude Include="..\..\include\NBGMTestMainView.h" />
+    <ClInclude Include="..\..\include\NBGMTestUtilities.h" />
+    <ClInclude Include="..\..\include\NBGMTestView.h" />
+    <ClInclude Include="..\..\include\OpenGLView.h" />
+    <ClInclude Include="..\..\include\RenderSystemDlg.h" />
+    <ClInclude Include="..\..\include\stdafx.h" />
+    <ClInclude Include="..\..\include\Test3DBuildingLoad.h" />
+    <ClInclude Include="..\..\include\TestBillboardView.h" />
+    <ClInclude Include="..\..\include\TestCameraControllerView.h" />
+    <ClInclude Include="..\..\include\TestCameraView.h" />
+    <ClInclude Include="..\..\include\TestCubeTextureView.h" />
+    <ClInclude Include="..\..\include\TestD3D9Pal.h" />
+    <ClInclude Include="..\..\include\TestGLPal.h" />
+    <ClInclude Include="..\..\include\TestLightView.h" />
+    <ClInclude Include="..\..\include\TestMapView.h" />
+    <ClInclude Include="..\..\include\TestMeshView.h" />
+    <ClInclude Include="..\..\include\TestNavRouteLayerView.h" />
+    <ClInclude Include="..\..\include\TestNavSplineLayerView.h" />
+    <ClInclude Include="..\..\include\TestPinLayerView.h" />
+    <ClInclude Include="..\..\include\TestRenderEnginelView.h" />
+    <ClInclude Include="..\..\include\TestRenderTargetView.h" />
+    <ClInclude Include="..\..\include\TestSkyView.h" />
+    <ClInclude Include="..\..\include\TestTexture.h" />
+    <ClInclude Include="..\..\include\TestVectorAreaView.h" />
+    <ClInclude Include="..\..\include\TestVectorMapView.h" />
+    <ClInclude Include="res\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\nbgmtest.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\nbgmtest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\projects\win32\nbgmmain\nbgm.vcxproj">
+      <Project>{024224e3-6641-493a-989a-690c9d4d26ea}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\projects\win32\nbgmmain\nbgmmanager.vcxproj">
+      <Project>{f055e2ad-773f-4ee9-87c5-81d62da72190}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\projects\win32\nbre\nbre.vcxproj">
+      <Project>{da8b658d-ffcc-4480-a580-496afc339100}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\projects\win32\rendersystem\nbred3d9renderpal.vcxproj">
+      <Project>{825ba61c-7500-4b2b-868d-4d33d6b68ba6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="res\nbgmtest.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

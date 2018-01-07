@@ -1,0 +1,12 @@
+#ifndef QT_QTAPPMANINSTALLER_MODULE_H
+#define QT_QTAPPMANINSTALLER_MODULE_H
+#include <QtAppManInstaller/QtAppManInstallerDepends>
+#include "applicationinstaller.h"
+#include "asynchronoustask.h"
+#include "deinstallationtask.h"
+#include "installationlocation.h"
+#include "installationtask.h"
+#include "scopeutilities.h"
+#include "sudo.h"
+#include "qtappmaninstallerversion.h"
+#endif

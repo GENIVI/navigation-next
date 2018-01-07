@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DRender
+Description: Qt 3DRender module
+Version: 5.8.0
+Libs: -L${libdir} -lQt53DRender 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt53DCore -L/opt/Qt5.8.0/lib -lQt5Gui -lQt5Network -lQt5Core -lpthread -lQt5OpenGLExtensions -L/opt/Qt5.8.0/lib -lQt5Gui -lQt5Concurrent -lQt5Core -lpthread -lGLESv2  
+Cflags: -I${includedir}/Qt3DRender -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore
+

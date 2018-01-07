@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MATERIAL>
+    <document>
+        <contributor>
+            <author>TCS</author>
+            <copyright>Copyright 2012, TCS</copyright>
+            <source_data>PIN Material</source_data>
+        </contributor>
+        <created>2012-08-13T15:00:00.0Z</created>
+        <modified></modified>
+        <revision>1.0.0</revision>
+    </document>
+    <library_colors>
+        <color id="pin-interior-clr-default"> D8216726 </color>
+        <color id="full-transparent-clr"> 0 </color>
+    </library_colors>
+    <library_images>
+    </library_images>
+    <library_fonts>
+    </library_fonts>
+    <library_materials count="6">
+        <!-- Legacy Pin, for PT_COMMON -->
+        <material id = "common-pin" name="Common Pin" index="0">
+		    <pin unselected_callout_xoffset="34" unselected_callout_yoffset="100"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="10"
+                 unselected_circle_interior_color="pin-interior-clr-default"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="34" selected_callout_yoffset="100"
+                 selected_bubble_xoffset="50" selected_bubble_yoffset="10"
+                 selected_circle_interior_color="pin-interior-clr-default"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+
+                <selected_image url="selected_pin.png" />
+                <unselected_image url="unselected_pin.png" />
+			</pin>
+        </material>
+        <!-- Start flag, for navigation -->
+        <material id="start-flag" name="Start flag" index="1">
+            <pin unselected_callout_xoffset="34" unselected_callout_yoffset="100"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="10"
+                 unselected_circle_interior_color="full-transparent-clr"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="34" selected_callout_yoffset="100"
+                 selected_bubble_xoffset="50" selected_bubble_yoffset="10"
+                 selected_circle_interior_color="full-transparent-clr"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+                <selected_image url="start_flag.png" />
+                <unselected_image url="start_flag.png" />
+			</pin>
+        </material>
+        <!-- End flag, for navigation -->
+		<material id="end-flag" name="End flag" index="2">
+            <pin unselected_callout_xoffset="34" unselected_callout_yoffset="100"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="10"
+                 unselected_circle_interior_color="full-transparent-clr"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="34" selected_callout_yoffset="100"
+                 selected_bubble_xoffset="50" selected_bubble_yoffset="10"
+                 selected_circle_interior_color="full-transparent-clr"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+                <selected_image url="end_flag.png" />
+                <unselected_image url="end_flag.png" />
+			</pin>
+        </material>
+        <!-- Incident, Minor -->
+        <material id="incident-yellow" name="Incident yellow" index="3">
+            <pin unselected_callout_xoffset="50" unselected_callout_yoffset="50"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="0"
+                 unselected_circle_interior_color="full-transparent-clr"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="50" selected_callout_yoffset="50"
+                 selected_bubble_xoffset="50"  selected_bubble_yoffset="0"
+                 selected_circle_interior_color="full-transparent-clr"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+                <selected_image url="incident_yellow.png" />
+                <unselected_image url="incident_yellow.png" />
+			</pin>
+        </material>
+        <!-- Incident, Major -->
+		<material id="incident-orange" name="Incident orange" index="4">
+            <pin unselected_callout_xoffset="50" unselected_callout_yoffset="50"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="0"
+                 unselected_circle_interior_color="full-transparent-clr"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="50" selected_callout_yoffset="50"
+                 selected_bubble_xoffset="50"  selected_bubble_yoffset="0"
+                 selected_circle_interior_color="full-transparent-clr"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+                <selected_image url="incident_orange.png" />
+                <unselected_image url="incident_orange.png" />
+			</pin>
+        </material>
+        <!-- Incident, severe. -->
+		<material id="incident-red" name="Incident red" index="5">
+            <pin unselected_callout_xoffset="50" unselected_callout_yoffset="50"
+                 unselected_bubble_xoffset="50" unselected_bubble_yoffset="0"
+                 unselected_circle_interior_color="full-transparent-clr"
+                 unselected_biton_color="full-transparent-clr"
+                 unselected_bitoff_color="full-transparent-clr"
+                 unselected_image_width="32"
+                 unselected_image_height="32"
+
+                 selected_callout_xoffset="50" selected_callout_yoffset="50"
+                 selected_bubble_xoffset="50"  selected_bubble_yoffset="0"
+                 selected_circle_interior_color="full-transparent-clr"
+                 selected_biton_color="full-transparent-clr"
+                 selected_bitoff_color="full-transparent-clr"
+                 selected_image_width="32"
+                 selected_image_height="32"
+
+                 pattern="0"
+                 circle_outline_width="0">
+                <selected_image url="incident_red.png" />
+                <unselected_image url="incident_red.png" />
+			</pin>
+        </material>
+    </library_materials>
+    <library_binds>
+    </library_binds>
+    <library_configs>
+        <building id="0" name="building-adjuestment-dat" reduction="0.3" constant="3" />
+        <building id="1" name="landmark-adjuestment-dat" reduction="0.7" constant="0" />
+    </library_configs>
+</MATERIAL>

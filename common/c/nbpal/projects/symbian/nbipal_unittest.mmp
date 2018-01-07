@@ -1,0 +1,38 @@
+TARGET		  		nbipal_unittest.exe
+TARGETTYPE	  		EXE
+UID					0 0xA002AAF1
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+MACRO DEBUG_LOG_ALL=1
+
+USERINCLUDE			..\..\src\unittests
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\cunit
+USERINCLUDE			\Epoc32\include\NIM\coretech\ArgTable
+
+
+SOURCEPATH			..\..\src\unittests
+SOURCE				main.c
+SOURCE				testclock.c
+SOURCE				testfile.c
+SOURCE				testnetwork.c
+SOURCE				teststdlib.c
+SOURCE				testtimer.c
+
+SOURCEPATH			..\..\src\unittests\symbian
+SOURCE				Event.cpp
+SOURCE				PlatformUtil.cpp
+SOURCE				TimerHandler.cpp
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+
+LIBRARY				cunit.lib
+
+LIBRARY				nbipal.lib

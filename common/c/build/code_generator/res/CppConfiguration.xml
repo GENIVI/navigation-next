@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languageTarget>
+	<!-- template type = type | protocol | handler | parameter | information -->
+	<templates templateRoot="code_generator/res/template/cpp/" outputRoot="/">
+		<template outputPrefix ="NBProtocol" type="type" source="type/TypeH" extension="h"/>
+		<template outputPrefix ="NBProtocol" type="type" source="type/TypeCpp" extension="cpp"/>
+		<template outputPrefix ="NBProtocol" type="type" source="type/TypeSerializerH"
+			outputSuffix="Serializer" extension="h"/>
+		<template outputPrefix ="NBProtocol" type="type" source="type/TypeSerializerCpp"
+			outputSuffix="Serializer" extension="cpp"/>
+		<template outputPrefix ="NBProtocol" type="protocol" source="protocol/Protocol"
+			outputSuffix="Protocol" extension="h" />
+		<template outputPrefix="Tps" type="protocol" source="protocol/TpsProtocol"
+			outputSuffix="Protocol" extension="h" />
+		<template outputPrefix="Tps" type="protocol" source="protocol/TpsProtocolCpp"
+			outputSuffix="Protocol" extension="cpp" />
+		<template outputPrefix ="Tps" type="handler" source="handler/Handler"
+			outputSuffix="Handler" extension="h" />
+		<template outputPrefix ="Tps" type="handler" source="handler/HandlerCpp"
+			outputSuffix="Handler" extension="cpp" />
+	</templates>
+	<typeMap>
+		<map source="String" target="shared_ptr&lt;std::string&gt;"/>
+		<map source="double" target="double"/>
+		<map source="long" target="long"/> <!-- long type should not be used as target, since its size is platform dependent. -->
+		<map source="int" target="int32"/>
+		<map source="unsigned int" target="uint32"/>
+		<map source="byte" target="byte"/>
+		<map source="float" target="float"/>
+		<map source="boolean" target="bool"/>
+		<map source="uint32" target="uint32"/>
+		<map source="uint" target="uint32"/>
+		<map source="bytepointer" target="byte*"/>
+		<map source="uint64" target="uint64"/>
+	</typeMap>
+</languageTarget>

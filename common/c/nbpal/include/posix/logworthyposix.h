@@ -1,0 +1,128 @@
+/*
+Copyright (c) 2018, TeleCommunication Systems, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+   * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the TeleCommunication Systems, Inc., nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ARE
+DISCLAIMED. IN NO EVENT SHALL TELECOMMUNICATION SYSTEMS, INC.BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * (C) Copyright 2013 by TeleCommunication Systems, Inc.
+ *
+ * The information contained herein is confidential, proprietary
+ * to TeleCommunication Systems, Inc., and considered a trade secret
+ * as defined in section 499C of the penal code of the State of
+ * California. Use of this information by anyone other than
+ * authorized employees of TeleCommunication Systems is granted only
+ * under a written non-disclosure agreement, expressly prescribing
+ * the scope and manner of such use.
+ *
+ */
+
+#ifndef LOGWORTHYPOSIX_H
+#define LOGWORTHYPOSIX_H
+
+/*LW event type format:
+high 16 bit--subEvent id, it report to logworthy in the first int detail
+low  16 bit--Event type , it was registered to rim and logworthy would report the event type*/
+#define LW_EVENT_FORMAT(LW_Event, SubEvent) (LW_Event  |SubEvent<<16)
+
+#define LW_EVENT_3D_EGL(SubEvent) (LW_EVENT_FORMAT(PAL_LW_EVENT_MAPS_APP_3D_NAVIGATION_VIEW_INIT_FAILED, SubEvent))
+
+#define LW_EVENT_RENDERENGINE(SubEvent) (LW_EVENT_FORMAT(PAL_LW_EVENT_MAPS_APP_MAP_RENDERING_FAILURE,SubEvent))
+
+#define LW_EVENT_APPLAUNCH(SubEvent) (LW_EVENT_FORMAT(PAL_LW_EVENT_MAPS_APP_LAUNCH_FAILED,SubEvent))
+
+#define LW_EVENT_FILESET(SubEvent) (LW_EVENT_FORMAT(PAL_LW_EVENT_MAPS_APP_LANGUAGE_FILES_DOWNLOAD_FAILED,SubEvent))
+
+#define LW_EVENT_UI_QML(SubEvent) (LW_EVENT_FORMAT(PAL_LW_EVENT_MAPS_APP_UI_QML_FAILURE,SubEvent))
+
+typedef enum  {
+    RENDERENGINE_LW_ERROR_NONE = 0, 
+    RENDERENGINE_LW_ERROR_EGL_ERROR_MSG, 
+    RENDERENGINE_LW_ERROR_EGL_API_ERROR,
+    RENDERENGINE_LW_ERROR_EGL_NO_DISPLAY,
+    RENDERENGINE_LW_ERROR_EGL_INITIAL_ERROR,
+    RENDERENGINE_LW_ERROR_EGL_BIND_API_ERROR,
+    RENDERENGINE_LW_ERROR_EGL_CHOOSE_CONFIG_ERROR,
+    RENDERENGINE_LW_ERROR_EGL_NO_CONTEXT,
+    RENDERENGINE_LW_ERROR_CREATE_WINDOW_ERROR,
+    RENDERENGINE_LW_ERROR_SET_WINDOW_SIZE_ERROR,
+    RENDERENGINE_LW_ERROR_SET_WINDOW_FORMAT_ERROR,
+    RENDERENGINE_LW_ERROR_SET_WINDOW_USAGE_ERROR,
+    RENDERENGINE_LW_ERROR_GET_WINDOW_DISPLAY_ERROR,
+    RENDERENGINE_LW_ERROR_GET_DISPLAY_PROPERTY_ERROR,
+    RENDERENGINE_LW_ERROR_SET_WINDOW_BUFFER_SIZE_ERROR,
+    RENDERENGINE_LW_ERROR_CREATE_WINDOW_BUFFER_ERROR,
+    RENDERENGINE_LW_ERROR_CREATE_WINDOW_SURFACE_ERROR,
+    RENDERENGINE_LW_ERROR_MAKECURRENT_ERROR,
+    RENDERENGINE_LW_ERROR_SWAPINTERVAL_ERROR,
+    RENDERENGINE_LW_ERROR_RELEASECONTEXT_ERROR,
+    RENDERENGINE_LW_ERROR_DESTROYSURFACE_ERROR,
+    RENDERENGINE_LW_ERROR_EGLGETERR_ERROR,
+} RenderEngine_LW_Error;
+
+typedef enum  {
+    NAV_3D_EGL_LW_ERROR_NONE = 0, 
+    NAV_3D_EGL_LW_ERROR_EGL_API_ERROR, 
+    NAV_3D_EGL_LW_ERROR_EGL_NO_DISPLAY,
+    NAV_3D_EGL_LW_ERROR_EGL_INITIAL_ERROR,
+    NAV_3D_EGL_LW_ERROR_EGL_BIND_API_ERROR,
+    NAV_3D_EGL_LW_ERROR_EGL_CHOOSE_CONFIG_ERROR,
+    NAV_3D_EGL_LW_ERROR_EGL_NO_CONTEXT
+} NAV_3D_EGL_LW_Error;
+
+typedef enum  {
+    APP_LAUNCH_LW_ERROR_NONE = 0, 
+    APP_LAUNCH_LW_ERROR_CONTROLLER_MANAGER_CREATE_FAIL, 
+    APP_LAUNCH_LW_ERROR_SHOW_UI_FAIL,
+} APP_LAUNCH_LW_Error;
+
+typedef enum  {
+    FILESET_LW_ERROR_NONE = 0, 
+    FILESET_LW_ERROR_STATUS_GET_FAIL, 
+    FILESET_LW_ERROR_GET_FAIL,
+} FILESET_LW_Error;
+
+typedef enum  {
+    UI_QML_LW_ERROR_NONE = 0, 
+    UI_QML_LW_ERROR_QMLDOCUMENT_CREATE_FAIL, 
+    UI_QML_LW_ERROR_PROPERTY_READ_FAIL,
+    UI_QML_LW_ERROR_INIT_FAIL,
+} UI_QML_LW_Error;
+
+typedef enum  {
+    PAL_LW_EVENT_MAPS_APP_BEGIN = 0x700,
+    PAL_LW_EVENT_MAPS_APP_UI_ALERT_NULL,
+    PAL_LW_EVENT_MAPS_APP_LAUNCH_FAILED,
+    PAL_LW_EVENT_MAPS_APP_UNITS_CHANGE_FAILED,
+    PAL_LW_EVENT_MAPS_APP_LANGUAGE_FILES_DOWNLOAD_FAILED,
+    PAL_LW_EVENT_MAPS_APP_REGIONAL_DISTANCE_FORMAT_ERROR,
+    PAL_LW_EVENT_MAPS_APP_3D_NAVIGATION_VIEW_INIT_FAILED,
+    PAL_LW_EVENT_MAPS_APP_UI_QML_FAILURE,
+    PAL_LW_EVENT_MAPS_APP_LOCATION_SERVICES_SETTING_CORRUPT,
+    PAL_LW_EVENT_MAPS_APP_MAP_RENDERING_FAILURE,
+    PAL_LW_EVENT_MAPS_APP_UI_TASKQUEUEMANAGER_FAILURE,
+    PAL_LW_EVENT_MAPS_APP_END = 0x7FF,
+} PAL_LW_EVENT_MAPS;
+
+#endif //LOGWORTHYPOSIX_H

@@ -1,0 +1,24 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+ArgTable.mmp
+CUnit.mmp
+
+PRJ_EXPORTS
+..\..\ArgTable\include\argtable2.h			\Epoc32\include\NIM\CoreTech\ArgTable\argtable2.h
+..\..\ArgTable\include\getopt.h			\Epoc32\include\NIM\CoreTech\ArgTable\getopt.h
+
+..\..\CUnit\include\Automated.h			\Epoc32\include\NIM\CoreTech\CUnit\Automated.h
+..\..\CUnit\include\Basic.h			\Epoc32\include\NIM\CoreTech\CUnit\Basic.h
+..\..\CUnit\include\Console.h			\Epoc32\include\NIM\CoreTech\CUnit\Console.h
+..\..\CUnit\include\CUCurses.h			\Epoc32\include\NIM\CoreTech\CUnit\CUCurses.h
+..\..\CUnit\include\CUError.h			\Epoc32\include\NIM\CoreTech\CUnit\CUError.h
+..\..\CUnit\include\CUnit.h			\Epoc32\include\NIM\CoreTech\CUnit\CUnit.h
+..\..\CUnit\include\MyMem.h			\Epoc32\include\NIM\CoreTech\CUnit\MyMem.h
+..\..\CUnit\include\TestDB.h			\Epoc32\include\NIM\CoreTech\CUnit\TestDB.h
+..\..\CUnit\include\TestRun.h			\Epoc32\include\NIM\CoreTech\CUnit\TestRun.h
+..\..\CUnit\include\Util.h			\Epoc32\include\NIM\CoreTech\CUnit\Util.h

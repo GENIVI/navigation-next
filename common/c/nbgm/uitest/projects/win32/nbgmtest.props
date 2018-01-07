@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NIM_BRANCH>feature_140523_hybrid_phase2</NIM_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>nbgm</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+  ;$(ProjectDir)..\..\..\uitest\include
+  ;$(ProjectDir)..\..\..\nbgmmain\include\protected
+  ;$(ProjectDir)..\..\..\nbgmmain\include\private
+  ;$(ProjectDir)..\..\..\nbgmmain\include\win32
+  ;$(ProjectDir)..\..\..\nbgmmain\include
+  ;$(ProjectDir)..\..\..\nbre\include\protected
+  ;$(ProjectDir)..\..\..\nbre\include\private
+  ;$(ProjectDir)..\..\..\nbre\include\win32
+  ;$(ProjectDir)..\..\..\nbre\include\debug
+  ;$(ProjectDir)..\..\..\nbre\include
+  ;$(ProjectDir)..\..\..\rendersystem\d3d9\include
+  ;$(ProjectDir)..\..\..\rendersystem\gl\include
+  ;$(ProjectDir)..\..\..\rendersystem\gles\include
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\freetype-2.4.4\include
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\glew-1.7.0\include
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\lp150b15
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\zlib
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\libjpeg\include
+  ;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\libjpeg_turbo\include
+  ;$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_BRANCH)\include
+  ;$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_BRANCH)\include\win32
+  ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NBGM_IMPORT;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100;4115;4127;4201;4214;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_BRANCH">
+      <Value>$(NIM_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

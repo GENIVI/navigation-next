@@ -1,0 +1,14 @@
+{
+  "device": "drm-nvdc",
+  "separateScreens": true,
+  "outputs": [
+    {
+      "name": "HDMI1",
+      "virtualIndex": 0,
+      "physicalWidth": 1080,
+      "physicalHeight": 1920,
+      "virtualPos": "0, 0"
+    }
+  ]
+}
+

@@ -1,0 +1,75 @@
+/*
+ * C++ Library file typeinfo
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 91768 $
+ * Checkin $Date: 2005-08-10 19:58:48 +0100 (Wed, 10 Aug 2005) $
+ * Revising $Author: drodgman $
+ */
+
+/* Edison Design Group, 1995-2005. */
+/*
+typeinfo.h -- Include file for type information (18.5.1)
+*/
+#ifndef _TYPEINFO
+#define _TYPEINFO
+
+#ifndef _EXCEPTION
+#include <exception>
+#endif /* _EXCEPTION */
+
+namespace std {
+
+/* The following pragma is used so that the compiler knows that this definition
+   of type_info is the one that corresponds to the type returned by typeid. */
+#pragma define_type_info
+  class type_info {
+  public:
+    virtual ~type_info();
+    bool operator==(const type_info&) const;
+    bool operator!=(const type_info&) const;
+    bool before(const type_info&) const;
+    const char* name() const;
+  private:
+    static void operator delete(void*) { /* nothing */ }
+    type_info& operator=(const type_info&);  // Not actually defined
+#if 0
+#else /* 0 */
+  protected:
+    // Protected instead of private to suppress the "no accessible
+    // constructor" warning
+#endif /* 0 */
+    type_info(const type_info&);  // Not actually defined
+  private:
+    const char *__type_name;
+  };
+
+  class bad_cast : public exception {
+  public:
+    bad_cast() throw();
+    bad_cast(const bad_cast&) throw();
+    bad_cast& operator=(const bad_cast&) throw();
+    virtual ~bad_cast() throw();
+    virtual const char* what() const throw();
+  };
+
+  class bad_typeid : public exception {
+  public:
+    bad_typeid() throw();
+    bad_typeid(const bad_typeid&) throw();
+    bad_typeid& operator=(const bad_typeid&) throw();
+    virtual ~bad_typeid() throw();
+    virtual const char* what() const throw();
+  };
+
+}  /* namespace std */
+
+#ifdef __EDG_IMPLICIT_USING_STD
+/* Implicitly include a using directive for the STD namespace when this
+   preprocessing flag is TRUE. */
+using namespace ::std;
+#endif /* ifdef __EDG_IMPLICIT_USING_STD */
+
+#endif /* _TYPEINFO */

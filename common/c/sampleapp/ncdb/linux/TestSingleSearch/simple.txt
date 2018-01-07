@@ -1,0 +1,38 @@
+# Search Type | Search String | Search Location Lat | Search Location Long | Radius | NumberOfResults | PageId | Phone | Main Type | Sub Type |
+1|300 lake side drive oakland ca|33.567815|-117.724194|||
+1|6 liberty aliso viejo|33.567815|-117.724194|||
+1|9 legacy way rancho santa margarita ca|33.567815|-117.724194|||
+1|1 longview dr diamond bar|33.567815|-117.724194|||
+1|longview dr diamond bar|33.567815|-117.724194|||
+1|oakland ca|33.567815|-117.724194|||
+1|LAX|33.567815|-117.724194|||
+1|92656|33.567815|-117.724194|||
+# Poi Specific search from Single Search Interface.
+# Search by only name
+1|Starbucks|37.809916|-122.262726||5|1
+1|Starbucks|37.809916|-122.262726||5|2
+1|Shell|37.809916|-122.262726|5|1|||||
+# Search by all
+1|Starbucks|37.809916|-122.262726||10|1|5102850559|0|9|
+# Poi should be executed.
+1|thai bite|33.567815|-117.724194|10.0|25|1|
+1|walmart|37.809916|-122.262726||5|1
+1|target|37.809916|-122.262726||5|1
+1|24 hour fitness|37.809916|-122.262726||5|1
+1|SNA|33.567815|-117.724194|||
+1|pizza|33.567815|-117.724194|||
+1|California Pizza Kitchen |33.567815|-117.724194|||
+1|liberty & aliso creek aliso viejo|33.567815|-117.724194|||
+1|aliso viejo ca|33.567815|-117.724194|||
+1|aliso viejo|33.567815|-117.724194|||
+1|6 liberty|33.567815|-117.724194|||
+1|liberty|33.567815|-117.724194|||
+1|aliso creek rd|33.567815|-117.724194|||
+1|seaview|33.567815|-117.724194|||
+1|pediatrics|33.567815|-117.724194|||
+1|seaview pediatrics|33.567815|-117.724194|||
+1|dental|33.567815|-117.724194|||
+1|barnes|33.567815|-117.724194|||
+1|booksellers|33.567815|-117.724194||5|1
+1|bite|33.567815|-117.724194||5|1
+1|thai|33.567815|-117.724194||5|1

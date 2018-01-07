@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Dashboard.qml</file>
+        <file>qml/DashboardFrame.qml</file>
+        <file>qml/CarModel.qml</file>
+        <file>qml/DashboardView.qml</file>
+    </qresource>
+</RCC>

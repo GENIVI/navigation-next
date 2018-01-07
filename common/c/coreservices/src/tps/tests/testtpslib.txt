@@ -1,0 +1,10 @@
+capabilities:
+  testcap1: yes
+  testcap2: no
+
+templates:
+ - test-element: []
+ - example-item: [name]
+ - example-item: [name, value]
+ - details: [a, b, c, d, e]
+ - details: [a, b, c, d]

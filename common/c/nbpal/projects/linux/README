@@ -1,0 +1,3 @@
+for build linux different cpu-arch version libs,please follow the following steps:
+1. TARGET=x86 && make                       //for arm or armhf ,use TARGET=arm/armhf
+2. if you build the lib in a script, you can export TARGET=x86 first ,and make 

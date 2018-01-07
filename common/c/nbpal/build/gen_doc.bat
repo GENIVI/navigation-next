@@ -1,0 +1,19 @@
+@ECHO OFF
+
+@set INTERFACE=%1
+@set PLATFORM=%2
+
+@set INC_DIR=%NIMNBIPAL_INC%
+
+@set TOOLS_PATH=%CORETECH_ROOT%\build\main\doxygen
+
+echo running gen_doc
+echo TOOLS %TOOLS_PATH%
+echo INC_DIR %INC_DIR%
+echo INTERFACE %INTERFACE%
+echo PLATFORM %PLATFORM%
+python %TOOLS_PATH%\gen_doc.py %TOOLS_PATH% %INC_DIR% "NBIPAL " %INTERFACE% %PLATFORM%
+
+@set INTERFACE=
+@set PLATFORM=
+@set INC_DIR=

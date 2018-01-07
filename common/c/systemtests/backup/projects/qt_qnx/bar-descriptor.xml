@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+<!-- BlackBerry Tablet OS application descriptor file.
+
+    Specifies parameters for identifying, installing, and launching native applications on BlackBerry Tablet OS.
+
+-->
+
+    <!-- A universally unique application identifier. Must be unique across all BlackBerry Tablet OS applications.
+         Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+    <id>com.example.systemtests</id>
+
+    <!-- The name that is displayed in the BlackBerry Tablet OS application installer. 
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <name>systemtests</name>
+    
+    <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+         Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+         An updated version of application must have a versionNumber value higher than the previous version. Required. -->
+    <versionNumber>1.0.0</versionNumber>
+
+    <!-- Fourth digit segment of the package version. First three segments are taken from the 
+         <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
+    <buildId>1</buildId>
+                 
+    <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+    <!-- <versionLabel></versionLabel> -->
+
+    <!-- Description, displayed in the BlackBerry Tablet OS application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <description>The systemtests application</description>
+
+    <!-- Copyright information. Optional. -->
+    <!-- <copyright></copyright> -->
+
+    <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
+    <author>Example Inc.</author>
+    
+    <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
+    <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
+   
+    <initialWindow>
+        <systemChrome>none</systemChrome>
+        <transparent>false</transparent>
+    </initialWindow>
+    
+<!--  The category where the application appears. Either core.games or core.media. -->
+    <category>core.games</category>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/navfileset/output" dest="../.."><include name="*.*" /></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/navfileset/output/voices">voices</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles" dest="../.."><include name="*.qcp" /></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles" dest="../.."><include name="*.csv" /></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/full_6liberty.wav">../../full_6liberty.wav</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles" dest="../.."><include name="*.gps" /></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles" dest="../.."><include name="*.png" /></asset>
+    <asset path="$(PROJECT_LOC)/../../../tpslib/compiled" dest="../.."></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/qalogs" dest="../.."></asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_config.ini">../../bt_config.ini</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_cat_dict.csv">../../bt_cat_dict.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_geo_in.csv">../../bt_geo_in.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_geo_in_freeform.csv">../../bt_geo_in_freeform.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_navigation_session_in.csv">../../bt_navigation_session_in.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_poi_in.csv">../../bt_poi_in.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_poi_in_category.csv">../../bt_poi_in_category.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_reverse_geocode_in.csv">../../bt_reverse_geocode_in.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_rgeo_in.csv">../../bt_rgeo_in.csv</asset>
+    <asset path="$(PROJECT_LOC)/../../../supportfiles/batchtool/bt_route_in.csv">../../bt_route_in.csv</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtGui.so" type="Qnx/Elf">lib/libQtGui.so.4</asset>
+    <asset path="icon.png">icon.png</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libGLESv1_CL.so" type="Qnx/Elf">lib/libGLESv1_CL.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libGLESv2.so" type="Qnx/Elf">lib/libGLESv2.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libglview.so" type="Qnx/Elf">lib/libglview.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtCore.so" type="Qnx/Elf">lib/libQtCore.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libGLESv1_CM.so" type="Qnx/Elf">lib/libGLESv1_CM.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libgoogleurl.so" type="Qnx/Elf">lib/libgoogleurl.so.0</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbb.so">lib/libbb.so</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbb.so.1">lib/libbb.so.1</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbdata.so">lib/libbbdata.so</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbdata.so.1">lib/libbbdata.so.1</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbdevice.so">lib/libbbdevice.so</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbdevice.so.1">lib/libbbdevice.so.1</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbplatform.so">lib/libbbplatform.so</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbplatform.so.1">lib/libbbplatform.so.1</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbsystem.so">lib/libbbsystem.so</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbbsystem.so.1">lib/libbbsystem.so.1</asset>
+    <asset path="${QNX_TARGET}/armle-v7/usr/lib/libbps.so">lib/libbps.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\libbbcascades.so" type="Qnx/Elf">lib/libbbcascades.so.1</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtDeclarative.so" type="Qnx/Elf">lib/libQtDeclarative.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtSql.so" type="Qnx/Elf">lib/libQtSql.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtSvg.so" type="Qnx/Elf">lib/libQtSvg.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtScript.so" type="Qnx/Elf">lib/libQtScript.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtNetwork.so" type="Qnx/Elf">lib/libQtNetwork.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtXml.so" type="Qnx/Elf">lib/libQtXml.so.4</asset>
+    <asset path="${QNX_TARGET}\${CPUVARDIR}\usr\lib\qt4\lib\libQtXmlPatterns.so" type="Qnx/Elf">lib/libQtXmlPatterns.so.4</asset>
+   
+    <configuration name="Default">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/systemtests" entry="true" type="Qnx/Elf">systemtests</asset>
+    </configuration>
+	
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/systemtests" entry="true" type="Qnx/Elf">systemtests</asset>
+	   <asset path="${MVC_SDK_ARM_LIB}/libRenderEngine3d.so" type="Qnx/Elf">lib/libRenderEngine3d.so</asset>
+    </configuration>
+    
+	<configuration name="Device-Release">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7/systemtests" entry="true" type="Qnx/Elf">systemtests</asset>
+	   <asset path="${MVC_SDK_ARM_LIB}/libRenderEngine3d.so" type="Qnx/Elf">lib/libRenderEngine3d.so</asset>
+    </configuration>
+    
+	<configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o-g/systemtests" entry="true" type="Qnx/Elf">systemtests</asset>
+	   <asset path="${MVC_SDK_X86_LIB}/libRenderEngine3d.so" type="Qnx/Elf">lib/libRenderEngine3d.so</asset>
+    </configuration>
+    
+	<configuration name="Simulator-Release">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o/systemtests" entry="true" type="Qnx/Elf">systemtests</asset>
+	   <asset path="${MVC_SDK_X86_LIB}/libRenderEngine3d.so" type="Qnx/Elf">lib/libRenderEngine3d.so</asset>
+    </configuration>
+    <!--  -->
+    <!--  The icon for the application, which should be 86x86. -->
+    <icon>
+        <image>icon.png</image>
+    </icon>
+    
+    <!--  The splash screen that will appear when your application is launching. Should be 1024x600. -->
+    <!-- <splashscreen></splashscreen> -->
+
+    <!-- Request permission to execute native code.  Required for native applications. -->
+    <permission system="true">run_native</permission>
+    <permission>access_shared</permission>
+    <permission>record_audio</permission>
+    <permission>read_geolocation</permission>
+    <permission>use_camera</permission>
+    <permission>access_internet</permission>
+    <permission>play_audio</permission>
+    <permission>post_notification</permission>
+    <permission>set_audio_volume</permission>
+    <permission>read_device_identifying_information</permission>
+    
+    <!--  The permissions requested by your application. -->
+    <!--  <action>access_shared</action> -->
+    <!--  <action>record_audio</action> -->
+    <!--  <action>read_geolocation</action> -->
+    <!--  <action>use_camera</action> -->
+    <!--  <action>access_internet</action> -->
+    <!--  <action>play_audio</action> -->
+    <!--  <action>post_notification</action> -->
+    <!--  <action>set_audio_volume</action> -->
+    <!--  <action>read_device_identifying_information</action> -->
+
+    <!-- Ensure that shared libraries in the package are found at run-time. -->
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+    
+</qnx>

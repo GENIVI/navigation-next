@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Detour.cpp" />
+    <ClCompile Include="..\..\src\NavAnalytics.cpp" />
+    <ClCompile Include="..\..\src\NavApiLaneInformation.cpp" />
+    <ClCompile Include="..\..\src\NavApiNavigation.cpp" />
+    <ClCompile Include="..\..\src\NavApiNavUtils.cpp" />
+    <ClCompile Include="..\..\src\NavApiPreferences.cpp" />
+    <ClCompile Include="..\..\src\NavApiRouteInformation.cpp" />
+    <ClCompile Include="..\..\src\NavApiRouteOptions.cpp" />
+    <ClCompile Include="..\..\src\NavApiRouteRequest.cpp" />
+    <ClCompile Include="..\..\src\NavApiRouteSummaryRequest.cpp" />
+    <ClCompile Include="..\..\src\NavApiSpecialRegionInformation.cpp" />
+    <ClCompile Include="..\..\src\NavApiSpeedLimitInformation.cpp" />
+    <ClCompile Include="..\..\src\NavApiTypes.cpp" />
+    <ClCompile Include="..\..\src\NavigationImpl.cpp" />
+    <ClCompile Include="..\..\src\Place.cpp" />
+    <ClCompile Include="..\..\src\Logger.cpp" />
+    <ClCompile Include="..\..\src\NavigationHelper.cpp" />
+    <ClCompile Include="..\..\src\NavigationImplNotifier.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\Logger.h" />
+    <ClInclude Include="..\..\include\NavApiLaneInformation.h" />
+    <ClInclude Include="..\..\include\NavApiListeners.h" />
+    <ClInclude Include="..\..\include\NavApiNavigation.h" />
+    <ClInclude Include="..\..\include\NavApiNavUtils.h" />
+    <ClInclude Include="..\..\include\NavApiPreferences.h" />
+    <ClInclude Include="..\..\include\NavApiRouteInformation.h" />
+    <ClInclude Include="..\..\include\NavApiRouteOptions.h" />
+    <ClInclude Include="..\..\include\NavApiRouteRequest.h" />
+    <ClInclude Include="..\..\include\NavApiRouteSummaryRequest.h" />
+    <ClInclude Include="..\..\include\NavApiSpecialRegionInformation.h" />
+    <ClInclude Include="..\..\include\NavApiSpeedLimitInformation.h" />
+    <ClInclude Include="..\..\include\NavApiTypes.h" />
+    <ClInclude Include="..\..\src\Detour.h" />
+    <ClInclude Include="..\..\src\NavAnalytics.h" />
+    <ClInclude Include="..\..\src\NavigationImpl.h" />
+    <ClInclude Include="..\..\src\NavTask.h" />
+    <ClInclude Include="..\..\src\NavigationHelper.h" />
+    <ClInclude Include="..\..\src\NavigationImplNotifier.h" />
+  </ItemGroup>
+</Project>

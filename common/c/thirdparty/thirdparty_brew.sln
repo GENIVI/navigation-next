@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CUnit", "projects\brew\CUnit.vcproj", "{88778A2D-618B-4230-8059-2767E3F2AEC5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArgTable", "projects\brew\ArgTable\ArgTable.vcproj", "{7ABA38C9-99E2-4B31-A6E8-A1D7D2A8EDE2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SQLite", "projects\brew\sqlite.vcproj", "{057C2A96-75BC-4D8A-BEE7-0CD7E2CDB90E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88778A2D-618B-4230-8059-2767E3F2AEC5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{88778A2D-618B-4230-8059-2767E3F2AEC5}.Debug|Win32.Build.0 = Debug|Win32
+		{88778A2D-618B-4230-8059-2767E3F2AEC5}.Release|Win32.ActiveCfg = Release|Win32
+		{88778A2D-618B-4230-8059-2767E3F2AEC5}.Release|Win32.Build.0 = Release|Win32
+		{7ABA38C9-99E2-4B31-A6E8-A1D7D2A8EDE2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7ABA38C9-99E2-4B31-A6E8-A1D7D2A8EDE2}.Debug|Win32.Build.0 = Debug|Win32
+		{7ABA38C9-99E2-4B31-A6E8-A1D7D2A8EDE2}.Release|Win32.ActiveCfg = Release|Win32
+		{7ABA38C9-99E2-4B31-A6E8-A1D7D2A8EDE2}.Release|Win32.Build.0 = Release|Win32
+		{057C2A96-75BC-4D8A-BEE7-0CD7E2CDB90E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{057C2A96-75BC-4D8A-BEE7-0CD7E2CDB90E}.Debug|Win32.Build.0 = Debug|Win32
+		{057C2A96-75BC-4D8A-BEE7-0CD7E2CDB90E}.Release|Win32.ActiveCfg = Release|Win32
+		{057C2A96-75BC-4D8A-BEE7-0CD7E2CDB90E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

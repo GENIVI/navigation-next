@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Icon_TurnLeft_OFF.png</file>
+        <file>images/Icon_TurnLeft_ON.png</file>
+        <file>images/MapLocation.png</file>
+        <file>images/Icon_LowBeam_OFF.png</file>
+        <file>images/Icon_LowBeam_ON.png</file>
+        <file>images/Icon_PositionLights_OFF.png</file>
+        <file>images/Icon_PositionLights_ON.png</file>
+        <file>images/Icon_SeatBelt_OFF.png</file>
+        <file>images/Icon_SeatBelt_ON.png</file>
+        <file>images/Icon_TyreMalfunction_OFF.png</file>
+        <file>images/Icon_TyreMalfunction_ON.png</file>
+        <file>images/Icon_Battery_OFF.png</file>
+        <file>images/Icon_Battery_ON.png</file>
+        <file>images/Icon_Coolant_OFF.png</file>
+        <file>images/Icon_Coolant_ON.png</file>
+        <file>images/Icon_Fuel_OFF.png</file>
+        <file>images/Icon_Fuel_ON.png</file>
+        <file>images/Icon_BulbFailure_OFF.png</file>
+        <file>images/Icon_BulbFailure_ON.png</file>
+    </qresource>
+</RCC>

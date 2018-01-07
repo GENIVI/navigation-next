@@ -1,0 +1,65 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+systemtest.mmp
+
+PRJ_EXPORTS
+//..\..\supportfiles\navfileset\directions\config.tps			\Epoc32\winscw\c\private\A002AAF3\directions\config.tps
+//..\..\supportfiles\navfileset\michelle\config.tps			\Epoc32\winscw\c\private\A002AAF3\michelle\config.tps
+//..\..\supportfiles\navfileset\routing-images\config.tps		\Epoc32\winscw\c\private\A002AAF3\routing-images\config.tps
+
+..\..\supportfiles\6Liberty.qcp								\Epoc32\winscw\c\private\A002AAF3\6Liberty.qcp
+..\..\supportfiles\92656.qcp								\Epoc32\winscw\c\private\A002AAF3\92656.qcp
+
+..\..\supportfiles\LA_Followme.csv							\Epoc32\winscw\c\private\A002AAF3\LA_Followme.csv
+..\..\supportfiles\LasVegas1.csv							\Epoc32\winscw\c\private\A002AAF3\LasVegas1.csv
+..\..\supportfiles\LasVegas.csv								\Epoc32\winscw\c\private\A002AAF3\LasVegas.csv
+
+..\..\supportfiles\32GallowHillLane_AbbotsLangley.gps			\Epoc32\winscw\c\private\A002AAF3\32GallowHillLane_AbbotsLangley.gps
+..\..\supportfiles\austria_SparkasseBank_car.gps				\Epoc32\winscw\c\private\A002AAF3\austria_SparkasseBank_car.gps
+..\..\supportfiles\belgium_BRU_fastest.gps						\Epoc32\winscw\c\private\A002AAF3\belgium_BRU_fastest.gps
+..\..\supportfiles\brazil_Supermercado_Borssato_shortest.gps	\Epoc32\winscw\c\private\A002AAF3\brazil_Supermercado_Borssato_shortest.gps
+..\..\supportfiles\canada_BMO_fastest.gps						\Epoc32\winscw\c\private\A002AAF3\canada_BMO_fastest.gps
+..\..\supportfiles\che_Migrol_Tankstelle_fastest.gps			\Epoc32\winscw\c\private\A002AAF3\che_Migrol_Tankstelle_fastest.gps
+..\..\supportfiles\cze_RozvojvaBanka.gps						\Epoc32\winscw\c\private\A002AAF3\cze_RozvojvaBanka.gps
+..\..\supportfiles\deu_Commerzbank_shortest.gps					\Epoc32\winscw\c\private\A002AAF3\deu_Commerzbank_shortest.gps
+..\..\supportfiles\dnk_Statoil_shortest.gps						\Epoc32\winscw\c\private\A002AAF3\dnk_Statoil_shortest.gps
+..\..\supportfiles\esp_Banco_Popular_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\esp_Banco_Popular_fastest.gps
+..\..\supportfiles\ferry.gps									\Epoc32\winscw\c\private\A002AAF3\ferry.gps
+..\..\supportfiles\fin_Helsinki_Aiport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\fin_Helsinki_Aiport_fastest.gps
+..\..\supportfiles\fra_Petit_Casino_fastest.gps					\Epoc32\winscw\c\private\A002AAF3\fra_Petit_Casino_fastest.gps
+..\..\supportfiles\gbr_Prestatyn_Hospital_fastest.gps			\Epoc32\winscw\c\private\A002AAF3\gbr_Prestatyn_Hospital_fastest.gps
+..\..\supportfiles\grc_Tatoi_Airport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\grc_Tatoi_Airport_fastest.gps
+..\..\supportfiles\hrv_Zagreb_airport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\hrv_Zagreb_airport_fastest.gps
+..\..\supportfiles\irl_Knock_Airport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\irl_Knock_Airport_fastest.gps
+..\..\supportfiles\ita_Istituto_Marta_shortest.gps				\Epoc32\winscw\c\private\A002AAF3\ita_Istituto_Marta_shortest.gps
+..\..\supportfiles\LasVegas.gps									\Epoc32\winscw\c\private\A002AAF3\LasVegas.gps
+..\..\supportfiles\lux_Noertrange_Airport_fastest.gps			\Epoc32\winscw\c\private\A002AAF3\lux_Noertrange_Airport_fastest.gps
+..\..\supportfiles\mex_Ciudad_Juarez_Int_fastest.gps			\Epoc32\winscw\c\private\A002AAF3\mex_Ciudad_Juarez_Int_fastest.gps
+..\..\supportfiles\nld_Cafe_Roba_fastest.gps					\Epoc32\winscw\c\private\A002AAF3\nld_Cafe_Roba_fastest.gps
+..\..\supportfiles\nor_Statoil_Service_shortest.gps				\Epoc32\winscw\c\private\A002AAF3\nor_Statoil_Service_shortest.gps
+"..\..\supportfiles\Peter-Welter-Platz Koln Germany.gps"		"\Epoc32\winscw\c\private\A002AAF3\Peter-Welter-Platz Koln Germany.gps"
+..\..\supportfiles\pol_Bar_przy_Rynku_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\pol_Bar_przy_Rynku_fastest.gps
+..\..\supportfiles\prt_Lisboa_Airport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\prt_Lisboa_Airport_fastest.gps
+..\..\supportfiles\rou_Art_Museum_shortest.gps					\Epoc32\winscw\c\private\A002AAF3\rou_Art_Museum_shortest.gps
+..\..\supportfiles\Route_Ped_ESP.gps							\Epoc32\winscw\c\private\A002AAF3\Route_Ped_ESP.gps
+..\..\supportfiles\Route_Ped_FRA.gps							\Epoc32\winscw\c\private\A002AAF3\Route_Ped_FRA.gps
+..\..\supportfiles\Route_Ped_UK.gps								\Epoc32\winscw\c\private\A002AAF3\Route_Ped_UK.gps
+..\..\supportfiles\Route_Ped_USA.gps							\Epoc32\winscw\c\private\A002AAF3\Route_Ped_USA.gps
+..\..\supportfiles\SanFrancisco1.gps							\Epoc32\winscw\c\private\A002AAF3\SanFrancisco1.gps
+..\..\supportfiles\startup_to_road.gps							\Epoc32\winscw\c\private\A002AAF3\startup_to_road.gps
+..\..\supportfiles\swe_Gullabo_Skola_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\swe_Gullabo_Skola_fastest.gps
+..\..\supportfiles\tur_Antalya_Airport_fastest.gps				\Epoc32\winscw\c\private\A002AAF3\tur_Antalya_Airport_fastest.gps
+..\..\supportfiles\work_destination.gps							\Epoc32\winscw\c\private\A002AAF3\work_destination.gps
+
+..\..\supportfiles\qalogs\qalog_large.qa					\Epoc32\winscw\c\private\A002AAF3\qalog_large.qa
+..\..\supportfiles\qalogs\qalog_medium.qa					\Epoc32\winscw\c\private\A002AAF3\qalog_medium.qa
+..\..\supportfiles\qalogs\qalog_small.qa					\Epoc32\winscw\c\private\A002AAF3\qalog_small.qa
+
+..\..\tpslib\compiled\admintesla.tpl						\Epoc32\winscw\c\private\A002AAF3\admintesla.tpl
+..\..\tpslib\compiled\data.tpl								\Epoc32\winscw\c\private\A002AAF3\data.tpl
+..\..\tpslib\compiled\tesla.tpl								\Epoc32\winscw\c\private\A002AAF3\tesla.tpl

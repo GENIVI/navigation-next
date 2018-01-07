@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22BEBD67191092A70022A197 /* ReverseGeocodeHanlder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD61191092A70022A197 /* ReverseGeocodeHanlder.cpp */; };
+		22BEBD68191092A70022A197 /* ReverseGeocodeInformationImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD62191092A70022A197 /* ReverseGeocodeInformationImpl.cpp */; };
+		22BEBD69191092A70022A197 /* ReverseGeocodeParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD63191092A70022A197 /* ReverseGeocodeParameter.cpp */; };
+		22BEBD6A191092A70022A197 /* ReverseGeocodeRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD64191092A70022A197 /* ReverseGeocodeRequest.cpp */; };
+		22BEBD6B191092A70022A197 /* ReverseGeocodeRequestPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD65191092A70022A197 /* ReverseGeocodeRequestPrivate.cpp */; };
+		22BEBD6C191092A70022A197 /* ReverseGeocodeTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEBD66191092A70022A197 /* ReverseGeocodeTask.cpp */; };
+		22BEF5CA1946B855008A07C6 /* GeocodeHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C41946B855008A07C6 /* GeocodeHandler.cpp */; };
+		22BEF5CB1946B855008A07C6 /* GeocodeInformationImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C51946B855008A07C6 /* GeocodeInformationImpl.cpp */; };
+		22BEF5CC1946B855008A07C6 /* GeocodeParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C61946B855008A07C6 /* GeocodeParameter.cpp */; };
+		22BEF5CD1946B855008A07C6 /* GeocodeRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C71946B855008A07C6 /* GeocodeRequest.cpp */; };
+		22BEF5CE1946B855008A07C6 /* GeocodeRequestPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C81946B855008A07C6 /* GeocodeRequestPrivate.cpp */; };
+		22BEF5CF1946B855008A07C6 /* GeocodeTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BEF5C91946B855008A07C6 /* GeocodeTask.cpp */; };
+		22C665E819A5C17200580175 /* CommonFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C665E619A5C17200580175 /* CommonFunction.cpp */; };
+		22DABED91946F3A90003E5E3 /* NBCommonTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22DABED81946F3A90003E5E3 /* NBCommonTypes.cpp */; };
+		93C2652818B6ED9C00BE59F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C2652718B6ED9C00BE59F7 /* Foundation.framework */; };
+		93C2658418B7177C00BE59F7 /* nbcversion.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C2658318B7177C00BE59F7 /* nbcversion.c */; };
+		93E3693B191B8B1A00D4BA4C /* Qalog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E3693A191B8B1A00D4BA4C /* Qalog.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		93C2652218B6ED9C00BE59F7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		220D766A190FA53B0044C103 /* ReverseGeocodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodeHandler.h; sourceTree = "<group>"; };
+		220D766B190FA53B0044C103 /* ReverseGeocodeInformationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodeInformationImpl.h; sourceTree = "<group>"; };
+		220D766C190FA53B0044C103 /* ReverseGeocodeParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodeParameter.h; sourceTree = "<group>"; };
+		220D766D190FA53B0044C103 /* ReverseGeocodeRequestPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodeRequestPrivate.h; sourceTree = "<group>"; };
+		220D766E190FA53B0044C103 /* ReverseGeocodeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReverseGeocodeConfiguration.h; path = include/ReverseGeocodeConfiguration.h; sourceTree = "<group>"; };
+		220D766F190FA53B0044C103 /* ReverseGeocodeInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReverseGeocodeInformation.h; path = include/ReverseGeocodeInformation.h; sourceTree = "<group>"; };
+		220D7670190FA53B0044C103 /* ReverseGeocodeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReverseGeocodeListener.h; path = include/ReverseGeocodeListener.h; sourceTree = "<group>"; };
+		220D7671190FA53B0044C103 /* ReverseGeocodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReverseGeocodeRequest.h; path = include/ReverseGeocodeRequest.h; sourceTree = "<group>"; };
+		22BEBD6019108D650022A197 /* ReverseGeocodeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodeTask.h; sourceTree = "<group>"; };
+		22BEBD61191092A70022A197 /* ReverseGeocodeHanlder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeHanlder.cpp; path = src/ReverseGeocodeHanlder.cpp; sourceTree = "<group>"; };
+		22BEBD62191092A70022A197 /* ReverseGeocodeInformationImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeInformationImpl.cpp; path = src/ReverseGeocodeInformationImpl.cpp; sourceTree = "<group>"; };
+		22BEBD63191092A70022A197 /* ReverseGeocodeParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeParameter.cpp; path = src/ReverseGeocodeParameter.cpp; sourceTree = "<group>"; };
+		22BEBD64191092A70022A197 /* ReverseGeocodeRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeRequest.cpp; path = src/ReverseGeocodeRequest.cpp; sourceTree = "<group>"; };
+		22BEBD65191092A70022A197 /* ReverseGeocodeRequestPrivate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeRequestPrivate.cpp; path = src/ReverseGeocodeRequestPrivate.cpp; sourceTree = "<group>"; };
+		22BEBD66191092A70022A197 /* ReverseGeocodeTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReverseGeocodeTask.cpp; path = src/ReverseGeocodeTask.cpp; sourceTree = "<group>"; };
+		22BEF5C41946B855008A07C6 /* GeocodeHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeHandler.cpp; path = src/GeocodeHandler.cpp; sourceTree = "<group>"; };
+		22BEF5C51946B855008A07C6 /* GeocodeInformationImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeInformationImpl.cpp; path = src/GeocodeInformationImpl.cpp; sourceTree = "<group>"; };
+		22BEF5C61946B855008A07C6 /* GeocodeParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeParameter.cpp; path = src/GeocodeParameter.cpp; sourceTree = "<group>"; };
+		22BEF5C71946B855008A07C6 /* GeocodeRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeRequest.cpp; path = src/GeocodeRequest.cpp; sourceTree = "<group>"; };
+		22BEF5C81946B855008A07C6 /* GeocodeRequestPrivate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeRequestPrivate.cpp; path = src/GeocodeRequestPrivate.cpp; sourceTree = "<group>"; };
+		22BEF5C91946B855008A07C6 /* GeocodeTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeocodeTask.cpp; path = src/GeocodeTask.cpp; sourceTree = "<group>"; };
+		22C0CA9B1945627D00B44B72 /* GeocodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeHandler.h; sourceTree = "<group>"; };
+		22C0CA9C1945627D00B44B72 /* GeocodeInformationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeInformationImpl.h; sourceTree = "<group>"; };
+		22C0CA9D1945627D00B44B72 /* GeocodeParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeParameter.h; sourceTree = "<group>"; };
+		22C0CA9E1945627D00B44B72 /* GeocodeRequestPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeRequestPrivate.h; sourceTree = "<group>"; };
+		22C0CA9F1945627D00B44B72 /* GeocodeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeTask.h; sourceTree = "<group>"; };
+		22C0CAA01945628C00B44B72 /* GeocodeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodeConfiguration.h; path = include/GeocodeConfiguration.h; sourceTree = "<group>"; };
+		22C0CAA11945628C00B44B72 /* GeocodeInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodeInformation.h; path = include/GeocodeInformation.h; sourceTree = "<group>"; };
+		22C0CAA21945628C00B44B72 /* GeocodeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodeListener.h; path = include/GeocodeListener.h; sourceTree = "<group>"; };
+		22C0CAA31945628C00B44B72 /* GeocodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodeRequest.h; path = include/GeocodeRequest.h; sourceTree = "<group>"; };
+		22C665E419A5C03300580175 /* CommonFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = include/protected/CommonFunction.h; sourceTree = "<group>"; };
+		22C665E619A5C17200580175 /* CommonFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommonFunction.cpp; path = src/CommonFunction.cpp; sourceTree = "<group>"; };
+		22DABED81946F3A90003E5E3 /* NBCommonTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NBCommonTypes.cpp; path = src/NBCommonTypes.cpp; sourceTree = "<group>"; };
+		22DABEDA1946FF4A0003E5E3 /* NBCommonTypesImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBCommonTypesImpl.h; sourceTree = "<group>"; };
+		22E324021907AB2B007E573A /* TrafficIncident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrafficIncident.h; path = include/TrafficIncident.h; sourceTree = "<group>"; };
+		22E6710C191878B800EF4694 /* StaticPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticPoi.h; path = include/StaticPoi.h; sourceTree = "<group>"; };
+		93C2652418B6ED9C00BE59F7 /* libnbcommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnbcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C2652718B6ED9C00BE59F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93C2653518B6ED9C00BE59F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		93C2653818B6ED9C00BE59F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		93C2658318B7177C00BE59F7 /* nbcversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nbcversion.c; path = src/util/nbcversion.c; sourceTree = "<group>"; };
+		93E36938191B8AF400D4BA4C /* QaLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QaLog.h; path = include/QaLog.h; sourceTree = "<group>"; };
+		93E36939191B8AF400D4BA4C /* QaLogListenerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QaLogListenerInterface.h; path = include/QaLogListenerInterface.h; sourceTree = "<group>"; };
+		93E3693A191B8B1A00D4BA4C /* Qalog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Qalog.cpp; path = src/Qalog.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93C2652118B6ED9C00BE59F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C2652818B6ED9C00BE59F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		220D7669190FA53B0044C103 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				22DABEDA1946FF4A0003E5E3 /* NBCommonTypesImpl.h */,
+				22C0CA9B1945627D00B44B72 /* GeocodeHandler.h */,
+				22C0CA9C1945627D00B44B72 /* GeocodeInformationImpl.h */,
+				22C0CA9D1945627D00B44B72 /* GeocodeParameter.h */,
+				22C0CA9E1945627D00B44B72 /* GeocodeRequestPrivate.h */,
+				22C0CA9F1945627D00B44B72 /* GeocodeTask.h */,
+				22BEBD6019108D650022A197 /* ReverseGeocodeTask.h */,
+				220D766A190FA53B0044C103 /* ReverseGeocodeHandler.h */,
+				220D766B190FA53B0044C103 /* ReverseGeocodeInformationImpl.h */,
+				220D766C190FA53B0044C103 /* ReverseGeocodeParameter.h */,
+				220D766D190FA53B0044C103 /* ReverseGeocodeRequestPrivate.h */,
+			);
+			name = private;
+			path = include/private;
+			sourceTree = "<group>";
+		};
+		22C665E519A5C04200580175 /* protected */ = {
+			isa = PBXGroup;
+			children = (
+				22C665E419A5C03300580175 /* CommonFunction.h */,
+			);
+			name = protected;
+			sourceTree = "<group>";
+		};
+		93C2651B18B6ED9C00BE59F7 = {
+			isa = PBXGroup;
+			children = (
+				93C2657818B6F62800BE59F7 /* Classes */,
+				93C2652618B6ED9C00BE59F7 /* Frameworks */,
+				93C2652518B6ED9C00BE59F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93C2652518B6ED9C00BE59F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93C2652418B6ED9C00BE59F7 /* libnbcommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93C2652618B6ED9C00BE59F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93C2652718B6ED9C00BE59F7 /* Foundation.framework */,
+				93C2653518B6ED9C00BE59F7 /* XCTest.framework */,
+				93C2653818B6ED9C00BE59F7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93C2657818B6F62800BE59F7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93C2657918B6F63100BE59F7 /* include */,
+				93C2657A18B6F63700BE59F7 /* src */,
+			);
+			name = Classes;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		93C2657918B6F63100BE59F7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				22C665E519A5C04200580175 /* protected */,
+				220D7669190FA53B0044C103 /* private */,
+				93E36938191B8AF400D4BA4C /* QaLog.h */,
+				93E36939191B8AF400D4BA4C /* QaLogListenerInterface.h */,
+				220D766E190FA53B0044C103 /* ReverseGeocodeConfiguration.h */,
+				220D766F190FA53B0044C103 /* ReverseGeocodeInformation.h */,
+				220D7670190FA53B0044C103 /* ReverseGeocodeListener.h */,
+				220D7671190FA53B0044C103 /* ReverseGeocodeRequest.h */,
+				22C0CAA01945628C00B44B72 /* GeocodeConfiguration.h */,
+				22C0CAA11945628C00B44B72 /* GeocodeInformation.h */,
+				22C0CAA21945628C00B44B72 /* GeocodeListener.h */,
+				22C0CAA31945628C00B44B72 /* GeocodeRequest.h */,
+				22E6710C191878B800EF4694 /* StaticPoi.h */,
+				22E324021907AB2B007E573A /* TrafficIncident.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		93C2657A18B6F63700BE59F7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				22DABED81946F3A90003E5E3 /* NBCommonTypes.cpp */,
+				22BEF5C41946B855008A07C6 /* GeocodeHandler.cpp */,
+				22BEF5C51946B855008A07C6 /* GeocodeInformationImpl.cpp */,
+				22BEF5C61946B855008A07C6 /* GeocodeParameter.cpp */,
+				22BEF5C71946B855008A07C6 /* GeocodeRequest.cpp */,
+				22BEF5C81946B855008A07C6 /* GeocodeRequestPrivate.cpp */,
+				22BEF5C91946B855008A07C6 /* GeocodeTask.cpp */,
+				93E3693A191B8B1A00D4BA4C /* Qalog.cpp */,
+				22BEBD61191092A70022A197 /* ReverseGeocodeHanlder.cpp */,
+				22BEBD62191092A70022A197 /* ReverseGeocodeInformationImpl.cpp */,
+				22BEBD63191092A70022A197 /* ReverseGeocodeParameter.cpp */,
+				22BEBD64191092A70022A197 /* ReverseGeocodeRequest.cpp */,
+				22BEBD65191092A70022A197 /* ReverseGeocodeRequestPrivate.cpp */,
+				22BEBD66191092A70022A197 /* ReverseGeocodeTask.cpp */,
+				93C2658518B7178A00BE59F7 /* util */,
+				22C665E619A5C17200580175 /* CommonFunction.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		93C2658518B7178A00BE59F7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				93C2658318B7177C00BE59F7 /* nbcversion.c */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93C2652318B6ED9C00BE59F7 /* nbcommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C2654718B6ED9C00BE59F7 /* Build configuration list for PBXNativeTarget "nbcommon" */;
+			buildPhases = (
+				93C2658618B718BD00BE59F7 /* Create Version Info */,
+				93C2652018B6ED9C00BE59F7 /* Sources */,
+				93C2652118B6ED9C00BE59F7 /* Frameworks */,
+				93C2652218B6ED9C00BE59F7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nbcommon;
+			productName = nbcommon;
+			productReference = 93C2652418B6ED9C00BE59F7 /* libnbcommon.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93C2651C18B6ED9C00BE59F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = telecomsys;
+			};
+			buildConfigurationList = 93C2651F18B6ED9C00BE59F7 /* Build configuration list for PBXProject "nbcommon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93C2651B18B6ED9C00BE59F7;
+			productRefGroup = 93C2652518B6ED9C00BE59F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93C2652318B6ED9C00BE59F7 /* nbcommon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93C2658618B718BD00BE59F7 /* Create Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create Version Info";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python ../../build/version.py ../../ iphone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93C2652018B6ED9C00BE59F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BEBD6A191092A70022A197 /* ReverseGeocodeRequest.cpp in Sources */,
+				22DABED91946F3A90003E5E3 /* NBCommonTypes.cpp in Sources */,
+				22C665E819A5C17200580175 /* CommonFunction.cpp in Sources */,
+				22BEF5CF1946B855008A07C6 /* GeocodeTask.cpp in Sources */,
+				22BEF5CB1946B855008A07C6 /* GeocodeInformationImpl.cpp in Sources */,
+				22BEBD68191092A70022A197 /* ReverseGeocodeInformationImpl.cpp in Sources */,
+				22BEBD6C191092A70022A197 /* ReverseGeocodeTask.cpp in Sources */,
+				22BEBD67191092A70022A197 /* ReverseGeocodeHanlder.cpp in Sources */,
+				22BEF5CE1946B855008A07C6 /* GeocodeRequestPrivate.cpp in Sources */,
+				93C2658418B7177C00BE59F7 /* nbcversion.c in Sources */,
+				22BEF5CD1946B855008A07C6 /* GeocodeRequest.cpp in Sources */,
+				22BEBD6B191092A70022A197 /* ReverseGeocodeRequestPrivate.cpp in Sources */,
+				93E3693B191B8B1A00D4BA4C /* Qalog.cpp in Sources */,
+				22BEF5CC1946B855008A07C6 /* GeocodeParameter.cpp in Sources */,
+				22BEBD69191092A70022A197 /* ReverseGeocodeParameter.cpp in Sources */,
+				22BEF5CA1946B855008A07C6 /* GeocodeHandler.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		93C2654518B6ED9C00BE59F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		93C2654618B6ED9C00BE59F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93C2654818B6ED9C00BE59F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/nbcommon.dst;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nbcommon-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_DEBUG,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include/** $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../abservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../abservices/$(BRANCH)/include/iphone";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		93C2654918B6ED9C00BE59F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/nbcommon.dst;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nbcommon-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include/** $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbpal/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../coreservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/protected $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/generated $(PROJECT_DIR)/../../../../nbservices/$(BRANCH)/include/iphone $(PROJECT_DIR)/../../../../abservices/$(BRANCH)/include $(PROJECT_DIR)/../../../../abservices/$(BRANCH)/include/iphone";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93C2651F18B6ED9C00BE59F7 /* Build configuration list for PBXProject "nbcommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C2654518B6ED9C00BE59F7 /* Debug */,
+				93C2654618B6ED9C00BE59F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C2654718B6ED9C00BE59F7 /* Build configuration list for PBXNativeTarget "nbcommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C2654818B6ED9C00BE59F7 /* Debug */,
+				93C2654918B6ED9C00BE59F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93C2651C18B6ED9C00BE59F7 /* Project object */;
+}

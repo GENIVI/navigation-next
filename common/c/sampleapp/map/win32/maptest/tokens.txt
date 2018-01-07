@@ -1,0 +1,4 @@
+DEV3 xx1ZBtHnxHFFQOTmko026lHy2CjDQwW2dPsOHuPm	35b550559f730a4295751b292bbb3896016e4979	navbuilder.nimlbs.net	abnav_ccc	MUX	
+QA3  mFfK0n94fAUE18VnH6zcg5ibW2TPHkB/pEecLT2z	fd10441cb668274975feb71c2e6a23c63dc16de0	navbuilder.nimlbs.net	abnav_ccc	MUX	
+CS3  ZTAwUoknDo5ppJsdyHWkX3WSk/GnOmYjXaBv5gr/	4a03f72adfddf293af235c6dd30214f427437af3	navbuilder.nimlbs.net	abnav_ccc	MUX-HTTP	
+tj-lnx3 xdrHqvAq21MMjdkwHTvmXzT1PuxhXfgo5+uW+LJ9	1f00394e130d6ca9e7d2ee7609be823b0ba4749b	navbuilder.nimlbs.net	abnav_ccc	MUX	

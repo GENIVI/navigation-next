@@ -1,0 +1,88 @@
+/****************************************************************************
+**
+** Copyright (C) 2017 Pelagicore AG
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Pelagicore Application Manager.
+**
+** $QT_BEGIN_LICENSE:FDL-QTAS$
+** Commercial License Usage
+** Licensees holding valid commercial Qt Automotive Suite licenses may use
+** this file in accordance with the commercial license agreement provided
+** with the Software or, alternatively, in accordance with the terms
+** contained in a written agreement between you and The Qt Company.  For
+** licensing terms and conditions see https://www.qt.io/terms-conditions.
+** For further information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+
+\page qml-sysui.html
+\title System-UI QML Types
+\brief A listing of standard QML types used in the System-UI.
+
+These are the functionally grouped lists of QML types as part of \c
+QtApplicationManager.
+
+Singleton QML types need not be declared, they are referenced by just their type name.
+
+Instantiable QML types are declared with the their name followed by curly braces. These
+declarations may be nested, creating parent-child relationships between the items.
+
+Non-Instantiable QML types are return values provided to the System-UI code, that allow the user
+direct access to data that would otherwise only be available (partially) through the singletons'
+item models.
+
+\section1 QML Singletons
+\list
+  \li ApplicationManager - The application model and controller.
+  \li ApplicationInstaller - The package installation/removal/update part of the application-manager.
+  \li WindowManager - The window model and controller.
+  \li NotificationManager - The notification model, which handles freedesktop.org compliant
+      notification requests.
+  \li SystemMonitor - The system monitoring model, giving access to a range of measurements, e.g.
+      CPU load, frame rate, etc.
+  \li ApplicationIPCManager - Central registry for interfaces for System-UI-to-app communication.
+  \li StartupTimer - A tool for startup performance analysis.
+\endlist
+
+\section1 Instantiable QML Types
+
+These types are only available for the System-UI:
+
+\list
+  \li ApplicationModel - A proxy model for the ApplicationManager singleton.
+  \li ApplicationIPCInterface - System-UI side definition of interfaces for System-UI-to-app communication.
+\endlist
+
+The following types work the same way within the System-UI, as they would within a single-process
+application. Depending on your System-UI design, this can be very helpful at times.
+
+\list
+  \li ApplicationManagerWindow - The window root item required in a multi-process environment.
+  \li \l Notification - Abstraction for freedesktop.org Notifications on the client side.
+  \li ApplicationInterfaceExtension - Client side access to System-UI-to-app communication interfaces.
+\endlist
+
+\section1 Non-Instantiable QML Types
+
+All these types are return values provided through the ApplicationManager singleton - they are only
+available from within the System-UI.
+
+\list
+  \li \l Application - An application known to the ApplicationManager.
+  \li \l Runtime - A runtime that is executing an application.
+  \li \l Container - A container, that an application's Runtime is using.
+\endlist
+
+*/

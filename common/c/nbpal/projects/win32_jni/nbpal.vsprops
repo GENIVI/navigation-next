@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="nbpal"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(SolutionDir)\include&quot;;&quot;$(SolutionDir)\include\private&quot;;&quot;$(SolutionDir)\include\protected&quot;;&quot;$(SolutionDir)\include\win32_jni&quot;;&quot;$(SolutionDir)\src\winmobile\util&quot;;&quot;$(SolutionDir)\src\win32\util&quot;;&quot;$(SolutionDir)\src\common&quot;;&quot;$(SolutionDir)\src\win32\pal&quot;;&quot;$(SolutionDir)\src\jni&quot;;&quot;$(JAVA_HOME)\include&quot;;&quot;$(JAVA_HOME)\include\win32&quot;"
+		PreprocessorDefinitions="PAL_BUILD;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4100;4115;4127;4201;4214;4267"
+	/>
+	<UserMacro
+		Name="NIMSQLITE_INC"
+		Value="$(SolutionDir)../../thirdparty/feature_120201_jni/sqlite/include"
+	/>
+	<UserMacro
+		Name="NIMSQLITE_LIB"
+		Value="$(SolutionDir)../../thirdparty/feature_120201_jni/output/win32/$(ConfigurationName)"
+	/>
+	<UserMacro
+		Name="NIMCUNIT_INC"
+		Value="$(SolutionDir)../../thirdparty/feature_120201_jni/CUnit/include"
+	/>
+	<UserMacro
+		Name="NIMCUNIT_LIB"
+		Value="$(SolutionDir)../../thirdparty/feature_120201_jni/output/win32/$(ConfigurationName)"
+	/>
+</VisualStudioPropertySheet>

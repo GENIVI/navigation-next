@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BAA4448B-57E9-4F12-943F-823A45817AB4}</ProjectGuid>
+    <RootNamespace>System Tests</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="systemtests.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="systemtests.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="systemtests.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="systemtests.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)\output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)\output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TEST_NEW_API;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <ProgramDataBaseFileName>$(IntDir)vs80.pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>CUnit.lib;nbpal.lib;abpal.lib;nbservices.lib;nav.lib;abservices.lib;coreservices.lib;ArgTable.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)systemtests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMABPAL_LIB)\..\$(Configuration);$(NIMCORE_LIB)\..\$(Configuration);$(NIMNB_LIB)\..\$(Configuration);$(NIMAB_LIB)\..\$(Configuration);$(NIMCUNIT_LIB);$(NIMNBUI_LIB)\..\$(Configuration);$(NIMNBGMMAIN_LIB)\..\$(Configuration);$(SolutionDir)\..\..\thirdparty\feature_140523_ltk_v1_5\DirectX-2010-June\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.dll $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.dll $(OutDir)
+copy $(NIMNB_BIN)\nbservices17.dll $(OutDir)
+copy $(NIMAB_BIN)\abservices17.dll $(OutDir)
+copy $(NIMABPAL_BIN)\abpal17.dll $(OutDir)
+copy $(SolutionDir)\tpslib\compiled\*.tpl $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.csv" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.bgp" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.gps" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.qcp" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.wav" $(OutDir)
+copy "$(SolutionDir)\supportfiles\qalogs\*.qa" $(OutDir)
+copy "$(SolutionDir)\supportfiles\systemtests.py" $(OutDir)
+del $(SolutionDir)\supportfiles\navfileset\directions\config.tps
+del $(SolutionDir)\supportfiles\navfileset\michelle\config.tps
+del $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\directions\directions-en-us.sexp $(SolutionDir)\supportfiles\navfileset\directions\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\michelle\voices.sexp $(SolutionDir)\supportfiles\navfileset\michelle\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\routing-images\images.sexp $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+xcopy /s /y /r $(SolutionDir)\supportfiles\navfileset\* $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;TEST_NEW_API;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <ProgramDataBaseFileName>$(IntDir)vs80.pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>nbm.lib;CUnit.lib;nbpal.lib;abpal.lib;nbservices.lib;nav.lib;abservices.lib;coreservices.lib;ArgTable.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)systemtests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMABPAL_LIB)\..\$(Configuration);$(NIMCORE_LIB)\..\$(Configuration);$(NIMNB_LIB)\..\$(Configuration);$(NIMAB_LIB)\..\$(Configuration);$(NIMCUNIT_LIB);$(NIMNBUI_LIB)\..\$(Configuration);$(NIMNBGMMAIN_LIB)\..\$(Configuration);$(SolutionDir)\..\..\thirdparty\feature_111107_map3d\DirectX-2010-June\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(NIMNBIPAL_BIN)\nbpal17.dll $(OutDir)
+copy $(NIMCORE_BIN)\coreservices17.dll $(OutDir)
+copy $(NIMNB_BIN)\nbservices17.dll $(OutDir)
+copy $(NIMAB_BIN)\abservices17.dll $(OutDir)
+copy $(NIMABPAL_BIN)\abpal17.dll $(OutDir)
+copy $(SolutionDir)\tpslib\compiled\*.tpl $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.csv" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.bgp" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.gps" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.qcp" $(OutDir)
+copy "$(SolutionDir)\supportfiles\*.wav" $(OutDir)
+copy "$(SolutionDir)\supportfiles\qalogs\*.qa" $(OutDir)
+copy "$(SolutionDir)\supportfiles\systemtests.py" $(OutDir)
+del $(SolutionDir)\supportfiles\navfileset\directions\config.tps
+del $(SolutionDir)\supportfiles\navfileset\michelle\config.tps
+del $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\directions\directions-en-us.sexp $(SolutionDir)\supportfiles\navfileset\directions\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\michelle\voices.sexp $(SolutionDir)\supportfiles\navfileset\michelle\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)\supportfiles\sexp2tps.py $(SolutionDir)\supportfiles\navfileset\routing-images\images.sexp $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+xcopy /s /y /r $(SolutionDir)\supportfiles\navfileset\* $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;TEST_NEW_API;MAKE_STATIC_LIBRARIES;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader />
+      <ProgramDataBaseFileName>$(IntDir)vs80.pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>CUnit.lib;nbpal.lib;abpal.lib;nbservices.lib;nav.lib;abservices.lib;coreservices.lib;ArgTable.lib;nbui.lib;nbgm.lib;freetype.lib;glew32.lib;opengl32.lib;glu32.lib;d3d9.lib;libjpeg_turbo.lib;libxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)systemtests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMABPAL_LIB)\..\$(Configuration);$(NIMCORE_LIB)\..\$(Configuration);$(NIMNB_LIB)\..\$(Configuration);$(NIMAB_LIB)\..\$(Configuration);$(NIMCUNIT_LIB);$(NIMNBUI_LIB)\..\$(Configuration);$(NIMNBGMMAIN_LIB)\..\$(Configuration);$(SolutionDir)\..\..\thirdparty\feature_111107_map3d\DirectX-2010-June\lib\x86\;$(NIMNBM_LIB)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMABPAL_LIB)\..\$(Configuration);$(NIMCORE_LIB)\..\$(Configuration);$(NIMNB_LIB)\..\$(Configuration);$(NIMAB_LIB)\..\$(Configuration);$(NIMCUNIT_LIB);$(NIMNBUI_LIB)\..\$(Configuration);$(NIMNBGMMAIN_LIB)\..\$(Configuration);$(SolutionDir)\..\..\nav\$(NIM_CCC_BRANCH)\output\win32\$(Configuration)\;$(SolutionDir)\..\..\thirdparty\feature_111107_map3d\DirectX-2010-June\lib\x86\;$(NIMNBM_LIB)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)\..\..\thirdparty\$(NIM_CCC_BRANCH)\DirectX-2010-June\lib\x86\;$(NIMNBM_LIB)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)tpslib\compiled\*.tpl $(OutDir)
+copy "$(SolutionDir)supportfiles\*.csv" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.bgp" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.gps" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.qcp" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.wav" $(OutDir)
+copy "$(SolutionDir)supportfiles\qalogs\*.qa" $(OutDir)
+copy "$(SolutionDir)supportfiles\systemtests.py" $(OutDir)
+copy "$(SolutionDir)supportfiles\pinTestImg.png" $(OutDir)
+del $(SolutionDir)supportfiles\navfileset\directions\config.tps
+del $(SolutionDir)supportfiles\navfileset\michelle\config.tps
+del $(SolutionDir)supportfiles\navfileset\routing-images\config.tps
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\directions\directions-en-us.sexp $(SolutionDir)\supportfiles\navfileset\directions\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\michelle\voices.sexp $(SolutionDir)\supportfiles\navfileset\michelle\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\routing-images\images.sexp $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+xcopy /s /y /r $(SolutionDir)supportfiles\navfileset\* $(OutDir)
+python $(SolutionDir)\supportfiles\navfileset\build_fileset.py $(OutDir)
+python $(SolutionDir)supportfiles\navfileset\build_navkit_package.py $(OutDir)
+md $(OutDir)NB_UNITTEST_DATA
+xcopy /s /y /r $(SolutionDir)supportfiles\nbgm_resource\* $(OutDir)NB_UNITTEST_DATA</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;TEST_NEW_API;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <ProgramDataBaseFileName>$(IntDir)vs80.pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>CUnit.lib;nbpal.lib;abpal.lib;nbservices.lib;nav.lib;abservices.lib;coreservices.lib;ArgTable.lib;nbui.lib;nbgm.lib;freetype.lib;glew32.lib;opengl32.lib;glu32.lib;d3d9.lib;libjpeg_turbo.lib;libxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)systemtests.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB)\..\$(Configuration);$(NIMABPAL_LIB)\..\$(Configuration);$(NIMCORE_LIB)\..\$(Configuration);$(NIMNB_LIB)\..\$(Configuration);$(NIMAB_LIB)\..\$(Configuration);$(NIMCUNIT_LIB);$(NIMNBUI_LIB)\..\$(Configuration);$(NIMNBGMMAIN_LIB)\..\$(Configuration);$(SolutionDir)\..\..\thirdparty\$(NIM_CCC_BRANCH)\DirectX-2010-June\lib\x86\;$(NIMNBM_LIB)\release;$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)\..\..\nav\$(NIM_CCC_BRANCH)\output\win32\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <StackReserveSize>65536</StackReserveSize>
+      <StackCommitSize>4096</StackCommitSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)tpslib\compiled\*.tpl $(OutDir)
+copy "$(SolutionDir)supportfiles\*.csv" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.bgp" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.gps" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.qcp" $(OutDir)
+copy "$(SolutionDir)supportfiles\*.wav" $(OutDir)
+copy "$(SolutionDir)supportfiles\qalogs\*.qa" $(OutDir)
+copy "$(SolutionDir)supportfiles\systemtests.py" $(OutDir)
+copy "$(SolutionDir)supportfiles\pinTestImg.png" $(OutDir)
+del $(SolutionDir)supportfiles\navfileset\directions\config.tps
+del $(SolutionDir)supportfiles\navfileset\michelle\config.tps
+del $(SolutionDir)supportfiles\navfileset\routing-images\config.tps
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\directions\directions-en-us.sexp $(SolutionDir)\supportfiles\navfileset\directions\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\michelle\voices.sexp $(SolutionDir)\supportfiles\navfileset\michelle\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+python $(SolutionDir)supportfiles\sexp2tps.py $(SolutionDir)supportfiles\navfileset\routing-images\images.sexp $(SolutionDir)\supportfiles\navfileset\routing-images\config.tps $(SolutionDir)\tpslib\compiled\data.tpl
+xcopy /s /y /r $(SolutionDir)supportfiles\navfileset\* $(OutDir)
+python $(SolutionDir)supportfiles\navfileset\build_fileset.py $(OutDir)
+python $(SolutionDir)supportfiles\navfileset\build_navkit_package.py $(OutDir)
+md $(OutDir)NB_UNITTEST_DATA
+xcopy /s /y /r $(SolutionDir)supportfiles\nbgm_resource\* $(OutDir)NB_UNITTEST_DATA
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\argtableutil.c" />
+    <ClCompile Include="..\..\src\main.c" />
+    <ClCompile Include="..\..\src\namebitmaskmap.c" />
+    <ClCompile Include="..\..\src\testbatchtool.cpp" />
+    <ClCompile Include="..\..\src\testbatchtoolprocessor.cpp" />
+    <ClCompile Include="..\..\src\testmapview.cpp" />
+    <ClCompile Include="..\..\src\testnavapi.cpp" />
+    <ClCompile Include="..\..\src\testnetwork.cpp" />
+    <ClCompile Include="..\..\src\TestSingleSearchServices.cpp" />
+    <ClCompile Include="..\..\src\win32\platformutil.c" />
+    <ClCompile Include="..\..\src\testdatastore.c" />
+    <ClCompile Include="..\..\src\testdirection.c" />
+    <ClCompile Include="..\..\src\testenhancedcontent.c" />
+    <ClCompile Include="..\..\src\testers.c" />
+    <ClCompile Include="..\..\src\testfileset.c" />
+    <ClCompile Include="..\..\src\testgeocode.c" />
+    <ClCompile Include="..\..\src\testgpstypes.c" />
+    <ClCompile Include="..\..\src\TestInstance.cpp" />
+    <ClCompile Include="..\..\src\TestLayerManager.cpp" />
+    <ClCompile Include="..\..\src\testlicense.c" />
+    <ClCompile Include="..\..\src\TestLocation.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\testlocationservices.c" />
+    <ClCompile Include="..\..\src\testmotd.c" />
+    <ClCompile Include="..\..\src\testnavigation.c" />
+    <ClCompile Include="..\..\src\testpoiimagemanager.cpp" />
+    <ClCompile Include="..\..\src\testprofile.c" />
+    <ClCompile Include="..\..\src\testpublictransit.c" />
+    <ClCompile Include="..\..\src\testqalog.c" />
+    <ClCompile Include="..\..\src\testrastermap.c" />
+    <ClCompile Include="..\..\src\testrastertile.c" />
+    <ClCompile Include="..\..\src\testreversegeocode.c" />
+    <ClCompile Include="..\..\src\testsearchbuilder.c" />
+    <ClCompile Include="..\..\src\testshare.c" />
+    <ClCompile Include="..\..\src\testsinglesearch.c" />
+    <ClCompile Include="..\..\src\testsms.c" />
+    <ClCompile Include="..\..\src\testspatial.c" />
+    <ClCompile Include="..\..\src\testspeech.c" />
+    <ClCompile Include="..\..\src\testspeedcameras.c" />
+    <ClCompile Include="..\..\src\testsubscription.c" />
+    <ClCompile Include="..\..\src\testsync.c" />
+    <ClCompile Include="..\..\src\testtileservice.c" />
+    <ClCompile Include="..\..\src\testtristrip.c" />
+    <ClCompile Include="..\..\src\testvectormap.c" />
+    <ClCompile Include="..\..\src\utility.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\argtableutil.h" />
+    <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\namebitmaskmap.h" />
+    <ClInclude Include="..\..\src\platformutil.h" />
+    <ClInclude Include="..\..\src\statictpslib.h" />
+    <ClInclude Include="..\..\src\testbatchtool.h" />
+    <ClInclude Include="..\..\src\testbatchtoolprocessor.h" />
+    <ClInclude Include="..\..\src\testdatastore.h" />
+    <ClInclude Include="..\..\src\testdirection.h" />
+    <ClInclude Include="..\..\src\testenhancedcontent.h" />
+    <ClInclude Include="..\..\src\testers.h" />
+    <ClInclude Include="..\..\src\testfileset.h" />
+    <ClInclude Include="..\..\src\testgeocode.h" />
+    <ClInclude Include="..\..\src\testgpstypes.h" />
+    <ClInclude Include="..\..\src\TestInstance.h" />
+    <ClInclude Include="..\..\src\TestLayerManager.h" />
+    <ClInclude Include="..\..\src\testlicense.h" />
+    <ClInclude Include="..\..\src\testlocation.h" />
+    <ClInclude Include="..\..\src\testlocationservices.h" />
+    <ClInclude Include="..\..\src\testmapview.h" />
+    <ClInclude Include="..\..\src\testmotd.h" />
+    <ClInclude Include="..\..\src\testnavapi.h" />
+    <ClInclude Include="..\..\src\testnavigation.h" />
+    <ClInclude Include="..\..\src\testnetwork.h" />
+    <ClInclude Include="..\..\src\testpoiimagemanager.h" />
+    <ClInclude Include="..\..\src\testprofile.h" />
+    <ClInclude Include="..\..\src\testpublictransit.h" />
+    <ClInclude Include="..\..\src\testqalog.h" />
+    <ClInclude Include="..\..\src\testrastermap.h" />
+    <ClInclude Include="..\..\src\testrastertile.h" />
+    <ClInclude Include="..\..\src\testreversegeocode.h" />
+    <ClInclude Include="..\..\src\testsearchbuilder.h" />
+    <ClInclude Include="..\..\src\testshare.h" />
+    <ClInclude Include="..\..\src\testsinglesearch.h" />
+    <ClInclude Include="..\..\src\TestSingleSearchServices.h" />
+    <ClInclude Include="..\..\src\testsms.h" />
+    <ClInclude Include="..\..\src\testspatial.h" />
+    <ClInclude Include="..\..\src\testspeech.h" />
+    <ClInclude Include="..\..\src\testspeedcameras.h" />
+    <ClInclude Include="..\..\src\testsubscription.h" />
+    <ClInclude Include="..\..\src\testsync.h" />
+    <ClInclude Include="..\..\src\testtileservice.h" />
+    <ClInclude Include="..\..\src\testtristrip.h" />
+    <ClInclude Include="..\..\src\testvectormap.h" />
+    <ClInclude Include="..\..\src\utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tpslib\compiled\admintesla.tpl" />
+    <None Include="..\..\tpslib\compiled\data.tpl" />
+    <None Include="..\..\tpslib\compiled\tesla.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\tpslib\admintpslib.txt" />
+    <Text Include="..\..\tpslib\datatpslib.txt" />
+    <Text Include="..\..\tpslib\tpslib.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

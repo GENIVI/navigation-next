@@ -1,0 +1,74 @@
+{
+  "category_list" : [
+    {
+    "name" : [ {
+      "language" : "en-US",
+      "full_name" : "Restaurants"
+    } ],
+    "code" : "AE"
+      },
+      {
+        "name" : [ {
+      "language" : "en-US",
+      "full_name" : "Lodging"
+    } ],
+    "code" : "AH"
+      },
+{
+	  "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Fuel"
+        } ],
+        "code" : "ACC"
+      },
+{
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Theaters"
+        } ],
+        "code" : "ABE"
+      },
+      {
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Grocery Stores"
+        } ],
+        "code" : "AKD"
+      },
+      {
+            "name" : [ {
+      "language" : "en-US",
+      "full_name" : "Shopping/Retail"
+    } ],
+    "code" : "AK"
+      },
+      {
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Tourist Attractions"
+        } ],
+        "code" : "ALF"
+      },
+      {
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Charging Stations"
+        } ],
+        "code" : "ACP"
+      },
+      {
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Hospitals"
+        } ],
+        "code" : "ANB"
+      },
+      {
+                "name" : [ {
+          "language" : "en-US",
+          "full_name" : "Police Stations"
+        } ],
+        "code" : "AFC"
+      }
+    ]
+}

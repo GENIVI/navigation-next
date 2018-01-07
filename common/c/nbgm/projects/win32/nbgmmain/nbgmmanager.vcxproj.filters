@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3af16db9-8d96-4978-a363-cb849d403c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbgmmanager">
+      <UniqueIdentifier>{7e7f4f3e-d4f2-4082-9c3f-1a70e316011c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbgmmapdata">
+      <UniqueIdentifier>{989b574c-8947-4393-b3a4-d7eca68cc201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbgmservice">
+      <UniqueIdentifier>{91dff95a-e00a-4335-8260-a5797cc1d096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b6efb688-b033-4929-b8cd-322ee5aad04b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbgmmanager">
+      <UniqueIdentifier>{cbac6288-1c3d-40da-b6e8-12a6e39c0c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbgmmapdata">
+      <UniqueIdentifier>{a6237451-431c-4b9d-aff2-6215ae76c822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbgmservice">
+      <UniqueIdentifier>{143d331e-035e-4204-b2a6-25788b149393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{d8aca686-06d1-465d-9cca-b2f67be73570}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmavatarsetting.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcamerasetting.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcamerastate.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmconst.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewdatacache.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewimpl.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewimpltask.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapviewprofiler.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmmapviewprotected.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavecmview.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavvectorview.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmnavviewprotected.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmtaskqueue.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbrebinaryspatialdividemanager.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbrelinearspatialdividemanager.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmarray.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbinloader.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdom.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterial.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialfactory.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialmanager.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapmaterialutility.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnbmobject.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortiledata.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmanimation.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbuildmodelcontext.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmbuildutility.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmflag.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmgridentity.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmicon.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlabellayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlabellayertile.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutbuffer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutelement.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutmanager.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmlayoutpolyline.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmaplayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmaproadlabel.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavecmroutelayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnaviconlayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmnavvectorroutelayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmoptionallayerimpl.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpatharrowlayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpatharrowlayertile.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpoilayer.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpoilayertile.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpointlabel.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmpolyline2entity.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmrasterize.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmroadlabel.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmshield.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmsky.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmskywall.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmtilemaplayertile.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortile.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectortilebuilder.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmvectorvertexscale.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmavatar.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcompass.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcommon.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapcamerahelperimpl.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapcameraimpl.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmresourcemanager.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmfakemapview.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmmapdataimpl.h">
+      <Filter>Header Files\nbgmmapdata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdefaultoverlaymanager.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmdraworder.h">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcircleimpl.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmcustomobjectscontext.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\private\nbgmglowoverlay.h">
+      <Filter>Header Files\nbgmservice</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmfakemapview.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapview.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewdatacache.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewimpl.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewimpltask.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapviewprofiler.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavecmview.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavvectorview.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmnavview.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmtaskqueue.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbrebinaryspatialdividemanager.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbrelinearspatialdividemanager.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmarray.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmbinloader.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmdom.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmaphorizontallightsourcematerial.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterial.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialfactory.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialmanager.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapmaterialutility.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapoutlinedcolormaterial.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmpatterndashlinematerial.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortiledata.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortiledatacreator.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmvectortilemeshcreator.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmanimation.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmavatar.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmbuildutility.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmdebugpointlabel.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmflag.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmgridentity.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmicon.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabeldebugutil.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabellayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlabellayertile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutbuffer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutelement.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutmanager.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmlayoutpolyline.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmmaproadlabel.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnavecmroutelayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnaviconlayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmnavvectorroutelayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmoptionallayerimpl.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpatharrowlayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpatharrowlayertile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpoilayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpoilayertile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpointlabel.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmpolyline2entity.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmrasterize.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmroadlabel.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmshield.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmsky.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmskywall.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmstaticlabeltile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtileanimationlayerimpl.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtilemaplayer.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtilemaplayertile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmtransparentoverlay.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorareabuilder.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorroadbuilder.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectortile.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmvectorvertexscale.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmresourcemanager.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmnbmdata.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcompass.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapcamerahelperimpl.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmanager\nbgmmapcameraimpl.cpp">
+      <Filter>Source Files\nbgmmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmmapdata\nbgmmapdataimpl.cpp">
+      <Filter>Source Files\nbgmmapdata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmstaticpoi.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\util\nbgmmapscaleutility.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcircleimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcustomobjectscontext.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmrect2dimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmcustompin.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmservice\nbgmglowoverlay.cpp">
+      <Filter>Source Files\nbgmservice</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\nbgmmain\include\private\nbgmcommon.inl">
+      <Filter>Header Files\nbgmmanager</Filter>
+    </None>
+  </ItemGroup>
+</Project>

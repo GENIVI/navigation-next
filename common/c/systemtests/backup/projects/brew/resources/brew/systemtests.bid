@@ -1,0 +1,6 @@
+#ifndef SYSTEMTESTS
+#define SYSTEMTESTS
+
+#define AEECLSID_SYSTEMTESTS        0x22222222
+
+#endif //SYSTEMTESTS

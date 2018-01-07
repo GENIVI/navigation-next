@@ -1,0 +1,865 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * deque - Declaration and definition for the Standard Library deque class
+ *
+ * $Id: deque 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994
+ * Hewlett-Packard Company
+ *
+ * Permission to use, copy, modify, distribute and sell this software
+ * and its documentation for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Hewlett-Packard Company makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_DEQUE_INCLUDED
+#define _RWSTD_DEQUE_INCLUDED
+
+#include <limits>
+#include <memory>
+
+#include <rw/_algobase.h>
+#include <rw/_dispatch.h>
+#include <rw/_iterator.h>
+#include <rw/_defs.h>
+#include <rw/_error.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+template <class _TypeT, class _Allocator>
+class deque;
+
+template <class _TypeT, class _DiffT, class _Pointer,
+          class _Reference, class _Allocator>
+class __rw_deque_iter
+    : public iterator <random_access_iterator_tag, _TypeT, _DiffT,
+                       _Pointer, _Reference>
+{
+    typedef iterator <bidirectional_iterator_tag, _TypeT, _DiffT,
+                      _Pointer, _Reference>           _C_iter_base;
+public:
+
+    typedef _Allocator                               allocator_type;
+    typedef _TYPENAME allocator_type::size_type      size_type;
+    typedef _TYPENAME _C_iter_base::value_type       value_type;
+    typedef _TYPENAME _C_iter_base::difference_type  difference_type;
+    typedef _TYPENAME _C_iter_base::pointer          pointer;
+    typedef _TYPENAME _C_iter_base::reference        reference;
+
+    typedef random_access_iterator_tag               iterator_category;
+    
+    typedef __rw_deque_iter<value_type, difference_type,
+                            value_type*, value_type&, allocator_type>
+    _C_mutable_iter;
+
+    typedef _RWSTD_REBIND (allocator_type, value_type*)   _C_map_alloc_type;
+    typedef _TYPENAME _C_map_alloc_type::pointer          _C_map_pointer;
+
+    
+    static size_type _C_bufsize () {
+        // deque only uses __rw_new_capacity to retrieve the minimum
+        // allocation amount; this may be specialized to provide a
+        // customized minimum amount
+        return _RW::__rw_new_capacity(0, (deque<_TypeT, _Allocator>*)0);
+    }
+    
+    __rw_deque_iter () { }
+
+    // dummy first argument used to easily switch between
+    // iterators with and without support for debugging
+    __rw_deque_iter (pointer __x, _C_map_pointer __y)
+       : _C_current (__x), 
+          _C_first (__y ? *__y : 0), 
+          _C_last (__y ? *__y + _C_bufsize () : 0) , 
+         _C_node (__y) {
+        _RWSTD_ASSERT (__x && __y || !__x && !__y);
+    }
+
+    // no copy ctor other than the one below defined; will use
+    // a compiler generated one if __rw_deque_iter != _C_mutable_iter
+    __rw_deque_iter (const _C_mutable_iter &__rhs)
+        : _C_current (__rhs._C_current),
+          _C_first (__rhs._C_first), 
+          _C_last (__rhs._C_last),
+          _C_node (__rhs._C_node) { }
+    
+    __rw_deque_iter& operator++ () {
+        if (++_C_current == _C_last)
+            _C_last = (_C_current = _C_first = *++_C_node) + _C_bufsize ();
+        return *this;
+    }
+    
+    __rw_deque_iter& operator-- () {
+        if (_C_current == _C_first) {
+            _C_last = (_C_current = (_C_first = *--_C_node) + _C_bufsize ());
+        }
+        --_C_current;
+        return *this;
+    }
+    
+    __rw_deque_iter operator++ (int) {
+        __rw_deque_iter __tmp = *this;
+        return ++*this, __tmp;
+    }
+
+    __rw_deque_iter operator-- (int) {
+        __rw_deque_iter __tmp = *this;
+        return --*this, __tmp;
+    }
+
+    __rw_deque_iter& operator+= (difference_type __n);
+    
+    __rw_deque_iter& operator-= (difference_type __n) {
+        return *this += -__n;
+    }
+
+    __rw_deque_iter operator+ (difference_type __n) const {
+        return __rw_deque_iter (*this) += __n;
+    }
+
+    __rw_deque_iter operator- (difference_type __n) const {
+        return __rw_deque_iter (*this) -= __n;
+    }
+
+    reference operator* () const {
+        return *_C_current;
+    }
+
+    _RWSTD_OPERATOR_ARROW (pointer operator-> () const);
+    
+    reference operator[] (difference_type __n) const {
+        return *(*this + __n);
+    }
+
+    pointer        _C_current;
+    pointer        _C_first;
+    pointer        _C_last;
+    _C_map_pointer _C_node;
+};
+
+
+template <class _TypeT, class _DiffT, class _Pointer,
+           class _Reference, class _Allocator>
+inline __rw_deque_iter<_TypeT, _DiffT, _Pointer, _Reference, _Allocator>&
+__rw_deque_iter<_TypeT, _DiffT, _Pointer, _Reference, _Allocator>::
+operator+= (difference_type __n)
+{
+    difference_type __offset = __n + (_C_current - _C_first);
+    difference_type __jump   = __offset >= 0 ? __offset / _C_bufsize ()
+        : -(difference_type)((-__offset + _C_bufsize () - 1) / _C_bufsize ());
+
+    if (!__jump)
+        _C_current += __n;
+    else {
+        _C_first   = *(_C_node += __jump);
+        _C_last    = _C_first + _C_bufsize ();
+        _C_current = _C_first + (__offset - __jump * _C_bufsize ());
+    }
+    return *this;
+}
+
+
+// for symmetry
+template <class _TypeT, class _DiffT, class _Ptr, class _Ref, class _Alloc>
+inline __rw_deque_iter<_TypeT, _DiffT, _Ptr, _Ref, _Alloc>
+operator+ (_DiffT                                                     __lhs,
+           const __rw_deque_iter<_TypeT, _DiffT, _Ptr, _Ref, _Alloc> &__rhs)
+{
+    return __rhs + __lhs;
+}
+
+
+#define _RWSTD_DEQUE_ITER(n) \
+        __rw_deque_iter<_TypeT, _DiffT, _Ptr##n, _Ref##n, _Alloc>
+
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline _DiffT
+operator- (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return __x._C_node == __y._C_node  ? __x._C_current - __y._C_current 
+        : _DiffT (__x._C_bufsize () * (__x._C_node - __y._C_node - 1)
+           + (__x._C_current - __x._C_first) + (__y._C_last - __y._C_current));
+}
+
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator== (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return    __x._C_current == __y._C_current
+           || (   (   __x._C_current == __x._C_first
+                   || __y._C_current == __y._C_first)
+               && __x - __y == 0);
+}
+
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator< (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return __x._C_node == __y._C_node ? (__x._C_current < __y._C_current)
+        : (__x._C_node < __y._C_node);
+}
+
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator!= (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return !(__x == __y);
+}
+
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator<= (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return !(__y < __x);
+}
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator>= (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return !(__x < __y);
+}
+
+template <class _TypeT, class _DiffT,
+         class _Ptr1, class _Ref1, class _Ptr2, class _Ref2, class _Alloc>
+inline bool
+operator> (const _RWSTD_DEQUE_ITER(1) &__x, const _RWSTD_DEQUE_ITER(2) &__y)
+{
+    return __y < __x;
+}
+
+
+#undef _RWSTD_DEQUE_ITER
+
+
+template <class _TypeT, 
+          class _Allocator _RWSTD_COMPLEX_DEFAULT (allocator<_TypeT>) >
+class deque : private _Allocator
+{
+public:
+
+    typedef _TypeT                                    value_type;
+    typedef _Allocator                                allocator_type;
+    typedef _TYPENAME allocator_type::size_type       size_type;
+    typedef _TYPENAME allocator_type::difference_type difference_type;
+    typedef _TYPENAME allocator_type::pointer         pointer;
+    typedef _TYPENAME allocator_type::const_pointer   const_pointer;
+    typedef _TYPENAME allocator_type::reference       reference;
+    typedef _TYPENAME allocator_type::const_reference const_reference;
+
+    typedef _RWSTD_ALLOC_TYPE (allocator_type, value_type) _C_value_alloc_type;
+
+    // following two typedefs are used for convenience with debug iters
+    typedef __rw_deque_iter<value_type, difference_type, pointer,
+                            reference, allocator_type>         _C_deque_iter; 
+
+    typedef __rw_deque_iter<value_type, difference_type, const_pointer,
+                            const_reference, allocator_type>   _C_deque_citer;
+
+    typedef _RWSTD_REBIND (allocator_type, value_type*)   _C_map_alloc_type;
+
+    typedef _TYPENAME _C_map_alloc_type::pointer          _C_map_pointer;
+
+#ifndef _RWSTD_NO_DEBUG_ITER
+
+    typedef _RW::__rw_debug_iter<deque, _C_deque_iter, _C_deque_iter>
+    iterator;
+    
+    typedef _RW::__rw_debug_iter<deque, _C_deque_citer, _C_deque_iter>
+    const_iterator;
+    
+    iterator _C_make_iter (const _C_deque_iter&  __iter) { 
+        return iterator (*this, __iter);
+    }
+
+    const_iterator _C_make_iter (const _C_deque_citer& __citer) const {
+        return const_iterator (*this, __citer);
+    }
+
+#else   // if defined (_RWSTD_NO_DEBUG_ITER)
+    
+    typedef _C_deque_iter        iterator;
+    typedef _C_deque_citer       const_iterator;
+    
+    iterator _C_make_iter (const _C_deque_iter&  __iter) {
+        return __iter;
+    }
+
+    const_iterator _C_make_iter (const _C_deque_citer& __citer) const {
+        return __citer;
+    }
+
+#endif   // _RWSTD_NO_DEBUG_ITER
+
+    static size_type _C_bufsize () {
+        return _C_deque_iter::_C_bufsize ();
+    }
+
+#ifndef _RWSTD_NO_CLASS_PARTIAL_SPEC 
+
+    typedef _STD::reverse_iterator<const_iterator> const_reverse_iterator;
+    typedef _STD::reverse_iterator<iterator>       reverse_iterator;
+
+#else   // if defined (_RWSTD_NO_CLASS_PARTIAL_SPEC)
+
+    typedef _STD::reverse_iterator<const_iterator, 
+      random_access_iterator_tag, value_type, 
+      const_reference, const_pointer, difference_type> const_reverse_iterator;
+    typedef _STD::reverse_iterator<iterator, 
+      random_access_iterator_tag, value_type, 
+      reference, pointer, difference_type>             reverse_iterator;
+
+#endif   // _RWSTD_NO_CLASS_PARTIAL_SPEC 
+
+protected:
+
+    _C_deque_iter  _C_begin;
+    _C_deque_iter  _C_end;
+    size_type      _C_size;
+
+    _C_map_pointer _C_map;
+    size_type      _C_map_size;
+    
+    void _C_init () {
+        _C_begin =
+        _C_end   = _C_deque_iter (0, 0);
+        _C_size  = 0;
+        _C_map   = 0;
+    }
+
+    void _C_alloc_at_begin ();    
+
+    void _C_alloc_at_end ();
+
+    void _C_free_at_begin ();
+
+    void _C_free_at_end ();
+
+    void __insert_aux (iterator __pos, size_type __n, const_reference __val);
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+
+    template<class _InputIter>
+    void __insert_aux (iterator __pos,
+                       _InputIter __first, _InputIter __last,
+                       _RW_is_not_integer) {
+        __insert_aux2 (__pos, __first, __last);
+    }
+
+    template<class _InputIter>
+    void __insert_aux (iterator __pos,
+                       _InputIter __first, _InputIter __last,
+                       _RW_is_integer) {
+        __insert_aux (__pos, (size_type)__first, __last);
+    }
+
+    template<class _InputIter>
+    void __insert_aux2 (iterator, _InputIter, _InputIter);
+
+    template <class _InputIter>
+    void __insert_interval_dispatch (iterator __pos,
+                                     _InputIter __first,
+                                     _InputIter __last,
+                                     forward_iterator_tag) {
+        typedef _TYPENAME _RWdispatch<_InputIter>::_RWtype _RWtype;
+        __insert_aux (__pos, __first, __last, _RWtype ());
+    }
+
+    template <class _InputIter>
+    void __insert_interval_dispatch (iterator   __pos,
+                                     _InputIter __first, 
+                                     _InputIter __last,
+                                     input_iterator_tag) {
+        _RWSTD_ASSERT_RANGE (__pos, end ());
+        _RWSTD_ASSERT_RANGE (__first, __last);
+        for ( ; __first != __last; ++__pos, ++__first)
+            __pos = insert (__pos, *__first); 
+    }
+ 
+#endif   // _RWSTD_NO_MEMBER_TEMPLATES
+
+public:
+
+    _EXPLICIT
+    deque (const allocator_type &__alloc = allocator_type ())
+      : allocator_type (__alloc), _C_map_size (0) {
+        _C_init ();
+    }
+
+    _EXPLICIT
+    deque (size_type __n, const_reference __val = value_type (), 
+           const allocator_type& __alloc = allocator_type ())
+        : allocator_type (__alloc), _C_map_size (0) {
+        _C_init ();
+        insert (begin (), __n, __val);
+    }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+
+    template<class _InputIter>
+    deque (_InputIter __first, _InputIter __last,
+           const allocator_type& __al = allocator_type ())
+        : allocator_type (__al), _C_map_size (0) {
+        _C_init ();
+
+        _RWSTD_ASSERT_RANGE (__first, __last);
+
+        typedef _TYPENAME _RWdispatch<_InputIter>::_RWtype _RWtype;
+        __insert_aux (begin (), __first, __last, _RWtype ());
+    }
+
+#else   // if defined (_RWSTD_NO_MEMBER_TEMPLATES)
+
+    deque (const_iterator __first, const_iterator __last,
+           const allocator_type& __alloc = allocator_type ())
+        : allocator_type (__alloc), _C_map_size (0) {
+        _C_init ();
+
+        _RWSTD_ASSERT_RANGE (__first, __last);
+
+        copy (__first, __last, back_inserter (*this));
+    }
+    
+    deque (const_pointer __first, const_pointer __last,
+           const allocator_type& __alloc = allocator_type ())
+        : allocator_type (__alloc), _C_map_size (0) {
+        _C_init ();
+
+        _RWSTD_ASSERT_RANGE (__first, __last);
+
+        copy (__first, __last, back_inserter (*this));
+    }
+
+#endif // _RWSTD_NO_MEMBER_TEMPLATES
+
+
+    deque (const deque &__x)
+        : allocator_type (__x.get_allocator ()), _C_map_size (0) {
+        _C_init ();
+        copy (__x.begin (), __x.end (), back_inserter (*this));
+    }
+
+    ~deque () {
+        while (!empty ())
+            pop_front ();
+    }
+
+    deque& operator= (const deque &__x) {
+        if (this != &__x) {
+            if (size () >= __x.size ()) 
+                erase (copy (__x.begin (), __x.end (), begin ()), end ());
+            else 
+                copy (__x.begin () + size (), __x.end (), 
+                      inserter (*this,
+                                copy (__x.begin (),
+                                      __x.begin () + size (), begin ())));
+        }
+        return *this;
+    }
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+
+    template<class _InputIter>
+    void assign (_InputIter __first, _InputIter __last) {
+        _RWSTD_ASSERT_RANGE (__first, __last);
+        
+        clear ();
+        typedef _TYPENAME _RWdispatch<_InputIter>::_RWtype _RWtype;
+        __insert_aux (begin (), __first, __last, _RWtype ());
+    }
+
+    void assign (size_type __n, const_reference __t) {
+        clear ();
+        insert (begin (), __n, __t);
+    }
+
+#else   // if defined (_RWSTD_NO_MEMBER_TEMPLATES)
+
+    void assign (const_iterator __first, const_iterator __last) {
+        _RWSTD_ASSERT_RANGE (__first, __last);
+
+        clear ();
+        insert (begin (), __first, __last);
+    }
+
+    void assign (const_pointer __first, const_pointer __last) {
+        clear ();
+        insert (begin (), __first, __last);
+    }
+
+    void assign (size_type __n, const_reference __x) {
+        clear ();
+        insert (begin (), __n, __x);
+    }
+
+#endif // _RWSTD_NO_MEMBER_TEMPLATES
+
+    allocator_type get_allocator () const {
+        return *this;
+    }
+
+    iterator begin () {
+        return _C_make_iter (_C_begin);
+    }
+
+    const_iterator begin () const {
+        return _C_make_iter (_C_begin);
+    }
+
+    iterator end () {
+        return _C_make_iter(_C_end);
+    }
+
+    const_iterator end () const {
+        return _C_make_iter (_C_end);
+    }
+
+    reverse_iterator rbegin () {
+        return reverse_iterator (end ());
+    }
+
+    const_reverse_iterator rbegin () const { 
+        return const_reverse_iterator (end ());
+    }
+    
+    reverse_iterator rend () { 
+        return reverse_iterator (begin ());
+    }
+
+    const_reverse_iterator rend () const { 
+        return const_reverse_iterator (begin ());
+    }
+
+    bool empty () const {
+        return 0 == size ();
+    }
+
+    size_type size () const {
+        return _C_size;
+    }
+
+    size_type max_size () const {
+        return _RWSTD_VALUE_ALLOC (_C_value_alloc_type, max_size ());
+    }
+
+    void resize (size_type, value_type);
+
+    void resize (size_type __size) {
+        resize (__size, value_type ());
+    }
+
+    reference operator[] (size_type __n) {
+#ifdef _RWSTD_BOUNDS_CHECKING
+        return at (__n);
+#else
+        return *(begin () + __n);
+#endif
+    }
+
+    const_reference operator[] (size_type __n) const {
+#ifdef _RWSTD_BOUNDS_CHECKING
+        return at (__n);
+#else
+        return *(begin () + __n);
+#endif
+    }
+
+    const_reference at (size_type __n) const { 
+        return _RWSTD_CONST_CAST (deque*, this)->at (__n);
+    }
+
+    reference at (size_type __n) {
+        _RWSTD_REQUIRES (__n < size (),
+                         (_RWSTD_ERROR_OUT_OF_RANGE,
+                          _RWSTD_FUNC ("deque::at(size_type)"), __n, size ()));
+        return *(begin () + __n);
+    }
+
+    reference front () {
+        _RWSTD_ASSERT (!empty ());
+        return *begin ();
+    }
+
+    const_reference front () const {
+        _RWSTD_ASSERT (!empty ());
+        return *begin ();
+    }
+
+    reference back () {
+        _RWSTD_ASSERT (!empty ());
+        return *(end () - 1);
+    }
+
+    const_reference back () const {
+        _RWSTD_ASSERT (!empty ());
+        return *(end () - 1);
+    }
+
+    void push_front (const_reference);
+
+    void push_back (const_reference);
+
+    iterator insert (iterator, const_reference);
+
+
+#ifndef _RWSTD_NO_MEMBER_TEMPLATES
+
+    template <class _InputIter>
+    void insert (iterator __pos, _InputIter __first, _InputIter __last) {
+        insert (__pos, __first, __last, _RWSTD_DISPATCH (_InputIter));
+    }
+
+    template <class _InputIter>
+    void insert (iterator __pos, _InputIter __first, _InputIter __last,
+                 _RWSTD_DISPATCH_INT (false)) {
+        _RWSTD_ASSERT_RANGE (begin (), __pos);
+        _RWSTD_ASSERT_RANGE (__first, __last);
+
+        __insert_interval_dispatch (__pos, __first, __last,
+                                    _RWSTD_ITERATOR_CATEGORY (_InputIter,
+                                                              __first));
+    }
+
+    void insert (iterator __pos, size_type __n, const_reference __val,
+                 _RWSTD_DISPATCH_INT (true) = 0) {
+        __insert_aux (__pos, __n, __val);
+    }
+
+#else   // if defined (_RWSTD_NO_MEMBER_TEMPLATES)
+
+    void insert (iterator __pos, size_type __n, const_reference __val) {
+        __insert_aux (__pos, __n, __val);
+    }
+
+    void insert (iterator, const_pointer, const_pointer);
+
+    void insert (iterator, const_iterator, const_iterator);
+
+#endif // _RWSTD_NO_MEMBER_TEMPLATES
+
+    void pop_front ();
+
+    void pop_back ();
+
+    iterator erase (iterator);
+
+    iterator erase (iterator, iterator);    
+
+    void swap (deque &);
+
+    void clear () {
+        erase (begin (), end ());
+        _RWSTD_ASSERT (empty ());
+    }
+};
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::push_front (const_reference __val)
+{
+    if (   empty ()
+        || _C_begin._C_current == _C_begin._C_first) 
+        _C_alloc_at_begin ();
+
+    --_C_begin._C_current;
+
+    _RWSTD_VALUE_ALLOC (_C_value_alloc_type,
+                        construct (_C_begin._C_current, __val));
+    ++_C_size;
+
+    _RWSTD_ASSERT (!empty ());
+}
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::push_back (const_reference __val)
+{
+    if (   empty ()
+        || _C_end._C_current == _C_end._C_last) 
+        _C_alloc_at_end ();
+    _RWSTD_VALUE_ALLOC (_C_value_alloc_type,
+                        construct (_C_end._C_current, __val));
+    ++_C_end._C_current;
+    ++_C_size;
+
+    _RWSTD_ASSERT (!empty ());
+}
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::pop_front ()
+{
+    _RWSTD_ASSERT (!empty ());
+
+    _C_deque_iter __tmp = _C_begin;
+    ++_C_begin._C_current;
+    --_C_size; 
+    _RWSTD_VALUE_ALLOC (_C_value_alloc_type,
+                        destroy (__tmp._C_current));
+    if (   empty ()
+        || _C_begin._C_current == _C_begin._C_last) 
+        _C_free_at_begin ();
+}
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::pop_back ()
+{
+    _RWSTD_ASSERT (!empty ());
+
+    --_C_end._C_current;
+    --_C_size; 
+    _RWSTD_VALUE_ALLOC (_C_value_alloc_type,
+                        destroy (_C_end._C_current));
+    if (   empty ()
+        || _C_end._C_current == _C_end._C_first) 
+        _C_free_at_end ();
+}
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::swap (deque<_TypeT, _Allocator>& __x)
+{
+    if (get_allocator () == __x.get_allocator ()) {
+        _STD::swap (_C_begin,    __x._C_begin);
+        _STD::swap (_C_end,      __x._C_end);
+        _STD::swap (_C_size,     __x._C_size);
+        _STD::swap (_C_map,      __x._C_map);
+        _STD::swap (_C_map_size, __x._C_map_size);
+    }
+    else {
+        deque __tmp = *this;
+        *this = __x;
+        __x = __tmp;
+    }
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator== (const deque<_TypeT, _Allocator>& __x,
+            const deque<_TypeT, _Allocator>& __y)
+{
+    return    __x.size () == __y.size ()
+           && equal (__x.begin (), __x.end (), __y.begin ());
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator< (const deque<_TypeT, _Allocator>& __x,
+           const deque<_TypeT, _Allocator>& __y)
+{
+    return lexicographical_compare (__x.begin (), __x.end (),
+                                    __y.begin (), __y.end ());
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator!= (const deque<_TypeT, _Allocator>& __x,
+            const deque<_TypeT, _Allocator>& __y)
+{
+    return !(__x == __y);
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator<= (const deque<_TypeT, _Allocator>& __x,
+            const deque<_TypeT, _Allocator>& __y)
+{
+    return !(__y < __x);
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator> (const deque<_TypeT, _Allocator>& __x,
+           const deque<_TypeT, _Allocator>& __y)
+{
+    return __y < __x;
+}
+
+
+template <class _TypeT, class _Allocator>
+inline bool
+operator>= (const deque<_TypeT, _Allocator>& __x,
+            const deque<_TypeT, _Allocator>& __y)
+{
+    return !(__x < __y);
+}
+
+
+template <class _TypeT, class _Allocator>
+inline void
+deque<_TypeT, _Allocator>::resize (size_type __size, value_type __val)
+{
+    if (__size > size ())
+        insert (end (), __size - size (), __val);
+    else if (__size < size ())
+        erase (begin () + __size, end ());
+}
+
+
+_RWSTD_NAMESPACE_END   // end
+
+
+#ifdef _RWSTD_COMPILE_INSTANTIATE
+#  include <deque.cc>
+#endif
+
+
+#ifndef _RWSTD_NO_STL_SPECIALIZATION
+#  include "deque_spec.h"
+#endif   // _RWSTD_NO_STL_SPECIALIZATION
+
+
+#endif   // _RWSTD_DEQUE_INCLUDED

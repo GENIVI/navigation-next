@@ -1,0 +1,8 @@
+Job Log for changelog-ncdb_release_ubuntux64_2.45.1.47-to-ncdb_release_ubuntux64_2.45.1.59.txt
+=====================================================================================
+
+
+
+  *** No Jobs were closed between labels ***
+================================
+Summary:

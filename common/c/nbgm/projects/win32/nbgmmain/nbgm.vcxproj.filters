@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a9df42c6-5c62-41bc-b3d9-ea56bf48644c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{c0d3020a-1f92-4c35-a0d5-f01fa3d46389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK Header">
+      <UniqueIdentifier>{2fc71bc0-85f9-4859-af7d-22c9c7de31a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgm.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmavatarsetting.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmbinarybuffer.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmconfig.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmdecelerateinterpolator.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmdevicelocation.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgminterpolator.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmlinearinterpolator.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapview.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapviewprofile.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmnavdata.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmnavview.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmoptionallayer.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmrendersystemtype.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmtileanimationlayer.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmtypes.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmversion.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmexp.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmmapviewconfig.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmnavviewconfig.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmplatformconfig.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmresourcemanagerconfig.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmversioninfo.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmprotected.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmrendercontext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapcamera.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapcamerahelper.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapscaleutility.h">
+      <Filter>SDK Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\nbgmmain\src\win32\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\util\nbgmversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbgm.def" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+/****************************************************************************
+**
+** Copyright (C) 2017 Pelagicore AG
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Pelagicore Application Manager.
+**
+** $QT_BEGIN_LICENSE:FDL-QTAS$
+** Commercial License Usage
+** Licensees holding valid commercial Qt Automotive Suite licenses may use
+** this file in accordance with the commercial license agreement provided
+** with the Software or, alternatively, in accordance with the terms
+** contained in a written agreement between you and The Qt Company.  For
+** licensing terms and conditions see https://www.qt.io/terms-conditions.
+** For further information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+\page appman-controller.html
+\title Controller
+\brief A command-line utility for triggering the installation of a specified
+       package on the target device.
+\ingroup qtappman-tools
+
+The \c{appman-controller} is a command-line utility that can be used by the developer (or indirectly
+by other tools) on the target device to control the application-manager without directly talking to
+its D-Bus interface.
+
+The following commands are available:
+
+\table
+\header
+    \li Action
+    \li Options
+    \li Description
+\row
+    \li \span {style="white-space: nowrap"} {\c install-package}
+    \li \c{<package>}
+    \li Installs the package given on the command-line. If the package file is specified as \c{-},
+        the tool will try to read the package from \c stdin.
+\row
+    \li \span {style="white-space: nowrap"} {\c start-application}
+    \li \c{<application-id> [document-url]}
+    \li Starts the application identified by \c application-id within the application-manager. The
+        \c document-url parameter is optional.
+\row
+    \li \span {style="white-space: nowrap"} {\c debug-application}
+    \li \c{<debug-wrapper-specification> <application-id> [document-url]}
+    \li Starts the application identified by \c application-id within the application-manager using
+        a debug-wrapper: see \l{DebugWrappers}{the debugging documentation} for more information on
+        this specification string. The \c document-url parameter is optional.
+\row
+    \li \span {style="white-space: nowrap"} {\c list-applications}
+    \li (none)
+    \li Outputs all available application ids on the console (one per line).
+\row
+    \li \span {style="white-space: nowrap"} {\c show-application}
+    \li \c{<application-id>}
+    \li Shows the current meta-data of the given application in YAML format.
+\endtable
+
+The \c{appman-controller} naturally supports the standard Unix \c{--help} command-line option.
+*/

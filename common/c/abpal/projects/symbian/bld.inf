@@ -1,0 +1,16 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+abpal.mmp
+
+PRJ_EXPORTS
+..\..\include\abpalaudio.h			\Epoc32\include\NIM\CoreTech\nimabpal\abpalaudio.h
+..\..\include\abpaldoxygengroups.h			\Epoc32\include\NIM\CoreTech\nimabpal\abpaldoxygengroups.h
+..\..\include\abpalgps.h			\Epoc32\include\NIM\CoreTech\nimabpal\abpalgps.h
+..\..\include\abpalversion.h			\Epoc32\include\NIM\CoreTech\nimabpal\abpalversion.h
+
+..\..\include\symbian\abpalexp.h			\Epoc32\include\NIM\CoreTech\nimabpal\symbian\abpalexp.h

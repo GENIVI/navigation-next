@@ -1,0 +1,19 @@
+Core Release: NCDB Ubuntu x64 2.45.0 Fisker Feature Branch - 2.45.1.59
+
+Label: ncdb_release_ubuntux64_2.45.1.59
+
+Branch:
+    //depot/core/corelib/feature_150819_fisker/...
+//depot/core/thirdparty/main/...
+//depot/core/utility/main/...
+
+Build Location:
+    \\avfsp1\share\Builds\Parabuild\CORE\linux_ubuntu_hybrid\2.45.1.59
+
+SCM Info Location:
+    \\avfsp1\share\Builds\Parabuild\CORE\linux_ubuntu_hybrid\2.45.1.59\scm
+
+Parabuild Reference: CORE-NCDB-2-45-0-UBUNTUX64-MN (Build10)
+
+Regards,
+SCM Team

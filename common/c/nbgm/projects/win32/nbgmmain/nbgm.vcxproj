@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{024224E3-6641-493A-989A-690C9D4D26EA}</ProjectGuid>
+    <RootNamespace>nbgm</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <Import Project="..\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <Import Project="..\nbgm.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\nbgmmain\build\version.bat $(ProjectDir)..\..\..\nbgmmain win32</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;NBGM_DYNAMIC;SUPPORT_GLES20;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\rendersystem\gl\include;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\d3d9\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>nbpal.lib;opengl32.lib;glu32.lib;d3d9.lib;glew32.lib;libpng.lib;libjpeg.lib;zlib.lib;freetype.lib;nbre.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <Version>
+      </Version>
+      <AdditionalLibraryDirectories>$(OutDir);$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_BRANCH)\output\win32\DebugStatic;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\output\win32\DebugStatic;$(ProjectDir)..\..\..\nbre\output\win32\$(Configuration);$(ProjectDir)..\..\..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>nbgm.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\nbgmmain\build\version.bat $(ProjectDir)..\..\..\nbgmmain win32</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;NBGM_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\d3d9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>nbpal.lib;opengl32.lib;glu32.lib;d3d9.lib;glew32.lib;libpng.lib;libjpeg.lib;zlib.lib;freetype.lib;nbre.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <Version>
+      </Version>
+      <AdditionalLibraryDirectories>$(OutDir);$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_BRANCH)\output\win32\ReleaseStatic;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_BRANCH)\output\win32\ReleaseStatic;$(ProjectDir)..\..\..\nbre\output\win32\$(Configuration);$(ProjectDir)..\..\..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>nbgm.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <PreBuildEvent>
+      <Command> call $(ProjectDir)..\..\..\nbgmmain\build\version.bat $(ProjectDir)..\..\..\nbgmmain win32</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;SUPPORT_GLES20;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;$(ProjectDir)..\..\..\rendersystem\gl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libpng.lib;libjpeg.lib;zlib.lib;freetype.lib;nbre.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\DirectX-2010-June\lib\x86;$(ProjectDir)..\..\..\nbre\output\win32\$(Configuration);$(ProjectDir)..\..\..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\nbgmmain\build\version.bat $(ProjectDir)..\..\..\nbgmmain win32</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;SUPPORT_GLES20;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\rendersystem\gl\include;$(ProjectDir)..\..\..\rendersystem\gles2\include;$(ProjectDir)..\..\..\rendersystem\gles2\include\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libpng.lib;libjpeg.lib;zlib.lib;freetype.lib;nbre.lib;nbgmmanager.lib;nbred3d9renderpal.lib;nbregles2renderpal.lib;nbregles2renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\DirectX-2010-June\lib\x86;$(ProjectDir)..\..\..\nbre\output\win32\$(Configuration);$(ProjectDir)..\..\..\rendersystem\output\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgm.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmavatarsetting.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmbinarybuffer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmconfig.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmdecelerateinterpolator.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmdevicelocation.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgminterpolator.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmlinearinterpolator.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapcamera.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapcamerahelper.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapscaleutility.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapview.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmmapviewprofile.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmnavdata.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmnavview.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmoptionallayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmrendersystemtype.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmtileanimationlayer.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmtypes.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\nbgmversion.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmprotected.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\protected\nbgmrendercontext.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmexp.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmmapviewconfig.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmnavviewconfig.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmplatformconfig.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmresourcemanagerconfig.h" />
+    <ClInclude Include="..\..\..\nbgmmain\include\win32\nbgmversioninfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbgm.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\nbgmmain\src\nbgmimpl.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\util\nbgmversion.cpp" />
+    <ClCompile Include="..\..\..\nbgmmain\src\win32\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

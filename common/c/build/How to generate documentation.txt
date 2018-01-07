@@ -1,0 +1,16 @@
+Instructions on how to build the CCC Documentation:
+
+
+Set DOXYGEN environment variables:
+
+   SET DOXYGEN="C:\Program Files\Doxygen\bin"
+
+
+
+To run:
+
+   generate_dox.bat interface platform
+
+
+
+See results in your_workspace\client\core\dox\

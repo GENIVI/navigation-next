@@ -1,0 +1,6 @@
+export VERSION_FILE=version_qt_linux_x86_64.txt
+export NCDB_LIBRARY_PATH=./corelib/ncdb/yocto/intel_nuc_64/2.45.1.1000
+export NBM_INCLUDE_PATH=$NCDB_LIBRARY_PATH
+export TARGET=linux_x86_64
+export PLATFORM=linux
+export ARCHITECTURE=x86_64

@@ -1,0 +1,14 @@
+formatVersion: 1
+formatType: am-application
+---
+id:      'com.qtcompany.carinfo'
+icon:    'icon.png'
+code:    'Carinfo.qml'
+runtime: 'qml'
+name:
+  en: 'Car info'
+  de: 'Auto info'
+
+categories: [ 'app', 'carinfo' ]
+
+built-in: yes

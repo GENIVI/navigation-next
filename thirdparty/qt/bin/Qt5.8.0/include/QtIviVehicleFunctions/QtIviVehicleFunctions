@@ -1,0 +1,10 @@
+#ifndef QT_QTIVIVEHICLEFUNCTIONS_MODULE_H
+#define QT_QTIVIVEHICLEFUNCTIONS_MODULE_H
+#include <QtIviVehicleFunctions/QtIviVehicleFunctionsDepends>
+#include "qtivivehiclefunctionsglobal.h"
+#include "qiviclimatecontrol.h"
+#include "qiviclimatecontrolbackendinterface.h"
+#include "qiviwindowcontrol.h"
+#include "qiviwindowcontrolbackendinterface.h"
+#include "qtivivehiclefunctionsversion.h"
+#endif

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A902FEBD-8D16-4409-8A51-E2578471E0C8}</ProjectGuid>
+    <RootNamespace>map</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\generated;$(SolutionDir)include\protected\map;$(SolutionDir)src\map\tempmobius;$(SolutionDir)src\map\layermanager;$(SolutionDir)src\map\tilemanager;$(SolutionDir)src\map\mapview;$(SolutionDir)src\protocol;$(NIMNBUI_INC)\protected;$(NIMNBUI_INC)\win32;$(NIMNBGMMAIN_INC);$(NIMNBGMMAIN_INC)\win32;$(NIMTHIRDPARTY_INC)\..\lp150b15;$(NIMTHIRDPARTY_INC)\..\tinyxml;$(NIMTHIRDPARTY_INC)\..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>nbm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NIMNBM_LIB)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\generated;$(SolutionDir)include\protected\map;$(SolutionDir)src\map\tempmobius;$(SolutionDir)src\map\layermanager;$(SolutionDir)src\map\tilemanager;$(SolutionDir)src\map\mapview;$(SolutionDir)src\protocol;$(NIMNBUI_INC)\protected;$(NIMNBUI_INC)\win32;$(NIMNBGMMAIN_INC);$(NIMNBGMMAIN_INC)\win32;$(NIMTHIRDPARTY_INC)\..\lp150b15;$(NIMTHIRDPARTY_INC)\..\tinyxml;$(NIMTHIRDPARTY_INC)\..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\generated;$(SolutionDir)include\protected\map;$(SolutionDir)src\map\layermanager;$(SolutionDir)src\map\tilemanager;$(SolutionDir)src\map\mapview;$(SolutionDir)src\analytics;$(SolutionDir)src\protocol;$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\include;$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\include\protected;$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\include\win32;$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include;$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include\win32;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\lp150b15;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\tinyxml;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\zlib;$(SolutionDir)..\..\common\$(NIM_CCC_BRANCH)\include\protected;$(NIM_NBM_PATH)\include;$(NIM_NCDB_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706;4244</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(NIMNBM_LIB)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>NBM.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\generated;$(SolutionDir)include\protected\map;$(SolutionDir)src\map\layermanager;$(SolutionDir)src\map\tilemanager;$(SolutionDir)src\analytics;$(SolutionDir)src\map\mapview;$(SolutionDir)src\protocol;$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\include\protected;$(SolutionDir)..\..\nbui\$(NIM_CCC_BRANCH)\include\win32;$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include;$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include\win32;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\lp150b15;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\tinyxml;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\zlib;$(SolutionDir)..\..\common\$(NIM_CCC_BRANCH)\include\protected;$(NIM_NBM_PATH)\include;$(NIM_NBM_PATH)\include;$(NIM_NCDB_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706;4244;4512;4189;4389;4018</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(NIMNBM_LIB)\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>NBM.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\map\layermanager\AggregateLayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\AnimationLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\AnimationLayerAgent.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\AnimationTileCallback.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\CommonMaterialLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\CustomLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\CustomLayerManagerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\DAMConfiguration.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\DAMUtilityImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\FrameListLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\FrameListLayerDecorator.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\FrameListTileCallback.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GenericTileCallback.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeographicLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeographicPolylineLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeographicPrivate.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeographyLayerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeographyManagerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeoPolylineImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LamProcessor.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LayerAgentImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LayerAvailabilityMatrixLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LayerIdGenerator.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\LocalLayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\MapLegendInfoImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\MetadataConfiguration.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\MetadataProcessor.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\NBPng.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OffboardLayerListener.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OffboardLayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OffboardTileType.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OnboardLayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OnboardTileType.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\OptionalLayersAgentImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\PinLayerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\PinManagerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\PinMaterialParser.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\RasterTileConverter.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\RefreshLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\RefreshTileCallback.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\RouteLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\RouteManagerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\TileKey.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\TileRefresher.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\TileServicesConfiguration.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\ToggleableLayerProvider.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\TrafficIncidentLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\TrafficManagerImpl.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayer.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayerManager.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayerWithLAM.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\Frame.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapServicesConfigurationImpl.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapView.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewAnimation.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewAnimationLayer.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewCamera.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewGestureHandler.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewLayerCallback.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewPinHandler.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewProfiling.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewTask.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewTileCallback.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\NBGMViewController.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\CachedTileOperationCallback.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\CachingTileCallbackWithRequest.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\CachingTileManager.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\OffboardTileManager.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\OffboardTileRequest.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\OnboardTileManager.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\TileCallbackWithRequest.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\TileConverter.cpp" />
+    <ClCompile Include="..\..\src\map\tilemanager\TileImpl.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\PinCushionImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\map\layermanager\AggregateLayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayerAgent.h" />
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayerListener.h" />
+    <ClInclude Include="..\..\src\map\layermanager\AnimationTileCallback.h" />
+    <ClInclude Include="..\..\src\map\layermanager\BubbleListenerInterface.h" />
+    <ClInclude Include="..\..\src\map\layermanager\CommonMaterialLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\DAMUtilityImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\FrameListLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\FrameListLayerDecorator.h" />
+    <ClInclude Include="..\..\src\map\layermanager\FrameListListener.h" />
+    <ClInclude Include="..\..\src\map\layermanager\FrameListTileCallback.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GenericTileCallback.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographicLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographicPolylineLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographicPrivate.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographyLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographyLayerImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographyManager.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeographyManagerImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\GeoPolylineImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LamProcessor.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LayerAgentImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LayerAvailabilityMatrixLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LayerFunctors.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LayerIdGenerator.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\LocalLayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\MapLegendInfoImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\MetadataProcessor.h" />
+    <ClInclude Include="..\..\src\map\layermanager\NBPng.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OffboardLayerListener.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OffboardLayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OffboardTileType.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OnboardLayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OnboardTileType.h" />
+    <ClInclude Include="..\..\src\map\layermanager\OptionalLayersAgentImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\PinLayerImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\PinMaterialParser.h" />
+    <ClInclude Include="..\..\src\map\layermanager\RasterTileConverter.h" />
+    <ClInclude Include="..\..\src\map\layermanager\RefreshLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\RefreshTileCallback.h" />
+    <ClInclude Include="..\..\src\map\layermanager\RouteLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\RouteManagerImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\TileRefresher.h" />
+    <ClInclude Include="..\..\src\map\layermanager\ToggleableLayerProvider.h" />
+    <ClInclude Include="..\..\src\map\layermanager\TrafficIncidentLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\TrafficIncidentListener.h" />
+    <ClInclude Include="..\..\src\map\layermanager\TrafficManagerImpl.h" />
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayer.h" />
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayerManager.h" />
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayerWithLAM.h" />
+    <ClInclude Include="..\..\src\map\mapview\Frame.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapServicesConfigurationListener.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapView.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewAnimation.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewAnimationLayer.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewCamera.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewCameraListener.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewGestureHandler.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewLayerCallback.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewPinHandler.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewProfiling.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewTask.h" />
+    <ClInclude Include="..\..\src\map\mapview\MapViewTileCallback.h" />
+    <ClInclude Include="..\..\src\map\mapview\NBGMViewController.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\CachedTileOperationCallback.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\CachingTileCallbackWithRequest.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\CachingTileManager.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\OffboardTileManager.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\OffboardTileRequest.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\OnboardTileManager.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\TileCallbackWithRequest.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\TileConverter.h" />
+    <ClInclude Include="..\..\src\map\tilemanager\TileImpl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,5 @@
+Please sync //depot/client/resources/ folder up
+All filesets are obtained from //depot/client/resources/
+Set default language in current_language.txt file. It applies also in code of System tests (see g_TestOptions.currentLanguage).
+Set current voice version and style. It applies also in code of System tests (see g_TestOptions.voiceStyle).
+Set branch name for resources in filesets_branch.txt

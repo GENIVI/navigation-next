@@ -1,0 +1,14 @@
+QT.ivicore_private.VERSION = 1.0.0
+QT.ivicore_private.MAJOR_VERSION = 1
+QT.ivicore_private.MINOR_VERSION = 0
+QT.ivicore_private.PATCH_VERSION = 0
+QT.ivicore_private.name = QtIviCore
+QT.ivicore_private.module =
+QT.ivicore_private.libs = $$QT_MODULE_LIB_BASE
+QT.ivicore_private.includes = $$QT_MODULE_INCLUDE_BASE/QtIviCore/1.0.0 $$QT_MODULE_INCLUDE_BASE/QtIviCore/1.0.0/QtIviCore
+QT.ivicore_private.frameworks =
+QT.ivicore_private.depends = core_private qml_private ivicore
+QT.ivicore_private.uses =
+QT.ivicore_private.module_config = v2 internal_module
+QT.ivicore_private.enabled_features =
+QT.ivicore_private.disabled_features =

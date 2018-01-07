@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NIM_CCC_BRANCH>feature_140523_hybrid_phase2</NIM_CCC_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\include\private;$(SolutionDir)\include\protected;$(SolutionDir)\include\win32;$(SolutionDir)\src\winmobile\util;$(SolutionDir)\src\win32\util;$(SolutionDir)\src\common;$(SolutionDir)\src\win32\pal;$(SolutionDir)\include\nbpal;$(SolutionDir)\src\common\taskqueue;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PAL_BUILD;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_CCC_BRANCH">
+      <Value>$(NIM_CCC_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,62 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+abservices.mmp
+
+PRJ_EXPORTS
+..\..\include\abauthenticationhandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abauthenticationhandler.h
+..\..\include\abauthenticationinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abauthenticationinformation.h
+..\..\include\abauthenticationparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abauthenticationparameters.h
+..\..\include\abdatastorehandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abdatastorehandler.h
+..\..\include\abdatastoreinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abdatastoreinformation.h
+..\..\include\abdatastoreparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abdatastoreparameters.h
+..\..\include\abdoxygengroups.h			\Epoc32\include\NIM\CoreTech\nimabservices\abdoxygengroups.h
+..\..\include\abershandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abershandler.h
+..\..\include\abersinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abersinformation.h
+..\..\include\abersparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abersparameters.h
+..\..\include\abfilesethandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesethandler.h
+..\..\include\abfilesetinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesetinformation.h
+..\..\include\abfilesetparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesetparameters.h
+..\..\include\abfilesetstatushandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesetstatushandler.h
+..\..\include\abfilesetstatusinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesetstatusinformation.h
+..\..\include\abfilesetstatusparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abfilesetstatusparameters.h
+..\..\include\ablicensehandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\ablicensehandler.h
+..\..\include\ablicenseinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\ablicenseinformation.h
+..\..\include\ablicenseparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\ablicenseparameters.h
+..\..\include\abnetworkconfiguration.h			\Epoc32\include\NIM\CoreTech\nimabservices\abnetworkconfiguration.h
+..\..\include\abprofilehandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abprofilehandler.h
+..\..\include\abprofileinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abprofileinformation.h
+..\..\include\abprofileparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abprofileparameters.h
+..\..\include\abqalog.h			\Epoc32\include\NIM\CoreTech\nimabservices\abqalog.h
+..\..\include\abqaloghandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abqaloghandler.h
+..\..\include\abqaloginformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abqaloginformation.h
+..\..\include\abqalogparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abqalogparameters.h
+..\..\include\abservermessagehandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abservermessagehandler.h
+..\..\include\abservermessageinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abservermessageinformation.h
+..\..\include\abservermessageparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abservermessageparameters.h
+..\..\include\abserverversionhandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abserverversionhandler.h
+..\..\include\abserverversioninformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abserverversioninformation.h
+..\..\include\abserverversionparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abserverversionparameters.h
+..\..\include\absharehandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\absharehandler.h
+..\..\include\abshareinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abshareinformation.h
+..\..\include\abshareparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abshareparameters.h
+..\..\include\absms.h			\Epoc32\include\NIM\CoreTech\nimabservices\absms.h
+..\..\include\abspeechrecognitionhandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abspeechrecognitionhandler.h
+..\..\include\abspeechrecognitioninformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\abspeechrecognitioninformation.h
+..\..\include\abspeechrecognitionparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abspeechrecognitionparameters.h
+..\..\include\abspeechstatisticshandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\abspeechstatisticshandler.h
+..\..\include\abspeechstatisticsparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\abspeechstatisticsparameters.h
+..\..\include\absynchronizationhandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationhandler.h
+..\..\include\absynchronizationinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationinformation.h
+..\..\include\absynchronizationparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationparameters.h
+..\..\include\absynchronizationstatushandler.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationstatushandler.h
+..\..\include\absynchronizationstatusinformation.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationstatusinformation.h
+..\..\include\absynchronizationstatusparameters.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationstatusparameters.h
+..\..\include\absynchronizationtypes.h			\Epoc32\include\NIM\CoreTech\nimabservices\absynchronizationtypes.h
+..\..\include\abversion.h			\Epoc32\include\NIM\CoreTech\nimabservices\abversion.h
+
+..\..\include\symbian\abexp.h			\Epoc32\include\NIM\CoreTech\nimabservices\symbian\abexp.h

@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\nbre">
+      <UniqueIdentifier>{6e49d030-c14e-4229-8c56-0c57ecfab0ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbrecore">
+      <UniqueIdentifier>{6ef1ba58-f840-48be-bc8e-cf2868986af2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbrecore">
+      <UniqueIdentifier>{d8950813-4ea7-4eb2-81ac-a40dc718f806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbre">
+      <UniqueIdentifier>{44a629f8-e233-410e-85af-6a570e1feba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbredebug">
+      <UniqueIdentifier>{19da89e6-1cb4-42b4-95db-925493b05d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbredebug">
+      <UniqueIdentifier>{41c5dc40-b753-4641-afbe-9f6cd234c5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbrerenderpal">
+      <UniqueIdentifier>{64a4fb9e-8471-4487-b1aa-205c7f27ab9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbrerenderpal">
+      <UniqueIdentifier>{ccc8ad71-a709-40fb-b835-1ba61d77da92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbreresource">
+      <UniqueIdentifier>{0cba0b44-0ec2-4632-b7a9-f91e6e5427c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbreresource">
+      <UniqueIdentifier>{50784ef2-dfb1-44bd-b119-a5afe00357e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nbrescene">
+      <UniqueIdentifier>{3ac7b4d2-5fa2-4a5a-a5d6-a8638cc6a419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nbrescene">
+      <UniqueIdentifier>{ff2f01f8-f869-4ce0-8dab-1c31c7147e64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\nbrefilestream.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\nbreiostream.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\nbrelog.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\nbremath.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\nbrememory.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\nbrememorystream.cpp">
+      <Filter>Source Files\nbrecore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nbre\nbrecamera.cpp">
+      <Filter>Source Files\nbre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nbre\nbrefrustum.cpp">
+      <Filter>Source Files\nbre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nbre\nbrelightnode.cpp">
+      <Filter>Source Files\nbre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nbre\nbrerenderengine.cpp">
+      <Filter>Source Files\nbre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\nbrecameradebug.cpp">
+      <Filter>Source Files\nbredebug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\nbredebugboundingbox.cpp">
+      <Filter>Source Files\nbredebug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\nbredebugfrustum.cpp">
+      <Filter>Source Files\nbredebug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\nbredebugray.cpp">
+      <Filter>Source Files\nbredebug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\nbrespatialdividemanagerdebug.cpp">
+      <Filter>Source Files\nbredebug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\renderpal\nbrehardwareindexbuffer.cpp">
+      <Filter>Source Files\nbrerenderpal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\renderpal\nbrerendertarget.cpp">
+      <Filter>Source Files\nbrerenderpal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\renderpal\nbrevertexindexdata.cpp">
+      <Filter>Source Files\nbrerenderpal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbredefaultshadergroup.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrefont.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrefontmanager.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrefreetypefont.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbreglyph.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbreglyphatlas.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbreimage.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrematerial.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbremesh.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrepackingtree.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrepacktextureimage.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrepngcodec.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbrepngtextureimage.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbreshader.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbreshadermanager.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbresubmesh.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbretexture.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbretexturemanager.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\resource\nbretextureptr.cpp">
+      <Filter>Source Files\nbreresource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrebillboardentity.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrebillboardnode.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbredefaultspatialdividemanager.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbreentity.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrenode.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbreoverlay.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrerenderoperation.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrerendersurface.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrescenemanager.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbresubentity.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbresurfacemanager.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbresurfacesubview.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbretextentity.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbretextpath3dentity.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbreveiwport.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrevertexscale.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\scene\nbrezone.cpp">
+      <Filter>Source Files\nbrescene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\private\nbrecamera.h">
+      <Filter>Header Files\nbre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefrustum.h">
+      <Filter>Header Files\nbre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrelightnode.h">
+      <Filter>Header Files\nbre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerenderengine.h">
+      <Filter>Header Files\nbre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreaxisalignedbox2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreaxisalignedbox3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrebuffer.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrecache.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrecachestrategy.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreclipping.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrecommon.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbredebuglog.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefilestream.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefrustum3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreintersection.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreiostream.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrelinearinterpolate.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrelog.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbremath.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbremathlib.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrematrix3x3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrematrix4x4.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrememory.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrememorystream.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreorientation.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreplane.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrepolyline2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrepolyline3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreray2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreray3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresegment2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresegment3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresharedptr.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresigleton.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresphere3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretransformation.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretriangle2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretriangle3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretypes.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrevector2.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrevector3.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrevector4.h">
+      <Filter>Header Files\nbrecore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\debug\nbrecameradebug.h">
+      <Filter>Header Files\nbredebug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\debug\nbredebugboundingbox.h">
+      <Filter>Header Files\nbredebug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\debug\nbredebugfrustum.h">
+      <Filter>Header Files\nbredebug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\debug\nbredebugray.h">
+      <Filter>Header Files\nbredebug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\debug\nbrespatialdividemanagerdebug.h">
+      <Filter>Header Files\nbredebug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrecolor.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbregpuprogram.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrehardwarebuffer.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrehardwareindexbuffer.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrehardwarevertexbuffer.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrelight.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerendercommon.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerenderpal.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerendertarget.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretexturestate.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrevertexindexdata.h">
+      <Filter>Header Files\nbrerenderpal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefont.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefontmanager.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefontmaterial.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrefreetypefont.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreglyph.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreglyphatlas.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreimage.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreimagecodec.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreitextureimage.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrematerial.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbremesh.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrepass.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrepngcodec.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrepngtextureimage.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreshader.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreshadermanager.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresubmesh.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretexture.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretexturemanager.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretextureptr.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretextureunit.h">
+      <Filter>Header Files\nbreresource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrebillboardentity.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrebillboardnode.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbredefaultspatialdividemanager.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreentity.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreipassoperation.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreitextureanimation.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbremovableobject.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrenode.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreoverlay.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerenderoperation.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrerendersurface.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrescenemanager.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrespatialobject.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresubentity.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresurfacemanager.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbresurfacesubview.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretextentity.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbretextpath3dentity.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbreveiwport.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrevisitor.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrezone.h">
+      <Filter>Header Files\nbrescene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\private\nbreaxisalignedbox2.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreaxisalignedbox3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreaxisalignedbox3i.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrecache.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreclipping.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrefrustum3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreintersection.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreiostream.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbremath.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrematrix3x3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrematrix4x4.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreplane.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrepolyline2.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrepolyline3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreray2.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbreray3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbresegment2.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbresegment3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbresphere3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbretransformation.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrevector2.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrevector3.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+    <None Include="..\..\include\private\nbrevector4.inl">
+      <Filter>Header Files\nbrecore</Filter>
+    </None>
+  </ItemGroup>
+</Project>

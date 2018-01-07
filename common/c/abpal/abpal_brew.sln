@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "abpal", "projects\brew\abpal.vcproj", "{C213612A-1E2E-4E32-8619-71E84607FDEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27588F49-B395-425D-943E-0A82423D57EE} = {27588F49-B395-425D-943E-0A82423D57EE}
+		{9C791679-D5A8-4D5C-90B1-79B4CAC22876} = {9C791679-D5A8-4D5C-90B1-79B4CAC22876}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "abpalgps", "projects\brew\abpalgps.vcproj", "{9C791679-D5A8-4D5C-90B1-79B4CAC22876}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "abpalaudio", "projects\brew\abpalaudio.vcproj", "{27588F49-B395-425D-943E-0A82423D57EE}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectName0 = Perforce\u0020Project
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		SccProjectUniqueName1 = projects\\brew\\abpal.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = projects\\brew\\
+		SccProjectUniqueName2 = projects\\brew\\abpalgps.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = projects\\brew\\
+		SccProjectUniqueName3 = projects\\brew\\abpalaudio.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = projects\\brew\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C213612A-1E2E-4E32-8619-71E84607FDEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C213612A-1E2E-4E32-8619-71E84607FDEF}.Debug|Win32.Build.0 = Debug|Win32
+		{C213612A-1E2E-4E32-8619-71E84607FDEF}.Release|Win32.ActiveCfg = Release|Win32
+		{C213612A-1E2E-4E32-8619-71E84607FDEF}.Release|Win32.Build.0 = Release|Win32
+		{9C791679-D5A8-4D5C-90B1-79B4CAC22876}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C791679-D5A8-4D5C-90B1-79B4CAC22876}.Debug|Win32.Build.0 = Debug|Win32
+		{9C791679-D5A8-4D5C-90B1-79B4CAC22876}.Release|Win32.ActiveCfg = Release|Win32
+		{9C791679-D5A8-4D5C-90B1-79B4CAC22876}.Release|Win32.Build.0 = Release|Win32
+		{27588F49-B395-425D-943E-0A82423D57EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27588F49-B395-425D-943E-0A82423D57EE}.Debug|Win32.Build.0 = Debug|Win32
+		{27588F49-B395-425D-943E-0A82423D57EE}.Release|Win32.ActiveCfg = Release|Win32
+		{27588F49-B395-425D-943E-0A82423D57EE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

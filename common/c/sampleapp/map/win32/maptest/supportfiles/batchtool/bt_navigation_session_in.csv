@@ -1,0 +1,21 @@
+#CaseId,Route-Style-Optimize,Route-Style-Vehicle,Route-Style-Avoid,Want-Maneuvers,Destination-Lat,Destination-Lon,Destination-location,Origin-Lat,Origin-Lon,Gps,POI,TRAFFIC,ENHANCED,CAMERA
+1,,,,,33.80772,-118.27785,,33.73601,-118.29347,1.gps,,,,
+2,,,,,33.87311,-118.29975,,33.87406,-118.24236,2.gps,,,,
+3,,,,,33.756026,-118.188045,,34.020061,-118.181568,3.gps,,,,
+4,fastest,car,,,33.756026,-118.188045,,34.020061,-118.181568,4.gps,TRUE,TRUE,,
+5,fastest,car,,tunel,38.907018,-77.03502,,38.888576,-77.02688,5.gps,TRUE,,,TRUE
+6,fastest,car,,ferry,33.60316, -117.90176,,33.60614, -117.8966,6.gps,TRUE,,TRUE,
+7,fastest,car,,bridge,39.26777649, -81.56221008,,39.26817703, -81.56118774,7.gps,TRUE,TRUE,TRUE,
+8,fastest,car,,bridge+ferry,44.045921, -73.417961,,44.023524, -73.420886,8.gps,TRUE,,TRUE,TRUE
+9,fastest,car,toll,,33.6805, -117.86,,33.5987, -117.746,9.gps,,,,
+10,fastest,car,hov,,33.784315, -117.831241,,33.909513, -117.558864,10.gps,TRUE,,,
+11,fastest,car,,,33.57054773, -117.710143,,33.62380207, -117.7308655,11.gps,,TRUE,,
+12,shortest,truck,,,33.63539,-117.70758,,33.70424,-117.79681,12.gps,true,true,,true
+13,fastest,truck,,,36.081,-115.143,,33.558931,-117.729034,13.gps,,true,true,true
+14,fastest,truck,,tunnel,40.72193,-74.008247,,40.738771,-74.060529,14.gps,,,true,
+15,fastest,pedestrian,,,37.784018,-122.415982,,37.781419,-122.424806,15.gps,true,,true,
+16,shortest,pedestrian,,,33.477492,-117.720609,,33.487434,-117.725913,16.gps,true,,,
+17,shortest,bicycle,,,33.647,-117.67755,,33.65011,-117.62115,17.gps,true,,,
+18,fastest,car,,,34.189705,-119.177126,,33.396367,-117.591938,18.gps,true,,,
+19,fastest,car,hov,,33.784315,-117.831241,,33.909513,-117.558864,19.gps,true,,,
+20,fastest,car,,,38.42640305,-82.45195007,,38.42617035,-82.45186615,20.gps,,true,,true

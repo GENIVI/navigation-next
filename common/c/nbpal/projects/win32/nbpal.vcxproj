@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F51AFB0A-88BD-467C-92BB-765F66CF1F3D}</ProjectGuid>
+    <RootNamespace>nbpal</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbpal.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbpal.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbpal.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbpal.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)\build\version.bat $(SolutionDir) win32</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\winmobile\timer;$(SolutionDir)\src\winmobile\pal;$(SolutionDir)\src\win32\taskqueue;$(SolutionDir)\src\common\taskqueue;$(SolutionDir)\src\common\posix;$(SolutionDir)\src\common\finishfunction;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\freetype-2.4.4\include;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\glew-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_LIB;_USRDLL;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader />
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <ResourceOutputFileName />
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>ws2_32.lib;wininet.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;database.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nbpal.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile />
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)\build\version.bat $(SolutionDir) win32</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\winmobile\timer;$(SolutionDir)\src\winmobile\pal;$(SolutionDir)\src\win32\taskqueue;$(SolutionDir)\src\common\taskqueue;$(SolutionDir)\src\common\posix;$(SolutionDir)\src\common\finishfunction;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\freetype-2.4.4\include;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\glew-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_LIB;_USRDLL;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>ws2_32.lib;wininet.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;database.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nbpal.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Link>
+      <ModuleDefinitionFile>nbpal.def</ModuleDefinitionFile>
+      <AdditionalDependencies>sqlite.lib;database.lib;freetype.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;ws2_32.lib;wininet.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\ReleaseStatic</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)\build\version.bat $(SolutionDir) win32</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\winmobile\timer;$(SolutionDir)\src\winmobile\pal;$(SolutionDir)\src\win32\taskqueue;$(SolutionDir)\src\common\taskqueue;$(SolutionDir)\src\common\posix;$(SolutionDir)\src\common\finishfunction;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\freetype-2.4.4\include;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\glew-1.7.0\include;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_LIB;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName />
+    </ResourceCompile>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>ws2_32.lib;wininet.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;database.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nbpal.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>Shlwapi.lib;ws2_32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)\build\version.bat $(SolutionDir) win32</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\winmobile\timer;$(SolutionDir)\src\winmobile\pal;$(SolutionDir)\src\win32\taskqueue;$(SolutionDir)\src\common\taskqueue;$(SolutionDir)\src\common\posix;$(SolutionDir)\src\common\finishfunction;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\freetype-2.4.4\include;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\glew-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>ws2_32.lib;wininet.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;database.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nbpal.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>Shlwapi.lib;ws2_32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\ReleaseStatic</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite.lib;database.lib;freetype.lib;clock.lib;file.lib;stdlib.lib;timer.lib;network.lib;unzip.lib;synchronization.lib;taskqueue.lib;radio.lib;image.lib;myplaces.lib;ws2_32.lib;wininet.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>nbpal.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\util\bq.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\gl\palgl2.cpp" />
+    <ClCompile Include="..\..\src\win32\testlog\paltestlog.cpp" />
+    <ClCompile Include="..\..\src\win32\triangulation\paltriangulation.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionbase.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctiondnsresult.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionhttpdata.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionhttpstatus.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionmanager.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnetworkdata.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnetworkstatus.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnormal.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\main.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\palimpl.cpp" />
+    <ClCompile Include="..\..\src\winmobile\util\paldebuglog.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\paldisplay.cpp" />
+    <ClCompile Include="..\..\src\win32\pallog.c" />
+    <ClCompile Include="..\..\src\winmobile\util\palstdlib.cpp" />
+    <ClCompile Include="..\..\src\util\palversion.c" />
+    <ClCompile Include="..\..\src\win32\font\palfont.cpp" />
+    <ClCompile Include="..\..\src\win32\font\palfreetypeengine.cpp" />
+    <ClCompile Include="..\..\src\win32\util\heapsort.c" />
+    <ClCompile Include="..\..\src\win32\util\palvector.c" />
+    <ClCompile Include="..\..\src\winmobile\pal\wm_global.cpp" />
+    <ClCompile Include="..\..\src\winmobile\pal\wm_util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbpal.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\paltriangulation.h" />
+    <ClInclude Include="..\..\src\win32\font\palfreetypeengine.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionbase.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctiondnsresult.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionhttpdata.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionhttpstatus.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionmanager.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnetworkdata.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnetworkstatus.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnormal.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\main.h" />
+    <ClInclude Include="..\..\src\winmobile\util\paldebug.h" />
+    <ClInclude Include="..\..\include\palevent.h" />
+    <ClInclude Include="..\..\include\win32\palgl.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\palimpl.h" />
+    <ClInclude Include="..\..\include\pallog.h" />
+    <ClInclude Include="..\..\src\win32\util\palqueue.h" />
+    <ClInclude Include="..\..\include\palversion.h" />
+    <ClInclude Include="..\..\resources\win32\resource.h" />
+    <ClInclude Include="..\..\include\win32\version.h" />
+    <ClInclude Include="..\..\include\private\bq.h" />
+    <ClInclude Include="..\..\src\win32\util\heapsort.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\wm_global.h" />
+    <ClInclude Include="..\..\src\winmobile\pal\wm_util.h" />
+    <ClInclude Include="..\..\include\pal.h" />
+    <ClInclude Include="..\..\include\win32\palconfig.h" />
+    <ClInclude Include="..\..\include\paldebuglog.h" />
+    <ClInclude Include="..\..\include\paldisplay.h" />
+    <ClInclude Include="..\..\include\palerror.h" />
+    <ClInclude Include="..\..\include\win32\palexp.h" />
+    <ClInclude Include="..\..\include\win32\palmath.h" />
+    <ClInclude Include="..\..\include\palnet.h" />
+    <ClInclude Include="..\..\include\win32\palstdlib.h" />
+    <ClInclude Include="..\..\include\win32\paltypes.h" />
+    <ClInclude Include="..\..\include\win32\palvector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\win32\version.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(IntDir);$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir);$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(IntDir);$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir);$(SolutionDir)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\resources\win32\version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="clock.vcxproj">
+      <Project>{05bcae1f-d6bc-4fa6-970a-7c7a1e0f3bd6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="database.vcxproj">
+      <Project>{951b6bd1-cb53-42db-9ffc-dd2b4eda3192}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="file.vcxproj">
+      <Project>{1434abe7-de7e-4dc1-919a-073b574fe32b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="image.vcxproj">
+      <Project>{c3e24c67-d0f6-453c-83cb-89b2f5d835ab}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="myplaces.vcxproj">
+      <Project>{628e9a3f-37e5-43bf-a663-5e24a16b5729}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="network.vcxproj">
+      <Project>{41fccdbf-1121-4fde-9b8c-b2a611b114d8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="radio.vcxproj">
+      <Project>{d017f479-705d-49e2-8426-76c17bf31bc3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="stdlib.vcxproj">
+      <Project>{2de3255f-8722-4905-8abe-f0ea5d6ec153}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="synchronization.vcxproj">
+      <Project>{6031af7d-cca3-4f84-832c-bb563ddeb3ab}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="taskqueue.vcxproj">
+      <Project>{c3df7c0c-d02f-4cdb-be43-ff4e58286eb9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="timer.vcxproj">
+      <Project>{b8d8de31-fc60-4d5c-9cf4-ed91d73b2e6a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="unzip.vcxproj">
+      <Project>{c5c484a3-1b1a-44f3-9ea1-2c91e0bc51cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

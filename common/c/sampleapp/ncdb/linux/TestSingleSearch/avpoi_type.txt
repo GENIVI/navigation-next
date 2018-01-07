@@ -1,0 +1,16 @@
+# PageID and NumResults
+#3|Shell|37.809916|-122.262726|10.0|5|2|||||
+# Main cat 0="restaurants and Bars", sub cat -1=All sub categories
+3||33.567815|-117.724194||5|1||0|-1|
+# Main cat 0=restaurants, sub cat 4=Bars
+3||33.567815|-117.724194||5|1||0|4|
+# Main cat 0=restaurants, sub cat 9=coffee
+3||33.567815|-117.724194||5|1||0|9|
+# Main cat 0=restaurants, sub cat 19=Indian
+3||33.567815|-117.724194||5|1||0|19|
+# Main cat 0=restaurants, sub cat 38=Thai
+3||33.567815|-117.724194||5|1||0|38|
+# 2.) Main cat 6="Banks and ATMs", sub cat -1=All sub categories
+3||33.567815|-117.724194||5|1||6|-1|
+# 2.) Main cat 6="Banks and ATMs", sub cat 2="Standalone ATMs"
+3||33.567815|-117.724194||5|1||6|2|

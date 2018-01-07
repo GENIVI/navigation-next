@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B227C5E19A1DECD00E69C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B227C5D19A1DECD00E69C77 /* Foundation.framework */; };
+		2B227C6C19A1DECD00E69C77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B227C6B19A1DECD00E69C77 /* XCTest.framework */; };
+		2B227C6D19A1DECD00E69C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B227C5D19A1DECD00E69C77 /* Foundation.framework */; };
+		2B227C6F19A1DECD00E69C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B227C6E19A1DECD00E69C77 /* UIKit.framework */; };
+		2B227C7219A1DECD00E69C77 /* liblibxml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B227C5A19A1DECD00E69C77 /* liblibxml2.a */; };
+		2B227C7819A1DECD00E69C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B227C7619A1DECD00E69C77 /* InfoPlist.strings */; };
+		2B227C7A19A1DECD00E69C77 /* libxml2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C7919A1DECD00E69C77 /* libxml2Tests.m */; };
+		2B227CC719A1DEFE00E69C77 /* buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9819A1DEFE00E69C77 /* buf.c */; };
+		2B227CC819A1DEFE00E69C77 /* c14n.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9919A1DEFE00E69C77 /* c14n.c */; };
+		2B227CC919A1DEFE00E69C77 /* catalog.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9A19A1DEFE00E69C77 /* catalog.c */; };
+		2B227CCA19A1DEFE00E69C77 /* chvalid.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9B19A1DEFE00E69C77 /* chvalid.c */; };
+		2B227CCB19A1DEFE00E69C77 /* debugXML.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9C19A1DEFE00E69C77 /* debugXML.c */; };
+		2B227CCC19A1DEFE00E69C77 /* dict.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9D19A1DEFE00E69C77 /* dict.c */; };
+		2B227CCD19A1DEFE00E69C77 /* DOCBparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9E19A1DEFE00E69C77 /* DOCBparser.c */; };
+		2B227CCE19A1DEFE00E69C77 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227C9F19A1DEFE00E69C77 /* encoding.c */; };
+		2B227CCF19A1DEFE00E69C77 /* entities.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA019A1DEFE00E69C77 /* entities.c */; };
+		2B227CD019A1DEFE00E69C77 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA119A1DEFE00E69C77 /* error.c */; };
+		2B227CD119A1DEFE00E69C77 /* globals.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA219A1DEFE00E69C77 /* globals.c */; };
+		2B227CD219A1DEFE00E69C77 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA319A1DEFE00E69C77 /* hash.c */; };
+		2B227CD319A1DEFE00E69C77 /* HTMLparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA419A1DEFE00E69C77 /* HTMLparser.c */; };
+		2B227CD419A1DEFE00E69C77 /* HTMLtree.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA519A1DEFE00E69C77 /* HTMLtree.c */; };
+		2B227CD519A1DEFE00E69C77 /* legacy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA619A1DEFE00E69C77 /* legacy.c */; };
+		2B227CD619A1DEFE00E69C77 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA719A1DEFE00E69C77 /* list.c */; };
+		2B227CD719A1DEFE00E69C77 /* nanoftp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA819A1DEFE00E69C77 /* nanoftp.c */; };
+		2B227CD819A1DEFE00E69C77 /* nanohttp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CA919A1DEFE00E69C77 /* nanohttp.c */; };
+		2B227CD919A1DEFE00E69C77 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAA19A1DEFE00E69C77 /* parser.c */; };
+		2B227CDA19A1DEFE00E69C77 /* parserInternals.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAB19A1DEFE00E69C77 /* parserInternals.c */; };
+		2B227CDB19A1DEFE00E69C77 /* pattern.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAC19A1DEFE00E69C77 /* pattern.c */; };
+		2B227CDC19A1DEFE00E69C77 /* relaxng.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAD19A1DEFE00E69C77 /* relaxng.c */; };
+		2B227CDD19A1DEFE00E69C77 /* SAX.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAE19A1DEFE00E69C77 /* SAX.c */; };
+		2B227CDE19A1DEFE00E69C77 /* SAX2.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CAF19A1DEFE00E69C77 /* SAX2.c */; };
+		2B227CDF19A1DEFE00E69C77 /* threads.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB019A1DEFE00E69C77 /* threads.c */; };
+		2B227CE019A1DEFE00E69C77 /* tree.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB119A1DEFE00E69C77 /* tree.c */; };
+		2B227CE119A1DEFE00E69C77 /* trionan.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB219A1DEFE00E69C77 /* trionan.c */; };
+		2B227CE219A1DEFE00E69C77 /* triostr.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB319A1DEFE00E69C77 /* triostr.c */; };
+		2B227CE319A1DEFE00E69C77 /* uri.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB419A1DEFE00E69C77 /* uri.c */; };
+		2B227CE419A1DEFE00E69C77 /* valid.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB519A1DEFE00E69C77 /* valid.c */; };
+		2B227CE519A1DEFE00E69C77 /* xinclude.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB619A1DEFE00E69C77 /* xinclude.c */; };
+		2B227CE619A1DEFE00E69C77 /* xlink.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB719A1DEFE00E69C77 /* xlink.c */; };
+		2B227CE719A1DEFE00E69C77 /* xmlcatalog.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB819A1DEFE00E69C77 /* xmlcatalog.c */; };
+		2B227CE819A1DEFE00E69C77 /* xmlIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CB919A1DEFE00E69C77 /* xmlIO.c */; };
+		2B227CE919A1DEFE00E69C77 /* xmlmemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBA19A1DEFE00E69C77 /* xmlmemory.c */; };
+		2B227CEA19A1DEFE00E69C77 /* xmlmodule.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBB19A1DEFE00E69C77 /* xmlmodule.c */; };
+		2B227CEB19A1DEFE00E69C77 /* xmlreader.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBC19A1DEFE00E69C77 /* xmlreader.c */; };
+		2B227CEC19A1DEFE00E69C77 /* xmlregexp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBD19A1DEFE00E69C77 /* xmlregexp.c */; };
+		2B227CED19A1DEFE00E69C77 /* xmlsave.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBE19A1DEFE00E69C77 /* xmlsave.c */; };
+		2B227CEE19A1DEFE00E69C77 /* xmlschemas.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CBF19A1DEFE00E69C77 /* xmlschemas.c */; };
+		2B227CEF19A1DEFE00E69C77 /* xmlschemastypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC019A1DEFE00E69C77 /* xmlschemastypes.c */; };
+		2B227CF019A1DEFE00E69C77 /* xmlstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC119A1DEFE00E69C77 /* xmlstring.c */; };
+		2B227CF119A1DEFE00E69C77 /* xmlunicode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC219A1DEFE00E69C77 /* xmlunicode.c */; };
+		2B227CF219A1DEFE00E69C77 /* xmlwriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC319A1DEFE00E69C77 /* xmlwriter.c */; };
+		2B227CF319A1DEFE00E69C77 /* xpath.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC419A1DEFE00E69C77 /* xpath.c */; };
+		2B227CF419A1DEFE00E69C77 /* xpointer.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC519A1DEFE00E69C77 /* xpointer.c */; };
+		2B227CF519A1DEFE00E69C77 /* xzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B227CC619A1DEFE00E69C77 /* xzlib.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B227C7019A1DECD00E69C77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B227C5219A1DECD00E69C77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B227C5919A1DECD00E69C77;
+			remoteInfo = libxml2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B227C5819A1DECD00E69C77 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B227C5A19A1DECD00E69C77 /* liblibxml2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibxml2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B227C5D19A1DECD00E69C77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2B227C6119A1DECD00E69C77 /* libxml2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libxml2-Prefix.pch"; sourceTree = "<group>"; };
+		2B227C6A19A1DECD00E69C77 /* libxml2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libxml2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B227C6B19A1DECD00E69C77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2B227C6E19A1DECD00E69C77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2B227C7519A1DECD00E69C77 /* libxml2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libxml2Tests-Info.plist"; sourceTree = "<group>"; };
+		2B227C7719A1DECD00E69C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B227C7919A1DECD00E69C77 /* libxml2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libxml2Tests.m; sourceTree = "<group>"; };
+		2B227C8C19A1DEFE00E69C77 /* buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buf.h; path = ../../../libxml2/buf.h; sourceTree = "<group>"; };
+		2B227C8D19A1DEFE00E69C77 /* elfgcchack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = elfgcchack.h; path = ../../../libxml2/elfgcchack.h; sourceTree = "<group>"; };
+		2B227C8E19A1DEFE00E69C77 /* enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enc.h; path = ../../../libxml2/enc.h; sourceTree = "<group>"; };
+		2B227C8F19A1DEFE00E69C77 /* libxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libxml.h; path = ../../../libxml2/libxml.h; sourceTree = "<group>"; };
+		2B227C9019A1DEFE00E69C77 /* save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = save.h; path = ../../../libxml2/save.h; sourceTree = "<group>"; };
+		2B227C9119A1DEFE00E69C77 /* timsort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timsort.h; path = ../../../libxml2/timsort.h; sourceTree = "<group>"; };
+		2B227C9219A1DEFE00E69C77 /* trio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trio.h; path = ../../../libxml2/trio.h; sourceTree = "<group>"; };
+		2B227C9319A1DEFE00E69C77 /* triodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = triodef.h; path = ../../../libxml2/triodef.h; sourceTree = "<group>"; };
+		2B227C9419A1DEFE00E69C77 /* trionan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trionan.h; path = ../../../libxml2/trionan.h; sourceTree = "<group>"; };
+		2B227C9519A1DEFE00E69C77 /* triop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = triop.h; path = ../../../libxml2/triop.h; sourceTree = "<group>"; };
+		2B227C9619A1DEFE00E69C77 /* triostr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = triostr.h; path = ../../../libxml2/triostr.h; sourceTree = "<group>"; };
+		2B227C9719A1DEFE00E69C77 /* xzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xzlib.h; path = ../../../libxml2/xzlib.h; sourceTree = "<group>"; };
+		2B227C9819A1DEFE00E69C77 /* buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buf.c; path = ../../../libxml2/buf.c; sourceTree = "<group>"; };
+		2B227C9919A1DEFE00E69C77 /* c14n.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c14n.c; path = ../../../libxml2/c14n.c; sourceTree = "<group>"; };
+		2B227C9A19A1DEFE00E69C77 /* catalog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = catalog.c; path = ../../../libxml2/catalog.c; sourceTree = "<group>"; };
+		2B227C9B19A1DEFE00E69C77 /* chvalid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = chvalid.c; path = ../../../libxml2/chvalid.c; sourceTree = "<group>"; };
+		2B227C9C19A1DEFE00E69C77 /* debugXML.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = debugXML.c; path = ../../../libxml2/debugXML.c; sourceTree = "<group>"; };
+		2B227C9D19A1DEFE00E69C77 /* dict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dict.c; path = ../../../libxml2/dict.c; sourceTree = "<group>"; };
+		2B227C9E19A1DEFE00E69C77 /* DOCBparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DOCBparser.c; path = ../../../libxml2/DOCBparser.c; sourceTree = "<group>"; };
+		2B227C9F19A1DEFE00E69C77 /* encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoding.c; path = ../../../libxml2/encoding.c; sourceTree = "<group>"; };
+		2B227CA019A1DEFE00E69C77 /* entities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = entities.c; path = ../../../libxml2/entities.c; sourceTree = "<group>"; };
+		2B227CA119A1DEFE00E69C77 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = error.c; path = ../../../libxml2/error.c; sourceTree = "<group>"; };
+		2B227CA219A1DEFE00E69C77 /* globals.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = globals.c; path = ../../../libxml2/globals.c; sourceTree = "<group>"; };
+		2B227CA319A1DEFE00E69C77 /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hash.c; path = ../../../libxml2/hash.c; sourceTree = "<group>"; };
+		2B227CA419A1DEFE00E69C77 /* HTMLparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTMLparser.c; path = ../../../libxml2/HTMLparser.c; sourceTree = "<group>"; };
+		2B227CA519A1DEFE00E69C77 /* HTMLtree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTMLtree.c; path = ../../../libxml2/HTMLtree.c; sourceTree = "<group>"; };
+		2B227CA619A1DEFE00E69C77 /* legacy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = legacy.c; path = ../../../libxml2/legacy.c; sourceTree = "<group>"; };
+		2B227CA719A1DEFE00E69C77 /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = list.c; path = ../../../libxml2/list.c; sourceTree = "<group>"; };
+		2B227CA819A1DEFE00E69C77 /* nanoftp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nanoftp.c; path = ../../../libxml2/nanoftp.c; sourceTree = "<group>"; };
+		2B227CA919A1DEFE00E69C77 /* nanohttp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nanohttp.c; path = ../../../libxml2/nanohttp.c; sourceTree = "<group>"; };
+		2B227CAA19A1DEFE00E69C77 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = parser.c; path = ../../../libxml2/parser.c; sourceTree = "<group>"; };
+		2B227CAB19A1DEFE00E69C77 /* parserInternals.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = parserInternals.c; path = ../../../libxml2/parserInternals.c; sourceTree = "<group>"; };
+		2B227CAC19A1DEFE00E69C77 /* pattern.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pattern.c; path = ../../../libxml2/pattern.c; sourceTree = "<group>"; };
+		2B227CAD19A1DEFE00E69C77 /* relaxng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = relaxng.c; path = ../../../libxml2/relaxng.c; sourceTree = "<group>"; };
+		2B227CAE19A1DEFE00E69C77 /* SAX.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SAX.c; path = ../../../libxml2/SAX.c; sourceTree = "<group>"; };
+		2B227CAF19A1DEFE00E69C77 /* SAX2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SAX2.c; path = ../../../libxml2/SAX2.c; sourceTree = "<group>"; };
+		2B227CB019A1DEFE00E69C77 /* threads.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = threads.c; path = ../../../libxml2/threads.c; sourceTree = "<group>"; };
+		2B227CB119A1DEFE00E69C77 /* tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tree.c; path = ../../../libxml2/tree.c; sourceTree = "<group>"; };
+		2B227CB219A1DEFE00E69C77 /* trionan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trionan.c; path = ../../../libxml2/trionan.c; sourceTree = "<group>"; };
+		2B227CB319A1DEFE00E69C77 /* triostr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = triostr.c; path = ../../../libxml2/triostr.c; sourceTree = "<group>"; };
+		2B227CB419A1DEFE00E69C77 /* uri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uri.c; path = ../../../libxml2/uri.c; sourceTree = "<group>"; };
+		2B227CB519A1DEFE00E69C77 /* valid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = valid.c; path = ../../../libxml2/valid.c; sourceTree = "<group>"; };
+		2B227CB619A1DEFE00E69C77 /* xinclude.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xinclude.c; path = ../../../libxml2/xinclude.c; sourceTree = "<group>"; };
+		2B227CB719A1DEFE00E69C77 /* xlink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xlink.c; path = ../../../libxml2/xlink.c; sourceTree = "<group>"; };
+		2B227CB819A1DEFE00E69C77 /* xmlcatalog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlcatalog.c; path = ../../../libxml2/xmlcatalog.c; sourceTree = "<group>"; };
+		2B227CB919A1DEFE00E69C77 /* xmlIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlIO.c; path = ../../../libxml2/xmlIO.c; sourceTree = "<group>"; };
+		2B227CBA19A1DEFE00E69C77 /* xmlmemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlmemory.c; path = ../../../libxml2/xmlmemory.c; sourceTree = "<group>"; };
+		2B227CBB19A1DEFE00E69C77 /* xmlmodule.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlmodule.c; path = ../../../libxml2/xmlmodule.c; sourceTree = "<group>"; };
+		2B227CBC19A1DEFE00E69C77 /* xmlreader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlreader.c; path = ../../../libxml2/xmlreader.c; sourceTree = "<group>"; };
+		2B227CBD19A1DEFE00E69C77 /* xmlregexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlregexp.c; path = ../../../libxml2/xmlregexp.c; sourceTree = "<group>"; };
+		2B227CBE19A1DEFE00E69C77 /* xmlsave.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlsave.c; path = ../../../libxml2/xmlsave.c; sourceTree = "<group>"; };
+		2B227CBF19A1DEFE00E69C77 /* xmlschemas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlschemas.c; path = ../../../libxml2/xmlschemas.c; sourceTree = "<group>"; };
+		2B227CC019A1DEFE00E69C77 /* xmlschemastypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlschemastypes.c; path = ../../../libxml2/xmlschemastypes.c; sourceTree = "<group>"; };
+		2B227CC119A1DEFE00E69C77 /* xmlstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlstring.c; path = ../../../libxml2/xmlstring.c; sourceTree = "<group>"; };
+		2B227CC219A1DEFE00E69C77 /* xmlunicode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlunicode.c; path = ../../../libxml2/xmlunicode.c; sourceTree = "<group>"; };
+		2B227CC319A1DEFE00E69C77 /* xmlwriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlwriter.c; path = ../../../libxml2/xmlwriter.c; sourceTree = "<group>"; };
+		2B227CC419A1DEFE00E69C77 /* xpath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xpath.c; path = ../../../libxml2/xpath.c; sourceTree = "<group>"; };
+		2B227CC519A1DEFE00E69C77 /* xpointer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xpointer.c; path = ../../../libxml2/xpointer.c; sourceTree = "<group>"; };
+		2B227CC619A1DEFE00E69C77 /* xzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xzlib.c; path = ../../../libxml2/xzlib.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B227C5719A1DECD00E69C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B227C5E19A1DECD00E69C77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B227C6719A1DECD00E69C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B227C7219A1DECD00E69C77 /* liblibxml2.a in Frameworks */,
+				2B227C6C19A1DECD00E69C77 /* XCTest.framework in Frameworks */,
+				2B227C6F19A1DECD00E69C77 /* UIKit.framework in Frameworks */,
+				2B227C6D19A1DECD00E69C77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B227C5119A1DECD00E69C77 = {
+			isa = PBXGroup;
+			children = (
+				2B227C8C19A1DEFE00E69C77 /* buf.h */,
+				2B227C8D19A1DEFE00E69C77 /* elfgcchack.h */,
+				2B227C8E19A1DEFE00E69C77 /* enc.h */,
+				2B227C8F19A1DEFE00E69C77 /* libxml.h */,
+				2B227C9019A1DEFE00E69C77 /* save.h */,
+				2B227C9119A1DEFE00E69C77 /* timsort.h */,
+				2B227C9219A1DEFE00E69C77 /* trio.h */,
+				2B227C9319A1DEFE00E69C77 /* triodef.h */,
+				2B227C9419A1DEFE00E69C77 /* trionan.h */,
+				2B227C9519A1DEFE00E69C77 /* triop.h */,
+				2B227C9619A1DEFE00E69C77 /* triostr.h */,
+				2B227C9719A1DEFE00E69C77 /* xzlib.h */,
+				2B227C9819A1DEFE00E69C77 /* buf.c */,
+				2B227C9919A1DEFE00E69C77 /* c14n.c */,
+				2B227C9A19A1DEFE00E69C77 /* catalog.c */,
+				2B227C9B19A1DEFE00E69C77 /* chvalid.c */,
+				2B227C9C19A1DEFE00E69C77 /* debugXML.c */,
+				2B227C9D19A1DEFE00E69C77 /* dict.c */,
+				2B227C9E19A1DEFE00E69C77 /* DOCBparser.c */,
+				2B227C9F19A1DEFE00E69C77 /* encoding.c */,
+				2B227CA019A1DEFE00E69C77 /* entities.c */,
+				2B227CA119A1DEFE00E69C77 /* error.c */,
+				2B227CA219A1DEFE00E69C77 /* globals.c */,
+				2B227CA319A1DEFE00E69C77 /* hash.c */,
+				2B227CA419A1DEFE00E69C77 /* HTMLparser.c */,
+				2B227CA519A1DEFE00E69C77 /* HTMLtree.c */,
+				2B227CA619A1DEFE00E69C77 /* legacy.c */,
+				2B227CA719A1DEFE00E69C77 /* list.c */,
+				2B227CA819A1DEFE00E69C77 /* nanoftp.c */,
+				2B227CA919A1DEFE00E69C77 /* nanohttp.c */,
+				2B227CAA19A1DEFE00E69C77 /* parser.c */,
+				2B227CAB19A1DEFE00E69C77 /* parserInternals.c */,
+				2B227CAC19A1DEFE00E69C77 /* pattern.c */,
+				2B227CAD19A1DEFE00E69C77 /* relaxng.c */,
+				2B227CAE19A1DEFE00E69C77 /* SAX.c */,
+				2B227CAF19A1DEFE00E69C77 /* SAX2.c */,
+				2B227CB019A1DEFE00E69C77 /* threads.c */,
+				2B227CB119A1DEFE00E69C77 /* tree.c */,
+				2B227CB219A1DEFE00E69C77 /* trionan.c */,
+				2B227CB319A1DEFE00E69C77 /* triostr.c */,
+				2B227CB419A1DEFE00E69C77 /* uri.c */,
+				2B227CB519A1DEFE00E69C77 /* valid.c */,
+				2B227CB619A1DEFE00E69C77 /* xinclude.c */,
+				2B227CB719A1DEFE00E69C77 /* xlink.c */,
+				2B227CB819A1DEFE00E69C77 /* xmlcatalog.c */,
+				2B227CB919A1DEFE00E69C77 /* xmlIO.c */,
+				2B227CBA19A1DEFE00E69C77 /* xmlmemory.c */,
+				2B227CBB19A1DEFE00E69C77 /* xmlmodule.c */,
+				2B227CBC19A1DEFE00E69C77 /* xmlreader.c */,
+				2B227CBD19A1DEFE00E69C77 /* xmlregexp.c */,
+				2B227CBE19A1DEFE00E69C77 /* xmlsave.c */,
+				2B227CBF19A1DEFE00E69C77 /* xmlschemas.c */,
+				2B227CC019A1DEFE00E69C77 /* xmlschemastypes.c */,
+				2B227CC119A1DEFE00E69C77 /* xmlstring.c */,
+				2B227CC219A1DEFE00E69C77 /* xmlunicode.c */,
+				2B227CC319A1DEFE00E69C77 /* xmlwriter.c */,
+				2B227CC419A1DEFE00E69C77 /* xpath.c */,
+				2B227CC519A1DEFE00E69C77 /* xpointer.c */,
+				2B227CC619A1DEFE00E69C77 /* xzlib.c */,
+				2B227C5F19A1DECD00E69C77 /* libxml2 */,
+				2B227C7319A1DECD00E69C77 /* libxml2Tests */,
+				2B227C5C19A1DECD00E69C77 /* Frameworks */,
+				2B227C5B19A1DECD00E69C77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B227C5B19A1DECD00E69C77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C5A19A1DECD00E69C77 /* liblibxml2.a */,
+				2B227C6A19A1DECD00E69C77 /* libxml2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B227C5C19A1DECD00E69C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C5D19A1DECD00E69C77 /* Foundation.framework */,
+				2B227C6B19A1DECD00E69C77 /* XCTest.framework */,
+				2B227C6E19A1DECD00E69C77 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B227C5F19A1DECD00E69C77 /* libxml2 */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C6019A1DECD00E69C77 /* Supporting Files */,
+			);
+			path = libxml2;
+			sourceTree = "<group>";
+		};
+		2B227C6019A1DECD00E69C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C6119A1DECD00E69C77 /* libxml2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B227C7319A1DECD00E69C77 /* libxml2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C7919A1DECD00E69C77 /* libxml2Tests.m */,
+				2B227C7419A1DECD00E69C77 /* Supporting Files */,
+			);
+			path = libxml2Tests;
+			sourceTree = "<group>";
+		};
+		2B227C7419A1DECD00E69C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B227C7519A1DECD00E69C77 /* libxml2Tests-Info.plist */,
+				2B227C7619A1DECD00E69C77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B227C5919A1DECD00E69C77 /* libxml2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B227C7D19A1DECE00E69C77 /* Build configuration list for PBXNativeTarget "libxml2" */;
+			buildPhases = (
+				2B227C5619A1DECD00E69C77 /* Sources */,
+				2B227C5719A1DECD00E69C77 /* Frameworks */,
+				2B227C5819A1DECD00E69C77 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libxml2;
+			productName = libxml2;
+			productReference = 2B227C5A19A1DECD00E69C77 /* liblibxml2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2B227C6919A1DECD00E69C77 /* libxml2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B227C8019A1DECE00E69C77 /* Build configuration list for PBXNativeTarget "libxml2Tests" */;
+			buildPhases = (
+				2B227C6619A1DECD00E69C77 /* Sources */,
+				2B227C6719A1DECD00E69C77 /* Frameworks */,
+				2B227C6819A1DECD00E69C77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B227C7119A1DECD00E69C77 /* PBXTargetDependency */,
+			);
+			name = libxml2Tests;
+			productName = libxml2Tests;
+			productReference = 2B227C6A19A1DECD00E69C77 /* libxml2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B227C5219A1DECD00E69C77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = tcs;
+			};
+			buildConfigurationList = 2B227C5519A1DECD00E69C77 /* Build configuration list for PBXProject "libxml2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B227C5119A1DECD00E69C77;
+			productRefGroup = 2B227C5B19A1DECD00E69C77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B227C5919A1DECD00E69C77 /* libxml2 */,
+				2B227C6919A1DECD00E69C77 /* libxml2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B227C6819A1DECD00E69C77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B227C7819A1DECD00E69C77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B227C5619A1DECD00E69C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B227CE519A1DEFE00E69C77 /* xinclude.c in Sources */,
+				2B227CE419A1DEFE00E69C77 /* valid.c in Sources */,
+				2B227CC719A1DEFE00E69C77 /* buf.c in Sources */,
+				2B227CCA19A1DEFE00E69C77 /* chvalid.c in Sources */,
+				2B227CD719A1DEFE00E69C77 /* nanoftp.c in Sources */,
+				2B227CCE19A1DEFE00E69C77 /* encoding.c in Sources */,
+				2B227CD619A1DEFE00E69C77 /* list.c in Sources */,
+				2B227CE219A1DEFE00E69C77 /* triostr.c in Sources */,
+				2B227CE719A1DEFE00E69C77 /* xmlcatalog.c in Sources */,
+				2B227CD819A1DEFE00E69C77 /* nanohttp.c in Sources */,
+				2B227CD919A1DEFE00E69C77 /* parser.c in Sources */,
+				2B227CEA19A1DEFE00E69C77 /* xmlmodule.c in Sources */,
+				2B227CCD19A1DEFE00E69C77 /* DOCBparser.c in Sources */,
+				2B227CE119A1DEFE00E69C77 /* trionan.c in Sources */,
+				2B227CF419A1DEFE00E69C77 /* xpointer.c in Sources */,
+				2B227CE819A1DEFE00E69C77 /* xmlIO.c in Sources */,
+				2B227CD319A1DEFE00E69C77 /* HTMLparser.c in Sources */,
+				2B227CD019A1DEFE00E69C77 /* error.c in Sources */,
+				2B227CC919A1DEFE00E69C77 /* catalog.c in Sources */,
+				2B227CEB19A1DEFE00E69C77 /* xmlreader.c in Sources */,
+				2B227CDB19A1DEFE00E69C77 /* pattern.c in Sources */,
+				2B227CD519A1DEFE00E69C77 /* legacy.c in Sources */,
+				2B227CE919A1DEFE00E69C77 /* xmlmemory.c in Sources */,
+				2B227CEC19A1DEFE00E69C77 /* xmlregexp.c in Sources */,
+				2B227CE019A1DEFE00E69C77 /* tree.c in Sources */,
+				2B227CF319A1DEFE00E69C77 /* xpath.c in Sources */,
+				2B227CCC19A1DEFE00E69C77 /* dict.c in Sources */,
+				2B227CF119A1DEFE00E69C77 /* xmlunicode.c in Sources */,
+				2B227CF219A1DEFE00E69C77 /* xmlwriter.c in Sources */,
+				2B227CD219A1DEFE00E69C77 /* hash.c in Sources */,
+				2B227CF519A1DEFE00E69C77 /* xzlib.c in Sources */,
+				2B227CD119A1DEFE00E69C77 /* globals.c in Sources */,
+				2B227CEF19A1DEFE00E69C77 /* xmlschemastypes.c in Sources */,
+				2B227CF019A1DEFE00E69C77 /* xmlstring.c in Sources */,
+				2B227CDA19A1DEFE00E69C77 /* parserInternals.c in Sources */,
+				2B227CDC19A1DEFE00E69C77 /* relaxng.c in Sources */,
+				2B227CED19A1DEFE00E69C77 /* xmlsave.c in Sources */,
+				2B227CDF19A1DEFE00E69C77 /* threads.c in Sources */,
+				2B227CCF19A1DEFE00E69C77 /* entities.c in Sources */,
+				2B227CC819A1DEFE00E69C77 /* c14n.c in Sources */,
+				2B227CD419A1DEFE00E69C77 /* HTMLtree.c in Sources */,
+				2B227CEE19A1DEFE00E69C77 /* xmlschemas.c in Sources */,
+				2B227CDE19A1DEFE00E69C77 /* SAX2.c in Sources */,
+				2B227CE319A1DEFE00E69C77 /* uri.c in Sources */,
+				2B227CDD19A1DEFE00E69C77 /* SAX.c in Sources */,
+				2B227CE619A1DEFE00E69C77 /* xlink.c in Sources */,
+				2B227CCB19A1DEFE00E69C77 /* debugXML.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B227C6619A1DECD00E69C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B227C7A19A1DECD00E69C77 /* libxml2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B227C7119A1DECD00E69C77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B227C5919A1DECD00E69C77 /* libxml2 */;
+			targetProxy = 2B227C7019A1DECD00E69C77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B227C7619A1DECD00E69C77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B227C7719A1DECD00E69C77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B227C7B19A1DECE00E69C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B227C7C19A1DECE00E69C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B227C7E19A1DECE00E69C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libxml2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libxml2/libxml2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					HAVE_UNISTD_H,
+					HAVE_CTYPE_H,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../libxml2,
+					../../../libxml2/include,
+					../../../libxml2/include/platforms/iphone,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2B227C7F19A1DECE00E69C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libxml2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libxml2/libxml2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					HAVE_UNISTD_H,
+					HAVE_CTYPE_H,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../libxml2,
+					../../../libxml2/include,
+					../../../libxml2/include/platforms/iphone,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2B227C8119A1DECE00E69C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libxml2/libxml2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "libxml2Tests/libxml2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B227C8219A1DECE00E69C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libxml2/libxml2-Prefix.pch";
+				INFOPLIST_FILE = "libxml2Tests/libxml2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B227C5519A1DECD00E69C77 /* Build configuration list for PBXProject "libxml2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B227C7B19A1DECE00E69C77 /* Debug */,
+				2B227C7C19A1DECE00E69C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B227C7D19A1DECE00E69C77 /* Build configuration list for PBXNativeTarget "libxml2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B227C7E19A1DECE00E69C77 /* Debug */,
+				2B227C7F19A1DECE00E69C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B227C8019A1DECE00E69C77 /* Build configuration list for PBXNativeTarget "libxml2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B227C8119A1DECE00E69C77 /* Debug */,
+				2B227C8219A1DECE00E69C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B227C5219A1DECD00E69C77 /* Project object */;
+}

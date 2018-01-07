@@ -1,0 +1,16 @@
+QT.waylandcompositor_private.VERSION = 5.8.0
+QT.waylandcompositor_private.MAJOR_VERSION = 5
+QT.waylandcompositor_private.MINOR_VERSION = 8
+QT.waylandcompositor_private.PATCH_VERSION = 0
+QT.waylandcompositor_private.name = QtWaylandCompositor
+QT.waylandcompositor_private.module =
+QT.waylandcompositor_private.libs = $$QT_MODULE_LIB_BASE
+QT.waylandcompositor_private.includes = $$QT_MODULE_INCLUDE_BASE/QtWaylandCompositor/5.8.0 $$QT_MODULE_INCLUDE_BASE/QtWaylandCompositor/5.8.0/QtWaylandCompositor
+QT.waylandcompositor_private.frameworks =
+QT.waylandcompositor_private.depends = gui_private core_private qml_private quick_private waylandcompositor
+QT.waylandcompositor_private.uses =
+QT.waylandcompositor_private.module_config = v2 internal_module
+QT.waylandcompositor_private.enabled_features = wayland-server drm-egl-server wayland-egl
+QT.waylandcompositor_private.disabled_features = libhybris-egl-server wayland-brcm xcomposite-egl xcomposite-glx
+QMAKE_LIBS_WAYLAND-SERVER = -lwayland-server
+QMAKE_LIBS_WAYLAND-EGL = -lwayland-egl -lwayland-client

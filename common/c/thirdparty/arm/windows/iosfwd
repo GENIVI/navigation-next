@@ -1,0 +1,271 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * iosfwd - forward declarations for the iostreams
+ *
+ * $Id: iosfwd 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_IOSFWD_INCLUDED
+#define _RWSTD_IOSFWD_INCLUDED
+
+#include <rw/_defs.h>
+
+
+#ifndef _RWSTD_NO_MBSTATE_T
+
+#  if defined (__GNUG__) && __GNUG__ < 3 &&__GNUC_MINOR__ < 96
+     // <cstring> included to work around a g++ 2.95.2 bug
+#    include _RWSTD_CSTRING
+#  endif
+
+   // get mbstate_t (and wchar_t for MSVC 6.0)
+#  include _RWSTD_CWCHAR   
+
+#  if defined (_RWSTD_NO_LIBC_IN_STD)
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+// bring global mbstate_t into namespace std if it's not there yet
+_USING (::mbstate_t);
+
+_RWSTD_NAMESPACE_END   // std
+
+#  endif   // _RWSTD_NO_LIBC_IN_STD
+
+#else   // if defined (_RWSTD_NO_MBSTATE_T)
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+struct mbstate_t
+{ 
+    mbstate_t () 
+        : _C_state (0) { }
+    
+    mbstate_t (const mbstate_t & __rhs) 
+        : _C_state(__rhs._C_state) { }
+    
+    mbstate_t& operator= (const mbstate_t &__rhs) {
+        if (&__rhs != this)
+            _C_state = __rhs._C_state;              
+        return *this;
+    }
+
+    bool operator== (const mbstate_t &__rhs) const {
+        return _C_state == __rhs._C_state;
+    }
+
+    bool operator!= (const mbstate_t &__rhs) const {
+        return !(*this == __rhs);
+    }
+                   
+    long _C_state;                
+};
+
+_RWSTD_NAMESPACE_END   // std
+
+#endif // _RWSTD_NO_MBSTATE_T 
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+
+template <class _TypeT>
+class allocator;
+
+template<class _CharT>
+struct char_traits;
+
+_RWSTD_SPECIALIZED_CLASS
+struct char_traits<char>;
+
+#ifndef _RWSTD_NO_WCHAR_T
+
+_RWSTD_SPECIALIZED_CLASS
+struct char_traits<wchar_t>;
+
+#endif   // _RWSTD_NO_WCHAR_T
+
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_ios;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_streambuf;
+
+// 27.2, p4
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_istream;
+
+// 27.2, p5
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_ostream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>),
+         class _Allocator _RWSTD_COMPLEX_DEFAULT (allocator<_CharT>) > 
+class basic_stringbuf;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>),
+         class _Allocator _RWSTD_COMPLEX_DEFAULT (allocator<_CharT>)  > 
+class basic_istringstream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>),
+         class _Allocator _RWSTD_COMPLEX_DEFAULT (allocator<_CharT>) > 
+class basic_ostringstream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_filebuf;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_ifstream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_ofstream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) > 
+class ostreambuf_iterator;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) > 
+class istreambuf_iterator;
+
+// 27.2, p6
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_iostream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>) >
+class basic_fstream;
+
+template<class _CharT,
+         class _Traits _RWSTD_COMPLEX_DEFAULT (char_traits<_CharT>),
+         class _Allocator _RWSTD_COMPLEX_DEFAULT (allocator<_CharT>)  > 
+class basic_stringstream;
+
+
+#ifndef _RWSTD_NO_COMPLEX_DEFAULT_TEMPLATES
+
+typedef basic_ios<char>                                    ios;
+typedef basic_streambuf<char>                              streambuf;
+typedef basic_istream<char>                                istream;
+typedef basic_ostream<char>                                ostream;
+typedef basic_stringbuf<char>                              stringbuf;
+typedef basic_istringstream<char>                          istringstream;
+typedef basic_ostringstream<char>                          ostringstream;
+typedef basic_filebuf<char>                                filebuf;
+typedef basic_ifstream<char>                               ifstream;
+typedef basic_ofstream<char>                               ofstream;
+typedef basic_fstream<char>                                fstream;
+typedef basic_iostream<char>                               iostream;
+typedef basic_stringstream<char>                           stringstream;
+
+#ifndef _RWSTD_NO_WCHAR_T
+
+typedef basic_ios<wchar_t>                                 wios;
+typedef basic_streambuf<wchar_t>                           wstreambuf;
+typedef basic_istream<wchar_t>                             wistream;
+typedef basic_ostream<wchar_t>                             wostream;
+typedef basic_stringbuf<wchar_t>                           wstringbuf;
+typedef basic_istringstream<wchar_t>                       wistringstream;
+typedef basic_ostringstream<wchar_t>                       wostringstream;
+typedef basic_filebuf<wchar_t>                             wfilebuf;
+typedef basic_ifstream<wchar_t>                            wifstream;
+typedef basic_ofstream<wchar_t>                            wofstream;
+typedef basic_fstream<wchar_t>                             wfstream;
+typedef basic_iostream<wchar_t>                            wiostream;
+typedef basic_stringstream<wchar_t>                        wstringstream;
+
+#endif // _RWSTD_NO_WCHAR_T
+
+#else
+
+typedef basic_ios<char, char_traits<char> >                ios;
+typedef basic_streambuf<char, char_traits<char> >          streambuf;
+typedef basic_istream<char, char_traits<char> >            istream;
+typedef basic_ostream<char, char_traits<char> >            ostream;
+typedef basic_stringbuf<char, char_traits<char>, allocator<char> >
+        stringbuf;
+typedef basic_istringstream<char, char_traits<char>, allocator<char> >
+        istringstream;
+typedef basic_ostringstream<char, char_traits<char>, allocator<char> >
+        ostringstream;
+typedef basic_filebuf<char, char_traits<char> >            filebuf;
+typedef basic_ifstream<char, char_traits<char> >           ifstream;
+typedef basic_ofstream<char, char_traits<char> >           ofstream;
+typedef basic_fstream<char, char_traits<char> >            fstream;
+typedef basic_iostream<char, char_traits<char> >           iostream;
+typedef basic_stringstream<char, char_traits<char>, allocator<char> >
+        stringstream;
+
+#ifndef _RWSTD_NO_WCHAR_T
+
+typedef basic_ios<wchar_t, char_traits<wchar_t> >          wios;
+typedef basic_streambuf<wchar_t, char_traits<wchar_t> >    wstreambuf;
+typedef basic_istream<wchar_t, char_traits<wchar_t> >      wistream;
+typedef basic_ostream<wchar_t, char_traits<wchar_t> >      wostream;
+typedef basic_stringbuf<wchar_t, char_traits<wchar_t>, allocator<wchar_t> >
+        wstringbuf;
+typedef basic_istringstream<wchar_t, char_traits<wchar_t>, allocator<wchar_t> >
+        wistringstream;
+typedef basic_ostringstream<wchar_t, char_traits<wchar_t>, allocator<wchar_t> >
+        wostringstream;
+typedef basic_filebuf<wchar_t, char_traits<wchar_t> >      wfilebuf;
+typedef basic_ifstream<wchar_t, char_traits<wchar_t> >     wifstream;
+typedef basic_ofstream<wchar_t, char_traits<wchar_t> >     wofstream;
+typedef basic_fstream<wchar_t,char_traits<wchar_t> >       wfstream;
+typedef basic_iostream<wchar_t, char_traits<wchar_t> >     wiostream;
+typedef basic_stringstream<wchar_t,char_traits<wchar_t>, allocator<wchar_t> >
+        wstringstream;
+
+#endif // _RWSTD_NO_WCHAR_T
+#endif // _RWSTD_NO_COMPLEX_DEFAULT_TEMPLATES
+
+
+// 27.2, p8
+template <class _StateT>
+class fpos;
+
+// 27.2, p9 - identical to std::fpos<char_traits<char>::state_type>
+//            and std::fpos<char_traits<wchar_t>::state_type>, respectively
+typedef fpos<mbstate_t>                                    streampos;
+typedef fpos<mbstate_t>                                    wstreampos;
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_IOSFWD_INCLUDED

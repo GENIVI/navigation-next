@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="abservices"
+	>
+    <Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(SolutionDir)\include&quot;;&quot;$(SolutionDir)\include\private&quot;;&quot;$(SolutionDir)\include\win32&quot;;&quot;$(NIMNBIPAL_INC)&quot;;&quot;$(NIMNBIPAL_INC)\win32&quot;;&quot;$(NIMCORE_INC)&quot;;&quot;$(NIMCORE_INC)\protected&quot;;&quot;$(NIMCORE_INC)\win32&quot;;&quot;$(NIMNB_INC)&quot;;&quot;$(NIMNB_INC)\protected&quot;;&quot;$(NIMNB_INC)\win32&quot;"
+		PreprocessorDefinitions="AB_BUILD;DEBUG_LOG_ALL;_CRT_SECURE_NO_WARNINGS"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4100;4115;4127;4201;4214"
+	/>
+</VisualStudioPropertySheet>

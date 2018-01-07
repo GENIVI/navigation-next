@@ -1,0 +1,5 @@
+export VERSION_FILE=version_qt_qnx_x86.txt
+export NBM_LIBRARY_PATH=./corelib/nbm/1.4.4.0/qnx_x86
+export NCDB_LIBRARY_PATH=./corelib/ncdb/2.41.0.12/qnx_x86
+export PLATFORM=qnx
+export TARGET=qnx_x86

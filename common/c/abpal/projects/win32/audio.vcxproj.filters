@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\AACCombiner">
+      <UniqueIdentifier>{40f3a51c-47b3-4be6-90dd-e335421ca59a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\util\nimaudiocombiner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\Audio\palaudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\AACAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\AACCombiner.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\AACFile.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\audbuf.c">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\MdhdAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\MvhdAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\StcoAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\StscAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\StszAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\SttsAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\combineraac\TkhdAtom.cpp">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\util\combineraac\AACAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\AACFile.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\MdhdAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\MvhdAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\StcoAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\StscAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\StszAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\SttsAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\util\combineraac\TkhdAtom.h">
+      <Filter>Source Files\AACCombiner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\AACCombiner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\abpalaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\audbuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nimaudiocombiner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\win32\audio\palaudioimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

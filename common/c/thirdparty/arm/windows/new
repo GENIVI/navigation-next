@@ -1,0 +1,98 @@
+/*
+ * C++ Library file new
+ * Copyright 1993-2001 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 91768 $
+ * Checkin $Date: 2005-08-10 19:58:48 +0100 (Wed, 10 Aug 2005) $
+ * Revising $Author: drodgman $
+ */
+
+/* Edison Design Group, 1992-2005. */
+/*
+new -- Include file for C++ default operator new (see ARM 12.5).
+*/
+
+#ifndef __NEW
+#define __NEW
+
+#ifndef _EXCEPTION
+#include <exception>
+#endif /* _EXCEPTION */
+
+namespace std {
+
+typedef unsigned int size_t;   /* see <stddef.h> */
+
+/* This lets users disable the EDG supplied exception classes. */
+#ifndef __NO_EDG_EXCEPTION_CLASSES
+
+  class bad_alloc : public exception {
+  public:
+    bad_alloc() throw();
+    bad_alloc(const bad_alloc&) throw();
+    bad_alloc& operator=(const bad_alloc&) throw();
+    virtual ~bad_alloc() throw();
+    virtual const char* what() const throw();
+  };
+
+#endif /* ifndef __NO_EDG_EXCEPTION_CLASSES */
+
+  typedef void (*new_handler)();
+  new_handler set_new_handler(new_handler) throw();
+  struct nothrow_t { };
+  // Declaration of object nothrow to permit the use of the placement new
+  // syntax: new (nothrow) T;
+  extern const nothrow_t nothrow;
+
+}  /* namespace std */
+
+#ifdef __EDG_IMPLICIT_USING_STD
+/* Implicitly include a using directive for the STD namespace when this
+   preprocessing flag is TRUE. */
+using namespace ::std;
+#endif /* ifdef __EDG_IMPLICIT_USING_STD */
+
+/* Normal operator new. */
+void *operator new(std::size_t) throw(std::bad_alloc);
+
+/* Normal operator delete. */
+void operator delete(void*) throw ();
+
+/* Nothrow version of operator new. */
+void *operator new(std::size_t, const std::nothrow_t&) throw();
+
+/* Nothrow version of operator delete. */
+void operator delete(void*, const std::nothrow_t&) throw();
+
+/* Placement new. */
+inline void *operator new(std::size_t, void* __ptr) throw() { return __ptr; }
+
+/* Placement delete. */
+inline void operator delete(void*, void*) throw() { /* nothing */ }
+
+
+/* Array new. */
+void *operator new[](std::size_t) throw(std::bad_alloc);
+
+/* Array delete. */
+void operator delete[](void*) throw ();
+
+/* Placement array new. */
+inline void *operator new[](std::size_t, void* __ptr) throw() { return __ptr; }
+
+/* Placement array delete. */
+inline void operator delete[](void*, void*) throw() { /* nothing */ }
+
+/* Nothrow version of array new. */
+void *operator new[](std::size_t,
+                     const std::nothrow_t&) throw();
+
+/* Nothrow version of array delete. */
+void operator delete[](void*,
+                       const std::nothrow_t&) throw();
+
+#endif /*__NEW */
+
+/* End of new */

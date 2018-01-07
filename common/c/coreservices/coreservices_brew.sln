@@ -1,0 +1,68 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coreservices", "projects\brew\coreservices.vcproj", "{6D4F0F38-1707-4C49-84BE-A71F59A2CCAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A} = {244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}
+		{D40114D5-5926-4D37-B7D1-A4572D058BAF} = {D40114D5-5926-4D37-B7D1-A4572D058BAF}
+		{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD} = {83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}
+		{08625BFC-7E29-406D-9FB2-BF043C598854} = {08625BFC-7E29-406D-9FB2-BF043C598854}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qalog", "projects\brew\qalog.vcproj", "{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network", "projects\brew\network.vcproj", "{D40114D5-5926-4D37-B7D1-A4572D058BAF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tps", "projects\brew\tps.vcproj", "{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "util", "projects\brew\util.vcproj", "{08625BFC-7E29-406D-9FB2-BF043C598854}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = projects\\brew\\coreservices.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = projects\\brew\\
+		SccProjectUniqueName2 = projects\\brew\\qalog.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = projects\\brew\\
+		SccProjectUniqueName3 = projects\\brew\\network.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = projects\\brew\\
+		SccProjectUniqueName4 = projects\\brew\\tps.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = projects\\brew\\
+		SccProjectUniqueName5 = projects\\brew\\util.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = projects\\brew\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D4F0F38-1707-4C49-84BE-A71F59A2CCAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6D4F0F38-1707-4C49-84BE-A71F59A2CCAB}.Debug|Win32.Build.0 = Debug|Win32
+		{6D4F0F38-1707-4C49-84BE-A71F59A2CCAB}.Release|Win32.ActiveCfg = Release|Win32
+		{6D4F0F38-1707-4C49-84BE-A71F59A2CCAB}.Release|Win32.Build.0 = Release|Win32
+		{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}.Debug|Win32.Build.0 = Debug|Win32
+		{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}.Release|Win32.ActiveCfg = Release|Win32
+		{244566AA-D2F5-40DB-88CC-7AF4AB5B3B7A}.Release|Win32.Build.0 = Release|Win32
+		{D40114D5-5926-4D37-B7D1-A4572D058BAF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D40114D5-5926-4D37-B7D1-A4572D058BAF}.Debug|Win32.Build.0 = Debug|Win32
+		{D40114D5-5926-4D37-B7D1-A4572D058BAF}.Release|Win32.ActiveCfg = Release|Win32
+		{D40114D5-5926-4D37-B7D1-A4572D058BAF}.Release|Win32.Build.0 = Release|Win32
+		{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}.Debug|Win32.Build.0 = Debug|Win32
+		{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}.Release|Win32.ActiveCfg = Release|Win32
+		{83C129DD-4F8F-4067-98C9-68DFCFB3FDBD}.Release|Win32.Build.0 = Release|Win32
+		{08625BFC-7E29-406D-9FB2-BF043C598854}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08625BFC-7E29-406D-9FB2-BF043C598854}.Debug|Win32.Build.0 = Debug|Win32
+		{08625BFC-7E29-406D-9FB2-BF043C598854}.Release|Win32.ActiveCfg = Release|Win32
+		{08625BFC-7E29-406D-9FB2-BF043C598854}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

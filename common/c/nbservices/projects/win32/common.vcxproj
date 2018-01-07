@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4B5BBAA-C27F-4750-BFD9-FC872850B205}</ProjectGuid>
+    <RootNamespace>common</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="nbservices.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(NIMNBGMMAIN_INC)\win32;$(NIMNBGMMAIN_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(NIMNBGMMAIN_INC)\win32;$(NIMNBGMMAIN_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include;$(SolutionDir)..\..\nbgm\$(NIM_CCC_BRANCH)\nbgmmain\include\win32;$(NIM_NCDB_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>libpng.lib;nbnetwork.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)\resources\win32;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(NIMNBM_LIB)\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(NIMNBGMMAIN_INC)\win32;$(NIMNBGMMAIN_INC);$(NIM_NCDB_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4706</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>libpng.lib;nbnetwork.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)\resources\win32;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\output\win32\$(Configuration);$(NIMNBM_LIB)\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\nbcommon\Cache.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\CacheTasks.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\CachingEntry.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\CachingEntryDatabaseProcessor.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\CachingIndex.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\CommonTypes.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\datastream.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\datastreamimplementation.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\downloadrequest.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\FileOperatingTaskManager.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\nbhybridmanager.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\ncdbobjectsmanager.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\toggleablehybridmanager.cpp" />
+    <ClCompile Include="..\..\src\util\format.c" />
+    <ClCompile Include="..\..\src\nbcommon\httpdownloadmanager.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\nbcontext.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\nbformat.c" />
+    <ClCompile Include="..\..\src\nbimage\nbimage.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbpersistentdata.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbpointiteration.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbrouteid.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbsolarcalculator.c" />
+    <ClCompile Include="..\..\src\spatial\nbspatial.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbtristrip.c" />
+    <ClCompile Include="..\..\src\nbcommon\nbutility.c" />
+    <ClCompile Include="..\..\src\spatial\nbvectortransform.c" />
+    <ClCompile Include="..\..\src\spatial\spatialvector.c" />
+    <ClCompile Include="..\..\src\nbcommon\StringUtility.cpp" />
+    <ClCompile Include="..\..\src\spatial\transformutility.c" />
+    <ClCompile Include="..\..\src\nbcommon\urlparser.cpp" />
+    <ClCompile Include="..\..\src\nbcommon\workerqueuemanager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\protected\Cache.h" />
+    <ClInclude Include="..\..\include\protected\CachingEntry.h" />
+    <ClInclude Include="..\..\include\protected\CachingEntryDatabaseProcessor.h" />
+    <ClInclude Include="..\..\include\protected\CachingEntryProcessor.h" />
+    <ClInclude Include="..\..\include\protected\CachingIndex.h" />
+    <ClInclude Include="..\..\include\private\commoncomponentconfiguration.h" />
+    <ClInclude Include="..\..\include\CommonTypes.h" />
+    <ClInclude Include="..\..\include\protected\CommonTypesProtected.h" />
+    <ClInclude Include="..\..\include\private\contextbasedsingleton.h" />
+    <ClInclude Include="..\..\include\datastream.h" />
+    <ClInclude Include="..\..\include\protected\datastreamimplementation.h" />
+    <ClInclude Include="..\..\include\protected\downloadmanager.h" />
+    <ClInclude Include="..\..\include\protected\downloadrequest.h" />
+    <ClInclude Include="..\..\include\protected\EvictionStrategy.h" />
+    <ClInclude Include="..\..\include\private\format.h" />
+    <ClInclude Include="..\..\include\protected\httpdownloadmanager.h" />
+    <ClInclude Include="..\..\include\protected\LeastRecentlyUsedEvictionStrategy.h" />
+    <ClInclude Include="..\..\include\protected\List.h" />
+    <ClInclude Include="..\..\include\nbcontext.h" />
+    <ClInclude Include="..\..\include\nbcontextaccess.h" />
+    <ClInclude Include="..\..\include\protected\nbcontextprotected.h" />
+    <ClInclude Include="..\..\include\nbformat.h" />
+    <ClInclude Include="..\..\include\nbhandler.h" />
+    <ClInclude Include="..\..\include\nbimage.h" />
+    <ClInclude Include="..\..\include\nbiterationcommand.h" />
+    <ClInclude Include="..\..\include\nblocation.h" />
+    <ClInclude Include="..\..\include\nbpersistentdata.h" />
+    <ClInclude Include="..\..\include\protected\nbpersistentdataprotected.h" />
+    <ClInclude Include="..\..\include\nbplace.h" />
+    <ClInclude Include="..\..\include\protected\nbpointiteration.h" />
+    <ClInclude Include="..\..\include\nbroutesettings.h" />
+    <ClInclude Include="..\..\include\nbsolarcalculator.h" />
+    <ClInclude Include="..\..\include\nbspatial.h" />
+    <ClInclude Include="..\..\include\private\nbtaskqueue.h" />
+    <ClInclude Include="..\..\include\nbtristrip.h" />
+    <ClInclude Include="..\..\include\protected\nbtristripprotected.h" />
+    <ClInclude Include="..\..\include\private\nbutility.h" />
+    <ClInclude Include="..\..\include\protected\nbutilityprotected.h" />
+    <ClInclude Include="..\..\include\nbvectortransform.h" />
+    <ClInclude Include="..\..\include\private\spatialvector.h" />
+    <ClInclude Include="..\..\include\protected\StringUtility.h" />
+    <ClInclude Include="..\..\include\private\transformutility.h" />
+    <ClInclude Include="..\..\include\protected\urlparser.h" />
+    <ClInclude Include="..\..\include\private\workerqueuemanager.h" />
+    <ClInclude Include="..\..\src\nbcommon\CacheTasks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="network.vcxproj">
+      <Project>{8b5345db-72d1-4907-8ee6-b90d8a4e2347}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

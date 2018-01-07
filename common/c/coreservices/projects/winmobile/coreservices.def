@@ -1,0 +1,223 @@
+;-------------------------------------------------------------------------
+;   coreservices.def -- Core Services Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.                
+;                                                               
+;   The information contained herein is confidential, proprietary 
+;   to Networks In Motion, Inc., and considered a trade secret as 
+;   defined in section 499C of the penal code of the State of     
+;   California. Use of this information by anyone other than      
+;   authorized employees of Networks In Motion is granted only    
+;   under a written non-disclosure agreement, expressly           
+;   prescribing the scope and manner of such use.   
+;
+;-------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+
+LIBRARY "coreservices17"
+    EXPORTS
+        CSL_CacheAdd                                @1      ;NONAME
+        CSL_CacheAlloc                              @2      ;NONAME
+        CSL_CacheClear                              @3      ;NONAME
+        CSL_CacheClearAccessed                      @4      ;NONAME
+        CSL_CacheClearProtect                       @5      ;NONAME
+        CSL_CacheDealloc                            @6      ;NONAME
+        CSL_CacheDump                               @7      ;NONAME
+        CSL_CacheFind                               @8      ;NONAME
+        CSL_CacheForEach                            @9      ;NONAME
+        CSL_CacheGetStats                           @10     ;NONAME
+        CSL_CacheProtect                            @12     ;NONAME
+        CSL_CacheSaveAccessed                       @14     ;NONAME
+        CSL_CacheSetSize                            @15     ;NONAME
+        CSL_CacheClearProtectOne                    @16     ;NONAME
+        CSL_CacheSetFunctions                       @17     ;NONAME
+        CSL_CacheSaveIndex                          @18     ;NONAME
+        CSL_CacheLoadIndex                          @19     ;NONAME
+        CSL_CacheSaveDirty                          @20     ;NONAME
+        CSL_CacheIsItemInCache						@21     ;NONAME
+        CSL_CacheClearOne						    @22     ;NONAME
+        CSL_CacheSetUserData                        @23     ;NONAME
+        CSL_CacheGetUserData                        @24     ;NONAME
+        CSL_CacheClearExtended                      @25     ;NONAME
+        CSL_CacheSetNotificationFunctions           @26     ;NONAME
+
+        CSL_HashTableCreate                         @30     ;NONAME
+        CSL_HashTableFind                           @31     ;NONAME
+        CSL_HashTableInsert                         @32     ;NONAME
+        CSL_HashTableDelete                         @33     ;NONAME
+        CSL_HashTableGetStats                       @34     ;NONAME
+        CSL_HashTableDestroy                        @35     ;NONAME
+        
+        CSL_DictionaryAlloc                         @51     ;NONAME
+        CSL_DictionaryAllocEx                       @52     ;NONAME
+        CSL_DictionaryDealloc                       @53     ;NONAME
+        CSL_DictionaryDelete                        @54     ;NONAME
+        CSL_DictionaryDeleteEx                      @55     ;NONAME
+        CSL_DictionaryGet                           @56     ;NONAME	
+        CSL_DictionaryIteration                     @57     ;NONAME
+        CSL_DictionaryLength                        @58     ;NONAME
+        CSL_DictionaryNext                          @59     ;NONAME
+        CSL_DictionarySet                           @60     ;NONAME
+        CSL_DictionarySetEx                         @61     ;NONAME
+        
+        CSL_NetworkAddEventNotifyCallback           @101    ;NONAME
+        CSL_NetworkCancel                           @102    ;NONAME
+        CSL_NetworkCreate                           @103    ;NONAME
+        CSL_NetworkDestroy                          @104    ;NONAME
+        CSL_NetworkFreeResponse                     @105    ;NONAME
+        CSL_NetworkRemoveEventNotifyCallback        @106    ;NONAME
+        CSL_NetworkRequest                          @107    ;NONAME
+        CSL_NetworkResume                           @108    ;NONAME
+        CSL_NetworkSetQaLog                         @109    ;NONAME
+        CSL_NetworkSuspend                          @110    ;NONAME
+        CSL_NetworkSetIden                          @111    ;NONAME
+        CSL_NetworkCreateByCopy                     @112    ;NONAME
+        CSL_NetworkGetClientGuid                    @113    ;NONAME
+
+        CSL_QaLogCreate                             @151    ;NONAME
+        CSL_QaLogDestroy                            @152    ;NONAME
+        CSL_QaLogIsVerboseLoggingEnabled            @153    ;NONAME
+        CSL_QaLogWrite                              @154    ;NONAME
+        CSL_QaLogAppState                           @155    ;NONAME
+        CSL_QaLogFilterSet                          @156    ;NONAME
+        CSL_QaLogFilterSetAll                       @157    ;NONAME
+        CSL_QaLogKpiFreeformEventFilterSet          @158    ;NONAME
+        CSL_QaLogKpiFreeformEventFilterSetAll       @159    ;NONAME
+        CSL_QaLogKpiFreeformEventFilterIsDisabled   @160    ;NONAME
+        CSL_QaLogKpiIidAllocate                     @161    ;NONAME
+        CSL_QaLogKpiIidRelease                      @162    ;NONAME
+        
+        CSL_QaRecordCreate                          @201    ;NONAME
+        CSL_QaRecordDestroy                         @202    ;NONAME
+        CSL_QaRecordWriteData                       @203    ;NONAME
+        CSL_QaRecordWriteDouble                     @204    ;NONAME
+        CSL_QaRecordWriteFileLocation               @205    ;NONAME
+        CSL_QaRecordWriteInt32                      @206    ;NONAME
+        CSL_QaRecordWriteText                       @207    ;NONAME
+        CSL_QaRecordWriteUint16                     @208    ;NONAME
+        CSL_QaRecordWriteUint32                     @209    ;NONAME
+        CSL_QaRecordWriteUint8                      @210    ;NONAME
+        CSL_QaRecordGetId                           @211    ;NONAME
+        
+        CSL_TranslatePalError                       @252    ;NONAME
+        
+        CSL_VectorAlloc                             @301    ;NONAME
+        CSL_VectorAllocPlace                        @302    ;NONAME
+        CSL_VectorAppend                            @303    ;NONAME
+        CSL_VectorCopy                              @304    ;NONAME
+        CSL_VectorDealloc                           @305    ;NONAME
+        CSL_VectorDeallocPlace                      @306    ;NONAME
+        CSL_VectorGet                               @307    ;NONAME
+        CSL_VectorGetIndex                          @308    ;NONAME
+        CSL_VectorGetItemSize                       @309    ;NONAME
+        CSL_VectorGetLength                         @310    ;NONAME
+        CSL_VectorGetPointer                        @311    ;NONAME
+        CSL_VectorGetStructureSize                  @312    ;NONAME
+        CSL_VectorPop                               @313    ;NONAME
+        CSL_VectorRemove                            @314    ;NONAME
+        CSL_VectorRemoveAll                         @315    ;NONAME
+        CSL_VectorRemoveItem                        @316    ;NONAME
+        CSL_VectorSet                               @317    ;NONAME
+        CSL_VectorSetAlloc                          @318    ;NONAME
+        CSL_VectorSetSize                           @319    ;NONAME
+        CSL_VectorSort                              @320    ;NONAME
+        CSL_VectorSort2                             @321    ;NONAME
+        CSL_VectorForEach                           @322    ;NONAME
+        CSL_VectorRemoveDuplicates                  @323    ;NONAME
+
+        abs                                         @351    ;NONAME
+        crc32                                       @352    ;NONAME
+        dbufadd                                     @353    ;NONAME
+        dbufcat                                     @354    ;NONAME
+        dbufdel                                     @355    ;NONAME
+        dbuferr                                     @356    ;NONAME
+        dbufget                                     @357    ;NONAME
+        dbuflen                                     @358    ;NONAME
+        dbufnew                                     @359    ;NONAME
+        decode_base64                               @360    ;NONAME
+        dumpelt                                     @361    ;NONAME
+        enumfile_obfuscate                          @362    ;NONAME
+        fileexists                                  @363    ;NONAME
+        filesize                                    @364    ;NONAME
+        fsaheap_alloc                               @365    ;NONAME
+        fsaheap_destroy                             @366    ;NONAME
+        fsaheap_free                                @367    ;NONAME
+        fsaheap_init                                @368    ;NONAME
+        fsaheap_owned                               @369    ;NONAME
+        get_sha_hash                                @370    ;NONAME
+        hexlify                                     @371    ;NONAME
+        hmac                                        @372    ;NONAME
+        nim_heapsort                                @373    ;NONAME
+        obfuscate_buffer                            @374    ;NONAME
+        readfilechunk_obfuscate                     @375    ;NONAME
+        removefile                                  @376    ;NONAME
+        renamefile                                  @377    ;NONAME
+        savefile                                    @378    ;NONAME
+        str_cmpx                                    @379    ;NONAME
+        str_cmpxi                                   @380    ;NONAME
+        str_match_simple_pattern                    @381    ;NONAME
+        ;strlcpy                                     @382    ;NONAME        REMOVED - 7/31/09
+        te_attach                                   @383    ;NONAME
+        te_clone                                    @384    ;NONAME
+        te_dealloc                                  @385    ;NONAME
+        te_delattr                                  @386    ;NONAME
+        te_getattr                                  @387    ;NONAME
+        te_getattratoi                              @388    ;NONAME
+        te_getattrc                                 @389    ;NONAME
+        te_getattrd                                 @390    ;NONAME
+        te_getattrf                                 @391    ;NONAME
+        te_getattrs                                 @392    ;NONAME
+        te_getattru                                 @393    ;NONAME
+        te_getattru64                               @394    ;NONAME
+        te_getchild                                 @395    ;NONAME
+        te_getname                                  @396    ;NONAME
+        te_getparent                                @397    ;NONAME
+        te_new                                      @398    ;NONAME
+        te_nextchild                                @399    ;NONAME
+        te_nthchild                                 @400    ;NONAME
+        te_setattr                                  @401    ;NONAME
+        te_setattrc                                 @402    ;NONAME
+        te_setattrd                                 @403    ;NONAME
+        te_setattrf                                 @404    ;NONAME
+        te_setattru                                 @405    ;NONAME
+        te_setattru64                               @406    ;NONAME
+        te_unlink                                   @407    ;NONAME
+        tps_pack                                    @408    ;NONAME
+        tps_unpack_feed                             @409    ;NONAME
+        tps_unpack_result                           @410    ;NONAME
+        tps_unpack_start                            @411    ;NONAME
+        tpslib_byid                                 @412    ;NONAME
+        tpslib_byte                                 @413    ;NONAME
+        tpslib_dealloc                              @414    ;NONAME
+        tpslib_getcaps                              @415    ;NONAME
+        tpslib_getid                                @416    ;NONAME
+        tpslib_preload                              @417    ;NONAME
+        unhexlify                                   @418    ;NONAME
+        validatefile_crc                            @419    ;NONAME
+        readfile_obfuscate                          @420    ;NONAME
+        savefile_obfuscate                          @421    ;NONAME
+        appendfile_obfuscate                        @422    ;NONAME
+        encode_base64                               @423    ;NONAME
+
+        CSL_QuadkeyConvertToXYZ                     @500    ;NONAME
+        CSL_QuadkeyConvertFromXYZ                   @501    ;NONAME
+
+        CSL_VersionGet                              @600    ;NONAME
+        CSL_VersionGetCopyright                     @601    ;NONAME
+
+        CSL_AesEncrypt                              @700    ;NONAME
+        CSL_AesDecrypt                              @701    ;NONAME

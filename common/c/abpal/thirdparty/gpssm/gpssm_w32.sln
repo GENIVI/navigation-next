@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gpssm", "projects\win32\gpssm.vcproj", "{E646D90B-E3FC-4251-8240-CE896A7621E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unittests", "projects\win32\unittests.vcproj", "{EC240ECA-8D77-400D-BB57-4F4696254F2A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E646D90B-E3FC-4251-8240-CE896A7621E5} = {E646D90B-E3FC-4251-8240-CE896A7621E5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E646D90B-E3FC-4251-8240-CE896A7621E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E646D90B-E3FC-4251-8240-CE896A7621E5}.Debug|Win32.Build.0 = Debug|Win32
+		{E646D90B-E3FC-4251-8240-CE896A7621E5}.Release|Win32.ActiveCfg = Release|Win32
+		{E646D90B-E3FC-4251-8240-CE896A7621E5}.Release|Win32.Build.0 = Release|Win32
+		{EC240ECA-8D77-400D-BB57-4F4696254F2A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC240ECA-8D77-400D-BB57-4F4696254F2A}.Debug|Win32.Build.0 = Debug|Win32
+		{EC240ECA-8D77-400D-BB57-4F4696254F2A}.Release|Win32.ActiveCfg = Release|Win32
+		{EC240ECA-8D77-400D-BB57-4F4696254F2A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="argtable"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS"
+		WarningLevel="1"
+		DisableSpecificWarnings="4100;4131"
+	/>
+</VisualStudioPropertySheet>

@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A49E76F114E03D6B00AB9E88 /* palqueueaudiorecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = A49E76EF14E03D6A00AB9E88 /* palqueueaudiorecorder.h */; };
+		A49E76F214E03D6B00AB9E88 /* palqueueaudiorecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = A49E76F014E03D6B00AB9E88 /* palqueueaudiorecorder.mm */; };
+		A4D3A705138AB1BB008D0A6F /* palaudiosessionmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D3A703138AB1BB008D0A6F /* palaudiosessionmanager.h */; };
+		A4D3A706138AB1BB008D0A6F /* palaudiosessionmanager.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4D3A704138AB1BB008D0A6F /* palaudiosessionmanager.mm */; };
+		A4E2696B138BD41900F337DE /* palaudiosessionsingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E2696A138BD41900F337DE /* palaudiosessionsingleton.h */; };
+		A5CA122D1952B70400574085 /* AbpalTTSEngineImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CA122B1952B70400574085 /* AbpalTTSEngineImpl.h */; };
+		A5CA122E1952B70400574085 /* AbpalTTSEngineImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5CA122C1952B70400574085 /* AbpalTTSEngineImpl.mm */; };
+		A8C377E718444E31005E916E /* nimaudiocombiner.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377E618444E31005E916E /* nimaudiocombiner.h */; };
+		A8C377EA1844682A005E916E /* nimaudiocombiner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377E91844682A005E916E /* nimaudiocombiner.cpp */; };
+		A8DFD0F81845D67E0005F504 /* AACAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0E51845D67D0005F504 /* AACAtom.cpp */; };
+		A8DFD0F91845D67E0005F504 /* AACAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0E61845D67D0005F504 /* AACAtom.h */; };
+		A8DFD0FA1845D67E0005F504 /* AACCombiner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0E71845D67D0005F504 /* AACCombiner.cpp */; };
+		A8DFD0FB1845D67E0005F504 /* AACFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0E81845D67D0005F504 /* AACFile.cpp */; };
+		A8DFD0FC1845D67E0005F504 /* AACFile.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0E91845D67D0005F504 /* AACFile.h */; };
+		A8DFD0FD1845D67E0005F504 /* MdhdAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0EA1845D67D0005F504 /* MdhdAtom.cpp */; };
+		A8DFD0FE1845D67E0005F504 /* MdhdAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0EB1845D67D0005F504 /* MdhdAtom.h */; };
+		A8DFD0FF1845D67E0005F504 /* MvhdAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0EC1845D67D0005F504 /* MvhdAtom.cpp */; };
+		A8DFD1001845D67E0005F504 /* MvhdAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0ED1845D67D0005F504 /* MvhdAtom.h */; };
+		A8DFD1011845D67E0005F504 /* StcoAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0EE1845D67D0005F504 /* StcoAtom.cpp */; };
+		A8DFD1021845D67E0005F504 /* StcoAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0EF1845D67D0005F504 /* StcoAtom.h */; };
+		A8DFD1031845D67E0005F504 /* StscAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0F01845D67D0005F504 /* StscAtom.cpp */; };
+		A8DFD1041845D67E0005F504 /* StscAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0F11845D67D0005F504 /* StscAtom.h */; };
+		A8DFD1051845D67E0005F504 /* StszAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0F21845D67D0005F504 /* StszAtom.cpp */; };
+		A8DFD1061845D67E0005F504 /* StszAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0F31845D67D0005F504 /* StszAtom.h */; };
+		A8DFD1071845D67E0005F504 /* SttsAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0F41845D67D0005F504 /* SttsAtom.cpp */; };
+		A8DFD1081845D67E0005F504 /* SttsAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0F51845D67D0005F504 /* SttsAtom.h */; };
+		A8DFD1091845D67E0005F504 /* TkhdAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD0F61845D67D0005F504 /* TkhdAtom.cpp */; };
+		A8DFD10A1845D67E0005F504 /* TkhdAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DFD0F71845D67D0005F504 /* TkhdAtom.h */; };
+		AA747D9F0F9514B9006C5449 /* abpal_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* abpal_Prefix.pch */; };
+		B0AFDE79129F9BC700AB42F2 /* palaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0AFDE78129F9BC700AB42F2 /* palaudio.mm */; };
+		B0AFDE7C129F9BDB00AB42F2 /* palaudioplayer.h in Headers */ = {isa = PBXBuildFile; fileRef = B0AFDE7A129F9BDB00AB42F2 /* palaudioplayer.h */; };
+		B0AFDE7D129F9BDB00AB42F2 /* palaudioplayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0AFDE7B129F9BDB00AB42F2 /* palaudioplayer.mm */; };
+		D620CB58132DA84800C48502 /* playeritem.h in Headers */ = {isa = PBXBuildFile; fileRef = D620CB56132DA84800C48502 /* playeritem.h */; };
+		D620CB59132DA84800C48502 /* playeritem.mm in Sources */ = {isa = PBXBuildFile; fileRef = D620CB57132DA84800C48502 /* playeritem.mm */; };
+		D66164731831FB8A00E7D794 /* AACCombiner.h in Headers */ = {isa = PBXBuildFile; fileRef = D66164721831FB8A00E7D794 /* AACCombiner.h */; };
+		D67ABB4311EF0B0400D57824 /* abpalaudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAA611EF0B0400D57824 /* abpalaudio.h */; };
+		D67ABB4411EF0B0400D57824 /* abpaldoxygengroups.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAA711EF0B0400D57824 /* abpaldoxygengroups.h */; };
+		D67ABB4511EF0B0400D57824 /* abpalgps.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAA811EF0B0400D57824 /* abpalgps.h */; };
+		D67ABB4611EF0B0400D57824 /* abpalversion.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAA911EF0B0400D57824 /* abpalversion.h */; };
+		D67ABB4811EF0B0400D57824 /* abpalexp.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAAD11EF0B0400D57824 /* abpalexp.h */; };
+		D67ABB4911EF0B0400D57824 /* abpalversioninfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAAE11EF0B0400D57824 /* abpalversioninfo.h */; };
+		D67ABB5F11EF0B0400D57824 /* palaudioimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAD011EF0B0400D57824 /* palaudioimpl.h */; };
+		D67ABB6411EF0B0400D57824 /* abpalgps.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABAD611EF0B0400D57824 /* abpalgps.m */; };
+		D67ABB6511EF0B0400D57824 /* filegpshandler.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAD711EF0B0400D57824 /* filegpshandler.h */; };
+		D67ABB6611EF0B0400D57824 /* filegpshandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = D67ABAD811EF0B0400D57824 /* filegpshandler.mm */; };
+		D67ABB6711EF0B0400D57824 /* filegpshandlersingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAD911EF0B0400D57824 /* filegpshandlersingleton.h */; };
+		D67ABB6811EF0B0400D57824 /* filegpsmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABADA11EF0B0400D57824 /* filegpsmanager.h */; };
+		D67ABB6911EF0B0400D57824 /* filegpsmanager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D67ABADB11EF0B0400D57824 /* filegpsmanager.mm */; };
+		D67ABB6A11EF0B0400D57824 /* gpsconfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABADC11EF0B0400D57824 /* gpsconfiguration.h */; };
+		D67ABB6B11EF0B0400D57824 /* gpsconfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = D67ABADD11EF0B0400D57824 /* gpsconfiguration.mm */; };
+		D67ABB6C11EF0B0400D57824 /* gpscontext.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABADE11EF0B0400D57824 /* gpscontext.h */; };
+		D67ABB6D11EF0B0400D57824 /* gpscontext.mm in Sources */ = {isa = PBXBuildFile; fileRef = D67ABADF11EF0B0400D57824 /* gpscontext.mm */; };
+		D67ABB6E11EF0B0400D57824 /* gpsprotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAE011EF0B0400D57824 /* gpsprotocol.h */; };
+		D67ABB6F11EF0B0400D57824 /* realgpsmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAE111EF0B0400D57824 /* realgpsmanager.h */; };
+		D67ABB7011EF0B0400D57824 /* realgpsmanager.m in Sources */ = {isa = PBXBuildFile; fileRef = D67ABAE211EF0B0400D57824 /* realgpsmanager.m */; };
+		D67ABB7111EF0B0400D57824 /* realgpssingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABAE311EF0B0400D57824 /* realgpssingleton.h */; };
+		D67ABB9711EF0B0400D57824 /* abpalversion.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABB1411EF0B0400D57824 /* abpalversion.c */; };
+		D67ABB9811EF0B0400D57824 /* audbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABB1511EF0B0400D57824 /* audbuf.c */; };
+		D67ABBC311EF0B4C00D57824 /* audbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABBC111EF0B4C00D57824 /* audbuf.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A49E76EF14E03D6A00AB9E88 /* palqueueaudiorecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palqueueaudiorecorder.h; sourceTree = "<group>"; };
+		A49E76F014E03D6B00AB9E88 /* palqueueaudiorecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palqueueaudiorecorder.mm; sourceTree = "<group>"; };
+		A4D3A703138AB1BB008D0A6F /* palaudiosessionmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palaudiosessionmanager.h; sourceTree = "<group>"; };
+		A4D3A704138AB1BB008D0A6F /* palaudiosessionmanager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palaudiosessionmanager.mm; sourceTree = "<group>"; };
+		A4E2696A138BD41900F337DE /* palaudiosessionsingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palaudiosessionsingleton.h; sourceTree = "<group>"; };
+		A5CA122A1952831800574085 /* abpalttsengine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = abpalttsengine.h; sourceTree = "<group>"; };
+		A5CA122B1952B70400574085 /* AbpalTTSEngineImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbpalTTSEngineImpl.h; sourceTree = "<group>"; };
+		A5CA122C1952B70400574085 /* AbpalTTSEngineImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AbpalTTSEngineImpl.mm; sourceTree = "<group>"; };
+		A8C377E618444E31005E916E /* nimaudiocombiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nimaudiocombiner.h; sourceTree = "<group>"; };
+		A8C377E91844682A005E916E /* nimaudiocombiner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nimaudiocombiner.cpp; sourceTree = "<group>"; };
+		A8DFD0E51845D67D0005F504 /* AACAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AACAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0E61845D67D0005F504 /* AACAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACAtom.h; sourceTree = "<group>"; };
+		A8DFD0E71845D67D0005F504 /* AACCombiner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AACCombiner.cpp; sourceTree = "<group>"; };
+		A8DFD0E81845D67D0005F504 /* AACFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AACFile.cpp; sourceTree = "<group>"; };
+		A8DFD0E91845D67D0005F504 /* AACFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACFile.h; sourceTree = "<group>"; };
+		A8DFD0EA1845D67D0005F504 /* MdhdAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MdhdAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0EB1845D67D0005F504 /* MdhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MdhdAtom.h; sourceTree = "<group>"; };
+		A8DFD0EC1845D67D0005F504 /* MvhdAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MvhdAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0ED1845D67D0005F504 /* MvhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvhdAtom.h; sourceTree = "<group>"; };
+		A8DFD0EE1845D67D0005F504 /* StcoAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StcoAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0EF1845D67D0005F504 /* StcoAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StcoAtom.h; sourceTree = "<group>"; };
+		A8DFD0F01845D67D0005F504 /* StscAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StscAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0F11845D67D0005F504 /* StscAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StscAtom.h; sourceTree = "<group>"; };
+		A8DFD0F21845D67D0005F504 /* StszAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StszAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0F31845D67D0005F504 /* StszAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StszAtom.h; sourceTree = "<group>"; };
+		A8DFD0F41845D67D0005F504 /* SttsAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SttsAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0F51845D67D0005F504 /* SttsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SttsAtom.h; sourceTree = "<group>"; };
+		A8DFD0F61845D67D0005F504 /* TkhdAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TkhdAtom.cpp; sourceTree = "<group>"; };
+		A8DFD0F71845D67D0005F504 /* TkhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TkhdAtom.h; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* abpal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpal_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		B018DE28123E1B6900001A5C /* libabpal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libabpal.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0AFDE78129F9BC700AB42F2 /* palaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palaudio.mm; sourceTree = "<group>"; };
+		B0AFDE7A129F9BDB00AB42F2 /* palaudioplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palaudioplayer.h; sourceTree = "<group>"; };
+		B0AFDE7B129F9BDB00AB42F2 /* palaudioplayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palaudioplayer.mm; sourceTree = "<group>"; };
+		D620CB56132DA84800C48502 /* playeritem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playeritem.h; sourceTree = "<group>"; };
+		D620CB57132DA84800C48502 /* playeritem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = playeritem.mm; sourceTree = "<group>"; };
+		D66164721831FB8A00E7D794 /* AACCombiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACCombiner.h; sourceTree = "<group>"; };
+		D67ABAA611EF0B0400D57824 /* abpalaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpalaudio.h; sourceTree = "<group>"; };
+		D67ABAA711EF0B0400D57824 /* abpaldoxygengroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpaldoxygengroups.h; sourceTree = "<group>"; };
+		D67ABAA811EF0B0400D57824 /* abpalgps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpalgps.h; sourceTree = "<group>"; };
+		D67ABAA911EF0B0400D57824 /* abpalversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpalversion.h; sourceTree = "<group>"; };
+		D67ABAAD11EF0B0400D57824 /* abpalexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpalexp.h; sourceTree = "<group>"; };
+		D67ABAAE11EF0B0400D57824 /* abpalversioninfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abpalversioninfo.h; sourceTree = "<group>"; };
+		D67ABAD011EF0B0400D57824 /* palaudioimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palaudioimpl.h; sourceTree = "<group>"; };
+		D67ABAD611EF0B0400D57824 /* abpalgps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = abpalgps.m; sourceTree = "<group>"; };
+		D67ABAD711EF0B0400D57824 /* filegpshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filegpshandler.h; sourceTree = "<group>"; };
+		D67ABAD811EF0B0400D57824 /* filegpshandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = filegpshandler.mm; sourceTree = "<group>"; };
+		D67ABAD911EF0B0400D57824 /* filegpshandlersingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filegpshandlersingleton.h; sourceTree = "<group>"; };
+		D67ABADA11EF0B0400D57824 /* filegpsmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filegpsmanager.h; sourceTree = "<group>"; };
+		D67ABADB11EF0B0400D57824 /* filegpsmanager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = filegpsmanager.mm; sourceTree = "<group>"; };
+		D67ABADC11EF0B0400D57824 /* gpsconfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpsconfiguration.h; sourceTree = "<group>"; };
+		D67ABADD11EF0B0400D57824 /* gpsconfiguration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = gpsconfiguration.mm; sourceTree = "<group>"; };
+		D67ABADE11EF0B0400D57824 /* gpscontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpscontext.h; sourceTree = "<group>"; };
+		D67ABADF11EF0B0400D57824 /* gpscontext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = gpscontext.mm; sourceTree = "<group>"; };
+		D67ABAE011EF0B0400D57824 /* gpsprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpsprotocol.h; sourceTree = "<group>"; };
+		D67ABAE111EF0B0400D57824 /* realgpsmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = realgpsmanager.h; sourceTree = "<group>"; };
+		D67ABAE211EF0B0400D57824 /* realgpsmanager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = realgpsmanager.m; sourceTree = "<group>"; };
+		D67ABAE311EF0B0400D57824 /* realgpssingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = realgpssingleton.h; sourceTree = "<group>"; };
+		D67ABB1411EF0B0400D57824 /* abpalversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = abpalversion.c; sourceTree = "<group>"; };
+		D67ABB1511EF0B0400D57824 /* audbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = audbuf.c; sourceTree = "<group>"; };
+		D67ABBC111EF0B4C00D57824 /* audbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audbuf.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B018DE28123E1B6900001A5C /* libabpal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* abpal */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABAA511EF0B0400D57824 /* include */,
+				D67ABABA11EF0B0400D57824 /* src */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = abpal;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* abpal_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		A8DFD0E41845D67D0005F504 /* combineraac */ = {
+			isa = PBXGroup;
+			children = (
+				A8DFD0E51845D67D0005F504 /* AACAtom.cpp */,
+				A8DFD0E61845D67D0005F504 /* AACAtom.h */,
+				A8DFD0E71845D67D0005F504 /* AACCombiner.cpp */,
+				A8DFD0E81845D67D0005F504 /* AACFile.cpp */,
+				A8DFD0E91845D67D0005F504 /* AACFile.h */,
+				A8DFD0EA1845D67D0005F504 /* MdhdAtom.cpp */,
+				A8DFD0EB1845D67D0005F504 /* MdhdAtom.h */,
+				A8DFD0EC1845D67D0005F504 /* MvhdAtom.cpp */,
+				A8DFD0ED1845D67D0005F504 /* MvhdAtom.h */,
+				A8DFD0EE1845D67D0005F504 /* StcoAtom.cpp */,
+				A8DFD0EF1845D67D0005F504 /* StcoAtom.h */,
+				A8DFD0F01845D67D0005F504 /* StscAtom.cpp */,
+				A8DFD0F11845D67D0005F504 /* StscAtom.h */,
+				A8DFD0F21845D67D0005F504 /* StszAtom.cpp */,
+				A8DFD0F31845D67D0005F504 /* StszAtom.h */,
+				A8DFD0F41845D67D0005F504 /* SttsAtom.cpp */,
+				A8DFD0F51845D67D0005F504 /* SttsAtom.h */,
+				A8DFD0F61845D67D0005F504 /* TkhdAtom.cpp */,
+				A8DFD0F71845D67D0005F504 /* TkhdAtom.h */,
+			);
+			path = combineraac;
+			sourceTree = "<group>";
+		};
+		D67ABAA511EF0B0400D57824 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABAAC11EF0B0400D57824 /* iphone */,
+				D67ABBC011EF0B4C00D57824 /* private */,
+				D67ABAA611EF0B0400D57824 /* abpalaudio.h */,
+				D67ABAA711EF0B0400D57824 /* abpaldoxygengroups.h */,
+				D67ABAA811EF0B0400D57824 /* abpalgps.h */,
+				D67ABAA911EF0B0400D57824 /* abpalversion.h */,
+				A5CA122A1952831800574085 /* abpalttsengine.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = SOURCE_ROOT;
+		};
+		D67ABAAC11EF0B0400D57824 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABAAD11EF0B0400D57824 /* abpalexp.h */,
+				D67ABAAE11EF0B0400D57824 /* abpalversioninfo.h */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		D67ABABA11EF0B0400D57824 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABACD11EF0B0400D57824 /* iphone */,
+				D67ABB1311EF0B0400D57824 /* util */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		D67ABACD11EF0B0400D57824 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABACE11EF0B0400D57824 /* audio */,
+				D67ABAD511EF0B0400D57824 /* gps */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		D67ABACE11EF0B0400D57824 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				A5CA122B1952B70400574085 /* AbpalTTSEngineImpl.h */,
+				A5CA122C1952B70400574085 /* AbpalTTSEngineImpl.mm */,
+				A49E76EF14E03D6A00AB9E88 /* palqueueaudiorecorder.h */,
+				A49E76F014E03D6B00AB9E88 /* palqueueaudiorecorder.mm */,
+				A4E2696A138BD41900F337DE /* palaudiosessionsingleton.h */,
+				A4D3A703138AB1BB008D0A6F /* palaudiosessionmanager.h */,
+				A4D3A704138AB1BB008D0A6F /* palaudiosessionmanager.mm */,
+				D620CB56132DA84800C48502 /* playeritem.h */,
+				D620CB57132DA84800C48502 /* playeritem.mm */,
+				B0AFDE7A129F9BDB00AB42F2 /* palaudioplayer.h */,
+				B0AFDE7B129F9BDB00AB42F2 /* palaudioplayer.mm */,
+				B0AFDE78129F9BC700AB42F2 /* palaudio.mm */,
+				D67ABAD011EF0B0400D57824 /* palaudioimpl.h */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		D67ABAD511EF0B0400D57824 /* gps */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABAD611EF0B0400D57824 /* abpalgps.m */,
+				D67ABAD711EF0B0400D57824 /* filegpshandler.h */,
+				D67ABAD811EF0B0400D57824 /* filegpshandler.mm */,
+				D67ABAD911EF0B0400D57824 /* filegpshandlersingleton.h */,
+				D67ABADA11EF0B0400D57824 /* filegpsmanager.h */,
+				D67ABADB11EF0B0400D57824 /* filegpsmanager.mm */,
+				D67ABADC11EF0B0400D57824 /* gpsconfiguration.h */,
+				D67ABADD11EF0B0400D57824 /* gpsconfiguration.mm */,
+				D67ABADE11EF0B0400D57824 /* gpscontext.h */,
+				D67ABADF11EF0B0400D57824 /* gpscontext.mm */,
+				D67ABAE011EF0B0400D57824 /* gpsprotocol.h */,
+				D67ABAE111EF0B0400D57824 /* realgpsmanager.h */,
+				D67ABAE211EF0B0400D57824 /* realgpsmanager.m */,
+				D67ABAE311EF0B0400D57824 /* realgpssingleton.h */,
+			);
+			path = gps;
+			sourceTree = "<group>";
+		};
+		D67ABB1311EF0B0400D57824 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A8DFD0E41845D67D0005F504 /* combineraac */,
+				A8C377E91844682A005E916E /* nimaudiocombiner.cpp */,
+				D67ABB1411EF0B0400D57824 /* abpalversion.c */,
+				D67ABB1511EF0B0400D57824 /* audbuf.c */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D67ABBC011EF0B4C00D57824 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				A8C377E618444E31005E916E /* nimaudiocombiner.h */,
+				D66164721831FB8A00E7D794 /* AACCombiner.h */,
+				D67ABBC111EF0B4C00D57824 /* audbuf.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* abpal_Prefix.pch in Headers */,
+				D67ABB4311EF0B0400D57824 /* abpalaudio.h in Headers */,
+				D67ABB4411EF0B0400D57824 /* abpaldoxygengroups.h in Headers */,
+				D67ABB4511EF0B0400D57824 /* abpalgps.h in Headers */,
+				D67ABB4611EF0B0400D57824 /* abpalversion.h in Headers */,
+				A8C377E718444E31005E916E /* nimaudiocombiner.h in Headers */,
+				D67ABB4811EF0B0400D57824 /* abpalexp.h in Headers */,
+				D67ABB4911EF0B0400D57824 /* abpalversioninfo.h in Headers */,
+				A8DFD0FC1845D67E0005F504 /* AACFile.h in Headers */,
+				D67ABB5F11EF0B0400D57824 /* palaudioimpl.h in Headers */,
+				D67ABB6511EF0B0400D57824 /* filegpshandler.h in Headers */,
+				D67ABB6711EF0B0400D57824 /* filegpshandlersingleton.h in Headers */,
+				A8DFD1041845D67E0005F504 /* StscAtom.h in Headers */,
+				D67ABB6811EF0B0400D57824 /* filegpsmanager.h in Headers */,
+				A8DFD1021845D67E0005F504 /* StcoAtom.h in Headers */,
+				D67ABB6A11EF0B0400D57824 /* gpsconfiguration.h in Headers */,
+				D67ABB6C11EF0B0400D57824 /* gpscontext.h in Headers */,
+				D67ABB6E11EF0B0400D57824 /* gpsprotocol.h in Headers */,
+				A8DFD1001845D67E0005F504 /* MvhdAtom.h in Headers */,
+				D67ABB6F11EF0B0400D57824 /* realgpsmanager.h in Headers */,
+				A8DFD0F91845D67E0005F504 /* AACAtom.h in Headers */,
+				D67ABB7111EF0B0400D57824 /* realgpssingleton.h in Headers */,
+				D67ABBC311EF0B4C00D57824 /* audbuf.h in Headers */,
+				B0AFDE7C129F9BDB00AB42F2 /* palaudioplayer.h in Headers */,
+				D620CB58132DA84800C48502 /* playeritem.h in Headers */,
+				A4D3A705138AB1BB008D0A6F /* palaudiosessionmanager.h in Headers */,
+				A4E2696B138BD41900F337DE /* palaudiosessionsingleton.h in Headers */,
+				A8DFD0FE1845D67E0005F504 /* MdhdAtom.h in Headers */,
+				A49E76F114E03D6B00AB9E88 /* palqueueaudiorecorder.h in Headers */,
+				D66164731831FB8A00E7D794 /* AACCombiner.h in Headers */,
+				A8DFD1061845D67E0005F504 /* StszAtom.h in Headers */,
+				A8DFD10A1845D67E0005F504 /* TkhdAtom.h in Headers */,
+				A8DFD1081845D67E0005F504 /* SttsAtom.h in Headers */,
+				A5CA122D1952B70400574085 /* AbpalTTSEngineImpl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* abpal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "abpal" */;
+			buildPhases = (
+				D6F59A6911E5BB790010F1C0 /* ShellScript */,
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = abpal;
+			productName = abpal;
+			productReference = B018DE28123E1B6900001A5C /* libabpal.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "abpal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* abpal */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* abpal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6F59A6911E5BB790010F1C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python ../../build/version.py ../../ iphone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67ABB6411EF0B0400D57824 /* abpalgps.m in Sources */,
+				A8DFD1091845D67E0005F504 /* TkhdAtom.cpp in Sources */,
+				D67ABB6611EF0B0400D57824 /* filegpshandler.mm in Sources */,
+				A8C377EA1844682A005E916E /* nimaudiocombiner.cpp in Sources */,
+				D67ABB6911EF0B0400D57824 /* filegpsmanager.mm in Sources */,
+				A8DFD1071845D67E0005F504 /* SttsAtom.cpp in Sources */,
+				A8DFD0FA1845D67E0005F504 /* AACCombiner.cpp in Sources */,
+				D67ABB6B11EF0B0400D57824 /* gpsconfiguration.mm in Sources */,
+				A5CA122E1952B70400574085 /* AbpalTTSEngineImpl.mm in Sources */,
+				D67ABB6D11EF0B0400D57824 /* gpscontext.mm in Sources */,
+				A8DFD0F81845D67E0005F504 /* AACAtom.cpp in Sources */,
+				D67ABB7011EF0B0400D57824 /* realgpsmanager.m in Sources */,
+				D67ABB9711EF0B0400D57824 /* abpalversion.c in Sources */,
+				A8DFD1051845D67E0005F504 /* StszAtom.cpp in Sources */,
+				A8DFD1031845D67E0005F504 /* StscAtom.cpp in Sources */,
+				A8DFD0FB1845D67E0005F504 /* AACFile.cpp in Sources */,
+				D67ABB9811EF0B0400D57824 /* audbuf.c in Sources */,
+				B0AFDE79129F9BC700AB42F2 /* palaudio.mm in Sources */,
+				A8DFD0FF1845D67E0005F504 /* MvhdAtom.cpp in Sources */,
+				B0AFDE7D129F9BDB00AB42F2 /* palaudioplayer.mm in Sources */,
+				A8DFD1011845D67E0005F504 /* StcoAtom.cpp in Sources */,
+				D620CB59132DA84800C48502 /* playeritem.mm in Sources */,
+				A8DFD0FD1845D67E0005F504 /* MdhdAtom.cpp in Sources */,
+				A4D3A706138AB1BB008D0A6F /* palaudiosessionmanager.mm in Sources */,
+				A49E76F214E03D6B00AB9E88 /* palqueueaudiorecorder.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/abpal.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = abpal_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = IPHONE;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../nbpal/$(BRANCH)/output/iphone/iPhoneSimulator\"",
+					"\"$(SDKROOT)/usr/lib/gcc/i686-apple-darwin9/4.0.1\"",
+				);
+				PRODUCT_NAME = abpal;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = feature_140523_hybrid_phase2;
+				DSTROOT = /tmp/abpal.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = abpal_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = IPHONE;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../nbpal/$(BRANCH)/output/iphone/iPhoneSimulator\"",
+					"\"$(SDKROOT)/usr/lib/gcc/i686-apple-darwin9/4.0.1\"",
+				);
+				PRODUCT_NAME = abpal;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = feature_140523_hybrid_phase2;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/$(BRANCH)/include/ ../../../../nbpal/$(BRANCH)/include/iphone/";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BRANCH = feature_140523_hybrid_phase2;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../nbpal/$(BRANCH)/include/ ../../../../nbpal/$(BRANCH)/include/iphone/";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "abpal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "abpal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LayerManager">
+      <UniqueIdentifier>{ee02bf92-f058-4e11-a024-60b56f88dcef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapView">
+      <UniqueIdentifier>{89d24410-2742-463e-9e71-9bfd74f3a88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileManager">
+      <UniqueIdentifier>{09919620-448f-4740-8882-5cf284e03fa3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\map\layermanager\AggregateLayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\AnimationLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\AnimationLayerAgent.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\AnimationTileCallback.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\CommonMaterialLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\FrameListLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\FrameListTileCallback.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GenericTileCallback.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LamProcessor.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LayerAgentImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LayerAvailabilityMatrixLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LayerIdGenerator.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LocalLayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\MapLegendInfoImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\MetadataProcessor.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\NBPng.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OffboardLayerListener.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OffboardLayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OffboardTileType.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OnboardLayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OptionalLayersAgentImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\PinLayerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\PinManagerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\RasterTileConverter.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\RefreshLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\RefreshTileCallback.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\RouteLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\RouteManagerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\TileKey.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\TileRefresher.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\TileServicesConfiguration.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\TrafficIncidentLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\TrafficManagerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayerManager.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\UnifiedLayerWithLAM.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\Frame.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapServicesConfigurationImpl.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapView.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewAnimation.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewAnimationLayer.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewLayerCallback.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewProfiling.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewTask.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewTileCallback.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\NBGMViewController.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\CachingTileCallbackWithRequest.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\CachingTileManager.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\OffboardTileManager.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\OffboardTileRequest.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\TileCallbackWithRequest.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\TileConverter.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\TileImpl.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\DAMConfiguration.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\DAMUtilityImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\FrameListLayerDecorator.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GeographyLayerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GeographyManagerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\MetadataConfiguration.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\PinMaterialParser.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\CachedTileOperationCallback.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GeographicLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GeographicPolylineLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\GeographicPrivate.cpp" />
+    <ClCompile Include="..\..\src\map\layermanager\GeoPolylineImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\PinCushionImpl.cpp" />
+    <ClCompile Include="..\..\src\map\mapview\MapViewCamera.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\CustomLayer.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\CustomLayerManagerImpl.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewGestureHandler.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\ToggleableLayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\tilemanager\OnboardTileManager.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\OnboardTileType.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\layermanager\LayerProvider.cpp">
+      <Filter>LayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\mapview\MapViewPinHandler.cpp">
+      <Filter>MapView</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\map\layermanager\AggregateLayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayerAgent.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\AnimationLayerListener.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\AnimationTileCallback.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\BubbleListenerInterface.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\CommonMaterialLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\FrameListLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\FrameListListener.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\FrameListTileCallback.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GenericTileCallback.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LamProcessor.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LayerAgentImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LayerAvailabilityMatrixLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LayerFunctors.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LayerIdGenerator.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\LocalLayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\MapLegendInfoImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\MetadataProcessor.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\NBPng.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OffboardLayerListener.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OffboardLayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OffboardTileType.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OnboardLayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OptionalLayersAgentImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\PinLayerImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\RasterTileConverter.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\RefreshLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\RefreshTileCallback.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\RouteLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\RouteManagerImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\TileRefresher.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\TrafficIncidentLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\TrafficIncidentListener.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\TrafficManagerImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayerManager.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\UnifiedLayerWithLAM.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\Frame.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapView.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewAnimation.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewAnimationLayer.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewLayerCallback.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewProfiling.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewTask.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewTileCallback.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\NBGMViewController.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\CachingTileCallbackWithRequest.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\CachingTileManager.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\OffboardTileManager.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\OffboardTileRequest.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\TileCallbackWithRequest.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\TileConverter.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\TileImpl.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\DAMUtilityImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\FrameListLayerDecorator.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographyLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographyLayerImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographyManager.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographyManagerImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapServicesConfigurationListener.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\PinMaterialParser.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\CachedTileOperationCallback.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographicLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographicPolylineLayer.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeographicPrivate.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\GeoPolylineImpl.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewCamera.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewCameraListener.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewGestureHandler.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\tilemanager\OnboardTileManager.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\ToggleableLayerProvider.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\layermanager\OnboardTileType.h">
+      <Filter>LayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\map\mapview\MapViewPinHandler.h">
+      <Filter>MapView</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

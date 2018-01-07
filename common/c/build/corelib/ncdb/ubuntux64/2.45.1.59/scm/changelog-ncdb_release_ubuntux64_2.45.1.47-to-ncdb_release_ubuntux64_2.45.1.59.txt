@@ -1,0 +1,546 @@
+Changelog: ncdb_release_ubuntux64_2.45.1.47 to ncdb_release_ubuntux64_2.45.1.59
+
+===============================================================================
+
+
+
+55 new changes in ncdb_release_ubuntux64_2.45.1.59
+
+--------------------------------------------------
+
+
+
+Change 647100 by mmeyer1@mmeyer1_AVPCFYM3SL1MMEY_1416 on 2017/04/06 23:45:47
+
+	update on road color: from #555555 to #606060
+
+
+
+Change 647290 by nkashyap@p420150218 on 2017/04/13 19:10:27
+
+	add aliases for Charging station category
+
+
+
+Change 647369 by dmathis@P4_main on 2017/04/18 07:13:44
+
+	Merging
+	
+	//depot/core/corelib/feature_160122_engine5/ncdb/...
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/...
+	
+	Add minimum distance parameter for return-to-route options
+
+
+
+Change 647384 by parabuild@parabuild_on_build16_196768 on 2017/04/18 22:09:00
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+
+
+Change 647392 by ctrisno@ctrisno_workspace on 2017/04/19 01:22:50
+
+	Fix for KARMAEXT-339 and KARMAEXT-374.
+
+
+
+Change 647409 by ctrisno@ctrisno_workspace on 2017/04/19 21:24:31
+
+	KARMAEXT-374:  Increased font sizes for more labels such as neighborhoods, national parks, and state names.
+
+
+
+Change 647424 by nkashyap@01NF24Feb on 2017/04/20 21:45:02
+
+	remove cout
+
+
+
+Change 647473 by dmathis@P4_main on 2017/04/24 20:29:10
+
+	Merging
+	
+	//depot/core/corelib/feature_160122_engine5/ncdb/...
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/...
+	
+	Limit number of return-to-route retries.
+
+
+
+Change 647490 by nkashyap@01NF24Feb on 2017/04/25 01:17:25
+
+	enable PA api for TT
+
+
+
+Change 647492 by parabuild@parabuild_on_build10_nimone_com_196770 on 2017/04/25 01:21:16
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-EL6-LINUX-MN)
+
+
+
+Change 647494 by dmathis@P4_main on 2017/04/25 15:44:07
+
+	Merging
+	
+	//depot/core/corelib/feature_160122_engine5/ncdb/source/Route/RouteEngine.cpp
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/source/Route/RouteEngine.cpp
+	
+	Update for RTR limits
+
+
+
+Change 647498 by parabuild@parabuild_on_build16_196768 on 2017/04/25 17:44:31
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+
+
+Change 647526 by dmathis@P4_main on 2017/04/25 21:59:37
+
+	Merging
+	
+	//depot/core/corelib/feature_160122_engine5/ncdb/source/Route/RoutingPropertyData.cpp
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/source/Route/RoutingPropertyData.cpp
+	
+	Change default parameters for RTR
+
+
+
+Change 647527 by parabuild@parabuild_on_build16_196768 on 2017/04/25 22:29:13
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+
+
+Change 647779 by dmathis@p4_main3 on 2017/05/04 20:17:08
+
+	KARMAEXT-418
+	Merging
+	
+	//depot/core/corelib/feature_160122_engine5/ncdb/...
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/...
+	
+	Add additional RTR retry limit for highways
+
+
+
+Change 647823 by dmathis@P4_main on 2017/05/06 02:51:18
+
+	Add VZFL configuration
+
+
+
+Change 647843 by nkashyap@01NF24Feb on 2017/05/08 23:34:20
+
+	remove dependence on state
+
+
+
+Change 647844 by parabuild@parabuild_on_build16_196768 on 2017/05/08 23:39:33
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+
+
+Change 647862 by dmathis@P4_main on 2017/05/09 18:26:56
+
+	Update vzfl configuration
+
+
+
+Change 647888 by dmathis@P4_main on 2017/05/10 00:22:50
+
+	update vzfl configuration
+
+
+
+Change 647900 by dmathis@P4_main on 2017/05/11 05:53:30
+
+	Update vzfl config
+
+
+
+Change 647912 by dmathis@P4_main on 2017/05/12 18:29:22
+
+	Update for vzfl configuration
+
+
+
+Change 647935 by dmathis@P4_main on 2017/05/15 15:33:38
+
+	update vzfl config
+
+
+
+Change 647957 by dmathis@P4_main on 2017/05/16 16:42:29
+
+	Support variant version of rpm config package by defining environment variable RPM_VARIANT=-xxx to get rpm with name libncdb-config-xxx...
+
+
+
+Change 647973 by dmathis@P4_main on 2017/05/17 14:47:11
+
+	Update for vzfl rpm variant. Support variant through environment variable RPM_VARIANT=xxx and generate a tag after version number nnn:
+	libncdb-config-nnn.xxx.amzn1
+
+
+
+Change 648158 by dmathis@P4_main on 2017/05/24 18:48:57
+
+	Update POI draw order.
+
+
+
+Change 648179 by parabuild@parabuild_on_build16_198013 on 2017/05/25 17:34:23
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-UBUNTUX86-MN)
+
+
+
+Change 648346 by dmathis@P4_main on 2017/06/01 17:09:58
+
+	Merging
+	
+	//depot/core/corelib/release_150812_2_41_0_amz_onboard/ncdb/...
+	
+	to //depot/core/corelib/feature_150819_fisker/ncdb/...
+
+
+
+Change 648348 by dmathis@dmathis_hly-mac_6691 on 2017/06/01 18:16:34
+
+	Update IOS build
+
+
+
+Change 648364 by parabuild@parabuild_on_build11nimonec_nimone_com_204557 on 2017/06/01 22:27:45
+
+	Version increment for Parabuild (CORE-NBM-2-45-0-IPHONE-IOS9-MN)
+
+
+
+Change 648366 by parabuild@parabuild_on_build11nimonec_nimone_com_204558 on 2017/06/01 22:41:30
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-IPHONE-MN)
+
+
+
+Change 648381 by dmathis@P4_main on 2017/06/02 18:18:50
+
+	New POI search functionality is available to Mobitest. No functional change.
+
+
+
+Change 648511 by dmathis@dmathis_hly-mac_6691 on 2017/06/06 22:11:17
+
+	Update NBM
+
+
+
+Change 648513 by parabuild@parabuild_on_build11nimonec_nimone_com_204557 on 2017/06/06 22:19:04
+
+	Version increment for Parabuild (CORE-NBM-2-45-0-IPHONE-IOS9-MN)
+
+
+
+Change 648514 by parabuild@parabuild_on_build11nimonec_nimone_com_204558 on 2017/06/06 22:30:33
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-IPHONE-MN)
+
+
+
+Change 648607 by dmathis@P4_main on 2017/06/10 01:59:50
+
+	Fix build script
+
+
+
+Change 648630 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/12 17:21:29
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+
+
+Change 648632 by dmathis@P4_main on 2017/06/12 19:29:44
+
+	Update android build
+
+
+
+Change 648633 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/12 19:36:45
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+
+
+Change 648638 by dmathis@P4_main on 2017/06/13 13:46:52
+
+	Fix java source/target version conflict.
+
+
+
+Change 648639 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/13 13:55:31
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+
+
+Change 648716 by dmathis@P4_main2 on 2017/06/15 23:24:18
+
+	Create VS 2012 project for boost regex libs. Add 64 bit compilation.
+
+
+
+Change 648717 by dmathis@P4_main2 on 2017/06/16 00:11:40
+
+	add 64 bit windows build for freetype
+
+
+
+Change 648718 by dmathis@P4_main2 on 2017/06/16 00:20:31
+
+	add 64 bit compile for Windows
+
+
+
+Change 648720 by dmathis@P4_main2 on 2017/06/16 00:57:45
+
+	add 64 bit compile for Windows
+
+
+
+Change 648721 by dmathis@P4_main2 on 2017/06/16 01:06:04
+
+	add 64 bit compile for windows
+
+
+
+Change 648763 by dmathis@P4_main2 on 2017/06/20 15:20:23
+
+	Update thirdparty for 64 bit
+
+
+
+Change 648764 by dmathis@P4_main2 on 2017/06/20 15:20:42
+
+	Update fisker for 64 bit compile in Windows
+
+
+
+Change 648807 by dmathis@P4_main2 on 2017/06/22 22:33:41
+
+	Update for debug info
+
+
+
+Change 648808 by dmathis@P4_main2 on 2017/06/22 22:34:32
+
+	Update project search path and other options
+
+
+
+Change 648857 by dmathis@P4_main2 on 2017/06/27 22:02:29
+
+	Fix 64 bit compile warnings/errors in VS 2015
+
+
+
+Change 648858 by dmathis@P4_main2 on 2017/06/27 22:25:55
+
+	Update windows build scripts for VS 2012 and 64 bit.
+
+
+
+Change 648861 by dmathis@P4_main2 on 2017/06/28 00:37:48
+
+	Record if local featrues were found for a raster tile. Used for a special build to extract raster tile generation times for raster pregen.
+
+
+
+Change 648864 by dmathis@P4_main2 on 2017/06/28 01:08:14
+
+	Update NBM for 64 bit build process
+
+
+
+Change 649381 by parabuild@parabuild_on_build10_nimone_com_201776 on 2017/07/25 13:58:41
+
+	Version increment for Parabuild (CORE-NCDB-2-45-0-UBUNTUX64-MN)
+
+
+
+
+================================
+Summary:
+
+Change 647100 by mmeyer1@mmeyer1_AVPCFYM3SL1MMEY_1416 on 2017/04/06 23:45:47
+	update on road color: from #555555 to #606060
+
+Change 647290 by nkashyap@p420150218 on 2017/04/13 19:10:27
+	add aliases for Charging station category
+
+Change 647369 by dmathis@P4_main on 2017/04/18 07:13:44
+	Merging
+
+Change 647384 by parabuild@parabuild_on_build16_196768 on 2017/04/18 22:09:00
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+Change 647392 by ctrisno@ctrisno_workspace on 2017/04/19 01:22:50
+	Fix for KARMAEXT-339 and KARMAEXT-374.
+
+Change 647409 by ctrisno@ctrisno_workspace on 2017/04/19 21:24:31
+	KARMAEXT-374:  Increased font sizes for more labels such as neighborhoods, national parks, and state names.
+
+Change 647424 by nkashyap@01NF24Feb on 2017/04/20 21:45:02
+	remove cout
+
+Change 647473 by dmathis@P4_main on 2017/04/24 20:29:10
+	Merging
+
+Change 647490 by nkashyap@01NF24Feb on 2017/04/25 01:17:25
+	enable PA api for TT
+
+Change 647492 by parabuild@parabuild_on_build10_nimone_com_196770 on 2017/04/25 01:21:16
+	Version increment for Parabuild (CORE-NCDB-2-45-0-EL6-LINUX-MN)
+
+Change 647494 by dmathis@P4_main on 2017/04/25 15:44:07
+	Merging
+
+Change 647498 by parabuild@parabuild_on_build16_196768 on 2017/04/25 17:44:31
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+Change 647526 by dmathis@P4_main on 2017/04/25 21:59:37
+	Merging
+
+Change 647527 by parabuild@parabuild_on_build16_196768 on 2017/04/25 22:29:13
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+Change 647779 by dmathis@p4_main3 on 2017/05/04 20:17:08
+	KARMAEXT-418
+
+Change 647823 by dmathis@P4_main on 2017/05/06 02:51:18
+	Add VZFL configuration
+
+Change 647843 by nkashyap@01NF24Feb on 2017/05/08 23:34:20
+	remove dependence on state
+
+Change 647844 by parabuild@parabuild_on_build16_196768 on 2017/05/08 23:39:33
+	Version increment for Parabuild (CORE-NCDB-2-45-0-QNX-MN)
+
+Change 647862 by dmathis@P4_main on 2017/05/09 18:26:56
+	Update vzfl configuration
+
+Change 647888 by dmathis@P4_main on 2017/05/10 00:22:50
+	update vzfl configuration
+
+Change 647900 by dmathis@P4_main on 2017/05/11 05:53:30
+	Update vzfl config
+
+Change 647912 by dmathis@P4_main on 2017/05/12 18:29:22
+	Update for vzfl configuration
+
+Change 647935 by dmathis@P4_main on 2017/05/15 15:33:38
+	update vzfl config
+
+Change 647957 by dmathis@P4_main on 2017/05/16 16:42:29
+	Support variant version of rpm config package by defining environment variable RPM_VARIANT=-xxx to get rpm with name libncdb-config-xxx...
+
+Change 647973 by dmathis@P4_main on 2017/05/17 14:47:11
+	Update for vzfl rpm variant. Support variant through environment variable RPM_VARIANT=xxx and generate a tag after version number nnn:
+
+Change 648158 by dmathis@P4_main on 2017/05/24 18:48:57
+	Update POI draw order.
+
+Change 648179 by parabuild@parabuild_on_build16_198013 on 2017/05/25 17:34:23
+	Version increment for Parabuild (CORE-NCDB-2-45-0-UBUNTUX86-MN)
+
+Change 648346 by dmathis@P4_main on 2017/06/01 17:09:58
+	Merging
+
+Change 648348 by dmathis@dmathis_hly-mac_6691 on 2017/06/01 18:16:34
+	Update IOS build
+
+Change 648364 by parabuild@parabuild_on_build11nimonec_nimone_com_204557 on 2017/06/01 22:27:45
+	Version increment for Parabuild (CORE-NBM-2-45-0-IPHONE-IOS9-MN)
+
+Change 648366 by parabuild@parabuild_on_build11nimonec_nimone_com_204558 on 2017/06/01 22:41:30
+	Version increment for Parabuild (CORE-NCDB-2-45-0-IPHONE-MN)
+
+Change 648381 by dmathis@P4_main on 2017/06/02 18:18:50
+	New POI search functionality is available to Mobitest. No functional change.
+
+Change 648511 by dmathis@dmathis_hly-mac_6691 on 2017/06/06 22:11:17
+	Update NBM
+
+Change 648513 by parabuild@parabuild_on_build11nimonec_nimone_com_204557 on 2017/06/06 22:19:04
+	Version increment for Parabuild (CORE-NBM-2-45-0-IPHONE-IOS9-MN)
+
+Change 648514 by parabuild@parabuild_on_build11nimonec_nimone_com_204558 on 2017/06/06 22:30:33
+	Version increment for Parabuild (CORE-NCDB-2-45-0-IPHONE-MN)
+
+Change 648607 by dmathis@P4_main on 2017/06/10 01:59:50
+	Fix build script
+
+Change 648630 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/12 17:21:29
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+Change 648632 by dmathis@P4_main on 2017/06/12 19:29:44
+	Update android build
+
+Change 648633 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/12 19:36:45
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+Change 648638 by dmathis@P4_main on 2017/06/13 13:46:52
+	Fix java source/target version conflict.
+
+Change 648639 by parabuild@parabuild_on_BUILD13_204702 on 2017/06/13 13:55:31
+	Version increment for Parabuild (CORE-NCDB-2-45-0-ANDROID-MN)
+
+Change 648716 by dmathis@P4_main2 on 2017/06/15 23:24:18
+	Create VS 2012 project for boost regex libs. Add 64 bit compilation.
+
+Change 648717 by dmathis@P4_main2 on 2017/06/16 00:11:40
+	add 64 bit windows build for freetype
+
+Change 648718 by dmathis@P4_main2 on 2017/06/16 00:20:31
+	add 64 bit compile for Windows
+
+Change 648720 by dmathis@P4_main2 on 2017/06/16 00:57:45
+	add 64 bit compile for Windows
+
+Change 648721 by dmathis@P4_main2 on 2017/06/16 01:06:04
+	add 64 bit compile for windows
+
+Change 648763 by dmathis@P4_main2 on 2017/06/20 15:20:23
+	Update thirdparty for 64 bit
+
+Change 648764 by dmathis@P4_main2 on 2017/06/20 15:20:42
+	Update fisker for 64 bit compile in Windows
+
+Change 648807 by dmathis@P4_main2 on 2017/06/22 22:33:41
+	Update for debug info
+
+Change 648808 by dmathis@P4_main2 on 2017/06/22 22:34:32
+	Update project search path and other options
+
+Change 648857 by dmathis@P4_main2 on 2017/06/27 22:02:29
+	Fix 64 bit compile warnings/errors in VS 2015
+
+Change 648858 by dmathis@P4_main2 on 2017/06/27 22:25:55
+	Update windows build scripts for VS 2012 and 64 bit.
+
+Change 648861 by dmathis@P4_main2 on 2017/06/28 00:37:48
+	Record if local featrues were found for a raster tile. Used for a special build to extract raster tile generation times for raster pregen.
+
+Change 648864 by dmathis@P4_main2 on 2017/06/28 01:08:14
+	Update NBM for 64 bit build process
+
+Change 649381 by parabuild@parabuild_on_build10_nimone_com_201776 on 2017/07/25 13:58:41
+	Version increment for Parabuild (CORE-NCDB-2-45-0-UBUNTUX64-MN)

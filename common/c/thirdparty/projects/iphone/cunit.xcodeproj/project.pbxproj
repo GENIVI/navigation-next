@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8499DBA21443A5910055F1A0 /* Automated.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499DBA11443A5910055F1A0 /* Automated.c */; };
+		AA747D9F0F9514B9006C5449 /* cunit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* cunit_Prefix.pch */; };
+		D67ABC4011EF0C4A00D57824 /* Automated.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2011EF0C4900D57824 /* Automated.h */; };
+		D67ABC4111EF0C4A00D57824 /* Basic.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2111EF0C4900D57824 /* Basic.h */; };
+		D67ABC4211EF0C4A00D57824 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2211EF0C4900D57824 /* Console.h */; };
+		D67ABC4311EF0C4A00D57824 /* CUCurses.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2311EF0C4900D57824 /* CUCurses.h */; };
+		D67ABC4411EF0C4A00D57824 /* CUError.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2411EF0C4900D57824 /* CUError.h */; };
+		D67ABC4511EF0C4A00D57824 /* CUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2511EF0C4900D57824 /* CUnit.h */; };
+		D67ABC4611EF0C4A00D57824 /* MyMem.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2611EF0C4900D57824 /* MyMem.h */; };
+		D67ABC4711EF0C4A00D57824 /* TestDB.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2711EF0C4A00D57824 /* TestDB.h */; };
+		D67ABC4811EF0C4A00D57824 /* TestRun.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2811EF0C4A00D57824 /* TestRun.h */; };
+		D67ABC4911EF0C4A00D57824 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = D67ABC2911EF0C4A00D57824 /* Util.h */; };
+		D67ABC4B11EF0C4A00D57824 /* Basic.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABC2E11EF0C4A00D57824 /* Basic.c */; };
+		D67ABC4E11EF0C4A00D57824 /* CUError.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABC3411EF0C4A00D57824 /* CUError.c */; };
+		D67ABC5011EF0C4A00D57824 /* TestDB.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABC3611EF0C4A00D57824 /* TestDB.c */; };
+		D67ABC5111EF0C4A00D57824 /* TestRun.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABC3711EF0C4A00D57824 /* TestRun.c */; };
+		D67ABC5211EF0C4A00D57824 /* Util.c in Sources */ = {isa = PBXBuildFile; fileRef = D67ABC3811EF0C4A00D57824 /* Util.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8499DBA11443A5910055F1A0 /* Automated.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Automated.c; path = Automated/Automated.c; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* cunit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cunit_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		D2AAC07E0554694100DB518D /* libcunit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcunit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67ABC2011EF0C4900D57824 /* Automated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Automated.h; sourceTree = "<group>"; };
+		D67ABC2111EF0C4900D57824 /* Basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Basic.h; sourceTree = "<group>"; };
+		D67ABC2211EF0C4900D57824 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		D67ABC2311EF0C4900D57824 /* CUCurses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUCurses.h; sourceTree = "<group>"; };
+		D67ABC2411EF0C4900D57824 /* CUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUError.h; sourceTree = "<group>"; };
+		D67ABC2511EF0C4900D57824 /* CUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUnit.h; sourceTree = "<group>"; };
+		D67ABC2611EF0C4900D57824 /* MyMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMem.h; sourceTree = "<group>"; };
+		D67ABC2711EF0C4A00D57824 /* TestDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDB.h; sourceTree = "<group>"; };
+		D67ABC2811EF0C4A00D57824 /* TestRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRun.h; sourceTree = "<group>"; };
+		D67ABC2911EF0C4A00D57824 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		D67ABC2E11EF0C4A00D57824 /* Basic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Basic.c; sourceTree = "<group>"; };
+		D67ABC3411EF0C4A00D57824 /* CUError.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CUError.c; sourceTree = "<group>"; };
+		D67ABC3611EF0C4A00D57824 /* TestDB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestDB.c; sourceTree = "<group>"; };
+		D67ABC3711EF0C4A00D57824 /* TestRun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestRun.c; sourceTree = "<group>"; };
+		D67ABC3811EF0C4A00D57824 /* Util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Util.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libcunit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* cunit */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = cunit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABC1F11EF0C4900D57824 /* include */,
+				D67ABC2A11EF0C4A00D57824 /* Sources */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* cunit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8499DBA01443A5790055F1A0 /* Automated */ = {
+			isa = PBXGroup;
+			children = (
+				8499DBA11443A5910055F1A0 /* Automated.c */,
+			);
+			name = Automated;
+			sourceTree = "<group>";
+		};
+		D67ABC1F11EF0C4900D57824 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABC2011EF0C4900D57824 /* Automated.h */,
+				D67ABC2111EF0C4900D57824 /* Basic.h */,
+				D67ABC2211EF0C4900D57824 /* Console.h */,
+				D67ABC2311EF0C4900D57824 /* CUCurses.h */,
+				D67ABC2411EF0C4900D57824 /* CUError.h */,
+				D67ABC2511EF0C4900D57824 /* CUnit.h */,
+				D67ABC2611EF0C4900D57824 /* MyMem.h */,
+				D67ABC2711EF0C4A00D57824 /* TestDB.h */,
+				D67ABC2811EF0C4A00D57824 /* TestRun.h */,
+				D67ABC2911EF0C4A00D57824 /* Util.h */,
+			);
+			name = include;
+			path = ../../CUnit/include;
+			sourceTree = SOURCE_ROOT;
+		};
+		D67ABC2A11EF0C4A00D57824 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8499DBA01443A5790055F1A0 /* Automated */,
+				D67ABC2D11EF0C4A00D57824 /* Basic */,
+				D67ABC3311EF0C4A00D57824 /* Framework */,
+			);
+			name = Sources;
+			path = ../../CUnit/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		D67ABC2D11EF0C4A00D57824 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABC2E11EF0C4A00D57824 /* Basic.c */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		D67ABC3311EF0C4A00D57824 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D67ABC3411EF0C4A00D57824 /* CUError.c */,
+				D67ABC3611EF0C4A00D57824 /* TestDB.c */,
+				D67ABC3711EF0C4A00D57824 /* TestRun.c */,
+				D67ABC3811EF0C4A00D57824 /* Util.c */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* cunit_Prefix.pch in Headers */,
+				D67ABC4011EF0C4A00D57824 /* Automated.h in Headers */,
+				D67ABC4111EF0C4A00D57824 /* Basic.h in Headers */,
+				D67ABC4211EF0C4A00D57824 /* Console.h in Headers */,
+				D67ABC4311EF0C4A00D57824 /* CUCurses.h in Headers */,
+				D67ABC4411EF0C4A00D57824 /* CUError.h in Headers */,
+				D67ABC4511EF0C4A00D57824 /* CUnit.h in Headers */,
+				D67ABC4611EF0C4A00D57824 /* MyMem.h in Headers */,
+				D67ABC4711EF0C4A00D57824 /* TestDB.h in Headers */,
+				D67ABC4811EF0C4A00D57824 /* TestRun.h in Headers */,
+				D67ABC4911EF0C4A00D57824 /* Util.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* cunit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "cunit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cunit;
+			productName = cunit;
+			productReference = D2AAC07E0554694100DB518D /* libcunit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "cunit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* cunit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* cunit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67ABC4B11EF0C4A00D57824 /* Basic.c in Sources */,
+				D67ABC4E11EF0C4A00D57824 /* CUError.c in Sources */,
+				D67ABC5011EF0C4A00D57824 /* TestDB.c in Sources */,
+				D67ABC5111EF0C4A00D57824 /* TestRun.c in Sources */,
+				D67ABC5211EF0C4A00D57824 /* Util.c in Sources */,
+				8499DBA21443A5910055F1A0 /* Automated.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/cunit.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cunit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = cunit;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/cunit.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cunit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = cunit;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "cunit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "cunit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

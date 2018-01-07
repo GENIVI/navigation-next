@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "search_w32", "projects\win32\search.vcxproj", "{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugStatic|Win32 = DebugStatic|Win32
+		Release|Win32 = Release|Win32
+		ReleaseStatic|Win32 = ReleaseStatic|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.Debug|Win32.Build.0 = Debug|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.DebugStatic|Win32.ActiveCfg = DebugStatic|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.DebugStatic|Win32.Build.0 = DebugStatic|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.Release|Win32.ActiveCfg = Release|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.Release|Win32.Build.0 = Release|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.ReleaseStatic|Win32.ActiveCfg = ReleaseStatic|Win32
+		{F214BEF7-9CBE-4FCB-90BA-8DDD81C11C69}.ReleaseStatic|Win32.Build.0 = ReleaseStatic|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

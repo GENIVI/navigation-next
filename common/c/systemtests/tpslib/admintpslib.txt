@@ -1,0 +1,35 @@
+capabilities:
+  product: qaupload
+  version: 3
+  server-error-codes: +
+  no-db-iden: +
+  no-fileset: +
+  obsecurity: +
+  deflate-wbits: 10
+  iden-tps: +
+  unused: 1
+  query-headers: 1
+  transaction-info: 1
+
+templates:
+ - query: []
+ - reply: []
+ - error: [description]
+ - iden: [credential, min, mdn, device, platform-id, firmware-version, language, class-id, price-type, ads-app-id, client-session, client-guid]
+ - iden-receipt: []
+ - iden-receipt: [client-guid]
+ - emulator: []
+ - want-iden-receipt: []
+ - want-client-guid-assigned: []
+ - qalog-upload-query: [log-id, data, current, total]
+ - qalog-upload-reply: [log-id]
+ - iden: []
+ - formatted-iden-parameters: []
+ - platform-info: [version, manufacturer, model]
+ - device-info: [device-unique-id, device-serial-number]
+ - product-info: [credential]
+ - user-info: [mdn, client-guid]
+ - locale-info: [country-code, language]
+ - carrier-info: [carrier, mcc, mnc]
+ - session-info: [client-session, active-session]
+ - push-message-info: [push-message-guid]

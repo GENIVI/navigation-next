@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 WaylandClient
+Description: Qt WaylandClient module
+Version: 5.8.0
+Libs: -L${libdir} -lQt5WaylandClient 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt5Gui -lQt5Core -lpthread -lwayland-client -lwayland-cursor -lQt5FontDatabaseSupport -L/opt/Qt5.8.0/lib -lQt5EventDispatcherSupport -lgthread-2.0 -lglib-2.0 -lQt5ThemeSupport -lQt5DBus -lQt5ServiceSupport -lQt5Gui -lQt5Core -lpthread -lGLESv2 -lxkbcommon -lfontconfig -lfreetype  
+Cflags: -I${includedir}/QtWaylandClient -I${includedir}
+Requires: Qt5Core Qt5Gui
+

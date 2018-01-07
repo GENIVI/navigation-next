@@ -1,0 +1,245 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * iomanip - Declarations of iostream manipulators
+ *
+ * $Id: iomanip 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_IOMANIP_INCLUDED
+#define _RWSTD_IOMANIP_INCLUDED
+
+#include <iosfwd>
+
+#include <rw/_iosbase.h>
+#include <rw/_defs.h>
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+
+  
+// manipulator implementation
+template<class _CharT>
+struct __rw_smanip
+{
+    __rw_smanip (ios_base& (*__fun)(ios_base&, _CharT), _CharT __arg)
+        : _C_fn (__fun), _C_arg (__arg) { }
+      
+    ios_base& (*_C_fn)(ios_base&, _CharT);
+    _CharT      _C_arg;
+};
+
+
+// manipulator implementation
+template<class _CharT, class _Traits>
+struct __rw_smanip_fill
+{
+    typedef basic_ios<_CharT, _Traits> _C_ios;
+
+    __rw_smanip_fill (_C_ios& (*__fun)(_C_ios&, _CharT), _CharT __arg)
+        : _C_fn (__fun), _C_arg (__arg) { }
+
+    _C_ios& (*_C_fn)(_C_ios&, _CharT);
+    _CharT    _C_arg;
+};
+ 
+
+// manipulator implementation
+inline ios_base& __rw_rsios (ios_base &__strm, ios_base::fmtflags __mask)
+{
+    __strm.setf (ios_base::fmtflags (0), __mask);
+    return __strm;
+}
+
+
+// manipulator implementation
+inline ios_base& __rw_sios (ios_base &__strm, ios_base::fmtflags __mask)
+{
+    __strm.setf (__mask);
+    return __strm;
+}
+
+
+inline ios_base& sbase (ios_base &__strm, int __base)
+{
+    __strm.setf (   8 == __base ? ios_base::oct
+                 : 10 == __base ? ios_base::dec
+                 : 16 == __base ? ios_base::hex
+
+#ifndef _RWSTD_NO_EXT_BIN_IO
+
+                 :  2 == __base ? ios_base::bin
+
+#endif   // _RWSTD_NO_EXT_BIN_IO
+
+                 : ios_base::fmtflags (0), ios_base::basefield);
+
+    return __strm;
+}
+
+
+// manipulator implementation
+template < class _CharT, class _Traits >
+inline basic_ios< _CharT, _Traits >&
+__rw_sfill (basic_ios< _CharT, _Traits >& __strm, _CharT __c)
+{
+    __strm.fill (__c);
+    return __strm;
+}
+
+
+// manipulator implementation
+inline ios_base& __rw_sprec (ios_base &__strm, int __prec)
+{
+    __strm.precision (__prec);
+    return __strm;
+}
+
+
+// manipulator implementation
+inline ios_base& __rw_swidth (ios_base &__strm, int __width)
+{
+    __strm.width (__width);
+    return __strm;
+}
+ 
+
+// 27.6.3, p3
+inline __rw_smanip<ios_base::fmtflags>
+resetiosflags (ios_base::fmtflags __mask)
+{
+    return __rw_smanip<ios_base::fmtflags>(__rw_rsios, __mask);
+}
+ 
+
+// 27.6.3, p4
+inline __rw_smanip<ios_base::fmtflags> setiosflags (ios_base::fmtflags __mask)
+{
+    return __rw_smanip<ios_base::fmtflags>(__rw_sios, __mask);
+}
+
+
+// 27.6.3, p5
+inline __rw_smanip<int> setbase (int __base)
+{
+    return __rw_smanip<int>(sbase, __base);
+}
+
+
+// 27.6.3, p6
+template < class _CharT >
+inline __rw_smanip_fill<_CharT, char_traits<_CharT> > setfill (_CharT __c)
+{
+    return __rw_smanip_fill<_CharT, char_traits<_CharT> >(__rw_sfill, __c);
+}
+
+
+// 27.6.3, p7
+inline __rw_smanip<int> setprecision (int __prec)
+{
+    return __rw_smanip<int>(__rw_sprec, __prec);
+}
+
+
+// 27.6.3, p8
+inline __rw_smanip<int> setw (int __width)
+{
+    return __rw_smanip<int>(__rw_swidth, __width);
+}
+
+
+// manipulator implementation
+template<class _CharT, class _Traits, class _TypeT>
+inline basic_istream<_CharT, _Traits>&
+operator>> (basic_istream<_CharT, _Traits> &__strm,
+            const __rw_smanip<_TypeT>      &__man)
+{
+    _TRY {
+        (*__man._C_fn)(__strm, __man._C_arg);
+    }
+    _CATCH (...) {
+        __strm.setstate (ios_base::failbit);
+    }
+  
+    return __strm;
+}
+
+
+// manipulator implementation
+template<class _CharT, class _Traits, class _TypeT>
+inline basic_ostream<_CharT, _Traits>&
+operator<< (basic_ostream<_CharT, _Traits> &__strm,
+            const __rw_smanip<_TypeT>      &__man)
+{
+    _TRY {
+        (*__man._C_fn)(__strm, __man._C_arg);
+    }
+    _CATCH (...) {
+        __strm.setstate (ios_base::failbit);
+    }
+
+    return __strm;
+}
+
+
+// manipulator implementation
+template<class _CharT, class _Traits>
+inline basic_istream<_CharT, _Traits>&
+operator>>(basic_istream<_CharT, _Traits>          &__strm,
+           const __rw_smanip_fill<_CharT, _Traits> &__man)
+{
+    _TRY {
+        (*__man._C_fn)(__strm, __man._C_arg);
+    }
+    _CATCH (...) {
+        __strm.setstate (ios_base::failbit);
+    }
+
+    return __strm;
+}
+
+
+// manipulator implementation
+template<class _CharT, class _Traits>
+inline basic_ostream<_CharT, _Traits>&
+operator<< (basic_ostream<_CharT, _Traits>          &__strm,
+            const __rw_smanip_fill<_CharT, _Traits> &__man)
+{
+    _TRY {
+        (*__man._C_fn)(__strm, __man._C_arg);
+    }
+    _CATCH (...) {
+        __strm.setstate (ios_base::failbit);
+    }
+
+    return __strm;
+}
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   // _RWSTD_IOMANIP_INCLUDED

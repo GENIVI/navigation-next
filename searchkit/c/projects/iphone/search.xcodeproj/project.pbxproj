@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		228CB95518EA7760009A9CD4 /* SingleSearchInformationImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 228CB95418EA7760009A9CD4 /* SingleSearchInformationImpl.cpp */; };
+		22BF1EB91929EC1D000735E3 /* SyncPlaceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22BF1EB81929EC1D000735E3 /* SyncPlaceManager.cpp */; };
+		22F416C118F3BE94000FE3B1 /* SingleSearchTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22F416BF18F3BE94000FE3B1 /* SingleSearchTask.cpp */; };
+		8156251418C02F2B002EFF99 /* SingleSearchRequestPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8156251218C02F2B002EFF99 /* SingleSearchRequestPrivate.cpp */; };
+		81624E8918BDCED90078B9B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81624E8818BDCED90078B9B3 /* Foundation.framework */; };
+		81624EBD18BDD0380078B9B3 /* SingleSearchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81624EB618BDD0380078B9B3 /* SingleSearchHandler.cpp */; };
+		81624EC118BDD0380078B9B3 /* SingleSearchParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81624EBA18BDD0380078B9B3 /* SingleSearchParameters.cpp */; };
+		81624EC218BDD0380078B9B3 /* SingleSearchRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81624EBB18BDD0380078B9B3 /* SingleSearchRequest.cpp */; };
+		816D300518D6BEE4006C34BF /* LocalPlaceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FE618D6BEE3006C34BF /* LocalPlaceManager.cpp */; };
+		816D300718D6BEE4006C34BF /* dbdaofactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FEC18D6BEE3006C34BF /* dbdaofactory.cpp */; };
+		816D300818D6BEE4006C34BF /* poidbdao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FEE18D6BEE3006C34BF /* poidbdao.cpp */; };
+		816D300918D6BEE4006C34BF /* recentsearchdbdao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FF018D6BEE3006C34BF /* recentsearchdbdao.cpp */; };
+		816D300A18D6BEE4006C34BF /* daofactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FF418D6BEE3006C34BF /* daofactory.cpp */; };
+		816D300B18D6BEE4006C34BF /* datamanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FF918D6BEE4006C34BF /* datamanager.cpp */; };
+		816D300C18D6BEE4006C34BF /* dbcommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FFD18D6BEE4006C34BF /* dbcommand.cpp */; };
+		816D300D18D6BEE4006C34BF /* dbconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D2FFF18D6BEE4006C34BF /* dbconnection.cpp */; };
+		816D300E18D6BEE4006C34BF /* dbmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D300118D6BEE4006C34BF /* dbmanager.cpp */; };
+		816D300F18D6BEE4006C34BF /* dbreader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816D300318D6BEE4006C34BF /* dbreader.cpp */; };
+		818871AF18E513D80096A9FC /* PlaceStorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 818871AE18E513D80096A9FC /* PlaceStorageManager.cpp */; };
+		81F9F5E118BED34A009F099F /* SingleSearchConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F5DF18BED34A009F099F /* SingleSearchConfiguration.cpp */; };
+		81FDCA6118F3B97500A0DB64 /* SearchHistoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81FDCA5F18F3B97500A0DB64 /* SearchHistoryManager.cpp */; };
+		EC5932D218F7BBC60093D388 /* shortcutdbdao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC5932D118F7BBC60093D388 /* shortcutdbdao.cpp */; };
+		EC5932E618F7FCCF0093D388 /* ShortcutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC5932E518F7FCCF0093D388 /* ShortcutManager.cpp */; };
+		EC69B0BA1915EE25002D76E0 /* AnalyticsSearchEventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC69B0B81915EE25002D76E0 /* AnalyticsSearchEventManager.cpp */; };
+		EC6D45A418FCD6120019EF90 /* suggestlistdbdao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC6D45A218FCD6120019EF90 /* suggestlistdbdao.cpp */; };
+		EC6D45A818FD05570019EF90 /* SuggestListManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC6D45A718FD05570019EF90 /* SuggestListManager.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81624E8318BDCED90078B9B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		228CB95418EA7760009A9CD4 /* SingleSearchInformationImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchInformationImpl.cpp; sourceTree = "<group>"; };
+		22BF1EB71929EC14000735E3 /* SyncPlaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncPlaceManager.h; sourceTree = "<group>"; };
+		22BF1EB81929EC1D000735E3 /* SyncPlaceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SyncPlaceManager.cpp; sourceTree = "<group>"; };
+		22F416BE18F39ACB000FE3B1 /* SingleSearchTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleSearchTask.h; sourceTree = "<group>"; };
+		22F416BF18F3BE94000FE3B1 /* SingleSearchTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchTask.cpp; sourceTree = "<group>"; };
+		8156251218C02F2B002EFF99 /* SingleSearchRequestPrivate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchRequestPrivate.cpp; sourceTree = "<group>"; };
+		8156251318C02F2B002EFF99 /* SingleSearchRequestPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchRequestPrivate.h; sourceTree = "<group>"; };
+		81624E8518BDCED90078B9B3 /* libsearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsearch.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81624E8818BDCED90078B9B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81624EB118BDD0300078B9B3 /* SingleSearchConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchConfiguration.h; sourceTree = "<group>"; };
+		81624EB218BDD0300078B9B3 /* SingleSearchInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchInformation.h; sourceTree = "<group>"; };
+		81624EB318BDD0300078B9B3 /* SingleSearchListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchListener.h; sourceTree = "<group>"; };
+		81624EB418BDD0300078B9B3 /* SingleSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchRequest.h; sourceTree = "<group>"; };
+		81624EB618BDD0380078B9B3 /* SingleSearchHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchHandler.cpp; sourceTree = "<group>"; };
+		81624EBA18BDD0380078B9B3 /* SingleSearchParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchParameters.cpp; sourceTree = "<group>"; };
+		81624EBB18BDD0380078B9B3 /* SingleSearchRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchRequest.cpp; sourceTree = "<group>"; };
+		81624EC518BDE4010078B9B3 /* SingleSearchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchHandler.h; sourceTree = "<group>"; };
+		81624EC718BDE4010078B9B3 /* SingleSearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchParameters.h; sourceTree = "<group>"; };
+		816D2F9F18D145DA006C34BF /* SingleSearchInformationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSearchInformationImpl.h; sourceTree = "<group>"; };
+		816D2FE518D6BED7006C34BF /* LocalPlaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPlaceManager.h; sourceTree = "<group>"; };
+		816D2FE618D6BEE3006C34BF /* LocalPlaceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocalPlaceManager.cpp; sourceTree = "<group>"; };
+		816D2FEC18D6BEE3006C34BF /* dbdaofactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbdaofactory.cpp; sourceTree = "<group>"; };
+		816D2FED18D6BEE3006C34BF /* dbdaofactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbdaofactory.h; sourceTree = "<group>"; };
+		816D2FEE18D6BEE3006C34BF /* poidbdao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = poidbdao.cpp; sourceTree = "<group>"; };
+		816D2FEF18D6BEE3006C34BF /* poidbdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poidbdao.h; sourceTree = "<group>"; };
+		816D2FF018D6BEE3006C34BF /* recentsearchdbdao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = recentsearchdbdao.cpp; sourceTree = "<group>"; };
+		816D2FF118D6BEE3006C34BF /* recentsearchdbdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recentsearchdbdao.h; sourceTree = "<group>"; };
+		816D2FF418D6BEE3006C34BF /* daofactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = daofactory.cpp; sourceTree = "<group>"; };
+		816D2FF518D6BEE3006C34BF /* daofactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = daofactory.h; sourceTree = "<group>"; };
+		816D2FF718D6BEE4006C34BF /* poidao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poidao.h; sourceTree = "<group>"; };
+		816D2FF818D6BEE4006C34BF /* recentsearchdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recentsearchdao.h; sourceTree = "<group>"; };
+		816D2FF918D6BEE4006C34BF /* datamanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = datamanager.cpp; sourceTree = "<group>"; };
+		816D2FFA18D6BEE4006C34BF /* datamanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datamanager.h; sourceTree = "<group>"; };
+		816D2FFB18D6BEE4006C34BF /* datamanagerdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datamanagerdefs.h; sourceTree = "<group>"; };
+		816D2FFD18D6BEE4006C34BF /* dbcommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbcommand.cpp; sourceTree = "<group>"; };
+		816D2FFE18D6BEE4006C34BF /* dbcommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbcommand.h; sourceTree = "<group>"; };
+		816D2FFF18D6BEE4006C34BF /* dbconnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbconnection.cpp; sourceTree = "<group>"; };
+		816D300018D6BEE4006C34BF /* dbconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbconnection.h; sourceTree = "<group>"; };
+		816D300118D6BEE4006C34BF /* dbmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbmanager.cpp; sourceTree = "<group>"; };
+		816D300218D6BEE4006C34BF /* dbmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbmanager.h; sourceTree = "<group>"; };
+		816D300318D6BEE4006C34BF /* dbreader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbreader.cpp; sourceTree = "<group>"; };
+		816D300418D6BEE4006C34BF /* dbreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbreader.h; sourceTree = "<group>"; };
+		818871AE18E513D80096A9FC /* PlaceStorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlaceStorageManager.cpp; sourceTree = "<group>"; };
+		81CCE84718DABC4600CE8433 /* PlaceStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceStorageManager.h; sourceTree = "<group>"; };
+		81F9F5DF18BED34A009F099F /* SingleSearchConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleSearchConfiguration.cpp; sourceTree = "<group>"; };
+		81FDCA5F18F3B97500A0DB64 /* SearchHistoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SearchHistoryManager.cpp; sourceTree = "<group>"; };
+		81FDCA6218F3B9C700A0DB64 /* SearchHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryManager.h; sourceTree = "<group>"; };
+		EC4884D3191B854100011391 /* AnalyticsSearchEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyticsSearchEvent.h; sourceTree = "<group>"; };
+		EC5932CE18F78D330093D388 /* ShortcutManagerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutManagerPrivate.h; sourceTree = "<group>"; };
+		EC5932CF18F796F90093D388 /* shortcutdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortcutdao.h; sourceTree = "<group>"; };
+		EC5932D018F79ACA0093D388 /* shortcutdbdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortcutdbdao.h; sourceTree = "<group>"; };
+		EC5932D118F7BBC60093D388 /* shortcutdbdao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shortcutdbdao.cpp; sourceTree = "<group>"; };
+		EC5932E518F7FCCF0093D388 /* ShortcutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShortcutManager.cpp; sourceTree = "<group>"; };
+		EC63B02D191B353F00C03E30 /* AnalyticsSearchEventTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyticsSearchEventTask.h; sourceTree = "<group>"; };
+		EC69B0B71915ECE3002D76E0 /* AnalyticsSearchEventManagerPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyticsSearchEventManagerPrivate.h; sourceTree = "<group>"; };
+		EC69B0B81915EE25002D76E0 /* AnalyticsSearchEventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalyticsSearchEventManager.cpp; sourceTree = "<group>"; };
+		EC69BB541910D77600A4063D /* AnalyticsSearchEventManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyticsSearchEventManager.h; sourceTree = "<group>"; };
+		EC6D45A118FCD4EB0019EF90 /* suggestlistdao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = suggestlistdao.h; sourceTree = "<group>"; };
+		EC6D45A218FCD6120019EF90 /* suggestlistdbdao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suggestlistdbdao.cpp; sourceTree = "<group>"; };
+		EC6D45A318FCD6120019EF90 /* suggestlistdbdao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = suggestlistdbdao.h; sourceTree = "<group>"; };
+		EC6D45A518FCDF1B0019EF90 /* SuggestListManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestListManager.h; sourceTree = "<group>"; };
+		EC6D45A618FD032D0019EF90 /* SuggestListManagerPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestListManagerPrivate.h; sourceTree = "<group>"; };
+		EC6D45A718FD05570019EF90 /* SuggestListManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuggestListManager.cpp; sourceTree = "<group>"; };
+		EC6FD26A1919D1CA008AF56A /* AnalyticsTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyticsTypes.h; sourceTree = "<group>"; };
+		ECB5819518F67A5200F5D31E /* ShortcutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81624E8218BDCED90078B9B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81624E8918BDCED90078B9B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81624E7C18BDCED90078B9B3 = {
+			isa = PBXGroup;
+			children = (
+				81624EAE18BDCFCC0078B9B3 /* Classes */,
+				81624E8718BDCED90078B9B3 /* Frameworks */,
+				81624E8618BDCED90078B9B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81624E8618BDCED90078B9B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81624E8518BDCED90078B9B3 /* libsearch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81624E8718BDCED90078B9B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81624E8818BDCED90078B9B3 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81624EAE18BDCFCC0078B9B3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				81624EB018BDD0300078B9B3 /* include */,
+				81624EB518BDD0380078B9B3 /* src */,
+			);
+			name = Classes;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		81624EB018BDD0300078B9B3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				81624EC418BDE4010078B9B3 /* private */,
+				81624EB118BDD0300078B9B3 /* SingleSearchConfiguration.h */,
+				81624EB218BDD0300078B9B3 /* SingleSearchInformation.h */,
+				81624EB318BDD0300078B9B3 /* SingleSearchListener.h */,
+				81624EB418BDD0300078B9B3 /* SingleSearchRequest.h */,
+				816D2FE518D6BED7006C34BF /* LocalPlaceManager.h */,
+				81FDCA6218F3B9C700A0DB64 /* SearchHistoryManager.h */,
+				ECB5819518F67A5200F5D31E /* ShortcutManager.h */,
+				EC6D45A518FCDF1B0019EF90 /* SuggestListManager.h */,
+				EC6FD26A1919D1CA008AF56A /* AnalyticsTypes.h */,
+				EC4884D3191B854100011391 /* AnalyticsSearchEvent.h */,
+				EC69BB541910D77600A4063D /* AnalyticsSearchEventManager.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		81624EB518BDD0380078B9B3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FE718D6BEE3006C34BF /* datamanager */,
+				81624EB618BDD0380078B9B3 /* SingleSearchHandler.cpp */,
+				228CB95418EA7760009A9CD4 /* SingleSearchInformationImpl.cpp */,
+				81624EBA18BDD0380078B9B3 /* SingleSearchParameters.cpp */,
+				81624EBB18BDD0380078B9B3 /* SingleSearchRequest.cpp */,
+				81F9F5DF18BED34A009F099F /* SingleSearchConfiguration.cpp */,
+				8156251218C02F2B002EFF99 /* SingleSearchRequestPrivate.cpp */,
+				816D2FE618D6BEE3006C34BF /* LocalPlaceManager.cpp */,
+				81CCE84718DABC4600CE8433 /* PlaceStorageManager.h */,
+				818871AE18E513D80096A9FC /* PlaceStorageManager.cpp */,
+				81FDCA5F18F3B97500A0DB64 /* SearchHistoryManager.cpp */,
+				22F416BF18F3BE94000FE3B1 /* SingleSearchTask.cpp */,
+				EC5932E518F7FCCF0093D388 /* ShortcutManager.cpp */,
+				EC6D45A718FD05570019EF90 /* SuggestListManager.cpp */,
+				EC69B0B81915EE25002D76E0 /* AnalyticsSearchEventManager.cpp */,
+				22BF1EB81929EC1D000735E3 /* SyncPlaceManager.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		81624EC418BDE4010078B9B3 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				22BF1EB71929EC14000735E3 /* SyncPlaceManager.h */,
+				8156251318C02F2B002EFF99 /* SingleSearchRequestPrivate.h */,
+				81624EC518BDE4010078B9B3 /* SingleSearchHandler.h */,
+				81624EC718BDE4010078B9B3 /* SingleSearchParameters.h */,
+				816D2F9F18D145DA006C34BF /* SingleSearchInformationImpl.h */,
+				22F416BE18F39ACB000FE3B1 /* SingleSearchTask.h */,
+				EC5932CE18F78D330093D388 /* ShortcutManagerPrivate.h */,
+				EC6D45A618FD032D0019EF90 /* SuggestListManagerPrivate.h */,
+				EC63B02D191B353F00C03E30 /* AnalyticsSearchEventTask.h */,
+				EC69B0B71915ECE3002D76E0 /* AnalyticsSearchEventManagerPrivate.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		816D2FE718D6BEE3006C34BF /* datamanager */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FE818D6BEE3006C34BF /* dao */,
+				816D2FF918D6BEE4006C34BF /* datamanager.cpp */,
+				816D2FFA18D6BEE4006C34BF /* datamanager.h */,
+				816D2FFB18D6BEE4006C34BF /* datamanagerdefs.h */,
+				816D2FFC18D6BEE4006C34BF /* db */,
+			);
+			path = datamanager;
+			sourceTree = "<group>";
+		};
+		816D2FE818D6BEE3006C34BF /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FE918D6BEE3006C34BF /* dbdao */,
+				816D2FF218D6BEE3006C34BF /* interface */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		816D2FE918D6BEE3006C34BF /* dbdao */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FEC18D6BEE3006C34BF /* dbdaofactory.cpp */,
+				816D2FED18D6BEE3006C34BF /* dbdaofactory.h */,
+				816D2FEE18D6BEE3006C34BF /* poidbdao.cpp */,
+				816D2FEF18D6BEE3006C34BF /* poidbdao.h */,
+				816D2FF018D6BEE3006C34BF /* recentsearchdbdao.cpp */,
+				816D2FF118D6BEE3006C34BF /* recentsearchdbdao.h */,
+				EC5932D118F7BBC60093D388 /* shortcutdbdao.cpp */,
+				EC5932D018F79ACA0093D388 /* shortcutdbdao.h */,
+				EC6D45A218FCD6120019EF90 /* suggestlistdbdao.cpp */,
+				EC6D45A318FCD6120019EF90 /* suggestlistdbdao.h */,
+			);
+			path = dbdao;
+			sourceTree = "<group>";
+		};
+		816D2FF218D6BEE3006C34BF /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FF418D6BEE3006C34BF /* daofactory.cpp */,
+				816D2FF518D6BEE3006C34BF /* daofactory.h */,
+				816D2FF718D6BEE4006C34BF /* poidao.h */,
+				816D2FF818D6BEE4006C34BF /* recentsearchdao.h */,
+				EC5932CF18F796F90093D388 /* shortcutdao.h */,
+				EC6D45A118FCD4EB0019EF90 /* suggestlistdao.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		816D2FFC18D6BEE4006C34BF /* db */ = {
+			isa = PBXGroup;
+			children = (
+				816D2FFD18D6BEE4006C34BF /* dbcommand.cpp */,
+				816D2FFE18D6BEE4006C34BF /* dbcommand.h */,
+				816D2FFF18D6BEE4006C34BF /* dbconnection.cpp */,
+				816D300018D6BEE4006C34BF /* dbconnection.h */,
+				816D300118D6BEE4006C34BF /* dbmanager.cpp */,
+				816D300218D6BEE4006C34BF /* dbmanager.h */,
+				816D300318D6BEE4006C34BF /* dbreader.cpp */,
+				816D300418D6BEE4006C34BF /* dbreader.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81624E8418BDCED90078B9B3 /* search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81624EA818BDCED90078B9B3 /* Build configuration list for PBXNativeTarget "search" */;
+			buildPhases = (
+				81624E8118BDCED90078B9B3 /* Sources */,
+				81624E8218BDCED90078B9B3 /* Frameworks */,
+				81624E8318BDCED90078B9B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = search;
+			productName = search;
+			productReference = 81624E8518BDCED90078B9B3 /* libsearch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81624E7D18BDCED90078B9B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 81624E8018BDCED90078B9B3 /* Build configuration list for PBXProject "search" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81624E7C18BDCED90078B9B3;
+			productRefGroup = 81624E8618BDCED90078B9B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81624E8418BDCED90078B9B3 /* search */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81624E8118BDCED90078B9B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81624EC218BDD0380078B9B3 /* SingleSearchRequest.cpp in Sources */,
+				816D300A18D6BEE4006C34BF /* daofactory.cpp in Sources */,
+				22BF1EB91929EC1D000735E3 /* SyncPlaceManager.cpp in Sources */,
+				8156251418C02F2B002EFF99 /* SingleSearchRequestPrivate.cpp in Sources */,
+				81624EC118BDD0380078B9B3 /* SingleSearchParameters.cpp in Sources */,
+				816D300D18D6BEE4006C34BF /* dbconnection.cpp in Sources */,
+				228CB95518EA7760009A9CD4 /* SingleSearchInformationImpl.cpp in Sources */,
+				22F416C118F3BE94000FE3B1 /* SingleSearchTask.cpp in Sources */,
+				EC5932E618F7FCCF0093D388 /* ShortcutManager.cpp in Sources */,
+				818871AF18E513D80096A9FC /* PlaceStorageManager.cpp in Sources */,
+				816D300918D6BEE4006C34BF /* recentsearchdbdao.cpp in Sources */,
+				EC6D45A818FD05570019EF90 /* SuggestListManager.cpp in Sources */,
+				EC69B0BA1915EE25002D76E0 /* AnalyticsSearchEventManager.cpp in Sources */,
+				816D300F18D6BEE4006C34BF /* dbreader.cpp in Sources */,
+				EC5932D218F7BBC60093D388 /* shortcutdbdao.cpp in Sources */,
+				816D300818D6BEE4006C34BF /* poidbdao.cpp in Sources */,
+				816D300B18D6BEE4006C34BF /* datamanager.cpp in Sources */,
+				81F9F5E118BED34A009F099F /* SingleSearchConfiguration.cpp in Sources */,
+				816D300718D6BEE4006C34BF /* dbdaofactory.cpp in Sources */,
+				816D300C18D6BEE4006C34BF /* dbcommand.cpp in Sources */,
+				816D300518D6BEE4006C34BF /* LocalPlaceManager.cpp in Sources */,
+				81624EBD18BDD0380078B9B3 /* SingleSearchHandler.cpp in Sources */,
+				81FDCA6118F3B97500A0DB64 /* SearchHistoryManager.cpp in Sources */,
+				816D300E18D6BEE4006C34BF /* dbmanager.cpp in Sources */,
+				EC6D45A418FCD6120019EF90 /* suggestlistdbdao.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		81624EA618BDCED90078B9B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81624EA718BDCED90078B9B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81624EA918BDCED90078B9B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/search.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "search-Prefix.pch";
+				GCC_VERSION = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../../../common/$BRANCH/include/** ../../../../nbservices/$BRANCH/include ../../../../nbservices/$BRANCH/include/iphone ../../../../nbservices/$BRANCH/include/protected ../../../../nbpal/$BRANCH/include ../../../../nbpal/$BRANCH/include/iphone ../../../../coreservices/$BRANCH/include ../../../../coreservices/$BRANCH/include/iphone ../../../../coreservices/$BRANCH/include/protected ../../../../nbservices/$BRANCH/include/generated";
+			};
+			name = Debug;
+		};
+		81624EAA18BDCED90078B9B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/search.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "search-Prefix.pch";
+				GCC_VERSION = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../../../common/$BRANCH/include/** ../../../../nbservices/$BRANCH/include ../../../../nbservices/$BRANCH/include/iphone ../../../../nbservices/$BRANCH/include/protected ../../../../nbpal/$BRANCH/include ../../../../nbpal/$BRANCH/include/iphone ../../../../coreservices/$BRANCH/include ../../../../coreservices/$BRANCH/include/iphone ../../../../coreservices/$BRANCH/include/protected ../../../../nbservices/$BRANCH/include/generated";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81624E8018BDCED90078B9B3 /* Build configuration list for PBXProject "search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81624EA618BDCED90078B9B3 /* Debug */,
+				81624EA718BDCED90078B9B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81624EA818BDCED90078B9B3 /* Build configuration list for PBXNativeTarget "search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81624EA918BDCED90078B9B3 /* Debug */,
+				81624EAA18BDCED90078B9B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81624E7D18BDCED90078B9B3 /* Project object */;
+}

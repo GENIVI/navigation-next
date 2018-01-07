@@ -1,0 +1,334 @@
+// -*- C++ -*-
+/***************************************************************************
+ *
+ * strstream - Declarations for the Standard Library string stream classes
+ *
+ * $Id: strstream 91768 2005-08-10 18:58:48Z drodgman $
+ *
+ ***************************************************************************
+ *
+ * Copyright (c) 1994-2001 Rogue Wave Software, Inc.  All Rights Reserved.
+ *
+ * This computer software is owned by Rogue Wave Software, Inc. and is
+ * protected by U.S. copyright laws and other laws and by international
+ * treaties.  This computer software is furnished by Rogue Wave Software,
+ * Inc. pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice.  This
+ * computer software or any other copies thereof may not be provided or
+ * otherwise made available to any other person.
+ *
+ * U.S. Government Restricted Rights.  This computer software is provided
+ * with Restricted Rights.  Use, duplication, or disclosure by the
+ * Government is subject to restrictions as set forth in subparagraph (c)
+ * (1) (ii) of The Rights in Technical Data and Computer Software clause
+ * at DFARS 252.227-7013 or subparagraphs (c) (1) and (2) of the
+ * Commercial Computer Software--Restricted Rights at 48 CFR 52.227-19,
+ * as applicable.  Manufacturer is Rogue Wave Software, Inc., 5500
+ * Flatiron Parkway, Boulder, Colorado 80301 USA.
+ *
+ **************************************************************************/
+
+#ifndef _RWSTD_STRSTREAM_INCLUDED
+#define _RWSTD_STRSTREAM_INCLUDED
+
+#include <streambuf>
+#include <istream>
+#include <ostream>
+
+#include <rw/_defs.h>
+
+#ifdef _RWSTD_NO_DEPRECATED
+#  error deprecated header included
+#endif
+
+
+_RWSTD_NAMESPACE_BEGIN (std)
+  
+
+class _RWSTD_EXPORT strstreambuf: public streambuf
+{
+public:
+
+    typedef char                   char_type;
+    typedef char_traits<char_type> traits_type;
+    typedef streambuf::int_type    int_type;
+    typedef streambuf::pos_type    pos_type;
+    typedef streambuf::off_type    off_type;
+
+private:
+
+    void _C_strstrm_init (char_type*, streamsize, char_type*, int);
+
+    void _C_strstrm_init (const char_type *__g, streamsize __n) {
+        _C_strstrm_init (_RWSTD_CONST_CAST (char_type*, __g), __n,
+                         0, _C_constant);
+    }
+
+    void _C_strstrm_init (const signed char *__g, streamsize __n) {
+        _C_strstrm_init (_RWSTD_REINTERPRET_CAST (const char_type*, __g), __n);
+    }
+
+    void _C_strstrm_init (const unsigned char *__g, streamsize __n) {
+        _C_strstrm_init (_RWSTD_REINTERPRET_CAST (const char_type*, __g), __n);
+    }
+
+public:
+
+    _EXPLICIT
+    strstreambuf(streamsize __alsize = 0)
+        : streambuf(),
+          _C_alsize(__alsize),
+          _C_palloc(0),
+          _C_pfree(0)  {
+        this->_C_bufstate=_C_dynamic;
+    }
+      
+    strstreambuf(void *(*__palloc)(size_t), void (*__pfree)(void *))
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(__palloc),
+          _C_pfree(__pfree) {
+        this->_C_bufstate=_C_dynamic;
+    }
+
+    strstreambuf(char_type *__gnext, streamsize __n, char_type *__pbeg=0)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (__gnext, __n, __pbeg, 0);
+    }
+
+    strstreambuf(unsigned char *__gnext, streamsize __n,
+                 unsigned char *__pbeg = 0)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (_RWSTD_REINTERPRET_CAST (char_type*, __gnext), __n,
+                         _RWSTD_REINTERPRET_CAST (char_type*, __pbeg), 0);
+    }
+
+    strstreambuf(signed char *__gnext, streamsize __n,
+                 signed char *__pbeg = 0)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (_RWSTD_REINTERPRET_CAST (char_type*, __gnext), __n,
+                         _RWSTD_REINTERPRET_CAST (char_type*, __pbeg), 0);
+    }
+
+    strstreambuf(const char_type *__gnext, streamsize __n)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (__gnext, __n);
+    }
+
+    strstreambuf(const unsigned char *__gnext, streamsize __n)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (__gnext, __n);
+    }
+
+    strstreambuf(const signed char *__gnext, streamsize __n)
+        : streambuf(),
+          _C_alsize(0),
+          _C_palloc(0),
+          _C_pfree(0) {
+        _C_strstrm_init (__gnext, __n);
+    }      
+
+      
+    virtual ~strstreambuf(){
+        if((_C_bufstate & _C_allocated) && (!(_C_bufstate & _C_frozen)) ) {
+            if(_C_buffer)
+                delete [] _C_buffer;
+        }
+    }
+
+    void freeze(bool __f = true) {
+        if(_C_bufstate & _C_dynamic) {
+            if(__f)
+                _C_bufstate |= _C_frozen;     // set _C_frozen
+            else
+                _C_bufstate &= ~_C_frozen;    // clear _C_frozen
+        }
+    }
+      
+    char_type *str(){
+        freeze();
+        return eback();
+    }
+      
+    int pcount() const {
+        if(pptr())
+            return int(pptr() - pbase());
+        return 0;
+    }
+
+protected:
+
+    virtual int_type overflow(int_type __c = traits_type::eof());
+    virtual int_type pbackfail(int_type __c = traits_type::eof());
+    virtual int_type underflow();
+
+    virtual pos_type seekoff(off_type, ios::seekdir __way,
+                             ios::openmode __which = ios::in | ios::out);
+
+    virtual pos_type seekpos(pos_type __sp, ios::openmode __which =
+                             ios::in | ios::out);
+
+    virtual streambuf* setbuf(char_type *__s, streamsize __n);
+    virtual streamsize xsputn(const char_type *__s, streamsize __n);
+
+private:
+
+    _RWSTD_STATIC_CONST (int, _C_allocated = 0x01);
+    _RWSTD_STATIC_CONST (int, _C_constant  = 0x02);
+    _RWSTD_STATIC_CONST (int, _C_dynamic   = 0x04);
+    _RWSTD_STATIC_CONST (int, _C_frozen    = 0x08);
+
+    int doallocate() {
+        return 0;
+    }
+      
+    streamsize     _C_alsize;
+    streamsize     _C_unused;   // left for binary compatibility
+
+    void           *(*_C_palloc)(size_t);
+    void           (*_C_pfree)(void *);
+};
+
+
+
+class _RWSTD_EXPORT istrstream: public istream
+{
+public:
+
+    typedef char                   char_type;
+    typedef char_traits<char_type> traits_type;
+    typedef streambuf::int_type    int_type;
+    typedef streambuf::pos_type    pos_type;
+    typedef streambuf::off_type    off_type;
+  
+    strstreambuf *rdbuf() const {
+        return _RWSTD_CONST_CAST (strstreambuf*, &_C_sb);
+    }
+
+    _EXPLICIT
+    istrstream (const char_type *__s): istream (rdbuf ()), _C_sb (__s, 0) { }
+
+    istrstream (const char_type *__s, streamsize __n)
+        : istream (rdbuf ()), _C_sb (__s, __n) { }
+
+    _EXPLICIT
+    istrstream (char_type *__s)
+        : istream (rdbuf ()), _C_sb ((const char_type*)__s, 0) { }
+
+      
+    istrstream (char_type *__s, streamsize __n)
+        : istream (rdbuf ()), _C_sb ((const char_type*)__s, __n) { }
+
+    char_type *str () {
+        return rdbuf ()->str ();
+    }
+
+private:
+
+    strstreambuf _C_sb;
+};
+
+
+class _RWSTD_EXPORT ostrstream: public ostream
+{
+public:
+
+    typedef char                   char_type;
+    typedef char_traits<char_type> traits_type;
+    typedef streambuf::int_type    int_type;
+    typedef streambuf::pos_type    pos_type;
+    typedef streambuf::off_type    off_type;
+  
+    strstreambuf* rdbuf() const {
+        return _RWSTD_CONST_CAST (strstreambuf*, &_C_sb);
+    }
+
+    ostrstream (): ostream (rdbuf ()) { }
+
+    ostrstream (char_type *__s, int __n, ios::openmode __mode = ios::out)
+        : ostream (rdbuf ()),
+          _C_sb (__s, streamsize (__n),
+                __mode & (ios::app | ios::ate) ? __s + traits_type::length (__s)
+                                               : __s)
+        { }
+
+    void freeze (bool __freezefl = true) {
+        rdbuf ()->freeze (__freezefl);
+    }
+    
+    char_type *str () {
+        return rdbuf ()->str();
+    }
+    
+    int pcount() const {
+        return rdbuf ()->pcount();
+    }
+
+private:
+
+    strstreambuf _C_sb;
+};
+
+
+class _RWSTD_EXPORT strstream: public iostream
+{
+public:
+
+    typedef char                   char_type;
+    typedef char_traits<char_type> traits_type;
+    typedef streambuf::int_type    int_type;
+    typedef streambuf::pos_type    pos_type;
+    typedef streambuf::off_type    off_type;
+  
+    strstreambuf* rdbuf() const {
+        return _RWSTD_CONST_CAST (strstreambuf*, &_C_sb);
+    }
+
+    strstream (): iostream (rdbuf ()), _C_sb () { }
+
+    strstream (char_type *__s, int __n,
+               ios::openmode __mode = ios::out | ios::in)
+        : iostream (rdbuf ()),
+        _C_sb (__s, streamsize (__n),
+               __mode & (ios::app | ios::ate) ? __s + traits_type::length (__s)
+                                              : __s)
+          { }
+
+    void freeze (bool __freezefl = true) {
+        rdbuf ()->freeze (__freezefl);
+    }
+
+    int pcount() const {
+        return rdbuf ()->pcount();
+    }
+      
+    char_type *str() {
+        return rdbuf ()->str();
+    }
+
+private:
+
+    strstreambuf _C_sb;
+};
+
+
+_RWSTD_NAMESPACE_END   // std
+
+
+#endif   //_RWSTD_STRSTREAM_INCLUDED

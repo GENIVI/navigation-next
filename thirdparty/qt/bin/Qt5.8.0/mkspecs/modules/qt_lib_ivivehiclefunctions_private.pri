@@ -1,0 +1,14 @@
+QT.ivivehiclefunctions_private.VERSION = 1.0.0
+QT.ivivehiclefunctions_private.MAJOR_VERSION = 1
+QT.ivivehiclefunctions_private.MINOR_VERSION = 0
+QT.ivivehiclefunctions_private.PATCH_VERSION = 0
+QT.ivivehiclefunctions_private.name = QtIviVehicleFunctions
+QT.ivivehiclefunctions_private.module =
+QT.ivivehiclefunctions_private.libs = $$QT_MODULE_LIB_BASE
+QT.ivivehiclefunctions_private.includes = $$QT_MODULE_INCLUDE_BASE/QtIviVehicleFunctions/1.0.0 $$QT_MODULE_INCLUDE_BASE/QtIviVehicleFunctions/1.0.0/QtIviVehicleFunctions
+QT.ivivehiclefunctions_private.frameworks =
+QT.ivivehiclefunctions_private.depends = core_private ivicore_private ivivehiclefunctions
+QT.ivivehiclefunctions_private.uses =
+QT.ivivehiclefunctions_private.module_config = v2 internal_module
+QT.ivivehiclefunctions_private.enabled_features =
+QT.ivivehiclefunctions_private.disabled_features =

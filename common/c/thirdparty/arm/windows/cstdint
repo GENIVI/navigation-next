@@ -1,0 +1,27 @@
+ /*
+ * C++ header for C header stdint.h
+ * Copyright (C) Advanced RISC Machines Limited, 1997. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 91768 $
+ * Checkin $Date: 2005-08-10 19:58:48 +0100 (Wed, 10 Aug 2005) $
+ * Revising $Author: drodgman $
+ */
+
+#ifndef __cstdint
+#define __cstdint
+
+  #define __STDINT_NO_EXPORTS 1
+  #include <stdint.h>
+  #undef __STDINT_NO_EXPORTS
+
+  
+  #undef __stdint_h  // later inclusion of stdint.h must do using std::*
+  #ifdef __EDG_IMPLICIT_USING_STD
+    /* Implicitly include a using directive for the STD namespace when this
+       preprocessing flag is TRUE. */
+       using namespace ::std;
+  #endif /* ifdef __EDG_IMPLICIT_USING_STD */
+  
+#endif /* __cstdint */

@@ -1,0 +1,913 @@
+;-------------------------------------------------------------------------
+;   nbservices.def -- NAVBuilder Services Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.
+;
+;   The information contained herein is confidential, proprietary
+;   to Networks In Motion, Inc., and considered a trade secret as
+;   defined in section 499C of the penal code of the State of
+;   California. Use of this information by anyone other than
+;   authorized employees of Networks In Motion is granted only
+;   under a written non-disclosure agreement, expressly
+;   prescribing the scope and manner of such use.
+;
+;-------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+
+LIBRARY    "nbservices17"
+    EXPORTS
+        NB_CameraInformationDestroy                                 @1      ;NONAME
+        NB_CameraInformationGetCamera                               @2      ;NONAME
+        NB_CameraInformationGetCameraCount                          @3      ;NONAME
+        NB_CameraProcessorGetNextCamera                             @4      ;NONAME
+        NB_CameraProcessorIsAnnouncementPending                     @5      ;NONAME
+        NB_CameraProcessorUpdate                                    @6      ;NONAME
+        NB_CameraInformationCreateFromSearch                        @7      ;NONAME
+        NB_CameraInformationGetManeuverCameraCount                  @8      ;NONAME
+        NB_CameraInformationGetManeuverCamera                       @9      ;NONAME
+
+        NB_ContextCreate                                            @51     ;NONAME
+        NB_ContextDestroy                                           @52     ;NONAME
+        NB_ContextGetDataState                                      @53     ;NONAME
+        NB_ContextGetGpsHistory                                     @54     ;NONAME
+        NB_ContextGetNetwork                                        @55     ;NONAME
+        NB_ContextGetPal                                            @56     ;NONAME
+        NB_ContextGetQaLog                                          @57     ;NONAME
+        NB_ContextSetGpsHistory                                     @58     ;NONAME
+        NB_ContextSetQaLog                                          @59     ;NONAME
+        NB_ContextSetVectorTileManager                              @60     ;NONAME
+        NB_ContextGetVectorTileManager                              @61     ;NONAME
+        NB_ContextGetVoiceCache                                     @62     ;NONAME
+        NB_ContextGetPersistentData                                 @63     ;NONAME
+        NB_ContextGetTargetMapping                                  @64     ;NONAME
+        NB_ContextSetTargetMappings                                 @65     ;NONAME
+        NB_ContextNetworkReset                                      @66     ;NONAME
+        NB_ContextSetEnhancedContentManager                         @67     ;NONAME
+        NB_ContextGetEnhancedContentManager                         @68     ;NONAME
+        NB_ContextNetworkSetIden                                    @69     ;NONAME
+
+        NB_DetourParametersAddAvoidEntireRoute                      @101    ;NONAME
+        NB_DetourParametersAddAvoidManeuvers                        @102    ;NONAME
+        NB_DetourParametersAddAvoidPartOfRoute                      @103    ;NONAME
+        NB_DetourParametersAddAvoidTrafficIncident                  @104    ;NONAME
+        NB_DetourParametersClone                                    @105    ;NONAME
+        NB_DetourParametersCreate                                   @106    ;NONAME
+        NB_DetourParametersDestroy                                  @107    ;NONAME
+        NB_DetourParametersAddAvoidCongestion                       @108    ;NONAME
+        NB_DetourParametersAddAvoidTrafficEvent                     @109    ;NONAME
+
+        NB_GeocodeHandlerCancelRequest                              @151    ;NONAME
+        NB_GeocodeHandlerCreate                                     @152    ;NONAME
+        NB_GeocodeHandlerDestroy                                    @153    ;NONAME
+        NB_GeocodeHandlerGetGeocodeInformation                      @154    ;NONAME
+        NB_GeocodeHandlerIsRequestInProgress                        @155    ;NONAME
+        NB_GeocodeHandlerStartRequest                               @156    ;NONAME
+        NB_GeocodeInformationDestroy                                @157    ;NONAME
+        NB_GeocodeInformationGetLocation                            @158    ;NONAME
+        NB_GeocodeInformationGetSliceInformation                    @159    ;NONAME
+        NB_GeocodeParametersCreateAddress                           @160    ;NONAME
+        NB_GeocodeParametersCreateAirport                           @161    ;NONAME
+        NB_GeocodeParametersCreateFreeForm                          @162    ;NONAME
+        NB_GeocodeParametersCreateIntersection                      @163    ;NONAME
+        NB_GeocodeParametersCreateIteration                         @164    ;NONAME
+        NB_GeocodeParametersDestroy                                 @165    ;NONAME
+        NB_GeocodeInformationGetLocationWithAccuracy                @166    ;NONAME
+        NB_GeocodeParametersSetCountry                              @167    ;NONAME
+        NB_GeocodeParametersSetGeographicPosition                   @168    ;NONAME
+
+        NB_GpsHistoryAdd                                            @201    ;NONAME
+        NB_GpsHistoryClear                                          @202    ;NONAME
+        NB_GpsHistoryCreate                                         @203    ;NONAME
+        NB_GpsHistoryDestroy                                        @204    ;NONAME
+        NB_GpsHistoryForEach                                        @205    ;NONAME
+        NB_GpsHistoryGet                                            @206    ;NONAME
+        NB_GpsHistoryGetCount                                       @207    ;NONAME
+        NB_GpsHistoryGetLatest                                      @208    ;NONAME
+
+        NB_GuidanceInformationCreate                                @251    ;NONAME
+        NB_GuidanceInformationDestroy                               @252    ;NONAME
+        NB_GuidanceInformationGetCommandVersion                     @253    ;NONAME
+        NB_GuidanceMessageDestroy                                   @254    ;NONAME
+        NB_GuidanceMessageGetCode                                   @255    ;NONAME
+        NB_GuidanceMessageGetCodeCount                              @256    ;NONAME
+        NB_GuidanceMessagePlayed                                    @257    ;NONAME
+
+        NB_MercatorPolylineDestroy                                  @301    ;NONAME
+
+        NB_NavigationCreate                                         @351    ;NONAME
+        NB_NavigationDestroy                                        @352    ;NONAME
+        NB_NavigationGetCameraState                                 @353    ;NONAME
+        NB_NavigationGetGuidanceState                               @354    ;NONAME
+        NB_NavigationGetInformation                                 @355    ;NONAME
+        NB_NavigationGetManeuverProgress                            @356    ;NONAME
+        NB_NavigationGetManualGuidanceMessage                       @357    ;NONAME
+        NB_NavigationGetPublicState                                 @358    ;NONAME
+        NB_NavigationGetRoutePositionInformation                    @359    ;NONAME
+        NB_NavigationGetStatus                                      @360    ;NONAME
+        NB_NavigationGetTrafficState                                @361    ;NONAME
+        NB_NavigationHeartbeat                                      @362    ;NONAME
+        NB_NavigationIsOnRoute                                      @363    ;NONAME
+        NB_NavigationNewRoute                                       @364    ;NONAME
+        NB_NavigationRecalculate                                    @365    ;NONAME
+        NB_NavigationSetGuidanceInformation                         @366    ;NONAME
+        NB_NavigationStartWithRouteInformation                      @367    ;NONAME
+        NB_NavigationStartWithRouteParameters                       @368    ;NONAME
+        NB_NavigationUpdateCameraInformation                        @369    ;NONAME
+        NB_NavigationUpdateGPSLocation                              @370    ;NONAME
+        NB_NavigationUpdateTrafficInformation                       @371    ;NONAME
+        NB_NavigationSetPointsOfInterestConfiguration               @372    ;NONAME
+        NB_NavigationGetSessionId                                   @373    ;NONAME
+        NB_NavigationSetAnnounceType                                @374    ;NONAME
+        NB_NavigationSetCallbacks                                   @375    ;NONAME
+        NB_NavigationDoTrafficRequest                               @376    ;NONAME
+        NB_NavigationGetErrors                                      @377    ;NONAME
+        NB_NavigationGetTripRemainingInformation                    @378    ;NONAME
+        NB_NavigationGetNextTrafficEvent                            @379    ;NONAME
+        NB_NavigationGetManeuverTrafficSummary                      @380    ;NONAME
+        NB_NavigationGetUpcomingTrafficEvents                       @381    ;NONAME
+        NB_NavigationFreeTrafficEvents                              @382    ;NONAME
+        NB_NavigationSetEnhancedContentMapConfiguration             @383    ;NONAME
+        NB_NavigationSetMapOrientation                              @384    ;NONAME
+        NB_NavigationSetTrafficPollingInterval                      @385    ;NONAME
+
+        NB_NetworkCreate                                            @401    ;NONAME
+        NB_NetworkDestroy                                           @402    ;NONAME
+        NB_NetworkSetIden                                           @403    ;NONAME
+        NB_NetworkCreateByCopy                                      @404    ;NONAME
+
+        NB_QaLogWrite                                               @450    ;NONAME
+        NB_QaLogAudioBase                                           @451    ;NONAME
+        NB_QaLogAudioPronun                                         @452    ;NONAME
+        NB_QaLogGPSFix                                              @453    ;NONAME
+        NB_QaLogRasterTileCenterChange                              @454    ;NONAME
+        NB_QaLogRasterTileZoomChange                                @455    ;NONAME
+        NB_QaLogRasterTileEvent                                     @456    ;NONAME
+        NB_QaLogKey                                                 @457    ;NONAME
+        NB_QaLogCamera                                              @458    ;NONAME
+        NB_QaLogCameraWarning                                       @459    ;NONAME
+        NB_QaLogApp2AppCommand                                      @460    ;NONAME
+
+        NB_RasterMapHandlerCancelRequest                            @501    ;NONAME
+        NB_RasterMapHandlerCreate                                   @502    ;NONAME
+        NB_RasterMapHandlerDestroy                                  @503    ;NONAME
+        NB_RasterMapHandlerGetMapInformation                        @504    ;NONAME
+        NB_RasterMapHandlerGetSearchInformation                     @505    ;NONAME
+        NB_RasterMapHandlerIsRequestInProgress                      @506    ;NONAME
+        NB_RasterMapHandlerStartRequest                             @507    ;NONAME
+        NB_RasterMapInformationDestroy                              @508    ;NONAME
+        NB_RasterMapInformationGetCenterLocation                    @509    ;NONAME
+        NB_RasterMapInformationGetImageData                         @510    ;NONAME
+        NB_RasterMapInformationGetMapInformation                    @511    ;NONAME
+        NB_RasterMapInformationTransformLLToMap                     @512    ;NONAME
+        NB_RasterMapInformationTransformMapToLL                     @513    ;NONAME
+        NB_RasterMapParametersCreate                                @514    ;NONAME
+        NB_RasterMapParametersCreateDetour                          @515    ;NONAME
+        NB_RasterMapParametersCreateManeuver                        @516    ;NONAME
+        NB_RasterMapParametersCreateRoute                           @517    ;NONAME
+        NB_RasterMapParametersDestroy                               @518    ;NONAME
+        NB_RasterMapParametersCreateWithPoi                         @519    ;NONAME
+
+        NB_RasterTileManagerClearCache                              @551    ;NONAME
+        NB_RasterTileManagerCreate                                  @552    ;NONAME
+        NB_RasterTileManagerDestroy                                 @553    ;NONAME
+        NB_RasterTileManagerFlushAllTiles                           @554    ;NONAME
+        NB_RasterTileManagerFlushTile                               @555    ;NONAME
+        NB_RasterTileManagerGetTile                                 @556    ;NONAME
+        NB_RasterTileManagerUnlockTile                              @558    ;NONAME
+        NB_RasterTileManagerUpdateTilePriority                      @559    ;NONAME
+        NB_RasterTileManagerSaveToPersistentCache                   @560    ;NONAME
+        NB_RasterTileManagerSetRoutes                               @561    ;NONAME
+        NB_RasterTileManagerGetTiles                                @562    ;NONAME
+        NB_RasterTileManagerTileTypeIsAvailable                     @563    ;NONAME
+
+        NB_ReverseGeocodeHandlerCancelRequest                       @601    ;NONAME
+        NB_ReverseGeocodeHandlerCreate                              @602    ;NONAME
+        NB_ReverseGeocodeHandlerDestroy                             @603    ;NONAME
+        NB_ReverseGeocodeHandlerGetReverseGeocodeInformation        @604    ;NONAME
+        NB_ReverseGeocodeHandlerIsRequestInProgress                 @605    ;NONAME
+        NB_ReverseGeocodeHandlerStartRequest                        @606    ;NONAME
+        NB_ReverseGeocodeInformationDestroy                         @607    ;NONAME
+        NB_ReverseGeocodeInformationGetLocation                     @608    ;NONAME
+        NB_ReverseGeocodeParametersCreate                           @609    ;NONAME
+        NB_ReverseGeocodeParametersDestroy                          @610    ;NONAME
+
+        NB_RouteHandlerCancelRequest                                @651    ;NONAME
+        NB_RouteHandlerCreate                                       @652    ;NONAME
+        NB_RouteHandlerDestroy                                      @653    ;NONAME
+        ;NB_RouteHandlerGetCameraInformation                        @654    NONAME          REMOVED - 7/27/09
+        NB_RouteHandlerGetRouteInformation                          @655    ;NONAME
+        NB_RouteHandlerGetTrafficInformation                        @656    ;NONAME
+        NB_RouteHandlerIsRequestInProgress                          @657    ;NONAME
+        NB_RouteHandlerStartRequest                                 @658    ;NONAME
+        NB_RouteInformationDestroy                                  @659    ;NONAME
+        NB_RouteInformationEnumerateArrivalText                     @660    ;NONAME
+        NB_RouteInformationEnumerateManeuverText                    @661    ;NONAME
+        NB_RouteInformationEnumerateStackedTurnText                 @662    ;NONAME
+        NB_RouteInformationGetCurrentRoadNames                      @663    ;NONAME
+        NB_RouteInformationGetDestination                           @664    ;NONAME
+        NB_RouteInformationGetDetourName                            @665    ;NONAME
+        NB_RouteInformationGetID                                    @666    ;NONAME
+        NB_RouteInformationGetManeuverCount                         @667    ;NONAME
+        NB_RouteInformationGetNextManeuver                          @668    ;NONAME
+        NB_RouteInformationGetNextSignificantManeuver               @669    ;NONAME
+        NB_RouteInformationGetNextSignificantManeuverIndex          @670    ;NONAME
+        NB_RouteInformationGetOrigin                                @671    ;NONAME
+        NB_RouteInformationGetPreviousManeuver                      @672    ;NONAME
+        NB_RouteInformationGetPreviousSignificantManeuver           @673    ;NONAME
+        NB_RouteInformationGetRoutePolyline                         @674    ;NONAME
+        NB_RouteInformationGetSummaryInformation                    @675    ;NONAME
+        NB_RouteInformationGetTrafficFlags                          @676    ;NONAME
+        NB_RouteInformationGetTurnAnnouncement                      @677    ;NONAME
+        NB_RouteInformationGetTurnImage                             @678    ;NONAME
+        NB_RouteInformationGetTurnInformation                       @679    ;NONAME
+        NB_RouteInformationIsManeuverSignificant                    @680    ;NONAME
+        NB_RouteParametersCreateDetour                              @681    ;NONAME
+        NB_RouteParametersCreateFromGpsHistory                      @682    ;NONAME
+        NB_RouteParametersCreateFromPlace                           @683    ;NONAME
+        NB_RouteParametersCreateOffRoute                            @684    ;NONAME
+        NB_RouteParametersDestroy                                   @685    ;NONAME
+        NB_RouteInformationGetManeuverCrossStreets                  @686    ;NONAME
+        NB_RouteInformationGetManeuverCrossStreetsCount             @687    ;NONAME
+        NB_RouteInformationIsRouteComplete                          @688    ;NONAME
+        NB_RouteInformationIsManeuverComplete                       @689    ;NONAME
+        NB_RouteInformationGetRouteId                               @690    ;NONAME
+        NB_RouteInformationGetRouteExtent                           @691    ;NONAME
+        NB_RouteHandlerGetRouteError                                @692    ;NONAME
+        NB_RouteParametersSetLanguage                               @693    ;NONAME
+        NB_RouteInformationIsManeuverWithinRouteWindow              @694    ;NONAME
+        NB_RouteInformationGetManeuverTurnMapCenterPoint            @695    ;NONAME
+        NB_RouteInformationGetTurnCountryCode                       @696    ;NONAME
+        NB_SetDataQueryOptionsForRouteParameters                    @697    ;NONAME
+        NB_RouteParametersSetNavigationInstruction                  @698    ;NONAME
+
+        NB_SearchHandlerCancelRequest                               @701    ;NONAME
+        NB_SearchHandlerCreate                                      @702    ;NONAME
+        NB_SearchHandlerDestroy                                     @703    ;NONAME
+        NB_SearchHandlerGetSearchInformation                        @704    ;NONAME
+        NB_SearchHandlerIsRequestInProgress                         @705    ;NONAME
+        NB_SearchHandlerStartRequest                                @706    ;NONAME
+        NB_SearchInformationDestroy                                 @707    ;NONAME
+        NB_SearchInformationGetAnalyticsEventId                     @708    ;NONAME
+        NB_SearchInformationFreeResultData                          @709    ;NONAME
+        NB_SearchInformationGetEvents                               @710    ;NONAME
+        NB_SearchInformationGetEventSummary                         @711    ;NONAME
+        NB_SearchInformationGetFormattedContentText                 @712    ;NONAME
+        NB_SearchInformationGetFuelDetails                          @713    ;NONAME
+        NB_SearchInformationGetFuelSummary                          @714    ;NONAME
+        NB_SearchInformationGetPlace                                @715    ;NONAME
+        NB_SearchInformationGetResultCount                          @716    ;NONAME
+        NB_SearchInformationGetResultType                           @717    ;NONAME
+        NB_SearchInformationGetTrafficIncident                      @718    ;NONAME
+        NB_SearchInformationGetWeather                              @719    ;NONAME
+        NB_SearchInformationHasAnalyticsEventId                     @720    ;NONAME
+        NB_SearchInformationHasMoreResults                          @721    ;NONAME
+        NB_SearchParametersCreateEvent                              @722    ;NONAME
+        NB_SearchParametersCreateEventVenue                         @723    ;NONAME
+        NB_SearchParametersCreateFuel                               @724    ;NONAME
+        NB_SearchParametersCreateIteration                          @725    ;NONAME
+        NB_SearchParametersCreateMovie                              @726    ;NONAME
+        NB_SearchParametersCreateMovieTheater                       @727    ;NONAME
+        NB_SearchParametersCreatePOI                                @728    ;NONAME
+        NB_SearchParametersCreateSubSearch                          @729    ;NONAME
+        NB_SearchParametersCreateTrafficIncident                    @730    ;NONAME
+        NB_SearchParametersCreateWeather                            @731    ;NONAME
+        NB_SearchParametersDestroy                                  @732    ;NONAME
+        NB_SearchParametersAddExtendedKeyValue                      @733    ;NONAME
+        NB_SearchParametersAddExtendedImage                         @734    ;NONAME
+        NB_SearchParametersSetSource                                @735    ;NONAME
+        NB_SearchParametersGetSource                                @736    ;NONAME
+        NB_SearchParametersSetSearchSortBy                          @737    ;NONAME
+        NB_SearchInformationIsMappable                              @738    ;NONAME
+        NB_SearchInformationGetSpellingSuggestionCount              @739    ;NONAME
+        NB_SearchInformationGetSpellingSuggestion                   @740    ;NONAME
+        NB_SearchParametersSetSearchInputMethod                     @741    ;NONAME
+        NB_SearchParametersGetSearchInputMethod                     @742    ;NONAME
+        NB_SearchParametersEnforceSliceSize                         @743    ;NONAME
+        NB_SearchParametersSetSearchRegion                          @744    ;NONAME
+        NB_SearchParametersCreatePublicTransit                      @745    ;NONAME
+        NB_SearchParametersCreatePublicTransitOverlay               @746    ;NONAME
+
+        NB_SpatialCalculateBoundingMap                              @751    ;NONAME
+        NB_SpatialConvertLatLongToMercator                          @752    ;NONAME
+        NB_SpatialConvertLatLongToPoint                             @753    ;NONAME
+        NB_SpatialConvertMercatorToLatLong                          @754    ;NONAME
+        NB_SpatialConvertMercatorToTile                             @755    ;NONAME
+        NB_SpatialConvertMercatorToTileOffset                       @756    ;NONAME
+        NB_SpatialConvertPointToLatLong                             @757    ;NONAME
+        NB_SpatialConvertTileToMercator                             @758    ;NONAME
+        NB_SpatialGetLineOfSightDistance                            @759    ;NONAME
+        NB_SpatialBoundLatitude                                     @760    ;NONAME
+        NB_SpatialBoundLatitudeRadians                              @761    ;NONAME
+        NB_SpatialBoundLongitude                                    @762    ;NONAME
+        NB_SpatialBoundLongitudeRadians                             @763    ;NONAME
+        NB_SpatialBoundMercator                                     @764    ;NONAME
+        NB_SpatialClipMaxZ                                          @765    ;NONAME
+        NB_SpatialClipMinZ                                          @766    ;NONAME
+        NB_SpatialClipPolygon                                       @767    ;NONAME
+        NB_SpatialIntersectZ                                        @768    ;NONAME
+        NB_SearchInformationReleasePublicTransitPlace               @769    ;NONAME
+        NB_SearchInformationGetPublicTransitPlace                   @770    ;NONAME
+
+        NB_TrafficHandlerCancelRequest                              @801    ;NONAME
+        NB_TrafficHandlerCreate                                     @802    ;NONAME
+        NB_TrafficHandlerDestroy                                    @803    ;NONAME
+        NB_TrafficHandlerGetTrafficInformation                      @804    ;NONAME
+        NB_TrafficHandlerIsRequestInProgress                        @805    ;NONAME
+        NB_TrafficHandlerStartRequest                               @806    ;NONAME
+        NB_TrafficInformationDestroy                                @807    ;NONAME
+        NB_TrafficInformationGetSummary                             @808    ;NONAME
+        ; NB_TrafficInformationMergeFromNotitfy                     @809    ;NONAME Removed 9/12/09
+        NB_TrafficParametersCreate                                  @810    ;NONAME
+        NB_TrafficParametersDestroy                                 @811    ;NONAME
+        NB_TrafficProcessorGetNextIncident                          @812    ;NONAME
+        ; NB_TrafficProcessorGetNextIncidentInformation             @813    ;NONAME Removed 10/18/09
+        NB_TrafficProcessorIsAnnouncementPending                    @814    ;NONAME
+        NB_TrafficProcessorUpdate                                   @815    ;NONAME
+        NB_TrafficGetPendingMessage                                 @816    ;NONAME
+        NB_TrafficInformationGetIncident                            @817    ;NONAME
+        NB_TrafficInformationGetIncidentCount                       @818    ;NONAME
+        NB_TrafficInformationGetRouteManeuverIncident               @819    ;NONAME
+        NB_TrafficProcessorGetNextCongestionInformation             @820    ;NONAME
+        NB_TrafficInformationCompareTrafficRecordId                 @821    ;NONAME
+        NB_TrafficProcessorGetTripRemainingInformation              @822    ;NONAME
+
+        NB_TriStripDestroy                                          @851    ;NONAME
+        NB_TriStripPolylineToMercatorCreate                         @852    ;NONAME
+        NB_TriStripPolylineToMercatorCreateBeveled                  @853    ;NONAME
+
+        NB_VectorTileHandlerCancelRequest                           @901    ;NONAME
+        NB_VectorTileHandlerCreate                                  @902    ;NONAME
+        NB_VectorTileHandlerDestroy                                 @903    ;NONAME
+        NB_VectorTileHandlerGetTileInformation                      @904    ;NONAME
+        NB_VectorTileHandlerIsRequestInProgress                     @905    ;NONAME
+        NB_VectorTileHandlerStartRequest                            @906    ;NONAME
+        NB_VectorTileInformationDestroy                             @907    ;NONAME
+        NB_VectorTileInformationDestroyTile                         @908    ;NONAME
+        NB_VectorTileInformationGetTile                             @909    ;NONAME
+        NB_VectorTileInformationGetTileCount                        @910    ;NONAME
+        NB_VectorTileManagerCreate                                  @911    ;NONAME
+        NB_VectorTileManagerDestroy                                 @912    ;NONAME
+        NB_VectorTileManagerDownloadPendingTiles                    @913    ;NONAME
+        NB_VectorTileManagerGetTile                                 @914    ;NONAME
+        NB_VectorTileManagerUnlockTile                              @915    ;NONAME
+        NB_VectorTileParametersAddTile                              @916    ;NONAME
+        NB_VectorTileParametersConfigurationSetDefaults             @917    ;NONAME
+        NB_VectorTileParametersCreate                               @918    ;NONAME
+        NB_VectorTileParametersDestroy                              @919    ;NONAME
+        NB_VectorTileManagerRegisterCallback                        @920    ;NONAME
+        NB_VectorTileManagerRemoveCallback                          @921    ;NONAME
+        NB_VectorTileManager_GetDefaultConfiguration                @922    ;NONAME
+
+        NB_VersionGet                                               @951    ;NONAME
+        NB_VersionGetCopyright                                      @952    ;NONAME
+
+        ClearNIMPlace                                               @1001   ;NONAME  ;PRIVATE
+        fix_history_add                                             @1002   ;NONAME  ;PRIVATE
+        fix_history_destroy                                         @1003   ;NONAME  ;PRIVATE
+        fix_history_foreach                                         @1004   ;NONAME  ;PRIVATE
+        fix_history_init                                            @1005   ;NONAME  ;PRIVATE
+        fix_history_latest                                          @1006   ;NONAME  ;PRIVATE
+        get_gps_qual                                                @1007   ;NONAME  ;PRIVATE
+        GetReplyErrorCode                                           @1008   ;NONAME  ;PRIVATE
+        gps_criteria_set_add_criteria                               @1009   ;NONAME  ;PRIVATE
+        gps_criteria_set_clear_criteria                             @1010   ;NONAME  ;PRIVATE
+        gps_criteria_set_create                                     @1011   ;NONAME  ;PRIVATE
+        gps_criteria_set_destroy                                    @1012   ;NONAME  ;PRIVATE
+        gps_criteria_set_get_criteria                               @1013   ;NONAME  ;PRIVATE
+        gps_good                                                    @1014   ;NONAME  ;PRIVATE
+        gpsfix_clear                                                @1015   ;NONAME  ;PRIVATE
+        gpsfix_pack                                                 @1016   ;NONAME  ;PRIVATE
+        gpsfix_setpoint                                             @1017   ;NONAME  ;PRIVATE
+        gpsfix_validloc                                             @1018   ;NONAME  ;PRIVATE
+        heading_good                                                @1019   ;NONAME  ;PRIVATE
+        is_gps_error                                                @1020   ;NONAME  ;PRIVATE
+        SetNIMLocationFromLocMatch                                  @1021   ;NONAME  ;PRIVATE
+        SetNIMPlaceFromPlace                                        @1022   ;NONAME  ;PRIVATE
+        translate_gps_error                                         @1023   ;NONAME  ;PRIVATE
+        TranslateNetStatus                                          @1024   ;NONAME  ;PRIVATE
+        SetNIMPhoneFromPhone                                        @1025   ;NONAME  ;PRIVATE
+        gpsfix_identical                                            @1026   ;NONAME  ;PRIVATE
+
+        data_blob_alloc                                             @1051   ;NONAME  ;PRIVATE
+        data_blob_copy                                              @1052   ;NONAME  ;PRIVATE
+        data_blob_equal                                             @1053   ;NONAME  ;PRIVATE
+        data_blob_free                                              @1054   ;NONAME  ;PRIVATE
+        data_blob_from_binary                                       @1055   ;NONAME  ;PRIVATE
+        data_blob_from_tps_attr                                     @1056   ;NONAME  ;PRIVATE
+        data_blob_init                                              @1057   ;NONAME  ;PRIVATE
+        data_blob_set                                               @1058   ;NONAME  ;PRIVATE
+        data_blob_set_cstr                                          @1059   ;NONAME  ;PRIVATE
+        data_double_from_binary                                     @1060   ;NONAME  ;PRIVATE
+        data_file_copy                                              @1061   ;NONAME  ;PRIVATE
+        data_file_equal                                             @1062   ;NONAME  ;PRIVATE
+        data_file_free                                              @1063   ;NONAME  ;PRIVATE
+        data_file_from_tps                                          @1064   ;NONAME  ;PRIVATE
+        data_file_init                                              @1065   ;NONAME  ;PRIVATE
+        data_formatted_text_copy                                    @1066   ;NONAME  ;PRIVATE
+        data_formatted_text_equal                                   @1067   ;NONAME  ;PRIVATE
+        data_formatted_text_free                                    @1068   ;NONAME  ;PRIVATE
+        data_formatted_text_from_binary                             @1069   ;NONAME  ;PRIVATE
+        data_formatted_text_from_tps                                @1070   ;NONAME  ;PRIVATE
+        data_formatted_text_init                                    @1071   ;NONAME  ;PRIVATE
+        data_formatted_text_to_buf                                  @1072   ;NONAME  ;PRIVATE
+        data_gps_copy                                               @1073   ;NONAME  ;PRIVATE
+        data_gps_equal                                              @1074   ;NONAME  ;PRIVATE
+        data_gps_free                                               @1075   ;NONAME  ;PRIVATE
+        data_gps_from_gpsfix                                        @1076   ;NONAME  ;PRIVATE
+        data_gps_from_tps                                           @1077   ;NONAME  ;PRIVATE
+        data_gps_init                                               @1078   ;NONAME  ;PRIVATE
+        data_gps_to_tps                                             @1079   ;NONAME  ;PRIVATE
+        data_location_copy                                          @1080   ;NONAME  ;PRIVATE
+        data_location_equal                                         @1081   ;NONAME  ;PRIVATE
+        data_location_free                                          @1082   ;NONAME  ;PRIVATE
+        data_location_from_tps                                      @1083   ;NONAME  ;PRIVATE
+        data_location_init                                          @1084   ;NONAME  ;PRIVATE
+        data_location_to_tps                                        @1085   ;NONAME  ;PRIVATE
+        data_locmatch_copy                                          @1086   ;NONAME  ;PRIVATE
+        data_locmatch_equal                                         @1087   ;NONAME  ;PRIVATE
+        data_locmatch_free                                          @1088   ;NONAME  ;PRIVATE
+        data_locmatch_from_tps                                      @1089   ;NONAME  ;PRIVATE
+        data_locmatch_init                                          @1090   ;NONAME  ;PRIVATE
+        data_locmatch_to_tps                                        @1091   ;NONAME  ;PRIVATE
+        data_pair_copy                                              @1092   ;NONAME  ;PRIVATE
+        data_pair_equal                                             @1093   ;NONAME  ;PRIVATE
+        data_pair_free                                              @1094   ;NONAME  ;PRIVATE
+        data_pair_from_tps                                          @1095   ;NONAME  ;PRIVATE
+        data_pair_init                                              @1096   ;NONAME  ;PRIVATE
+        data_pair_to_tps                                            @1097   ;NONAME  ;PRIVATE
+        data_place_copy                                             @1098   ;NONAME  ;PRIVATE
+        data_place_equal                                            @1099   ;NONAME  ;PRIVATE
+        data_place_free                                             @1100   ;NONAME  ;PRIVATE
+        data_place_from_nimplace                                    @1101   ;NONAME  ;PRIVATE
+        data_place_from_tps                                         @1102   ;NONAME  ;PRIVATE
+        data_place_init                                             @1103   ;NONAME  ;PRIVATE
+        data_place_to_tps                                           @1104   ;NONAME  ;PRIVATE
+        data_proxmatch_copy                                         @1105   ;NONAME  ;PRIVATE
+        data_proxmatch_equal                                        @1106   ;NONAME  ;PRIVATE
+        data_proxmatch_free                                         @1107   ;NONAME  ;PRIVATE
+        data_proxmatch_from_tps                                     @1108   ;NONAME  ;PRIVATE
+        data_proxmatch_init                                         @1109   ;NONAME  ;PRIVATE
+        data_retrieve_confirmed_copy                                @1110   ;NONAME  ;PRIVATE
+        data_retrieve_confirmed_equal                               @1111   ;NONAME  ;PRIVATE
+        data_retrieve_confirmed_free                                @1112   ;NONAME  ;PRIVATE
+        data_retrieve_confirmed_init                                @1113   ;NONAME  ;PRIVATE
+        data_retrieve_confirmed_to_tps                              @1114   ;NONAME  ;PRIVATE
+        data_string_alloc                                           @1115   ;NONAME  ;PRIVATE
+        data_string_compare_cstr                                    @1116   ;NONAME  ;PRIVATE
+        data_string_copy                                            @1117   ;NONAME  ;PRIVATE
+        data_string_equal                                           @1118   ;NONAME  ;PRIVATE
+        data_string_free                                            @1119   ;NONAME  ;PRIVATE
+        data_string_from_binary                                     @1120   ;NONAME  ;PRIVATE
+        data_string_from_tps_attr                                   @1121   ;NONAME  ;PRIVATE
+        data_string_get                                             @1122   ;NONAME  ;PRIVATE
+        data_string_get_copy                                        @1123   ;NONAME  ;PRIVATE
+        data_string_init                                            @1124   ;NONAME  ;PRIVATE
+        data_string_set                                             @1125   ;NONAME  ;PRIVATE
+        data_string_set_i64                                         @1126   ;NONAME  ;PRIVATE
+        data_string_set_u64                                         @1127   ;NONAME  ;PRIVATE
+        data_string_to_buf                                          @1128   ;NONAME  ;PRIVATE
+        data_uint32_from_binary                                     @1129   ;NONAME  ;PRIVATE
+        data_url_copy                                               @1130   ;NONAME  ;PRIVATE
+        data_url_equal                                              @1131   ;NONAME  ;PRIVATE
+        data_url_free                                               @1132   ;NONAME  ;PRIVATE
+        data_url_from_binary                                        @1133   ;NONAME  ;PRIVATE
+        data_url_from_tps                                           @1134   ;NONAME  ;PRIVATE
+        data_url_init                                               @1135   ;NONAME  ;PRIVATE
+        data_url_to_buf                                             @1136   ;NONAME  ;PRIVATE
+        data_phone_copy                                             @1137   ;NONAME  ;PRIVATE
+        data_phone_equal                                            @1138   ;NONAME  ;PRIVATE
+        data_phone_free                                             @1139   ;NONAME  ;PRIVATE
+        data_phone_from_nimphone                                    @1140   ;NONAME  ;PRIVATE
+        data_phone_from_tps                                         @1141   ;NONAME  ;PRIVATE
+        data_phone_init                                             @1142   ;NONAME  ;PRIVATE
+        data_phone_to_tps                                           @1143   ;NONAME  ;PRIVATE
+        data_metadata_manifest_query_init                           @1144   ;NONAME  ;PRIVATE
+        data_metadata_manifest_query_free                           @1145   ;NONAME  ;PRIVATE
+        data_metadata_manifest_query_to_tps                         @1146   ;NONAME  ;PRIVATE
+        data_metadata_manifest_query_add_wanted_content             @1147   ;NONAME  ;PRIVATE
+        data_metadata_manifest_reply_init                           @1148   ;NONAME  ;PRIVATE
+        data_metadata_manifest_reply_free                           @1149   ;NONAME  ;PRIVATE
+        data_metadata_manifest_reply_from_tps                       @1150   ;NONAME  ;PRIVATE
+        data_metadata_source_query_init                             @1151   ;NONAME  ;PRIVATE
+        data_metadata_source_query_free                             @1152   ;NONAME  ;PRIVATE
+        data_metadata_source_query_to_tps                           @1153   ;NONAME  ;PRIVATE
+        data_metadata_source_query_add_wanted_content               @1154   ;NONAME  ;PRIVATE
+        data_metadata_source_reply_init                             @1155   ;NONAME  ;PRIVATE
+        data_metadata_source_reply_free                             @1156   ;NONAME  ;PRIVATE
+        data_metadata_source_reply_from_tps                         @1157   ;NONAME  ;PRIVATE
+        data_format_element_get_font                                @1158   ;NONAME  ;PRIVATE
+
+        NB_AnalyticsCreate                                          @1200   ;NONAME
+        NB_AnalyticsAddGpsProbe                                     @1201   ;NONAME
+        NB_AnalyticsSetDataRoamingStatus                            @1202   ;NONAME
+        NB_AnalyticsAddSearchQueryEvent                             @1203   ;NONAME
+        NB_AnalyticsAddSearchDetailEvent                            @1204   ;NONAME
+        NB_AnalyticsAddMapEvent                                     @1205   ;NONAME
+        NB_AnalyticsAddPlaceMessageEvent                            @1206   ;NONAME
+        NB_AnalyticsAddCallEvent                                    @1207   ;NONAME
+        NB_AnalyticsAddAddFavoritesEvent                            @1208   ;NONAME
+        NB_AnalyticsAddRouteRequestEvent                            @1209   ;NONAME
+        NB_AnalyticsAddRouteReplyEvent                              @1210   ;NONAME
+        NB_AnalyticsAddRouteStateEvent                              @1211   ;NONAME
+        NB_AnalyticsProcess                                         @1212   ;NONAME
+        NB_AnalyticsForceUpload                                     @1213   ;NONAME
+        NB_AnalyticsMasterClear                                     @1214   ;NONAME
+        NB_AnalyticsSetCallbacks                                    @1215   ;NONAME ;PRIVATE
+        NB_AnalyticsAddImpressionEvent                              @1216   ;NONAME
+        NB_AnalyticsEnableGpsProbes                                 @1217   ;NONAME
+        NB_AnalyticsAddFacebookUpdateEvent                          @1218   ;NONAME
+        NB_AnalyticsAddWifiProbes                                   @1219   ;NONAME
+        NB_AnalyticsAddEnhancedContent                              @1220   ;NONAME
+        NB_AnalyticsAddCouponAnalytics                              @1221   ;NONAME
+        NB_AnalyticsAddApplicationPresentEvent                      @1222   ;NONAME
+        NB_AnalyticsAddUseNavigatorEvent                            @1223   ;NONAME
+        NB_AnalyticsSetWantAnalyticsConfig                          @1224   ;NONAME
+        NB_AnalyticsAddFeedbackEvent                                @1225   ;NONAME
+        NB_AnalyticsAddWebURLEvent                                  @1226   ;NONAME
+        NB_AnalyticsAddArrivalEvent                                 @1227   ;NONAME
+        NB_AnalyticsAddAppGpsErrorEvent                             @1228   ;NONAME
+        NB_AnalyticsAddAppNetworkErrorEvent                         @1229   ;NONAME
+        NB_AnalyticsAddAppFileSystemErrorEvent                      @1230   ;NONAME
+        NB_AnalyticsErrorCategoryToString                           @1231   ;NONAME
+        NB_AnalyticsGetErrorCategory                                @1232   ;NONAME
+
+        NB_PointIterationInitializePackedPolylineForwardIteration   @1250   ;NONAME ;PRIVATE
+        NB_PackedPolylineForwardIteration                           @1251   ;NONAME ;PRIVATE
+        NB_PointIterationInitializePolylineForwardIteration         @1252   ;NONAME ;PRIVATE
+        NB_PointIterationInitializePolylineForwardLengthIteration   @1253   ;NONAME ;PRIVATE
+        NB_PolylineForwardIteration                                 @1254   ;NONAME ;PRIVATE
+        NB_PolylineReverseIteration                                 @1255   ;NONAME ;PRIVATE
+        NB_PolylineForwardLengthIteration                           @1256   ;NONAME ;PRIVATE
+        NB_PolylineReverseLengthIteration                           @1257   ;NONAME ;PRIVATE
+
+        ; NB_PointsOfInterestInformationCreateFromSearch            @1301   ;NONAME Removed 10/22/09
+        NB_PointsOfInterestInformationDestroy                       @1302   ;NONAME
+        NB_PointsOfInterestInformationGetPointOfInterest            @1303   ;NONAME
+        NB_PointsOfInterestInformationGetPointOfInterestCount       @1304   ;NONAME
+        NB_PointsOfInterestInformationCreate                        @1305   ;NONAME
+        NB_PointsOfInterestInformationUpdateWithSearch              @1306   ;NONAME
+        NB_PointsOfInterestInformationUpdateWithSingleSearch        @1307   ;NONAME
+
+        NB_PronunParametersCreate                                   @1400   ;NONAME
+        NB_PronunParametersDestroy                                  @1401   ;NONAME
+        NB_PronunHandlerCreate                                      @1402   ;NONAME
+        NB_PronunHandlerDestroy                                     @1403   ;NONAME
+        NB_PronunHandlerStartRequest                                @1404   ;NONAME
+        NB_PronunHandlerCancelRequest                               @1405   ;NONAME
+        NB_PronunHandlerIsRequestInProgress                         @1406   ;NONAME
+        NB_PronunHandlerGetInformation                              @1407   ;NONAME
+        NB_PronunInformationDestroy                                 @1408   ;NONAME
+
+        NB_PersistentDataCreate                                     @1451   ;NONAME
+        NB_PersistentDataSerialize                                  @1452   ;NONAME
+        NB_PersistentDataGet                                        @1453   ;NONAME ;PRIVATE
+        NB_PersistentDataSet                                        @1454   ;NONAME ;PRIVATE
+        NB_PersistentDataDestroy                                    @1455   ;NONAME ;PRIVATE
+        NB_PersistentDataMasterClear                                @1456   ;NONAME
+        NB_PersistentDataNext                                       @1457   ;NONAME ;PRIVATE
+        NB_PersistentDataCreateByTpsElement                         @1458   ;NONAME ;PRIVATE
+        NB_PersistentDataGetToTpsElement                            @1459   ;NONAME ;PRIVATE
+
+        NB_VectorTransform3DToPixel                                 @1500   ;NONAME
+        NB_VectorTransformCreate                                    @1501   ;NONAME
+        NB_VectorTransformDestroy                                   @1502   ;NONAME
+        NB_VectorTransformIsTileVisible                             @1503   ;NONAME
+        NB_VectorTransformMercatorTo3D                              @1504   ;NONAME
+        NB_VectorTransformPixelDistanceToMercator                   @1505   ;NONAME
+        NB_VectorTransformSet                                       @1506   ;NONAME
+        NB_VectorTransformGetNearPointDistanceForCamera             @1507   ;NONAME
+
+        NB_RasterTileDataSourceHandlerCreate                        @1550   ;NONAME
+        NB_RasterTileDataSourceHandlerDestroy                       @1551   ;NONAME
+        NB_RasterTileDataSourceHandlerStartRequest                  @1552   ;NONAME
+        NB_RasterTileDataSourceHandlerCancelRequest                 @1553   ;NONAME
+        NB_RasterTileDataSourceHandlerIsRequestInProgress           @1554   ;NONAME
+        NB_RasterTileDataSourceHandlerGetInformation                @1555   ;NONAME
+        NB_RasterTileDataSourceInformationGetDataSource             @1556   ;NONAME
+        NB_RasterTileDataSourceInformationDestroy                   @1557   ;NONAME
+        NB_RasterTileDataSourceParametersCreate                     @1558   ;NONAME
+        NB_RasterTileDataSourceParametersDestroy                    @1559   ;NONAME
+
+        NB_LocationParametersCreate                                 @1600   ;NONAME
+        NB_LocationParametersDestroy                                @1601   ;NONAME
+        NB_LocationParametersAddGsm                                 @1602   ;NONAME
+        NB_LocationParametersAddCdma                                @1603   ;NONAME
+        NB_LocationParametersAddWifi                                @1604   ;NONAME
+        NB_LocationParametersSetProxyApiKey                         @1605   ;NONAME
+        NB_LocationParametersAskWanted                              @1606   ;NONAME
+        NB_LocationParametersAddMovingWifi                          @1607   ;NONAME
+
+        NB_LocationHandlerCreate                                    @1650   ;NONAME
+        NB_LocationHandlerDestroy                                   @1651   ;NONAME
+        NB_LocationHandlerStartRequest                              @1652   ;NONAME
+        NB_LocationHandlerCancelRequest                             @1653   ;NONAME
+        NB_LocationHandlerIsRequestInProgress                       @1654   ;NONAME
+        NB_LocationHandlerGetInformation                            @1655   ;NONAME
+
+        NB_LocationInformationDestroy                               @1700   ;NONAME
+        NB_LocationInformationGetNetworkPosition                    @1701   ;NONAME
+        NB_LocationInformationGetUseLocationSetting                 @1702   ;NONAME
+        NB_LocationInformationGetLocationTile                       @1703   ;NONAME
+        NB_LocationInformationGetLocationTilesCount                 @1704   ;NONAME
+        NB_LocationInformationGetRequestStatus                      @1705   ;NONAME
+
+        NB_QaRecordCreate                                           @1750   ;NONAME
+        NB_QaRecordDestroy                                          @1751   ;NONAME
+        NB_QaRecordWriteText                                        @1752   ;NONAME
+        NB_QaRecordWriteInt32                                       @1753   ;NONAME
+        NB_QaRecordWriteUint32                                      @1754   ;NONAME
+        NB_QaRecordWriteUint16                                      @1755   ;NONAME
+        NB_QaRecordWriteUint8                                       @1756   ;NONAME
+        NB_QaRecordWriteDouble                                      @1757   ;NONAME
+        NB_QaRecordWriteData                                        @1758   ;NONAME
+        NB_QaRecordWriteFileLocation                                @1759   ;NONAME
+
+        NB_WifiProbesCreate                                         @1800   ;NONAME
+        NB_WifiProbesAddWifiProbe                                   @1801   ;NONAME
+
+        NB_EnhancedContentManagerCreate                             @1850   ;NONAME
+        NB_EnhancedContentManagerDestroy                            @1851   ;NONAME
+        NB_EnhancedContentManagerStartMetadataSynchronization       @1852   ;NONAME
+        NB_EnhancedContentManagerSetLocation                        @1853   ;NONAME
+        NB_EnhancedContentManagerSelectCity                         @1854   ;NONAME
+        NB_EnhancedContentManagerRemoveCity                         @1855   ;NONAME
+        NB_EnhancedContentManagerStartManifestSynchronization       @1856   ;NONAME
+        NB_EnhancedContentManagerSetManifestSynchronizationAllowable    @1857   ;NONAME
+        NB_EnhancedContentManagerPauseDownload                      @1858   ;NONAME
+        NB_EnhancedContentManagerResumeDownload                     @1859   ;NONAME
+        NB_EnhancedContentManagerIsMetadataSynchronizationInProgress @1860   ;NONAME
+        NB_EnhancedContentManagerIsManifestSynchronizationInProgress @1861   ;NONAME
+        NB_EnhancedContentManagerIsDownloadInProgress               @1862   ;NONAME
+        NB_EnhancedContentManagerCancelDataDownload                 @1863   ;NONAME
+        NB_EnhancedContentManagerRemoveAllStoredData                @1864   ;NONAME
+        NB_EnhancedContentManagerGetStorageStatistics               @1865   ;NONAME
+        NB_EnhancedContentManagerGetCityDownloadStatus              @1866   ;NONAME
+        NB_EnhancedContentManagerGetCityList                        @1867   ;NONAME
+        NB_EnhancedContentManagerGetCitySummaryDisplay              @1868   ;NONAME
+        NB_EnhancedContentManagerSetAllowableDownload               @1869   ;NONAME
+        NB_EnhancedContentManagerGetNextCityToUpdate                @1870   ;NONAME
+        NB_EnhancedContentManagerIsCommonTextureAvailable           @1871   ;NONAME
+        NB_EnhancedContentManagerIsMotorwayJunctionTextureAvailable @1872   ;NONAME
+
+        NB_EnhancedContentStateGetRealisticSign                     @1900   ;NONAME
+        NB_EnhancedContentStateFreeRealisticSign                    @1901   ;NONAME
+        NB_EnhancedContentStateGetMapFrameTileIds                   @1902   ;NONAME
+        NB_EnhancedContentStateGetMapFrameSplines                   @1903   ;NONAME
+        NB_EnhancedContentStateGetMapFrameProjectionParameters      @1904   ;NONAME
+        NB_EnhancedContentStateGetMapFrameManeuvers                 @1905   ;NONAME
+
+        NB_LocationContextCreate                                    @2000   ;NONAME
+        NB_LocationContextDestroy                                   @2001   ;NONAME
+        NB_LocationSetPalAndContext                                 @2002   ;NONAME
+        NB_LocationGetOneFix                                        @2003   ;NONAME
+        NB_LocationCancelGetOneFix                                  @2004   ;NONAME
+        NB_LocationGetState                                         @2005   ;NONAME
+        NB_LocationStartReceivingFixes                              @2006   ;NONAME
+        NB_LocationStopReceivingFixes                               @2007   ;NONAME
+        NB_LocationInitialize                                       @2008   ;NONAME
+        NB_LocationResetCache                                       @2009   ;NONAME
+
+        NB_TileManagerClearCache                                    @2050    ;NONAME
+        NB_TileManagerCreate                                        @2051    ;NONAME
+        NB_TileManagerAddTileType                                   @2052    ;NONAME
+        NB_TileManagerRemoveTileType                                @2053    ;NONAME
+        NB_TileManagerDestroy                                       @2054    ;NONAME
+        NB_TileManagerFlushAllTiles                                 @2055    ;NONAME
+        NB_TileManagerFlushTile                                     @2056    ;NONAME
+        NB_TileManagerGetTile                                       @2057    ;NONAME
+        NB_TileManagerUnlockTile                                    @2058    ;NONAME
+        NB_TileManagerSaveToPersistentCache                         @2060    ;NONAME
+        NB_TileManagerGetTiles                                      @2061    ;NONAME
+        NB_TileManagerTileTypeIsAvailable                           @2062    ;NONAME
+        NB_TileManagerDoesTileTypeExist                             @2063    ;NONAME
+        NB_TileManagerDoesTileTypeUrlTemplateHaveUserParameter      @2064    ;NONAME
+        NB_TileManagerSetRoutes                                     @2065    ;NONAME
+        NB_TileManagerGetTileKey                                    @2066    ;NONAME
+        NB_TileManagerDoesTileTypeUrlTemplateHaveTileSize           @2067    ;NONAME
+        NB_TileManagerClearTileFromCache                            @2068    ;NONAME
+        NB_TileManagerFlushAllTilesByTileTypeId                     @2069    ;NONAME
+
+        NB_PublicTransitManagerCreate                               @2070    ;NONAME
+        NB_PublicTransitManagerDestroy                              @2071    ;NONAME
+        NB_PublicTransitManagerGetStopInfo                          @2072    ;NONAME
+        NB_PublicTransitManagerRequestStops                         @2073    ;NONAME
+        NB_PublicTransitManagerReleaseTransitPlace                  @2074    ;NONAME
+        NB_PublicTransitManagerAddTransitStop                       @2075    ;NONAME
+        NB_PublicTransitManagerRequestTransitOverlayStops           @2077    ;NONAME
+        NB_PublicTransitManagerCreatePlanTrip                       @2078    ;NONAME
+        NB_PublicTransitManagerGetCurrentStopInfo                   @2079    ;NONAME
+        NB_PublicTransitManagerCancelRequests                       @2080    ;NONAME
+        NB_PublicTransitManagerRequestPlanStops                     @2081    ;NONAME
+
+        NB_ImageHasTransparency                                     @2090    ;NONAME
+        NB_TileManagerDoesUrlHaveUserParameter                      @2091    ;NONAME
+        NB_TileManagerDoesUrlHaveTileSize                           @2092    ;NONAME
+
+        NB_SingleSearchHandlerCreate                                @2100    ;NONAME
+        NB_SingleSearchHandlerDestroy                               @2101    ;NONAME
+        NB_SingleSearchHandlerStartRequest                          @2102    ;NONAME
+        NB_SingleSearchHandlerCancelRequest                         @2103    ;NONAME
+        NB_SingleSearchHandlerIsRequestInProgress                   @2104    ;NONAME
+        NB_SingleSearchHandlerGetInformation                        @2105    ;NONAME
+        NB_SingleSearchInformationDestroy                           @2106    ;NONAME
+        NB_SingleSearchInformationGetResultStyleType                @2107    ;NONAME
+        NB_SingleSearchInformationGetResultCount                    @2108    ;NONAME
+        NB_SingleSearchInformationHasMoreResults                    @2109    ;NONAME
+        NB_SingleSearchInformationGetResultType                     @2110    ;NONAME
+        NB_SingleSearchInformationGetSuggestMatch                   @2111    ;NONAME
+        NB_SingleSearchInformationGetPlace                          @2112    ;NONAME
+        NB_SingleSearchInformationFreeExtendedPlaces                @2113    ;NONAME
+        NB_SingleSearchInformationGetFuelDetails                    @2114    ;NONAME
+        NB_SingleSearchInformationGetFuelSummary                    @2115    ;NONAME
+        NB_SingleSearchInformationGetAnalyticsEventId               @2116    ;NONAME
+        NB_SingleSearchInformationIsMappable                        @2117    ;NONAME
+        NB_SingleSearchInformationGetRequestedKeyword               @2118    ;NONAME
+        NB_SingleSearchParametersCreateByResultStyleType            @2119    ;NONAME
+        NB_SingleSearchParametersCreateBySuggestion                 @2120    ;NONAME
+        NB_SingleSearchParametersCreateByIteration                  @2121    ;NONAME
+        NB_SingleSearchParametersDestroy                            @2122    ;NONAME
+        NB_SingleSearchParametersGetSource                          @2123    ;NONAME
+        NB_SingleSearchParametersSetSource                          @2124    ;NONAME
+        NB_SingleSearchParametersSetSearchSortBy                    @2125    ;NONAME
+        NB_SingleSearchParametersGetSearchInputMethod               @2126    ;NONAME
+        NB_SingleSearchParametersSetSearchInputMethod               @2127    ;NONAME
+        NB_SingleSearchParametersAddExtendedKeyValue                @2128    ;NONAME
+        NB_SingleSearchParametersAddExtendedImage                   @2129    ;NONAME
+        NB_SingleSearchParametersAddSearchFilterKeyValue            @2130    ;NONAME
+        NB_SuggestMatchCreateBySerializedData                       @2131    ;NONAME
+        NB_SuggestMatchCreateByCopy                                 @2132    ;NONAME
+        NB_SuggestMatchDestroy                                      @2133    ;NONAME
+        NB_SuggestMatchGetDataToDisplay                             @2134    ;NONAME
+        NB_SuggestMatchSerialize                                    @2135    ;NONAME
+        NB_SuggestMatchIsEqual                                      @2136    ;NONAME
+        NB_SingleSearchParametersSetSearchWithCorridor              @2137    ;NONAME
+
+        NB_CategoryListInformationGetBroadCategoryItem              @2200    ;NONAME
+        NB_CategoryListInformationGetBroadCategoryCount             @2201    ;NONAME
+        NB_CategoryListInformationGetCategoryItem                   @2202    ;NONAME
+        NB_CategoryListInformationGetCategoryCount                  @2203    ;NONAME
+        NB_CategoryListInformationGetSubCategoryItem                @2204    ;NONAME
+        NB_CategoryListInformationGetSubCategoryCount               @2205    ;NONAME
+        NB_CategoryListInformationDestroy                           @2206    ;NONAME
+        
+        NB_CategoryListParametersCreate                             @2210    ;NONAME
+        NB_CategoryListParametersDestroy                            @2211    ;NONAME
+        NB_CategoryListHandlerCreate                                @2212    ;NONAME
+        NB_CategoryListHandlerDestroy                               @2213    ;NONAME
+        NB_CategoryListHandlerStartRequest                          @2214    ;NONAME
+        NB_CategoryListHandlerIsRequestInProgress                   @2215    ;NONAME
+        NB_CategoryListHandlerCancelRequest                         @2216    ;NONAME
+        NB_CategoryListHandlerGetInformation                        @2217    ;NONAME
+        
+        NB_CouponRequestInformationDestroy                          @2220    ;NONAME
+        NB_CouponRequestInformationGetResultCount                   @2221    ;NONAME
+        NB_CouponRequestInformationHasMoreResults                   @2222    ;NONAME
+        NB_CouponRequestInformationFreeStoreCouponData              @2223    ;NONAME
+        NB_CouponRequestInformationGetStoreCoupon                   @2224    ;NONAME
+
+        NB_CouponRequestParametersSetSearchFilter                   @2230    ;NONAME
+        NB_CouponRequestParametersCreate                            @2231    ;NONAME
+        NB_CouponRequestParametersCreateIteration                   @2232    ;NONAME
+        NB_CouponRequestParametersDestroy                           @2233    ;NONAME
+        
+        NB_CouponRequestHandlerCreate                               @2240    ;NONAME
+        NB_CouponRequestHandlerDestroy                              @2241    ;NONAME
+        NB_CouponRequestHandlerStartRequest                         @2242    ;NONAME
+        NB_CouponRequestHandlerIsRequestInProgress                  @2243    ;NONAME
+        NB_CouponRequestHandlerCancelRequest                        @2244    ;NONAME
+        NB_CouponRequestHandlerGetInformation                       @2245    ;NONAME
+        
+        NB_CouponLoadImageInformationDestroy                        @2250    ;NONAME
+        NB_CouponLoadImageInformationGetImage                       @2251    ;NONAME
+        NB_CouponLoadImageParametersCreate                          @2252    ;NONAME
+        NB_CouponLoadImageParametersDestroy                         @2253    ;NONAME
+        NB_CouponLoadImageHandlerCreate                             @2254    ;NONAME
+        NB_CouponLoadImageHandlerDestroy                            @2255    ;NONAME
+        NB_CouponLoadImageHandlerStartRequest                       @2256    ;NONAME
+        NB_CouponLoadImageHandlerIsRequestInProgress                @2257    ;NONAME
+        NB_CouponLoadImageHandlerCancelRequest                      @2258    ;NONAME
+        NB_CouponLoadImageHandlerGetInformation                     @2259    ;NONAME
+        
+        NB_SearchFilterCreate                                       @2260    ;NONAME                                 
+        NB_SearchFilterDestroy                                      @2261    ;NONAME
+        NB_SearchFilterAdd                                          @2262    ;NONAME
+        NB_SearchFilterDelete                                       @2263    ;NONAME
+
+        NB_StoreRequestInformationDestroy                           @2270    ;NONAME
+        NB_StoreRequestInformationGetResultCount                    @2271    ;NONAME
+        NB_StoreRequestInformationHasMoreResults                    @2272    ;NONAME
+        NB_StoreRequestInformationFreeStoreData                     @2273    ;NONAME
+        NB_StoreRequestInformationGetStore                          @2274    ;NONAME
+
+        NB_StoreRequestParametersSetSearchFilter                    @2280    ;NONAME
+        NB_StoreRequestParametersCreate                             @2281    ;NONAME
+        NB_StoreRequestParametersCreateIteration                    @2282    ;NONAME
+        NB_StoreRequestParametersDestroy                            @2283    ;NONAME
+
+        NB_StoreRequestHandlerCreate                                @2290    ;NONAME
+        NB_StoreRequestHandlerDestroy                               @2291    ;NONAME
+        NB_StoreRequestHandlerStartRequest                          @2292    ;NONAME
+        NB_StoreRequestHandlerIsRequestInProgress                   @2293    ;NONAME
+        NB_StoreRequestHandlerCancelRequest                         @2294    ;NONAME
+        NB_StoreRequestHandlerGetInformation                        @2295    ;NONAME
+        NB_SingleSearchParametersSetSearchWithCorridor              @2137    ;NONAME
+
+        NB_AnalyticsAddRevealDescriptionEvent                       @2138    ;NONAME
+        NB_AnalyticsAddRevealReviewEvent                            @2139    ;NONAME
+
+        NB_CategoryListInformationGetBroadCategoryItem              @2200    ;NONAME
+        NB_CategoryListInformationGetBroadCategoryCount             @2201    ;NONAME
+        NB_CategoryListInformationGetCategoryItem                   @2202    ;NONAME
+        NB_CategoryListInformationGetCategoryCount                  @2203    ;NONAME
+        NB_CategoryListInformationGetSubCategoryItem                @2204    ;NONAME
+        NB_CategoryListInformationGetSubCategoryCount               @2205    ;NONAME
+        NB_CategoryListInformationDestroy                           @2206    ;NONAME
+        
+        NB_CategoryListParametersCreate                             @2210    ;NONAME
+        NB_CategoryListParametersDestroy                            @2211    ;NONAME
+        NB_CategoryListHandlerCreate                                @2212    ;NONAME
+        NB_CategoryListHandlerDestroy                               @2213    ;NONAME
+        NB_CategoryListHandlerStartRequest                          @2214    ;NONAME
+        NB_CategoryListHandlerIsRequestInProgress                   @2215    ;NONAME
+        NB_CategoryListHandlerCancelRequest                         @2216    ;NONAME
+        NB_CategoryListHandlerGetInformation                        @2217    ;NONAME
+        
+        NB_CouponRequestInformationDestroy                          @2220    ;NONAME
+        NB_CouponRequestInformationGetResultCount                   @2221    ;NONAME
+        NB_CouponRequestInformationHasMoreResults                   @2222    ;NONAME
+        NB_CouponRequestInformationFreeStoreCouponData              @2223    ;NONAME
+        NB_CouponRequestInformationGetStoreCoupon                   @2224    ;NONAME
+
+        NB_CouponRequestParametersSetSearchFilter                   @2230    ;NONAME
+        NB_CouponRequestParametersCreate                            @2231    ;NONAME
+        NB_CouponRequestParametersCreateIteration                   @2232    ;NONAME
+        NB_CouponRequestParametersDestroy                           @2233    ;NONAME
+        
+        NB_CouponRequestHandlerCreate                               @2240    ;NONAME
+        NB_CouponRequestHandlerDestroy                              @2241    ;NONAME
+        NB_CouponRequestHandlerStartRequest                         @2242    ;NONAME
+        NB_CouponRequestHandlerIsRequestInProgress                  @2243    ;NONAME
+        NB_CouponRequestHandlerCancelRequest                        @2244    ;NONAME
+        NB_CouponRequestHandlerGetInformation                       @2245    ;NONAME
+        
+        NB_CouponLoadImageInformationDestroy                        @2250    ;NONAME
+        NB_CouponLoadImageInformationGetImage                       @2251    ;NONAME
+        NB_CouponLoadImageParametersCreate                          @2252    ;NONAME
+        NB_CouponLoadImageParametersDestroy                         @2253    ;NONAME
+        NB_CouponLoadImageHandlerCreate                             @2254    ;NONAME
+        NB_CouponLoadImageHandlerDestroy                            @2255    ;NONAME
+        NB_CouponLoadImageHandlerStartRequest                       @2256    ;NONAME
+        NB_CouponLoadImageHandlerIsRequestInProgress                @2257    ;NONAME
+        NB_CouponLoadImageHandlerCancelRequest                      @2258    ;NONAME
+        NB_CouponLoadImageHandlerGetInformation                     @2259    ;NONAME
+        
+        NB_SearchFilterCreate                                       @2260    ;NONAME                                 
+        NB_SearchFilterDestroy                                      @2261    ;NONAME
+        NB_SearchFilterAdd                                          @2262    ;NONAME
+        NB_SearchFilterDelete                                       @2263    ;NONAME
+
+        NB_StoreRequestInformationDestroy                           @2270    ;NONAME
+        NB_StoreRequestInformationGetResultCount                    @2271    ;NONAME
+        NB_StoreRequestInformationHasMoreResults                    @2272    ;NONAME
+        NB_StoreRequestInformationFreeStoreData                     @2273    ;NONAME
+        NB_StoreRequestInformationGetStore                          @2274    ;NONAME
+
+        NB_StoreRequestParametersSetSearchFilter                    @2280    ;NONAME
+        NB_StoreRequestParametersCreate                             @2281    ;NONAME
+        NB_StoreRequestParametersCreateIteration                    @2282    ;NONAME
+        NB_StoreRequestParametersDestroy                            @2283    ;NONAME
+
+        NB_StoreRequestHandlerCreate                                @2290    ;NONAME
+        NB_StoreRequestHandlerDestroy                               @2291    ;NONAME
+        NB_StoreRequestHandlerStartRequest                          @2292    ;NONAME
+        NB_StoreRequestHandlerIsRequestInProgress                   @2293    ;NONAME
+        NB_StoreRequestHandlerCancelRequest                         @2294    ;NONAME
+        NB_StoreRequestHandlerGetInformation                        @2295    ;NONAME
+
+        NB_EnhancedVectorMapManagerCreate                           @2300    ;NONAME
+        NB_EnhancedVectorMapManagerRequestMetadata                  @2301    ;NONAME
+        NB_EnhancedVectorMapManagerRequestCommonMaterial            @2302    ;NONAME
+        NB_EnhancedVectorMapManagerSetEnabledLayers                 @2303    ;NONAME
+        NB_EnhancedVectorMapManagerGetLayerDrawOrder                @2304    ;NONAME
+        NB_EnhancedVectorMapManagerGetNightMaterialName             @2305    ;NONAME
+        NB_EnhancedVectorMapManagerGetDayMaterialName               @2306    ;NONAME
+        NB_EnhancedVectorMapStateGetVisibleTileKeyList              @2307    ;NONAME
+        NB_EnhancedVectorMapStateUpdate                             @2308    ;NONAME
+        NB_EnhancedVectorMapStateGetVisibleQuadrangle               @2309    ;NONAME
+        NB_EnhancedVectorMapStateSetCameraPosition                  @2310    ;NONAME
+        NB_EnhancedVectorMapManagerDestroy                          @2311    ;NONAME
+        NB_SingleSearchParametersSetSearchWithCorridor              @2137    ;NONAME

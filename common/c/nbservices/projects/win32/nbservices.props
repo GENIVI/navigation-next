@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <NIM_CCC_BRANCH>main</NIM_CCC_BRANCH>
+    <NIM_NBM_VERSION>1.4.1.12</NIM_NBM_VERSION>
+    <NIM_NBM_PATH>$(SolutionDir)..\..\..\..\..\core\releases\nbm\win32\nbm_$(NIM_NBM_VERSION)_win32</NIM_NBM_PATH>
+    <NIM_NCDB_VERSION>2.27.2.31</NIM_NCDB_VERSION>
+    <NIM_NCDB_PATH>$(SolutionDir)..\..\..\..\..\core\releases\ncdb\win32\ncdb_$(NIM_NCDB_VERSION)_win32</NIM_NCDB_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_CCC_BRANCH">
+      <Value>$(NIM_CCC_BRANCH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="NIM_NBM_VERSION">
+      <Value>$(NIM_NBM_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="NIM_NBM_PATH">
+      <Value>$(NIM_NBM_PATH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="NIM_NCDB_VERSION">
+      <Value>$(NIM_NCDB_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="NIM_NCDB_PATH">
+      <Value>$(NIM_NCDB_PATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+      $(SolutionDir)\include;
+      $(SolutionDir)\include\protected;$(SolutionDir)\include\private;
+      $(SolutionDir)\include\win32;
+      $(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\include;
+      $(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\include\win32;
+      $(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\include;
+      $(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\include\win32;
+      $(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include;
+      $(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include\protected;
+      $(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include\win32;
+      $(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\sqlite\include;
+      $(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include;
+      $(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\generated;
+      $(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\win32;
+      $(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\protected;
+      $(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\private;
+      $(NIM_NBM_PATH)\include;
+      %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NB_BUILD;_CRT_SECURE_NO_WARNINGS;UNUSED_NDEFINED;DEBUG_LOG_NONE;WIN32_LEAN_AND_MEAN;__STDC__=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

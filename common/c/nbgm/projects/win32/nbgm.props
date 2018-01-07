@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NIM_CCC_BRANCH>feature_140523_hybrid_phase2</NIM_CCC_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\freetype-2.4.4\include;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\glew-1.7.0\include;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\lp150b15;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\zlib;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\libjpeg\include;$(ProjectDir)..\..\..\..\..\thirdparty\$(NIM_CCC_BRANCH)\libjpeg_turbo\include;$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_CCC_BRANCH)\include;$(ProjectDir)..\..\..\..\..\nbpal\$(NIM_CCC_BRANCH)\include\win32;$(ProjectDir)..\..\..\nbre\include\private;$(ProjectDir)..\..\..\nbre\include\protected;$(ProjectDir)..\..\..\nbre\include\win32;$(ProjectDir)..\..\..\nbre\include\debug;$(ProjectDir)..\..\..\nbre\include;$(ProjectDir)..\..\..\nbgmmain\include\private;$(ProjectDir)..\..\..\nbgmmain\include\protected;$(ProjectDir)..\..\..\nbgmmain\include\win32;$(ProjectDir)..\..\..\nbgmmain\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NBGM_BUILD;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_CCC_BRANCH">
+      <Value>$(NIM_CCC_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

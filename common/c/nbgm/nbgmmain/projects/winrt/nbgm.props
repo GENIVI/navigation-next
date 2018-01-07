@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>
+				;$(SolutionDir)..\nbgmmain\include\protected
+				;$(SolutionDir)..\nbgmmain\include\private
+				;$(SolutionDir)..\nbgmmain\include\winrt
+				;$(SolutionDir)..\nbgmmain\include
+				;$(SolutionDir)..\nbre\include\protected
+				;$(SolutionDir)..\nbre\include\private
+				;$(SolutionDir)..\nbre\include\winrt
+				;$(SolutionDir)..\nbre\include\debug
+				;$(SolutionDir)..\nbre\include
+				;$(SolutionDir)..\rendersystem\d3d11\include
+				;$(SolutionDir)..\rendersystem\gl\include
+				;$(SolutionDir)..\dependence\CUnit\include
+				;$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\freetype-2.4.4\include
+				;$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\lp150b15
+				;$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\zlib
+				;$(NIMNBIPAL_INC)
+				;$(NIMNBIPAL_INC)\winrt
+				;%(AdditionalIncludeDirectories)
+			</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NBGM_BUILD;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<WarningLevel>Level4</WarningLevel>
+			<TreatWarningAsError>true</TreatWarningAsError>
+			<DisableSpecificWarnings>4100;4115;4127;4201;4214;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+		</ClCompile>
+	</ItemDefinitionGroup>
+</Project>

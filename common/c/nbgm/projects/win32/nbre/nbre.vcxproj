@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DA8B658D-FFCC-4480-A580-496AFC339100}</ProjectGuid>
+    <RootNamespace>nbrerenderengine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../nbgm.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <OutDir>$(SolutionDir)/output/win32/$(Configuration)/\</OutDir>
+    <IntDir>$(SolutionDir)/output/win32/$(Configuration)/$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NBGM_BUILD;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\nbre\src\core\nbrefilelogger.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbrefilestream.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbreiostream.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbrelog.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbremath.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbrememory.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbrememorystream.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\core\nbreutility.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\debug\nbrecameradebug.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\debug\nbredebugboundingbox.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\debug\nbredebugfrustum.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\debug\nbredebugray.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\debug\nbrespatialdividemanagerdebug.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\nbre\nbrecamera.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\nbre\nbrefrustum.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\nbre\nbrelightnode.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\nbre\nbrerenderengine.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\renderpal\nbrehardwareindexbuffer.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\renderpal\nbrerendertarget.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\renderpal\nbrevertexindexdata.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbredefaultshadergroup.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrefont.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrefontmanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrefreetypefont.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbreglyph.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbreglyphatlas.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbreimage.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrejpegcodec.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrematerial.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbremesh.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrepackingtree.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrepacktextureimage.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrepngcodec.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbrepngtextureimage.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbreshader.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbreshadermanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbresubmesh.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbretexture.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbretextureatlas.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbretexturemanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\resource\nbretextureptr.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreaabbtree2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrebillboardentity.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrebillboardnode.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisionaabb2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisioncircle2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisiondetector2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisionlinesegment2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisionobject2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisionobjectbuilder2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisionpolygon2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecollisiontest.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrecompositecollisionobject2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbredefaultspatialdividemanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreentity.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbremodel.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrenode.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreoverlay.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreprimitivecollisionobject2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrerenderoperation.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrerendersurface.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrescenemanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbresubentity.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbresubmodel.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbresurfacemanager.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbresurfacesubview.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbretextentity.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbretextpath3dentity.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbretransformutil.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreuniformgridspatialpartition2d.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbreveiwport.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrevertexscale.cpp" />
+    <ClCompile Include="..\..\..\nbre\src\scene\nbrezone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\nbre\include\private\nbremodel.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrecamera.h" />
+    <ClInclude Include="..\..\..\nbre\include\nbrecontext.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefrustum.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrelightnode.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerenderengine.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreaxisalignedbox2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreaxisalignedbox3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrebuffer.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrecache.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrecachestrategy.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreclipping.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrecommon.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefilelogger.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefilestream.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefrustum3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreintersection.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreiostream.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrelinearinterpolate.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrelog.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbremath.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbremathlib.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrematrix3x3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrematrix4x4.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrememory.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrememorystream.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrenoneaxisalignedbox3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreorientation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreplane.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepolyline2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepolyline3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreray2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreray3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreruntimeinfo.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresegment2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresegment3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresharedptr.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresigleton.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresphere3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresubmodel.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreoverlaymanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretransformation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretriangle2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretriangle3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretypeconvert.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretypes.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreutility.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevector2.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevector3.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevector4.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbrecameradebug.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbredebugboundingbox.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbredebugengine.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbredebugfrustum.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbredebugray.h" />
+    <ClInclude Include="..\..\..\nbre\include\debug\nbrespatialdividemanagerdebug.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrecolor.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbregpuprogram.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrehardwarebuffer.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrehardwareindexbuffer.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrehardwarevertexbuffer.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrelight.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerendercommon.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerenderpal.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerendertarget.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretexturestate.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevertexindexdata.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbredefaultshadergroup.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefont.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefontmanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefontmaterial.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrefreetypefont.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreglyph.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreglyphatlas.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreimage.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreimagecodec.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreishadergroup.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreitextureimage.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrejpegcodec.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrematerial.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbremesh.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepackingtree.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepacktextureimage.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepass.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepngcodec.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrepngtextureimage.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreshader.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreshadermanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresubmesh.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretexture.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretextureatlas.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretexturemanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretextureptr.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretextureunit.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrebillboardentity.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrebillboardnode.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbredefaultspatialdividemanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreentity.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreipassoperation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreitextureanimation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbremovableobject.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrenode.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreoverlay.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerenderoperation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerenderoperationiterator.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerenderqueueobserver.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrerendersurface.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrescenemanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrespatialobject.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresubentity.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresurfacemanager.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbresurfacesubview.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretextentity.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretextpath3dentity.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbretransformutil.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbreveiwport.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevertexanimation.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevertexscale.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrevisitor.h" />
+    <ClInclude Include="..\..\..\nbre\include\private\nbrezone.h" />
+    <None Include="..\..\..\nbre\include\private\nbreaxisalignedbox2.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreaxisalignedbox3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreaxisalignedbox3i.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrecache.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreclipping.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrefrustum3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreintersection.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreiostream.inl" />
+    <None Include="..\..\..\nbre\include\private\nbremath.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrematrix3x3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrematrix4x4.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreplane.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrepolyline2.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrepolyline3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreray2.inl" />
+    <None Include="..\..\..\nbre\include\private\nbreray3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbresegment2.inl" />
+    <None Include="..\..\..\nbre\include\private\nbresegment3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbresphere3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbretransformation.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrevector2.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrevector3.inl" />
+    <None Include="..\..\..\nbre\include\private\nbrevector4.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

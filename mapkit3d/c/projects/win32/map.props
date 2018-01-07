@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NIM_BRANCH>feature_140523_hybrid_phase2</NIM_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)output\win32\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\win32\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include;$(ProjectDir)..\..\include\win32;$(ProjectDir)..\..\..\..\nbpal\$(NIM_BRANCH)\include;$(ProjectDir)..\..\..\..\nbpal\$(NIM_BRANCH)\include\win32;$(ProjectDir)..\..\..\..\coreservices\$(NIM_BRANCH)\include;$(ProjectDir)..\..\..\..\coreservices\$(NIM_BRANCH)\include\win32;$(ProjectDir)..\..\..\..\nbservices\$(NIM_BRANCH)\include;$(ProjectDir)..\..\..\..\nbservices\$(NIM_BRANCH)\include\win32;$(ProjectDir)..\..\..\..\nbgm\$(NIM_BRANCH)\nbgmmain\include;$(ProjectDir)..\..\..\..\nbgm\$(NIM_BRANCH)\nbgmmain\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;MAKE_STATIC_LIBRARIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>nbservices.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir);$(ProjectDir)..\..\..\..\nbservices\$(NIM_BRANCH)\output\win32\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_BRANCH">
+      <Value>$(NIM_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

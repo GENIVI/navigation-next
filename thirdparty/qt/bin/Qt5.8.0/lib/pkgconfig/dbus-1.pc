@@ -1,0 +1,17 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+system_bus_default_address=unix:path=/opt/Qt5.8.0/var/run/dbus/system_bus_socket
+sysconfdir=/opt/Qt5.8.0/etc
+session_bus_services_dir=/opt/Qt5.8.0/share/dbus-1/services
+system_bus_services_dir=/opt/Qt5.8.0/share/dbus-1/system-services
+interfaces_dir=/opt/Qt5.8.0/share/dbus-1/interfaces
+daemondir=/opt/Qt5.8.0/bin
+
+Name: dbus
+Description: Free desktop message bus
+Version: 1.6.28
+Libs: -L${libdir} -ldbus-1
+Libs.private: -lpthread -lrt 
+Cflags: -I${includedir}/dbus-1.0 -I${libdir}/dbus-1.0/include 

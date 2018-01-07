@@ -1,0 +1,25 @@
+ï»?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NIM_CCC_BRANCH>feature_140523_hybrid_phase2</NIM_CCC_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\include\private;$(SolutionDir)\include\win32;$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\include;$(SolutionDir)..\..\nbpal\$(NIM_CCC_BRANCH)\include\win32;$(SolutionDir)..\..\thirdparty\$(NIM_CCC_BRANCH)\speex\include;$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\include;$(SolutionDir)..\..\abpal\$(NIM_CCC_BRANCH)\include\win32;$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include;$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include\protected;$(SolutionDir)..\..\coreservices\$(NIM_CCC_BRANCH)\include\win32;$(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include;$(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\protected;$(SolutionDir)..\..\nbservices\$(NIM_CCC_BRANCH)\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AB_BUILD;DEBUG_LOG_ALL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100;4115;4127;4201;4214;4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NIM_CCC_BRANCH">
+      <Value>$(NIM_CCC_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

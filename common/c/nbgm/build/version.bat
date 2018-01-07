@@ -1,0 +1,4 @@
+@ECHO OFF
+SET VER_SOL_DIR=%1
+SET VER_PLATFORM=%2
+python %VER_SOL_DIR%\build\version.py %VER_SOL_DIR% %VER_PLATFORM%

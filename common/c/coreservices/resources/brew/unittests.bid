@@ -1,0 +1,6 @@
+#ifndef UNITTESTS_BID
+#define UNITTESTS_BID
+
+#define AEECLSID_UNITTESTS        0x11111111
+
+#endif //UNITTESTS_BID

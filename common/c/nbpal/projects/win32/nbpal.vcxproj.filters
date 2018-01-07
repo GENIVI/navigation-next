@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\font">
+      <UniqueIdentifier>{cec557b3-6571-4688-86b1-10972a495ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{3ed6dade-80fb-4a84-9f34-39c092433ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK Headers">
+      <UniqueIdentifier>{10d996c0-8484-42c9-afae-f5830661bda6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\util\bq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctiondnsresult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionhttpdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionhttpstatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnetworkdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnetworkstatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\finishfunctionnormal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\util\paldebuglog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\paldisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\pallog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\util\palstdlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\util\palversion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\font\palfont.cpp">
+      <Filter>Source Files\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\font\palfreetypeengine.cpp">
+      <Filter>Source Files\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\util\heapsort.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\util\palvector.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\wm_global.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\wm_util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\testlog\paltestlog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\triangulation\paltriangulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\winmobile\pal\palimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\win32\gl\palgl2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbpal.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\win32\font\palfreetypeengine.h">
+      <Filter>Source Files\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctiondnsresult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionhttpdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionhttpstatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnetworkdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnetworkstatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\finishfunctionnormal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\util\paldebug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\palevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palgl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\palimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\pallog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\win32\util\palqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\palversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\resources\win32\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\bq.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\win32\util\heapsort.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\wm_global.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\winmobile\pal\wm_util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\pal.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palconfig.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\paldebuglog.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\paldisplay.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\palerror.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palexp.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palmath.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\palnet.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palstdlib.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\paltypes.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\win32\palvector.h">
+      <Filter>SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\paltriangulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\win32\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\resources\win32\version.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

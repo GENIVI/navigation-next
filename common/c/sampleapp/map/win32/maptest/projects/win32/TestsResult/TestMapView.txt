@@ -1,0 +1,3 @@
+
+Suite: TestMapView
+  Test: TestMapViewInstanceCreate ... 

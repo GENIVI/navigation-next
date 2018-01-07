@@ -1,0 +1,338 @@
+ï»?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="camera">
+      <UniqueIdentifier>{39a62fb3-f174-4db0-85cb-f48d0aa63d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detour">
+      <UniqueIdentifier>{8f20cb84-8874-4afd-b801-d33ebb2f8d36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gps">
+      <UniqueIdentifier>{4164d22f-8691-42e6-90e4-a573e16c1796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="guidance">
+      <UniqueIdentifier>{a878a607-0f93-4664-b1e8-dc668b52428b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nav">
+      <UniqueIdentifier>{ff8e169e-741c-4f05-acbd-a262fa2ef127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="route">
+      <UniqueIdentifier>{e1560044-2074-4eb7-8ad3-4d5af0de6da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="traffic">
+      <UniqueIdentifier>{f3e4d135-0659-4f84-875c-dc9c77347c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vector map">
+      <UniqueIdentifier>{ba1d2536-49f3-4e4a-8055-05daf35f69a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pois">
+      <UniqueIdentifier>{5b696407-78ce-4371-8473-208f2925e683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enhancedcontent">
+      <UniqueIdentifier>{23f67e2a-5bf5-4401-aa0b-29b1a252983e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qalog">
+      <UniqueIdentifier>{6c25f725-7cba-41d9-aab5-a45f1a4a3c48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\nav\instructset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nav_avg_speed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\navutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbrecalclimit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbspeedlimitinformation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbspeedlimitprocessor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbcamerainformation.c">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbcameraprocessor.c">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbdetourparameters.c">
+      <Filter>detour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gps\nbgpsfilter.c">
+      <Filter>gps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbgpshistory.c">
+      <Filter>gps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbguidanceinformation.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbguidancemessage.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbguidanceprocessor.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbnaturallaneguidance.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbpronunhandler.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbpronuninformation.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbpronunparameters.c">
+      <Filter>guidance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbnavigation.c">
+      <Filter>nav</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbnavigationstate.c">
+      <Filter>nav</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbpositionprocessor.c">
+      <Filter>nav</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbroutehandler.c">
+      <Filter>route</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbrouteinformation.c">
+      <Filter>route</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbrouteparameters.c">
+      <Filter>route</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbttfmapping.c">
+      <Filter>route</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbtraffichandler.c">
+      <Filter>traffic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbtrafficinformation.c">
+      <Filter>traffic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbtrafficparameters.c">
+      <Filter>traffic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbtrafficprocessor.c">
+      <Filter>traffic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbpointsofinterestinformation.c">
+      <Filter>pois</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbenhancedcontentprocessor.c">
+      <Filter>enhancedcontent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbnavqalog.c">
+      <Filter>qalog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbspecialregioninformation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\nbspecialregionprocessor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\enhanced_content\nbenhancedvectormapmanager.cpp">
+      <Filter>nav\enhanced_content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\enhanced_content\nbenhancedvectormapprocessor.cpp">
+      <Filter>nav\enhanced_content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\enhanced_content\VisibleProcessor.cpp">
+      <Filter>nav\enhanced_content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\enhanced_content\PrefetchProcessor.cpp">
+      <Filter>nav\enhanced_content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nav\enhanced_content\nbvectormapprefetchprocessor.c">
+      <Filter>nav\enhanced_content</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\private\formatfunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\instructset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nav_avg_speed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\navpublictypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\navtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\navutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrecalclimit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbspeedlimitinformationprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbspeedlimitprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbspeedlimitprocessorprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbspeedlimittypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbcamerainformation.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbcamerainformationprivate.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbcameraprocessor.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbcameraprocessorprivate.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbdetourparameters.h">
+      <Filter>detour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbdetourparametersprivate.h">
+      <Filter>detour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbgpsfilter.h">
+      <Filter>gps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbgpshistory.h">
+      <Filter>gps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbguidanceinformation.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbguidanceinformationprivate.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbguidancemessage.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbguidancemessageprivate.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbguidanceprocessor.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbguidanceprocessorprivate.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbpronunhandler.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbpronuninformation.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbpronuninformationprivate.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbpronunparameters.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbpronunparametersprivate.h">
+      <Filter>guidance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbnavigation.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbnavigationprivate.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbnavigationstate.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbnavigationstateprivate.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbpositionprocessor.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbpositionprocessorprivate.h">
+      <Filter>nav</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbroutehandler.h">
+      <Filter>route</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbrouteinformation.h">
+      <Filter>route</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrouteinformationprivate.h">
+      <Filter>route</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbrouteparameters.h">
+      <Filter>route</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbrouteparametersprivate.h">
+      <Filter>route</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbtraffichandler.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbtrafficinformation.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbtrafficinformationprivate.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbtrafficparameters.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbtrafficparametersprivate.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbtrafficprocessor.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbtrafficprocessorprivate.h">
+      <Filter>traffic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbvectormapprefetchprocessor.h">
+      <Filter>vector map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbvectormapprefetchprocessorprivate.h">
+      <Filter>vector map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbpointsofinterestinformation.h">
+      <Filter>pois</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbenhancedcontentprocessor.h">
+      <Filter>enhancedcontent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbenhancedcontentprocessorprivate.h">
+      <Filter>enhancedcontent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbnavqalog.h">
+      <Filter>qalog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\nbspecialregionprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbspecialregioninformationprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\private\nbspecialregionprocessorprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

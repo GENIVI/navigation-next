@@ -1,0 +1,43 @@
+;-------------------------------------------------------------------------
+;   nbservices.def -- NAVBuilder Services Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.                
+;                                                               
+;   The information contained herein is confidential, proprietary 
+;   to Networks In Motion, Inc., and considered a trade secret as 
+;   defined in section 499C of the penal code of the State of     
+;   California. Use of this information by anyone other than      
+;   authorized employees of Networks In Motion is granted only    
+;   under a written non-disclosure agreement, expressly           
+;   prescribing the scope and manner of such use.   
+;
+;-------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+
+LIBRARY    "nbgm"
+    EXPORTS
+        NBGM_VersionGet                                             @1          ;NONAME
+        NBGM_VersionGetCopyright                                    @2          ;NONAME
+        NBGM_Create                                                 @3          ;NONAME
+        NBGM_Destroy                                                @4          ;NONAME
+        NBGM_CreateMapView                                          @5          ;NONAME
+        NBGM_CreateNavView                                          @6          ;NONAME
+        NBGM_GetInstance                                            @8          ;NONAME
+        NBGM_GetConfig                                              @9          ;NONAME
+        NBGM_SetDebugLogSeverity                                    @10         ;NONAME
+        NBGM_GetSupportedNBMFileVersion                             @11         ;NONAME
+        NBGM_EnableLayerFarNearVisibility                           @12         ;NONAME

@@ -1,0 +1,28 @@
+/*
+ * C++ header for C header stddef.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 91768 $
+ * Checkin $Date: 2005-08-10 19:58:48 +0100 (Wed, 10 Aug 2005) $
+ * Revising $Author: drodgman $
+ */
+
+
+#ifndef __cstddef
+#define __cstddef
+
+  #define __STDDEF_NO_EXPORTS 1
+  #include <stddef.h>
+  #undef __STDDEF_NO_EXPORTS
+
+  #undef __stddef_h  // later inclusion of stddef.h must do using std::*
+  #ifdef __EDG_IMPLICIT_USING_STD
+    /* Implicitly include a using directive for the STD namespace when this
+       preprocessing flag is TRUE. */
+       using namespace ::std;
+  #endif /* ifdef __EDG_IMPLICIT_USING_STD */
+  
+#endif /* __cstddef */
+

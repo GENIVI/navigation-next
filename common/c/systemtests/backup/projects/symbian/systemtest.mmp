@@ -1,0 +1,83 @@
+TARGET		  		SystemTest.exe
+TARGETTYPE	  		EXE
+UID					0 0xA002AAF3
+
+CAPABILITY      	Location ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices LocalServices UserEnvironment SwEvent
+
+EPOCSTACKSIZE		0x5000
+EPOCHEAPSIZE		0x100000 0x200000
+
+SYSTEMINCLUDE		\Epoc32\include
+SYSTEMINCLUDE		\Epoc32\include\libc
+
+MACRO S60=1
+MACRO NDEBUG=1
+MACRO UNUSED_NDEFINED=1
+
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbipal\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimabpal
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimabpal\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\protected
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimcoreservices\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices\protected
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimnbservices\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimabservices
+USERINCLUDE			\Epoc32\include\NIM\coretech\nimabservices\symbian
+USERINCLUDE			\Epoc32\include\NIM\coretech\cunit
+USERINCLUDE			\Epoc32\include\NIM\coretech\ArgTable
+
+USERINCLUDE			..\..\src
+USERINCLUDE			..\..\src\symbian
+
+SOURCEPATH			..\..\src
+SOURCE				argtableutil.c
+SOURCE				main.c
+SOURCE				namebitmaskmap.c
+SOURCE				testdatastore.c
+SOURCE				testdirection.c
+SOURCE				testfileset.c
+SOURCE				testgeocode.c
+SOURCE				testmotd.c
+SOURCE				testnavigation.c
+SOURCE				testnetwork.c
+SOURCE				testprofile.c
+SOURCE				testqalog.c
+SOURCE				testreversegeocode.c
+SOURCE				testsearchbuilder.c
+SOURCE				testshare.c
+SOURCE				testsms.c
+SOURCE				testspatial.c
+SOURCE				testspeech.c
+SOURCE				testsubscription.c
+SOURCE				testsync.c
+SOURCE				testvectormap.c
+SOURCE				utility.c
+SOURCE				testgpstypes.c
+SOURCE				testrastermap.c
+SOURCE				testrastertile.c
+SOURCE				testtristrip.c
+SOURCE				testanalytics.c
+SOURCE				testers.c
+SOURCE				testlicense.c
+
+SOURCEPATH			..\..\src\symbian
+SOURCE				Event.cpp
+SOURCE				PlatformUtil.cpp
+SOURCE				TimerHandler.cpp
+
+LIBRARY				libc.lib
+LIBRARY				euser.lib
+LIBRARY				estlib.lib
+LIBRARY				charconv.lib
+
+LIBRARY				nbipal.lib
+LIBRARY				abpal.lib
+LIBRARY				coreservices.lib
+LIBRARY				nbservices.lib
+LIBRARY				abservices.lib
+LIBRARY				cunit.lib
+
+STATICLIBRARY		ArgTable.lib

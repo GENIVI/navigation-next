@@ -1,0 +1,1344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184E9ACF1A15965500FF127C /* palgl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184E9ACE1A15965500FF127C /* palgl2.cpp */; };
+		184E9AE01A15A75400FF127C /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E9AD81A15A73E00FF127C /* libfreetype.a */; };
+		184E9AE11A15A75400FF127C /* libglues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E9ADB1A15A73E00FF127C /* libglues.a */; };
+		315978C21383749700EF57A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315978C11383749700EF57A1 /* SystemConfiguration.framework */; };
+		5DDE5A8619517A7B002E8E18 /* paltriangulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DDE5A8519517A7B002E8E18 /* paltriangulation.cpp */; };
+		5DDE5A8819517A8E002E8E18 /* paltriangulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DDE5A8719517A8E002E8E18 /* paltriangulation.h */; };
+		82258C6B1422E5F700F49F42 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82258C6A1422E5F700F49F42 /* libz.dylib */; };
+		84B3C753146DA22F007D4747 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3C750146DA1FB007D4747 /* CoreTelephony.framework */; };
+		933692F218B20F0A00BA7CD7 /* palclock.m in Sources */ = {isa = PBXBuildFile; fileRef = 933692F118B20F0A00BA7CD7 /* palclock.m */; };
+		A8C377B318443157005E916E /* palabstractfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377A918443157005E916E /* palabstractfactory.h */; };
+		A8C377B418443157005E916E /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377AA18443157005E916E /* task.cpp */; };
+		A8C377B518443157005E916E /* taskmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377AB18443157005E916E /* taskmanager.cpp */; };
+		A8C377B618443157005E916E /* taskmanagermultithreaded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377AC18443157005E916E /* taskmanagermultithreaded.cpp */; };
+		A8C377B718443157005E916E /* taskmanagermultithreaded.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377AD18443157005E916E /* taskmanagermultithreaded.h */; };
+		A8C377B818443157005E916E /* taskmanagersinglethreaded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377AE18443157005E916E /* taskmanagersinglethreaded.cpp */; };
+		A8C377B918443157005E916E /* taskmanagersinglethreaded.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377AF18443157005E916E /* taskmanagersinglethreaded.h */; };
+		A8C377BA18443157005E916E /* taskqueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377B018443157005E916E /* taskqueue.cpp */; };
+		A8C377BB18443157005E916E /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377B118443157005E916E /* thread.cpp */; };
+		A8C377BC18443157005E916E /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377B218443157005E916E /* thread.h */; };
+		A8C377C618443227005E916E /* nbuitaskqueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C377BE18443227005E916E /* nbuitaskqueue.cpp */; };
+		A8C377C718443227005E916E /* palabstractfactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377BF18443227005E916E /* palabstractfactory.mm */; };
+		A8C377C818443227005E916E /* paltaskqueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377C018443227005E916E /* paltaskqueue.mm */; };
+		A8C377C918443227005E916E /* paluitaskqueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377C118443227005E916E /* paluitaskqueue.mm */; };
+		A8C377CA18443227005E916E /* threadiphone.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377C218443227005E916E /* threadiphone.h */; };
+		A8C377CB18443227005E916E /* threadiphone.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377C318443227005E916E /* threadiphone.mm */; };
+		A8C377CC18443227005E916E /* uithreadiphone.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377C418443227005E916E /* uithreadiphone.h */; };
+		A8C377CD18443227005E916E /* uithreadiphone.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377C518443227005E916E /* uithreadiphone.mm */; };
+		A8C377D118443B10005E916E /* task.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377CF18443B10005E916E /* task.h */; };
+		A8C377D218443B10005E916E /* taskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C377D018443B10005E916E /* taskqueue.h */; };
+		A8C377F318446F2F005E916E /* palfreetypeengine.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C377F218446F2F005E916E /* palfreetypeengine.mm */; };
+		A8DFD00B1845A1DD0005F504 /* paldisplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F738D1835CC3200395FEB /* paldisplay.mm */; };
+		A8DFD00C1845A1DD0005F504 /* palimageblender.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F738E1835CC3200395FEB /* palimageblender.mm */; };
+		A8DFD0101845A2E50005F504 /* paltestlog.c in Sources */ = {isa = PBXBuildFile; fileRef = A8DFD00F1845A2E50005F504 /* paltestlog.c */; };
+		A8DFD0111845A45B0005F504 /* palimpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73DA1835CC3200395FEB /* palimpl.cpp */; };
+		AA747D9F0F9514B9006C5449 /* nbpal_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* nbpal_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D66161F61831C48000E7D794 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161E41831C48000E7D794 /* base.h */; };
+		D66161F71831C48000E7D794 /* palconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161E51831C48000E7D794 /* palconfig.h */; };
+		D66161F81831C48000E7D794 /* palexp.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161E61831C48000E7D794 /* palexp.h */; };
+		D66161FB1831C48000E7D794 /* palgl.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161E91831C48000E7D794 /* palgl.h */; };
+		D66161FC1831C48000E7D794 /* palgl2.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161EA1831C48000E7D794 /* palgl2.h */; };
+		D66161FD1831C48000E7D794 /* palmath.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161EB1831C48000E7D794 /* palmath.h */; };
+		D66161FE1831C48000E7D794 /* palsqlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161EC1831C48000E7D794 /* palsqlerror.h */; };
+		D66161FF1831C48000E7D794 /* palstdlib.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161ED1831C48000E7D794 /* palstdlib.h */; };
+		D66162001831C48000E7D794 /* paltypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161EE1831C48000E7D794 /* paltypes.h */; };
+		D66162011831C48000E7D794 /* palversioninfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161EF1831C48000E7D794 /* palversioninfo.h */; };
+		D66162021831C48000E7D794 /* smartpointer.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161F01831C48000E7D794 /* smartpointer.h */; };
+		D66162031831C48000E7D794 /* bq.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161F21831C48000E7D794 /* bq.h */; };
+		D66162041831C48000E7D794 /* nbutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161F31831C48000E7D794 /* nbutil.h */; };
+		D66162051831C48000E7D794 /* netutils.h in Headers */ = {isa = PBXBuildFile; fileRef = D66161F41831C48000E7D794 /* netutils.h */; };
+		D66162241831C48F00E7D794 /* commontaskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162071831C48F00E7D794 /* commontaskqueue.h */; };
+		D66162251831C48F00E7D794 /* nbtaskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162081831C48F00E7D794 /* nbtaskqueue.h */; };
+		D66162261831C48F00E7D794 /* pal.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162091831C48F00E7D794 /* pal.h */; };
+		D66162271831C48F00E7D794 /* palatomic.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620A1831C48F00E7D794 /* palatomic.h */; };
+		D66162281831C48F00E7D794 /* palcallnotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620B1831C48F00E7D794 /* palcallnotification.h */; };
+		D66162291831C48F00E7D794 /* palclock.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620C1831C48F00E7D794 /* palclock.h */; };
+		D661622A1831C48F00E7D794 /* palcontacts.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620D1831C48F00E7D794 /* palcontacts.h */; };
+		D661622B1831C48F00E7D794 /* paldb.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620E1831C48F00E7D794 /* paldb.h */; };
+		D661622C1831C48F00E7D794 /* paldberror.h in Headers */ = {isa = PBXBuildFile; fileRef = D661620F1831C48F00E7D794 /* paldberror.h */; };
+		D661622D1831C48F00E7D794 /* paldebuglog.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162101831C48F00E7D794 /* paldebuglog.h */; };
+		D661622E1831C48F00E7D794 /* paldisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162111831C48F00E7D794 /* paldisplay.h */; };
+		D661622F1831C48F00E7D794 /* paldoxygengroups.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162121831C48F00E7D794 /* paldoxygengroups.h */; };
+		D66162301831C48F00E7D794 /* palerror.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162131831C48F00E7D794 /* palerror.h */; };
+		D66162311831C48F00E7D794 /* palevent.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162141831C48F00E7D794 /* palevent.h */; };
+		D66162321831C48F00E7D794 /* palfavorites.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162151831C48F00E7D794 /* palfavorites.h */; };
+		D66162331831C48F00E7D794 /* palfile.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162161831C48F00E7D794 /* palfile.h */; };
+		D66162341831C48F00E7D794 /* palfont.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162171831C48F00E7D794 /* palfont.h */; };
+		D66162351831C48F00E7D794 /* palimageblender.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162181831C48F00E7D794 /* palimageblender.h */; };
+		D66162361831C48F00E7D794 /* pallock.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162191831C48F00E7D794 /* pallock.h */; };
+		D66162371831C48F00E7D794 /* pallog.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621A1831C48F00E7D794 /* pallog.h */; };
+		D66162381831C48F00E7D794 /* palmyplaces.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621B1831C48F00E7D794 /* palmyplaces.h */; };
+		D66162391831C48F00E7D794 /* palnet.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621C1831C48F00E7D794 /* palnet.h */; };
+		D661623A1831C48F00E7D794 /* palradio.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621D1831C48F00E7D794 /* palradio.h */; };
+		D661623B1831C48F00E7D794 /* palrecents.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621E1831C48F00E7D794 /* palrecents.h */; };
+		D661623C1831C48F00E7D794 /* paltaskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D661621F1831C48F00E7D794 /* paltaskqueue.h */; };
+		D661623D1831C48F00E7D794 /* paltestlog.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162201831C48F00E7D794 /* paltestlog.h */; };
+		D661623E1831C48F00E7D794 /* paltimer.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162211831C48F00E7D794 /* paltimer.h */; };
+		D661623F1831C48F00E7D794 /* palunzip.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162221831C48F00E7D794 /* palunzip.h */; };
+		D66162401831C48F00E7D794 /* palversion.h in Headers */ = {isa = PBXBuildFile; fileRef = D66162231831C48F00E7D794 /* palversion.h */; };
+		D66164451831D51E00E7D794 /* eventposix.h in Headers */ = {isa = PBXBuildFile; fileRef = D66164441831D51E00E7D794 /* eventposix.h */; };
+		D661662418332CE900E7D794 /* paluitaskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D661662218332CE900E7D794 /* paluitaskqueue.h */; };
+		D69F73F91835CC3200395FEB /* sqlite3_command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73251835CC3200395FEB /* sqlite3_command.cpp */; };
+		D69F73FA1835CC3200395FEB /* sqlite3_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73261835CC3200395FEB /* sqlite3_connection.cpp */; };
+		D69F73FB1835CC3200395FEB /* sqlite3_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73271835CC3200395FEB /* sqlite3_reader.cpp */; };
+		D69F73FC1835CC3200395FEB /* sqlite3_transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73281835CC3200395FEB /* sqlite3_transaction.cpp */; };
+		D69F73FD1835CC3200395FEB /* sqlite3x.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73291835CC3200395FEB /* sqlite3x.h */; };
+		D69F73FE1835CC3200395FEB /* finishfunctionbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F732B1835CC3200395FEB /* finishfunctionbase.cpp */; };
+		D69F73FF1835CC3200395FEB /* finishfunctionbase.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F732C1835CC3200395FEB /* finishfunctionbase.h */; };
+		D69F74001835CC3200395FEB /* finishfunctiondnsresult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F732D1835CC3200395FEB /* finishfunctiondnsresult.cpp */; };
+		D69F74011835CC3200395FEB /* finishfunctiondnsresult.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F732E1835CC3200395FEB /* finishfunctiondnsresult.h */; };
+		D69F74021835CC3200395FEB /* finishfunctionhttpdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F732F1835CC3200395FEB /* finishfunctionhttpdata.cpp */; };
+		D69F74031835CC3200395FEB /* finishfunctionhttpdata.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73301835CC3200395FEB /* finishfunctionhttpdata.h */; };
+		D69F74041835CC3200395FEB /* finishfunctionhttpstatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73311835CC3200395FEB /* finishfunctionhttpstatus.cpp */; };
+		D69F74051835CC3200395FEB /* finishfunctionhttpstatus.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73321835CC3200395FEB /* finishfunctionhttpstatus.h */; };
+		D69F74061835CC3200395FEB /* finishfunctionmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73331835CC3200395FEB /* finishfunctionmanager.cpp */; };
+		D69F74071835CC3200395FEB /* finishfunctionmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73341835CC3200395FEB /* finishfunctionmanager.h */; };
+		D69F74081835CC3200395FEB /* finishfunctionnetworkdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73351835CC3200395FEB /* finishfunctionnetworkdata.cpp */; };
+		D69F74091835CC3200395FEB /* finishfunctionnetworkdata.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73361835CC3200395FEB /* finishfunctionnetworkdata.h */; };
+		D69F740A1835CC3200395FEB /* finishfunctionnetworkstatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73371835CC3200395FEB /* finishfunctionnetworkstatus.cpp */; };
+		D69F740B1835CC3200395FEB /* finishfunctionnetworkstatus.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73381835CC3200395FEB /* finishfunctionnetworkstatus.h */; };
+		D69F740C1835CC3200395FEB /* finishfunctionnormal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73391835CC3200395FEB /* finishfunctionnormal.cpp */; };
+		D69F740D1835CC3200395FEB /* finishfunctionnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F733A1835CC3200395FEB /* finishfunctionnormal.h */; };
+		D69F740E1835CC3200395FEB /* palgl.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F733C1835CC3200395FEB /* palgl.c */; };
+		D69F74151835CC3200395FEB /* nbtaskqueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73451835CC3200395FEB /* nbtaskqueue.cpp */; };
+		D69F74161835CC3200395FEB /* taskmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73461835CC3200395FEB /* taskmanager.h */; };
+		D69F74171835CC3200395FEB /* crc32.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73481835CC3200395FEB /* crc32.h */; };
+		D69F74181835CC3200395FEB /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73491835CC3200395FEB /* globals.h */; };
+		D69F74191835CC3200395FEB /* palunzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F734A1835CC3200395FEB /* palunzip.cpp */; };
+		D69F741A1835CC3200395FEB /* quicksort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F734B1835CC3200395FEB /* quicksort.cpp */; };
+		D69F741B1835CC3200395FEB /* quicksort.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F734C1835CC3200395FEB /* quicksort.h */; };
+		D69F741C1835CC3200395FEB /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F734D1835CC3200395FEB /* unzip.cpp */; };
+		D69F741D1835CC3200395FEB /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F734E1835CC3200395FEB /* unzip.h */; };
+		D69F741F1835CC3200395FEB /* sqlite3_command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73531835CC3200395FEB /* sqlite3_command.cpp */; };
+		D69F74201835CC3200395FEB /* sqlite3_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73541835CC3200395FEB /* sqlite3_connection.cpp */; };
+		D69F74211835CC3200395FEB /* sqlite3_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73551835CC3200395FEB /* sqlite3_reader.cpp */; };
+		D69F74221835CC3200395FEB /* sqlite3_transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73561835CC3200395FEB /* sqlite3_transaction.cpp */; };
+		D69F74231835CC3200395FEB /* sqlite3x.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73571835CC3200395FEB /* sqlite3x.h */; };
+		D69F74241835CC3200395FEB /* SqliteConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73581835CC3200395FEB /* SqliteConnector.cpp */; };
+		D69F74281835CC3200395FEB /* palfont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F735F1835CC3200395FEB /* palfont.cpp */; };
+		D69F742A1835CC3200395FEB /* palfreetypeengine.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73611835CC3200395FEB /* palfreetypeengine.h */; };
+		D69F742B1835CC3200395FEB /* palgl.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73631835CC3200395FEB /* palgl.c */; };
+		D69F742C1835CC3200395FEB /* palcontacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73651835CC3200395FEB /* palcontacts.cpp */; };
+		D69F742D1835CC3200395FEB /* palfavorites.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73661835CC3200395FEB /* palfavorites.cpp */; };
+		D69F742E1835CC3200395FEB /* palrecents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73671835CC3200395FEB /* palrecents.cpp */; };
+		D69F74571835CC3200395FEB /* callnotifierimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73931835CC3200395FEB /* callnotifierimpl.h */; };
+		D69F74581835CC3200395FEB /* callnotifierimpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F73941835CC3200395FEB /* callnotifierimpl.mm */; };
+		D69F74591835CC3200395FEB /* palcallnotification.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F73951835CC3200395FEB /* palcallnotification.mm */; };
+		D69F745A1835CC3200395FEB /* palradio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F73961835CC3200395FEB /* palradio.mm */; };
+		D69F745B1835CC3200395FEB /* palatomic.m in Sources */ = {isa = PBXBuildFile; fileRef = D69F73981835CC3200395FEB /* palatomic.m */; };
+		D69F74751835CC3200395FEB /* palstdlib.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73B61835CC3200395FEB /* palstdlib.c */; };
+		D69F74951835CC3200395FEB /* palimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73DB1835CC3200395FEB /* palimpl.h */; };
+		D69F74981835CC3200395FEB /* palevent.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73DF1835CC3200395FEB /* palevent.c */; };
+		D69F74991835CC3200395FEB /* pallock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73E01835CC3200395FEB /* pallock.cpp */; };
+		D69F74A41835CC3200395FEB /* paldebug.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73EE1835CC3200395FEB /* paldebug.h */; };
+		D69F74A51835CC3200395FEB /* paldebuglog.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73EF1835CC3200395FEB /* paldebuglog.c */; };
+		D69F74A71835CC3200395FEB /* palqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F73F11835CC3200395FEB /* palqueue.h */; };
+		D69F74AA1835CC3300395FEB /* bq.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73F51835CC3200395FEB /* bq.c */; };
+		D69F74AB1835CC3300395FEB /* netutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69F73F61835CC3200395FEB /* netutils.cpp */; };
+		D69F74AC1835CC3300395FEB /* palstdlibcommon.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73F71835CC3200395FEB /* palstdlibcommon.c */; };
+		D69F74AD1835CC3300395FEB /* palversion.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73F81835CC3200395FEB /* palversion.c */; };
+		D69F74D01835D02C00395FEB /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74AF1835D02C00395FEB /* callback.h */; };
+		D69F74D11835D02C00395FEB /* callback.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74B01835D02C00395FEB /* callback.mm */; };
+		D69F74D21835D02C00395FEB /* callbackdnsresult.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74B11835D02C00395FEB /* callbackdnsresult.h */; };
+		D69F74D31835D02C00395FEB /* callbackdnsresult.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74B21835D02C00395FEB /* callbackdnsresult.mm */; };
+		D69F74D41835D02C00395FEB /* callbackhttpdata.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74B31835D02C00395FEB /* callbackhttpdata.h */; };
+		D69F74D51835D02C00395FEB /* callbackhttpdata.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74B41835D02C00395FEB /* callbackhttpdata.mm */; };
+		D69F74D61835D02C00395FEB /* callbackhttpresponseheaders.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74B51835D02C00395FEB /* callbackhttpresponseheaders.h */; };
+		D69F74D71835D02C00395FEB /* callbackhttpresponseheaders.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74B61835D02C00395FEB /* callbackhttpresponseheaders.mm */; };
+		D69F74D81835D02C00395FEB /* callbackhttpresponsestatus.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74B71835D02C00395FEB /* callbackhttpresponsestatus.h */; };
+		D69F74D91835D02C00395FEB /* callbackhttpresponsestatus.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74B81835D02C00395FEB /* callbackhttpresponsestatus.mm */; };
+		D69F74DA1835D02C00395FEB /* callbackmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74B91835D02C00395FEB /* callbackmanager.h */; };
+		D69F74DB1835D02C00395FEB /* callbackmanager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74BA1835D02C00395FEB /* callbackmanager.mm */; };
+		D69F74DC1835D02C00395FEB /* callbacknetworkdata.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74BB1835D02C00395FEB /* callbacknetworkdata.h */; };
+		D69F74DD1835D02C00395FEB /* callbacknetworkdata.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74BC1835D02C00395FEB /* callbacknetworkdata.mm */; };
+		D69F74DE1835D02C00395FEB /* callbacknetworkstatus.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74BD1835D02C00395FEB /* callbacknetworkstatus.h */; };
+		D69F74DF1835D02C00395FEB /* callbacknetworkstatus.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74BE1835D02C00395FEB /* callbacknetworkstatus.mm */; };
+		D69F74E01835D02C00395FEB /* httpconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74BF1835D02C00395FEB /* httpconnection.h */; };
+		D69F74E11835D02C00395FEB /* httpconnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74C01835D02C00395FEB /* httpconnection.mm */; };
+		D69F74E21835D02C00395FEB /* httprequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74C11835D02C00395FEB /* httprequest.h */; };
+		D69F74E31835D02C00395FEB /* httprequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74C21835D02C00395FEB /* httprequest.mm */; };
+		D69F74E41835D02C00395FEB /* httpresponse.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74C31835D02C00395FEB /* httpresponse.h */; };
+		D69F74E51835D02C00395FEB /* httpresponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74C41835D02C00395FEB /* httpresponse.mm */; };
+		D69F74E61835D02C00395FEB /* HttpsConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74C51835D02C00395FEB /* HttpsConnection.h */; };
+		D69F74E71835D02C00395FEB /* HttpsConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D69F74C61835D02C00395FEB /* HttpsConnection.m */; };
+		D69F74E81835D02C00395FEB /* HttpsConnectionAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74C71835D02C00395FEB /* HttpsConnectionAdapter.h */; };
+		D69F74E91835D02C00395FEB /* HttpsConnectionAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74C81835D02C00395FEB /* HttpsConnectionAdapter.mm */; };
+		D69F74EA1835D02C00395FEB /* idlecallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74C91835D02C00395FEB /* idlecallback.h */; };
+		D69F74EB1835D02C00395FEB /* idlecallback.m in Sources */ = {isa = PBXBuildFile; fileRef = D69F74CA1835D02C00395FEB /* idlecallback.m */; };
+		D69F74EC1835D02C00395FEB /* netconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74CB1835D02C00395FEB /* netconnection.h */; };
+		D69F74ED1835D02C00395FEB /* netconnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74CC1835D02C00395FEB /* netconnection.mm */; };
+		D69F74EE1835D02C00395FEB /* palnet.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74CD1835D02C00395FEB /* palnet.mm */; };
+		D69F74F51835D09400395FEB /* paltimer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74F21835D09400395FEB /* paltimer.mm */; };
+		D69F74F61835D09400395FEB /* timerimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D69F74F31835D09400395FEB /* timerimpl.h */; };
+		D69F74F71835D09400395FEB /* timerimpl_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F74F41835D09400395FEB /* timerimpl_objc.mm */; };
+		D69F74F81835D13000395FEB /* palimpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = D69F73901835CC3200395FEB /* palimpl.mm */; };
+		D69F74FA1835D49900395FEB /* nbuitaskqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D661662118332CE900E7D794 /* nbuitaskqueue.h */; };
+		D69F74FD1835D5B300395FEB /* paldebuglog.c in Sources */ = {isa = PBXBuildFile; fileRef = D69F73B41835CC3200395FEB /* paldebuglog.c */; };
+		D69F74FE1835EF8F00395FEB /* palfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D69F735C1835CC3200395FEB /* palfile.m */; };
+		D69F75051836119000395FEB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69F75041836119000395FEB /* CoreFoundation.framework */; };
+		EC25A9B3195811D200FC6886 /* tcpconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = EC25A9B1195811D200FC6886 /* tcpconnection.h */; };
+		EC3DB63C192DF6E20002FD10 /* TLSConnectionAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = EC3DB63A192DF6E20002FD10 /* TLSConnectionAdapter.h */; };
+		EC3DB63D192DF6E20002FD10 /* TLSConnectionAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC3DB63B192DF6E20002FD10 /* TLSConnectionAdapter.mm */; };
+		EC65C075195804C100B6A5A0 /* TCPConnectionAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC65C073195804C100B6A5A0 /* TCPConnectionAdapter.mm */; };
+		EC65C076195804C100B6A5A0 /* TCPConnectionAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = EC65C074195804C100B6A5A0 /* TCPConnectionAdapter.h */; };
+		EC6761CE19233BE7003250AC /* TLSConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6761CC19233BE7003250AC /* TLSConnection.h */; };
+		EC6761CF19233BE7003250AC /* TLSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6761CD19233BE7003250AC /* TLSConnection.m */; };
+		ECC6B3B1195ABDD4006A02E3 /* tcpconnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC6B3B0195ABDD4006A02E3 /* tcpconnection.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184E9AD71A15A73E00FF127C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184E9AD01A15A73E00FF127C /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 932ADFDB158DC8FB00944E3E;
+			remoteInfo = freetype;
+		};
+		184E9ADA1A15A73E00FF127C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184E9AD31A15A73E00FF127C /* glues.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 932ADFDB158DC8FB00944E3E;
+			remoteInfo = glues;
+		};
+		184E9ADC1A15A74D00FF127C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184E9AD01A15A73E00FF127C /* freetype.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 932ADFDA158DC8FB00944E3E;
+			remoteInfo = freetype;
+		};
+		184E9ADE1A15A74D00FF127C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184E9AD31A15A73E00FF127C /* glues.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 932ADFDA158DC8FB00944E3E;
+			remoteInfo = glues;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		184E9ACE1A15965500FF127C /* palgl2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palgl2.cpp; sourceTree = "<group>"; };
+		184E9AD01A15A73E00FF127C /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../../thirdparty/main/projects/iphone/freetype.xcodeproj; sourceTree = "<group>"; };
+		184E9AD31A15A73E00FF127C /* glues.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = glues.xcodeproj; path = ../../../../thirdparty/main/projects/iphone/glues.xcodeproj; sourceTree = "<group>"; };
+		315978C11383749700EF57A1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5DDE5A8519517A7B002E8E18 /* paltriangulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paltriangulation.cpp; sourceTree = "<group>"; };
+		5DDE5A8719517A8E002E8E18 /* paltriangulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paltriangulation.h; sourceTree = "<group>"; };
+		82258C6A1422E5F700F49F42 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84B3C750146DA1FB007D4747 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		933692F118B20F0A00BA7CD7 /* palclock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = palclock.m; path = clock/palclock.m; sourceTree = "<group>"; };
+		A8C377A918443157005E916E /* palabstractfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palabstractfactory.h; sourceTree = "<group>"; };
+		A8C377AA18443157005E916E /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = task.cpp; sourceTree = "<group>"; };
+		A8C377AB18443157005E916E /* taskmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = taskmanager.cpp; sourceTree = "<group>"; };
+		A8C377AC18443157005E916E /* taskmanagermultithreaded.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = taskmanagermultithreaded.cpp; sourceTree = "<group>"; };
+		A8C377AD18443157005E916E /* taskmanagermultithreaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskmanagermultithreaded.h; sourceTree = "<group>"; };
+		A8C377AE18443157005E916E /* taskmanagersinglethreaded.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = taskmanagersinglethreaded.cpp; sourceTree = "<group>"; };
+		A8C377AF18443157005E916E /* taskmanagersinglethreaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskmanagersinglethreaded.h; sourceTree = "<group>"; };
+		A8C377B018443157005E916E /* taskqueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = taskqueue.cpp; sourceTree = "<group>"; };
+		A8C377B118443157005E916E /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		A8C377B218443157005E916E /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		A8C377BE18443227005E916E /* nbuitaskqueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nbuitaskqueue.cpp; sourceTree = "<group>"; };
+		A8C377BF18443227005E916E /* palabstractfactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palabstractfactory.mm; sourceTree = "<group>"; };
+		A8C377C018443227005E916E /* paltaskqueue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = paltaskqueue.mm; sourceTree = "<group>"; };
+		A8C377C118443227005E916E /* paluitaskqueue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = paluitaskqueue.mm; sourceTree = "<group>"; };
+		A8C377C218443227005E916E /* threadiphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadiphone.h; sourceTree = "<group>"; };
+		A8C377C318443227005E916E /* threadiphone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = threadiphone.mm; sourceTree = "<group>"; };
+		A8C377C418443227005E916E /* uithreadiphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uithreadiphone.h; sourceTree = "<group>"; };
+		A8C377C518443227005E916E /* uithreadiphone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = uithreadiphone.mm; sourceTree = "<group>"; };
+		A8C377CF18443B10005E916E /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
+		A8C377D018443B10005E916E /* taskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskqueue.h; sourceTree = "<group>"; };
+		A8C377F218446F2F005E916E /* palfreetypeengine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palfreetypeengine.mm; sourceTree = "<group>"; };
+		A8DFD00F1845A2E50005F504 /* paltestlog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paltestlog.c; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* nbpal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nbpal_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libnbpal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnbpal.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66161E41831C48000E7D794 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
+		D66161E51831C48000E7D794 /* palconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palconfig.h; sourceTree = "<group>"; };
+		D66161E61831C48000E7D794 /* palexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palexp.h; sourceTree = "<group>"; };
+		D66161E91831C48000E7D794 /* palgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palgl.h; sourceTree = "<group>"; };
+		D66161EA1831C48000E7D794 /* palgl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palgl2.h; sourceTree = "<group>"; };
+		D66161EB1831C48000E7D794 /* palmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palmath.h; sourceTree = "<group>"; };
+		D66161EC1831C48000E7D794 /* palsqlerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palsqlerror.h; sourceTree = "<group>"; };
+		D66161ED1831C48000E7D794 /* palstdlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palstdlib.h; sourceTree = "<group>"; };
+		D66161EE1831C48000E7D794 /* paltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paltypes.h; sourceTree = "<group>"; };
+		D66161EF1831C48000E7D794 /* palversioninfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palversioninfo.h; sourceTree = "<group>"; };
+		D66161F01831C48000E7D794 /* smartpointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smartpointer.h; sourceTree = "<group>"; };
+		D66161F21831C48000E7D794 /* bq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bq.h; sourceTree = "<group>"; };
+		D66161F31831C48000E7D794 /* nbutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nbutil.h; sourceTree = "<group>"; };
+		D66161F41831C48000E7D794 /* netutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netutils.h; sourceTree = "<group>"; };
+		D66162071831C48F00E7D794 /* commontaskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commontaskqueue.h; sourceTree = "<group>"; };
+		D66162081831C48F00E7D794 /* nbtaskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nbtaskqueue.h; sourceTree = "<group>"; };
+		D66162091831C48F00E7D794 /* pal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pal.h; sourceTree = "<group>"; };
+		D661620A1831C48F00E7D794 /* palatomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palatomic.h; sourceTree = "<group>"; };
+		D661620B1831C48F00E7D794 /* palcallnotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palcallnotification.h; sourceTree = "<group>"; };
+		D661620C1831C48F00E7D794 /* palclock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palclock.h; sourceTree = "<group>"; };
+		D661620D1831C48F00E7D794 /* palcontacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palcontacts.h; sourceTree = "<group>"; };
+		D661620E1831C48F00E7D794 /* paldb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldb.h; sourceTree = "<group>"; };
+		D661620F1831C48F00E7D794 /* paldberror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldberror.h; sourceTree = "<group>"; };
+		D66162101831C48F00E7D794 /* paldebuglog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldebuglog.h; sourceTree = "<group>"; };
+		D66162111831C48F00E7D794 /* paldisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldisplay.h; sourceTree = "<group>"; };
+		D66162121831C48F00E7D794 /* paldoxygengroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldoxygengroups.h; sourceTree = "<group>"; };
+		D66162131831C48F00E7D794 /* palerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palerror.h; sourceTree = "<group>"; };
+		D66162141831C48F00E7D794 /* palevent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palevent.h; sourceTree = "<group>"; };
+		D66162151831C48F00E7D794 /* palfavorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palfavorites.h; sourceTree = "<group>"; };
+		D66162161831C48F00E7D794 /* palfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palfile.h; sourceTree = "<group>"; };
+		D66162171831C48F00E7D794 /* palfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palfont.h; sourceTree = "<group>"; };
+		D66162181831C48F00E7D794 /* palimageblender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palimageblender.h; sourceTree = "<group>"; };
+		D66162191831C48F00E7D794 /* pallock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pallock.h; sourceTree = "<group>"; };
+		D661621A1831C48F00E7D794 /* pallog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pallog.h; sourceTree = "<group>"; };
+		D661621B1831C48F00E7D794 /* palmyplaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palmyplaces.h; sourceTree = "<group>"; };
+		D661621C1831C48F00E7D794 /* palnet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palnet.h; sourceTree = "<group>"; };
+		D661621D1831C48F00E7D794 /* palradio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palradio.h; sourceTree = "<group>"; };
+		D661621E1831C48F00E7D794 /* palrecents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palrecents.h; sourceTree = "<group>"; };
+		D661621F1831C48F00E7D794 /* paltaskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paltaskqueue.h; sourceTree = "<group>"; };
+		D66162201831C48F00E7D794 /* paltestlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paltestlog.h; sourceTree = "<group>"; };
+		D66162211831C48F00E7D794 /* paltimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paltimer.h; sourceTree = "<group>"; };
+		D66162221831C48F00E7D794 /* palunzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palunzip.h; sourceTree = "<group>"; };
+		D66162231831C48F00E7D794 /* palversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palversion.h; sourceTree = "<group>"; };
+		D66164441831D51E00E7D794 /* eventposix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventposix.h; sourceTree = "<group>"; };
+		D661662118332CE900E7D794 /* nbuitaskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nbuitaskqueue.h; sourceTree = "<group>"; };
+		D661662218332CE900E7D794 /* paluitaskqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paluitaskqueue.h; sourceTree = "<group>"; };
+		D69F73251835CC3200395FEB /* sqlite3_command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_command.cpp; sourceTree = "<group>"; };
+		D69F73261835CC3200395FEB /* sqlite3_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_connection.cpp; sourceTree = "<group>"; };
+		D69F73271835CC3200395FEB /* sqlite3_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_reader.cpp; sourceTree = "<group>"; };
+		D69F73281835CC3200395FEB /* sqlite3_transaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_transaction.cpp; sourceTree = "<group>"; };
+		D69F73291835CC3200395FEB /* sqlite3x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3x.h; sourceTree = "<group>"; };
+		D69F732B1835CC3200395FEB /* finishfunctionbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionbase.cpp; sourceTree = "<group>"; };
+		D69F732C1835CC3200395FEB /* finishfunctionbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionbase.h; sourceTree = "<group>"; };
+		D69F732D1835CC3200395FEB /* finishfunctiondnsresult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctiondnsresult.cpp; sourceTree = "<group>"; };
+		D69F732E1835CC3200395FEB /* finishfunctiondnsresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctiondnsresult.h; sourceTree = "<group>"; };
+		D69F732F1835CC3200395FEB /* finishfunctionhttpdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionhttpdata.cpp; sourceTree = "<group>"; };
+		D69F73301835CC3200395FEB /* finishfunctionhttpdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionhttpdata.h; sourceTree = "<group>"; };
+		D69F73311835CC3200395FEB /* finishfunctionhttpstatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionhttpstatus.cpp; sourceTree = "<group>"; };
+		D69F73321835CC3200395FEB /* finishfunctionhttpstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionhttpstatus.h; sourceTree = "<group>"; };
+		D69F73331835CC3200395FEB /* finishfunctionmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionmanager.cpp; sourceTree = "<group>"; };
+		D69F73341835CC3200395FEB /* finishfunctionmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionmanager.h; sourceTree = "<group>"; };
+		D69F73351835CC3200395FEB /* finishfunctionnetworkdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionnetworkdata.cpp; sourceTree = "<group>"; };
+		D69F73361835CC3200395FEB /* finishfunctionnetworkdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionnetworkdata.h; sourceTree = "<group>"; };
+		D69F73371835CC3200395FEB /* finishfunctionnetworkstatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionnetworkstatus.cpp; sourceTree = "<group>"; };
+		D69F73381835CC3200395FEB /* finishfunctionnetworkstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionnetworkstatus.h; sourceTree = "<group>"; };
+		D69F73391835CC3200395FEB /* finishfunctionnormal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = finishfunctionnormal.cpp; sourceTree = "<group>"; };
+		D69F733A1835CC3200395FEB /* finishfunctionnormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finishfunctionnormal.h; sourceTree = "<group>"; };
+		D69F733C1835CC3200395FEB /* palgl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palgl.c; sourceTree = "<group>"; };
+		D69F73451835CC3200395FEB /* nbtaskqueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nbtaskqueue.cpp; sourceTree = "<group>"; };
+		D69F73461835CC3200395FEB /* taskmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskmanager.h; sourceTree = "<group>"; };
+		D69F73481835CC3200395FEB /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
+		D69F73491835CC3200395FEB /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		D69F734A1835CC3200395FEB /* palunzip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palunzip.cpp; sourceTree = "<group>"; };
+		D69F734B1835CC3200395FEB /* quicksort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		D69F734C1835CC3200395FEB /* quicksort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quicksort.h; sourceTree = "<group>"; };
+		D69F734D1835CC3200395FEB /* unzip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unzip.cpp; sourceTree = "<group>"; };
+		D69F734E1835CC3200395FEB /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		D69F73531835CC3200395FEB /* sqlite3_command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_command.cpp; sourceTree = "<group>"; };
+		D69F73541835CC3200395FEB /* sqlite3_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_connection.cpp; sourceTree = "<group>"; };
+		D69F73551835CC3200395FEB /* sqlite3_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_reader.cpp; sourceTree = "<group>"; };
+		D69F73561835CC3200395FEB /* sqlite3_transaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite3_transaction.cpp; sourceTree = "<group>"; };
+		D69F73571835CC3200395FEB /* sqlite3x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3x.h; sourceTree = "<group>"; };
+		D69F73581835CC3200395FEB /* SqliteConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SqliteConnector.cpp; sourceTree = "<group>"; };
+		D69F735C1835CC3200395FEB /* palfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = palfile.m; sourceTree = "<group>"; };
+		D69F735F1835CC3200395FEB /* palfont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palfont.cpp; sourceTree = "<group>"; };
+		D69F73611835CC3200395FEB /* palfreetypeengine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palfreetypeengine.h; sourceTree = "<group>"; };
+		D69F73631835CC3200395FEB /* palgl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palgl.c; sourceTree = "<group>"; };
+		D69F73651835CC3200395FEB /* palcontacts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palcontacts.cpp; sourceTree = "<group>"; };
+		D69F73661835CC3200395FEB /* palfavorites.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palfavorites.cpp; sourceTree = "<group>"; };
+		D69F73671835CC3200395FEB /* palrecents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palrecents.cpp; sourceTree = "<group>"; };
+		D69F738D1835CC3200395FEB /* paldisplay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = paldisplay.mm; sourceTree = "<group>"; };
+		D69F738E1835CC3200395FEB /* palimageblender.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palimageblender.mm; sourceTree = "<group>"; };
+		D69F73901835CC3200395FEB /* palimpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palimpl.mm; sourceTree = "<group>"; };
+		D69F73931835CC3200395FEB /* callnotifierimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callnotifierimpl.h; sourceTree = "<group>"; };
+		D69F73941835CC3200395FEB /* callnotifierimpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callnotifierimpl.mm; sourceTree = "<group>"; };
+		D69F73951835CC3200395FEB /* palcallnotification.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palcallnotification.mm; sourceTree = "<group>"; };
+		D69F73961835CC3200395FEB /* palradio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palradio.mm; sourceTree = "<group>"; };
+		D69F73981835CC3200395FEB /* palatomic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = palatomic.m; sourceTree = "<group>"; };
+		D69F73B41835CC3200395FEB /* paldebuglog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paldebuglog.c; sourceTree = "<group>"; };
+		D69F73B51835CC3200395FEB /* palqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palqueue.h; sourceTree = "<group>"; };
+		D69F73B61835CC3200395FEB /* palstdlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palstdlib.c; sourceTree = "<group>"; };
+		D69F73DA1835CC3200395FEB /* palimpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palimpl.cpp; sourceTree = "<group>"; };
+		D69F73DB1835CC3200395FEB /* palimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palimpl.h; sourceTree = "<group>"; };
+		D69F73DF1835CC3200395FEB /* palevent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palevent.c; sourceTree = "<group>"; };
+		D69F73E01835CC3200395FEB /* pallock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pallock.cpp; sourceTree = "<group>"; };
+		D69F73EE1835CC3200395FEB /* paldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paldebug.h; sourceTree = "<group>"; };
+		D69F73EF1835CC3200395FEB /* paldebuglog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paldebuglog.c; sourceTree = "<group>"; };
+		D69F73F11835CC3200395FEB /* palqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = palqueue.h; sourceTree = "<group>"; };
+		D69F73F51835CC3200395FEB /* bq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bq.c; sourceTree = "<group>"; };
+		D69F73F61835CC3200395FEB /* netutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = netutils.cpp; sourceTree = "<group>"; };
+		D69F73F71835CC3200395FEB /* palstdlibcommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palstdlibcommon.c; sourceTree = "<group>"; };
+		D69F73F81835CC3200395FEB /* palversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palversion.c; sourceTree = "<group>"; };
+		D69F74AF1835D02C00395FEB /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
+		D69F74B01835D02C00395FEB /* callback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callback.mm; sourceTree = "<group>"; };
+		D69F74B11835D02C00395FEB /* callbackdnsresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbackdnsresult.h; sourceTree = "<group>"; };
+		D69F74B21835D02C00395FEB /* callbackdnsresult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbackdnsresult.mm; sourceTree = "<group>"; };
+		D69F74B31835D02C00395FEB /* callbackhttpdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbackhttpdata.h; sourceTree = "<group>"; };
+		D69F74B41835D02C00395FEB /* callbackhttpdata.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbackhttpdata.mm; sourceTree = "<group>"; };
+		D69F74B51835D02C00395FEB /* callbackhttpresponseheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbackhttpresponseheaders.h; sourceTree = "<group>"; };
+		D69F74B61835D02C00395FEB /* callbackhttpresponseheaders.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbackhttpresponseheaders.mm; sourceTree = "<group>"; };
+		D69F74B71835D02C00395FEB /* callbackhttpresponsestatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbackhttpresponsestatus.h; sourceTree = "<group>"; };
+		D69F74B81835D02C00395FEB /* callbackhttpresponsestatus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbackhttpresponsestatus.mm; sourceTree = "<group>"; };
+		D69F74B91835D02C00395FEB /* callbackmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbackmanager.h; sourceTree = "<group>"; };
+		D69F74BA1835D02C00395FEB /* callbackmanager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbackmanager.mm; sourceTree = "<group>"; };
+		D69F74BB1835D02C00395FEB /* callbacknetworkdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbacknetworkdata.h; sourceTree = "<group>"; };
+		D69F74BC1835D02C00395FEB /* callbacknetworkdata.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbacknetworkdata.mm; sourceTree = "<group>"; };
+		D69F74BD1835D02C00395FEB /* callbacknetworkstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbacknetworkstatus.h; sourceTree = "<group>"; };
+		D69F74BE1835D02C00395FEB /* callbacknetworkstatus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = callbacknetworkstatus.mm; sourceTree = "<group>"; };
+		D69F74BF1835D02C00395FEB /* httpconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpconnection.h; sourceTree = "<group>"; };
+		D69F74C01835D02C00395FEB /* httpconnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = httpconnection.mm; sourceTree = "<group>"; };
+		D69F74C11835D02C00395FEB /* httprequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest.h; sourceTree = "<group>"; };
+		D69F74C21835D02C00395FEB /* httprequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = httprequest.mm; sourceTree = "<group>"; };
+		D69F74C31835D02C00395FEB /* httpresponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpresponse.h; sourceTree = "<group>"; };
+		D69F74C41835D02C00395FEB /* httpresponse.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = httpresponse.mm; sourceTree = "<group>"; };
+		D69F74C51835D02C00395FEB /* HttpsConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsConnection.h; sourceTree = "<group>"; };
+		D69F74C61835D02C00395FEB /* HttpsConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsConnection.m; sourceTree = "<group>"; };
+		D69F74C71835D02C00395FEB /* HttpsConnectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsConnectionAdapter.h; sourceTree = "<group>"; };
+		D69F74C81835D02C00395FEB /* HttpsConnectionAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HttpsConnectionAdapter.mm; sourceTree = "<group>"; };
+		D69F74C91835D02C00395FEB /* idlecallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idlecallback.h; sourceTree = "<group>"; };
+		D69F74CA1835D02C00395FEB /* idlecallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = idlecallback.m; sourceTree = "<group>"; };
+		D69F74CB1835D02C00395FEB /* netconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netconnection.h; sourceTree = "<group>"; };
+		D69F74CC1835D02C00395FEB /* netconnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = netconnection.mm; sourceTree = "<group>"; };
+		D69F74CD1835D02C00395FEB /* palnet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = palnet.mm; sourceTree = "<group>"; };
+		D69F74F21835D09400395FEB /* paltimer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = paltimer.mm; sourceTree = "<group>"; };
+		D69F74F31835D09400395FEB /* timerimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerimpl.h; sourceTree = "<group>"; };
+		D69F74F41835D09400395FEB /* timerimpl_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = timerimpl_objc.mm; sourceTree = "<group>"; };
+		D69F75041836119000395FEB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EC25A9B1195811D200FC6886 /* tcpconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcpconnection.h; sourceTree = "<group>"; };
+		EC3DB63A192DF6E20002FD10 /* TLSConnectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSConnectionAdapter.h; sourceTree = "<group>"; };
+		EC3DB63B192DF6E20002FD10 /* TLSConnectionAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TLSConnectionAdapter.mm; sourceTree = "<group>"; };
+		EC65C073195804C100B6A5A0 /* TCPConnectionAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TCPConnectionAdapter.mm; sourceTree = "<group>"; };
+		EC65C074195804C100B6A5A0 /* TCPConnectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPConnectionAdapter.h; sourceTree = "<group>"; };
+		EC6761CC19233BE7003250AC /* TLSConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSConnection.h; sourceTree = "<group>"; };
+		EC6761CD19233BE7003250AC /* TLSConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSConnection.m; sourceTree = "<group>"; };
+		ECC6B3B0195ABDD4006A02E3 /* tcpconnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tcpconnection.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184E9AE01A15A75400FF127C /* libfreetype.a in Frameworks */,
+				184E9AE11A15A75400FF127C /* libglues.a in Frameworks */,
+				D69F75051836119000395FEB /* CoreFoundation.framework in Frameworks */,
+				84B3C753146DA22F007D4747 /* CoreTelephony.framework in Frameworks */,
+				82258C6B1422E5F700F49F42 /* libz.dylib in Frameworks */,
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				315978C21383749700EF57A1 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libnbpal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* nbpal */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = nbpal;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184E9AD01A15A73E00FF127C /* freetype.xcodeproj */,
+				184E9AD31A15A73E00FF127C /* glues.xcodeproj */,
+				D69F75041836119000395FEB /* CoreFoundation.framework */,
+				84B3C750146DA1FB007D4747 /* CoreTelephony.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				315978C11383749700EF57A1 /* SystemConfiguration.framework */,
+				82258C6A1422E5F700F49F42 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D6AF47BC11D8527800B43087 /* include */,
+				D6AF47F411D8527800B43087 /* src */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		184E9AD11A15A73E00FF127C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184E9AD81A15A73E00FF127C /* libfreetype.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184E9AD41A15A73E00FF127C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184E9ADB1A15A73E00FF127C /* libglues.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* nbpal_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		5DDE5A8419517A7B002E8E18 /* triangulation */ = {
+			isa = PBXGroup;
+			children = (
+				5DDE5A8519517A7B002E8E18 /* paltriangulation.cpp */,
+			);
+			path = triangulation;
+			sourceTree = "<group>";
+		};
+		933692EF18B20EDA00BA7CD7 /* clock */ = {
+			isa = PBXGroup;
+			children = (
+				933692F118B20F0A00BA7CD7 /* palclock.m */,
+			);
+			name = clock;
+			sourceTree = "<group>";
+		};
+		A8C377BD184431CD005E916E /* taskqueue */ = {
+			isa = PBXGroup;
+			children = (
+				A8C377BE18443227005E916E /* nbuitaskqueue.cpp */,
+				A8C377BF18443227005E916E /* palabstractfactory.mm */,
+				A8C377C018443227005E916E /* paltaskqueue.mm */,
+				A8C377C118443227005E916E /* paluitaskqueue.mm */,
+				A8C377C218443227005E916E /* threadiphone.h */,
+				A8C377C318443227005E916E /* threadiphone.mm */,
+				A8C377C418443227005E916E /* uithreadiphone.h */,
+				A8C377C518443227005E916E /* uithreadiphone.mm */,
+			);
+			path = taskqueue;
+			sourceTree = "<group>";
+		};
+		A8DFD00E1845A2CF0005F504 /* testlog */ = {
+			isa = PBXGroup;
+			children = (
+				A8DFD00F1845A2E50005F504 /* paltestlog.c */,
+			);
+			path = testlog;
+			sourceTree = "<group>";
+		};
+		D66161E31831C48000E7D794 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				D661662118332CE900E7D794 /* nbuitaskqueue.h */,
+				D661662218332CE900E7D794 /* paluitaskqueue.h */,
+				D66161E41831C48000E7D794 /* base.h */,
+				D66161E51831C48000E7D794 /* palconfig.h */,
+				D66161E61831C48000E7D794 /* palexp.h */,
+				D66161E91831C48000E7D794 /* palgl.h */,
+				D66161EA1831C48000E7D794 /* palgl2.h */,
+				D66161EB1831C48000E7D794 /* palmath.h */,
+				D66161EC1831C48000E7D794 /* palsqlerror.h */,
+				D66161ED1831C48000E7D794 /* palstdlib.h */,
+				D66161EE1831C48000E7D794 /* paltypes.h */,
+				D66161EF1831C48000E7D794 /* palversioninfo.h */,
+				D66161F01831C48000E7D794 /* smartpointer.h */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		D66161F11831C48000E7D794 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				D66161F21831C48000E7D794 /* bq.h */,
+				D66161F31831C48000E7D794 /* nbutil.h */,
+				D66161F41831C48000E7D794 /* netutils.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		D66164431831D51E00E7D794 /* posix */ = {
+			isa = PBXGroup;
+			children = (
+				D66164441831D51E00E7D794 /* eventposix.h */,
+			);
+			path = posix;
+			sourceTree = "<group>";
+		};
+		D69F73231835CC3200395FEB /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73241835CC3200395FEB /* database */,
+				D69F732A1835CC3200395FEB /* finishfunction */,
+				D69F733B1835CC3200395FEB /* gl */,
+				D69F73441835CC3200395FEB /* taskqueue */,
+				D69F73471835CC3200395FEB /* unzip */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D69F73241835CC3200395FEB /* database */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73251835CC3200395FEB /* sqlite3_command.cpp */,
+				D69F73261835CC3200395FEB /* sqlite3_connection.cpp */,
+				D69F73271835CC3200395FEB /* sqlite3_reader.cpp */,
+				D69F73281835CC3200395FEB /* sqlite3_transaction.cpp */,
+				D69F73291835CC3200395FEB /* sqlite3x.h */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		D69F732A1835CC3200395FEB /* finishfunction */ = {
+			isa = PBXGroup;
+			children = (
+				D69F732B1835CC3200395FEB /* finishfunctionbase.cpp */,
+				D69F732C1835CC3200395FEB /* finishfunctionbase.h */,
+				D69F732D1835CC3200395FEB /* finishfunctiondnsresult.cpp */,
+				D69F732E1835CC3200395FEB /* finishfunctiondnsresult.h */,
+				D69F732F1835CC3200395FEB /* finishfunctionhttpdata.cpp */,
+				D69F73301835CC3200395FEB /* finishfunctionhttpdata.h */,
+				D69F73311835CC3200395FEB /* finishfunctionhttpstatus.cpp */,
+				D69F73321835CC3200395FEB /* finishfunctionhttpstatus.h */,
+				D69F73331835CC3200395FEB /* finishfunctionmanager.cpp */,
+				D69F73341835CC3200395FEB /* finishfunctionmanager.h */,
+				D69F73351835CC3200395FEB /* finishfunctionnetworkdata.cpp */,
+				D69F73361835CC3200395FEB /* finishfunctionnetworkdata.h */,
+				D69F73371835CC3200395FEB /* finishfunctionnetworkstatus.cpp */,
+				D69F73381835CC3200395FEB /* finishfunctionnetworkstatus.h */,
+				D69F73391835CC3200395FEB /* finishfunctionnormal.cpp */,
+				D69F733A1835CC3200395FEB /* finishfunctionnormal.h */,
+			);
+			path = finishfunction;
+			sourceTree = "<group>";
+		};
+		D69F733B1835CC3200395FEB /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				D69F733C1835CC3200395FEB /* palgl.c */,
+			);
+			path = gl;
+			sourceTree = "<group>";
+		};
+		D69F73441835CC3200395FEB /* taskqueue */ = {
+			isa = PBXGroup;
+			children = (
+				A8C377A918443157005E916E /* palabstractfactory.h */,
+				A8C377AA18443157005E916E /* task.cpp */,
+				A8C377AB18443157005E916E /* taskmanager.cpp */,
+				A8C377AC18443157005E916E /* taskmanagermultithreaded.cpp */,
+				A8C377AD18443157005E916E /* taskmanagermultithreaded.h */,
+				A8C377AE18443157005E916E /* taskmanagersinglethreaded.cpp */,
+				A8C377AF18443157005E916E /* taskmanagersinglethreaded.h */,
+				A8C377B018443157005E916E /* taskqueue.cpp */,
+				A8C377B118443157005E916E /* thread.cpp */,
+				A8C377B218443157005E916E /* thread.h */,
+				D69F73451835CC3200395FEB /* nbtaskqueue.cpp */,
+				D69F73461835CC3200395FEB /* taskmanager.h */,
+			);
+			path = taskqueue;
+			sourceTree = "<group>";
+		};
+		D69F73471835CC3200395FEB /* unzip */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73481835CC3200395FEB /* crc32.h */,
+				D69F73491835CC3200395FEB /* globals.h */,
+				D69F734A1835CC3200395FEB /* palunzip.cpp */,
+				D69F734B1835CC3200395FEB /* quicksort.cpp */,
+				D69F734C1835CC3200395FEB /* quicksort.h */,
+				D69F734D1835CC3200395FEB /* unzip.cpp */,
+				D69F734E1835CC3200395FEB /* unzip.h */,
+			);
+			path = unzip;
+			sourceTree = "<group>";
+		};
+		D69F734F1835CC3200395FEB /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				5DDE5A8419517A7B002E8E18 /* triangulation */,
+				933692EF18B20EDA00BA7CD7 /* clock */,
+				A8C377BD184431CD005E916E /* taskqueue */,
+				D69F73521835CC3200395FEB /* database */,
+				D69F735B1835CC3200395FEB /* file */,
+				D69F735E1835CC3200395FEB /* font */,
+				D69F73621835CC3200395FEB /* gl */,
+				D69F73641835CC3200395FEB /* myplaces */,
+				D69F74AE1835D02C00395FEB /* net */,
+				D69F738A1835CC3200395FEB /* pal */,
+				D69F73921835CC3200395FEB /* radio */,
+				D69F73971835CC3200395FEB /* synchronization */,
+				D69F74F11835D09400395FEB /* timer */,
+				D69F73B31835CC3200395FEB /* util */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		D69F73521835CC3200395FEB /* database */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73531835CC3200395FEB /* sqlite3_command.cpp */,
+				D69F73541835CC3200395FEB /* sqlite3_connection.cpp */,
+				D69F73551835CC3200395FEB /* sqlite3_reader.cpp */,
+				D69F73561835CC3200395FEB /* sqlite3_transaction.cpp */,
+				D69F73571835CC3200395FEB /* sqlite3x.h */,
+				D69F73581835CC3200395FEB /* SqliteConnector.cpp */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		D69F735B1835CC3200395FEB /* file */ = {
+			isa = PBXGroup;
+			children = (
+				D69F735C1835CC3200395FEB /* palfile.m */,
+			);
+			path = file;
+			sourceTree = "<group>";
+		};
+		D69F735E1835CC3200395FEB /* font */ = {
+			isa = PBXGroup;
+			children = (
+				A8C377F218446F2F005E916E /* palfreetypeengine.mm */,
+				D69F735F1835CC3200395FEB /* palfont.cpp */,
+				D69F73611835CC3200395FEB /* palfreetypeengine.h */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		D69F73621835CC3200395FEB /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				184E9ACE1A15965500FF127C /* palgl2.cpp */,
+				D69F73631835CC3200395FEB /* palgl.c */,
+			);
+			path = gl;
+			sourceTree = "<group>";
+		};
+		D69F73641835CC3200395FEB /* myplaces */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73651835CC3200395FEB /* palcontacts.cpp */,
+				D69F73661835CC3200395FEB /* palfavorites.cpp */,
+				D69F73671835CC3200395FEB /* palrecents.cpp */,
+			);
+			path = myplaces;
+			sourceTree = "<group>";
+		};
+		D69F738A1835CC3200395FEB /* pal */ = {
+			isa = PBXGroup;
+			children = (
+				D69F738D1835CC3200395FEB /* paldisplay.mm */,
+				D69F738E1835CC3200395FEB /* palimageblender.mm */,
+				D69F73901835CC3200395FEB /* palimpl.mm */,
+			);
+			path = pal;
+			sourceTree = "<group>";
+		};
+		D69F73921835CC3200395FEB /* radio */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73931835CC3200395FEB /* callnotifierimpl.h */,
+				D69F73941835CC3200395FEB /* callnotifierimpl.mm */,
+				D69F73951835CC3200395FEB /* palcallnotification.mm */,
+				D69F73961835CC3200395FEB /* palradio.mm */,
+			);
+			path = radio;
+			sourceTree = "<group>";
+		};
+		D69F73971835CC3200395FEB /* synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73981835CC3200395FEB /* palatomic.m */,
+			);
+			path = synchronization;
+			sourceTree = "<group>";
+		};
+		D69F73B31835CC3200395FEB /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73B41835CC3200395FEB /* paldebuglog.c */,
+				D69F73B51835CC3200395FEB /* palqueue.h */,
+				D69F73B61835CC3200395FEB /* palstdlib.c */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D69F73B71835CC3200395FEB /* posix */ = {
+			isa = PBXGroup;
+			children = (
+				A8DFD00E1845A2CF0005F504 /* testlog */,
+				D69F73D81835CC3200395FEB /* pal */,
+				D69F73DE1835CC3200395FEB /* synchronization */,
+				D69F73ED1835CC3200395FEB /* util */,
+			);
+			path = posix;
+			sourceTree = "<group>";
+		};
+		D69F73D81835CC3200395FEB /* pal */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73DA1835CC3200395FEB /* palimpl.cpp */,
+				D69F73DB1835CC3200395FEB /* palimpl.h */,
+			);
+			path = pal;
+			sourceTree = "<group>";
+		};
+		D69F73DE1835CC3200395FEB /* synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73DF1835CC3200395FEB /* palevent.c */,
+				D69F73E01835CC3200395FEB /* pallock.cpp */,
+			);
+			path = synchronization;
+			sourceTree = "<group>";
+		};
+		D69F73ED1835CC3200395FEB /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73EE1835CC3200395FEB /* paldebug.h */,
+				D69F73EF1835CC3200395FEB /* paldebuglog.c */,
+				D69F73F11835CC3200395FEB /* palqueue.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D69F73F41835CC3200395FEB /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73F51835CC3200395FEB /* bq.c */,
+				D69F73F61835CC3200395FEB /* netutils.cpp */,
+				D69F73F71835CC3200395FEB /* palstdlibcommon.c */,
+				D69F73F81835CC3200395FEB /* palversion.c */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D69F74AE1835D02C00395FEB /* net */ = {
+			isa = PBXGroup;
+			children = (
+				D69F74AF1835D02C00395FEB /* callback.h */,
+				D69F74B01835D02C00395FEB /* callback.mm */,
+				D69F74B11835D02C00395FEB /* callbackdnsresult.h */,
+				D69F74B21835D02C00395FEB /* callbackdnsresult.mm */,
+				D69F74B31835D02C00395FEB /* callbackhttpdata.h */,
+				D69F74B41835D02C00395FEB /* callbackhttpdata.mm */,
+				D69F74B51835D02C00395FEB /* callbackhttpresponseheaders.h */,
+				D69F74B61835D02C00395FEB /* callbackhttpresponseheaders.mm */,
+				D69F74B71835D02C00395FEB /* callbackhttpresponsestatus.h */,
+				D69F74B81835D02C00395FEB /* callbackhttpresponsestatus.mm */,
+				D69F74B91835D02C00395FEB /* callbackmanager.h */,
+				D69F74BA1835D02C00395FEB /* callbackmanager.mm */,
+				D69F74BB1835D02C00395FEB /* callbacknetworkdata.h */,
+				D69F74BC1835D02C00395FEB /* callbacknetworkdata.mm */,
+				D69F74BD1835D02C00395FEB /* callbacknetworkstatus.h */,
+				D69F74BE1835D02C00395FEB /* callbacknetworkstatus.mm */,
+				D69F74BF1835D02C00395FEB /* httpconnection.h */,
+				D69F74C01835D02C00395FEB /* httpconnection.mm */,
+				D69F74C11835D02C00395FEB /* httprequest.h */,
+				D69F74C21835D02C00395FEB /* httprequest.mm */,
+				D69F74C31835D02C00395FEB /* httpresponse.h */,
+				D69F74C41835D02C00395FEB /* httpresponse.mm */,
+				D69F74C51835D02C00395FEB /* HttpsConnection.h */,
+				D69F74C61835D02C00395FEB /* HttpsConnection.m */,
+				D69F74C71835D02C00395FEB /* HttpsConnectionAdapter.h */,
+				D69F74C81835D02C00395FEB /* HttpsConnectionAdapter.mm */,
+				D69F74C91835D02C00395FEB /* idlecallback.h */,
+				D69F74CA1835D02C00395FEB /* idlecallback.m */,
+				D69F74CB1835D02C00395FEB /* netconnection.h */,
+				D69F74CC1835D02C00395FEB /* netconnection.mm */,
+				D69F74CD1835D02C00395FEB /* palnet.mm */,
+				EC25A9B1195811D200FC6886 /* tcpconnection.h */,
+				ECC6B3B0195ABDD4006A02E3 /* tcpconnection.m */,
+				EC6761CC19233BE7003250AC /* TLSConnection.h */,
+				EC6761CD19233BE7003250AC /* TLSConnection.m */,
+				EC3DB63A192DF6E20002FD10 /* TLSConnectionAdapter.h */,
+				EC3DB63B192DF6E20002FD10 /* TLSConnectionAdapter.mm */,
+				EC65C074195804C100B6A5A0 /* TCPConnectionAdapter.h */,
+				EC65C073195804C100B6A5A0 /* TCPConnectionAdapter.mm */,
+			);
+			path = net;
+			sourceTree = "<group>";
+		};
+		D69F74F11835D09400395FEB /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				D69F74F21835D09400395FEB /* paltimer.mm */,
+				D69F74F31835D09400395FEB /* timerimpl.h */,
+				D69F74F41835D09400395FEB /* timerimpl_objc.mm */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
+		D6AF47BC11D8527800B43087 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5DDE5A8719517A8E002E8E18 /* paltriangulation.h */,
+				D66161E31831C48000E7D794 /* iphone */,
+				D66161F11831C48000E7D794 /* private */,
+				D66164431831D51E00E7D794 /* posix */,
+				D66162071831C48F00E7D794 /* commontaskqueue.h */,
+				D66162091831C48F00E7D794 /* pal.h */,
+				D661620A1831C48F00E7D794 /* palatomic.h */,
+				D661620B1831C48F00E7D794 /* palcallnotification.h */,
+				D661620C1831C48F00E7D794 /* palclock.h */,
+				D661620D1831C48F00E7D794 /* palcontacts.h */,
+				D661620E1831C48F00E7D794 /* paldb.h */,
+				D661620F1831C48F00E7D794 /* paldberror.h */,
+				D66162101831C48F00E7D794 /* paldebuglog.h */,
+				D66162111831C48F00E7D794 /* paldisplay.h */,
+				D66162121831C48F00E7D794 /* paldoxygengroups.h */,
+				D66162131831C48F00E7D794 /* palerror.h */,
+				D66162141831C48F00E7D794 /* palevent.h */,
+				D66162151831C48F00E7D794 /* palfavorites.h */,
+				D66162161831C48F00E7D794 /* palfile.h */,
+				D66162171831C48F00E7D794 /* palfont.h */,
+				D66162181831C48F00E7D794 /* palimageblender.h */,
+				D66162191831C48F00E7D794 /* pallock.h */,
+				D661621A1831C48F00E7D794 /* pallog.h */,
+				D661621B1831C48F00E7D794 /* palmyplaces.h */,
+				D661621C1831C48F00E7D794 /* palnet.h */,
+				D661621D1831C48F00E7D794 /* palradio.h */,
+				D661621E1831C48F00E7D794 /* palrecents.h */,
+				D661621F1831C48F00E7D794 /* paltaskqueue.h */,
+				D66162201831C48F00E7D794 /* paltestlog.h */,
+				D66162211831C48F00E7D794 /* paltimer.h */,
+				D66162221831C48F00E7D794 /* palunzip.h */,
+				D66162231831C48F00E7D794 /* palversion.h */,
+				D66162081831C48F00E7D794 /* nbtaskqueue.h */,
+				A8C377CF18443B10005E916E /* task.h */,
+				A8C377D018443B10005E916E /* taskqueue.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = SOURCE_ROOT;
+		};
+		D6AF47F411D8527800B43087 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73231835CC3200395FEB /* common */,
+				D69F734F1835CC3200395FEB /* iphone */,
+				D69F73B71835CC3200395FEB /* posix */,
+				D69F73F41835CC3200395FEB /* util */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C377BC18443157005E916E /* thread.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* nbpal_Prefix.pch in Headers */,
+				D661662418332CE900E7D794 /* paluitaskqueue.h in Headers */,
+				A8C377D118443B10005E916E /* task.h in Headers */,
+				A8C377D218443B10005E916E /* taskqueue.h in Headers */,
+				D69F74EC1835D02C00395FEB /* netconnection.h in Headers */,
+				D69F74E01835D02C00395FEB /* httpconnection.h in Headers */,
+				D661623C1831C48F00E7D794 /* paltaskqueue.h in Headers */,
+				EC6761CE19233BE7003250AC /* TLSConnection.h in Headers */,
+				D69F74181835CC3200395FEB /* globals.h in Headers */,
+				D69F73FD1835CC3200395FEB /* sqlite3x.h in Headers */,
+				D66161FE1831C48000E7D794 /* palsqlerror.h in Headers */,
+				D661622F1831C48F00E7D794 /* paldoxygengroups.h in Headers */,
+				EC25A9B3195811D200FC6886 /* tcpconnection.h in Headers */,
+				D661622A1831C48F00E7D794 /* palcontacts.h in Headers */,
+				A8C377CC18443227005E916E /* uithreadiphone.h in Headers */,
+				D66162351831C48F00E7D794 /* palimageblender.h in Headers */,
+				D69F74E21835D02C00395FEB /* httprequest.h in Headers */,
+				D66162051831C48000E7D794 /* netutils.h in Headers */,
+				D661622E1831C48F00E7D794 /* paldisplay.h in Headers */,
+				D69F74E81835D02C00395FEB /* HttpsConnectionAdapter.h in Headers */,
+				A8C377B318443157005E916E /* palabstractfactory.h in Headers */,
+				D66161F71831C48000E7D794 /* palconfig.h in Headers */,
+				D66162361831C48F00E7D794 /* pallock.h in Headers */,
+				D69F741B1835CC3200395FEB /* quicksort.h in Headers */,
+				D69F74EA1835D02C00395FEB /* idlecallback.h in Headers */,
+				D661622B1831C48F00E7D794 /* paldb.h in Headers */,
+				D66162301831C48F00E7D794 /* palerror.h in Headers */,
+				D69F74011835CC3200395FEB /* finishfunctiondnsresult.h in Headers */,
+				D69F740B1835CC3200395FEB /* finishfunctionnetworkstatus.h in Headers */,
+				D66162381831C48F00E7D794 /* palmyplaces.h in Headers */,
+				D69F74D61835D02C00395FEB /* callbackhttpresponseheaders.h in Headers */,
+				D66162341831C48F00E7D794 /* palfont.h in Headers */,
+				D69F74231835CC3200395FEB /* sqlite3x.h in Headers */,
+				D661622D1831C48F00E7D794 /* paldebuglog.h in Headers */,
+				D66162031831C48000E7D794 /* bq.h in Headers */,
+				D69F74D21835D02C00395FEB /* callbackdnsresult.h in Headers */,
+				D66161FD1831C48000E7D794 /* palmath.h in Headers */,
+				D69F74031835CC3200395FEB /* finishfunctionhttpdata.h in Headers */,
+				D66162251831C48F00E7D794 /* nbtaskqueue.h in Headers */,
+				D66162311831C48F00E7D794 /* palevent.h in Headers */,
+				D661623F1831C48F00E7D794 /* palunzip.h in Headers */,
+				D66162291831C48F00E7D794 /* palclock.h in Headers */,
+				D69F74A71835CC3200395FEB /* palqueue.h in Headers */,
+				A8C377B718443157005E916E /* taskmanagermultithreaded.h in Headers */,
+				D69F74951835CC3200395FEB /* palimpl.h in Headers */,
+				D69F74171835CC3200395FEB /* crc32.h in Headers */,
+				D66161FB1831C48000E7D794 /* palgl.h in Headers */,
+				D66162391831C48F00E7D794 /* palnet.h in Headers */,
+				D69F74161835CC3200395FEB /* taskmanager.h in Headers */,
+				D69F74F61835D09400395FEB /* timerimpl.h in Headers */,
+				D69F74D01835D02C00395FEB /* callback.h in Headers */,
+				D69F74D41835D02C00395FEB /* callbackhttpdata.h in Headers */,
+				D69F74051835CC3200395FEB /* finishfunctionhttpstatus.h in Headers */,
+				D66162011831C48000E7D794 /* palversioninfo.h in Headers */,
+				D66162331831C48F00E7D794 /* palfile.h in Headers */,
+				D66162261831C48F00E7D794 /* pal.h in Headers */,
+				D69F73FF1835CC3200395FEB /* finishfunctionbase.h in Headers */,
+				A8C377CA18443227005E916E /* threadiphone.h in Headers */,
+				D66161F61831C48000E7D794 /* base.h in Headers */,
+				D69F74FA1835D49900395FEB /* nbuitaskqueue.h in Headers */,
+				D66162001831C48000E7D794 /* paltypes.h in Headers */,
+				A8C377B918443157005E916E /* taskmanagersinglethreaded.h in Headers */,
+				D66164451831D51E00E7D794 /* eventposix.h in Headers */,
+				D661622C1831C48F00E7D794 /* paldberror.h in Headers */,
+				D69F74A41835CC3200395FEB /* paldebug.h in Headers */,
+				D69F74D81835D02C00395FEB /* callbackhttpresponsestatus.h in Headers */,
+				D69F74E61835D02C00395FEB /* HttpsConnection.h in Headers */,
+				D66161FF1831C48000E7D794 /* palstdlib.h in Headers */,
+				5DDE5A8819517A8E002E8E18 /* paltriangulation.h in Headers */,
+				D66162241831C48F00E7D794 /* commontaskqueue.h in Headers */,
+				EC65C076195804C100B6A5A0 /* TCPConnectionAdapter.h in Headers */,
+				EC3DB63C192DF6E20002FD10 /* TLSConnectionAdapter.h in Headers */,
+				D66162371831C48F00E7D794 /* pallog.h in Headers */,
+				D66162271831C48F00E7D794 /* palatomic.h in Headers */,
+				D661623A1831C48F00E7D794 /* palradio.h in Headers */,
+				D69F74571835CC3200395FEB /* callnotifierimpl.h in Headers */,
+				D66162281831C48F00E7D794 /* palcallnotification.h in Headers */,
+				D66161F81831C48000E7D794 /* palexp.h in Headers */,
+				D69F74DE1835D02C00395FEB /* callbacknetworkstatus.h in Headers */,
+				D66162401831C48F00E7D794 /* palversion.h in Headers */,
+				D69F74071835CC3200395FEB /* finishfunctionmanager.h in Headers */,
+				D69F740D1835CC3200395FEB /* finishfunctionnormal.h in Headers */,
+				D66162041831C48000E7D794 /* nbutil.h in Headers */,
+				D69F74E41835D02C00395FEB /* httpresponse.h in Headers */,
+				D66162321831C48F00E7D794 /* palfavorites.h in Headers */,
+				D66162021831C48000E7D794 /* smartpointer.h in Headers */,
+				D66161FC1831C48000E7D794 /* palgl2.h in Headers */,
+				D69F74DC1835D02C00395FEB /* callbacknetworkdata.h in Headers */,
+				D69F74091835CC3200395FEB /* finishfunctionnetworkdata.h in Headers */,
+				D661623D1831C48F00E7D794 /* paltestlog.h in Headers */,
+				D69F74DA1835D02C00395FEB /* callbackmanager.h in Headers */,
+				D69F742A1835CC3200395FEB /* palfreetypeengine.h in Headers */,
+				D69F741D1835CC3200395FEB /* unzip.h in Headers */,
+				D661623E1831C48F00E7D794 /* paltimer.h in Headers */,
+				D661623B1831C48F00E7D794 /* palrecents.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* nbpal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "nbpal" */;
+			buildPhases = (
+				D6F599EF11E5B7320010F1C0 /* ShellScript */,
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184E9ADD1A15A74D00FF127C /* PBXTargetDependency */,
+				184E9ADF1A15A74D00FF127C /* PBXTargetDependency */,
+			);
+			name = nbpal;
+			productName = nbpal;
+			productReference = D2AAC07E0554694100DB518D /* libnbpal.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "nbpal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* nbpal */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 184E9AD11A15A73E00FF127C /* Products */;
+					ProjectRef = 184E9AD01A15A73E00FF127C /* freetype.xcodeproj */;
+				},
+				{
+					ProductGroup = 184E9AD41A15A73E00FF127C /* Products */;
+					ProjectRef = 184E9AD31A15A73E00FF127C /* glues.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* nbpal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		184E9AD81A15A73E00FF127C /* libfreetype.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetype.a;
+			remoteRef = 184E9AD71A15A73E00FF127C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		184E9ADB1A15A73E00FF127C /* libglues.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libglues.a;
+			remoteRef = 184E9ADA1A15A73E00FF127C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6F599EF11E5B7320010F1C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python ../../build/version.py ../../ iphone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8DFD0101845A2E50005F504 /* paltestlog.c in Sources */,
+				A8C377B418443157005E916E /* task.cpp in Sources */,
+				A8C377B518443157005E916E /* taskmanager.cpp in Sources */,
+				A8C377B618443157005E916E /* taskmanagermultithreaded.cpp in Sources */,
+				A8C377B818443157005E916E /* taskmanagersinglethreaded.cpp in Sources */,
+				A8C377BA18443157005E916E /* taskqueue.cpp in Sources */,
+				A8C377BB18443157005E916E /* thread.cpp in Sources */,
+				D69F74991835CC3200395FEB /* pallock.cpp in Sources */,
+				A8C377C818443227005E916E /* paltaskqueue.mm in Sources */,
+				D69F74E91835D02C00395FEB /* HttpsConnectionAdapter.mm in Sources */,
+				D69F74041835CC3200395FEB /* finishfunctionhttpstatus.cpp in Sources */,
+				D69F74D91835D02C00395FEB /* callbackhttpresponsestatus.mm in Sources */,
+				D69F73F91835CC3200395FEB /* sqlite3_command.cpp in Sources */,
+				D69F74EE1835D02C00395FEB /* palnet.mm in Sources */,
+				D69F74D31835D02C00395FEB /* callbackdnsresult.mm in Sources */,
+				D69F74211835CC3200395FEB /* sqlite3_reader.cpp in Sources */,
+				D69F74AD1835CC3300395FEB /* palversion.c in Sources */,
+				D69F74F51835D09400395FEB /* paltimer.mm in Sources */,
+				D69F74E31835D02C00395FEB /* httprequest.mm in Sources */,
+				D69F745A1835CC3200395FEB /* palradio.mm in Sources */,
+				ECC6B3B1195ABDD4006A02E3 /* tcpconnection.m in Sources */,
+				D69F740A1835CC3200395FEB /* finishfunctionnetworkstatus.cpp in Sources */,
+				D69F742E1835CC3200395FEB /* palrecents.cpp in Sources */,
+				D69F74001835CC3200395FEB /* finishfunctiondnsresult.cpp in Sources */,
+				D69F74E11835D02C00395FEB /* httpconnection.mm in Sources */,
+				A8C377CB18443227005E916E /* threadiphone.mm in Sources */,
+				D69F74081835CC3200395FEB /* finishfunctionnetworkdata.cpp in Sources */,
+				A8DFD00B1845A1DD0005F504 /* paldisplay.mm in Sources */,
+				A8DFD00C1845A1DD0005F504 /* palimageblender.mm in Sources */,
+				D69F74F81835D13000395FEB /* palimpl.mm in Sources */,
+				D69F742B1835CC3200395FEB /* palgl.c in Sources */,
+				D69F740C1835CC3200395FEB /* finishfunctionnormal.cpp in Sources */,
+				D69F74A51835CC3200395FEB /* paldebuglog.c in Sources */,
+				D69F73FE1835CC3200395FEB /* finishfunctionbase.cpp in Sources */,
+				D69F74D51835D02C00395FEB /* callbackhttpdata.mm in Sources */,
+				D69F741F1835CC3200395FEB /* sqlite3_command.cpp in Sources */,
+				D69F74591835CC3200395FEB /* palcallnotification.mm in Sources */,
+				D69F74241835CC3200395FEB /* SqliteConnector.cpp in Sources */,
+				D69F74F71835D09400395FEB /* timerimpl_objc.mm in Sources */,
+				D69F74FD1835D5B300395FEB /* paldebuglog.c in Sources */,
+				D69F740E1835CC3200395FEB /* palgl.c in Sources */,
+				A8C377C918443227005E916E /* paluitaskqueue.mm in Sources */,
+				A8C377C618443227005E916E /* nbuitaskqueue.cpp in Sources */,
+				D69F74221835CC3200395FEB /* sqlite3_transaction.cpp in Sources */,
+				D69F74281835CC3200395FEB /* palfont.cpp in Sources */,
+				D69F74AB1835CC3300395FEB /* netutils.cpp in Sources */,
+				D69F74D71835D02C00395FEB /* callbackhttpresponseheaders.mm in Sources */,
+				D69F74DB1835D02C00395FEB /* callbackmanager.mm in Sources */,
+				D69F74E71835D02C00395FEB /* HttpsConnection.m in Sources */,
+				D69F74201835CC3200395FEB /* sqlite3_connection.cpp in Sources */,
+				A8C377F318446F2F005E916E /* palfreetypeengine.mm in Sources */,
+				D69F74AA1835CC3300395FEB /* bq.c in Sources */,
+				D69F73FA1835CC3200395FEB /* sqlite3_connection.cpp in Sources */,
+				D69F74151835CC3200395FEB /* nbtaskqueue.cpp in Sources */,
+				5DDE5A8619517A7B002E8E18 /* paltriangulation.cpp in Sources */,
+				D69F741C1835CC3200395FEB /* unzip.cpp in Sources */,
+				D69F74191835CC3200395FEB /* palunzip.cpp in Sources */,
+				184E9ACF1A15965500FF127C /* palgl2.cpp in Sources */,
+				D69F74981835CC3200395FEB /* palevent.c in Sources */,
+				A8C377CD18443227005E916E /* uithreadiphone.mm in Sources */,
+				D69F74FE1835EF8F00395FEB /* palfile.m in Sources */,
+				D69F742C1835CC3200395FEB /* palcontacts.cpp in Sources */,
+				D69F742D1835CC3200395FEB /* palfavorites.cpp in Sources */,
+				D69F745B1835CC3200395FEB /* palatomic.m in Sources */,
+				A8C377C718443227005E916E /* palabstractfactory.mm in Sources */,
+				D69F74DD1835D02C00395FEB /* callbacknetworkdata.mm in Sources */,
+				D69F73FC1835CC3200395FEB /* sqlite3_transaction.cpp in Sources */,
+				D69F74EB1835D02C00395FEB /* idlecallback.m in Sources */,
+				D69F74AC1835CC3300395FEB /* palstdlibcommon.c in Sources */,
+				EC65C075195804C100B6A5A0 /* TCPConnectionAdapter.mm in Sources */,
+				A8DFD0111845A45B0005F504 /* palimpl.cpp in Sources */,
+				D69F74751835CC3200395FEB /* palstdlib.c in Sources */,
+				EC6761CF19233BE7003250AC /* TLSConnection.m in Sources */,
+				D69F741A1835CC3200395FEB /* quicksort.cpp in Sources */,
+				D69F74ED1835D02C00395FEB /* netconnection.mm in Sources */,
+				D69F74021835CC3200395FEB /* finishfunctionhttpdata.cpp in Sources */,
+				D69F74061835CC3200395FEB /* finishfunctionmanager.cpp in Sources */,
+				D69F74DF1835D02C00395FEB /* callbacknetworkstatus.mm in Sources */,
+				EC3DB63D192DF6E20002FD10 /* TLSConnectionAdapter.mm in Sources */,
+				D69F74581835CC3200395FEB /* callnotifierimpl.mm in Sources */,
+				D69F74E51835D02C00395FEB /* httpresponse.mm in Sources */,
+				D69F74D11835D02C00395FEB /* callback.mm in Sources */,
+				D69F73FB1835CC3200395FEB /* sqlite3_reader.cpp in Sources */,
+				933692F218B20F0A00BA7CD7 /* palclock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184E9ADD1A15A74D00FF127C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = freetype;
+			targetProxy = 184E9ADC1A15A74D00FF127C /* PBXContainerItemProxy */;
+		};
+		184E9ADF1A15A74D00FF127C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = glues;
+			targetProxy = 184E9ADE1A15A74D00FF127C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BRANCH = main;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/nbpal.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = nbpal_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = nbpal;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/freetype-2.4.4/include $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/CUnit/include $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/glues";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BRANCH = main;
+				DSTROOT = /tmp/nbpal.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = nbpal_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = nbpal;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/freetype-2.4.4/include $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/CUnit/include $(PROJECT_DIR)/../../../../thirdparty/$(BRANCH)/glues";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "nbpal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "nbpal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

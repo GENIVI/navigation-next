@@ -1,0 +1,6 @@
+#ifndef NIMNBIPAL_BID
+#define NIMNBIPAL_BID
+
+#define AEECLSID_NIMNBIPAL        0x11111111
+
+#endif //NIMNBIPAL_BID

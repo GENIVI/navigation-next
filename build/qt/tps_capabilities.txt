@@ -1,0 +1,22 @@
+capabilities:
+  obsecurity: +
+  deflate-wbits: 10
+  product: ltk_qt
+  version:
+  nav-version: 8
+  place-version: 2
+  server-error-codes: +
+  locmatch-accuracy: +
+  iden-tps: +
+  motd-version: 2
+  vendor: cardinal
+  sms-format-version: 2
+  sms-app-prefix: //
+  char-encoding: UTF-8
+  platform: qt
+  subscription-version: 8
+  search-capability: AD:ILAP;POI:TCS-SS,TA
+  no-fileset: +
+  requires-secure-connections: +
+  transaction-info: 1
+  query-headers: 1

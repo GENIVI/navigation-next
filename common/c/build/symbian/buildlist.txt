@@ -1,0 +1,7 @@
+..\..\..\thirdparty\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\nbpal\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\abpal\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\coreservices\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\nbservices\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\abservices\release_150406_ltk_v1_5_1\projects\symbian
+..\..\..\systemtests\release_150406_ltk_v1_5_1\projects\symbian

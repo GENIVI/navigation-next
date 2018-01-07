@@ -1,0 +1,5 @@
+C:\dev\brew\vnav5\feature_120131_bb10\res\brxpp2.0>brxpp.exe --id_offset 32000 --default_orient
+ation portrait --inputdirs c:\dev\brew\vnav5\feature_120131_bb10\res:c:\dev\brew\vnav5\feature_120131_bb10\res
+\audio:c:\dev\brew\vnav5\res\images c:\dev\brew\vnav5\feature_120131_bb10\res\images\PQVGA c:\d
+ev\brew\vnav5\feature_120131_bb10\res\images\LQVGA c:\dev\brew\vnav5\feature_120131_bb10\res\vnav.brx vnav_sr.
+brx

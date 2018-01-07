@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.qnx.qcc.toolChain.988958679">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.toolChain.988958679" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.qnx.qcc.toolChain.988958679" name="Default" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.qnx.qcc.toolChain.988958679.1052281043" name="/" resourcePath="">
+						<toolChain id="com.qnx.qcc.toolChain.1702055074" name="com.qnx.qcc.toolChain" superClass="com.qnx.qcc.toolChain">
+							<option id="com.qnx.qcc.option.os.1527841677" name="Target OS:" superClass="com.qnx.qcc.option.os"/>
+							<option id="com.qnx.qcc.option.cpu.504786441" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.compiler.304555019" name="Compiler:" superClass="com.qnx.qcc.option.compiler"/>
+							<option id="com.qnx.qcc.option.runtime.1131302764" name="Runtime:" superClass="com.qnx.qcc.option.runtime"/>
+							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.1628460660" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
+							<builder id="com.qnx.qcc.toolChain.988958679.735741957" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="com.qnx.qcc.tool.compiler.478200422" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
+								<option id="com.qnx.qcc.option.compiler.optlevel.1989397376" name="Optimization Level" superClass="com.qnx.qcc.option.compiler.optlevel" value="com.qnx.qcc.option.compiler.optlevel.0" valueType="enumerated"/>
+								<option id="com.qnx.qcc.option.compiler.includePath.1727589988" name="Include Directories (-I)" superClass="com.qnx.qcc.option.compiler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.compiler.933366303" superClass="com.qnx.qcc.inputType.compiler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.assembler.2059462849" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
+								<option id="com.qnx.qcc.option.assembler.includePath.381105153" name="Include Directories (-I)" superClass="com.qnx.qcc.option.assembler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.assembler.1196028720" superClass="com.qnx.qcc.inputType.assembler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.linker.1813416801" name="QCC Linker" superClass="com.qnx.qcc.tool.linker"/>
+							<tool id="com.qnx.qcc.tool.archiver.817392931" name="QCC Archiver" superClass="com.qnx.qcc.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.qnx.qcc.toolChain.1280011584">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.toolChain.1280011584" moduleId="org.eclipse.cdt.core.settings" name="Device-Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.qnx.qcc.toolChain.1280011584" name="Device-Debug" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.qnx.qcc.toolChain.1280011584.94287105" name="/" resourcePath="">
+						<toolChain id="com.qnx.qcc.toolChain.1768977540" name="com.qnx.qcc.toolChain" superClass="com.qnx.qcc.toolChain">
+							<option id="com.qnx.qcc.option.os.1020449616" name="Target OS:" superClass="com.qnx.qcc.option.os"/>
+							<option id="com.qnx.qcc.option.cpu.1789987029" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.compiler.832964696" name="Compiler:" superClass="com.qnx.qcc.option.compiler"/>
+							<option id="com.qnx.qcc.option.runtime.981210168" name="Runtime:" superClass="com.qnx.qcc.option.runtime"/>
+							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.874563753" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
+							<builder id="com.qnx.qcc.toolChain.1280011584.821240636" incrementalBuildTarget="debug" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="com.qnx.qcc.tool.compiler.1650119416" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
+								<option id="com.qnx.qcc.option.compiler.optlevel.1411139538" name="Optimization Level" superClass="com.qnx.qcc.option.compiler.optlevel" value="com.qnx.qcc.option.compiler.optlevel.0" valueType="enumerated"/>
+								<option id="com.qnx.qcc.option.compiler.includePath.352366349" name="Include Directories (-I)" superClass="com.qnx.qcc.option.compiler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.compiler.218274827" superClass="com.qnx.qcc.inputType.compiler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.assembler.555313344" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
+								<option id="com.qnx.qcc.option.assembler.includePath.53673399" name="Include Directories (-I)" superClass="com.qnx.qcc.option.assembler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.assembler.277855261" superClass="com.qnx.qcc.inputType.assembler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.linker.197632665" name="QCC Linker" superClass="com.qnx.qcc.tool.linker"/>
+							<tool id="com.qnx.qcc.tool.archiver.490237061" name="QCC Archiver" superClass="com.qnx.qcc.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.qnx.qcc.toolChain.1390784068">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.toolChain.1390784068" moduleId="org.eclipse.cdt.core.settings" name="Device-Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.qnx.qcc.toolChain.1390784068" name="Device-Release" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.qnx.qcc.toolChain.1390784068.1361060785" name="/" resourcePath="">
+						<toolChain id="com.qnx.qcc.toolChain.2128416150" name="com.qnx.qcc.toolChain" superClass="com.qnx.qcc.toolChain">
+							<option id="com.qnx.qcc.option.os.1098319794" name="Target OS:" superClass="com.qnx.qcc.option.os"/>
+							<option id="com.qnx.qcc.option.cpu.855591159" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.compiler.741872134" name="Compiler:" superClass="com.qnx.qcc.option.compiler"/>
+							<option id="com.qnx.qcc.option.runtime.1857606284" name="Runtime:" superClass="com.qnx.qcc.option.runtime"/>
+							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.1323769307" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
+							<builder id="com.qnx.qcc.toolChain.1390784068.354777487" incrementalBuildTarget="release" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="com.qnx.qcc.tool.compiler.265423966" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
+								<option id="com.qnx.qcc.option.compiler.optlevel.1952844554" name="Optimization Level" superClass="com.qnx.qcc.option.compiler.optlevel" value="com.qnx.qcc.option.compiler.optlevel.0" valueType="enumerated"/>
+								<option id="com.qnx.qcc.option.compiler.includePath.1328638376" name="Include Directories (-I)" superClass="com.qnx.qcc.option.compiler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.compiler.608387845" superClass="com.qnx.qcc.inputType.compiler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.assembler.760132446" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
+								<option id="com.qnx.qcc.option.assembler.includePath.27133376" name="Include Directories (-I)" superClass="com.qnx.qcc.option.assembler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.assembler.760466325" superClass="com.qnx.qcc.inputType.assembler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.linker.1762143567" name="QCC Linker" superClass="com.qnx.qcc.tool.linker"/>
+							<tool id="com.qnx.qcc.tool.archiver.633288245" name="QCC Archiver" superClass="com.qnx.qcc.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.qnx.qcc.toolChain.586105269">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.toolChain.586105269" moduleId="org.eclipse.cdt.core.settings" name="Simulator-Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.qnx.qcc.toolChain.586105269" name="Simulator-Debug" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.qnx.qcc.toolChain.586105269.31152623" name="/" resourcePath="">
+						<toolChain id="com.qnx.qcc.toolChain.5555849" name="com.qnx.qcc.toolChain" superClass="com.qnx.qcc.toolChain">
+							<option id="com.qnx.qcc.option.os.2102718769" name="Target OS:" superClass="com.qnx.qcc.option.os"/>
+							<option id="com.qnx.qcc.option.cpu.1575103308" name="Target CPU:" superClass="com.qnx.qcc.option.cpu"/>
+							<option id="com.qnx.qcc.option.compiler.1358581511" name="Compiler:" superClass="com.qnx.qcc.option.compiler"/>
+							<option id="com.qnx.qcc.option.runtime.1214972305" name="Runtime:" superClass="com.qnx.qcc.option.runtime"/>
+							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.855584249" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
+							<builder id="com.qnx.qcc.toolChain.586105269.2142915810" incrementalBuildTarget="simdebug" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="com.qnx.qcc.tool.compiler.1773365266" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
+								<option id="com.qnx.qcc.option.compiler.optlevel.2112861231" name="Optimization Level" superClass="com.qnx.qcc.option.compiler.optlevel" value="com.qnx.qcc.option.compiler.optlevel.0" valueType="enumerated"/>
+								<option id="com.qnx.qcc.option.compiler.includePath.31771963" name="Include Directories (-I)" superClass="com.qnx.qcc.option.compiler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.compiler.1329541944" superClass="com.qnx.qcc.inputType.compiler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.assembler.771935994" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
+								<option id="com.qnx.qcc.option.assembler.includePath.602946157" name="Include Directories (-I)" superClass="com.qnx.qcc.option.assembler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.assembler.2067098515" superClass="com.qnx.qcc.inputType.assembler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.linker.1221880873" name="QCC Linker" superClass="com.qnx.qcc.tool.linker"/>
+							<tool id="com.qnx.qcc.tool.archiver.1455158241" name="QCC Archiver" superClass="com.qnx.qcc.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.qnx.qcc.toolChain.586105269.1181587169">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.toolChain.586105269.1181587169" moduleId="org.eclipse.cdt.core.settings" name="Simulator-Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.qnx.qcc.toolChain.586105269.1181587169" name="Simulator-Release" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.qnx.qcc.toolChain.586105269.1181587169." name="/" resourcePath="">
+						<toolChain id="com.qnx.qcc.toolChain.2137244096" name="com.qnx.qcc.toolChain" superClass="com.qnx.qcc.toolChain">
+							<option id="com.qnx.qcc.option.os.1505086684" name="Target OS:" superClass="com.qnx.qcc.option.os"/>
+							<option id="com.qnx.qcc.option.cpu.795700892" name="Target CPU:" superClass="com.qnx.qcc.option.cpu"/>
+							<option id="com.qnx.qcc.option.compiler.1987366306" name="Compiler:" superClass="com.qnx.qcc.option.compiler"/>
+							<option id="com.qnx.qcc.option.runtime.815625827" name="Runtime:" superClass="com.qnx.qcc.option.runtime"/>
+							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.520970162" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
+							<builder id="org.eclipse.cdt.build.core.settings.default.builder.852794849" incrementalBuildTarget="simrelease" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="com.qnx.qcc.tool.compiler.345835626" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
+								<option id="com.qnx.qcc.option.compiler.optlevel.1440208752" name="Optimization Level" superClass="com.qnx.qcc.option.compiler.optlevel" value="com.qnx.qcc.option.compiler.optlevel.0" valueType="enumerated"/>
+								<option id="com.qnx.qcc.option.compiler.includePath.1397200724" name="Include Directories (-I)" superClass="com.qnx.qcc.option.compiler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.compiler.1993812050" superClass="com.qnx.qcc.inputType.compiler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.assembler.1227785284" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
+								<option id="com.qnx.qcc.option.assembler.includePath.1738282237" name="Include Directories (-I)" superClass="com.qnx.qcc.option.assembler.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNBIPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCUNIT_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMARGTABLE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMABPAL_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMCORE_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMNB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${NIMAB_INC}/qt_qnx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtGui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/usr/include/qt4/QtCore&quot;"/>
+								</option>
+								<inputType id="com.qnx.qcc.inputType.assembler.484759276" superClass="com.qnx.qcc.inputType.assembler"/>
+							</tool>
+							<tool id="com.qnx.qcc.tool.linker.1240337743" name="QCC Linker" superClass="com.qnx.qcc.tool.linker"/>
+							<tool id="com.qnx.qcc.tool.archiver.1342670926" name="QCC Archiver" superClass="com.qnx.qcc.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="unittests.null.1807785230" name="unittests"/>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/unittests"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		<scannerConfigBuildInfo instanceId="com.qnx.qcc.toolChain.988958679">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.qnx.qcc.toolChain.586105269">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.qnx.qcc.toolChain.586105269.1181587169">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.qnx.qcc.toolChain.1280011584">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.qnx.qcc.toolChain.1390784068">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

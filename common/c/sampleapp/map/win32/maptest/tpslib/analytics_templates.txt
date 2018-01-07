@@ -1,0 +1,87 @@
+######## Analytics related TPS templates ############
+
+ - analytics-events-query: []
+ - analytics-events-reply: [result]
+ 
+ - want-analytics-config: []
+ - analytics-config: [max-hold-time, max-data-age, max-request-size]
+ - gps-probes-config: [priority, sample-rate]
+ - feedback-config: [priority]
+ - gold-events-config: [priority]
+ - gold-events-config: [priority, max-hold-time]
+ - poi-events-config: [priority]
+ - route-tracking-config: [priority]
+ - app-errors-config: [priority]
+ - wifi-probes-config: [max-horizontal-uncertainty, max-speed, collection-interval, minimum-distance-delta, priority]
+ - nav-invocation-config: [priority]
+ - coupon-events-config: [priority]
+ - extpoi-event-config: [priority]
+
+# Anaytics events category related TPS elements #
+ - event-categories: []
+ - gold-category: []
+ - poi-category: []
+ - route-tracking-category: []
+ - gps-probes-category: []
+ - feedback-category: []
+ - app-errors-category: []
+ - wifi-probes-category: []
+ - want-max-hold-time: []
+ - nav-invocation-category: []
+ - coupons-category: []
+ - extpoi-category: []
+
+# Common elements for analytics events #
+ - analytics-event-destination: []
+ - analytics-event-origin: []
+ - analytics-event-place: [id, search-query-event-id]
+ - analytics-event-place: [id, search-query-event-id, index]
+ - analytics-event-place: [id, search-query-event-id, origin]
+ - analytics-event-place: [id, search-query-event-id, index, origin]
+
+# Third party data event #
+ - extpoi-event: [name]
+
+
+# General Analytics event #
+ - analytics-event: [id, ts, session-id]
+
+# Feedback related TPS elements #
+ - feedback-event: [screen-id, nav-session-id, route-request-event-id, search-query-event-id, provider-id, poi-id]
+ - issue-type: [type]
+
+# AER related TPS elements #
+ - app-error-event: [error-code, detailed-code, detailed-description]
+ - error-category: [type]
+ 
+# WiFi probes related TPS elements #
+ - wifi-probes-event: []
+ - wifi-capabilities: []
+ - wifi-probe: [mac-address, signal-strength, time-delta]
+ - wifi-probe: [frequency, mac-address, signal-strength, ssid, time-delta]
+ 
+# Route related TPS elements #
+ - route-request-event: [nav-session-id, reason]
+ - route-reply-event: [nav-session-id, route-request-event-id, route-id, duration, distance]
+ - arrival-event: [nav-session-id, route-request-event-id, route-id]
+ - route-state-event: [nav-session-id, route-request-event-id, route-reply-event-id, route-id, state, duration, distance, distance-traveled]
+ - content-displayed: [type, country]
+
+# GPS Probes related TPS elements #
+ - gps-probes-event: [nav-session-id, packing-version]
+ 
+# NBI nav invocation related TPS elements
+ - nav-invocation-event: []
+ - app-discovery: [platform, carrier, sdk-version]
+ - app-present: []
+ - use-navigator: [platform, carrier, sdk-version]
+ 
+ # Coupon analytics
+ - coupon-analytics-action-event: [action]
+ 
+
+# ASR event
+ - asr-event: [asr-screen, session-id, asr-text, provider-session-id, user-lang]
+
+ # xAD feature event
+ - reveal-description-event: []

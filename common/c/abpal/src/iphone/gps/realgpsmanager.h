@@ -1,0 +1,91 @@
+/*
+Copyright (c) 2018, TeleCommunication Systems, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+   * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the TeleCommunication Systems, Inc., nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ARE
+DISCLAIMED. IN NO EVENT SHALL TELECOMMUNICATION SYSTEMS, INC.BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*!--------------------------------------------------------------------------
+
+ @file realgpsmanager.h
+ @date 9/13/10
+
+ The header of location manager for iPhone
+
+ */
+/*
+ (C) Copyright 2010 by TeleCommunication Systems, Inc.
+
+ The information contained herein is confidential, proprietary
+ to TeleCommunication Systems, Inc., and considered a trade secret
+ as defined in section 499C of the penal code of the State of
+ California. Use of this information by anyone other than
+ authorized employees of TeleCommunication Systems is granted only
+ under a written non-disclosure agreement, expressly prescribing
+ the scope and manner of such use.
+
+ ---------------------------------------------------------------------------*/
+
+/*! @{ */
+
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "abpalgps.h"
+#import "gpsprotocol.h"
+#import "pallock.h"
+
+#define CheckStateTimeout 0.25
+#define UseMainThread 0
+
+@interface RealGpsManager : NSObject <CLLocationManagerDelegate,GpsManagerProtocol>
+{
+    NSMutableArray                        *contextArray;
+
+    // All GPS fixes are done by a separate thread
+    NSThread*                            gpsThread;            // Thread for core location manager
+    NSThread*                            currentThread;         // Current execution thread
+    ABPAL_GpsLocation                    gpsFix;                // The current fix
+    CLLocationManager*                    gpsManager;            // The thread's core location manager object
+    NSTimer*                            gpsStateChange;        // Timer to check for state changes
+    CFRunLoopRef                        gpsRunLoop;            // RunLoop for event
+    BOOL                                gpsDofix;
+    BOOL                                gpsDoingfix;
+    BOOL                                gpsForcefix;
+    BOOL                                gpsShutdown;
+    ABPAL_PositionSource                positionSource;
+    NSDate*                             gpsStartDate;
+
+    double                              iOSVersion;         // Current iOS sdk version
+
+    PAL_Lock*                           pal_lock;           // Use this lock to avoid multi-thread request GPS issue
+}
+
+@property (nonatomic,retain) NSMutableArray    *contextArray;
+@property double prevCompassHeading;
+
+-(id)init:(PAL_Instance*)pal;
+-(void)stop;
+-(void)shutdown;
+-(void)checkState:(NSTimer*)timer;
+
+@end

@@ -1,0 +1,31 @@
+formatVersion: 1
+formatType: am-configuration
+---
+# basic AM functionality - the builtin apps are in 'apps'.
+
+applications:
+  builtinAppsManifestDir: "CenterConsole/apps"
+
+# QML apps will be able to import from modules...
+
+runtimes:
+  qml:
+    importPaths: [ "imports/shared" ]
+
+# ... as well as the SystemUI
+
+ui:
+  fullscreen: no
+  mainQml: "Main.qml"
+  importPaths: [ "imports/shared", "imports/system" ]
+  additionalConfiguration:
+    appStoreServerUrl: 'http://chaos.pelagicore.net:8080'
+    styleConfig: "auto"
+  windowIcon: "imports/shared/assets/icons/active/apps@96.png"
+
+# development setup: no security
+
+flags:
+  noSecurity: yes
+  noUiWatchdog: yes
+

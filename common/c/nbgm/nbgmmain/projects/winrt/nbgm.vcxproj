@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+    <ProjectGuid>{b831ca52-962f-4ead-888d-9c83f5dcf699}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>nbgm</ProjectName>
+    <RootNamespace>nbgm</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project=".\nbgm.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)14</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)14</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)output\winrt\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NBGM_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj /FU Platform.winmd /FU Windows.winmd /AI "$(VCInstallDir)vcpackages" /AI "$(WindowsSDK_MetadataPath)" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+      <AdditionalDependencies>nbpal.lib;freetyped.lib;libpngd.lib;zlibd.lib;d3d11.lib;nbre.lib;nbred3d11renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)..\nbgmmain\build\version.bat $(SolutionDir)..\nbgmmain winrt</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalOptions>/FU Platform.winmd /FU Windows.winmd /AI "$(VCInstallDir)vcpackages" /AI "$(WindowsSDK_MetadataPath)" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>nbpal.lib;freetype.lib;libpng.lib;zlib.lib;nbre.lib;d3d11.lib;nbred3d11renderpal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)..\nbgmmain\build\version.bat $(SolutionDir)..\nbgmmain winrt</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalOptions>/bigobj /FU Platform.winmd /FU Windows.winmd /AI "$(VCInstallDir)vcpackages" /AI "$(WindowsSDK_MetadataPath)" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nbpal.lib;freetyped.lib;libpngd.lib;zlibd.lib;nbrecore.lib;nbrerenderpal.lib;nbreresource.lib;nbrescene.lib;nbredebug.lib;nbre.lib;nbgmservice.lib;nbgmmapdata.lib;nbgmmanager.lib;nbred3d11renderpal.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalOptions> /FU Platform.winmd /FU Windows.winmd /AI "$(VCInstallDir)vcpackages" /AI "$(WindowsSDK_MetadataPath)" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+      <AdditionalDependencies>nbpal.lib;freetype.lib;libpng.lib;zlib.lib;nbrecore.lib;nbrerenderpal.lib;nbreresource.lib;nbrescene.lib;nbredebug.lib;nbre.lib;nbgmservice.lib;nbgmmapdata.lib;nbgmmanager.lib;nbred3d11renderpal.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nbpal.lib;freetyped.lib;libpngd.lib;zlibd.lib;nbrecore.lib;nbrerenderpal.lib;nbreresource.lib;nbrescene.lib;nbredebug.lib;nbre.lib;nbgmservice.lib;nbgmmapdata.lib;nbgmmanager.lib;nbred3d11renderpal.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalLibraryDirectories>$(NIMNBIPAL_LIB);$(OutDir);$(SolutionDir)..\..\..\thirdparty\feature_111107_map3d\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\nbre\output\winrt\$(Configuration)\$(Platform);$(SolutionDir)..\rendersystem\output\winrt\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nbpal.lib;freetype.lib;libpng.lib;zlib.lib;nbrecore.lib;nbrerenderpal.lib;nbreresource.lib;nbrescene.lib;nbredebug.lib;nbre.lib;nbgmservice.lib;nbgmmapdata.lib;nbgmmanager.lib;nbred3d11renderpal.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>../winrt/nbgm14.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\nbgm.h" />
+    <ClInclude Include="..\..\include\nbgmavatarsetting.h" />
+    <ClInclude Include="..\..\include\nbgmconfig.h" />
+    <ClInclude Include="..\..\include\nbgmmapview.h" />
+    <ClInclude Include="..\..\include\nbgmnavdata.h" />
+    <ClInclude Include="..\..\include\nbgmnavview.h" />
+    <ClInclude Include="..\..\include\nbgmtypes.h" />
+    <ClInclude Include="..\..\include\nbgmversion.h" />
+    <ClInclude Include="..\..\include\private\nbgmanimation.h" />
+    <ClInclude Include="..\..\include\private\nbgmarray.h" />
+    <ClInclude Include="..\..\include\private\nbgmavatar.h" />
+    <ClInclude Include="..\..\include\private\nbgmbinloader.h" />
+    <ClInclude Include="..\..\include\private\nbgmbuildmodelcontext.h" />
+    <ClInclude Include="..\..\include\private\nbgmcamerasetting.h" />
+    <ClInclude Include="..\..\include\private\nbgmdom.h" />
+    <ClInclude Include="..\..\include\private\nbgmgridentity.h" />
+    <ClInclude Include="..\..\include\private\nbgmicon.h" />
+    <ClInclude Include="..\..\include\private\nbgmlabellayer.h" />
+    <ClInclude Include="..\..\include\private\nbgmlayoutbuffer.h" />
+    <ClInclude Include="..\..\include\private\nbgmlayoutelement.h" />
+    <ClInclude Include="..\..\include\private\nbgmlayoutmanager.h" />
+    <ClInclude Include="..\..\include\private\nbgmlayoutpolyline.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapmaterial.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapmaterialfactory.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapmaterialmanager.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapmaterialutility.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapviewdatacache.h" />
+    <ClInclude Include="..\..\include\private\nbgmmapviewimpl.h" />
+    <ClInclude Include="..\..\include\private\nbgmnbmobject.h" />
+    <ClInclude Include="..\..\include\private\nbgmpoilayer.h" />
+    <ClInclude Include="..\..\include\private\nbgmpointlabel.h" />
+    <ClInclude Include="..\..\include\private\nbgmpolyline2entity.h" />
+    <ClInclude Include="..\..\include\private\nbgmrasterize.h" />
+    <ClInclude Include="..\..\include\private\nbgmroadlabel.h" />
+    <ClInclude Include="..\..\include\private\nbgmshield.h" />
+    <ClInclude Include="..\..\include\private\nbgmsky.h" />
+    <ClInclude Include="..\..\include\private\nbgmskywall.h" />
+    <ClInclude Include="..\..\include\private\nbgmtilemaplayer.h" />
+    <ClInclude Include="..\..\include\private\nbgmvectortile.h" />
+    <ClInclude Include="..\..\include\private\nbgmvectortilebuilder.h" />
+    <ClInclude Include="..\..\include\private\nbgmvectortiledata.h" />
+    <ClInclude Include="..\..\include\private\nbrebinaryspatialdividemanager.h" />
+    <ClInclude Include="..\..\include\private\nbrelinearspatialdividemanager.h" />
+    <ClInclude Include="..\..\include\protected\nbgmmapviewprotected.h" />
+    <ClInclude Include="..\..\include\winrt\nbgmexp.h" />
+    <ClInclude Include="..\..\include\winrt\nbgmmapviewconfig.h" />
+    <ClInclude Include="..\..\include\winrt\nbgmnavviewconfig.h" />
+    <ClInclude Include="..\..\include\winrt\nbgmplatformconfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbgm14.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmmapview.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmmapviewdatacache.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmmapviewimpl.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmmapviewimpltask.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmmapviewprofiler.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmnavecmview.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmnavvectorview.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbgmnavview.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbrebinaryspatialdividemanager.cpp" />
+    <ClCompile Include="..\..\src\nbgmmanager\nbrelinearspatialdividemanager.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmarray.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmbinloader.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmdom.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmaphorizontallightsourcematerial.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmapmaterial.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmapmaterialfactory.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmapmaterialmanager.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmapmaterialutility.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmapoutlinedcolormaterial.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmmappatharrowmaterial.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmpatterndashlinematerial.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmvectortiledata.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmvectortiledatacreator.cpp" />
+    <ClCompile Include="..\..\src\nbgmmapdata\nbgmvectortilemeshcreator.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmanimation.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmavatar.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmbuildutility.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmflag.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmgridentity.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmicon.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmlabellayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmlayoutbuffer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmlayoutelement.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmlayoutmanager.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmlayoutpolyline.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmmaproadlabel.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmnavecmroutelayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmnaviconlayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmnavvectorroutelayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmpatharrowlayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmpoilayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmpointlabel.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmpolyline2entity.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmrasterize.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmroadlabel.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmshield.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmsky.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmskywall.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmtilemaplayer.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmtransparentoverlay.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmvectorareabuilder.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmvectorroadbuilder.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmvectortile.cpp" />
+    <ClCompile Include="..\..\src\nbgmservice\nbgmvectorvertexscale.cpp" />
+    <ClCompile Include="..\..\src\winrt\nbgmimpl.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

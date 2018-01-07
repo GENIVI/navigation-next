@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="nbservices"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="
+        $(SolutionDir)\include;
+        $(SolutionDir)\include\protected;
+        $(SolutionDir)\include\private;
+        $(SolutionDir)\include\win32;
+        $(NIMNBIPAL_INC);
+        $(NIMABPAL_INC);
+        $(NIMABPAL_INC)\win32;
+        $(NIMNBIPAL_INC)\win32;
+        $(NIMCORE_INC);
+        $(NIMCORE_INC)\protected;
+        $(NIMCORE_INC)\win32;
+        $(NIMSQLITE_INC);
+        $(NIMNBM_INC);
+        $(NIMNCDB_INC);
+        $(NIMNBIPAL_INC)\nbpal;"
+
+		PreprocessorDefinitions="NB_BUILD;_CRT_SECURE_NO_WARNINGS;;UNUSED_NDEFINED;DEBUG_LOG_NONE;WIN32_LEAN_AND_MEAN;__STDC__=1"
+		WarningLevel="4"
+		WarnAsError="true"
+		DisableSpecificWarnings="4100;4115;4127;4201;4214"
+	/>
+</VisualStudioPropertySheet>

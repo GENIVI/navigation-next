@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		223443EC18E2A3100067F6FA /* TestSingleSearchProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 223443EA18E2A3100067F6FA /* TestSingleSearchProtocol.cpp */; };
+		223443FF18E2ACBC0067F6FA /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 223443F218E2A7990067F6FA /* libcunit.a */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		8253AAC013501E6A00D33A64 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8253AABF13501E6A00D33A64 /* libsqlite3.dylib */; };
+		826F539414EA0953008407D2 /* testmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F539214EA0953008407D2 /* testmap.cpp */; };
+		82748BFB13A6995B004BAF43 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82748BFA13A6995B004BAF43 /* SystemConfiguration.framework */; };
+		82A514EF141EF63300973B3C /* testnbservicesmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A514EE141EF63300973B3C /* testnbservicesmain.m */; };
+		82A514FE141EF70400973B3C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A514FC141EF70400973B3C /* MainWindow.xib */; };
+		82A514FF141EF70400973B3C /* testnbservicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A514FD141EF70400973B3C /* testnbservicesViewController.xib */; };
+		82A5151E141EF73F00973B3C /* testnbservicesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A51506141EF73F00973B3C /* testnbservicesAppDelegate.m */; };
+		82A5151F141EF73F00973B3C /* testnbservicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A51508141EF73F00973B3C /* testnbservicesViewController.m */; };
+		82A51521141EF73F00973B3C /* PlatformUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A5150A141EF73F00973B3C /* PlatformUtil.m */; };
+		82A51524141EF73F00973B3C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A5150D141EF73F00973B3C /* main.c */; };
+		82A51525141EF73F00973B3C /* networkutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A5150F141EF73F00973B3C /* networkutil.c */; };
+		82A51526141EF73F00973B3C /* testcontentmanager.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A51512141EF73F00973B3C /* testcontentmanager.c */; };
+		82A51527141EF73F00973B3C /* testdownload.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A51514141EF73F00973B3C /* testdownload.c */; };
+		82A51528141EF73F00973B3C /* testmetadata.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A51516141EF73F00973B3C /* testmetadata.c */; };
+		82A51529141EF73F00973B3C /* testspatial.c in Sources */ = {isa = PBXBuildFile; fileRef = 82A51518141EF73F00973B3C /* testspatial.c */; };
+		82A5152A141EF73F00973B3C /* tesla.tpl in Resources */ = {isa = PBXBuildFile; fileRef = 82A5151B141EF73F00973B3C /* tesla.tpl */; };
+		82AB1D3314296EDC007F7EF3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AB1D3214296EDC007F7EF3 /* libz.dylib */; };
+		82D1E31E14D6233C00FB5B22 /* testhttpdownloadmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82D1E31C14D6233C00FB5B22 /* testhttpdownloadmanager.cpp */; };
+		82D1E35014D62FD900FB5B22 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D1E34F14D62FD900FB5B22 /* CoreTelephony.framework */; };
+		82DCAA2914F219F600DCE1A4 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DCAA2814F219F600DCE1A4 /* libc++.dylib */; };
+		82DCAA3014F21ACA00DCE1A4 /* libnbservices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A514D7141EF46200973B3C /* libnbservices.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		223443F118E2A7990067F6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223443ED18E2A7990067F6FA /* cunit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = cunit;
+		};
+		223443F718E2A7B30067F6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223443F318E2A7B30067F6FA /* nbpal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = nbpal;
+		};
+		223443FD18E2A7C20067F6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223443F918E2A7C20067F6FA /* coreservices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = coreservices;
+		};
+		82A514D6141EF46200973B3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82A514C5141EF46200973B3C /* nbservices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = nbservices;
+		};
+		82A514E7141EF4B400973B3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82A514C5141EF46200973B3C /* nbservices.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = nbservices;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* testnbservices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testnbservices.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		223443EA18E2A3100067F6FA /* TestSingleSearchProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestSingleSearchProtocol.cpp; sourceTree = "<group>"; };
+		223443EB18E2A3100067F6FA /* TestSingleSearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSingleSearchProtocol.h; sourceTree = "<group>"; };
+		223443ED18E2A7990067F6FA /* cunit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cunit.xcodeproj; path = ../../../../thirdparty/main/projects/iphone/cunit.xcodeproj; sourceTree = "<group>"; };
+		223443F318E2A7B30067F6FA /* nbpal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nbpal.xcodeproj; path = ../../../../nbpal/main/projects/iphone/nbpal.xcodeproj; sourceTree = "<group>"; };
+		223443F918E2A7C20067F6FA /* coreservices.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coreservices.xcodeproj; path = ../../../../coreservices/main/projects/iphone/coreservices.xcodeproj; sourceTree = "<group>"; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* testnbservices_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testnbservices_Prefix.pch; sourceTree = "<group>"; };
+		8253AABF13501E6A00D33A64 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		826F539214EA0953008407D2 /* testmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testmap.cpp; sourceTree = "<group>"; };
+		826F539314EA0953008407D2 /* testmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testmap.h; sourceTree = "<group>"; };
+		82748BFA13A6995B004BAF43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		82A514C5141EF46200973B3C /* nbservices.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = nbservices.xcodeproj; sourceTree = "<group>"; };
+		82A514EE141EF63300973B3C /* testnbservicesmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testnbservicesmain.m; path = ../../src/unittests/iphone/testnbservicesmain.m; sourceTree = SOURCE_ROOT; };
+		82A514FC141EF70400973B3C /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../../src/unittests/iphone/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		82A514FD141EF70400973B3C /* testnbservicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = testnbservicesViewController.xib; path = ../../src/unittests/iphone/testnbservicesViewController.xib; sourceTree = SOURCE_ROOT; };
+		82A51505141EF73F00973B3C /* testnbservicesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testnbservicesAppDelegate.h; sourceTree = "<group>"; };
+		82A51506141EF73F00973B3C /* testnbservicesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testnbservicesAppDelegate.m; sourceTree = "<group>"; };
+		82A51507141EF73F00973B3C /* testnbservicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testnbservicesViewController.h; sourceTree = "<group>"; };
+		82A51508141EF73F00973B3C /* testnbservicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testnbservicesViewController.m; sourceTree = "<group>"; };
+		82A5150A141EF73F00973B3C /* PlatformUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformUtil.m; sourceTree = "<group>"; };
+		82A5150D141EF73F00973B3C /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		82A5150E141EF73F00973B3C /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		82A5150F141EF73F00973B3C /* networkutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = networkutil.c; sourceTree = "<group>"; };
+		82A51510141EF73F00973B3C /* networkutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = networkutil.h; sourceTree = "<group>"; };
+		82A51511141EF73F00973B3C /* platformutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platformutil.h; sourceTree = "<group>"; };
+		82A51512141EF73F00973B3C /* testcontentmanager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testcontentmanager.c; sourceTree = "<group>"; };
+		82A51513141EF73F00973B3C /* testcontentmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testcontentmanager.h; sourceTree = "<group>"; };
+		82A51514141EF73F00973B3C /* testdownload.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testdownload.c; sourceTree = "<group>"; };
+		82A51515141EF73F00973B3C /* testdownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testdownload.h; sourceTree = "<group>"; };
+		82A51516141EF73F00973B3C /* testmetadata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testmetadata.c; sourceTree = "<group>"; };
+		82A51517141EF73F00973B3C /* testmetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testmetadata.h; sourceTree = "<group>"; };
+		82A51518141EF73F00973B3C /* testspatial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testspatial.c; sourceTree = "<group>"; };
+		82A51519141EF73F00973B3C /* testspatial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testspatial.h; sourceTree = "<group>"; };
+		82A5151B141EF73F00973B3C /* tesla.tpl */ = {isa = PBXFileReference; lastKnownFileType = file; path = tesla.tpl; sourceTree = "<group>"; };
+		82AB1D3214296EDC007F7EF3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		82D1E31C14D6233C00FB5B22 /* testhttpdownloadmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testhttpdownloadmanager.cpp; sourceTree = "<group>"; };
+		82D1E31D14D6233C00FB5B22 /* testhttpdownloadmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testhttpdownloadmanager.h; sourceTree = "<group>"; };
+		82D1E34F14D62FD900FB5B22 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		82DCAA2814F219F600DCE1A4 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* testnbservices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "testnbservices-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223443FF18E2ACBC0067F6FA /* libcunit.a in Frameworks */,
+				82DCAA3014F21ACA00DCE1A4 /* libnbservices.a in Frameworks */,
+				82DCAA2914F219F600DCE1A4 /* libc++.dylib in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				82D1E35014D62FD900FB5B22 /* CoreTelephony.framework in Frameworks */,
+				8253AAC013501E6A00D33A64 /* libsqlite3.dylib in Frameworks */,
+				82AB1D3314296EDC007F7EF3 /* libz.dylib in Frameworks */,
+				82748BFB13A6995B004BAF43 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* testnbservices.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223443EE18E2A7990067F6FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				223443F218E2A7990067F6FA /* libcunit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223443F418E2A7B30067F6FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				223443F818E2A7B30067F6FA /* libnbpal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223443FA18E2A7C20067F6FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				223443FE18E2A7C20067F6FA /* libcoreservices.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				82DCAA2814F219F600DCE1A4 /* libc++.dylib */,
+				82AB1D3214296EDC007F7EF3 /* libz.dylib */,
+				82A51502141EF73F00973B3C /* unittests */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				8253AABF13501E6A00D33A64 /* libsqlite3.dylib */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				82A514EE141EF63300973B3C /* testnbservicesmain.m */,
+				32CA4F630368D1EE00C91783 /* testnbservices_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82A514FC141EF70400973B3C /* MainWindow.xib */,
+				82A514FD141EF70400973B3C /* testnbservicesViewController.xib */,
+				8D1107310486CEB800E47090 /* testnbservices-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				223443F918E2A7C20067F6FA /* coreservices.xcodeproj */,
+				223443F318E2A7B30067F6FA /* nbpal.xcodeproj */,
+				223443ED18E2A7990067F6FA /* cunit.xcodeproj */,
+				82A514C5141EF46200973B3C /* nbservices.xcodeproj */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				82D1E34F14D62FD900FB5B22 /* CoreTelephony.framework */,
+				82748BFA13A6995B004BAF43 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82A514C6141EF46200973B3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82A514D7141EF46200973B3C /* libnbservices.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82A51502141EF73F00973B3C /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				82A51503141EF73F00973B3C /* iphone */,
+				82A5150D141EF73F00973B3C /* main.c */,
+				82A5150E141EF73F00973B3C /* main.h */,
+				82A5150F141EF73F00973B3C /* networkutil.c */,
+				82A51510141EF73F00973B3C /* networkutil.h */,
+				82A51511141EF73F00973B3C /* platformutil.h */,
+				82A51512141EF73F00973B3C /* testcontentmanager.c */,
+				82A51513141EF73F00973B3C /* testcontentmanager.h */,
+				82A51514141EF73F00973B3C /* testdownload.c */,
+				82A51515141EF73F00973B3C /* testdownload.h */,
+				82D1E31C14D6233C00FB5B22 /* testhttpdownloadmanager.cpp */,
+				82D1E31D14D6233C00FB5B22 /* testhttpdownloadmanager.h */,
+				826F539214EA0953008407D2 /* testmap.cpp */,
+				826F539314EA0953008407D2 /* testmap.h */,
+				82A51516141EF73F00973B3C /* testmetadata.c */,
+				82A51517141EF73F00973B3C /* testmetadata.h */,
+				223443EA18E2A3100067F6FA /* TestSingleSearchProtocol.cpp */,
+				223443EB18E2A3100067F6FA /* TestSingleSearchProtocol.h */,
+				82A51518141EF73F00973B3C /* testspatial.c */,
+				82A51519141EF73F00973B3C /* testspatial.h */,
+				82A5151A141EF73F00973B3C /* tpslib */,
+			);
+			name = unittests;
+			path = ../../src/unittests;
+			sourceTree = SOURCE_ROOT;
+		};
+		82A51503141EF73F00973B3C /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				82A51504141EF73F00973B3C /* Classes */,
+				82A5150A141EF73F00973B3C /* PlatformUtil.m */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		82A51504141EF73F00973B3C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				82A51505141EF73F00973B3C /* testnbservicesAppDelegate.h */,
+				82A51506141EF73F00973B3C /* testnbservicesAppDelegate.m */,
+				82A51507141EF73F00973B3C /* testnbservicesViewController.h */,
+				82A51508141EF73F00973B3C /* testnbservicesViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		82A5151A141EF73F00973B3C /* tpslib */ = {
+			isa = PBXGroup;
+			children = (
+				82A5151B141EF73F00973B3C /* tesla.tpl */,
+			);
+			path = tpslib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* testnbservices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "testnbservices" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82A514E8141EF4B400973B3C /* PBXTargetDependency */,
+			);
+			name = testnbservices;
+			productName = testnbservices;
+			productReference = 1D6058910D05DD3D006BFB54 /* testnbservices.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "testnbservices" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 223443FA18E2A7C20067F6FA /* Products */;
+					ProjectRef = 223443F918E2A7C20067F6FA /* coreservices.xcodeproj */;
+				},
+				{
+					ProductGroup = 223443EE18E2A7990067F6FA /* Products */;
+					ProjectRef = 223443ED18E2A7990067F6FA /* cunit.xcodeproj */;
+				},
+				{
+					ProductGroup = 223443F418E2A7B30067F6FA /* Products */;
+					ProjectRef = 223443F318E2A7B30067F6FA /* nbpal.xcodeproj */;
+				},
+				{
+					ProductGroup = 82A514C6141EF46200973B3C /* Products */;
+					ProjectRef = 82A514C5141EF46200973B3C /* nbservices.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* testnbservices */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		223443F218E2A7990067F6FA /* libcunit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcunit.a;
+			remoteRef = 223443F118E2A7990067F6FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		223443F818E2A7B30067F6FA /* libnbpal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnbpal.a;
+			remoteRef = 223443F718E2A7B30067F6FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		223443FE18E2A7C20067F6FA /* libcoreservices.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcoreservices.a;
+			remoteRef = 223443FD18E2A7C20067F6FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		82A514D7141EF46200973B3C /* libnbservices.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnbservices.a;
+			remoteRef = 82A514D6141EF46200973B3C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A514FE141EF70400973B3C /* MainWindow.xib in Resources */,
+				82A514FF141EF70400973B3C /* testnbservicesViewController.xib in Resources */,
+				82A5152A141EF73F00973B3C /* tesla.tpl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A514EF141EF63300973B3C /* testnbservicesmain.m in Sources */,
+				82A5151E141EF73F00973B3C /* testnbservicesAppDelegate.m in Sources */,
+				82A5151F141EF73F00973B3C /* testnbservicesViewController.m in Sources */,
+				223443EC18E2A3100067F6FA /* TestSingleSearchProtocol.cpp in Sources */,
+				82A51521141EF73F00973B3C /* PlatformUtil.m in Sources */,
+				82A51524141EF73F00973B3C /* main.c in Sources */,
+				82A51525141EF73F00973B3C /* networkutil.c in Sources */,
+				82A51526141EF73F00973B3C /* testcontentmanager.c in Sources */,
+				82A51527141EF73F00973B3C /* testdownload.c in Sources */,
+				82A51528141EF73F00973B3C /* testmetadata.c in Sources */,
+				82A51529141EF73F00973B3C /* testspatial.c in Sources */,
+				82D1E31E14D6233C00FB5B22 /* testhttpdownloadmanager.cpp in Sources */,
+				826F539414EA0953008407D2 /* testmap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82A514E8141EF4B400973B3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nbservices;
+			targetProxy = 82A514E7141EF4B400973B3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				BRANCH = main;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = testnbservices_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(NBM_RELEASE)",
+					"../../../../nbservices/$(BRANCH)/include/private",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/src/enhancedcontent",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../thirdparty/$(BRANCH)/CUnit/include",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/src/map/**",
+					"../../../../nbservices/$(BRANCH)/include/generated",
+					"../../../../nbservices/$(BRANCH)/include/generated/private",
+					"../../../../nbpal/$(BRANCH)/src/iphone/pal",
+				);
+				INFOPLIST_FILE = "testnbservices-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
+				PRODUCT_NAME = testnbservices;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				BRANCH = main;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = testnbservices_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(NBM_RELEASE)/**",
+					"../../../../nbservices/$(BRANCH)/include/private",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/src/enhancedcontent",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../thirdparty/$(BRANCH)/CUnit/include",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/src/map/**",
+					"../../../../nbservices/$(BRANCH)/include/generated",
+					"../../../../nbservices/$(BRANCH)/include/generated/private",
+					"../../../../nbpal/$(BRANCH)/src/iphone/pal",
+				);
+				INFOPLIST_FILE = "testnbservices-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
+				PRODUCT_NAME = testnbservices;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../nbservices/$(BRANCH)/include/private",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/src/enhancedcontent",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../thirdparty/$(BRANCH)/CUnit/include",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/src/map",
+					"../../../../nbservices/$(BRANCH)/include/generated",
+					"../../../../nbservices/$(BRANCH)/include/generated/private",
+					"../../../../nbpal/$(BRANCH)/src/iphone/pal",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BRANCH = main;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(NBM_RELEASE)/**",
+					../../../../nbservices/feature_111107_map3d/include/private,
+					../../../../nbservices/feature_111107_map3d/include/protected,
+					../../../../nbservices/feature_111107_map3d/src/enhancedcontent,
+					../../../../coreservices/feature_111107_map3d/include/iphone,
+					../../../../nbpal/feature_111107_map3d/include,
+					../../../../nbpal/feature_111107_map3d/include/iphone,
+					../../../../thirdparty/feature_111107_map3d/CUnit/include,
+					../../../../nbservices/feature_111107_map3d/include,
+					../../../../coreservices/feature_111107_map3d/include,
+					../../../../coreservices/feature_111107_map3d/include/protected,
+					../../../../nbservices/feature_111107_map3d/include/iphone,
+					"../../../../nbservices/feature_111107_map3d/src/map/**",
+					../../../../nbservices/feature_111107_map3d/include/generated,
+					../../../../nbservices/feature_111107_map3d/include/generated/private,
+					../../../../nbpal/feature_111107_map3d/src/iphone/pal,
+					"$(NBM_RELEASE)/**",
+					../../../../nbservices/feature_130313_map3d_rel2_1/include/private,
+					../../../../nbservices/feature_130313_map3d_rel2_1/include/protected,
+					../../../../nbservices/feature_130313_map3d_rel2_1/src/enhancedcontent,
+					../../../../coreservices/feature_130313_map3d_rel2_1/include/iphone,
+					../../../../nbpal/feature_130313_map3d_rel2_1/include,
+					../../../../nbpal/feature_130313_map3d_rel2_1/include/iphone,
+					../../../../thirdparty/feature_130313_map3d_rel2_1/CUnit/include,
+					../../../../nbservices/feature_130313_map3d_rel2_1/include,
+					../../../../coreservices/feature_130313_map3d_rel2_1/include,
+					../../../../coreservices/feature_130313_map3d_rel2_1/include/protected,
+					../../../../nbservices/feature_130313_map3d_rel2_1/include/iphone,
+					"../../../../nbservices/feature_130313_map3d_rel2_1/src/map/**",
+					../../../../nbservices/feature_130313_map3d_rel2_1/include/generated,
+					../../../../nbservices/feature_130313_map3d_rel2_1/include/generated/private,
+					../../../../nbpal/feature_130313_map3d_rel2_1/src/iphone/pal,
+					"../../../../nbservices/$(BRANCH)/include/private",
+					"../../../../nbservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/src/enhancedcontent",
+					"../../../../coreservices/$(BRANCH)/include/iphone",
+					"../../../../nbpal/$(BRANCH)/include",
+					"../../../../nbpal/$(BRANCH)/include/iphone",
+					"../../../../thirdparty/$(BRANCH)/CUnit/include",
+					"../../../../nbservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include",
+					"../../../../coreservices/$(BRANCH)/include/protected",
+					"../../../../nbservices/$(BRANCH)/include/iphone",
+					"../../../../nbservices/$(BRANCH)/src/map",
+					"../../../../nbservices/$(BRANCH)/include/generated",
+					"../../../../nbservices/$(BRANCH)/include/generated/private",
+					"../../../../nbpal/$(BRANCH)/src/iphone/pal",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "testnbservices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "testnbservices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

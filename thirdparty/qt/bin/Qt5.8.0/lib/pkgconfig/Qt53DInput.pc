@@ -1,0 +1,14 @@
+prefix=/opt/Qt5.8.0
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DInput
+Description: Qt 3DInput module
+Version: 5.8.0
+Libs: -L${libdir} -lQt53DInput 
+Libs.private: -L/opt/Qt5.8.0/lib -lQt53DCore -L/opt/Qt5.8.0/lib -L/opt/Qt5.8.0/lib -lQt5Gamepad -lQt5Gui -lQt5Network -lQt5Core -lpthread -lGLESv2  
+Cflags: -I${includedir}/Qt3DInput -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore Qt5Gamepad
+

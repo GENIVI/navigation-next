@@ -1,0 +1,30 @@
+ /*
+ * C++ header for C header alloca.h
+ * Copyright (C) Advanced RISC Machines Limited, 1997. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 91768 $
+ * Checkin $Date: 2005-08-10 19:58:48 +0100 (Wed, 10 Aug 2005) $
+ * Revising $Author: drodgman $
+ */
+
+#ifndef __calloca
+#define __calloca
+
+/* currently alloca.h has nothing to export */
+/*  #define __ALLOCA_NO_EXPORTS 1 */
+  #include <alloca.h>
+/*  #undef __ALLOCA_NO_EXPORTS */
+
+/*  #ifdef __cplusplus */
+/*    #undef __alloca_h  // later inclusion of alloca.h must do using std::* */
+/*    #ifdef __EDG_IMPLICIT_USING_STD */
+      /* Implicitly include a using directive for the STD namespace when this
+         preprocessing flag is TRUE. */
+/*       using namespace ::std; */
+/*    #endif */ /* ifdef __EDG_IMPLICIT_USING_STD */
+
+/*  #endif */ /*__cplusplus*/
+
+#endif /* __calloca */

@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>HamburgerMenu.qml</file>
+    	<file>SettingsController.qml</file>
+    	<file>NewButton.qml</file>
+    	<file>TitleLabel.qml</file>
+    	<file>AddedToFavorite.qml</file>
+    	<file>AddToFavorites.qml</file>
+    	<file>CallPOI.qml</file>
+    	<file>FavoritesDeleteAllPopup.qml</file>
+    	<file>Fuel.qml</file>
+    	<file>FuelDetails.qml</file>
+    	<file>ListHeaderCommon.qml</file>
+    	<file>ListHeaderFavorites.qml</file>
+    	<file>ListHeaderFuel.qml</file>
+    	<file>ListHeaderRecents.qml</file>
+    	<file>ListItem.qml</file>
+    	<file>LocationDetail.qml</file>
+    	<file>MainWindow.qml</file>
+    	<file>MiscTab.qml</file>
+    	<file>NavigationTab.qml</file>
+    	<file>NearThisLocation.qml</file>
+    	<file>NewCheckBox.qml</file>
+	<file>NewRadioButton.qml</file>
+    	<file>NewLabel.qml</file>
+    	<file>RoutesTab.qml</file>
+    	<file>SearchTab.qml</file>
+    	<file>SuggestedSearch.qml</file>
+    	<file>SuggestedSearchBarHeader.qml</file>
+	<file>ManeuverDetail.qml</file>
+    </qresource>
+</RCC>

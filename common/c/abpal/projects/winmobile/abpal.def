@@ -1,0 +1,73 @@
+;-------------------------------------------------------------------------
+;   abpal.def -- AtlasBook PAL Module Definition File
+;
+;   (C) Copyright 2009 by Networks In Motion, Inc.                
+;                                                               
+;   The information contained herein is confidential, proprietary 
+;   to Networks In Motion, Inc., and considered a trade secret as 
+;   defined in section 499C of the penal code of the State of     
+;   California. Use of this information by anyone other than      
+;   authorized employees of Networks In Motion is granted only    
+;   under a written non-disclosure agreement, expressly           
+;   prescribing the scope and manner of such use.   
+;
+;-------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------
+; NOTES:
+;
+;   * When adding an export function, do NOT change an existing ordinal.
+;
+;   * All exported functions should specify the ordinal and NONAME.
+;
+;   * Related functions should be grouped together, and allocated ordinal
+;     numbers in blocks of 50 to allow room for expansion.
+;
+;   * Functions that are not to appear in the export library should
+;     specify PRIVATE.
+;
+;-------------------------------------------------------------------------
+
+LIBRARY "abpal17"
+    EXPORTS				
+        ABPAL_AudioCombinerAddBuffer            @1      ;NONAME
+        ABPAL_AudioCombinerCreate               @2      ;NONAME
+        ABPAL_AudioCombinerDestroy              @3      ;NONAME
+        ABPAL_AudioCombinerGetData              @4      ;NONAME
+        
+        ABPAL_AudioPlayerCancel                 @51     ;NONAME
+        ABPAL_AudioPlayerCreate                 @52     ;NONAME
+        ABPAL_AudioPlayerDestroy                @53     ;NONAME
+        ABPAL_AudioPlayerGetParameter           @54     ;NONAME
+        ABPAL_AudioPlayerGetState               @55     ;NONAME
+        ABPAL_AudioPlayerPlay                   @56     ;NONAME
+        ABPAL_AudioPlayerSetParameter           @57     ;NONAME
+        
+        ABPAL_AudioRecorderCreate               @101    ;NONAME
+        ABPAL_AudioRecorderDestroy              @102    ;NONAME
+        ABPAL_AudioRecorderGetState             @103    ;NONAME
+        ABPAL_AudioRecorderRecord               @104    ;NONAME
+        ABPAL_AudioRecorderStop                 @105    ;NONAME
+        ABPAL_AudioRecorderPrepareToRecord      @106    ;NONAME
+        ABPAL_AudioRecorderSetParameter         @107    ;NONAME
+        ABPAL_AudioRecorderGetRecordedData      @108    ;NONAME
+        ABPAL_AudioSessionCreate                @120    ;NONAME
+        ABPAL_AudioSessionDestroy               @121    ;NONAME
+       
+        ABPAL_GpsBeginTracking                  @151    ;NONAME
+        ABPAL_GpsCancelGetLocation              @152    ;NONAME
+        ABPAL_GpsCreate                         @153    ;NONAME
+        ABPAL_GpsDestroy                        @154    ;NONAME
+        ABPAL_GpsEndTracking                    @155    ;NONAME
+        ABPAL_GpsGetLocation                    @156    ;NONAME
+        ABPAL_GpsGetState                       @157    ;NONAME
+        ABPAL_GpsInitialize                     @158    ;NONAME
+        ; ABPAL_GpsPlayAccelerate                 @159    ;NONAME   - REMOVED 8/23/09
+        ; ABPAL_GpsPlaySkip                       @160    ;NONAME   - REMOVED 8/23/09
+        ABPAL_GpsResume                         @161    ;NONAME
+        ABPAL_GpsSuspend                        @162    ;NONAME
+        ABPAL_GpsUpdateCriteria                 @163    ;NONAME
+        ABPAL_IsGpsEnabled                        @164   ;NONAME
+
+        ABPAL_VersionGet                        @201    ;NONAME
+        ABPAL_VersionGetCopyright               @202    ;NONAME

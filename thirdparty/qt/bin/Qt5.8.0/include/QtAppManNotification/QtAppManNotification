@@ -1,0 +1,6 @@
+#ifndef QT_QTAPPMANNOTIFICATION_MODULE_H
+#define QT_QTAPPMANNOTIFICATION_MODULE_H
+#include <QtAppManNotification/QtAppManNotificationDepends>
+#include "notification.h"
+#include "qtappmannotificationversion.h"
+#endif

@@ -1,0 +1,37 @@
+//
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+coreservices.mmp
+
+PRJ_EXPORTS
+..\..\include\cslcache.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\cslcache.h
+..\..\include\csldoxygengroups.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\csldoxygengroups.h
+..\..\include\csltypes.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\csltypes.h
+..\..\include\cslversion.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\cslversion.h
+..\..\include\nberror.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\nberror.h
+..\..\include\nbnetwork.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\nbnetwork.h
+
+..\..\include\protected\bsdqueue.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\bsdqueue.h
+..\..\include\protected\csdict.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\csdict.h
+..\..\include\protected\cslerrorutil.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslerrorutil.h
+..\..\include\protected\cslnetwork.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslnetwork.h
+..\..\include\protected\cslqalog.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslqalog.h
+..\..\include\protected\cslqarecord.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslqarecord.h
+..\..\include\protected\cslqarecorddefinitions.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslqarecorddefinitions.h
+..\..\include\protected\cslutil.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\cslutil.h
+..\..\include\protected\dynbuf.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\dynbuf.h
+..\..\include\protected\fileutil.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\fileutil.h
+..\..\include\protected\fsalloc.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\fsalloc.h
+..\..\include\protected\nbnetworkconfiguration.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\nbnetworkconfiguration.h
+..\..\include\protected\sha1.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\sha1.h
+..\..\include\protected\tpsdebug.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\tpsdebug.h
+..\..\include\protected\tpselt.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\tpselt.h
+..\..\include\protected\tpsio.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\tpsio.h
+..\..\include\protected\tpslib.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\tpslib.h
+..\..\include\protected\vec.h		\Epoc32\include\NIM\CoreTech\nimcoreservices\protected\vec.h
+
+..\..\include\symbian\cslexp.h			\Epoc32\include\NIM\CoreTech\nimcoreservices\symbian\cslexp.h
