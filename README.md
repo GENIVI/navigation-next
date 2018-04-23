@@ -21,9 +21,10 @@ Sample map data is available for California, please contact Comtech at info@loca
 
 
 ## Prerequisites for build & Build steps:
-Please follow the documents- /navigation-next/doc/qt/AutoReferenceGettingStarted.doc
+Please refer to the documents- /navigation-next/doc/qt/AutoReferenceGettingStarted.doc
 
 ## Usage
+Please refer to the documents- /navigation-next/doc/qt/AutoReferenceGettingStarted.doc
 
 ## Bugs
 
