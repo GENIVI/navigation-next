@@ -42,8 +42,7 @@ For all:
         qmake Cluster/plugins.pro -r
         make
 
-4. Copy media and database to homepath. For example you can use same media as in neptune-ui, you can download those from
-   https://seafile.pelagicore.net/f/3713457142/
+4. Copy media and database to homepath.
 
 5. Run apps
 
