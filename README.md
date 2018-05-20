@@ -15,7 +15,7 @@ grade and suitable for navigation and search. The project contains a
 complete OpenGL based map rendering engine, routing engine along with
 a search engine for searching a POI database.
 
-Sample map data is available for California, please contact Comtech at info@location.studio for more information.
+Sample map data is available for California, please contact Comtech at ENT-Sales@comtechtel.com for more information.
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
